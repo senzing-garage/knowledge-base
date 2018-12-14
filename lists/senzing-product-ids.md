@@ -2,9 +2,9 @@
 
 Used in log message identifiers in the format `senzing-ppppnnnnt`, where:
 
-- "p" is product
-- "n" is message within product
-- "t" is message type: Info, Warn, Error
+- "p" is the 4 digit product id
+- "n" is the 4 digit message within product
+- "t" is the 1 character message type: Info, Warn, Error
 
 ## Python scripts
 
