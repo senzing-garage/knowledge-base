@@ -1,5 +1,11 @@
 # Senzing Product IDs
 
+Used in log message identifiers in the format `senzing-ppppnnnnt`, where:
+
+- "p" is product
+- "n" is message within product
+- "t" is message type: Info, Warn, Error
+
 ## Python scripts
 
 1. **5001** - [stream-loader.py](https://github.com/Senzing/stream-loader/blob/master/stream-loader.py)
