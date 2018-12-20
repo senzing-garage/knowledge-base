@@ -65,3 +65,18 @@
       --directory=${SENZING_DIR} \
       --file=${SENZING_FILE}
     ```
+
+## Change permissions
+
+1. Set environment variables.
+
+    ```console
+    export SENZING_DIR=/opt/senzing
+    ```
+
+1. Change permissions.
+
+    ```console
+    chmod -R 777 ${SENZING_DIR}/g2/sqldb
+    chmod -R 777 ${SENZING_DIR}/g2/python/g2config.json
+    ```
