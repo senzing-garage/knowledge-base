@@ -26,6 +26,7 @@ For detailed installation, see [Docker docs](https://docs.docker.com/install/).
 1. [Ubuntu](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
 
     ```console
+    sudo apt-get update
     sudo apt -y install apt-transport-https ca-certificates curl software-properties-common
     curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
     sudo apt-get update
