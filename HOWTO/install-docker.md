@@ -21,6 +21,21 @@ For detailed installation, see [Docker docs](https://docs.docker.com/install/).
     sudo docker run hello-world
     ```
 
+1. Fix for unable to prepare context.
+
+Error seen:
+
+    ```console
+    unable to prepare context: unable to 'git clone' to temporary context directory: error initializing submodules: usage: git submodule
+    ```
+
+Fix:
+
+    ```console
+    sudo yum install https://centos7.iuscommunity.org/ius-release.rpm
+    sudo yum swap git git2u
+    ```
+
 ### Ubuntu
 
 1. [Ubuntu](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
