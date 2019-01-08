@@ -23,13 +23,13 @@ For detailed installation, see [Docker docs](https://docs.docker.com/install/).
 
 1. Fix for unable to prepare context.
 
-Error seen:
+    Error seen:
 
     ```console
     unable to prepare context: unable to 'git clone' to temporary context directory: error initializing submodules: usage: git submodule
     ```
 
-Fix:
+    Fix:
 
     ```console
     sudo yum install https://centos7.iuscommunity.org/ius-release.rpm
