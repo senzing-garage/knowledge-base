@@ -3,7 +3,8 @@
 ## Portainer
 
 1. [Website](https://www.portainer.io/)
-1. [Demo](http://demo.portainer.io/) username: admin and password: tryportainer 
+    1. [Overview](https://www.portainer.io/overview/)
+1. [Demo](http://demo.portainer.io/) (username: admin and password: tryportainer)
 1. [Documentation](https://portainer.readthedocs.io/en/stable/)
 1. Launch Portainer locally
 
