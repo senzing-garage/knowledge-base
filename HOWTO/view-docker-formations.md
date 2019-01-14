@@ -8,7 +8,8 @@
     docker run \
        --detach \
        --volume /var/run/docker.sock:/var/run/docker.sock \
-       --volume /opt/portainer:/data portainer/portainer \
+       --volume /opt/portainer:/data \
        --publish 9000:9000 \
-       --restart always
+       --restart always \
+       portainer/portainer
     ```
