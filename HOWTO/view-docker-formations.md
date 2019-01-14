@@ -19,19 +19,4 @@
        portainer/portainer
     ```
 
-1. Can be viewed at [localhost:9001](http://localhost:9001)
-
-## Docker compose UI
-
-1. [Website](http://francescou.github.io/docker-compose-ui/)
-1. [GitHub](https://github.com/francescou/docker-compose-ui)
-1. Launch Docker Compose UI locally
-
-    ```console
-    docker run \
-        --name docker-compose-ui \
-        --publish 5001:5000 \
-        --volume /var/run/docker.sock:/var/run/docker.sock \
-        --workdir /opt/docker-compose-projects/ \
-        francescou/docker-compose-ui:1.13.0
-    ```
+1. Can be viewed at [localhost:9001](http://localhost:9001), since 9001 was the published port.
