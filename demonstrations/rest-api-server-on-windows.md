@@ -8,6 +8,13 @@ on a Windows system.
 
 ### Contents
 
+1. [Dependencies](#dependencies)
+1. [Download example data sources](#download-example-data-sources)
+1. [Load data](#load-data)
+1. [Run API server](#run-api-server)
+1. [Test API server](#test-api-server)
+1. [API examples](#api-examples)
+
 ## Dependencies
 
 1. Windows 10 pro x64
