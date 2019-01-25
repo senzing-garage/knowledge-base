@@ -21,16 +21,16 @@ on a Windows system.
 
     1. Method #1 - git
 
-    ```console
-    git clone git@github.com:Senzing/example-senzing-projects.git
-    ```  
+        ```console
+        git clone git@github.com:Senzing/example-senzing-projects.git
+        ```  
 
     1. Method #2 - curl
 
-    ```console
-    curl -X GET --output %HOMEPATH%\Downloads\Co-workers.csv https://raw.githubusercontent.com/Senzing/example-senzing-projects/master/coworkers/csv/Co-workers.csv
-    curl -X GET --output %HOMEPATH%\Downloads\Company-Directory.csv https://raw.githubusercontent.com/Senzing/example-senzing-projects/master/coworkers/csv/Company-Directory.csv
-    ```
+        ```console
+        curl -X GET --output %HOMEPATH%\Downloads\Co-workers.csv https://raw.githubusercontent.com/Senzing/example-senzing-projects/master/coworkers/csv/Co-workers.csv
+        curl -X GET --output %HOMEPATH%\Downloads\Company-Directory.csv https://raw.githubusercontent.com/Senzing/example-senzing-projects/master/coworkers/csv/Company-Directory.csv
+        ```
 
 ## Load data
 
@@ -38,13 +38,13 @@ Loading data will be done via the Senzing App.
 
 1. In Windows, launch "Senzing"
     1. Search for "Senzing", choose Apps > Senzing Desktop app
-1. Close "nag" dialogs.
+1. Close introductory dialogs.
     1. Accept End User License Agreement
 1. Add Data source
     1. On initial invocation, "Project has no data loaded. Click to load data" is seen.
         1. Click it.
-        1. Otherwise, on left-hand navigation bar, choose "Data"
-    1. Click on "Add Data Source"
+        1. Otherwise, on left-hand navigation bar, choose "Data".
+    1. Click on "Add Data Source".
     1. Open `.csv` file(s) in `%HOMEPATH%\Downloads\` or the cloned `example-senzing-projects` git repository.
     1. For each tile,
         1. Click "Review Mapping" link.
@@ -52,7 +52,7 @@ Loading data will be done via the Senzing App.
         1. Click "[ ] Ready to Load" button.
     1. For each tile,
         1. Click "Load Now" link.
-1. Feel free to peruse Senzing App.
+1. Feel free to peruse Senzing App. :eyes:
 1. Close Senzing App.
 
 ## Run API server
