@@ -10,12 +10,12 @@ on a Windows system.
 
 ## Dependencies
 
-1. Windows 10 pro
+1. Windows 10 pro x64
 1. [Java](../HOWTO/install-java.md)
 1. [Senzing App](../HOWTO/install-senzing-app.md#windows)
-1. [senzing-api-server-M.m.P.jar](../HOWTO/install-senzing-app.md#windows)
+1. [sz-api-server-M.m.P.jar](https://github.com/Senzing/rest-api-server-java)
 
-## Download data
+## Download example data sources
 
 1. Get example data.
 
@@ -28,22 +28,33 @@ on a Windows system.
     1. Method #2 - curl
 
     ```console
-    cd %HOMEPATH%\Downloads
-
-    curl -X GET --output %HOMEPATH%\Downloads\ https://raw.githubusercontent.com/Senzing/example-senzing-projects/master/coworkers/csv/Co-workers.csv
-    curl -X GET --output %HOMEPATH%\Downloads\ https://raw.githubusercontent.com/Senzing/example-senzing-projects/master/coworkers/csv/Company-Directory.csv
+    curl -X GET --output %HOMEPATH%\Downloads\Co-workers.csv https://raw.githubusercontent.com/Senzing/example-senzing-projects/master/coworkers/csv/Co-workers.csv
+    curl -X GET --output %HOMEPATH%\Downloads\Company-Directory.csv https://raw.githubusercontent.com/Senzing/example-senzing-projects/master/coworkers/csv/Company-Directory.csv
     ```
 
 ## Load data
 
+Loading data will be done via the Senzing App.
+
 1. In Windows, launch "Senzing"
-    1. Search for "Senzing", choose Apps > Senzing
+    1. Search for "Senzing", choose Apps > Senzing Desktop app
 1. Close "nag" dialogs.
+    1. Accept End User License Agreement
 1. Add Data source
-    1. On left-hand navigation bar, choose "Data"
+    1. On initial invocation, "Project has no data loaded. Click to load data" is seen.
+        1. Click it.
+        1. Otherwise, on left-hand navigation bar, choose "Data"
     1. Click on "Add Data Source"
-    1. Choose `.csv` file(s) in %HOMEPATH%\Downloads\ or the cloned `example-senzing-projects` git repository.
-    
+    1. Open `.csv` file(s) in `%HOMEPATH%\Downloads\` or the cloned `example-senzing-projects` git repository.
+    1. For each tile,
+        1. Click "Review Mapping" link.
+        1. In "Enter data source name" text entry box, provide a name.  Example: "Co-workers"
+        1. Click "[ ] Ready to Load" button.
+    1. For each tile,
+        1. Click "Load Now" link.
+1. Feel free to peruse Senzing App.
+1. Close Senzing App.
+
 ## Run API server
 
 1. Start the service. Example:

@@ -20,10 +20,9 @@ The Senzing App is a desktop application for loading and viewing entity resoluti
 
 ##### Windows download via curl command
 
-1. Download [Senzing_API.tgz](https://s3.amazonaws.com/public-read-access/SenzingComDownloads/Senzing_API.tgz). Example:
+1. Download [Senzing.msi](https://s3.amazonaws.com/public-read-access/SenzingComDownloads/Senzing.msi). Example:
 
     ```console
-    cd %HOMEPATH%\Downloads
     curl -X GET --output %HOMEPATH%\Downloads\Senzing.msi https://s3.amazonaws.com/public-read-access/SenzingComDownloads/Senzing.msi
     ```
 
@@ -50,12 +49,10 @@ The Senzing App is a desktop application for loading and viewing entity resoluti
 
 ##### macOS download via curl command
 
-1. Download [Senzing_API.tgz](https://s3.amazonaws.com/public-read-access/SenzingComDownloads/Senzing_API.tgz) Example:
+1. Download [Senzing_macOS.dmg](https://s3.amazonaws.com/public-read-access/SenzingComDownloads/Senzing_macOS.dmg). Example:
 
     ```console
-    curl -X GET \
-      --output /tmp/Senzing.msi \
-      https://s3.amazonaws.com/public-read-access/SenzingComDownloads/Senzing_macOS.dmg
+    curl -X GET --output %HOMEPATH%\Downloads\Senzing_macOS.dmg https://s3.amazonaws.com/public-read-access/SenzingComDownloads/Senzing_macOS.dmg
     ```
 
 #### Run macOS installer
