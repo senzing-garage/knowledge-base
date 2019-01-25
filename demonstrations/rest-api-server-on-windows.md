@@ -55,7 +55,15 @@ Loading data will be done via the Senzing App.
 1. Feel free to peruse Senzing App. :eyes:
 1. Close Senzing App.
 
-## Run API server
+## Run API server.
+
+1. Configuration
+
+    * **SENZING_JAR_FILE** -
+        Location of sz-api-server-M.m.P.jar
+    * **SENZING_INI_FILE** -
+        Location of Senzing app configuration file.
+        Usually in `%HOMEPATH%\AppData\Local\Senzing\Workbench\` directory. 
 
 1. Start the service. Example:
 
