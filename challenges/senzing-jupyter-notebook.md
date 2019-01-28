@@ -19,7 +19,7 @@ Add, delete, or modify anything to improve the communication and education.
 Use python, markdown, tables, graphs, or any other visual output.
 Make a Jupyter Notebook that is easy to comprehend and illustrates the value of Senzing.
 
-### Steps
+## Steps
 
 1. Fork [senzing/docker-jupyter](https://github.com/Senzing/docker-jupyter).
     1. [Hint](https://help.github.com/articles/fork-a-repo/#fork-an-example-repository)
