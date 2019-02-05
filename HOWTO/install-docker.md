@@ -71,3 +71,21 @@ For detailed installation, see [Docker docs](https://docs.docker.com/install/).
     sudo apt -y install docker.io
     sudo docker run hello-world
     ```
+
+### macOS
+
+1. Update [Homebrew](https://brew.sh) packages:
+
+    ```console
+    brew update
+    brew upgrade
+    ```
+
+1. Install docker.
+
+    ```console
+    brew cask install virtualbox
+    brew cask install docker
+    ```
+
+### Windows

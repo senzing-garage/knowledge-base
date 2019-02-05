@@ -4,7 +4,7 @@
 
 `SENZING_DIR` is a directory created by decompressing the `Senzing_API.tgz` file.
 
-### Expectations 
+### Expectations
 
 - **Time:** Budget about 40 minutes, depending on your internet speed.
 - **Space:** It requires about 3GB for installed package plus 1GB for download, a minimum of 5GB.
@@ -72,7 +72,7 @@
     ```
 
 ## Change permissions
-+
+
 1. Set environment variables.
 
     ```console
