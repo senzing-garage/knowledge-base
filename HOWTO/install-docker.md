@@ -88,4 +88,12 @@ For detailed installation, see [Docker docs](https://docs.docker.com/install/).
     brew cask install docker
     ```
 
+1. Start docker. In a terminal window:
+
+    ```console
+    /Applications/Docker.app/Contents/MacOS/Docker
+    ```
+
+    1. Alternative:  Go to `Applications` and start `Docker.app`.
+
 ### Windows
