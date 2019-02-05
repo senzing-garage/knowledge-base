@@ -4,6 +4,11 @@
 
 `SENZING_DIR` is a directory created by decompressing the `Senzing_API.tgz` file.
 
+### Expectations 
+
+- **Time:** Budget about 40 minutes, depending on your internet speed.
+- **Space:** It requires about 3GB for installed package plus 1GB for download, a minimum of 5GB.
+
 ## Downloading Senzing_API.tgz
 
 ### Via web browser
@@ -67,7 +72,7 @@
     ```
 
 ## Change permissions
-
++
 1. Set environment variables.
 
     ```console
@@ -77,6 +82,6 @@
 1. Change permissions.
 
     ```console
-    chmod -R 777 ${SENZING_DIR}/g2/sqldb
-    chmod -R 777 ${SENZING_DIR}/g2/python/g2config.json
+    sudo chmod -R 777 ${SENZING_DIR}/g2/sqldb
+    sudo chmod -R 777 ${SENZING_DIR}/g2/python/g2config.json
     ```
