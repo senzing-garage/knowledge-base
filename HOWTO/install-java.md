@@ -6,6 +6,12 @@ Instructions for installing [Java](https://www.java.com).
 
 ## Install
 
+### CentOS
+
+### Ubuntu
+
+### macOS
+
 ### Windows
 
 1. Visit [Java Downloads for All Operating Systems](https://java.com/en/download/manual.jsp)
@@ -17,6 +23,6 @@ Instructions for installing [Java](https://www.java.com).
     jre-XXXXX-windows-x64.exe
     ```
 
-### Windows alternatives
+#### Windows alternatives
 
 1. [Server JRE (Java SE Runtime Environment) 8 Downloads](https://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html)
