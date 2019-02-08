@@ -9,7 +9,7 @@
 1. Launch Portainer locally
 
     ```console
-    docker run \
+    sudo docker run \
        --detach \
        --name portainer \
        --publish 9001:9000 \
