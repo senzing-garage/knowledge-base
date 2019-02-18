@@ -6,8 +6,16 @@
 
 ### Expectations
 
-- **Time:** Budget about 40 minutes, depending on your internet speed.
-- **Space:** It requires about 3GB for installed package plus 1GB for download, a minimum of 5GB.
+#### Time
+
+Budget 30 minutes, depending on your network speed.
+
+#### Space
+
+This task requires a minimum of 5 GB free disk space.
+
+- 1.5 GB for download
+- 3.5 GB for installed package
 
 ## Downloading Senzing_API.tgz
 
