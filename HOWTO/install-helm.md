@@ -24,3 +24,7 @@ Instructions for installing [Helm](https://helm.sh).
 ### macOS
 
 ### Windows
+
+## References
+
+1. [How to Create Your First Helm Chart ](https://docs.bitnami.com/kubernetes/how-to/create-your-first-helm-chart/)
