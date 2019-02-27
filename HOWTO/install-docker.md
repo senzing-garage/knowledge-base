@@ -97,3 +97,7 @@ For detailed installation, see [Docker docs](https://docs.docker.com/install/).
     1. Alternative:  Go to `Applications` and start `Docker.app`.
 
 ### Windows
+
+1. **Caveat:** Requires Windows Pro.
+1. [Install Docker Desktop for Windows](https://docs.docker.com/docker-for-windows/install/)
+    1. Run `Docker%20for%20%Windows%20Installer.exe`

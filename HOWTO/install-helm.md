@@ -14,7 +14,7 @@ Instructions for installing [Helm](https://helm.sh).
 1. Example:
 
     ```console
-    tar -xzvf helm-v2.12.3-linux-amd64.tar.gz 
+    tar -xzvf helm-v2.12.3-linux-amd64.tar.gz
     mv /home/senzing/Downloads/linux-amd64/helm /usr/local/bin
     cd /usr/local/bin
     mv helm helm-2.12.3
@@ -27,4 +27,4 @@ Instructions for installing [Helm](https://helm.sh).
 
 ## References
 
-1. [How to Create Your First Helm Chart ](https://docs.bitnami.com/kubernetes/how-to/create-your-first-helm-chart/)
+1. [How to Create Your First Helm Chart](https://docs.bitnami.com/kubernetes/how-to/create-your-first-helm-chart/)

@@ -46,7 +46,7 @@ The following software programs need to be installed.
     export GIT_REPOSITORY_URL="git@github.com:${GIT_ACCOUNT}/${GIT_REPOSITORY}.git"
     ```
 
-## Clone repository
+## Perform clone repository
 
 1. Get repository.
 

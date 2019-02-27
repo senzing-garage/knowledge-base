@@ -23,3 +23,4 @@ Git [downloads](https://git-scm.com/downloads).
 ### Windows
 
 1. [Download](https://git-scm.com/download/win)
+    1. Run `Git-M.m.P-64-bit.exe`
