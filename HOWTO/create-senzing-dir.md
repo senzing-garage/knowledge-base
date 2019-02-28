@@ -36,7 +36,7 @@ This task requires a minimum of 5 GB free disk space.
       https://s3.amazonaws.com/public-read-access/SenzingComDownloads/Senzing_API.tgz
     ```
 
-## Decompress Senzing_API.tgz
+## Linux
 
 1. Set environment variables.
 
@@ -44,8 +44,6 @@ This task requires a minimum of 5 GB free disk space.
     export SENZING_DIR=/opt/senzing
     export SENZING_FILE=/tmp/Senzing_API.tgz
     ```
-
-### Linux
 
 1. Extract [Senzing_API.tgz](https://s3.amazonaws.com/public-read-access/SenzingComDownloads/Senzing_API.tgz)
    to `${SENZING_DIR}`.
@@ -63,7 +61,21 @@ This task requires a minimum of 5 GB free disk space.
       --file=${SENZING_FILE}
     ```
 
-### macOS
+1. Change permissions.
+
+    ```console
+    sudo chmod -R 777 ${SENZING_DIR}/g2/sqldb
+    sudo chmod -R 777 ${SENZING_DIR}/g2/python/g2config.json
+    ```
+
+## macOS
+
+1. Set environment variables.
+
+    ```console
+    export SENZING_DIR=/opt/senzing
+    export SENZING_FILE=/tmp/Senzing_API.tgz
+    ```
 
 1. Extract [Senzing_API.tgz](https://s3.amazonaws.com/public-read-access/SenzingComDownloads/Senzing_API.tgz)
    to `${SENZING_DIR}`.
@@ -79,17 +91,14 @@ This task requires a minimum of 5 GB free disk space.
       --file=${SENZING_FILE}
     ```
 
-## Change permissions
-
-1. Set environment variables.
-
-    ```console
-    export SENZING_DIR=/opt/senzing
-    ```
-
 1. Change permissions.
 
     ```console
     sudo chmod -R 777 ${SENZING_DIR}/g2/sqldb
     sudo chmod -R 777 ${SENZING_DIR}/g2/python/g2config.json
     ```
+
+    
+## Windows
+
+1. Uncompress `Senzing_API.tgz` to `C:\opt\senzing`
