@@ -20,6 +20,8 @@ does not have the most recent version of
 
 ## Push to GitHub
 
+1. Example:
+
     ```console
     sudo docker push senzing/phppgadmin
     ```
