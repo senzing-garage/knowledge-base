@@ -5,7 +5,7 @@
 
 ## Sites
 
-1. [Docker](https://www.docker.com/)
+1. [Official site](https://www.docker.com/)
     1. [Documentation](https://docs.docker.com)
     1. [What is a Container?](https://www.docker.com/resources/what-container)
 1. [github.com/docker/](https://github.com/docker/)
