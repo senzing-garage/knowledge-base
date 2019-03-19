@@ -1,4 +1,4 @@
-# What is helm
+# What is Helm
 
 > The package manager for [Kubernetes](kubernetes.md). Helm helps you manage Kubernetes applications — Helm Charts help you define, install, and upgrade even the most complex Kubernetes application.
 > -- *[Helm site](https://helm.sh)*
