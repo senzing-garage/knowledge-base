@@ -1,6 +1,7 @@
 # What is Docker-Compose
 
-> Compose is a tool for defining and running multi-container [Docker](docker.md) applications.
+> Compose is a tool for defining and running multi-container
+> [Docker](docker.md) applications.
 > -- *[Docker Compose](https://docs.docker.com/compose/)*
 
 ## Sites
