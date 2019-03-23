@@ -5,6 +5,15 @@
 For detailed installation, see
 [https://docs.docker.com/registry/deploying/](https://docs.docker.com/registry/deploying/)
 
+### Contents
+
+1. [Install](#install)
+    1. [CentOS](#centos)
+    1. [Ubuntu](#ubuntu)
+    1. [macOS](#macos)
+    1. [Windows](#windows)
+1. [Test](#test)
+
 ## Install
 
 ### CentOS
@@ -49,3 +58,5 @@ For detailed installation, see
 ### macOS
 
 ### Windows
+
+## Test

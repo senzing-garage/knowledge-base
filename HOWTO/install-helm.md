@@ -4,6 +4,16 @@
 
 Instructions for installing [Helm](https://helm.sh).
 
+### Contents
+
+1. [Install](#install)
+    1. [CentOS](#centos)
+    1. [Ubuntu](#ubuntu)
+    1. [macOS](#macos)
+    1. [Windows](#windows)
+1. [Test](#test)
+1. [References](#references)
+
 ## Install
 
 ### CentOS
@@ -24,6 +34,8 @@ Instructions for installing [Helm](https://helm.sh).
 ### macOS
 
 ### Windows
+
+## Test
 
 ## References
 

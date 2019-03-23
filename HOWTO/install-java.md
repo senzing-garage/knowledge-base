@@ -4,6 +4,15 @@
 
 Instructions for installing [Java](https://www.java.com).
 
+### Contents
+
+1. [Install](#install)
+    1. [CentOS](#centos)
+    1. [Ubuntu](#ubuntu)
+    1. [macOS](#macos)
+    1. [Windows](#windows)
+1. [Test](#test)
+
 ## Install
 
 ### CentOS
@@ -26,3 +35,5 @@ Instructions for installing [Java](https://www.java.com).
 #### Windows alternatives
 
 1. [Server JRE (Java SE Runtime Environment) 8 Downloads](https://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html)
+
+## Test

@@ -6,6 +6,15 @@ Instructions for installing [Docker](https://www.docker.com/).
 
 For detailed installation, see [Docker docs](https://docs.docker.com/install/).
 
+### Contents
+
+1. [Install](#install)
+    1. [CentOS](#centos)
+    1. [Ubuntu](#ubuntu)
+    1. [macOS](#macos)
+    1. [Windows](#windows)
+1. [Test](#test)
+
 ## Install
 
 ### CentOS
@@ -101,3 +110,12 @@ For detailed installation, see [Docker docs](https://docs.docker.com/install/).
 1. **Caveat:** Requires Windows Pro.
 1. [Install Docker Desktop for Windows](https://docs.docker.com/docker-for-windows/install/)
     1. Run `Docker%20for%20%Windows%20Installer.exe`
+
+## Test
+
+1. Test
+
+    ```console
+    sudo docker --version
+    sudo docker run hello-world
+    ```

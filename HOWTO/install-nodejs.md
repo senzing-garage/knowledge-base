@@ -4,6 +4,16 @@
 
 Instructions for installing [NodeJS](https://nodejs.org).
 
+### Contents
+
+1. [Install](#install)
+    1. [CentOS](#centos)
+    1. [Ubuntu](#ubuntu)
+    1. [macOS](#macos)
+    1. [Windows](#windows)
+1. [Test](#test)
+1. [References](#references)
+
 ## Install
 
 ### CentOS
@@ -13,6 +23,8 @@ Instructions for installing [NodeJS](https://nodejs.org).
 ### macOS
 
 ### Windows
+
+## Test
 
 ## References
 

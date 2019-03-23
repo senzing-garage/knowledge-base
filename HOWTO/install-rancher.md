@@ -4,6 +4,15 @@
 
 Instructions for installing [Rancher](https://rancher.com/).
 
+### Contents
+
+1. [Install](#install)
+    1. [CentOS](#centos)
+    1. [Ubuntu](#ubuntu)
+    1. [macOS](#macos)
+    1. [Windows](#windows)
+1. [Test](#test)
+
 ## Install
 
 1. Option #1 [Full installation](https://rancher.com/docs/rancher/v2.x/en/installation/)
@@ -25,3 +34,5 @@ Instructions for installing [Rancher](https://rancher.com/).
 ### macOS
 
 ### Windows
+
+## Test
