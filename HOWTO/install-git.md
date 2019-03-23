@@ -6,6 +6,15 @@ Instructions for installing [Git](https://git-scm.com/).
 
 Git [downloads](https://git-scm.com/downloads).
 
+### Contents
+
+1. [Install](#install)
+    1. [CentOS](#centos)
+    1. [Ubuntu](#ubuntu)
+    1. [macOS](#macos)
+    1. [Windows](#windows)
+1. [Test](#test)
+
 ## Install
 
 ### CentOS
@@ -24,3 +33,11 @@ Git [downloads](https://git-scm.com/downloads).
 
 1. [Download](https://git-scm.com/download/win)
     1. Run `Git-M.m.P-64-bit.exe`
+
+## Test
+
+1. Test
+
+    ```console
+    git --version
+    ```
