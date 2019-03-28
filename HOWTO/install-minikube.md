@@ -15,6 +15,7 @@ Instructions for installing [minikube](https://kubernetes.io/docs/tasks/tools/in
     1. [macOS](#macos)
     1. [Windows](#windows)
 1. [Test](#test)
+1. [References](#references)
 
 ## Install
 
@@ -25,19 +26,17 @@ Instructions for installing [minikube](https://kubernetes.io/docs/tasks/tools/in
 1. [Ubuntu](https://kubernetes.io/docs/tasks/tools/install-minikube/#linux)
 
     ```console
-    curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 \
-      && chmod +x minikube \
-      && sudo cp minikube /usr/local/bin/ \
-      && rm minikube
+    curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+    chmod +x minikube
+    sudo mv minikube /usr/local/bin/
     ```
 
 1. Example for a specific release:
 
     ```console
-    curl -Lo minikube https://storage.googleapis.com/minikube/releases/v1.0.0/minikube-linux-amd64 \
-     && chmod +x minikube \
-     && sudo cp minikube /usr/local/bin/ \
-     && rm minikube
+    curl -Lo minikube https://storage.googleapis.com/minikube/releases/v1.0.0/minikube-linux-amd64
+    chmod +x minikube
+    sudo mv minikube /usr/local/bin/
     ```
 
 ### macOS
@@ -45,3 +44,8 @@ Instructions for installing [minikube](https://kubernetes.io/docs/tasks/tools/in
 ### Windows
 
 ## Test
+
+## References
+
+1. [Driver plugin installation](https://github.com/kubernetes/minikube/blob/master/docs/drivers.md)
+1. [Switching from Minikube with VirtualBox to KVM](https://medium.com/@nieldw/switching-from-minikube-with-virtualbox-to-kvm-2f742db704c9)
