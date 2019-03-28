@@ -12,6 +12,8 @@ Instructions for installing [Rancher](https://rancher.com/).
     1. [macOS](#macos)
     1. [Windows](#windows)
 1. [Test](#test)
+1. [Troubleshooting](#troubleshooting)
+1. [References](#references)
 
 ## Install
 
@@ -36,3 +38,7 @@ Instructions for installing [Rancher](https://rancher.com/).
 ### Windows
 
 ## Test
+
+## Troubleshooting
+
+## References

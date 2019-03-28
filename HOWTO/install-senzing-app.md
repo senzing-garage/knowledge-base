@@ -12,6 +12,8 @@ The Senzing App is a desktop application for loading and viewing entity resoluti
     1. [macOS](#macos)
     1. [Windows](#windows)
 1. [Test](#test)
+1. [Troubleshooting](#troubleshooting)
+1. [References](#references)
 
 ## Install
 
@@ -75,3 +77,7 @@ Senzing App does not run on Ubuntu.
     ```
 
 ## Test
+
+## Troubleshooting
+
+## References

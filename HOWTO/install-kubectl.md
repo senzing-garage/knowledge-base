@@ -16,6 +16,7 @@ For detailed installation, see [Kubernetes documentation](https://kubernetes.io/
     1. [macOS](#macos)
     1. [Windows](#windows)
 1. [Test](#test)
+1. [Troubleshooting](#troubleshooting)
 1. [References](#references)
 
 ## Install
@@ -39,6 +40,8 @@ For detailed installation, see [Kubernetes documentation](https://kubernetes.io/
 ### Windows
 
 ## Test
+
+## Troubleshooting
 
 ## References
 

@@ -14,6 +14,7 @@ Instructions for installing [npm](https://www.npmjs.com).
     1. [macOS](#macos)
     1. [Windows](#windows)
 1. [Test](#test)
+1. [Troubleshooting](#troubleshooting)
 1. [References](#references)
 
 ## Install
@@ -27,5 +28,7 @@ Instructions for installing [npm](https://www.npmjs.com).
 ### Windows
 
 ## Test
+
+## Troubleshooting
 
 ## References

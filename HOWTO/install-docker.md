@@ -14,6 +14,8 @@ For detailed installation, see [Docker docs](https://docs.docker.com/install/).
     1. [macOS](#macos)
     1. [Windows](#windows)
 1. [Test](#test)
+1. [Troubleshooting](#troubleshooting)
+1. [References](#references)
 
 ## Install
 
@@ -119,3 +121,7 @@ For detailed installation, see [Docker docs](https://docs.docker.com/install/).
     sudo docker --version
     sudo docker run hello-world
     ```
+
+## Troubleshooting
+
+## References

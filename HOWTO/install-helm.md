@@ -12,6 +12,7 @@ Instructions for installing [Helm](https://helm.sh).
     1. [macOS](#macos)
     1. [Windows](#windows)
 1. [Test](#test)
+1. [Troubleshooting](#troubleshooting)
 1. [References](#references)
 
 ## Install
@@ -36,6 +37,8 @@ Instructions for installing [Helm](https://helm.sh).
 ### Windows
 
 ## Test
+
+## Troubleshooting
 
 ## References
 

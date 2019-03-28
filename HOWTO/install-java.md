@@ -12,6 +12,8 @@ Instructions for installing [Java](https://www.java.com).
     1. [macOS](#macos)
     1. [Windows](#windows)
 1. [Test](#test)
+1. [Troubleshooting](#troubleshooting)
+1. [References](#references)
 
 ## Install
 
@@ -37,3 +39,7 @@ Instructions for installing [Java](https://www.java.com).
 1. [Server JRE (Java SE Runtime Environment) 8 Downloads](https://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html)
 
 ## Test
+
+## Troubleshooting
+
+## References
