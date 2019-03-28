@@ -21,15 +21,14 @@ Instructions for installing [Helm](https://helm.sh).
 
 ### Ubuntu
 
-1. Download "Linux amd64" from [https://github.com/helm/helm/releases/tag/v2.12.3](https://github.com/helm/helm/releases/tag/v2.12.3)
 1. Example:
 
     ```console
-    tar -xzvf helm-v2.12.3-linux-amd64.tar.gz
-    mv /home/senzing/Downloads/linux-amd64/helm /usr/local/bin
-    cd /usr/local/bin
-    mv helm helm-2.12.3
-    ln -s helm-2.12.3 helm
+    curl https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get > get_helm.sh
+    chmod +x get_helm.sh
+    ./get_helm.sh --help
+    sudo ./get_helm.sh
+    rm get_helm.sh
     ```
 
 ### macOS
