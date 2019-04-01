@@ -9,6 +9,8 @@
 
 ## Directory structure
 
+When uncompressed, the directories in `Senzing_API.tgz` have this structure.
+
 ```console
 └── g2
     ├── bin
@@ -34,5 +36,4 @@
     ├── setupEnv
     ├── sqldb
     └── util
-
 ```
