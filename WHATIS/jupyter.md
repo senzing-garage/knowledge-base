@@ -1,3 +1,3 @@
 # What is Jupyter
 
-See [Jupyter Notebook](jupyter-notebook).
+See [Jupyter Notebook](jupyter-notebook.md).
