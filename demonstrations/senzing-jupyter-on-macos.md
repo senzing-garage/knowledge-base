@@ -58,7 +58,14 @@ The following software programs need to be installed:
 
 1. Follow steps in [clone-repository](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/clone-repository.md).
 
+### Install python libraries
 
+1. Install python libraries
+
+    ```console
+    cd ~/docktermj.git/jupyter-examples
+    sudo pip install -r requirements.txt
+    ```
 
 ### Create SENZING_DIR
 
@@ -75,6 +82,8 @@ The following software programs need to be installed:
     cd ~/docktermj.git/jupyter-examples/notebooks
     jupyter notebook
     ```
+
+1. Play around by diving into folders and launching Jupyter Notebooks, i.e. *.ipynb files.
 
 1. Open senzing-utilities / senzing-license.ipynb
 
