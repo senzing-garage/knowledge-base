@@ -2,21 +2,43 @@
 
 ## Contents
 
+1. [Expectations](#expectations)
+    1. [Space](#space)
+    1. [Time](#time)
+    1. [Background knowledge](#background-knowledge)
+1. [Preparation](#preparation)
+    1. [Prerequisite software](#prerequisite-software)
+    1. [Clone repository](#clone-repository)
+    1. [Create SENZING_DIR](#create-senzing_dir)
+1. [Tutorial](#tutorial)
+
+## Expectations
+
+### Space
+
+This repository and demonstration require 7 GB free disk space.
+
+### Time
+
+Budget 2 hours to get the demonstration up-and-running, depending on CPU and network speeds.
+
+### Background knowledge
+
+This repository assumes a working knowledge of:
+
+1. [Docker](https://github.com/Senzing/knowledge-base/blob/master/WHATIS/docker.md)
+1. [Jupyter](https://github.com/Senzing/knowledge-base/blob/master/WHATIS/jupyter.md)
+
 ## Preparation
 
 ### Prerequisite software
 
 The following software programs need to be installed:
 
-1. [Jupyter Notebooks](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/install-jupyter-notebooks.md)
 1. [Docker](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/install-docker.md)
+1. [Jupyter Notebooks](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/install-jupyter-notebooks.md)
 
-### Create SENZING_DIR
-
-1. If you do not already have an `/opt/senzing` directory on your local system, visit
-[HOWTO - Create SENZING_DIR](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/create-senzing-dir.md).
-
-### Clone repository
+### Clone repositories
 
 1. Set these environment variable values:
 
@@ -27,12 +49,21 @@ The following software programs need to be installed:
 
 1. Follow steps in [clone-repository](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/clone-repository.md).
 
-1. After the repository has been cloned, be sure the following are set:
+1. Set these environment variable values:
 
     ```console
-    export GIT_ACCOUNT_DIR=~/${GIT_ACCOUNT}.git
-    export GIT_REPOSITORY_DIR="${GIT_ACCOUNT_DIR}/${GIT_REPOSITORY}"
+    export GIT_ACCOUNT=docktermj
+    export GIT_REPOSITORY=jupyter-examples
     ```
+
+1. Follow steps in [clone-repository](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/clone-repository.md).
+
+
+
+### Create SENZING_DIR
+
+1. If you do not already have an `/opt/senzing` directory on your local system, visit
+[HOWTO - Create SENZING_DIR](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/create-senzing-dir.md).
 
 ## Tutorial
 
@@ -41,16 +72,15 @@ The following software programs need to be installed:
 1. Start Jupyter:
 
     ```console
-    cd ~
-    
+    cd ~/senzing.git/jupyter-jupyter/notebooks
     jupyter notebook
     ```
 
-1. Open senzing.git / docker-jupyter / notebooks / senzing-examples / python / senzing-getSummaryData.ipynb
+1. Open senzing-utilities / senzing-license.ipynb
 
 1. Click "Run" button multiple times
 
-1. You'll see an error on `from G2Audit import G2Audit`
+1. You'll see an error on `from G2Product import G2Product`
     1. Reason: Senzing API isn't supported on macOS.
     1. So, we have to find a way to run it on Linux on macOS
     1. Answer: Docker

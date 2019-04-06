@@ -98,7 +98,6 @@ This task requires a minimum of 5 GB free disk space.
     sudo chmod -R 777 ${SENZING_DIR}/g2/python/g2config.json
     ```
 
-    
 ## Windows
 
 1. Uncompress `Senzing_API.tgz` to `C:\opt\senzing`

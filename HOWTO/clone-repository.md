@@ -48,10 +48,18 @@ The following software programs need to be installed.
 
 ## Perform clone repository
 
-1. Get repository.
+1. On Linux, get repository.
 
     ```console
     mkdir --parents ${GIT_ACCOUNT_DIR}
+    cd  ${GIT_ACCOUNT_DIR}
+    git clone ${GIT_REPOSITORY_URL}
+    ```
+
+1. On macOS, get repository.
+
+    ```console
+    mkdir -p ${GIT_ACCOUNT_DIR}
     cd  ${GIT_ACCOUNT_DIR}
     git clone ${GIT_REPOSITORY_URL}
     ```
