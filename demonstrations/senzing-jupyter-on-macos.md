@@ -74,7 +74,7 @@ The following software programs need to be installed:
 
 ## Tutorial
 
-### Native Jupyter Notesbooks
+### Native Jupyter Notebooks
 
 1. Start Jupyter:
 
@@ -82,8 +82,25 @@ The following software programs need to be installed:
     cd ~/docktermj.git/jupyter-examples/notebooks
     jupyter notebook
     ```
+  
+1. Play around by diving into folders and launching Jupyter Notebooks, i.e. *.ipynb files. Examples:
+    1. bokeh
+        1. bokeh-notebooks/quickstart/quickstart.ipynb
+        1. bokeh-notebooks/tutorial/00 - Introduction and Setup.ipynb
+    1. D3
+        1. D3-in-Jupyter-Notebook/BAR CHART IN D3.ipynb
+        1. D3-in-Jupyter-Notebook/SCATTER PLOT.ipynb
+    1. Operating environment
+        1. etc/software-versions.ipynb
+  
+### Native Jupyter Notebooks with Senzing
 
-1. Play around by diving into folders and launching Jupyter Notebooks, i.e. *.ipynb files.
+1. Start Jupyter:
+
+    ```console
+    cd ~/senzing.git/docker-jupyter/notebooks
+    jupyter notebook
+    ```
 
 1. Open senzing-utilities / senzing-license.ipynb
 
@@ -93,10 +110,8 @@ The following software programs need to be installed:
     1. Reason: Senzing API isn't supported on macOS.
     1. So, we have to find a way to run it on Linux on macOS
     1. Answer: Docker
-    
-1. However, Jupyter Notebooks can be used to develop python programs that do not access the Senzing API.
-    1. Examples:
-        1. Analyze / Graph JSON, CSV
-        2. Transform or generate data
 
 ### Docker-based Jupyter Notebooks
+
+
+
