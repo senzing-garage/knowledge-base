@@ -72,7 +72,7 @@ The following software programs need to be installed:
 1. Start Jupyter:
 
     ```console
-    cd ~/senzing.git/jupyter-jupyter/notebooks
+    cd ~/docktermj.git/jupyter-examples/notebooks
     jupyter notebook
     ```
 
