@@ -15,7 +15,7 @@ The following software programs need to be installed.
 
 ## Set environment variables for repository
 
-1. Set environment variables for organization/account and the name of the repository.
+1. :warning: If not already set, set environment variables for organization/account and the name of the repository.
    Example:
 
     ```console
@@ -53,7 +53,7 @@ The following software programs need to be installed.
     ```console
     mkdir --parents ${GIT_ACCOUNT_DIR}
     cd  ${GIT_ACCOUNT_DIR}
-    git clone ${GIT_REPOSITORY_URL}
+    git clone  --recurse-submodules ${GIT_REPOSITORY_URL}
     ```
 
 1. On macOS, get repository.
@@ -61,5 +61,5 @@ The following software programs need to be installed.
     ```console
     mkdir -p ${GIT_ACCOUNT_DIR}
     cd  ${GIT_ACCOUNT_DIR}
-    git clone ${GIT_REPOSITORY_URL}
+    git clone --recurse-submodules ${GIT_REPOSITORY_URL}
     ```
