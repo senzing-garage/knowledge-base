@@ -92,7 +92,9 @@ The following software programs need to be installed:
         1. D3-in-Jupyter-Notebook/SCATTER PLOT.ipynb
     1. Operating environment
         1. etc/software-versions.ipynb
-  
+ 
+ 1. [A gallery of interesting Jupyter Notebooks](https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks)
+
 ### Native Jupyter Notebooks with Senzing
 
 1. Start Jupyter:
@@ -108,10 +110,26 @@ The following software programs need to be installed:
 
 1. You'll see an error on `from G2Product import G2Product`
     1. Reason: Senzing API isn't supported on macOS.
-    1. So, we have to find a way to run it on Linux on macOS
-    1. Answer: Docker
+    1. So, we have to find a way to run it on Linux on macOS.
+        1. Answer: Docker
 
 ### Docker-based Jupyter Notebooks
 
+1. Detailed instructions at [senzing/jupyter](https://github.com/Senzing/docker-jupyter).
 
+1. Option #2 - Like Option #1 but without token authentication. Example:
 
+    ```console
+    export WEBAPP_PORT=8888
+    export SENZING_DIR=/opt/senzing
+    export SHARED_DIR=/tmp
+
+    sudo docker run -it \
+      --name senzing-jupyter \
+      --publish ${WEBAPP_PORT}:8888 \
+      --rm \
+      --volume ${SHARED_DIR}:/notebooks/shared \
+      --volume ${SENZING_DIR}:/opt/senzing \
+      senzing/jupyter \
+        start.sh jupyter notebook --NotebookApp.token=''
+    ```
