@@ -8,9 +8,14 @@
     1. [Background knowledge](#background-knowledge)
 1. [Preparation](#preparation)
     1. [Prerequisite software](#prerequisite-software)
-    1. [Clone repository](#clone-repository)
+    1. [Clone repositories](#clone-repositories)
+    1. [Install python libraries](#install-python-libraries)
     1. [Create SENZING_DIR](#create-senzing_dir)
 1. [Tutorial](#tutorial)
+    1. [Native Jupyter Notebooks](#native-jupyter-notebooks)
+    1. [Native Jupyter Notebooks with Senzing](#native-jupyter-notebooks-with-senzing)
+    1. [Docker-based Jupyter Notebooks](#docker-based-jupyter-notebooks)
+    1. [Database access](#database-access)
 
 ## Expectations
 
@@ -20,7 +25,7 @@ This repository and demonstration require 7 GB free disk space.
 
 ### Time
 
-Budget 2 hours to get the demonstration up-and-running, depending on CPU and network speeds.
+Budget 4 hours to get the demonstration up-and-running, depending on CPU and network speeds.
 
 ### Background knowledge
 
@@ -72,6 +77,14 @@ The following software programs need to be installed:
 1. If you do not already have an `/opt/senzing` directory on your local system, visit
 [HOWTO - Create SENZING_DIR](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/create-senzing-dir.md).
 
+### Pull senzing/jupyter
+
+1. To get a headstart on a 5 GB download,  we'll start pulling senzing/jupyter.
+
+    ```console
+    docker pull senzing/jupyter
+    ```
+
 ## Tutorial
 
 ### Native Jupyter Notebooks
@@ -92,8 +105,8 @@ The following software programs need to be installed:
         1. D3-in-Jupyter-Notebook/SCATTER PLOT.ipynb
     1. Operating environment
         1. etc/software-versions.ipynb
- 
- 1. [A gallery of interesting Jupyter Notebooks](https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks)
+
+1. [A gallery of interesting Jupyter Notebooks](https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks)
 
 ### Native Jupyter Notebooks with Senzing
 
@@ -106,7 +119,7 @@ The following software programs need to be installed:
 
 1. Open senzing-utilities / senzing-license.ipynb
 
-1. Click "Run" button multiple times
+1. Click "Run" button multiple times.
 
 1. You'll see an error on `from G2Product import G2Product`
     1. Reason: Senzing API isn't supported on macOS.
@@ -115,9 +128,12 @@ The following software programs need to be installed:
 
 ### Docker-based Jupyter Notebooks
 
-1. Detailed instructions at [senzing/jupyter](https://github.com/Senzing/docker-jupyter).
+1. For reference, detailed instructions are at
+   [senzing/jupyter](https://github.com/Senzing/docker-jupyter).
 
-1. Option #2 - Like Option #1 but without token authentication. Example:
+1. Launch docker container using SQLite.
+   `SHARED_DIR` is a host-based folder for use within Jupyter.
+   Example:
 
     ```console
     export WEBAPP_PORT=8888
@@ -133,3 +149,22 @@ The following software programs need to be installed:
       senzing/jupyter \
         start.sh jupyter notebook --NotebookApp.token=''
     ```
+
+1. Open a web browser on `http://localhost:8888`.
+
+1. Like before, open senzing-utilities / senzing-license.ipynb
+
+1. Click "Run" button multiple times.
+
+1. This time, there is no error on `from G2Product import G2Product`.
+    1. Reason: The docker container is running Linux.
+    1. Even though `/opt/senzing` is on the local workstation.
+
+1. Try other Senzing notebooks:
+    1. senzing-examples/python/*
+    1. senzing-utilities
+
+### Database access
+
+1. For information on running docker images that can access PostgreSQL, MySQL, or DB2,
+   see [github.com/senzing/docker-jupyter](https://github.com/Senzing/docker-jupyter).  
