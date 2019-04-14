@@ -1,0 +1,81 @@
+# Update Senzing images on DockerHub
+
+## Overview
+
+Instructions for updating [Senzing Docker images on DockerHub](https://hub.docker.com/u/senzing).
+
+### Contents
+
+1. [Delete local Senzing images](#delete-local-senzing-images)
+1. [Build docker images](#build-docker-images)
+1. [Push to DockerHub](#push-to-dockerhub)
+
+## Delete local Senzing images
+
+Delete Senzing images from local Docker repository.
+
+1. List Senzing images.  Example:
+
+    ```console
+    sudo docker images | grep senzing
+    ```
+
+1. Delete docker images.  Example:
+
+    ```console
+    sudo docker rmi --force e8aeb6c2fd95 3f112102dccc
+    ```
+
+## Build docker images
+
+1. Create docker images from repositories.  Example:
+
+    ```console
+    sudo docker build --tag senzing/senzing-base        https://github.com/senzing/docker-senzing-base.git
+    sudo docker build --tag senzing/senzing-debug       https://github.com/senzing/docker-senzing-debug.git
+    sudo docker build --tag senzing/g2command           https://github.com/senzing/docker-g2command.git
+    sudo docker build --tag senzing/g2loader            https://github.com/senzing/docker-g2loader.git
+    sudo docker build --tag senzing/jupyter             https://github.com/senzing/docker-jupyter.git
+    sudo docker build --tag senzing/mock-data-generator https://github.com/senzing/mock-data-generator.git
+    sudo docker build --tag senzing/python-demo         https://github.com/senzing/docker-python-demo.git
+    sudo docker build --tag senzing/stream-loader       https://github.com/senzing/stream-loader.git
+    ```
+
+1. Manual builds.
+     1. [senzing/senzing-api-server](https://github.com/Senzing/senzing-api-server)
+
+## Push to DockerHub
+
+1. Make a list of Senzing docker images. Example:
+
+    ```console
+    export GIT_REPOSITORIES=( \
+      "senzing-base" \
+      "senzing-debug" \
+      "g2command" \
+      "g2loader" \
+      "jupyter" \
+      "mock-data-generator" \
+      "python-demo" \
+      "senzing-api-server" \
+      "stream-loader" \
+    )
+    ```
+
+1. Set tag of push.  Example:
+
+    ```console
+    export GIT_TAG=0.2.2
+    ```
+
+1. Push.  Example:
+
+    ```console
+    for GIT_REPOSITORY in ${GIT_REPOSITORIES[@]}; \
+    do \
+      docker tag senzing/${GIT_REPOSITORY} senzing/${GIT_REPOSITORY}:${GIT_TAG}; \
+      docker push senzing/${GIT_REPOSITORY}; \
+      docker push senzing/${GIT_REPOSITORY}:${GIT_TAG}; \
+      docker rmi senzing/${GIT_REPOSITORY}:${GIT_TAG}; \
+    done
+    ```
