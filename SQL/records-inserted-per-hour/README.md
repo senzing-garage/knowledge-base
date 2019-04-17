@@ -34,3 +34,11 @@ Get per-hour record insertion rates.
     ```
 
 ### Db2
+
+1. [Db2](records-inserted-per-hour-db2.sql)
+
+    ```console
+    curl -X GET \
+      --output /tmp/records-inserted-per-hour-db2.sql \
+      https://raw.githubusercontent.com/Senzing/knowledge-base/master/SQL/records-inserted-per-hour/records-inserted-per-hour-db2.sql
+    ```

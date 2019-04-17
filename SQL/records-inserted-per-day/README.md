@@ -34,3 +34,11 @@ Get per-day record insertion rates.
     ```
 
 ### Db2
+
+1. [Db2](records-inserted-per-day-db2.sql)
+
+    ```console
+    curl -X GET \
+      --output /tmp/records-inserted-per-day-db2.sql \
+      https://raw.githubusercontent.com/Senzing/knowledge-base/master/SQL/records-inserted-per-day/records-inserted-per-day-db2.sql
+    ```
