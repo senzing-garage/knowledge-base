@@ -20,7 +20,7 @@ Get per-day record insertion rates.
     ```console
     curl -X GET \
       --output /tmp/records-inserted-per-day-postgresql.sql \
-      https://raw.githubusercontent.com/Senzing/knowledge-base/master/SQL/records-inserted-per-minute/records-inserted-per-day-postgresql.sql
+      https://raw.githubusercontent.com/Senzing/knowledge-base/master/SQL/records-inserted-per-day/records-inserted-per-day-postgresql.sql
     ```
 
 ### MySQL

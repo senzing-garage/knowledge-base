@@ -20,7 +20,7 @@ Get per-hour record insertion rates.
     ```console
     curl -X GET \
       --output /tmp/records-inserted-per-hour-postgresql.sql \
-      https://raw.githubusercontent.com/Senzing/knowledge-base/master/SQL/records-inserted-per-minute/records-inserted-per-hour-postgresql.sql
+      https://raw.githubusercontent.com/Senzing/knowledge-base/master/SQL/records-inserted-per-hour/records-inserted-per-hour-postgresql.sql
     ```
 
 ### MySQL
