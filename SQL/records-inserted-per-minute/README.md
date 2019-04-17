@@ -25,4 +25,12 @@ Get per-minute record insertion rates.
 
 ### MySQL
 
+1. [MySQL](records-inserted-per-minute-mysql.sql)
+
+    ```console
+    curl -X GET \
+      --output /tmp/records-inserted-per-minute-mysql.sql \
+      https://raw.githubusercontent.com/Senzing/knowledge-base/master/SQL/records-inserted-per-minute/records-inserted-per-minute-mysql.sql
+    ```
+
 ### Db2

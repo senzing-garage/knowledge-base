@@ -25,4 +25,12 @@ Get per-day record insertion rates.
 
 ### MySQL
 
+1. [MySQL](records-inserted-per-day-mysql.sql)
+
+    ```console
+    curl -X GET \
+      --output /tmp/records-inserted-per-day-mysql.sql \
+      https://raw.githubusercontent.com/Senzing/knowledge-base/master/SQL/records-inserted-per-day/records-inserted-per-day-mysql.sql
+    ```
+
 ### Db2

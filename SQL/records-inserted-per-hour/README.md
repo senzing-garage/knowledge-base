@@ -25,4 +25,12 @@ Get per-hour record insertion rates.
 
 ### MySQL
 
+1. [MySQL](records-inserted-per-hour-mysql.sql)
+
+    ```console
+    curl -X GET \
+      --output /tmp/records-inserted-per-hour-mysql.sql \
+      https://raw.githubusercontent.com/Senzing/knowledge-base/master/SQL/records-inserted-per-hour/records-inserted-per-hour-mysql.sql
+    ```
+
 ### Db2
