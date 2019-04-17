@@ -2,7 +2,7 @@
 
 ## Overview
 
-SQL queries for Senzing information on PostgreSQL, MySQL, and Db2 databases.
+SQL queries for Senzing information in PostgreSQL, MySQL, and Db2 databases.
 
 ### Contents
 
