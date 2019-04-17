@@ -6,4 +6,4 @@ FROM
 GROUP BY
   time
 ORDER BY
-  time asc;
+  time desc;
