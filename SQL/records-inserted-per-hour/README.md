@@ -2,15 +2,27 @@
 
 ## Overview
 
-Get per-minute record insertion rates.
+Get per-hour record insertion rates.
+
+### Contents
+
+1. [SQL](#sql)
+    1. [PostgreSQL](#postgresql)
+    1. [MySQL](#mysql)
+    1. [Db2](#db2)
 
 ## SQL
+
+### PostgreSQL
 
 1. [PostgreSQL](records-inserted-per-hour-postgresql.sql)
 
     ```console
-    curl -X GET 
-    ````
+    curl -X GET \
+      --output /tmp/records-inserted-per-hour-postgresql.sql \
+      https://raw.githubusercontent.com/Senzing/knowledge-base/master/SQL/records-inserted-per-minute/records-inserted-per-hour-postgresql.sql
+    ```
 
-1. [MySQL]()
-1. [Db2]()
+### MySQL
+
+### Db2
