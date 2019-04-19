@@ -47,7 +47,12 @@ that is on the internet to a machine that is not on the internet, (i.e. "air-gap
 
 ## Transfer tar file to air-gapped machine
 
-1. If `scp` or `sftp` is available, a network file transfer is possible.
+1. If `scp` or `sftp` connectivity is available, a network file transfer is possible. Example:
+
+    ```console
+    scp ~/${DOCKER_ACCOUNT}-${DOCKER_IMAGE}-${DOCKER_TAG}.tar my.example.com:
+    ```
+
 1. If truly air-gapped, copy `tar` file to a portable storage medium to transfer to air-gapped machine.
 
 ## Unpackage docker image to local repository
