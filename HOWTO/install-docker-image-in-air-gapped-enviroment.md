@@ -1,5 +1,19 @@
 # Install docker image in an air-gapped environment
 
+## Overview
+
+The following steps show how to transfer a docker image from a machine
+that is on the internet to a machine that is not on the internet, (i.e. "air-gapped").
+
+### Contents
+
+1. [Set environment variables](#set-environment-variables)
+1. [Pull docker image to local repository](#pull-docker-image-to-local-repository)
+1. [Package docker image](#package-docker-image)
+1. [Transfer tar file to air-gapped machine](#transfer-tar-file-to-air-gapped-machine)
+1. [Unpackage docker image to local repository](#unpackage-docker-image-to-local-repository)
+1. [Push image to private registry](#push-image-to-private-registry)
+
 ## Set environment variables
 
 1. Using [senzing/hello-world-on-hub-docker-com:latest](https://hub.docker.com/r/senzing/hello-world-on-hub-docker-com) as an example:
