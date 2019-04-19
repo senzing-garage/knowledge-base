@@ -50,7 +50,9 @@ that is on the internet to a machine that is not on the internet, (i.e. "air-gap
 1. If `scp` or `sftp` connectivity is available, a network file transfer is possible. Example:
 
     ```console
-    scp ~/${DOCKER_ACCOUNT}-${DOCKER_IMAGE}-${DOCKER_TAG}.tar my.example.com:
+    export TARGET_HOST=my.example.com
+
+    scp ~/${DOCKER_ACCOUNT}-${DOCKER_IMAGE}-${DOCKER_TAG}.tar ${TARGET_HOST}:
     ```
 
 1. If truly air-gapped, copy `tar` file to a portable storage medium to transfer to air-gapped machine.
