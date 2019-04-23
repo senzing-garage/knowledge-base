@@ -75,7 +75,7 @@ Delete Senzing images from local Docker repository.
     )
     ```
 
-1. :pencil2" Set tag of push.  Example:
+1. :pencil2: Set tag of push.  Example:
 
     ```console
     export GIT_TAG=0.2.3
