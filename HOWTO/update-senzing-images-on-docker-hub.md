@@ -62,33 +62,33 @@ Delete Senzing images from local Docker repository.
 1. Make a list of Senzing docker images. Example:
 
     ```console
-    export GIT_REPOSITORIES=( \
-      "senzing-base" \
-      "senzing-debug" \
-      "g2command" \
-      "g2loader" \
-      "jupyter" \
-      "mock-data-generator" \
-      "python-demo" \
-      "senzing-api-server" \
-      "stream-loader" \
+    export DOCKER_IMAGES=( \
+      "senzing/senzing-base" \
+      "senzing/senzing-debug" \
+      "senzing/g2command" \
+      "senzing/g2loader" \
+      "senzing/jupyter" \
+      "senzing/mock-data-generator" \
+      "senzing/python-demo" \
+      "senzing/senzing-api-server" \
+      "senzing/stream-loader" \
     )
     ```
 
 1. Set tag of push.  Example:
 
     ```console
-    export GIT_TAG=0.2.2
+    export GIT_TAG=0.2.3
     ```
 
 1. Push to DockerHub.  Example:
 
     ```console
-    for GIT_REPOSITORY in ${GIT_REPOSITORIES[@]}; \
+    for DOCKER_IMAGE in ${DOCKER_IMAGES[@]}; \
     do \
-      docker tag senzing/${GIT_REPOSITORY} senzing/${GIT_REPOSITORY}:${GIT_TAG}; \
-      docker push senzing/${GIT_REPOSITORY}; \
-      docker push senzing/${GIT_REPOSITORY}:${GIT_TAG}; \
-      docker rmi senzing/${GIT_REPOSITORY}:${GIT_TAG}; \
+      sudo docker tag ${DOCKER_IMAGE} ${DOCKER_IMAGE}:${GIT_TAG}; \
+      sudo docker push ${DOCKER_IMAGE}; \
+      sudo docker push ${DOCKER_IMAGE}:${GIT_TAG}; \
+      sudo docker rmi ${DOCKER_IMAGE}:${GIT_TAG}; \
     done
     ```
