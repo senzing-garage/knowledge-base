@@ -23,6 +23,23 @@
 
 ### CentOS
 
+1. Download `ibm_data_server_driver_for_odbc_cli_linuxx64_v11.1.tar.gz` to `/opt/senzing/ibm_data_server_driver_for_odbc_cli_linuxx64_v11.1.tar.gz`.
+
+1. Uncompress `.tar.gz` file.  Example:
+
+    ```console
+    sudo mkdir -p /opt/senzing/db2
+
+    sudo tar \
+      --extract \
+      --owner=root \
+      --group=root \
+      --no-same-owner \
+      --no-same-permissions \
+      --directory=/opt/senzing/db2 \
+      --file=/opt/senzing/ibm_data_server_driver_for_odbc_cli_linuxx64_v11.1.tar.gz
+    ```
+
 ### Ubuntu
 
 1. Download `ibm_data_server_driver_for_odbc_cli_linuxx64_v11.1.tar.gz` to `/opt/senzing/ibm_data_server_driver_for_odbc_cli_linuxx64_v11.1.tar.gz`.
