@@ -62,7 +62,7 @@ Delete Senzing images from local Docker repository.
 1. Make a list of Senzing docker images. Example:
 
     ```console
-    export DOCKER_IMAGES=( \
+    export DOCKER_IMAGE_NAMES=( \
       "senzing/senzing-base" \
       "senzing/senzing-debug" \
       "senzing/g2command" \
@@ -78,17 +78,17 @@ Delete Senzing images from local Docker repository.
 1. :pencil2: Set tag of push.  Example:
 
     ```console
-    export GIT_TAG=0.2.3
+    export GIT_TAG=0.2.4
     ```
 
 1. Push to DockerHub.  Example:
 
     ```console
-    for DOCKER_IMAGE in ${DOCKER_IMAGES[@]}; \
+    for DOCKER_IMAGE_NAME in ${DOCKER_IMAGE_NAMES[@]}; \
     do \
-      sudo docker tag ${DOCKER_IMAGE} ${DOCKER_IMAGE}:${GIT_TAG}; \
-      sudo docker push ${DOCKER_IMAGE}; \
-      sudo docker push ${DOCKER_IMAGE}:${GIT_TAG}; \
-      sudo docker rmi ${DOCKER_IMAGE}:${GIT_TAG}; \
+      sudo docker tag ${DOCKER_IMAGE_NAME} ${DOCKER_IMAGE_NAME}:${GIT_TAG}; \
+      sudo docker push ${DOCKER_IMAGE_NAME}; \
+      sudo docker push ${DOCKER_IMAGE_NAME}:${GIT_TAG}; \
+      sudo docker rmi ${DOCKER_IMAGE_NAME}:${GIT_TAG}; \
     done
     ```
