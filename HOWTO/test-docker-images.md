@@ -43,3 +43,5 @@ References:
             -l /output/${BENCH_LOG_FILE_NAME} \
             -t ${BENCH_TARGET_DOCKER_IMAGE}
     ```
+
+1. The BENCH_LOG_FILE_NAME file will be in the `${PWD}` directory.
