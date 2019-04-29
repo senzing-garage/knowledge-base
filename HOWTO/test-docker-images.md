@@ -15,7 +15,6 @@ References:
 1. :pencil2: Set environment variables.  Example:
 
     ```console
-    export
     export BENCH_LOG_FILE_NAME=debian-9.scan
     export BENCH_TARGET_DOCKER_IMAGE=debian:9
     ```
@@ -42,5 +41,5 @@ References:
         docker/docker-bench-security \
             -b \
             -l /output/${BENCH_LOG_FILE_NAME} \
-            -t ${BENCH_TARGET_DOCKER_IMAGE} \
+            -t ${BENCH_TARGET_DOCKER_IMAGE}
     ```
