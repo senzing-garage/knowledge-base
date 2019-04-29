@@ -16,7 +16,7 @@
 
 1. If you need to create a private docker registry, see
        [HOWTO - Install docker registry server](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/install-docker-registry-server.md).
-1. Set environment variable. Example:
+1. :pencil2: Set environment variables.  Example:
 
     ```console
     export DOCKER_REGISTRY_URL=my.docker-registry.com:5000
