@@ -29,6 +29,7 @@ References:
         --label docker_bench_security \
         --net host \
         --pid host \
+        --rm \
         --tty \
         --userns host \
         --volume /etc:/etc \
@@ -44,4 +45,4 @@ References:
             -t ${BENCH_TARGET_DOCKER_IMAGE}
     ```
 
-1. The BENCH_LOG_FILE_NAME file will be in the `${PWD}` directory.
+1. The `${BENCH_LOG_FILE_NAME}` file will be in the `${PWD}` directory.
