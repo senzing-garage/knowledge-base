@@ -88,3 +88,8 @@
     rancher app delete my-senzing-hello-world-on-hub-docker-com
     rancher app delete my-senzing-hello-world
     ```
+
+## Troubleshooting
+
+1. Error message:  x509: certificate signed by unknown authority
+    1. See [Test an insecure registry](https://docs.docker.com/registry/insecure/)

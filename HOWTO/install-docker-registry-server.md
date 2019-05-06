@@ -56,6 +56,7 @@ For detailed installation, see
 
 1. References:
     1. [How to install docker-registry on Ubuntu 16.04 (Xenial Xerus)](https://www.howtoinstall.co/en/ubuntu/xenial/docker-registry)
+    1. [Insecure registries](https://docs.docker.com/registry/insecure/)
 
 ### macOS
 
