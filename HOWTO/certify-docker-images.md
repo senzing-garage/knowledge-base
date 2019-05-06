@@ -11,7 +11,7 @@
     export DOCKER_REGISTRY_API_ENDPOINT="https://${DOCKER_REGISTRY_URL}"
 
     export DOCKER_IMAGE_NAMES=( \
-      "docker/test" \
+      "senzing/test" \
     )
 
     export GIT_TAG=latest
