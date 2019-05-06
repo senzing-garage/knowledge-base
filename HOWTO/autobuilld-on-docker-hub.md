@@ -11,9 +11,9 @@
         1. **Select organization:** Senzing
         1. **Select repository:** [Choose matching GitHub repository]
     1. Autotest
-        1. (*) Internal and External Pull Requests
+        1. :radio_button: Internal and External Pull Requests
     1. Repository links
-        1. (*) Enable for Base image
+        1. :radio_button: Enable for Base image
     1. Click "Save and Build"
 
 ## References
