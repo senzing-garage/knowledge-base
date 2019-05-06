@@ -1,10 +1,5 @@
 # Certify Docker images
 
-## Dependencies
-
-1. [docker-ee](../software/docker-ee.md)
-1. [inspectDockerImage](../software/inspectDockerImage.md)
-
 ## Certify using local docker registry
 
 1. :pencil2: Set environment variables.  Example:
