@@ -15,3 +15,7 @@
     1. Repository links
         1. (*) Enable for Base image
     1. Click "Save and Build"
+
+## References
+
+1. [Set up Automated builds](https://docs.docker.com/docker-hub/builds/)
