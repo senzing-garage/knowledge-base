@@ -19,7 +19,7 @@ Get per-minute record insertion rates.
 
     ```console
     curl -X GET \
-      --output /tmp/records-inserted-per-minute-postgresql.sql \
+      --output records-inserted-per-minute-postgresql.sql \
       https://raw.githubusercontent.com/Senzing/knowledge-base/master/SQL/records-inserted-per-minute/records-inserted-per-minute-postgresql.sql
     ```
 
@@ -29,7 +29,7 @@ Get per-minute record insertion rates.
 
     ```console
     curl -X GET \
-      --output /tmp/records-inserted-per-minute-mysql.sql \
+      --output records-inserted-per-minute-mysql.sql \
       https://raw.githubusercontent.com/Senzing/knowledge-base/master/SQL/records-inserted-per-minute/records-inserted-per-minute-mysql.sql
     ```
 
@@ -39,6 +39,6 @@ Get per-minute record insertion rates.
 
     ```console
     curl -X GET \
-      --output /tmp/records-inserted-per-minute-db2.sql \
+      --output records-inserted-per-minute-db2.sql \
       https://raw.githubusercontent.com/Senzing/knowledge-base/master/SQL/records-inserted-per-minute/records-inserted-per-minute-db2.sql
     ```

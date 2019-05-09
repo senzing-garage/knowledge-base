@@ -19,7 +19,7 @@ Get per-hour record insertion rates.
 
     ```console
     curl -X GET \
-      --output /tmp/records-inserted-per-hour-postgresql.sql \
+      --output records-inserted-per-hour-postgresql.sql \
       https://raw.githubusercontent.com/Senzing/knowledge-base/master/SQL/records-inserted-per-hour/records-inserted-per-hour-postgresql.sql
     ```
 
@@ -29,7 +29,7 @@ Get per-hour record insertion rates.
 
     ```console
     curl -X GET \
-      --output /tmp/records-inserted-per-hour-mysql.sql \
+      --output records-inserted-per-hour-mysql.sql \
       https://raw.githubusercontent.com/Senzing/knowledge-base/master/SQL/records-inserted-per-hour/records-inserted-per-hour-mysql.sql
     ```
 
@@ -39,6 +39,6 @@ Get per-hour record insertion rates.
 
     ```console
     curl -X GET \
-      --output /tmp/records-inserted-per-hour-db2.sql \
+      --output records-inserted-per-hour-db2.sql \
       https://raw.githubusercontent.com/Senzing/knowledge-base/master/SQL/records-inserted-per-hour/records-inserted-per-hour-db2.sql
     ```
