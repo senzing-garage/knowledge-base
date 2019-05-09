@@ -28,21 +28,26 @@ This task requires a minimum of 5 GB free disk space.
 
 ### Via curl command
 
+1. :pencil2: Set environment variables.
+
+    ```console
+    export SENZING_FILE=/tmp/Senzing_API.tgz
+    ```
+
 1. Download [Senzing_API.tgz](https://s3.amazonaws.com/public-read-access/SenzingComDownloads/Senzing_API.tgz)
 
     ```console
     curl -X GET \
-      --output /tmp/Senzing_API.tgz \
+      --output ${SENZING_FILE} \
       https://s3.amazonaws.com/public-read-access/SenzingComDownloads/Senzing_API.tgz
     ```
 
 ## Linux
 
-1. Set environment variables.
+1. :pencil2: Set environment variables.
 
     ```console
     export SENZING_DIR=/opt/senzing
-    export SENZING_FILE=/tmp/Senzing_API.tgz
     ```
 
 1. Extract [Senzing_API.tgz](https://s3.amazonaws.com/public-read-access/SenzingComDownloads/Senzing_API.tgz)
@@ -70,11 +75,10 @@ This task requires a minimum of 5 GB free disk space.
 
 ## macOS
 
-1. Set environment variables.
+1. :pencil2: Set environment variables.
 
     ```console
     export SENZING_DIR=/opt/senzing
-    export SENZING_FILE=/tmp/Senzing_API.tgz
     ```
 
 1. Extract [Senzing_API.tgz](https://s3.amazonaws.com/public-read-access/SenzingComDownloads/Senzing_API.tgz)
