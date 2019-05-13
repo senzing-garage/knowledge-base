@@ -38,8 +38,9 @@ This task requires a minimum of 5 GB free disk space.
 
     ```console
     curl -X GET \
-      --output ${SENZING_FILE} \
-      https://s3.amazonaws.com/public-read-access/SenzingComDownloads/Senzing_API.tgz
+      --location \
+      --output Senzing_API.tgz \
+      https://senzing.com/APILatest
     ```
 
 ## Linux
