@@ -1,6 +1,6 @@
 # View SQLite database
 
-## Using
+## Using sqlite-web
 
 1. :pencil2: Set environment variables.  Example:
 
