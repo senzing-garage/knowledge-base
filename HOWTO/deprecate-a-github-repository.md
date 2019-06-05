@@ -67,9 +67,10 @@
 
 ## Examples
 
-1. [github.com/Senzing/docker-compose-db2-demo](https://github.com/Senzing/docker-compose-db2-demo)
-1. [github.com/Senzing/docker-compose-mysql-demo](https://github.com/Senzing/docker-compose-mysql-demo)
-1. [github.com/Senzing/docker-compose-postgresql-demo](https://github.com/Senzing/docker-compose-postgresql-demo)
+1. [github.com/Senzing?q=docker-compose](https://github.com/Senzing?q=docker-compose)
+    1. [github.com/Senzing/docker-compose-db2-demo](https://github.com/Senzing/docker-compose-db2-demo)
+    1. [github.com/Senzing/docker-compose-mysql-demo](https://github.com/Senzing/docker-compose-mysql-demo)
+    1. [github.com/Senzing/docker-compose-postgresql-demo](https://github.com/Senzing/docker-compose-postgresql-demo)
 
 ## References
 
