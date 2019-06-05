@@ -20,6 +20,15 @@ Instructions for updating Senzing Docker images on DockerHub. Example:
 
 1. Build [senzing/senzing-package](https://github.com/Senzing/senzing-package#develop) docker image.
     1. Make sure to get the latest `Senzing_API.tgz`.
+    1. To build clean, don't use cache.
+       Example:
+
+        ```console
+        docker build \
+          --no-cache \
+          --tag senzing/senzing-package:latest \
+          .
+        ```
 
 ## Determine docker tag
 
@@ -101,4 +110,3 @@ Instructions for updating Senzing Docker images on DockerHub. Example:
 ## Certify image for Docker Store
 
 1. ....
-
