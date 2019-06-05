@@ -5,7 +5,7 @@
 ### Change README.md
 
 1. At the top of README, under the level-1 header, add a level-2 "Deprecated" header.
-   Example
+   Example:
 
     ```console
     ## :no_entry: Deprecated
@@ -19,6 +19,8 @@
     ```console
     [![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
     ```
+
+1. Pull changes to README.md into "master" branch.
 
 ### Change title
 
@@ -43,6 +45,8 @@
 
 1. On `https://github.com/{account}/{repository}` page, see if there are any branches that need to be merged into "master" branch.
 
+1. Delete unwanted branches.
+
 ### Pull requests
 
 1. On `https://github.com/{account}/{repository}` page, see if there are any "Pull requests" that need to be merged into "master" branch.
@@ -63,6 +67,8 @@
 
 ## Examples
 
+1. [github.com/Senzing/docker-compose-db2-demo](https://github.com/Senzing/docker-compose-db2-demo)
+1. [github.com/Senzing/docker-compose-mysql-demo](https://github.com/Senzing/docker-compose-mysql-demo)
 1. [github.com/Senzing/docker-compose-postgresql-demo](https://github.com/Senzing/docker-compose-postgresql-demo)
 
 ## References
