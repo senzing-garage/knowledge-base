@@ -3,6 +3,12 @@
 ## Overview
 
 `SENZING_DIR` is a directory created by decompressing the `Senzing_API.tgz` file.
+It is usually located at `/opt/senzing`.
+
+There are 2 methods of creating the `SENZING_DIR`:
+
+1. [Using Docker](#using-docker)
+1. [Manual download and extract](#manual-download-and-extract)
 
 ### Expectations
 
@@ -17,16 +23,53 @@ This task requires a minimum of 5 GB free disk space.
 - 1.5 GB for download
 - 3.5 GB for installed package
 
-## Downloading Senzing_API.tgz
+## Using Docker
 
-### Via web browser
+1. The use of the [store/senzing/senzing-package](https://hub.docker.com/_/senzing-package)
+docker image requires acceptance of an End User License agreement (EULA).
+To accept the license:
+
+    1. Visit [hub.docker.com/_/senzing-package](https://hub.docker.com/_/senzing-package).
+    1. Login to DockerHub.
+    1. On [hub.docker.com/_/senzing-package](https://hub.docker.com/_/senzing-package), click "Proceed to Checkout" button.
+    1. Check boxes for agreeing and acknowledging.
+    1. Click "Get Content" button.
+
+1. :pencil2: Set environment variables.
+   Example:
+
+    ```console
+    export SENZING_DIR=/opt/senzing
+
+    export SENZING_SUBCOMMAND=install
+    export SENZING_DOCKER_TAG=1.9.19155
+    ```
+
+1. Populate `SENZING_DIR`.
+   Example:
+
+    ```console
+    sudo mkdir -p ${SENZING_DIR}
+
+    sudo docker run \
+      --env SENZING_SUBCOMMAND="${SENZING_SUBCOMMAND}" \
+      --rm \
+      --volume ${SENZING_DIR}:/opt/senzing \
+      store/senzing/senzing-package:${SENZING_DOCKER_TAG}
+    ```
+
+## Manual download and extract
+
+### Downloading Senzing_API.tgz
+
+#### Via web browser
 
 1. Visit [senzing.com](https://senzing.com/).
 1. Click on Pricing > [Pricing - Senzing API](https://senzing.com/pricing/pricing-senzing-api/).
 1. In the "Try" pane, click on the "Download" button.
 1. In the "Download Now" dialog box, click "Download Now" button.
 
-### Via curl command
+#### Via curl command
 
 1. :pencil2: Set environment variables.
 
@@ -43,7 +86,7 @@ This task requires a minimum of 5 GB free disk space.
       https://senzing.com/APILatest
     ```
 
-## Linux
+### Linux
 
 1. :pencil2: Set environment variables.
 
@@ -74,7 +117,7 @@ This task requires a minimum of 5 GB free disk space.
     sudo chmod -R 777 ${SENZING_DIR}/g2/python/g2config.json
     ```
 
-## macOS
+### macOS
 
 1. :pencil2: Set environment variables.
 
@@ -103,6 +146,6 @@ This task requires a minimum of 5 GB free disk space.
     sudo chmod -R 777 ${SENZING_DIR}/g2/python/g2config.json
     ```
 
-## Windows
+### Windows
 
 1. Uncompress `Senzing_API.tgz` to `C:\opt\senzing`
