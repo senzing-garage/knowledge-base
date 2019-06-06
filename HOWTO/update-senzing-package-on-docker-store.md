@@ -101,13 +101,14 @@ Instructions for updating Senzing Docker images on DockerHub. Example:
         1. :ballot_box_with_check: Certify this plan
         1. Save the **Product ID** value. It will be needed for
            [Certify image for Docker Store](#certify-image-for-docker-store)
+           step.
     1. Resources
         1. **License Agreement:**
             1. :large_blue_circle: Paste Agreement
             1. Copy from existing plan.
         1. **Installation Instructions:** Copy from existing plan.
         1. **Release Notes:** {empty}
-    1. At the top, click "Save" or "Submit For Review"
+    1. At the top, click "Save" or "Submit For Review".
 
 ## Certify image for Docker Store
 
