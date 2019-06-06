@@ -22,7 +22,6 @@
       "senzing/mock-data-generator:latest" \
       "senzing/senzing-api-server:latest" \
       "senzing/senzing-debug:latest" \
-      "senzing/senzing-package:latest" \
       "senzing/stream-loader:latest" \
     )
     ```
