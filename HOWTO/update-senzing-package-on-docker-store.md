@@ -118,8 +118,11 @@ Instructions for updating Senzing Docker images on DockerHub. Example:
     export DOCKER_STORE_PRODUCT_ID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
     ```
 
-1. Using **Product ID** from above, re-run `inspectDockerImage` with
+1. Using **Product ID** from above, re-run `inspectDockerImage` with `--product-id` parameter.
+   Example:
 
     ```console
-    inspectDockerImage --product-id ${DOCKER_STORE_PRODUCT_ID} ${DOCKER_IMAGE_NAME}:${DOCKER_IMAGE_TAG}
+    inspectDockerImage \
+      --product-id ${DOCKER_STORE_PRODUCT_ID} \
+      ${DOCKER_IMAGE_NAME}:${DOCKER_IMAGE_TAG}
     ```
