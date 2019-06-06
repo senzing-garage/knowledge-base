@@ -25,15 +25,8 @@ This task requires a minimum of 5 GB free disk space.
 
 ## Using Docker
 
-1. The use of the [store/senzing/senzing-package](https://hub.docker.com/_/senzing-package)
-docker image requires acceptance of an End User License agreement (EULA).
-To accept the license:
-
-    1. Visit [hub.docker.com/_/senzing-package](https://hub.docker.com/_/senzing-package).
-    1. Login to DockerHub.
-    1. On [hub.docker.com/_/senzing-package](https://hub.docker.com/_/senzing-package), click "Proceed to Checkout" button.
-    1. Check boxes for agreeing and acknowledging.
-    1. Click "Get Content" button.
+1. Accept license agreement for `store/senzing/senzing-package` docker image.
+    1. Visit [HOWTO- Accept EULA](accept-eula.md#storesenzingsenzing-package-docker-image).
 
 1. :pencil2: Set environment variables.
    Example:
