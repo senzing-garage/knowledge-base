@@ -83,14 +83,14 @@ Instructions for updating Senzing Docker images on DockerHub. Example:
 
 ## Submit new image on Docker Store
 
-1. Log into [hub.docker.com/](https://hub.docker.com/) as the userid owning `senzing/senzing-package`.
+1. Log into [hub.docker.com](https://hub.docker.com/) as the userid owning `senzing/senzing-package`.
 1. In upper-right, username drop-down, select "Publisher Center".
 1. In "My Products", for "Senzing package installer", select "Actions" > "Edit Product"
 1. Select "Plans & Pricing" > "Create New Plan"
 1. In new plan:
     1. General Details
-        1. **Plan Name:** Free Plan - Major.Minor.Patch
-        1. **Description:** Copy from existing "Free Plan"
+        1. **Plan Name:** vMajor.Minor.Patch
+        1. **Description:** Copy from existing plan
         1. **Price/Month:** 0
         1. **Pull Requirements:** Subscribed users only
     1. Source Repositories & Tags
@@ -104,14 +104,14 @@ Instructions for updating Senzing Docker images on DockerHub. Example:
     1. Resources
         1. **License Agreement:**
             1. :large_blue_circle: Paste Agreement
-            1. Copy from existing "Free Plan"
-        1. **Installation Instructions:** Copy from existing "Free Plan"
+            1. Copy from existing plan.
+        1. **Installation Instructions:** Copy from existing plan.
         1. **Release Notes:** {empty}
     1. At the top, click "Save" or "Submit For Review"
 
 ## Certify image for Docker Store
 
-1. :pencil2: Product ID.
+1. :pencil2: Identify the Product ID.
    Example:
 
     ```console
