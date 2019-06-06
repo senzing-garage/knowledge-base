@@ -99,6 +99,8 @@ Instructions for updating Senzing Docker images on DockerHub. Example:
         1. **Tag:**  Major.Minor.Patch
     1. Certification
         1. :ballot_box_with_check: Certify this plan
+        1. Save the **Product ID** value. It will be needed for
+           [Certify image for Docker Store](#certify-image-for-docker-store)
     1. Resources
         1. **License Agreement:**
             1. :large_blue_circle: Paste Agreement
@@ -109,4 +111,15 @@ Instructions for updating Senzing Docker images on DockerHub. Example:
 
 ## Certify image for Docker Store
 
-1. ....
+1. :pencil2: Product ID.
+   Example:
+
+    ```console
+    export DOCKER_STORE_PRODUCT_ID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    ```
+
+1. Using **Product ID** from above, re-run `inspectDockerImage` with
+
+    ```console
+    inspectDockerImage --product-id ${DOCKER_STORE_PRODUCT_ID} ${DOCKER_IMAGE_NAME}:${DOCKER_IMAGE_TAG}
+    ```
