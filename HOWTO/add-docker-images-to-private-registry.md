@@ -10,19 +10,41 @@
 1. Accept End User License Agreement (EULA) for `store/senzing/senzing-package` docker image.
     1. Visit [HOWTO - Accept EULA](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/accept-eula.md#storesenzingsenzing-package-docker-image).
 
+## Build docker images
+
+1. Build Senzing "helper" Docker images.
+   Example:
+
+    ```console
+    sudo docker build --tag senzing/db2          https://github.com/senzing/docker-db2.git
+    sudo docker build --tag senzing/db2express-c https://github.com/senzing/docker-db2express-c.git
+    sudo docker build --tag senzing/mysql        https://github.com/senzing/docker-mysql.git
+    sudo docker build --tag senzing/mysql-init   https://github.com/senzing/docker-mysql-init.git
+    ```
+
 ## Identify docker images
 
-1. :pencil2: List docker images in an environment variable.
+1. :pencil2: List docker images in DockerHub in an environment variable.
    Example:
 
     ```console
     export DOCKER_IMAGE_NAMES=( \
+      "bitnami/phpmyadmin:4.8.5" \
+      "confluentinc/cp-kafka:4.0.1-1" \
+      "coleifer/sqlite-web:latest" \
+      "dockage/phppgadmin:latest" \
+      "ibmcom/db2express-c:10.5.0.5-3.10.0" \
+      "jbergknoff/postgresql-client:latest" \
+      "senzing/db2:latest" \
+      "senzing/db2express-c:latest" \
       "senzing/entity-search-web-app:latest" \
       "senzing/g2configtool:latest" \
       "senzing/g2command:latest" \
       "senzing/g2loader:latest" \
       "senzing/jupyter:latest" \
       "senzing/mock-data-generator:latest" \
+      "senzing/mysql:latest" \
+      "senzing/mysql-init:latest" \
       "senzing/python-demo:latest" \
       "senzing/senzing-api-server:latest" \
       "senzing/senzing-base:latest" \
@@ -35,7 +57,7 @@
 
 ## Pull images from DockerHub
 
-1. Add Senzing docker images to local docker repository.
+1. Add docker images to local docker repository.
    Example:
 
     ```console
@@ -56,7 +78,7 @@
 
 ## Push images to private registry
 
-1. Add Senzing docker images to private docker registry.
+1. Add docker images to private docker registry.
    Example:
 
     ```console
@@ -64,6 +86,15 @@
     do \
       sudo docker tag  ${DOCKER_IMAGE_NAME} ${DOCKER_REGISTRY_URL}/${DOCKER_IMAGE_NAME}; \
       sudo docker push ${DOCKER_REGISTRY_URL}/${DOCKER_IMAGE_NAME}; \
+    done
+    ```
+
+1. Delete tagged images.
+   Example:
+
+    ```console
+    for DOCKER_IMAGE_NAME in ${DOCKER_IMAGE_NAMES[@]};\
+    do \
       sudo docker rmi  ${DOCKER_REGISTRY_URL}/${DOCKER_IMAGE_NAME}; \
     done
     ```
