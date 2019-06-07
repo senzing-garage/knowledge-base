@@ -12,7 +12,8 @@
 
 ## Identify docker images
 
-1. :pencil2: List docker images in an environment variable.  Example:
+1. :pencil2: List docker images in an environment variable.
+   Example:
 
     ```console
     export DOCKER_IMAGE_NAMES=( \
@@ -34,7 +35,8 @@
 
 ## Pull images from DockerHub
 
-1. Add Senzing docker images to private docker registry.  Example:
+1. Add Senzing docker images to local docker repository.
+   Example:
 
     ```console
     for DOCKER_IMAGE_NAME in ${DOCKER_IMAGE_NAMES[@]};\
@@ -45,7 +47,8 @@
 
 ## Identify private registry
 
-1. :pencil2: Set environment variable.  Example:
+1. :pencil2: Set environment variable.
+   Example:
 
     ```console
     export DOCKER_REGISTRY_URL=my.docker-registry.com:5000
@@ -53,7 +56,8 @@
 
 ## Push images to private registry
 
-1. Add Senzing docker images to private docker registry.  Example:
+1. Add Senzing docker images to private docker registry.
+   Example:
 
     ```console
     for DOCKER_IMAGE_NAME in ${DOCKER_IMAGE_NAMES[@]};\
