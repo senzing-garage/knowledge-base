@@ -1,4 +1,4 @@
-# What is IBM Cloud Private for Data (ICP4D)
+# What is IBM Cloud Pak for Data (ICP4D)
 
 > Simplify and automate how your organization turns data into insights within a unified — all in one — design.
 >
@@ -12,4 +12,4 @@
 
 ## Sites
 
-1. [Official site](https://www.ibm.com/analytics/cloud-private-for-data)
+1. [Official site](https://www.ibm.com/analytics/cloud-pak-for-data)
