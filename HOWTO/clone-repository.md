@@ -15,7 +15,10 @@ The following software programs need to be installed.
 
 ## Set environment variables for repository
 
-1. :pencil2: If not already set, set environment variables for organization/account and the name of the repository.
+1. :warning:  If you were sent here from another web page,
+   you probably have the next two environment variables set.
+   :pencil2: If not already set, set environment variables for
+   GitHub organization/account and the name of the repository.
    Example:
 
     ```console
