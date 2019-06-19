@@ -119,7 +119,7 @@ but test the running of the scripts in a Linux Docker container.
 
 ### Modify python code
 
-1. Because the files in the docker container at `/data` are actually on macOS at ${MY_DATA_DIR},
+1. Because the files in the docker container at `/data` are actually on macOS at `${MY_DATA_DIR}`,
    they can be edited on macOS and run inside the Docker container.
 
 ## Tips
