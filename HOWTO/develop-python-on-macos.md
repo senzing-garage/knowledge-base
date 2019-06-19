@@ -98,7 +98,7 @@ but test the running of the scripts in a Linux Docker container.
 ### Run python scripts inside container
 
 1. The `${MY_DATA_DIR}/example-python.py` script sitting on macOS
-   is accessible as `/data/example-python.py` inside the running container.
+   is accessible inside the running container as `/data/example-python.py`.
    It can be run inside the container.
    Example:
 
@@ -113,7 +113,6 @@ but test the running of the scripts in a Linux Docker container.
             "CONFIG_VERSION": "2"
         },
         "VERSION": "1.9.19155"
-    }
     ```
 
 ### Modify python code
