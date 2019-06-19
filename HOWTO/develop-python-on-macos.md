@@ -121,3 +121,23 @@ but test the running of the scripts in a Linux Docker container.
 
 1. Because the files in the docker container at `/data` are actually on macOS at ${MY_DATA_DIR},
    they can be edited on macOS and run inside the Docker container.
+
+## Tips
+
+### Enhancing docker image
+
+1. If additional `apt-get` or `pip` installs are needed,
+   create a new Dockerfile using the following `FROM` statement.
+
+    ```Dockerfile
+    FROM senzing/senzing-base
+    ```
+
+    or a more recent style:
+
+    ```Dockerfile
+    ARG BASE_IMAGE=senzing/senzing-base
+    FROM ${BASE_IMAGE}
+    ```
+
+1. An example of this can be found in [senzing/docker-senzing-poc-utility](https://github.com/Senzing/docker-senzing-poc-utility).  View the `Dockerfile`.
