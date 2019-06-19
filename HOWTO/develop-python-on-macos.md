@@ -71,6 +71,8 @@ but test the running of the scripts in a Linux Docker container.
     g2_product = G2Product()
     g2_product.init('pyG2Product', g2module_ini_pathname, debug)
 
+    # Print Senzing version.
+
     version_string = g2_product.version()
     version_dictionary = json.loads(version_string)
     print(json.dumps(version_dictionary, sort_keys=True, indent=4))
