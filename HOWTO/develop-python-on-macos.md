@@ -103,9 +103,9 @@ but test the running of the scripts in a Linux Docker container.
    Example:
 
     ```console
-    $ cd /data
+    # cd /data
 
-    $ python example-python.py
+    # python example-python.py
     {
         "BUILD_DATE": "2019-06-04",
         "BUILD_NUMBER": "2019_06_04__02_00",
