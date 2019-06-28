@@ -35,9 +35,9 @@ Instructions for installing [minikube](https://kubernetes.io/docs/tasks/tools/in
 1. Example for a specific release:
 
     ```console
-    curl -Lo minikube https://storage.googleapis.com/minikube/releases/v1.0.0/minikube-linux-amd64
+    curl -Lo minikube https://storage.googleapis.com/minikube/releases/v1.2.0/minikube-linux-amd64
     chmod +x minikube
-    sudo mv minikube /usr/local/bin/
+    sudo cp minikube /usr/local/bin/ && rm minikube
     ```
 
 ### macOS
