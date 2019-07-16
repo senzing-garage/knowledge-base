@@ -12,6 +12,7 @@ Used in log message identifiers in the format `senzing-ppppnnnnt`, where:
 1. **5002** - [mock-data-generator.py](https://github.com/Senzing/mock-data-generator/blob/master/mock-data-generator.py)
 1. **5003** - [senzing-package.py](https://github.com/Senzing/senzing-package/blob/master/senzing-package.py)
 1. **5004** - [stream-configuration.py](https://github.com/Senzing/stream-configuration/blob/master/stream-configuration.py)
+1. **5005** - [g2-configuration-initializer.py](https://github.com/Senzing/g2-configuration-initializer/blob/master/g2-configuration-initializer)
 
 ## Docker apps
 
