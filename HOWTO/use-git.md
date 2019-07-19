@@ -89,6 +89,17 @@ git push origin <branch_name>
 git branch --set-upstream-to=origin/<branch_name> <branch_name>
 ```
 
+## Merge changes in master to current branch
+
+```console
+GIT_CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+git checkout master
+git pull
+git checkout ${GIT_CURRENT_BRANCH}
+git merge origin/master
+git push
+```
+
 ## Delete a remote branch
 
 first delete it locally
