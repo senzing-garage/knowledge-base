@@ -17,11 +17,24 @@
 
 ### CentOS
 
+1. [Install Docker Compose](https://docs.docker.com/compose/install/)
+
 ### Ubuntu
+
+1. [Install Docker Compose](https://docs.docker.com/compose/install/)
+1. Using `pip`.  Example:
+
+    ```console
+    sudo pip install docker-compose
+    ```
 
 ### macOS
 
+1. [Install Docker Compose](https://docs.docker.com/compose/install/)
+
 ### Windows
+
+1. [Install Docker Compose](https://docs.docker.com/compose/install/)
 
 ## Test
 
