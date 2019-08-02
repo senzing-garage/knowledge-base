@@ -4,6 +4,9 @@
 
 ### SENZING_ACCEPT_EULA
 
+1. Values:
+    1. If you accept the Senzing End User Licence Agreement (EULA),
+       the value is "I_ACCEPT_THE_SENZING_EULA"
 1. Where used:
     1. [docker-yum](https://github.com/Senzing/docker-yum)
 
@@ -75,6 +78,11 @@
 
 1. Where used:
     1. [resolver](https://github.com/Senzing/resolver)
+
+### SENZING_LOG_LEVEL
+
+1. Where used:
+    1. [docker-init-container](https://github.com/Senzing/docker-init-container
 
 ### SENZING_OUTPUT_FILE
 
