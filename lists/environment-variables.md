@@ -64,6 +64,11 @@
 1. Where used:
     1. [docker-yum](https://github.com/Senzing/docker-yum)
 
+### SENZING_GID
+
+1. Where used:
+    1. [docker-init-container](https://github.com/Senzing/docker-init-container)
+
 ### SENZING_HOST
 
 1. Where used:
@@ -82,7 +87,7 @@
 ### SENZING_LOG_LEVEL
 
 1. Where used:
-    1. [docker-init-container](https://github.com/Senzing/docker-init-container
+    1. [docker-init-container](https://github.com/Senzing/docker-init-container)
 
 ### SENZING_OUTPUT_FILE
 
@@ -118,6 +123,11 @@
 
 1. Where used:
     1. [resolver](https://github.com/Senzing/resolver)
+
+### SENZING_UID
+
+1. Where used:
+    1. [docker-init-container](https://github.com/Senzing/docker-init-container)
 
 ### SENZING_VAR_DIR
 
