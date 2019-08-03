@@ -56,10 +56,40 @@
 
 ### SENZING_DATABASE_URL
 
+1. What:
+    1. Database URI in the form: `${DATABASE_PROTOCOL}://${DATABASE_USERNAME}:${DATABASE_PASSWORD}@${DATABASE_HOST}:${DATABASE_PORT}/${DATABASE_DATABASE}`.
+1. Values:
+    - Default: Use the internal SQLite database.
+1. Examples:
+    1. MySQL
+
+        ```console
+        export SENZING_DATABASE_URL=mysql://user:password@senzing-mysql:3306/G2
+        ```
+
+    1. PostgreSQL
+
+        ```console
+        export SENZING_DATABASE_URL=postgresql://user:password@senzing-postgresql:5432/G2
+        ```
+
 1. Where used:
     1. [resolver](https://github.com/Senzing/resolver)
 
 ### SENZING_DEBUG
+
+1. What:
+    1. Enable debug information.
+1. Values:
+   - 0 = no debug
+   - 1 = debug
+   - Default: 0
+1. Examples:
+    1. Turn debugging on
+
+        ```console
+        export SENZING_DEBUG=1
+        ```
 
 1. Where used:
     1. [resolver](https://github.com/Senzing/resolver)
@@ -162,4 +192,3 @@
 
 1. Where used:
     1. [docker-yum](https://github.com/Senzing/docker-yum)
-
