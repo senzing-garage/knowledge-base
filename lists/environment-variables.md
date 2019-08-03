@@ -33,7 +33,7 @@
 
 1. Synopsis:
    1. A component of [SENZING_DATABASE_URL](#senzing_database_url).
-   1. The password for the database user ([DATABASE_USERNAME](#database_username))
+   1. The password for the database user, [DATABASE_USERNAME](#database_username).
 1. Examples:
     1. Using password of "my;password!":
 
@@ -63,6 +63,7 @@
 
 1. Synopsis:
    1. A component of [SENZING_DATABASE_URL](#senzing_database_url).
+   1. Identifies which type of database will be connected.
 1. Values:
     - db2
     - mysql
