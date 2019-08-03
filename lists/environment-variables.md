@@ -4,11 +4,35 @@
 
 ### DATABASE_DATABASE
 
+1. Synopsis:
+   1. A component of [SENZING_DATABASE_URL](#senzing_database_url).
+   1. The name of the database holding the Senzing G2 model.
+1. Values:
+    - Default: None.
+    - Usually: G2
+
 ### DATABASE_HOST
+
+1. Synopsis:
+   1. A component of [SENZING_DATABASE_URL](#senzing_database_url).
+   1. A hostname, IP address, or symbolic name of the database service.
 
 ### DATABASE_PASSWORD
 
+1. Synopsis:
+   1. A component of [SENZING_DATABASE_URL](#senzing_database_url).
+   1. The password for the database user ([DATABASE_USERNAME](#database_username))
+
 ### DATABASE_PORT
+
+1. Synopsis:
+   1. A component of [SENZING_DATABASE_URL](#senzing_database_url).
+   1. The port on the machine offering the database service.
+1. Values:
+    - db2 default: 50000
+    - mysql default: 3306
+    - postresql default: 5432
+    - sqlite3 default: None, as sqlite is file-based
 
 ### DATABASE_PROTOCOL
 
@@ -29,6 +53,10 @@
         ```
 
 ### DATABASE_USERNAME
+
+1. Synopsis:
+   1. A component of [SENZING_DATABASE_URL](#senzing_database_url).
+   1. The name of a user authorized to work with the [DATABASE_DATABASE](#database_database) database.
 
 ### GIT_ACCOUNT
 
