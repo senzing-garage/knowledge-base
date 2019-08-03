@@ -178,6 +178,20 @@
 1. Where used:
     1. [resolver](https://github.com/Senzing/resolver)
 
+### SENZING_DOWNLOAD_DIR
+
+1. Synopsis:
+    1. Directory on local system where a download will be placed.
+1. Examples:
+    1. Download to `/tmp/my-downloads`
+
+        ```console
+        export SENZING_DOWNLOAD_DIR=/tmp/my-downloads
+        ```
+
+1. Where used:
+    1. [docker-yumdownloader](https://github.com/Senzing/docker-yumdownloader)
+
 ### SENZING_DEBUG
 
 1. Synopsis:
