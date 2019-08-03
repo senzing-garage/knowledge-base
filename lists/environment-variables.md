@@ -8,7 +8,7 @@
    1. A component of [SENZING_DATABASE_URL](#senzing_database_url).
    1. The name of the database holding the Senzing G2 model.
 1. Values:
-    - Default: None.
+    - Default: none
     - Usually: G2
 1. Examples:
     1. Using `G2` as the database:
@@ -69,7 +69,7 @@
     - mysql
     - postgresql
     - sqlite3
-    - Default: None.
+    - Default: none
 1. Examples:
 
     1. PostgreSQL
@@ -134,6 +134,17 @@
 
 ### SENZING_DATA_VERSION_DIR
 
+1. Synopsis:
+    1. Path on the local system where Senzing *data/nn.nnn.nnn* directory is located.
+       It differs from the value of the
+       [SENZING_DATA_DIR](#senzing_data_dir)
+       environment variable
+       used in [installing Senzing](https://github.com/Senzing/docker-yum#volumes)
+       because it includes the version of the data in the path.
+       This directory contains immutable data files used by Senzing G2.
+1. Values:
+    1. Default: none
+    1. Usually set to `/opt/senzing/data/1.0.0`
 1. Where used:
     1. [docker-senzing-base](https://github.com/Senzing/docker-senzing-base)
 
@@ -226,11 +237,23 @@
 
 ### SENZING_ETC_DIR
 
+1. Synopsis:
+    1. Path on the local system where Senzing *etc* directory is located.
+       This directory contains Senzing configuration templates and files.
+1. Values:
+    1. Default: none
+    1. Usually set to `/etc/opt/senzing`
 1. Where used:
     1. [docker-yum](https://github.com/Senzing/docker-yum)
 
 ### SENZING_G2_DIR
 
+1. Synopsis:
+    1. Path on the local system where Senzing *g2* directory is located.
+       This directory contains Senzing G2 code.
+1. Values:
+    1. Default: none
+    1. Usually set to `/opt/senzing/g2`
 1. Where used:
     1. [docker-yum](https://github.com/Senzing/docker-yum)
 
@@ -314,6 +337,13 @@
     1. [docker-init-container](https://github.com/Senzing/docker-init-container)
 
 ### SENZING_VAR_DIR
+
+1. Synopsis:
+    1. Path on the local system where Senzing *var* directory is located.
+       This directory contains files that may mutate during execution.
+1. Values:
+    1. Default: none
+    1. Usually set to `/var/opt/senzing`
 
 1. Where used:
     1. [docker-yum](https://github.com/Senzing/docker-yum)

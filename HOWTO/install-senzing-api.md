@@ -50,20 +50,10 @@ Instructions for installing [Senzing API](../WHATIS/senzing-api.md).
 
 ### Docker
 
-1. When using Docker, the platform-specific installations described above can be used.
-   If platform specific installations are used, set the following variables with these values:
-
-    ```console
-    export SENZING_DATA_DIR=/opt/senzing/data
-    export SENZING_G2_DIR=/opt/senzing/g2
-    export SENZING_ETC_DIR=/etc/opt/senzing
-    export SENZING_VAR_DIR=/var/opt/senzing
-    ```
-
-1. If using docker orchestration such as Kubernetes, OpenShift, Rancher, Docker Swarm, etc.
-   which uses persistent volume claims (PVC),
-   the recommendation is to use the [senzing/yum](https://github.com/Senzing/docker-yum) docker image
-   to place files from the data, g2, etc, and var directories onto the PVC.
+1. See [senzing/docker-yum](https://github.com/Senzing/docker-yum)
+   for instructions on using a docker container to install Senzing files.
+   **Note:** Although the docker container uses `yum`,
+   it can be used on CentOS, Debian, macOS, and Windows systems.
 
 ## Test
 
