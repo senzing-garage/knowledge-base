@@ -2,6 +2,34 @@
 
 ## List
 
+### DATABASE_DATABASE
+
+### DATABASE_HOST
+
+### DATABASE_PASSWORD
+
+### DATABASE_PORT
+
+### DATABASE_PROTOCOL
+
+1. Synopsis:
+   1. A component of [SENZING_DATABASE_URL](#senzing_database_url).
+1. Values:
+    - db2
+    - mysql
+    - postresql
+    - sqlite3
+    - Default: None.
+1. Examples:
+
+    1. PostgreSQL
+
+        ```console
+        export DATABASE_PROTOCOL=postgresql
+        ```
+
+### DATABASE_USERNAME
+
 ### GIT_ACCOUNT
 
 1. Where used:
@@ -24,7 +52,7 @@
 
 ### SENZING_ACCEPT_EULA
 
-1. What:
+1. Synopsis:
     1. This is your acceptance of the End User License Agreement (EULA).
        The EULA is located at
        [https://senzing.com/end-user-license-agreement](https://senzing.com/end-user-license-agreement/).
@@ -56,7 +84,7 @@
 
 ### SENZING_DATABASE_URL
 
-1. What:
+1. Synopsis:
     1. Database URI in the form: `${DATABASE_PROTOCOL}://${DATABASE_USERNAME}:${DATABASE_PASSWORD}@${DATABASE_HOST}:${DATABASE_PORT}/${DATABASE_DATABASE}`.
 1. Values:
     - Default: Use the internal SQLite database.
@@ -90,7 +118,7 @@
 
 ### SENZING_DEBUG
 
-1. What:
+1. Synopsis:
     1. Enable debug information.
 1. Values:
    - 0 = no debug
