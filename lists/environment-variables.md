@@ -86,6 +86,7 @@
 
 1. Synopsis:
     1. Database URI in the form:
+
     ${[DATABASE_PROTOCOL](#database_protocol)}://${[DATABASE_USERNAME](#database_username)}:${[DATABASE_PASSWORD](#database_password)}@${[DATABASE_HOST](#database_host)}:${[DATABASE_PORT](#database_port)}/${[DATABASE_DATABASE](#database_database)}.
 1. Values:
     - Default: Use the internal SQLite database.
