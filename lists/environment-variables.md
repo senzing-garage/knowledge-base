@@ -294,7 +294,7 @@
     1. Default: none
     1. Usually set to `/opt/senzing/g2`
 1. Where used:
-    1, [docker-g2command](https://github.com/Senzing/docker-g2command),
+    1. [docker-g2command](https://github.com/Senzing/docker-g2command),
        [docker-senzing-base](https://github.com/Senzing/docker-senzing-base),
        [docker-yum](https://github.com/Senzing/docker-yum),
 
