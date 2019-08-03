@@ -73,6 +73,12 @@
         export SENZING_DATABASE_URL=postgresql://user:password@my.example.com:5432/G2
         ```
 
+    1. Db2:
+
+        ```console
+        export SENZING_DATABASE_URL=db2://db2inst1:db2inst1@my.example.com:50000/G2
+        ```
+
     1. SQLite
 
         ```console
