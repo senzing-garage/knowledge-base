@@ -120,6 +120,7 @@
     1. [docker-g2command](https://github.com/Senzing/docker-g2command),
        [docker-senzing-base](https://github.com/Senzing/docker-senzing-base),
        [docker-yum](https://github.com/Senzing/docker-yum),
+       [docker-yumdownloader](https://github.com/Senzing/docker-yumdownloader),
 
 ### GIT_ACCOUNT_DIR
 
@@ -127,6 +128,7 @@
     1. [docker-g2command](https://github.com/Senzing/docker-g2command),
        [docker-senzing-base](https://github.com/Senzing/docker-senzing-base),
        [docker-yum](https://github.com/Senzing/docker-yum),
+       [docker-yumdownloader](https://github.com/Senzing/docker-yumdownloader),
 
 ### GIT_REPOSITORY
 
@@ -134,6 +136,7 @@
     1. [docker-g2command](https://github.com/Senzing/docker-g2command),
        [docker-senzing-base](https://github.com/Senzing/docker-senzing-base),
        [docker-yum](https://github.com/Senzing/docker-yum),
+       [docker-yumdownloader](https://github.com/Senzing/docker-yumdownloader),
 
 ### GIT_REPOSITORY_DIR
 
@@ -141,6 +144,7 @@
     1. [docker-g2command](https://github.com/Senzing/docker-g2command),
        [docker-senzing-base](https://github.com/Senzing/docker-senzing-base),
        [docker-yum](https://github.com/Senzing/docker-yum),
+       [docker-yumdownloader](https://github.com/Senzing/docker-yumdownloader),
 
 ### SENZING_ACCEPT_EULA
 
@@ -164,6 +168,11 @@
 1. Where used:
     1. [docker-yum](https://github.com/Senzing/docker-yum),
 
+### SENZING_DATA_SOURCE
+
+1. Where used:
+    1. [resolver](https://github.com/Senzing/resolver),
+
 ### SENZING_DATA_VERSION_DIR
 
 1. Synopsis:
@@ -180,11 +189,6 @@
 1. Where used:
     1. [docker-g2command](https://github.com/Senzing/docker-g2command),
        [docker-senzing-base](https://github.com/Senzing/docker-senzing-base),
-
-### SENZING_DATA_SOURCE
-
-1. Where used:
-    1. [resolver](https://github.com/Senzing/resolver),
 
 ### SENZING_DATABASE_URL
 
@@ -224,20 +228,6 @@
        [docker-senzing-base](https://github.com/Senzing/docker-senzing-base),
        [resolver](https://github.com/Senzing/resolver),
 
-### SENZING_DOWNLOAD_DIR
-
-1. Synopsis:
-    1. Directory on local system where a download will be placed.
-1. Examples:
-    1. Download to `/tmp/my-downloads`
-
-        ```console
-        export SENZING_DOWNLOAD_DIR=/tmp/my-downloads
-        ```
-
-1. Where used:
-    1. [docker-yumdownloader](https://github.com/Senzing/docker-yumdownloader),
-
 ### SENZING_DEBUG
 
 1. Synopsis:
@@ -266,6 +256,20 @@
 
 1. Where used:
     1. [docker-init-container](https://github.com/Senzing/docker-init-container),
+
+### SENZING_DOWNLOAD_DIR
+
+1. Synopsis:
+    1. Directory on local system where a download will be placed.
+1. Examples:
+    1. Download to `/tmp/my-downloads`
+
+        ```console
+        export SENZING_DOWNLOAD_DIR=/tmp/my-downloads
+        ```
+
+1. Where used:
+    1. [docker-yumdownloader](https://github.com/Senzing/docker-yumdownloader),
 
 ### SENZING_ENTITY_TYPE
 
