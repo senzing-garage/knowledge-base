@@ -245,6 +245,20 @@
 1. Where used:
     1. [docker-init-container](https://github.com/Senzing/docker-init-container)
 
+### SENZING_NETWORK
+
+1. Synopsis:
+    1. Used in `docker-compose` formations to identify the docker network.
+1. Examples:
+    1. Search for network in docker-compose:
+
+        ```console
+        sudo docker network ls
+
+        # Choose value from NAME column of docker network ls
+        export SENZING_NETWORK=nameofthe_network
+        ```
+
 ### SENZING_OUTPUT_FILE
 
 1. Where used:
