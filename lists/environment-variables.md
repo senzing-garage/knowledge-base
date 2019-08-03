@@ -2,8 +2,32 @@
 
 ## List
 
+### GIT_ACCOUNT
+
+1. Where used:
+    1. [docker-yum](https://github.com/Senzing/docker-yum)
+
+### GIT_ACCOUNT_DIR
+
+1. Where used:
+    1. [docker-yum](https://github.com/Senzing/docker-yum)
+
+### GIT_REPOSITORY
+
+1. Where used:
+    1. [docker-yum](https://github.com/Senzing/docker-yum)
+
+### GIT_REPOSITORY_DIR
+
+1. Where used:
+    1. [docker-yum](https://github.com/Senzing/docker-yum)
+
 ### SENZING_ACCEPT_EULA
 
+1. What:
+    1. This is your acceptance of the End User License Agreement (EULA).
+       The EULA is located at
+       [https://senzing.com/end-user-license-agreement](https://senzing.com/end-user-license-agreement/).
 1. Values:
     1. If you accept the Senzing End User Licence Agreement (EULA),
        the value is "I_ACCEPT_THE_SENZING_EULA"
@@ -133,3 +157,9 @@
 
 1. Where used:
     1. [docker-yum](https://github.com/Senzing/docker-yum)
+
+### SENZING_VOLUME
+
+1. Where used:
+    1. [docker-yum](https://github.com/Senzing/docker-yum)
+
