@@ -10,18 +10,36 @@
 1. Values:
     - Default: None.
     - Usually: G2
+1. Examples:
+    1. Using `G2` as the database:
+
+        ```console
+        export DATABASE_DATABASE=G2
+        ```
 
 ### DATABASE_HOST
 
 1. Synopsis:
    1. A component of [SENZING_DATABASE_URL](#senzing_database_url).
    1. A hostname, IP address, or symbolic name of the database service.
+1. Examples:
+    1. Using an IP address:
+
+        ```console
+        export DATABASE_HOST=10.1.1.17
+        ```
 
 ### DATABASE_PASSWORD
 
 1. Synopsis:
    1. A component of [SENZING_DATABASE_URL](#senzing_database_url).
    1. The password for the database user ([DATABASE_USERNAME](#database_username))
+1. Examples:
+    1. Using password of "my;password!":
+
+        ```console
+        export DATABASE_PASSWORD="my;password!"
+        ```
 
 ### DATABASE_PORT
 
@@ -29,10 +47,17 @@
    1. A component of [SENZING_DATABASE_URL](#senzing_database_url).
    1. The port on the machine offering the database service.
 1. Values:
-    - db2 default: 50000
-    - mysql default: 3306
-    - postresql default: 5432
-    - sqlite3 default: None, as sqlite is file-based
+    - 50000 - db2 default
+    - 3306 - mysql default
+    - 5432 - postresql default
+    - sqlite3 has no default as it is file-based.
+    - Default: none
+1. Examples:
+    1. Using default port for postgresql:
+
+        ```console
+        export DATABASE_PORT=5432
+        ```
 
 ### DATABASE_PROTOCOL
 
@@ -41,7 +66,7 @@
 1. Values:
     - db2
     - mysql
-    - postresql
+    - postgresql
     - sqlite3
     - Default: None.
 1. Examples:
@@ -57,6 +82,12 @@
 1. Synopsis:
    1. A component of [SENZING_DATABASE_URL](#senzing_database_url).
    1. The name of a user authorized to work with the [DATABASE_DATABASE](#database_database) database.
+1. Examples:
+    1. Using user name of "my-user":
+
+        ```console
+        export DATABASE_USERNAME="my-user"
+        ```
 
 ### GIT_ACCOUNT
 
