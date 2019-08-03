@@ -64,13 +64,19 @@
     1. MySQL
 
         ```console
-        export SENZING_DATABASE_URL=mysql://user:password@senzing-mysql:3306/G2
+        export SENZING_DATABASE_URL=mysql://user:password@my.example.com:3306/G2
         ```
 
     1. PostgreSQL
 
         ```console
-        export SENZING_DATABASE_URL=postgresql://user:password@senzing-postgresql:5432/G2
+        export SENZING_DATABASE_URL=postgresql://user:password@my.example.com:5432/G2
+        ```
+
+    1. SQLite
+
+        ```console
+        export SENZING_DATABASE_URL=sqlite3://na:na@/var/opt/senzing/sqlite/G2C.db
         ```
 
 1. Where used:
