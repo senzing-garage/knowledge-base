@@ -17,6 +17,10 @@
         export DATABASE_DATABASE=G2
         ```
 
+1. Where used:
+    1. [docker-g2command](https://github.com/Senzing/docker-g2command),
+       [docker-senzing-base](https://github.com/Senzing/docker-senzing-base),
+
 ### DATABASE_HOST
 
 1. Synopsis:
@@ -29,6 +33,10 @@
         export DATABASE_HOST=10.1.1.17
         ```
 
+1. Where used:
+    1. [docker-g2command](https://github.com/Senzing/docker-g2command),
+       [docker-senzing-base](https://github.com/Senzing/docker-senzing-base),
+
 ### DATABASE_PASSWORD
 
 1. Synopsis:
@@ -40,6 +48,10 @@
         ```console
         export DATABASE_PASSWORD="my;password!"
         ```
+
+1. Where used:
+    1. [docker-g2command](https://github.com/Senzing/docker-g2command),
+       [docker-senzing-base](https://github.com/Senzing/docker-senzing-base),
 
 ### DATABASE_PORT
 
@@ -58,6 +70,10 @@
         ```console
         export DATABASE_PORT=5432
         ```
+
+1. Where used:
+    1. [docker-g2command](https://github.com/Senzing/docker-g2command),
+       [docker-senzing-base](https://github.com/Senzing/docker-senzing-base),
 
 ### DATABASE_PROTOCOL
 
@@ -78,6 +94,10 @@
         export DATABASE_PROTOCOL=postgresql
         ```
 
+1. Where used:
+    1. [docker-g2command](https://github.com/Senzing/docker-g2command),
+       [docker-senzing-base](https://github.com/Senzing/docker-senzing-base),
+
 ### DATABASE_USERNAME
 
 1. Synopsis:
@@ -90,25 +110,37 @@
         export DATABASE_USERNAME="my-user"
         ```
 
+1. Where used:
+    1. [docker-g2command](https://github.com/Senzing/docker-g2command),
+       [docker-senzing-base](https://github.com/Senzing/docker-senzing-base),
+
 ### GIT_ACCOUNT
 
 1. Where used:
-    1. [docker-yum](https://github.com/Senzing/docker-yum)
+    1. [docker-g2command](https://github.com/Senzing/docker-g2command),
+       [docker-senzing-base](https://github.com/Senzing/docker-senzing-base),
+       [docker-yum](https://github.com/Senzing/docker-yum),
 
 ### GIT_ACCOUNT_DIR
 
 1. Where used:
-    1. [docker-yum](https://github.com/Senzing/docker-yum)
+    1. [docker-g2command](https://github.com/Senzing/docker-g2command),
+       [docker-senzing-base](https://github.com/Senzing/docker-senzing-base),
+       [docker-yum](https://github.com/Senzing/docker-yum),
 
 ### GIT_REPOSITORY
 
 1. Where used:
-    1. [docker-yum](https://github.com/Senzing/docker-yum)
+    1. [docker-g2command](https://github.com/Senzing/docker-g2command),
+       [docker-senzing-base](https://github.com/Senzing/docker-senzing-base),
+       [docker-yum](https://github.com/Senzing/docker-yum),
 
 ### GIT_REPOSITORY_DIR
 
 1. Where used:
-    1. [docker-yum](https://github.com/Senzing/docker-yum)
+    1. [docker-g2command](https://github.com/Senzing/docker-g2command),
+       [docker-senzing-base](https://github.com/Senzing/docker-senzing-base),
+       [docker-yum](https://github.com/Senzing/docker-yum),
 
 ### SENZING_ACCEPT_EULA
 
@@ -120,17 +152,17 @@
     1. If you accept the Senzing End User Licence Agreement (EULA),
        the value is "I_ACCEPT_THE_SENZING_EULA"
 1. Where used:
-    1. [docker-yum](https://github.com/Senzing/docker-yum)
+    1. [docker-yum](https://github.com/Senzing/docker-yum),
 
 ### SENZING_CONFIG_PATH
 
 1. Where used:
-    1. [resolver](https://github.com/Senzing/resolver)
+    1. [resolver](https://github.com/Senzing/resolver),
 
 ### SENZING_DATA_DIR
 
 1. Where used:
-    1. [docker-yum](https://github.com/Senzing/docker-yum)
+    1. [docker-yum](https://github.com/Senzing/docker-yum),
 
 ### SENZING_DATA_VERSION_DIR
 
@@ -146,12 +178,13 @@
     1. Default: none
     1. Usually set to `/opt/senzing/data/1.0.0`
 1. Where used:
-    1. [docker-senzing-base](https://github.com/Senzing/docker-senzing-base)
+    1. [docker-g2command](https://github.com/Senzing/docker-g2command),
+       [docker-senzing-base](https://github.com/Senzing/docker-senzing-base),
 
 ### SENZING_DATA_SOURCE
 
 1. Where used:
-    1. [resolver](https://github.com/Senzing/resolver)
+    1. [resolver](https://github.com/Senzing/resolver),
 
 ### SENZING_DATABASE_URL
 
@@ -187,7 +220,9 @@
         ```
 
 1. Where used:
-    1. [resolver](https://github.com/Senzing/resolver)
+    1. [docker-g2command](https://github.com/Senzing/docker-g2command),
+       [docker-senzing-base](https://github.com/Senzing/docker-senzing-base),
+       [resolver](https://github.com/Senzing/resolver),
 
 ### SENZING_DOWNLOAD_DIR
 
@@ -201,7 +236,7 @@
         ```
 
 1. Where used:
-    1. [docker-yumdownloader](https://github.com/Senzing/docker-yumdownloader)
+    1. [docker-yumdownloader](https://github.com/Senzing/docker-yumdownloader),
 
 ### SENZING_DEBUG
 
@@ -219,7 +254,9 @@
         ```
 
 1. Where used:
-    1. [resolver](https://github.com/Senzing/resolver)
+    1. [docker-g2command](https://github.com/Senzing/docker-g2command),
+       [docker-senzing-base](https://github.com/Senzing/docker-senzing-base),
+       [resolver](https://github.com/Senzing/resolver),
 
 ### SENZING_DIR
 
@@ -228,12 +265,12 @@
 ### SENZING_DOCKER_LAUNCHED
 
 1. Where used:
-    1. [docker-init-container](https://github.com/Senzing/docker-init-container)
+    1. [docker-init-container](https://github.com/Senzing/docker-init-container),
 
 ### SENZING_ENTITY_TYPE
 
 1. Where used:
-    1. [resolver](https://github.com/Senzing/resolver)
+    1. [resolver](https://github.com/Senzing/resolver),
 
 ### SENZING_ETC_DIR
 
@@ -244,7 +281,9 @@
     1. Default: none
     1. Usually set to `/etc/opt/senzing`
 1. Where used:
-    1. [docker-yum](https://github.com/Senzing/docker-yum)
+    1. [docker-g2command](https://github.com/Senzing/docker-g2command),
+       [docker-senzing-base](https://github.com/Senzing/docker-senzing-base),
+       [docker-yum](https://github.com/Senzing/docker-yum),
 
 ### SENZING_G2_DIR
 
@@ -255,32 +294,34 @@
     1. Default: none
     1. Usually set to `/opt/senzing/g2`
 1. Where used:
-    1. [docker-yum](https://github.com/Senzing/docker-yum)
+    1, [docker-g2command](https://github.com/Senzing/docker-g2command),
+       [docker-senzing-base](https://github.com/Senzing/docker-senzing-base),
+       [docker-yum](https://github.com/Senzing/docker-yum),
 
 ### SENZING_GID
 
 1. Where used:
-    1. [docker-init-container](https://github.com/Senzing/docker-init-container)
+    1. [docker-init-container](https://github.com/Senzing/docker-init-container),
 
 ### SENZING_HOST
 
 1. Where used:
-    1. [resolver](https://github.com/Senzing/resolver)
+    1. [resolver](https://github.com/Senzing/resolver),
 
 ### SENZING_INPUT_FILE
 
 1. Where used:
-    1. [resolver](https://github.com/Senzing/resolver)
+    1. [resolver](https://github.com/Senzing/resolver),
 
 ### SENZING_INTERNAL_DATABASE
 
 1. Where used:
-    1. [resolver](https://github.com/Senzing/resolver)
+    1. [resolver](https://github.com/Senzing/resolver),
 
 ### SENZING_LOG_LEVEL
 
 1. Where used:
-    1. [docker-init-container](https://github.com/Senzing/docker-init-container)
+    1. [docker-init-container](https://github.com/Senzing/docker-init-container),
 
 ### SENZING_NETWORK
 
@@ -296,45 +337,50 @@
         export SENZING_NETWORK=nameofthe_network
         ```
 
+1. Where used:
+    1. [docker-g2command](https://github.com/Senzing/docker-g2command),
+       [docker-senzing-base](https://github.com/Senzing/docker-senzing-base),
+       [resolver](https://github.com/Senzing/resolver),
+
 ### SENZING_OUTPUT_FILE
 
 1. Where used:
-    1. [resolver](https://github.com/Senzing/resolver)
+    1. [resolver](https://github.com/Senzing/resolver),
 
 ### SENZING_PORT
 
 1. Where used:
-    1. [resolver](https://github.com/Senzing/resolver)
+    1. [resolver](https://github.com/Senzing/resolver),
 
 ### SENZING_RPM_DIR
 
 1. Where used:
-    1. [docker-yum](https://github.com/Senzing/docker-yum)
+    1. [docker-yum](https://github.com/Senzing/docker-yum),
 
 ### SENZING_RPM_FILENAME
 
 1. Where used:
-    1. [docker-yum](https://github.com/Senzing/docker-yum)
+    1. [docker-yum](https://github.com/Senzing/docker-yum),
 
 ### SENZING_SLEEP_TIME_IN_SECONDS
 
 1. Where used:
-    1. [resolver](https://github.com/Senzing/resolver)
+    1. [resolver](https://github.com/Senzing/resolver),
 
 ### SENZING_SUBCOMMAND
 
 1. Where used:
-    1. [resolver](https://github.com/Senzing/resolver)
+    1. [resolver](https://github.com/Senzing/resolver),
 
 ### SENZING_SUPPORT_PATH
 
 1. Where used:
-    1. [resolver](https://github.com/Senzing/resolver)
+    1. [resolver](https://github.com/Senzing/resolver),
 
 ### SENZING_UID
 
 1. Where used:
-    1. [docker-init-container](https://github.com/Senzing/docker-init-container)
+    1. [docker-init-container](https://github.com/Senzing/docker-init-container),
 
 ### SENZING_VAR_DIR
 
@@ -346,9 +392,12 @@
     1. Usually set to `/var/opt/senzing`
 
 1. Where used:
-    1. [docker-yum](https://github.com/Senzing/docker-yum)
+    1. [docker-g2command](https://github.com/Senzing/docker-g2command),
+       [docker-senzing-base](https://github.com/Senzing/docker-senzing-base),
+       [docker-yum](https://github.com/Senzing/docker-yum),
+       [resolver](https://github.com/Senzing/resolver),
 
 ### SENZING_VOLUME
 
 1. Where used:
-    1. [docker-yum](https://github.com/Senzing/docker-yum)
+    1. [docker-yum](https://github.com/Senzing/docker-yum),
