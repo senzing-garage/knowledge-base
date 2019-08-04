@@ -176,6 +176,7 @@
     1. Default: none
 1. Where used:
     1. [resolver](https://github.com/Senzing/resolver),
+       [stream-loader](https://github.com/Senzing/stream-loader),
 
 ### SENZING_DATA_VERSION_DIR
 
@@ -193,6 +194,7 @@
 1. Where used:
     1. [docker-g2command](https://github.com/Senzing/docker-g2command),
        [docker-senzing-base](https://github.com/Senzing/docker-senzing-base),
+       [stream-loader](https://github.com/Senzing/stream-loader),
 
 ### SENZING_DATABASE_URL
 
@@ -231,6 +233,7 @@
     1. [docker-g2command](https://github.com/Senzing/docker-g2command),
        [docker-senzing-base](https://github.com/Senzing/docker-senzing-base),
        [resolver](https://github.com/Senzing/resolver),
+       [stream-loader](https://github.com/Senzing/stream-loader),
 
 ### SENZING_DEBUG
 
@@ -251,6 +254,7 @@
     1. [docker-g2command](https://github.com/Senzing/docker-g2command),
        [docker-senzing-base](https://github.com/Senzing/docker-senzing-base),
        [resolver](https://github.com/Senzing/resolver),
+       [stream-loader](https://github.com/Senzing/stream-loader),
 
 ### SENZING_DIR
 
@@ -283,6 +287,7 @@
     1. Default: none
 1. Where used:
     1. [resolver](https://github.com/Senzing/resolver),
+       [stream-loader](https://github.com/Senzing/stream-loader),
 
 ### SENZING_ETC_DIR
 
@@ -296,6 +301,7 @@
     1. [docker-g2command](https://github.com/Senzing/docker-g2command),
        [docker-senzing-base](https://github.com/Senzing/docker-senzing-base),
        [docker-yum](https://github.com/Senzing/docker-yum),
+       [stream-loader](https://github.com/Senzing/stream-loader),
 
 ### SENZING_G2_DIR
 
@@ -309,6 +315,7 @@
     1. [docker-g2command](https://github.com/Senzing/docker-g2command),
        [docker-senzing-base](https://github.com/Senzing/docker-senzing-base),
        [docker-yum](https://github.com/Senzing/docker-yum),
+       [stream-loader](https://github.com/Senzing/stream-loader),
 
 ### SENZING_GID
 
@@ -381,6 +388,7 @@
 
 1. Where used:
     1. [docker-init-container](https://github.com/Senzing/docker-init-container),
+       [stream-loader](https://github.com/Senzing/stream-loader),
 
 ### SENZING_MONITORING_PERIOD
 
@@ -445,7 +453,7 @@
 1. Values:
     1. Default: "localhost:5672"
 1. Where used:
-    1. [stream-loader](https://github.com/Senzing/stream-loader)
+    1. [stream-loader](https://github.com/Senzing/stream-loader),
 
 ### SENZING_RABBITMQ_PASSWORD
 
@@ -454,7 +462,7 @@
 1. Values:
     1. Default: "bitnami"
 1. Where used:
-    1. [stream-loader](https://github.com/Senzing/stream-loader)
+    1. [stream-loader](https://github.com/Senzing/stream-loader),
 
 ### SENZING_RABBITMQ_QUEUE
 
@@ -463,7 +471,7 @@
 1. Values:
     1. Default: "senzing-rabbitmq-queue"
 1. Where used:
-    1. [stream-loader](https://github.com/Senzing/stream-loader)
+    1. [stream-loader](https://github.com/Senzing/stream-loader),
 
 ### SENZING_RABBITMQ_USERNAME
 
@@ -472,7 +480,7 @@
 1. Values:
     1. Default: "user"
 1. Where used:
-    1. [stream-loader](https://github.com/Senzing/stream-loader)
+    1. [stream-loader](https://github.com/Senzing/stream-loader),
 
 ### SENZING_RPM_DIR
 
@@ -487,15 +495,14 @@
 ### SENZING_SLEEP_TIME
 
 1. Synopsis:
-    1.   Amount of time to sleep, in seconds, before running command.
+    1. Amount of time to sleep, in seconds, before running command.
 1. Where used:
-    1. [stream-loader](https://github.com/Senzing/stream-loader)
+    1. [stream-loader](https://github.com/Senzing/stream-loader),
 
 ### SENZING_SLEEP_TIME_IN_SECONDS
 
 1. Where used:
     1. [resolver](https://github.com/Senzing/resolver),
-
 
 ### SENZING_SUBCOMMAND
 
@@ -505,7 +512,7 @@
     1. Run `program-name --help` for complete list.
 1. Where used:
     1. [resolver](https://github.com/Senzing/resolver),
-       [stream-loader](https://github.com/Senzing/stream-loader)
+       [stream-loader](https://github.com/Senzing/stream-loader),
 
 ### SENZING_SUPPORT_PATH
 
@@ -519,7 +526,7 @@
 1. Values:
     1. Default: 4
 1. Where used:
-    1. [stream-loader](https://github.com/Senzing/stream-loader)
+    1. [stream-loader](https://github.com/Senzing/stream-loader),
 
 ### SENZING_UID
 
@@ -540,6 +547,7 @@
        [docker-senzing-base](https://github.com/Senzing/docker-senzing-base),
        [docker-yum](https://github.com/Senzing/docker-yum),
        [resolver](https://github.com/Senzing/resolver),
+       [stream-loader](https://github.com/Senzing/stream-loader),
 
 ### SENZING_VOLUME
 
