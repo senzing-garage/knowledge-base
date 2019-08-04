@@ -170,6 +170,10 @@
 
 ### SENZING_DATA_SOURCE
 
+1. Synopsis:
+    1. Default "DATA_SOURCE" value for incoming records.
+1. Values:
+    1. Default: none
 1. Where used:
     1. [resolver](https://github.com/Senzing/resolver),
 
@@ -273,6 +277,10 @@
 
 ### SENZING_ENTITY_TYPE
 
+1. Synopsis:
+    1. Default "ENTITY_TYPE" value for incoming records.
+1. Values:
+    1. Default: none
 1. Where used:
     1. [resolver](https://github.com/Senzing/resolver),
 
@@ -317,15 +325,71 @@
 1. Where used:
     1. [resolver](https://github.com/Senzing/resolver),
 
+### SENZING_INPUT_URL
+
+1. Synopsis:
+    1. URL of source file.
+1. Values:
+    1. Default: none
+1. Where used:
+    1. [stream-loader](https://github.com/Senzing/stream-loader),
+
 ### SENZING_INTERNAL_DATABASE
 
 1. Where used:
     1. [resolver](https://github.com/Senzing/resolver),
 
+### SENZING_KAFKA_BOOTSTRAP_SERVER
+
+1. Synopsis:
+    1. Hostname and port of Kafka server.
+1. Values:
+    1. Default: localhost:9092
+1. Where used:
+    1. [stream-loader](https://github.com/Senzing/stream-loader),
+
+### SENZING_KAFKA_GROUP
+
+1. Synopsis:
+    1. Kafka group.
+1. Values:
+    1. Default: "senzing-kafka-group"
+1. Where used:
+    1. [stream-loader](https://github.com/Senzing/stream-loader),
+
+### SENZING_KAFKA_TOPIC
+
+1. Synopsis:
+    1. Kafka topic.
+1. Values:
+    1. Default: "senzing-kafka-topic"
+1. Where used:
+    1. [stream-loader](https://github.com/Senzing/stream-loader),
+
 ### SENZING_LOG_LEVEL
+
+1. Synopsis:
+    1. Level of logging
+1. Values:
+    1. notset
+    1. debug
+    1. info
+    1. warning
+    1. error
+    1. critical
+    1. Default: info
 
 1. Where used:
     1. [docker-init-container](https://github.com/Senzing/docker-init-container),
+
+### SENZING_MONITORING_PERIOD
+
+1. Synopsis:
+    1. Time, in seconds, between monitoring log records.
+1. Values:
+    1. Default: 300
+1. Where used:
+    1. [stream-loader](https://github.com/Senzing/stream-loader),
 
 ### SENZING_NETWORK
 
@@ -356,6 +420,60 @@
 1. Where used:
     1. [resolver](https://github.com/Senzing/resolver),
 
+### SENZING_PROCESSES
+
+1. Synopsis:
+    1. Number of processes to allocated for processing.
+1. Values:
+    1. Default: 1
+1. Where used:
+    1. [stream-loader](https://github.com/Senzing/stream-loader),
+
+### SENZING_QUEUE_MAX
+
+1. Synopsis:
+    1. Maximum items for internal queue.
+1. Values:
+    1. Default: 10
+1. Where used:
+    1. [stream-loader](https://github.com/Senzing/stream-loader),
+
+### SENZING_RABBITMQ_HOST
+
+1. Synopsis:
+    1. Host name of the RabbitMQ exchange.
+1. Values:
+    1. Default: "localhost:5672"
+1. Where used:
+    1. [stream-loader](https://github.com/Senzing/stream-loader)
+
+### SENZING_RABBITMQ_PASSWORD
+
+1. Synopsis:
+    1. The password for the RabbitMQ queue.
+1. Values:
+    1. Default: "bitnami"
+1. Where used:
+    1. [stream-loader](https://github.com/Senzing/stream-loader)
+
+### SENZING_RABBITMQ_QUEUE
+
+1. Synopsis:
+    1. Name of the RabbitMQ queue used for communication.
+1. Values:
+    1. Default: "senzing-rabbitmq-queue"
+1. Where used:
+    1. [stream-loader](https://github.com/Senzing/stream-loader)
+
+### SENZING_RABBITMQ_USERNAME
+
+1. Synopsis:
+    1. The username for the RabbitMQ queue.
+1. Values:
+    1. Default: "user"
+1. Where used:
+    1. [stream-loader](https://github.com/Senzing/stream-loader)
+
 ### SENZING_RPM_DIR
 
 1. Where used:
@@ -366,20 +484,42 @@
 1. Where used:
     1. [docker-yum](https://github.com/Senzing/docker-yum),
 
+### SENZING_SLEEP_TIME
+
+1. Synopsis:
+    1.   Amount of time to sleep, in seconds, before running command.
+1. Where used:
+    1. [stream-loader](https://github.com/Senzing/stream-loader)
+
 ### SENZING_SLEEP_TIME_IN_SECONDS
 
 1. Where used:
     1. [resolver](https://github.com/Senzing/resolver),
 
+
 ### SENZING_SUBCOMMAND
 
+1. Synopsis:
+    1. Identify the subcommand to be run.
+1. Values:
+    1. Run `program-name --help` for complete list.
 1. Where used:
     1. [resolver](https://github.com/Senzing/resolver),
+       [stream-loader](https://github.com/Senzing/stream-loader)
 
 ### SENZING_SUPPORT_PATH
 
 1. Where used:
     1. [resolver](https://github.com/Senzing/resolver),
+
+### SENZING_THREADS_PER_PROCESS
+
+1. Synopsis:
+    1. Number of threads per process to allocate for processing.
+1. Values:
+    1. Default: 4
+1. Where used:
+    1. [stream-loader](https://github.com/Senzing/stream-loader)
 
 ### SENZING_UID
 
