@@ -327,6 +327,15 @@
 1. Where used:
     1. [resolver](https://github.com/Senzing/resolver),
 
+### SENZING_INIT_CONTAINER_SLEEP
+
+1. Synopsis:
+    1. Time to sleep, in seconds, before doing initialization
+1. Values:
+    1. Default: 0
+1. Where used:
+    1. [docker-init-container](https://github.com/Senzing/docker-init-container),
+
 ### SENZING_INPUT_FILE
 
 1. Where used:
