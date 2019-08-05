@@ -553,3 +553,12 @@
 
 1. Where used:
     1. [docker-yum](https://github.com/Senzing/docker-yum),
+
+### SENZING_WEBAPP_PORT
+
+1. Synopsis:
+    1. Port on localhost for Docker web application service.
+1. Values:
+    1. Default: none
+1. Where used:
+    1. [senzing-api-server](https://github.com/Senzing/senzing-api-server),
