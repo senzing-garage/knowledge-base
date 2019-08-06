@@ -146,6 +146,51 @@
        [docker-yum](https://github.com/Senzing/docker-yum),
        [docker-yumdownloader](https://github.com/Senzing/docker-yumdownloader),
 
+### MYSQL_DATABASE
+
+1. Synopsis:
+    1. The database schema name.
+1. Values:
+    1. Default: "G2"
+1. Where used:
+    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo),
+
+### MYSQL_PASSWORD
+
+1. Synopsis:
+    1. Password for [MYSQL_USERNAME](#mysql_username).
+1. Values:
+    1. Default: "g2"
+1. Where used:
+    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo),
+
+### MYSQL_ROOT_PASSWORD
+
+1. Synopsis:
+    1. The password for the the database "root" user name.
+1. Values:
+    1. Default: "root"
+1. Where used:
+    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo),
+
+### MYSQL_STORAGE
+
+1. Synopsis:
+    1. Path on local system where the database files are stored.
+1. Values:
+    1. Default: "/storage/docker/senzing/docker-compose-kafka-mysql/mysql"
+1. Where used:
+    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo),
+
+### MYSQL_USERNAME
+
+1. Synopsis:
+    1. Non-root MySQL user.
+1. Values:
+    1. Default: "g2"
+1. Where used:
+    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo),
+
 ### POSTGRES_DB
 
 1. Synopsis:
