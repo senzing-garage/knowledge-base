@@ -146,6 +146,42 @@
        [docker-yum](https://github.com/Senzing/docker-yum),
        [docker-yumdownloader](https://github.com/Senzing/docker-yumdownloader),
 
+### POSTGRES_DB
+
+1. Synopsis:
+    1. The database schema name.
+1. Values:
+    1. Default: "G2"
+1. Where used:
+    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo),
+
+### POSTGRES_PASSWORD
+
+1. Synopsis:
+    1. The password for the the database "root" user name.
+1. Values:
+    1. Default: "postgres"
+1. Where used:
+    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo),
+
+### POSTGRES_USERNAME
+
+1. Synopsis:
+    1. The username for the the database "root" user name.
+1. Values:
+    1. Default: "postgres"
+1. Where used:
+    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo),
+
+### POSTGRES_STORAGE
+
+1. Synopsis:
+    1. Path on local system where the database files are stored.
+1. Values:
+    1. Default: "/storage/docker/senzing/docker-compose-kafka-postgres/postgres"
+1. Where used:
+    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo),
+
 ### SENZING_ACCEPT_EULA
 
 1. Synopsis:
