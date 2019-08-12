@@ -114,6 +114,51 @@
     1. [docker-g2command](https://github.com/Senzing/docker-g2command),
        [docker-senzing-base](https://github.com/Senzing/docker-senzing-base),
 
+### DB2_DB
+
+1. Synopsis:
+    1. The database schema name.
+1. Values:
+    1. Default: "G2"
+1. Where used:
+    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo),
+
+### DB2_PASSWORD
+
+1. Synopsis:
+    1. Password for the database "root" username.
+1. Values:
+    1. Default: "db2inst1"
+1. Where used:
+    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo),
+
+### DB2_STORAGE
+
+1. Synopsis:
+    1. Path on local system where the database files are stored.
+1. Values:
+    1. Default: "/storage/docker/senzing/docker-compose-stream-loader-kafka-db2"
+1. Where used:
+    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo),
+
+### DB2_USERNAME
+
+1. Synopsis:
+    1. The username for the the database "root" user.
+1. Values:
+    1. Default: "db2inst1"
+1. Where used:
+    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo),
+
+### DB2INST1_PASSWORD
+
+1. Synopsis:
+    1. The password for the "db2inst1" user name.
+1. Values:
+    1. Default: "db2inst1"
+1. Where used:
+    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo),
+
 ### GIT_ACCOUNT
 
 1. Where used:
