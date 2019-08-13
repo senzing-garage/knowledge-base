@@ -114,6 +114,17 @@
     1. [docker-g2command](https://github.com/Senzing/docker-g2command),
        [docker-senzing-base](https://github.com/Senzing/docker-senzing-base),
 
+### DB2_CUSTOM_DIR
+
+1. Synopsis:
+    1. The directory containing custom scripts for
+       [ibmcom/db2](https://hub.docker.com/r/ibmcom/db2)
+       docker container. Is mounted to `/var/custom`.
+1. Values:
+    1. Default: None
+1. Where used:
+    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo),
+
 ### DB2_DB
 
 1. Synopsis:
