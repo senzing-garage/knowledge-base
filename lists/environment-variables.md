@@ -148,7 +148,7 @@
 1. Synopsis:
     1. Path on local system where the database files are stored.
 1. Values:
-    1. Default: "/storage/docker/senzing/docker-compose-stream-loader-kafka-db2"
+    1. Default: None.  Application dependent.
 1. Where used:
     1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo),
 
@@ -234,7 +234,7 @@
 1. Synopsis:
     1. Path on local system where the database files are stored.
 1. Values:
-    1. Default: "/storage/docker/senzing/docker-compose-kafka-mysql/mysql"
+    1. Default: None.  Application dependent.
 1. Where used:
     1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo),
 
@@ -279,7 +279,16 @@
 1. Synopsis:
     1. Path on local system where the database files are stored.
 1. Values:
-    1. Default: "/storage/docker/senzing/docker-compose-kafka-postgres/postgres"
+    1. Default: None.  Application dependent.
+1. Where used:
+    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo),
+
+### RABBITMQ_STORAGE
+
+1. Synopsis:
+    1. Path on local system where RabbitMQ files are stored.
+1. Values:
+    1. Default: None.  Application dependent.
 1. Where used:
     1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo),
 
