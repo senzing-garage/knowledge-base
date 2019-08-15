@@ -320,6 +320,8 @@
     1. Default "DATA_SOURCE" value for incoming records.
 1. Values:
     1. Default: none
+1. Forms:
+    1. Helm: senzing.dataSource
 1. Where used:
     1. [resolver](https://github.com/Senzing/resolver),
        [stream-loader](https://github.com/Senzing/stream-loader),
@@ -375,6 +377,8 @@
         export SENZING_DATABASE_URL=sqlite3://na:na@/var/opt/senzing/sqlite/G2C.db
         ```
 
+1. Forms:
+    1. Helm: senzing.databaseUrl
 1. Where used:
     1. [docker-g2command](https://github.com/Senzing/docker-g2command),
        [docker-senzing-base](https://github.com/Senzing/docker-senzing-base),
@@ -396,6 +400,8 @@
         export SENZING_DEBUG=1
         ```
 
+1. Forms:
+    1. Helm: senzing.debug
 1. Where used:
     1. [docker-g2command](https://github.com/Senzing/docker-g2command),
        [docker-senzing-base](https://github.com/Senzing/docker-senzing-base),
@@ -413,6 +419,8 @@
 1. Values:
     1. Default: None
     1. Usually set to "/opt/senzing".
+1. Forms:
+    1. Helm: senzing.senzingDir
 
 ### SENZING_DOCKER_LAUNCHED
 
@@ -439,6 +447,8 @@
     1. Default "ENTITY_TYPE" value for incoming records.
 1. Values:
     1. Default: none
+1. Forms:
+    1. Helm: senzing.entityType
 1. Where used:
     1. [resolver](https://github.com/Senzing/resolver),
        [stream-loader](https://github.com/Senzing/stream-loader),
@@ -560,7 +570,8 @@
     1. error
     1. critical
     1. Default: info
-
+1. Forms:
+    1. Helm: senzing.logLevel
 1. Where used:
     1. [docker-init-container](https://github.com/Senzing/docker-init-container),
        [stream-loader](https://github.com/Senzing/stream-loader),
@@ -671,6 +682,8 @@
 
 1. Synopsis:
     1. Amount of time to sleep, in seconds, before running command.
+1. Forms:
+    1. Helm: senzing.sleepTime
 1. Where used:
     1. [stream-loader](https://github.com/Senzing/stream-loader),
 
@@ -685,6 +698,8 @@
     1. Identify the subcommand to be run.
 1. Values:
     1. Run `program-name --help` for complete list.
+1. Forms:
+    1. Helm: senzing.subcommand
 1. Where used:
     1. [resolver](https://github.com/Senzing/resolver),
        [stream-loader](https://github.com/Senzing/stream-loader),
