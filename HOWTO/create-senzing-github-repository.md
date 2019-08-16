@@ -61,9 +61,10 @@ This is a checklist of what to set when creating a new GitHub Repository.
         ```console
         git clone git@github.com:Senzing/xxxx.git
         cd xxxx
-        git checkout issue-1.<your-name>.1
+        git checkout issue-1.[your-name].1
         ```
 
     1. Populate the new repository with the "Community Artifacts" found in
        [github.com/Senzing/repository-template](https://github.com/Senzing/repository-template).
-    1. Commit the branch and merge into master branch
+    1. Commit the branch.
+    1. Merge `issue-1.[your-name].1` branch into master branch.
