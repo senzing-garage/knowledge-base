@@ -2,9 +2,9 @@
 
 This is a checklist of what to set when creating a new GitHub Repository.
 
-1. Visit [github.com/Senzing/](https://github.com/Senzing/)
+1. Visit [github.com/Senzing](https://github.com/Senzing)
 1. Log in as an administrator
-1. On [github.com/Senzing/](https://github.com/Senzing/), click the "New" button
+1. On [github.com/Senzing](https://github.com/Senzing), click the "New" button
     1. Enter "Respository Name"
         1. Use only lower-case letters, numbers, and hyphens.
         1. Avoid use of underscore.
@@ -46,7 +46,7 @@ This is a checklist of what to set when creating a new GitHub Repository.
 1. On repository home page, click "Branch: master" button.
     1. Create new branch.
        Example:
-       "issue-1.<your-name>.1"
+       "issue-1.[your-name].1"
 1. On your workstation,
     1. :pencil2: Substituting the repository name for `xxxx`,
 
@@ -55,18 +55,7 @@ This is a checklist of what to set when creating a new GitHub Repository.
         cd xxxx
         git checkout issue-1.<your-name>.1
         ```
+
     1. Populate the new repository with the "Community Artifacts" found in
        [github.com/Senzing/repository-template](https://github.com/Senzing/repository-template).
     1. Commit the branch and merge into master branch
-
-        ` where `xxxx` is the new repository name.
-
-
-
-
-
-
-
-
-
-
