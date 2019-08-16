@@ -56,7 +56,7 @@ This is a checklist of what to set when creating a new GitHub Repository.
 ## Populate repository with Community Artifacts
 
 1. On your workstation,
-    1. :pencil2: Substituting the repository name for `xxxx`,
+    1. :pencil2: Substituting the new repository name for `xxxx`,
 
         ```console
         git clone git@github.com:Senzing/xxxx.git
