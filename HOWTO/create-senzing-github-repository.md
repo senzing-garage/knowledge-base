@@ -2,6 +2,8 @@
 
 This is a checklist of what to set when creating a new GitHub Repository.
 
+## Create repository
+
 1. Visit [github.com/Senzing](https://github.com/Senzing)
 1. Log in as an administrator
 1. On [github.com/Senzing](https://github.com/Senzing), click the "New" button
@@ -17,6 +19,9 @@ This is a checklist of what to set when creating a new GitHub Repository.
     1. If appropriate, add .gitignore
     1. For "Add a license", choose "Apache License 2.0"
     1. Click "Create repository" button.
+
+## Configure repository
+
 1. On repository home page, click "releases" link.
     1. Click "Create a new release" button.
     1. Tag version: 0.0.0
@@ -47,6 +52,9 @@ This is a checklist of what to set when creating a new GitHub Repository.
     1. Create new branch.
        Example:
        "issue-1.[your-name].1"
+
+## Populate repository with Community Artifacts
+
 1. On your workstation,
     1. :pencil2: Substituting the repository name for `xxxx`,
 
