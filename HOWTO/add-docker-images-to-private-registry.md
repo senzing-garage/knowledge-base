@@ -38,7 +38,7 @@
       "ibmcom/db2express-c:10.5.0.5-3.10.0" \
       "jbergknoff/postgresql-client:latest" \
       "senzing/db2:latest" \
-      "senzing/db2express-c:latest" \
+      "senzing/db2-driver-installer:latest" \
       "senzing/entity-search-web-app:latest" \
       "senzing/g2command:latest" \
       "senzing/g2configtool:latest" \
