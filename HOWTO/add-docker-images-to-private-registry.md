@@ -30,6 +30,8 @@
     ```console
     export DOCKER_IMAGE_NAMES=( \
       "bitnami/phpmyadmin:4.8.5" \
+      "bitnami/postgresql:11.5.0-debian-9-r1" \
+      "bitnami/rabbitmq:3.7.17-debian-9-r0" \
       "confluentinc/cp-kafka:4.0.1-1" \
       "coleifer/sqlite-web:latest" \
       "dockage/phppgadmin:latest" \
@@ -42,6 +44,7 @@
       "senzing/g2command:latest" \
       "senzing/g2loader:latest" \
       "senzing/jupyter:latest" \
+      "senzing/entity-search-web-app:latest" \
       "senzing/mock-data-generator:latest" \
       "senzing/mysql:latest" \
       "senzing/mysql-init:latest" \
@@ -51,6 +54,7 @@
       "senzing/senzing-debug:latest" \
       "senzing/senzing-poc-utility:latest" \
       "senzing/stream-loader:latest" \
+      "senzing/yum:latest" \
       "store/senzing/senzing-package:1.9.19155" \
     )
     ```
