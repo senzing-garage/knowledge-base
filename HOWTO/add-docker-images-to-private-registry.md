@@ -32,22 +32,22 @@
       "bitnami/phpmyadmin:4.8.5" \
       "bitnami/postgresql:11.5.0-debian-9-r1" \
       "bitnami/rabbitmq:3.7.17-debian-9-r0" \
-      "confluentinc/cp-kafka:4.0.1-1" \
       "coleifer/sqlite-web:latest" \
+      "confluentinc/cp-kafka:4.0.1-1" \
       "dockage/phppgadmin:latest" \
       "ibmcom/db2express-c:10.5.0.5-3.10.0" \
       "jbergknoff/postgresql-client:latest" \
       "senzing/db2:latest" \
       "senzing/db2express-c:latest" \
       "senzing/entity-search-web-app:latest" \
-      "senzing/g2configtool:latest" \
       "senzing/g2command:latest" \
+      "senzing/g2configtool:latest" \
       "senzing/g2loader:latest" \
+      "senzing/ibm-db2:latest" \
       "senzing/jupyter:latest" \
-      "senzing/entity-search-web-app:latest" \
       "senzing/mock-data-generator:latest" \
-      "senzing/mysql:latest" \
       "senzing/mysql-init:latest" \
+      "senzing/mysql:latest" \
       "senzing/python-demo:latest" \
       "senzing/senzing-api-server:latest" \
       "senzing/senzing-base:latest" \
