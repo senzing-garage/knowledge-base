@@ -44,6 +44,7 @@
       "senzing/g2configtool:latest" \
       "senzing/g2loader:latest" \
       "senzing/ibm-db2:latest" \
+      "senzing/init-container:latest" \
       "senzing/jupyter:latest" \
       "senzing/mock-data-generator:latest" \
       "senzing/mysql-init:latest" \
