@@ -29,6 +29,7 @@
 
     ```console
     export DOCKER_IMAGE_NAMES=( \
+      "bitnami/kafka:2.3.0-debian-9-r4" \
       "bitnami/phpmyadmin:4.8.5" \
       "bitnami/postgresql:11.5.0-debian-9-r1" \
       "bitnami/rabbitmq:3.7.17-debian-9-r0" \
