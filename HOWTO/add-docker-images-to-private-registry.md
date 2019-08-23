@@ -36,7 +36,6 @@
       "coleifer/sqlite-web:latest" \
       "confluentinc/cp-kafka:4.0.1-1" \
       "dockage/phppgadmin:latest" \
-      "ibmcom/db2express-c:10.5.0.5-3.10.0" \
       "jbergknoff/postgresql-client:latest" \
       "senzing/db2:latest" \
       "senzing/db2-driver-installer:latest" \
