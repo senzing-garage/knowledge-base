@@ -29,6 +29,7 @@
 
     ```console
     export DOCKER_IMAGE_NAMES=( \
+      "arey/mysql-client:latest" \
       "bitnami/kafka:2.3.0-debian-9-r4" \
       "bitnami/phpmyadmin:4.8.5" \
       "bitnami/postgresql:11.5.0-debian-9-r1" \
@@ -47,7 +48,6 @@
       "senzing/init-container:latest" \
       "senzing/jupyter:latest" \
       "senzing/mock-data-generator:latest" \
-      "senzing/mysql-init:latest" \
       "senzing/mysql:latest" \
       "senzing/python-demo:latest" \
       "senzing/senzing-api-server:latest" \
