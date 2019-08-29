@@ -1,9 +1,12 @@
-# What is OpenShift
+# What is Kubernetes
 
-> Empower developers to innovate and ship faster
-> with the leading hybrid cloud, enterprise container platform
-> -- *[OpenShift site](https://www.openshift.com/)*
+> Kubernetes (K8s) is an open-source system for automating deployment,
+> scaling, and management of containerized applications.
+> -- *[Kubernetes site](https://kubernetes.io/)*
 
 ## Sites
 
-1. [Official site](https://www.openshift.com/)
+1. [Official site](https://kubernetes.io)
+    1. [What is Kubernetes?](https://kubernetes.io/docs/concepts/overview/what-is-kubernetes)
+    1. [Documentation](https://kubernetes.io/docs/home)
+1. [github.com/kubernetes](https://github.com/kubernetes)
