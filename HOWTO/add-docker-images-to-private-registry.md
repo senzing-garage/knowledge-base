@@ -56,7 +56,6 @@
       "senzing/senzing-poc-utility:latest" \
       "senzing/stream-loader:latest" \
       "senzing/yum:latest" \
-      "store/senzing/senzing-package:1.9.19155" \
     )
     ```
 
