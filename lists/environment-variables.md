@@ -670,11 +670,22 @@
 
 ### SENZING_RPM_DIR
 
+1. Synopsis:
+    1. Path on the local system where the Senzing RPM is or will be located.
+1. Values:
+    1. Default: none
 1. Where used:
     1. [docker-yum](https://github.com/Senzing/docker-yum),
+    1. [docker-yumdownloader](https://github.com/Senzing/docker-yumdownloader),
 
 ### SENZING_RPM_FILENAME
 
+1. Synopsis:
+    1. Filename for the
+       [Senzing API](../WHATIS/senzing-api.md)'s
+       `senzingapi-nn.nn.nn.x86_64.rpm` file.
+1. Values:
+    1. Default: none
 1. Where used:
     1. [docker-yum](https://github.com/Senzing/docker-yum),
 
