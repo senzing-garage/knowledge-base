@@ -21,7 +21,7 @@ Instructions for installing [Senzing API](../WHATIS/senzing-api.md).
 ### CentOS
 
 1. If needed, install Senzing files.
-    1. [HOWTO - Install Senzing API >CentOS](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/install-senzing-api.md#centos)
+    1. [HOWTO - Install Senzing API > CentOS](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/install-senzing-api.md#centos)
 
 ### Ubuntu
 
