@@ -202,6 +202,15 @@
        [docker-yum](https://github.com/Senzing/docker-yum),
        [docker-yumdownloader](https://github.com/Senzing/docker-yumdownloader),
 
+### JUPYTER_NOTEBOOKS_SHARED_DIR
+
+1. Synopsis:
+    1. A directory on the localhost that is shared with the docker container as Jupyter's `shared` folder.
+1. Values:
+    1. Default: None
+1. Where used:
+    1. [docker-jupyter](https://github.com/Senzing/docker-jupyter),
+
 ### MYSQL_DATABASE
 
 1. Synopsis:
