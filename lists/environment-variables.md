@@ -700,7 +700,7 @@
     1. root
 
         ```console
-        export SENZING_RUNAS_USER="--user 0"
+        export SENZING_RUNAS_USER="0"
         ```
 
 1. Where used:
