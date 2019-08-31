@@ -170,22 +170,6 @@
 1. Where used:
     1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo),
 
-### DOCKER_RUNAS_USER
-
-1. Synopsis:
-    1. A parameter for the `docker run` statement to force the container to run as a specific user.
-1. Values:
-    1. Default: 1001
-1. Examples:
-    1. root
-
-        ```console
-        export DOCKER_RUNAS_USER="--user 0"
-        ```
-
-1. Where used:
-    1. [docker-init-container](https://github.com/Senzing/docker-init-container),
-
 ### GIT_ACCOUNT
 
 1. Where used:
@@ -705,6 +689,22 @@
     1. Default: none
 1. Where used:
     1. [docker-yum](https://github.com/Senzing/docker-yum),
+
+### SENZING_RUNAS_USER
+
+1. Synopsis:
+    1. A parameter for the `docker run` statement to force the container to run as a specific user.
+1. Values:
+    1. Default: 1001
+1. Examples:
+    1. root
+
+        ```console
+        export SENZING_RUNAS_USER="--user 0"
+        ```
+
+1. Where used:
+    1. [docker-init-container](https://github.com/Senzing/docker-init-container),
 
 ### SENZING_SLEEP_TIME
 
