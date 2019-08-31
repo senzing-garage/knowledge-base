@@ -682,8 +682,8 @@
 
 1. Synopsis:
     1. Filename for the
-       [Senzing API](../WHATIS/senzing-api.md)'s
-       `senzingapi-nn.nn.nn.x86_64.rpm` file.
+       [Senzing API](../WHATIS/senzing-api.md)
+       RPM file.
 1. Values:
     1. Format: `senzingapi-MM.mm.PP.x86_64.rpm`
     1. Default: none
