@@ -20,6 +20,25 @@ Instructions for installing [Senzing API](../WHATIS/senzing-api.md).
 
 ### CentOS
 
+1. Optional step.
+   To use the Senzing code, you must agree to the End User License Agreement (EULA).
+   The EULA is located at [https://senzing.com/end-user-license-agreement](https://senzing.com/end-user-license-agreement/).
+   To agree to Senzing EULA in an automated fashion,
+   set the `SENZING_ACCEPT_EULA` environment variable before running `yum install`.
+
+    1. :warning: This step is intentionally tricky and not simply copy/paste.
+       This ensures that you make a conscious effort to accept the EULA.
+       See
+       [SENZING_ACCEPT_EULA](https://github.com/Senzing/knowledge-base/blob/master/lists/environment-variables.md#senzing_accept_eula)
+       for the correct value.
+       Replace the double-quote character in the example with the correct value.
+       The use of the double-quote character is intentional to prevent simple copy/paste.
+       Example:
+
+        ```console
+        export SENZING_ACCEPT_EULA="
+        ```
+
 1. Install Senzing YUM repository metadata.
    Example:
 
@@ -34,12 +53,6 @@ Instructions for installing [Senzing API](../WHATIS/senzing-api.md).
 
     ```console
     sudo yum -y install senzingapi
-    ```
-
-1. For automation:  To agree to Senzing EULA, set the following environment variable before running `yum install`.
-
-    ```console
-    export SENZING_ACCEPT_EULA=I_ACCEPT_THE_SENZING_EULA
     ```
 
 ### Ubuntu
