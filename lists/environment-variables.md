@@ -772,5 +772,3 @@
 1. Values:
     1. Usual value: `G2C.db`
     1. Default: none
-1. Where used:
-    1. [senzing-api-server](https://github.com/Senzing/senzing-api-server),
