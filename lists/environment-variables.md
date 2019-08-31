@@ -764,3 +764,13 @@
     1. Default: none
 1. Where used:
     1. [senzing-api-server](https://github.com/Senzing/senzing-api-server),
+
+### SQLITE_DATABASE
+
+1. Synopsis:
+    1. Name of SQLite database containing Senzing schema.
+1. Values:
+    1. Usual value: `G2C.db`
+    1. Default: none
+1. Where used:
+    1. [senzing-api-server](https://github.com/Senzing/senzing-api-server),
