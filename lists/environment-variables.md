@@ -685,6 +685,7 @@
        [Senzing API](../WHATIS/senzing-api.md)'s
        `senzingapi-nn.nn.nn.x86_64.rpm` file.
 1. Values:
+    1. Format: `senzingapi-MM.mm.PP.x86_64.rpm`
     1. Default: none
 1. Where used:
     1. [docker-yum](https://github.com/Senzing/docker-yum),
