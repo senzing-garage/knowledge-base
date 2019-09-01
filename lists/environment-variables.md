@@ -313,6 +313,19 @@
 1. Where used:
     1. [docker-yum](https://github.com/Senzing/docker-yum),
 
+### SENZING_API_RPM_DIR
+
+1. Synopsis:
+    1. Filename for the
+       [Senzing API](../WHATIS/senzing-api.md)
+       RPM file.
+1. Values:
+    1. Format: `senzingapi-M.m.P.x86_64.rpm`
+    1. Default: none
+1. Where used:
+    1. [docker-yum](https://github.com/Senzing/docker-yum),
+    1. [docker-yumdownloader](https://github.com/Senzing/docker-yumdownloader),
+
 ### SENZING_CONFIG_PATH
 
 1. Where used:
@@ -322,6 +335,18 @@
 
 1. Where used:
     1. [docker-yum](https://github.com/Senzing/docker-yum),
+
+### SENZING_DATA_RPM_DIR
+
+1. Filename for the
+   [Senzing Data](../WHATIS/senzing-data.md)
+   RPM file.
+1. Values:
+    1. Format: `senzingdata-M.m.P.x86_64.rpm`
+    1. Default: none
+1. Where used:
+    1. [docker-yum](https://github.com/Senzing/docker-yum),
+    1. [docker-yumdownloader](https://github.com/Senzing/docker-yumdownloader),
 
 ### SENZING_DATA_SOURCE
 
@@ -676,16 +701,6 @@
     1. Default: "user"
 1. Where used:
     1. [stream-loader](https://github.com/Senzing/stream-loader),
-
-### SENZING_RPM_DIR
-
-1. Synopsis:
-    1. Path on the local system where the Senzing RPM is or will be located.
-1. Values:
-    1. Default: none
-1. Where used:
-    1. [docker-yum](https://github.com/Senzing/docker-yum),
-    1. [docker-yumdownloader](https://github.com/Senzing/docker-yumdownloader),
 
 ### SENZING_RPM_FILENAME
 
