@@ -16,6 +16,7 @@ Used in log message identifiers in the format `senzing-ppppnnnnt`, where:
 1. **5006** - [resolver.py](https://github.com/Senzing/resolver/blob/master/resolver.py)
 1. **5007** - [init-container.py](https://github.com/Senzing/docker-init-container/blob/master/init-container.py)
 1. **5008** - [db2-driver-installer.py](https://github.com/Senzing/docker-db2-driver-installer/blob/master/db2-driver-installer.py)
+1. **5009** - [configurator.py](https://github.com/Senzing/configurator/blob/master/configurator.py)
 
 ## Docker apps
 
