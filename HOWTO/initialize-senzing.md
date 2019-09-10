@@ -12,6 +12,7 @@ Instructions for installing [Senzing API](../WHATIS/senzing-api.md).
     1. [macOS](#macos)
     1. [Windows](#windows)
     1. [Docker](#docker)
+    1. [Helm Charts](#helm-charts)
 1. [Test](#test)
 1. [Troubleshooting](#troubleshooting)
 1. [References](#references)
@@ -29,12 +30,14 @@ Instructions for installing [Senzing API](../WHATIS/senzing-api.md).
 
 ### Windows
 
-## Docker
+### Docker
 
 1. If needed, install Senzing files.
     1. [HOWTO - Install Senzing API > Docker](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/install-senzing-api.md#docker)
 
 1. Run [senzing/init-container](https://github.com/Senzing/docker-init-container) docker container.
+
+### Helm Charts
 
 ## Test
 

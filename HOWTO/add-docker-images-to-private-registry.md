@@ -52,6 +52,7 @@
       "senzing/python-demo:latest" \
       "senzing/senzing-api-server:latest" \
       "senzing/senzing-base:latest" \
+      "senzing/senzing-configurator:latest" \
       "senzing/senzing-debug:latest" \
       "senzing/senzing-poc-utility:latest" \
       "senzing/stream-loader:latest" \
