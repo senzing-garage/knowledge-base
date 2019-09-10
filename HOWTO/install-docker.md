@@ -85,27 +85,22 @@ For detailed installation, see [Docker docs](https://docs.docker.com/install/).
 
 ### macOS
 
-1. Update [Homebrew](https://brew.sh) packages:
+1. [Install Docker Desktop for Mac](https://docs.docker.com/docker-for-mac/install/)
+    1. Open Docker.dmg
+    1. Drag Docker to Applications
 
+1. Go to "Applications" and double-click on "Docker"
+    1. Check the menu bar for the Docker icon
+    
+1. Test
+    1. Open Terminal
+    
     ```console
-    brew update
-    brew upgrade
+    docker --version
+    docker-compose --version
+    docker-machine --version
+    docker run hello-world
     ```
-
-1. Install docker.
-
-    ```console
-    brew cask install virtualbox
-    brew cask install docker
-    ```
-
-1. Start docker. In a terminal window:
-
-    ```console
-    /Applications/Docker.app/Contents/MacOS/Docker
-    ```
-
-    1. Alternative:  Go to `Applications` and start `Docker.app`.
 
 ### Windows
 
