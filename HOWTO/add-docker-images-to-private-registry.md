@@ -38,6 +38,7 @@
       "confluentinc/cp-kafka:4.0.1-1" \
       "dockage/phppgadmin:latest" \
       "jbergknoff/postgresql-client:latest" \
+      "senzing/configurator:latest" \
       "senzing/db2:latest" \
       "senzing/db2-driver-installer:latest" \
       "senzing/entity-search-web-app:latest" \
@@ -52,7 +53,6 @@
       "senzing/python-demo:latest" \
       "senzing/senzing-api-server:latest" \
       "senzing/senzing-base:latest" \
-      "senzing/senzing-configurator:latest" \
       "senzing/senzing-debug:latest" \
       "senzing/senzing-poc-utility:latest" \
       "senzing/stream-loader:latest" \
