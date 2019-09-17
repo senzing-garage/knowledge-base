@@ -20,7 +20,14 @@ Instructions for installing [Senzing API](../WHATIS/senzing-api.md).
 
 ### CentOS
 
-1. Optional step.
+1. Install Senzing YUM repository metadata.
+   Example:
+
+    ```console
+    sudo yum -y install https://senzing-production-yum.s3.amazonaws.com/senzingrepo-1.0.0-1.x86_64.rpm
+    ```
+
+1. :thinking: **Optional:**
    To use the Senzing code, you must agree to the End User License Agreement (EULA).
    The EULA is located at [https://senzing.com/end-user-license-agreement](https://senzing.com/end-user-license-agreement/).
    To agree to Senzing EULA in an automated fashion,
@@ -38,13 +45,6 @@ Instructions for installing [Senzing API](../WHATIS/senzing-api.md).
         ```console
         export SENZING_ACCEPT_EULA="
         ```
-
-1. Install Senzing YUM repository metadata.
-   Example:
-
-    ```console
-    sudo yum -y install https://senzing-production-yum.s3.amazonaws.com/senzingrepo-1.0.0-1.x86_64.rpm
-    ```
 
 1. Install Senzing API.
    During this installation, you will be prompted to accept the Senzing End User License Agreement (EULA)
