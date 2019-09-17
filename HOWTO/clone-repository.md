@@ -58,9 +58,8 @@ Perform one of the following commands to set `GIT_REPOSITORY_URL`.
 
 ## Perform clone repository
 
-:thinking: Choose the correct commands for yo
-
-1. Create parent directories.
+1. :thinking: Create parent directories.
+   Choose one method.
     1. Linux.
        Example:
 
