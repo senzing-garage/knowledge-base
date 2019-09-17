@@ -292,7 +292,7 @@
 1. Where used:
     1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo),
 
-### RABBITMQ_STORAGE
+### RABBITMQ_DIR
 
 1. Synopsis:
     1. Path on local system where RabbitMQ files are stored.
