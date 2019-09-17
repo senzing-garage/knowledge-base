@@ -134,21 +134,21 @@
 1. Where used:
     1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo),
 
+### DB2_DIR
+
+1. Synopsis:
+    1. Path on local system where the database files are stored.
+1. Values:
+    1. Default: None.  Application dependent.
+1. Where used:
+    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo),
+
 ### DB2_PASSWORD
 
 1. Synopsis:
     1. Password for the database "root" username.
 1. Values:
     1. Default: "db2inst1"
-1. Where used:
-    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo),
-
-### DB2_STORAGE
-
-1. Synopsis:
-    1. Path on local system where the database files are stored.
-1. Values:
-    1. Default: None.  Application dependent.
 1. Where used:
     1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo),
 
@@ -220,6 +220,15 @@
 1. Where used:
     1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo),
 
+### MYSQL_DIR
+
+1. Synopsis:
+    1. Path on local system where the database files are stored.
+1. Values:
+    1. Default: None.  Application dependent.
+1. Where used:
+    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo),
+
 ### MYSQL_PASSWORD
 
 1. Synopsis:
@@ -235,15 +244,6 @@
     1. The password for the the database "root" user name.
 1. Values:
     1. Default: "root"
-1. Where used:
-    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo),
-
-### MYSQL_STORAGE
-
-1. Synopsis:
-    1. Path on local system where the database files are stored.
-1. Values:
-    1. Default: None.  Application dependent.
 1. Where used:
     1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo),
 
@@ -283,7 +283,7 @@
 1. Where used:
     1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo),
 
-### POSTGRES_STORAGE
+### POSTGRES_DIR
 
 1. Synopsis:
     1. Path on local system where the database files are stored.
