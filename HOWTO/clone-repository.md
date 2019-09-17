@@ -15,10 +15,10 @@ The following software programs need to be installed.
 
 ## Set environment variables for repository
 
-1. :warning:  If you were sent here from another web page,
-   you probably have the next two environment variables set.
+:warning:  If sent here from another web page,
+the next two environment variables are probably set.
 
-   :pencil2: If not already set, set environment variables for
+1. :pencil2: If not already set, set environment variables for
    GitHub organization/account and the name of the repository.
    Example:
 
@@ -50,7 +50,7 @@ Perform one of the following commands to set `GIT_REPOSITORY_URL`.
 
 ### URL for SSH
 
-1. Use this example if you want to log in with your GitHub credentials.
+1. Use this example to log in with GitHub credentials.
 
     ```console
     export GIT_REPOSITORY_URL="git@github.com:${GIT_ACCOUNT}/${GIT_REPOSITORY}.git"
@@ -58,18 +58,27 @@ Perform one of the following commands to set `GIT_REPOSITORY_URL`.
 
 ## Perform clone repository
 
-1. On Linux, get repository.
+:thinking: Choose the correct commands for yo
+
+1. Create parent directories.
+    1. Linux.
+       Example:
+
+        ```console
+        mkdir --parents ${GIT_ACCOUNT_DIR}
+        ```
+
+    1. macOS.
+       Example:
+
+        ```console
+        mkdir -p ${GIT_ACCOUNT_DIR}
+        ```
+
+1. Get repository.
+   Example:
 
     ```console
-    mkdir --parents ${GIT_ACCOUNT_DIR}
     cd  ${GIT_ACCOUNT_DIR}
     git clone  --recurse-submodules ${GIT_REPOSITORY_URL}
-    ```
-
-1. On macOS, get repository.
-
-    ```console
-    mkdir -p ${GIT_ACCOUNT_DIR}
-    cd  ${GIT_ACCOUNT_DIR}
-    git clone --recurse-submodules ${GIT_REPOSITORY_URL}
     ```
