@@ -34,7 +34,13 @@ The following software programs need to be installed.
     export GIT_REPOSITORY_DIR="${GIT_ACCOUNT_DIR}/${GIT_REPOSITORY}"
     ```
 
-## URL for non-development
+## Determine URL of git repository
+
+:thinking: Git repositories can be cloned via SSH or HTTPS.
+For anonymous access, use HTTPS.
+Perform one of the following commands to set `GIT_REPOSITORY_URL`.
+
+### URL for HTTPS
 
 1. Use this example for anonymous access.
 
@@ -42,7 +48,7 @@ The following software programs need to be installed.
     export GIT_REPOSITORY_URL="https://github.com/${GIT_ACCOUNT}/${GIT_REPOSITORY}.git"
     ```
 
-## URL for development
+### URL for SSH
 
 1. Use this example if you want to log in with your GitHub credentials.
 
