@@ -2,7 +2,7 @@
 
 This is a list of ports used in docker formations.
 The intent is to avoid using reserved ports as specified by
-[IANA port assignments](http://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.txt).
+[IANA's Service Name and Transport Protocol Port Number Registry](http://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.txt).
 Also avoiding the list on [Wikipedia](https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers).
 
 ## Reserved
