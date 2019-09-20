@@ -13,7 +13,7 @@
     sudo docker run \
        --detach \
        --name portainer \
-       --publish 9001:9000 \
+       --publish 9170:9000 \
        --restart always \
        --volume /var/run/docker.sock:/var/run/docker.sock \
        --volume /opt/portainer:/data \
