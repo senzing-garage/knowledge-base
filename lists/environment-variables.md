@@ -313,6 +313,16 @@
 1. Where used:
     1. [docker-yum](https://github.com/Senzing/docker-yum),
 
+### SENZING_API_SERVICE_PORT
+
+1. Synopsis:
+    1. Port on localhost for Senzing API service.
+    1. See [Port 8250](https://github.com/Senzing/knowledge-base/blob/master/lists/ports-used-in-demonstrations.md#8250)
+1. Values:
+    1. Default: 8250
+1. Where used:
+    1. [senzing-api-server](https://github.com/Senzing/senzing-api-server),
+
 ### SENZING_API_RPM_DIR
 
 1. Synopsis:
