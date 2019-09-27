@@ -170,6 +170,27 @@
 1. Where used:
     1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo),
 
+### DOCKER_APP
+
+1. Synopsis:
+    1. The docker app command, based on the type of installation (Stand-alone or Docker CLI plugin).
+    1. Docker App [installation](https://github.com/docker/app#installation)
+1. Values:
+    1. "docker-app"
+    1. "docker app"
+    1. Default: None
+1. Where used:
+    1. [docker-app-demo](https://github.com/Senzing/docker-app-demo),
+
+### DOCKER_APP_PARAMETERS_FILE
+
+1. Synopsis:
+    1. Location of file used in Docker App `--parameters-file` command-line option.
+1. Values:
+    1. Default: None
+1. Where used:
+    1. [docker-app-demo](https://github.com/Senzing/docker-app-demo),
+
 ### GIT_ACCOUNT
 
 1. Where used:
@@ -312,6 +333,24 @@
        the value is "I_ACCEPT_THE_SENZING_EULA"
 1. Where used:
     1. [docker-yum](https://github.com/Senzing/docker-yum),
+
+### SENZING_API_SERVER_URL
+
+1. Synopsis:
+    1. A URL consisting of host:port running Senzing API server.
+    1. See [Port 8250](https://github.com/Senzing/knowledge-base/blob/master/lists/ports-used-in-demonstrations.md#8250)
+1. Values:
+    1. Format: `http://${hostname}:${SENZING_API_SERVICE_PORT}`
+    1. Default: None
+1. Examples:
+    1. Using hostname.
+
+        ```console
+        export SENZING_API_SERVER_URL="http://example.com:8250"
+        ```
+
+1. Where used:
+    1. [entity-search-web-app](https://github.com/Senzing/entity-search-web-app),
 
 ### SENZING_API_SERVICE_PORT
 
@@ -814,6 +853,16 @@
     1. Default: none
 1. Where used:
     1. [senzing-api-server](https://github.com/Senzing/senzing-api-server),
+
+### SENZING_WEB_SERVER_PORT
+
+1. Synopsis:
+    1. Port on localhost for Senzing Entity Search WebApp.
+    1. See [Port 8251](https://github.com/Senzing/knowledge-base/blob/master/lists/ports-used-in-demonstrations.md#8251)
+1. Values:
+    1. Default: 8251
+1. Where used:
+    1. [entity-search-web-app](https://github.com/Senzing/entity-search-web-app),
 
 ### SQLITE_DATABASE
 
