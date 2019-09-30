@@ -33,7 +33,7 @@
       "bitnami/kafka:2.3.0-debian-9-r4" \
       "bitnami/phpmyadmin:4.8.5" \
       "bitnami/postgresql:11.5.0-debian-9-r26" \
-      "bitnami/rabbitmq:3.7.17-debian-9-r37" \
+      "bitnami/rabbitmq:3.7.18-debian-9-r1" \
       "coleifer/sqlite-web:latest" \
       "confluentinc/cp-kafka:4.0.1-1" \
       "dockage/phppgadmin:latest" \
@@ -91,15 +91,6 @@
     do \
       sudo docker tag  ${DOCKER_IMAGE_NAME} ${DOCKER_REGISTRY_URL}/${DOCKER_IMAGE_NAME}; \
       sudo docker push ${DOCKER_REGISTRY_URL}/${DOCKER_IMAGE_NAME}; \
-    done
-    ```
-
-1. Delete tagged images.
-   Example:
-
-    ```console
-    for DOCKER_IMAGE_NAME in ${DOCKER_IMAGE_NAMES[@]};\
-    do \
       sudo docker rmi  ${DOCKER_REGISTRY_URL}/${DOCKER_IMAGE_NAME}; \
     done
     ```
