@@ -170,6 +170,24 @@
 1. Where used:
     1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo),
 
+### DEMO_NAMESPACE
+
+1. Synopsis:
+    1. In a Kubernetes environment, a value used for the namespace.
+1. Values:
+    1. Example: "my-namespace"
+1. Where used:
+    1. [kubernetes-demo](https://github.com/Senzing/kubernetes-demo),
+
+### DEMO_PREFIX
+
+1. Synopsis:
+    1. In a Kubernetes environment, a value prefixed used to object names.
+1. Values:
+    1. Example: "my"
+1. Where used:
+    1. [kubernetes-demo](https://github.com/Senzing/kubernetes-demo),
+
 ### DOCKER_APP
 
 1. Synopsis:
@@ -190,6 +208,22 @@
     1. Default: None
 1. Where used:
     1. [docker-app-demo](https://github.com/Senzing/docker-app-demo),
+
+### DOCKER_REGISTRY_SECRET
+
+1. Synopsis:
+    1. In a Kubernetes environment, the name of the Kubernetes Secret for accessing the public or local Docker registry.
+1. Where used:
+    1. [kubernetes-demo](https://github.com/Senzing/kubernetes-demo),
+
+### DOCKER_REGISTRY_URL
+
+1. Synopsis:
+    1. URL of a public or local Docker registry.
+1. Values:
+    1. Example: "docker.io"
+1. Where used:
+    1. [kubernetes-demo](https://github.com/Senzing/kubernetes-demo),
 
 ### GIT_ACCOUNT
 
@@ -223,6 +257,27 @@
        [docker-yum](https://github.com/Senzing/docker-yum),
        [docker-yumdownloader](https://github.com/Senzing/docker-yumdownloader),
 
+### HELM_TLS
+
+1. Synopsis:
+    1. In a Kubernetes environment, a parameter for the `kubectl` command.
+1. Examples:
+    1. Setting parameter.
+
+        ```console
+        export HELM_TLS="--tls"
+        ```
+
+1. Where used:
+    1. [ibm-openshift-guide](https://github.com/Senzing/ibm-openshift-guide),
+
+### HELM_VALUES_DIR
+
+1. Synopsis:
+    1. In a Kubernetes environment, a directory holding files for use in the `helm --values` parameter.
+1. Where used:
+    1. [kubernetes-demo](https://github.com/Senzing/kubernetes-demo),
+
 ### JUPYTER_NOTEBOOKS_SHARED_DIR
 
 1. Synopsis:
@@ -231,6 +286,13 @@
     1. Default: None
 1. Where used:
     1. [docker-jupyter](https://github.com/Senzing/docker-jupyter),
+
+### KUBERNETES_DIR
+
+1. Synopsis:
+    1. In a Kubernetes environment, a directory holding files for use in the helm `kubectl --filename` parameter.
+1. Where used:
+    1. [kubernetes-demo](https://github.com/Senzing/kubernetes-demo),
 
 ### MYSQL_DATABASE
 
