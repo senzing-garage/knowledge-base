@@ -189,7 +189,7 @@ Then, a Senzing project directory could be specified as a configuration option.
 1. Immutable files from `g2` or `data`.
 
    If there are files that may be modified by a user and place in either the  `etc` or `var` directores,
-   the `senzing-program` needs to know to look in the `/etc` / `var` directory
+   the `senzing-program` needs to know to look in the `/etc` or `var` directory
    before looking in the `g2` or `data` directory.
 
    **Note** A "cascading" or merging of base files in `g2` and `etc` may be considered to keep only the
