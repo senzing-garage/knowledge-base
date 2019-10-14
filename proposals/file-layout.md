@@ -57,7 +57,7 @@ A configuration file can specify one or more configurations.
       --config-file /path/to/config-file.json
     ```
 
-    `/path/to/config-file.toml` contents.
+1. `/path/to/config-file.toml` contents.
     Example:
 
     ```console
@@ -68,7 +68,7 @@ A configuration file can specify one or more configurations.
     varDir  = /path/to/var
     ```
 
-    `/path/to/config-file.json` contents.
+1. `/path/to/config-file.json` contents.
     Example:
 
     ```json
@@ -184,6 +184,24 @@ Then, a Senzing project directory could be specified as a configuration paramete
 
 Means use the project directory for (g2, data, var) directories and `/path/to/etc` for the "etc" directory.
 This allows for flexible testing against multiple configurations.
+
+1. Immutable files from `g2` or `data`.
+
+   If there are files that may be modified by a user and place in either the  `etc` or `var` directores,
+   the `senzing-program` needs to know to look in the `/etc` / `var` directory
+   before looking in the `g2` or `data` directory.
+
+   **Note** A "cascading" or merging of base files in `g2` and `etc` may be considered to keep only the
+   specific customizations in the `etc` directory.  Loosely known as "Cascading Configuration Pattern".
+
+
+## Issues
+
+1. The structure of `/opt/senzing/data`.
+   Doesn't allow a symbolic link to `/opt/senzing/data` for "latest" version.
+   May have to introduce `/opt/senzing/data/latest` to identify current version.
+1. A G2Project would need to separate (g2, data, etc, var) directories.
+   Currently, it has (data, etc, var) directories, but obfuscates the "g2" directory.
 
 ## References
 
