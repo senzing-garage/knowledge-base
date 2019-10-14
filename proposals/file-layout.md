@@ -20,14 +20,14 @@ they are copied into either the `etc` directory or `var` directory and then modi
 
 Processes look for configuration in the following priority order:
 
-1. Command-line parameters
+1. Command-line options
 1. Configuration file
 1. Environment variables
 1. Defaults
 
-### Command-line parameters
+### Command-line options
 
-The highest configuration priority is given to a command line parameter.
+The highest configuration priority is given to a command-line option.
 The command-line option over-rides a configuration-file value, Environment variable, and default value.
 If a value is not specified on the command-line, then the pecking order is:
 Configuration file, if specified; Environment variables; default values.
@@ -44,7 +44,7 @@ Configuration file, if specified; Environment variables; default values.
 
 ### Configuration file
 
-A configuration file can specify one or more configurations.
+An optional configuration file can specify one or more configurations.
 
 1. Examples:
 
@@ -84,6 +84,8 @@ A configuration file can specify one or more configurations.
     ```
 
 ### Environment variables
+
+Optional environment values.
 
 1. Example:
 
@@ -138,9 +140,9 @@ the "Default locations" could be augmented to:
     1. `${CURRENT_WORKING_DIRECTORY}/var`
     1. `/var/opt/senzing`
 
-Then, a Senzing project directory could be specified as a configuration parameter.
+Then, a Senzing project directory could be specified as a configuration option.
 
-1. Command-line parameters.
+1. Command-line options.
    Example:
 
     ```console
