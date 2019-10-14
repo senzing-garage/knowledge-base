@@ -18,8 +18,7 @@ they are copied into either the `etc` directory or `var` directory and then modi
 
 ## Identifying the locations
 
-Given the 4 separate directories, processes look for configuration in the
-following priority order:
+Processes look for configuration in the following priority order:
 
 1. Command-line parameters
 1. Configuration file
@@ -30,8 +29,10 @@ following priority order:
 
 The highest configuration priority is given to a command line parameter.
 The command-line option over-rides a configuration-file value, Environment variable, and default value.
+If a value is not specified on the command-line, then the pecking order is:
+Configuration file, if specified; Environment variables; default values.
 
-1.  Example:
+1. Example:
 
     ```console
     senzing-program \
@@ -191,7 +192,6 @@ This allows for flexible testing against multiple configurations.
 
    **Note** A "cascading" or merging of base files in `g2` and `etc` may be considered to keep only the
    specific customizations in the `etc` directory.  Loosely known as "Cascading Configuration Pattern".
-
 
 ## Issues
 
