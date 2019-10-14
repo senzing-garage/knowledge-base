@@ -183,8 +183,8 @@ Then, a Senzing project directory could be specified as a configuration option.
       --etc-dir /path/to/etc
     ```
 
-Means use the project directory for (g2, data, var) directories and `/path/to/etc` for the "etc" directory.
-This allows for flexible testing against multiple configurations.
+   Means use the project directory for (g2, data, var) directories and `/path/to/etc` for the "etc" directory.
+   This allows for flexible testing against multiple configurations.
 
 1. Immutable files from `g2` or `data`.
 
