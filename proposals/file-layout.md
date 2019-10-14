@@ -28,8 +28,8 @@ following priority order:
 
 ### Command-line parameters
 
-The highest configuration priority is given to a command line parameter / option.
-It over-rides a configuration file value, Environment variables, and defaults.
+The highest configuration priority is given to a command line parameter.
+The command-line option over-rides a configuration-file value, Environment variable, and default value.
 
 1.  Example:
 
@@ -97,16 +97,16 @@ A configuration file can specify one or more configurations.
 
 1. Example:
 
-    1. "data" directory
+    1. `data` directory
         1. `${CURRENT_WORKING_DIRECTORY}/data`
         1. `/opt/senzing/data`
-    1. "etc" directory
+    1. `etc` directory
         1. `${CURRENT_WORKING_DIRECTORY}/etc`
         1. `/etc/opt/senzing`
-    1. "g2" directory
+    1. `g2` directory
         1. `${CURRENT_WORKING_DIRECTORY}/g2`
         1. `/opt/senzing/g2`
-    1. "var" directory
+    1. `var` directory
         1. `${CURRENT_WORKING_DIRECTORY}/var`
         1. `/var/opt/senzing`
 
@@ -119,8 +119,6 @@ A configuration file can specify one or more configurations.
 
 Given that a Project is a specific set of (g2, data, etc, var),
 the "Default locations" could be augmented to:
-
-   Example:
 
 1. "data" directory
     1. `${SENZING_PROJECT_DIR}/data`
@@ -150,15 +148,15 @@ Then, a Senzing project directory could be specified as a configuration paramete
     ```
 
 1. Configuration file.
-   Examples:
+   Example:
 
     ```console
     senzing-program \
       --config-file /path/to/config-file.toml
+    ```
 
-
-    `/path/to/config-file.toml` contents.
-    Example:
+   `/path/to/config-file.toml` contents.
+   Example:
 
     ```console
     [senzing]
@@ -197,8 +195,8 @@ This allows for flexible testing against multiple configurations.
 
 ## Issues
 
-1. The structure of `/opt/senzing/data`.
-   Doesn't allow a symbolic link to `/opt/senzing/data` for "latest" version.
+1. The structure of `/opt/senzing/data`
+   doesn't allow a symbolic link to `/opt/senzing/data` for "latest" version.
    May have to introduce `/opt/senzing/data/latest` to identify current version.
 1. A G2Project would need to separate (g2, data, etc, var) directories.
    Currently, it has (data, etc, var) directories, but obfuscates the "g2" directory.
