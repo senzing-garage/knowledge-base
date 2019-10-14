@@ -120,19 +120,19 @@ A configuration file can specify one or more configurations.
 Given that a Project is a specific set of (g2, data, etc, var),
 the "Default locations" could be augmented to:
 
-1. "data" directory
+1. `data` directory
     1. `${SENZING_PROJECT_DIR}/data`
     1. `${CURRENT_WORKING_DIRECTORY}/data`
     1. `/opt/senzing/data`
-1. "etc" directory
+1. `etc` directory
     1. `${SENZING_PROJECT_DIR}/etc`
     1. `${CURRENT_WORKING_DIRECTORY}/etc`
     1. `/etc/opt/senzing`
-1. "g2" directory
+1. `g2` directory
     1. `${SENZING_PROJECT_DIR}/g2`
     1. `${CURRENT_WORKING_DIRECTORY}/g2`
     1. `/opt/senzing/g2`
-1. "var" directory
+1. `var` directory
     1. `${SENZING_PROJECT_DIR}/var`
     1. `${CURRENT_WORKING_DIRECTORY}/var`
     1. `/var/opt/senzing`
