@@ -23,7 +23,7 @@ Instructions for installing [jq](https://stedolan.github.io/jq/).
 
     ```console
     sudo yum install epel-release
-    sudo yum install make
+    sudo yum install jq
     ```
 
 ### Ubuntu
