@@ -120,7 +120,7 @@ Optional environment values.
 
 ## Projects
 
-Given that a Project is a specific set of (g2, data, etc, var),
+Given that a Project is a specific set of (data, etc, g2, var),
 the "Default locations" could be augmented to:
 
 1. `data` directory
@@ -183,7 +183,7 @@ Then, a Senzing project directory could be specified as a configuration option.
       --etc-dir /path/to/etc
     ```
 
-   Means use the project directory for (g2, data, var) directories and `/path/to/etc` for the "etc" directory.
+   Means use the project directory for (data, g2, var) directories and `/path/to/etc` for the "etc" directory.
    This allows for flexible testing against multiple configurations.
 
 1. Immutable files from `g2` or `data`.
@@ -195,12 +195,47 @@ Then, a Senzing project directory could be specified as a configuration option.
    **Note** A "cascading" or merging of base files in `g2` and `etc` may be considered to keep only the
    specific customizations in the `etc` directory.  Loosely known as "Cascading Configuration Pattern".
 
+
+## Tool chain considerations
+
+### Git
+
+1. By separating the specification of Senzing files from their actual locations,
+   Git repositories do not need to imbed Senzing code.
+1. Git does not support "soft linking".  No soft-linking needed in this proposal for git repositories.
+1. An "etc" directory can be separately versioned by a customer.
+   A "var" directory can be snap-shotted, if needed.
+   The "data" and "g2" directories can always be reinstalled.
+
+### Docker
+
+1. The proposal allows immutable volumes to be mounted Read Only for security and performance.
+1. Mounting volumes at `docker run` time allow for incremental development by allowing a developer
+   to copy and modify one of the file systems, then test.
+1. Allows the same docker image to be run at different versions of Senzing.
+
+
+### Kubernetesn / OpenShift
+
+1. Separate Persistent Volumes can be kept for different version of Senzing.
+1. Separate Persistent Volumes for development, verification, and production.
+1. If desired, the same docker images can be run with different Persistent Volumes to
+   spread the load across different file systems.
+
+### Jenkins
+
+1. Jenkins jobs can reuse Senzing installations whether they be system, project, or ad-hoc installs.
+1. Variation can be made in Jenkins runs by changing the "etc" directory, but keeping (data, g2, var) directories.
+1. Only single versions of immutable files need to be kept on Jenkins server.
+1. For regression testing we have a battery of docker images with different version of our "apps" baked in.
+   We run them against different versions of senzing by adjusting the specification of the (data, etc, g2, var) directories.
+
 ## Issues
 
 1. The structure of `/opt/senzing/data`
    doesn't allow a symbolic link to `/opt/senzing/data` for "latest" version.
    May have to introduce `/opt/senzing/data/latest` to identify current version.
-1. A G2Project would need to separate (g2, data, etc, var) directories.
+1. A G2Project would need to separate (data, etc, g2, var) directories.
    Currently, it has (data, etc, var) directories, but obfuscates the "g2" directory.
 
 ## References
