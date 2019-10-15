@@ -150,6 +150,13 @@ Then, a Senzing project directory could be specified as a configuration option.
       --project-dir /path/to/project
     ```
 
+1. Environment variables.
+   Example:
+
+    ```console
+    export SENZING_PROJECT_DIR=/path/to/project
+    ```
+
 1. Configuration file.
    Example:
 
@@ -164,13 +171,6 @@ Then, a Senzing project directory could be specified as a configuration option.
     ```console
     [senzing]
     projectDir = /path/to/project
-    ```
-
-1. Environment variables.
-   Example:
-
-    ```console
-    export SENZING_PROJECT_DIR=/path/to/project
     ```
 
 ### Special cases
