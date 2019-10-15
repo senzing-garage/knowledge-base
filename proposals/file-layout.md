@@ -215,6 +215,50 @@ Then, a Senzing project directory could be specified as a configuration option.
    to copy and modify one of the (data, etc, g2, var) directories, then test.
 1. Allows the same docker image to be run at different versions of Senzing.
 
+1. Using docker with system install.
+   Example:
+
+    ```console
+    sudo docker run \
+      --interactive \
+      --rm \
+      --volume ${SENZING_DATA_VERSION_DIR}:/opt/senzing/data \
+      --volume ${SENZING_ETC_DIR}:/etc/opt/senzing \
+      --volume ${SENZING_G2_DIR}:/opt/senzing/g2 \
+      --volume ${SENZING_VAR_DIR}:/var/opt/senzing \
+      senzing/init-container
+    ```
+
+1. Using docker with projects.
+   Example:
+
+    ```console
+    sudo docker run \
+      --env SENZING_PROJECT_DIR=/project \
+      --interactive \
+      --rm \
+      --volume ${SENZING_PROJECT_DIR}:/project \
+      senzing/init-container
+    ```
+
+1. Using docker with ad-hoc mounting.
+   Example:
+
+    ```console
+    sudo docker run \
+      --env SENZING_DATA_VERSION_DIR=/my/data \
+      --env SENZING_ETC_DIR=/my/etc \
+      --env SENZING_G2_DIR}:/my/g2 \
+      --env SENZING_VAR_DIR}:/my/var \
+      --interactive \
+      --rm \
+      --volume /tmp/bob/senzing/data:/my/data \
+      --volume /tmp/mary/senzing/etc:/my/etc \
+      --volume /tmp/john/senzing/g2:/my/g2 \
+      --volume /tmp/jane/senzing/var:/my/var \
+      senzing/init-container
+    ```
+
 ### Kubernetes / OpenShift
 
 1. Separate Persistent Volumes can be kept for different version of Senzing.
