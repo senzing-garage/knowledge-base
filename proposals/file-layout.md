@@ -195,7 +195,6 @@ Then, a Senzing project directory could be specified as a configuration option.
    **Note** A "cascading" or merging of base files in `g2` and `etc` may be considered to keep only the
    specific customizations in the `etc` directory.  Loosely known as "Cascading Configuration Pattern".
 
-
 ## Tool chain considerations
 
 ### Git
@@ -214,8 +213,7 @@ Then, a Senzing project directory could be specified as a configuration option.
    to copy and modify one of the file systems, then test.
 1. Allows the same docker image to be run at different versions of Senzing.
 
-
-### Kubernetesn / OpenShift
+### Kubernetes / OpenShift
 
 1. Separate Persistent Volumes can be kept for different version of Senzing.
 1. Separate Persistent Volumes for development, verification, and production.
