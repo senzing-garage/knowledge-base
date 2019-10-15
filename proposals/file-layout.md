@@ -199,6 +199,8 @@ Then, a Senzing project directory could be specified as a configuration option.
 
 ### Git
 
+1. If a customer creates a git repository for their code,
+   they should not have to include Senzing code in their repository.
 1. By separating the specification of Senzing files from their actual locations,
    Git repositories do not need to imbed Senzing code.
 1. Git does not support "soft linking".  No soft-linking needed in this proposal for git repositories.
@@ -210,13 +212,14 @@ Then, a Senzing project directory could be specified as a configuration option.
 
 1. The proposal allows immutable volumes to be mounted Read Only for security and performance.
 1. Mounting volumes at `docker run` time allow for incremental development by allowing a developer
-   to copy and modify one of the file systems, then test.
+   to copy and modify one of the (data, etc, g2, var) directories, then test.
 1. Allows the same docker image to be run at different versions of Senzing.
 
 ### Kubernetes / OpenShift
 
 1. Separate Persistent Volumes can be kept for different version of Senzing.
 1. Separate Persistent Volumes for development, verification, and production.
+1. Supports "rolling updates" and roll-backs.
 1. If desired, the same docker images can be run with different Persistent Volumes to
    spread the load across different file systems.
 
