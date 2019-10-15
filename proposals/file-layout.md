@@ -5,8 +5,8 @@
 Senzing has directories of files that fit into the following categories:
 
 1. Immutable files:
-    1. `g2` directory.
-    1. `data` directory.
+    1. `g2` directory. Frequent releases.
+    1. `data` directory. Infrequent releases.
 1. Configuration files:
     1. `etc` directory.
 1. Mutable files:
