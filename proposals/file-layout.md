@@ -228,6 +228,12 @@ Then, a Senzing project directory could be specified as a configuration option.
 1. For regression testing we have a battery of docker images with different version of our "apps" baked in.
    We run them against different versions of senzing by adjusting the specification of the (data, etc, g2, var) directories.
 
+## Questions
+
+1. Is `PIPELINE.CONFIGPATH` always `${SENZING_ETC_DIR}`?
+1. Is `PIPELINE.SUPPORTPATH` always `${SENZING_DATA_DIR}`?
+1. Is `PIPELINE.RESOURCEPATH` always `${SENZING_G2_DIR}/resources`?
+
 ## Issues
 
 1. The structure of `/opt/senzing/data`
