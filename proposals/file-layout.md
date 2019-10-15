@@ -173,6 +173,19 @@ Then, a Senzing project directory could be specified as a configuration option.
     projectDir = /path/to/project
     ```
 
+1. Default.
+   There is no default.
+   Just like command-line options, environment variables and configuration files,
+   if there is no `SENZING_PROJECT_DIR` specified, it is not factored into the configuration.
+
+The configuration precedence now looks like this:
+
+1. Command-line options
+1. Environment variables
+1. Configuration file
+1. Project directory
+1. Defaults
+
 ### Special cases
 
 1. A command like:
