@@ -16,7 +16,7 @@ The expectation is that `g2` and `data` directory contents are not modified by t
 If there are files that need to be customized or modified,
 they are copied into either the `etc` directory or `var` directory and then modified.
 
-## Identifying the locations
+## Configuration precedence
 
 Processes look for configuration in the following priority order:
 
@@ -25,12 +25,17 @@ Processes look for configuration in the following priority order:
 1. Configuration file
 1. Defaults
 
+With exception of "Defaults", all are optional.
+Any combination can be used.
+For instance, `FOO` can be specified as a command-line option and an environment variable.
+In this case the value of `FOO` in the command-line option takes precedence over the value in the environment variable.
+
 ### Command-line options
 
 The highest configuration priority is given to a command-line option.
 The command-line option over-rides an Environment variable, configuration-file value, and default value.
 If a value is not specified on the command-line, then the pecking order is:
-Environment variables; Configuration file, if specified; default values.
+Environment variables; Configuration file; and finally default values.
 
 1. Example:
 
