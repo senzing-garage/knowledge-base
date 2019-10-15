@@ -21,16 +21,16 @@ they are copied into either the `etc` directory or `var` directory and then modi
 Processes look for configuration in the following priority order:
 
 1. Command-line options
-1. Configuration file
 1. Environment variables
+1. Configuration file
 1. Defaults
 
 ### Command-line options
 
 The highest configuration priority is given to a command-line option.
-The command-line option over-rides a configuration-file value, Environment variable, and default value.
+The command-line option over-rides an Environment variable, configuration-file value, and default value.
 If a value is not specified on the command-line, then the pecking order is:
-Configuration file, if specified; Environment variables; default values.
+Environment variables; Configuration file, if specified; default values.
 
 1. Example:
 
@@ -40,6 +40,19 @@ Configuration file, if specified; Environment variables; default values.
       --g2-dir /path/to/g2 \
       --etc-dir /path/to/etc \
       --var-dir /path/to/var
+    ```
+
+### Environment variables
+
+Optional environment values.
+
+1. Example:
+
+    ```console
+    export SENZING_DATA_DIR=/path/to/data
+    export SENZING_ETC_DIR=/path/to/etc
+    export SENZING_G2_DIR=/path/to/g2
+    export SENZING_VAR_DIR=/path/to/var
     ```
 
 ### Configuration file
@@ -81,19 +94,6 @@ An optional configuration file can specify one or more configurations.
         "varDir": "/path/to/var"
       }
     }
-    ```
-
-### Environment variables
-
-Optional environment values.
-
-1. Example:
-
-    ```console
-    export SENZING_DATA_DIR=/path/to/data
-    export SENZING_ETC_DIR=/path/to/etc
-    export SENZING_G2_DIR=/path/to/g2
-    export SENZING_VAR_DIR=/path/to/var
     ```
 
 ### Default locations
@@ -303,3 +303,8 @@ Then, a Senzing project directory could be specified as a configuration option.
 1. Cascading Configuration pattern
     1. [Cascading Configuration Design Pattern](https://fredtrotter.com/2017/12/05/cascading-configuration-design-pattern/)
     1. [Cascading Configuration Pattern](http://www.octodecillion.com/cascadeconfigpattern/)
+1. Configuration precedence
+    1. [StackOverflow: ...in what order](https://stackoverflow.com/questions/32272911/precedence-of-configuration-options-environment-registry-configuration-file-a)
+    1. [AWS Elastic Beanstalk precedence](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/command-options.html#configuration-options-precedence)
+    1. [Order of Precedence when Configuring ASP.NET Core](https://devblogs.microsoft.com/premier-developer/order-of-precedence-when-configuring-asp-net-core/) - see "Order of Precedence"
+    1. [Hashicorp Consul Configuration](https://www.consul.io/docs/agent/options.html)
