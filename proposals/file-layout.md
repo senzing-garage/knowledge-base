@@ -35,7 +35,7 @@ In this case the value of `FOO` in the command-line option takes precedence over
 The highest configuration priority is given to a command-line option.
 The command-line option over-rides an Environment variable, configuration-file value, and default value.
 If a value is not specified on the command-line, then the pecking order is:
-Environment variables; Configuration file; and finally default values.
+Environment variable; Configuration file; and finally default value.
 
 1. Example:
 
