@@ -440,6 +440,7 @@ The configuration precedence now looks like this:
 1. A stable path for the latest versions of `senzingdata` and `senzingapi`.
     1. Senzing client code may want to run with pinned and unpinned versions of Senzing.
     1. Unpinned versions want "latest" code.
+    1. RPM installations.
        Example:
 
         ```console
