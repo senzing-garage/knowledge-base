@@ -7,6 +7,7 @@
 1. [Tool chain considerations](#tool-chain-considerations)
 1. [Questions](#questions)
 1. [Issues](#issues)
+1. [Net](#net)
 1. [References](#references)
 
 ## Background
@@ -335,7 +336,7 @@ The configuration precedence now looks like this:
    Symlinks that point to "stable, absolute paths" will work.
    Example: ["g2" in git repository](https://github.com/docktermj/spike-symlink-test).
 1. An "etc" directory can be separately versioned in a source code management system by a customer.
-   A "var" directory can be snap-shotted, if needed.
+   A "var" directory can be versioned or snap-shotted, if needed.
    The "data" and "g2" directories can always be reinstalled.
 
 ### Docker
@@ -344,7 +345,7 @@ The configuration precedence now looks like this:
    `data` and `g2` can certainly be mounted Read Only.
 1. Mounting volumes at `docker run` time allow for incremental development by allowing a developer
    to copy and modify one of the (data, etc, g2, var) directories, then test.
-1. Allows the same docker image to be run at different versions of Senzing.
+1. Allows the same docker image to be run with different versions of Senzing.
 
 1. Installing Senzing onto volumes with docker.
    Example:
@@ -422,7 +423,7 @@ The configuration precedence now looks like this:
 
 1. Separate Persistent Volumes can be kept for different version of Senzing.
 1. Separate Persistent Volumes for development, verification, and production.
-1. Supports "rolling updates" and roll-backs.
+1. Supports "rolling updates" and roll-backs with no blackouts.
 1. If desired, the same docker images can be run with different Persistent Volumes to
    spread the load across different file systems.
 
@@ -535,7 +536,11 @@ The configuration precedence now looks like this:
 
 ## Net
 
-1. RPM delivers versioned packages and updates `/opt/senzing/data` and `/opt/senzing/g2` links.
+Given all of the background from above, what needs changing?
+
+1. RPMs deliver versioned packages.
+   RPMs update `/opt/senzing/data` and `/opt/senzing/g2` links.
+   RPMs do not initialize nor modify `etc` or `var` directories.
    Example:
 
     ```console
@@ -550,14 +555,7 @@ The configuration precedence now looks like this:
             └── g2-1.12.0
     ```
 
-1. Senzing apps follow configuration precedence:
-    1. Command-line options
-    1. Environment variables
-    1. Configuration file
-    1. Project directory (specified by command-line option, Environment variable, or config file)
-    1. Defaults
-
-1. A "create project" script creates the following layout example:
+1. "create project" code creates the following layout example:
 
     ```console
     /path/to/my-project
@@ -581,7 +579,44 @@ The configuration precedence now looks like this:
             └── G2C.db
     ```
 
-1. Like G2 checking database version, G2 code should also verify that it's working with the correct level of Senzing Data at runtime.
+1. Senzing apps follow configuration precedence:
+    1. Command-line options
+    1. Environment variables
+    1. Configuration file
+    1. Project directory (specified by command-line option, Environment variable, or config file)
+    1. Defaults
+
+1. Like G2 checking database version,
+   G2 code should also verify that it's working with the correct level of Senzing Data at runtime.
+
+1. RPM versioning should be revisited to determine if a Semantic Versioning template
+   of "Major.minor.Patch", with nothing following, can be achieved.
+
+   Instead of
+
+    ```console
+    $ sudo yum list senzingapi --showduplicates
+    Available Packages
+    senzingapi.x86_64    1.10.0-19190    senzing-production
+    senzingapi.x86_64    1.10.0-19214    senzing-production
+    senzingapi.x86_64    1.10.0-19224    senzing-production
+    senzingapi.x86_64    1.10.0-19229    senzing-production
+    senzingapi.x86_64    1.11.0-19246    senzing-production
+    senzingapi.x86_64    1.12.0-19287    senzing-production
+    ```
+
+    it would be:
+
+    ```console
+    $ sudo yum list senzingapi --showduplicates
+    Available Packages
+    senzingapi.x86_64    1.10.1          senzing-production
+    senzingapi.x86_64    1.10.2          senzing-production
+    senzingapi.x86_64    1.10.3          senzing-production
+    senzingapi.x86_64    1.10.4          senzing-production
+    senzingapi.x86_64    1.11.0          senzing-production
+    senzingapi.x86_64    1.12.0          senzing-production
+    ```
 
 ## References
 
