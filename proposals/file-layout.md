@@ -250,6 +250,8 @@ The configuration precedence now looks like this:
             └── G2C.db
     ```
 
+   This introduces the notion of [stable paths](#stable-paths) for both `data` and `g2`.
+
 1. Creating a project.
     1. Make symlinks.
        **Note:** it is important that the source of the link (i.e. `ln -s <source> <link_name>`)
@@ -444,11 +446,19 @@ The configuration precedence now looks like this:
 
 ## Issues
 
+### g2/data parity
+
 1. The Senzing G2 code should verify that it's working with the correct level of Senzing Data at runtime.
-    1. Not a foreign idea: The Senzing G2 code already verifies the correct level of the database schema.
+1. Not a foreign idea: The Senzing G2 code already verifies the correct level of the database schema.
+
+### Orthogonal Senzing directories
+
 1. A G2Project needs to separate (data, etc, g2, var) directories.
    Currently, it has (data, etc, var) directories, but obfuscates the "g2" directory.
    See [Create project](#create-project).
+
+### Stable paths
+
 1. A stable path for the latest versions of `senzingdata` and `senzingapi`.
     1. Senzing client code may want to run with pinned and unpinned versions of Senzing.
     1. Unpinned versions want "latest" code.
@@ -477,6 +487,8 @@ The configuration precedence now looks like this:
                 ├── sysdata-1.0.0
                 └── sysdata-1.1.0
         ```
+
+### RPM versioning
 
 1. RPM versioning needs to be cleaned up.
    Example:
@@ -508,9 +520,14 @@ The configuration precedence now looks like this:
             └── g2-1.12.0-19287
     ```
 
-1. A concern that a customer can be "tricked" by defaults and run the wrong configuration with the data.
+### Transparent use of data, etc, g2, var
+
+1. A concern that a customer is unaware that defaults are being used and can corrupt data.
     1. Perhaps no defaults should be assumed in the code.
+       Meaning:  If it's not specified by command-line option, environment variable or config file,
+       an error is return by the Senzing app.
        The customer has to explicitly state where the 4 directories are.
+       (Or a "Project" directory command-line option or environment variable)
         1. A "create project" script could create a configuration file.
            That file would have to be passed in via command line option,
            as no defaults are assumed.
@@ -563,3 +580,4 @@ The configuration precedence now looks like this:
         ├── python3m -> python3.6m
         :
         ```
+    1. Checkout `/etc/alternatives` / `man alternatives`
