@@ -1,5 +1,14 @@
 # Senzing file layout
 
+## Contents
+
+1. [Background](#background)
+1. [Projects](#projects)
+1. [Tool chain considerations](#tool-chain-considerations)
+1. [Questions](#questions)
+1. [Issues](#issues)
+1. [References](#references)
+
 ## Background
 
 ### Types of Senzing files
@@ -122,7 +131,7 @@ An optional configuration file can specify one or more configurations.
 
 1. **Notes**
     1. The "data" directory refers to the directory containing actual data (e.g. `cnv.ibm`, `gnv.ibm`).
-       It does not refer to the the directory that holds version subdirectories.
+       It does not refer to the the directory that currently holds version subdirectories.
 
 ## Projects
 
@@ -182,7 +191,7 @@ Then, a Senzing project directory could be specified as a configuration option.
    Just like command-line options, environment variables and configuration files,
    if there is no `SENZING_PROJECT_DIR` specified, it is not factored into the configuration.
     1. Idea:  If a `<current-working-directory>/.senzing` directory is detected,
-       Code could consider `SENZING_PROJECT_DIR=<current-working-directory>'.
+       Code could consider `SENZING_PROJECT_DIR=<current-working-directory>`.
 
 The configuration precedence now looks like this:
 
