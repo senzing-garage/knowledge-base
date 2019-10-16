@@ -239,8 +239,8 @@ The configuration precedence now looks like this:
     │   ├── customOn.txt
     │   ├── customSn.txt
     │   ├── defaultGNRCP.config
-    │   ├── g2config.json
     │   ├── g2.lic             # Supplied by user.
+    │   ├── g2config.json
     │   ├── G2Module.ini
     │   ├── G2Project.ini
     │   └── stb.config
