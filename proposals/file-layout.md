@@ -121,7 +121,6 @@ An optional configuration file can specify one or more configurations.
 1. **Notes**
     1. The "data" directory refers to the directory containing actual data (e.g. `cnv.ibm`, `gnv.ibm`).
        It does not refer to the the directory that holds version subdirectories.
-    1. To disambiguate "floating" paths from versioned paths, the use of the `/latest` directory as a soft link to the version of Senzing software might be used as the system default.
 
 ## Projects
 
@@ -390,22 +389,25 @@ The configuration precedence now looks like this:
 1. The Senzing G2 code should verify that it's working with the correct level of Senzing Data at runtime.
     1. Not a foreign idea: The Senzing G2 code already verifies the correct level of the database schema.
 1. A G2Project needs to separate (data, etc, g2, var) directories.
-   Currently, it has (data, etc, var) directories, but obfuscates the "g2" directory
-1. A stable path for the latest versions of senzing g2 and senzing data.
-    1. Senzing client code may want to run with pinned and un-pinned versions of Senzing.
+   Currently, it has (data, etc, var) directories, but obfuscates the "g2" directory.
+   See [Create project](#create-project).
+1. A stable path for the latest versions of `senzingdata` and `senzingapi`.
+    1. Senzing client code may want to run with pinned and unpinned versions of Senzing.
     1. Unpinned versions want "latest" code.
-    1. Possible implementation: The use of `/opt/senzing/data/latest` symbolic link.
        Example:
 
         ```console
         /
         └── opt
             └── senzing
-                └── data
-                    ├── 1.0.0
-                    ├── 1.1.0
-                    └── latest -> 1.1.0/
+                ├── data -> data-1.1.0/
+                ├── data-1.0.0
+                ├── data-1.1.0
+                ├── g2 -> g2-1.12.0/
+                ├── g2-1.11.0
+                └── g2-1.12.0
         ```
+
 1. RPM versioning needs to be cleaned up.
    Example:
 
@@ -420,6 +422,21 @@ The configuration precedence now looks like this:
     senzingapi.x86_64    1.11.0-19246    senzing-production
     ```
 
+    Alternatively:
+
+    ```console
+    /
+    └── opt
+        └── senzing
+            ├── data -> data-1.1.0/
+            ├── data-1.0.0
+            ├── data-1.1.0
+            ├── g2 -> g2-1.12.0-19287/
+            ├── g2-1.10.0-19224
+            ├── g2-1.10.0-19229
+            ├── g2-1.11.0-19246
+            └── g2-1.12.0-19287
+    ```
 
 ## References
 
