@@ -36,7 +36,8 @@ Processes look for configuration in the following priority order:
 1. Configuration file
 1. Defaults
 
-With exception of "Defaults", all are optional.
+Although senzing applications support all configuration methods,
+a user may choose none, some, or all of the configuration methods to specify configuration.
 Any combination can be used.
 For instance, `FOO` can be specified as a command-line option and an environment variable.
 In this case the value of `FOO` in the command-line option takes precedence over the value in the environment variable.
@@ -512,8 +513,6 @@ The configuration precedence now looks like this:
 1. Linux Filesystem Hierarchy Standard
     1. [tldp.org](http://tldp.org/LDP/Linux-Filesystem-Hierarchy/html/)
     1. [Wikipedia](https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard)
-1. Layered configuration
-    1. [Python LayeredConfig](https://layeredconfig.readthedocs.io/en/latest/usage.html#precedence)
 1. TOML
     1. [Wikipedia](https://en.wikipedia.org/wiki/TOML)
 1. Configuration packages
@@ -526,8 +525,10 @@ The configuration precedence now looks like this:
     1. [AWS Elastic Beanstalk precedence](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/command-options.html#configuration-options-precedence)
     1. [Order of Precedence when Configuring ASP.NET Core](https://devblogs.microsoft.com/premier-developer/order-of-precedence-when-configuring-asp-net-core/) - see "Order of Precedence"
     1. [Hashicorp Consul Configuration](https://www.consul.io/docs/agent/options.html)
+    1. [Python LayeredConfig](https://layeredconfig.readthedocs.io/en/latest/usage.html#precedence)
 1. Symbolic links
     1. [Symbolic links in Git](https://www.mokacoding.com/blog/symliks-in-git/)
+    1. [Example symbolic link in GitHub](https://github.com/docktermj/spike-symlink-test)
     1. Examples of use:
 
         ```console
