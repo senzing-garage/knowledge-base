@@ -244,8 +244,9 @@ The configuration precedence now looks like this:
     │   └── stb.config
     ├── g2 -> /opt/senzing/g2-1.12.0/
     ├── setupEnv
-    └── var
-        └── G2C.db
+    └── var
+        └── sqlite
+            └── G2C.db
     ```
 
 1. Creating a project.
@@ -263,6 +264,7 @@ The configuration precedence now looks like this:
         1. Copy templates to `/path/to/my-project/etc` (sans `.templates` suffix)
         1. Modify contents as needed.
     1. Copy `/opt/senzing/g2/setupEnv` to `/path/to/my-project/setupEnv` and modify contents as needed.
+    1. Copy `` to `/path/to/my-project/var/`
     1. Note: If a project always wanted to be on the latest installed version,
        the linking would be:
 
