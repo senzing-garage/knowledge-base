@@ -251,7 +251,7 @@ The configuration precedence now looks like this:
 1. Creating a project.
     1. Make symlinks.
        **Note:** it is important that the source of the link (i.e. `ln -s <source> <link_name>`)
-       is a file created by the RPM installation.
+       is a directory created by the RPM installation.
 
         ```console
         cd /path/to/my-project
@@ -269,7 +269,7 @@ The configuration precedence now looks like this:
         ```console
         cd /path/to/my-project
         ln -s /opt/senzing/data data
-        ln -s /opt/senzing/g2  g2
+        ln -s /opt/senzing/g2   g2
         ```
 
 ### Upgrade project
@@ -293,7 +293,7 @@ The configuration precedence now looks like this:
 ### Detecting links
 
 1. To determine if a `senzingdata` or `senzingapi` version is still needed,
-   The following commands determine if the package is being linked.
+   The following commands determine if the package is being linked by any project.
    Example:
 
     ```console
