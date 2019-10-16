@@ -466,6 +466,17 @@ The configuration precedence now looks like this:
                 └── g2-1.12.0
         ```
 
+       An alternative for `senzingdata`:
+
+        ```console
+        /
+        └── opt
+            └── senzing
+                ├── sysdata -> data-1.1.0/
+                ├── sysdata-1.0.0
+                └── sysdata-1.1.0
+        ```
+
 1. RPM versioning needs to be cleaned up.
    Example:
 
@@ -517,3 +528,30 @@ The configuration precedence now looks like this:
     1. [Hashicorp Consul Configuration](https://www.consul.io/docs/agent/options.html)
 1. Symbolic links
     1. [Symbolic links in Git](https://www.mokacoding.com/blog/symliks-in-git/)
+    1. Examples of use:
+
+        ```console
+        /usr/bin
+        :
+        ├── gcc -> gcc-7
+        ├── gcc-7 -> x86_64-linux-gnu-gcc-7
+        ├── gcc-ar -> gcc-ar-7
+        ├── gcc-ar-7 -> x86_64-linux-gnu-gcc-ar-7
+        :
+        ├── gimp-console -> gimp-console-2.8
+        ├── gimp-console-2.8
+        :
+        ├── jar -> /etc/alternatives/jar
+        ├── java -> /etc/alternatives/java
+        ├── javac -> /etc/alternatives/javac
+        ├── javadoc -> /etc/alternatives/javadoc
+        :
+        ├── python -> python2.7
+        ├── python2 -> python2.7
+        ├── python2.7
+        ├── python3 -> python3.6
+        ├── python3.6
+        ├── python3.6m
+        ├── python3m -> python3.6m
+        :
+        ```
