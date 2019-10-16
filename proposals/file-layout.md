@@ -525,13 +525,63 @@ The configuration precedence now looks like this:
 
 1. A concern that a customer is unaware that defaults are being used and can corrupt data.
     1. Perhaps no defaults should be assumed in the code.
-       Meaning:  If it's not specified by command-line option, environment variable or config file,
-       an error is return by the Senzing app.
-       The customer has to explicitly state where the 4 directories are.
-       (Or a "Project" directory command-line option or environment variable)
+        1. Meaning:  If it's not specified by command-line option, environment variable or config file,
+           an error is return by the Senzing app.
+        1. The customer has to explicitly state where the 4 directories are.
+           (Or a "Project" directory command-line option or environment variable)
         1. A "create project" script could create a configuration file.
            That file would have to be passed in via command line option,
-           as no defaults are assumed.
+           as no defaults are assumed in the code.
+
+## Net
+
+1. RPM delivers versioned packages and updates `/opt/senzing/data` and `/opt/senzing/g2` links.
+   Example:
+
+    ```console
+    /
+    └── opt
+        └── senzing
+            ├── data -> data-1.1.0/
+            ├── data-1.0.0
+            ├── data-1.1.0
+            ├── g2 -> g2-1.12.0/
+            ├── g2-1.11.0
+            └── g2-1.12.0
+    ```
+
+1. Senzing apps follow configuration precedence:
+    1. Command-line options
+    1. Environment variables
+    1. Configuration file
+    1. Project directory (specified by command-line option, Environment variable, or config file)
+    1. Defaults
+
+1. A "create project" script creates the following layout example:
+
+    ```console
+    /path/to/my-project
+    ├── .senzing
+    │   └── project-history.json
+    ├── data -> /opt/senzing/data-1.0.0/
+    ├── etc
+    │   ├── cfgVariant.json
+    │   ├── customGn.txt
+    │   ├── customOn.txt
+    │   ├── customSn.txt
+    │   ├── defaultGNRCP.config
+    │   ├── g2config.json
+    │   ├── G2Module.ini
+    │   ├── G2Project.ini
+    │   └── stb.config
+    ├── g2 -> /opt/senzing/g2-1.12.0/
+    ├── setupEnv
+    └── var
+        └── sqlite
+            └── G2C.db
+    ```
+
+1. Like G2 checking database version, G2 code should also verify that it's working with the correct level of Senzing Data at runtime.
 
 ## References
 
@@ -554,6 +604,7 @@ The configuration precedence now looks like this:
 1. Symbolic links
     1. [Symbolic links in Git](https://www.mokacoding.com/blog/symliks-in-git/)
     1. [Example symbolic link in GitHub](https://github.com/docktermj/spike-symlink-test)
+    1. In Linux, checkout `/etc/alternatives` and/or run `man alternatives`
     1. Examples of use:
 
         ```console
@@ -581,4 +632,3 @@ The configuration precedence now looks like this:
         ├── python3m -> python3.6m
         :
         ```
-    1. Checkout `/etc/alternatives` / `man alternatives`
