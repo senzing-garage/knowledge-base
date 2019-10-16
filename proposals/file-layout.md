@@ -322,7 +322,7 @@ The configuration precedence now looks like this:
 
 1. If a customer creates a git repository for their code,
    they should not include Senzing code in their repository.
-   [Twelve factor: Codebase](https://12factor.net/codebase)
+   [Twelve factor: Codebase](https://12factor.net/codebase).
    > Multiple apps sharing the same code is a violation of twelve-factor.
 1. By separating the specification of Senzing files from their actual locations,
    Git repositories do not need to imbed Senzing code.
@@ -383,8 +383,6 @@ The configuration precedence now looks like this:
     ```console
     sudo docker run \
       --env SENZING_PROJECT_DIR=/project \
-      --interactive \
-      --rm \
       --volume ${SENZING_PROJECT_DIR}:/project \
       senzing/example
     ```
