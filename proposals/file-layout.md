@@ -316,33 +316,60 @@ The configuration precedence now looks like this:
 ### Git
 
 1. If a customer creates a git repository for their code,
-   they should not have to include Senzing code in their repository.
+   they should not include Senzing code in their repository.
+   [Twelve factor: Codebase](https://12factor.net/codebase)
+   > Multiple apps sharing the same code is a violation of twelve-factor.
 1. By separating the specification of Senzing files from their actual locations,
    Git repositories do not need to imbed Senzing code.
-1. Git does not support "soft linking".  No soft-linking needed in this proposal for git repositories.
-1. An "etc" directory can be separately versioned by a customer.
+   [Twelve factor: Dependencies](https://12factor.net/dependencies).
+1. Git has brittle support for symlinks.
+   Symlinks that point to "stable, absolute paths" will work.
+   Example: ["g2" in git repository](https://github.com/docktermj/spike-symlink-test).
+1. An "etc" directory can be separately versioned in a source code management system by a customer.
    A "var" directory can be snap-shotted, if needed.
    The "data" and "g2" directories can always be reinstalled.
 
 ### Docker
 
 1. The proposal allows immutable volumes to be mounted Read Only for security and performance.
+   `data` and `g2` can certainly be mounted Read Only.
 1. Mounting volumes at `docker run` time allow for incremental development by allowing a developer
    to copy and modify one of the (data, etc, g2, var) directories, then test.
 1. Allows the same docker image to be run at different versions of Senzing.
 
-1. Using docker with system install.
+1. Installing Senzing onto volumes with docker.
    Example:
 
     ```console
     sudo docker run \
-      --interactive \
-      --rm \
-      --volume ${SENZING_DATA_VERSION_DIR}:/opt/senzing/data \
+      --volume ${SENZING_OPT_DIR}:/opt/senzing \
+      --volume ${SENZING_ETC_DIR}:/etc/opt/senzing \
+      --volume ${SENZING_VAR_DIR}:/var/opt/senzing \
+      senzing/yum
+    ```
+
+1. Initializing Senzing volumes with docker.
+   Example:
+
+    ```console
+    sudo docker run \
+      --volume ${SENZING_DATA_DIR}:/opt/senzing/data \
       --volume ${SENZING_ETC_DIR}:/etc/opt/senzing \
       --volume ${SENZING_G2_DIR}:/opt/senzing/g2 \
       --volume ${SENZING_VAR_DIR}:/var/opt/senzing \
       senzing/init-container
+    ```
+
+1. Using docker.
+   Example:
+
+    ```console
+    sudo docker run \
+      --volume ${SENZING_DATA_DIR}:/opt/senzing/data \
+      --volume ${SENZING_ETC_DIR}:/etc/opt/senzing \
+      --volume ${SENZING_G2_DIR}:/opt/senzing/g2 \
+      --volume ${SENZING_VAR_DIR}:/var/opt/senzing \
+      senzing/example
     ```
 
 1. Using docker with projects.
@@ -354,7 +381,7 @@ The configuration precedence now looks like this:
       --interactive \
       --rm \
       --volume ${SENZING_PROJECT_DIR}:/project \
-      senzing/init-container
+      senzing/example
     ```
 
 1. Using docker with ad-hoc mounting.
@@ -366,13 +393,11 @@ The configuration precedence now looks like this:
       --env SENZING_ETC_DIR=/my/betty/etc \
       --env SENZING_G2_DIR}:/my/oscar/g2 \
       --env SENZING_VAR_DIR}:/my/susan/var \
-      --interactive \
-      --rm \
       --volume /tmp/bob/senzing/data:/my/tom/data \
       --volume /tmp/mary/senzing/etc:/my/betty/etc \
       --volume /tmp/john/senzing/g2:/my/oscar/g2 \
       --volume /tmp/jane/senzing/var:/my/susan/var \
-      senzing/init-container
+      senzing/example
     ```
 
 ### Kubernetes / OpenShift
@@ -390,6 +415,11 @@ The configuration precedence now looks like this:
 1. Only single versions of immutable files need to be kept on Jenkins server.
 1. For regression testing we have a battery of docker images with different version of our "apps" baked in.
    We run them against different versions of senzing by adjusting the specification of the (data, etc, g2, var) directories.
+
+### Twelve factor
+
+1. The design needs to keep development, staging, and production as similar as possible.
+   [Twelve Factor:  Dev/prod parity](https://12factor.net/dev-prod-parity)
 
 ## Questions
 
