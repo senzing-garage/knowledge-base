@@ -103,16 +103,16 @@ An optional configuration file can specify one or more configurations.
 
 ### Default locations
 
+**Note:** The following example will be modified with the introduction of "Projects".
+
 1. Example:
 
     1. `data` directory
-        1. `${CURRENT_WORKING_DIRECTORY}/data`
         1. `/opt/senzing/data`
     1. `etc` directory
         1. `${CURRENT_WORKING_DIRECTORY}/etc`
         1. `/etc/opt/senzing`
     1. `g2` directory
-        1. `${CURRENT_WORKING_DIRECTORY}/g2`
         1. `/opt/senzing/g2`
     1. `var` directory
         1. `${CURRENT_WORKING_DIRECTORY}/var`
@@ -130,7 +130,6 @@ the "Default locations" could be augmented to:
 
 1. `data` directory
     1. `${SENZING_PROJECT_DIR}/data`
-    1. `${CURRENT_WORKING_DIRECTORY}/data`
     1. `/opt/senzing/data`
 1. `etc` directory
     1. `${SENZING_PROJECT_DIR}/etc`
@@ -138,7 +137,6 @@ the "Default locations" could be augmented to:
     1. `/etc/opt/senzing`
 1. `g2` directory
     1. `${SENZING_PROJECT_DIR}/g2`
-    1. `${CURRENT_WORKING_DIRECTORY}/g2`
     1. `/opt/senzing/g2`
 1. `var` directory
     1. `${SENZING_PROJECT_DIR}/var`
@@ -212,6 +210,94 @@ The configuration precedence now looks like this:
 
    **Note** A "cascading" or merging of base files in `g2` and `etc` may be considered to keep only the
    specific customizations in the `etc` directory.  Loosely known as "Cascading Configuration Pattern".
+
+### Create project
+
+1. Layout of a project.
+
+    ```console
+    /path/to/my-project
+    ├── .senzing
+    │   └── project-history.json
+    ├── data -> /opt/senzing/data-1.0.0/
+    ├── etc
+    │   ├── cfgVariant.json
+    │   ├── customGn.txt
+    │   ├── customOn.txt
+    │   ├── customSn.txt
+    │   ├── defaultGNRCP.config
+    │   ├── g2config.json
+    │   ├── G2Module.ini
+    │   ├── G2Project.ini
+    │   └── stb.config
+    ├── g2 -> /opt/senzing/g2-1.12.0/
+    ├── setupEnv
+    └── var
+        └── G2C.db
+    ```
+
+1.Creating a project.
+    1. Make symlinks.
+       **Note:** it is important that the source of the link (i.e. `ln -s <source> <link_name>`)
+       is a file created by the RPM installation.
+
+        ```console
+        cd /path/to/my-project
+        ln -s /opt/senzing/data-1.0.0 data
+        ln -s /opt/senzing/g2-1.12.0  g2
+        ```
+
+    1. `/opt/senzing/g2/resources/templates` (or `/path/to/my-project/g2/resources/templates`)
+        1. Copy templates to `/path/to/my-project/etc` (sans `.templates` suffix)
+        1. Modify contents as needed.
+    1. Copy `/opt/senzing/g2/setupEnv` to `/path/to/my-project/setupEnv` and modify contents as needed.
+    1. Note: If a project always wanted to be on the latest installed version,
+       the linking would be:
+
+        ```console
+        cd /path/to/my-project
+        ln -s /opt/senzing/data data
+        ln -s /opt/senzing/g2  g2
+        ```
+
+### Upgrade project
+
+1. Determine a folder is a senzing project is done by detecting the `.senzing` directory.
+1. When needed, update the following soft-links:
+    1. `/path/to/my-project/data`
+    1. `/path/to/myproject/g2`
+1. Modify `setupEnv`
+1. Modify `/path/to/my-project/.senzing/project-history.json` to keep pertinent history.
+
+### Rollback project
+
+1. Determine a folder is a senzing project is done by detecting the `.senzing` directory.
+1. When needed, update the following soft-links:
+    1. `/path/to/my-project/data`
+    1. `/path/to/myproject/g2`
+1. Modify `setupEnv`
+1. Modify `/path/to/my-project/.senzing/project-history.json` to keep pertinent history.
+
+### Detecting links
+
+1. To determine if a `senzingdata` or `senzingapi` version is still needed,
+   The following commands determine if the package is being linked.
+   Example:
+
+    ```console
+    find / -lname "*g2-1.12.0?"
+    ```
+
+    ```console
+    find / -lname "*data-1.1.0?"
+    ```
+
+1. If a package is deleted in error, it can be recovered by a yum install.
+   Example:
+
+    ```console
+    sudo yum install senzingapi-1.11.0
+    ```
 
 ## Tool chain considerations
 
@@ -301,11 +387,39 @@ The configuration precedence now looks like this:
 
 ## Issues
 
-1. The structure of `/opt/senzing/data`
-   doesn't allow a symbolic link to `/opt/senzing/data` for "latest" version.
-   May have to introduce `/opt/senzing/data/latest` to identify current version.
-1. A G2Project would need to separate (data, etc, g2, var) directories.
-   Currently, it has (data, etc, var) directories, but obfuscates the "g2" directory.
+1. The Senzing G2 code should verify that it's working with the correct level of Senzing Data at runtime.
+    1. Not a foreign idea: The Senzing G2 code already verifies the correct level of the database schema.
+1. A G2Project needs to separate (data, etc, g2, var) directories.
+   Currently, it has (data, etc, var) directories, but obfuscates the "g2" directory
+1. A stable path for the latest versions of senzing g2 and senzing data.
+    1. Senzing client code may want to run with pinned and un-pinned versions of Senzing.
+    1. Unpinned versions want "latest" code.
+    1. Possible implementation: The use of `/opt/senzing/data/latest` symbolic link.
+       Example:
+
+        ```console
+        /
+        └── opt
+            └── senzing
+                └── data
+                    ├── 1.0.0
+                    ├── 1.1.0
+                    └── latest -> 1.1.0/
+        ```
+1. RPM versioning needs to be cleaned up.
+   Example:
+
+    ```console
+    # yum list senzingapi --showduplicates
+
+    Available Packages
+    senzingapi.x86_64    1.10.0-19190    senzing-production
+    senzingapi.x86_64    1.10.0-19214    senzing-production
+    senzingapi.x86_64    1.10.0-19224    senzing-production
+    senzingapi.x86_64    1.10.0-19229    senzing-production
+    senzingapi.x86_64    1.11.0-19246    senzing-production
+    ```
+
 
 ## References
 
@@ -326,3 +440,6 @@ The configuration precedence now looks like this:
     1. [AWS Elastic Beanstalk precedence](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/command-options.html#configuration-options-precedence)
     1. [Order of Precedence when Configuring ASP.NET Core](https://devblogs.microsoft.com/premier-developer/order-of-precedence-when-configuring-asp-net-core/) - see "Order of Precedence"
     1. [Hashicorp Consul Configuration](https://www.consul.io/docs/agent/options.html)
+1. Symbolic links
+    1. [Symbolic links in Git](https://www.mokacoding.com/blog/symliks-in-git/)
+
