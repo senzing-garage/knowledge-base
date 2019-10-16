@@ -405,8 +405,8 @@ The configuration precedence now looks like this:
     sudo docker run \
       --env SENZING_DATA_VERSION_DIR=/my/tom/data \
       --env SENZING_ETC_DIR=/my/betty/etc \
-      --env SENZING_G2_DIR}:/my/oscar/g2 \
-      --env SENZING_VAR_DIR}:/my/susan/var \
+      --env SENZING_G2_DIR=/my/oscar/g2 \
+      --env SENZING_VAR_DIR=/my/susan/var \
       --volume /tmp/bob/senzing/data:/my/tom/data \
       --volume /tmp/mary/senzing/etc:/my/betty/etc \
       --volume /tmp/john/senzing/g2:/my/oscar/g2 \
