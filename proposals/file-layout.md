@@ -508,6 +508,13 @@ The configuration precedence now looks like this:
             └── g2-1.12.0-19287
     ```
 
+1. A concern that a customer can be "tricked" by defaults and run the wrong configuration with the data.
+    1. Perhaps no defaults should be assumed in the code.
+       The customer has to explicitly state where the 4 directories are.
+        1. A "create project" script could create a configuration file.
+           That file would have to be passed in via command line option,
+           as no defaults are assumed.
+
 ## References
 
 1. Linux Filesystem Hierarchy Standard
