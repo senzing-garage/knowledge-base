@@ -261,7 +261,7 @@ The configuration precedence now looks like this:
         ```
 
     1. `/opt/senzing/g2/resources/templates`
-        1. Now also known as `/path/to/my-project/g2/resources/templates`).
+        1. Now also known as `/path/to/my-project/g2/resources/templates`.
         1. Copy specific templates to `/path/to/my-project/etc`
             1. Remove `.templates` suffix.
             1. Example:  Don't copy G2C.db.template to `/path/to/my-project/etc`.
@@ -373,6 +373,17 @@ The configuration precedence now looks like this:
       --volume ${SENZING_DATA_DIR}:/opt/senzing/data \
       --volume ${SENZING_ETC_DIR}:/etc/opt/senzing \
       --volume ${SENZING_G2_DIR}:/opt/senzing/g2 \
+      --volume ${SENZING_VAR_DIR}:/var/opt/senzing \
+      senzing/example
+    ```
+
+1. Using docker with `SENZING_OPT_DIR`.
+   Example:
+
+    ```console
+    sudo docker run \
+      --volume ${SENZING_OPT_DIR}:/opt/senzing \
+      --volume ${SENZING_ETC_DIR}:/etc/opt/senzing \
       --volume ${SENZING_VAR_DIR}:/var/opt/senzing \
       senzing/example
     ```
