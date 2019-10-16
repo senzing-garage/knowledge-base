@@ -496,8 +496,7 @@ The configuration precedence now looks like this:
    Example:
 
     ```console
-    # yum list senzingapi --showduplicates
-
+    $ sudo yum list senzingapi --showduplicates
     Available Packages
     senzingapi.x86_64    1.10.0-19190    senzing-production
     senzingapi.x86_64    1.10.0-19214    senzing-production
