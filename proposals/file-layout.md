@@ -149,14 +149,14 @@ Then, a Senzing project directory could be specified as a configuration option.
 
     ```console
     senzing-program \
-      --project-dir /path/to/project
+      --project-dir /path/to/my-project
     ```
 
 1. Environment variables.
    Example:
 
     ```console
-    export SENZING_PROJECT_DIR=/path/to/project
+    export SENZING_PROJECT_DIR=/path/to/my-project
     ```
 
 1. Configuration file.
@@ -172,13 +172,15 @@ Then, a Senzing project directory could be specified as a configuration option.
 
     ```console
     [senzing]
-    projectDir = /path/to/project
+    projectDir = /path/to/my-project
     ```
 
 1. Default.
    There is no default.
    Just like command-line options, environment variables and configuration files,
    if there is no `SENZING_PROJECT_DIR` specified, it is not factored into the configuration.
+    1. Idea:  If a `<current-working-directory>/.senzing` directory is detected,
+       Code could consider `SENZING_PROJECT_DIR=<current-working-directory>'.
 
 The configuration precedence now looks like this:
 
@@ -194,7 +196,7 @@ The configuration precedence now looks like this:
 
     ```console
     senzing-program \
-      --project-dir /path/to/project \
+      --project-dir /path/to/my-project \
       --etc-dir /path/to/etc
     ```
 
@@ -246,7 +248,7 @@ The configuration precedence now looks like this:
         ln -s /opt/senzing/g2-1.12.0  g2
         ```
 
-    1. `/opt/senzing/g2/resources/templates` (or `/path/to/my-project/g2/resources/templates`)
+    1. Using `/opt/senzing/g2/resources/templates` (or `/path/to/my-project/g2/resources/templates`).
         1. Copy templates to `/path/to/my-project/etc` (sans `.templates` suffix)
         1. Modify contents as needed.
     1. Copy `/opt/senzing/g2/setupEnv` to `/path/to/my-project/setupEnv` and modify contents as needed.
@@ -264,7 +266,7 @@ The configuration precedence now looks like this:
 1. Determine a folder is a senzing project is done by detecting the `.senzing` directory.
 1. When needed, update the following soft-links:
     1. `/path/to/my-project/data`
-    1. `/path/to/myproject/g2`
+    1. `/path/to/my-project/g2`
 1. Modify `setupEnv`
 1. Modify `/path/to/my-project/.senzing/project-history.json` to keep pertinent history.
 
@@ -273,7 +275,7 @@ The configuration precedence now looks like this:
 1. Determine a folder is a senzing project is done by detecting the `.senzing` directory.
 1. When needed, update the following soft-links:
     1. `/path/to/my-project/data`
-    1. `/path/to/myproject/g2`
+    1. `/path/to/my-project/g2`
 1. Modify `setupEnv`
 1. Modify `/path/to/my-project/.senzing/project-history.json` to keep pertinent history.
 
@@ -459,4 +461,3 @@ The configuration precedence now looks like this:
     1. [Hashicorp Consul Configuration](https://www.consul.io/docs/agent/options.html)
 1. Symbolic links
     1. [Symbolic links in Git](https://www.mokacoding.com/blog/symliks-in-git/)
-
