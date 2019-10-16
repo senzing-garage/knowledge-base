@@ -427,6 +427,51 @@ The configuration precedence now looks like this:
 1. If desired, the same docker images can be run with different Persistent Volumes to
    spread the load across different file systems.
 
+### Helm charts
+
+1. A `senzing/yum` chart would have:
+
+    ```console
+    spec:
+      template:
+        spec:
+          containers:
+            - name: {{ .Chart.Name }}
+              ...
+              volumeMounts:
+                - name: senzing-storage
+                  mountPath: /opt/senzing
+                  subPath: senzing-opt
+              ...
+          volumes:
+            - name: senzing-storage
+              persistentVolumeClaim:
+                claimName: {{ .Values.senzing.persistentVolumeClaim }}
+    ```
+
+1. A `senzing/stream-loader` chart would have:
+
+    ```console
+    spec:
+      template:
+        spec:
+          containers:
+            - name: {{ .Chart.Name }}
+              ...
+              volumeMounts:
+                - name: senzing-storage
+                  mountPath: /opt/senzing/data
+                  subPath: senzing-opt/data
+                - name: senzing-storage
+                  mountPath: /opt/senzing/g2
+                  subPath: senzing-opt/g2
+              ...
+          volumes:
+            - name: senzing-storage
+              persistentVolumeClaim:
+                claimName: {{ .Values.senzing.persistentVolumeClaim }}
+    ```
+
 ### Jenkins
 
 1. Jenkins jobs can reuse Senzing installations whether they be system, project, or ad-hoc installs.
