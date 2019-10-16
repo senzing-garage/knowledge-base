@@ -244,9 +244,9 @@ The configuration precedence now looks like this:
     │   └── stb.config
     ├── g2 -> /opt/senzing/g2-1.12.0/
     ├── setupEnv
-    └── var
-        └── sqlite
-            └── G2C.db
+    └── var
+        └── sqlite
+            └── G2C.db
     ```
 
 1. Creating a project.
