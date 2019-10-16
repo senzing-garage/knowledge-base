@@ -1,6 +1,8 @@
 # Senzing file layout
 
-## Types of Senzing files
+## Background
+
+### Types of Senzing files
 
 Senzing has directories of files that fit into the following categories:
 
@@ -16,7 +18,7 @@ The expectation is that `g2` and `data` directory contents are not modified by t
 If there are files that need to be customized or modified,
 they are copied into either the `etc` directory or `var` directory and then modified.
 
-## Configuration precedence
+### Configuration precedence
 
 Processes look for configuration in the following priority order:
 
@@ -30,7 +32,7 @@ Any combination can be used.
 For instance, `FOO` can be specified as a command-line option and an environment variable.
 In this case the value of `FOO` in the command-line option takes precedence over the value in the environment variable.
 
-### Command-line options
+#### Command-line options
 
 The highest configuration priority is given to a command-line option.
 The command-line option over-rides an Environment variable, configuration-file value, and default value.
@@ -47,7 +49,7 @@ Environment variable; Configuration file; and finally default value.
       --var-dir /path/to/var
     ```
 
-### Environment variables
+#### Environment variables
 
 Optional environment values.
 
@@ -60,7 +62,7 @@ Optional environment values.
     export SENZING_VAR_DIR=/path/to/var
     ```
 
-### Configuration file
+#### Configuration file
 
 An optional configuration file can specify one or more configurations.
 
@@ -101,7 +103,7 @@ An optional configuration file can specify one or more configurations.
     }
     ```
 
-### Default locations
+#### Default locations
 
 **Note:** The following example will be modified with the introduction of "Projects".
 
