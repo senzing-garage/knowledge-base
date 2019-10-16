@@ -191,7 +191,7 @@ Then, a Senzing project directory could be specified as a configuration option.
    Just like command-line options, environment variables and configuration files,
    if there is no `SENZING_PROJECT_DIR` specified, it is not factored into the configuration.
     1. Idea:  If a `<current-working-directory>/.senzing` directory is detected,
-       Code could consider `SENZING_PROJECT_DIR=<current-working-directory>`.
+       code could consider `SENZING_PROJECT_DIR=<current-working-directory>`.
 
 The configuration precedence now looks like this:
 
@@ -248,7 +248,7 @@ The configuration precedence now looks like this:
         └── G2C.db
     ```
 
-1.Creating a project.
+1. Creating a project.
     1. Make symlinks.
        **Note:** it is important that the source of the link (i.e. `ln -s <source> <link_name>`)
        is a file created by the RPM installation.
