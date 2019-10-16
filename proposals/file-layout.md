@@ -1,4 +1,4 @@
-# Senzing file layout
+# Proposal for improving Senzing file layout
 
 ## Contents
 
