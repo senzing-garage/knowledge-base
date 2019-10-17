@@ -255,6 +255,16 @@ The configuration precedence now looks like this:
    This introduces the notion of [stable paths](#stable-paths) for both `data` and `g2`.
 
 1. Creating a project.
+
+    1. Find current version.
+       Example:
+
+        ```python
+        import os
+        actual_path = os.readlink("/opt/senzing/data")
+        print(actual_path)
+        ```
+
     1. Make symlinks.
        **Note:** it is important that the source of the link (i.e. `ln -s <source> <link_name>`)
        is a directory created by the RPM installation.
@@ -577,7 +587,8 @@ Currently, the project implementation conflicts with the following factors:
 1. **[Dependencies](https://www.12factor.net/dependencies).**
    Twelve Factor promotes isolated dependencies that are explicitly declared.
    In the current project model,
-   a customer project implicitly assumes the Senzing dependencies are subdirectories in the project folder.
+   a customer project *implicitly* assumes the Senzing dependencies are subdirectories in the project folder.
+   The dependencies should be *explicitly* declared.
 1. **[Config](https://www.12factor.net/config).**
    Twelve Factor promotes storing configuration in environnment variables.
 1. **[Backing services](https://www.12factor.net/backing-services).**
