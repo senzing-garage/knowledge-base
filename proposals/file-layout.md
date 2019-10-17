@@ -568,24 +568,25 @@ The configuration precedence now looks like this:
 
 ### Twelve factor issues
 
-1. Currently, the project implementation conflicts with the following factors:
-    1. **[Codebase](https://www.12factor.net/codebase).**
-       A customer creating projects would include the same Senzing code in multiple projects.
-    1. **[Dependencies](https://www.12factor.net/dependencies).**
-       A customer project implicitly assumes the Senzing dependencies are subdirectories in the project folder.
-       Twelve Factor promotes isolated dependencies that are explicitly declared
-    1. **[Config](https://www.12factor.net/config).**
-       Twelve Factor promotes storing configuration in environnment variables.
-    1. **[Backing services](https://www.12factor.net/backing-services).**
-       Twelve Factor promotes treating backing services as attached resources.
-       The current project model does not support swapping of the service.
-    1. **[Dev/prod parity](https://www.12factor.net/dev-prod-parity).**
-       Twelve Factor promotes keeping development, staging, and production as similar as possible.
-       The current project model doesn't fit well in Kubernetes / OpenShift environments.
-       Issues:
-        1. Persistent Volume use for Read Only vs Read Write directories.
-        1. Roll-forward and roll-back
-        1. Mixed use of linking and copying data leads to complex use of Persistent Volumes.
+Currently, the project implementation conflicts with the following factors:
+
+1. **[Codebase](https://www.12factor.net/codebase).**
+   A customer creating projects would include the same Senzing code in multiple projects.
+1. **[Dependencies](https://www.12factor.net/dependencies).**
+   A customer project implicitly assumes the Senzing dependencies are subdirectories in the project folder.
+   Twelve Factor promotes isolated dependencies that are explicitly declared.
+1. **[Config](https://www.12factor.net/config).**
+   Twelve Factor promotes storing configuration in environnment variables.
+1. **[Backing services](https://www.12factor.net/backing-services).**
+   Twelve Factor promotes treating backing services as attached resources.
+   The current project model does not support swapping of the service.
+1. **[Dev/prod parity](https://www.12factor.net/dev-prod-parity).**
+   Twelve Factor promotes keeping development, staging, and production as similar as possible.
+   The current project model doesn't fit well in Kubernetes / OpenShift environments.
+   Issues:
+    1. Persistent Volume use for Read Only vs. Read Write directories.
+    1. Support for roll-forward and roll-back with no down time.
+    1. Mixed use of linking and copying data leads to complex use of Persistent Volumes.
 
 ### Transparent use of data, etc, g2, var
 
