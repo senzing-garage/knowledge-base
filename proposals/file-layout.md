@@ -266,7 +266,7 @@ The configuration precedence now looks like this:
         ```
 
     1. Make symlinks.
-       **Note:** it is important that the source of the link (i.e. `ln -s <source> <link_name>`)
+       **Note:** it is important that the source of the symlink (i.e. `ln -s <source> <link_name>`)
        is a directory created by the RPM installation.
 
         ```console
@@ -295,7 +295,7 @@ The configuration precedence now looks like this:
 ### Upgrade project
 
 1. Determine a folder is a senzing project is done by detecting the `.senzing` directory.
-1. When needed, update the following soft-links:
+1. When needed, update the following symlinks:
     1. `/path/to/my-project/data`
     1. `/path/to/my-project/g2`
 1. Modify `setupEnv`
@@ -304,13 +304,13 @@ The configuration precedence now looks like this:
 ### Rollback project
 
 1. Determine a folder is a senzing project is done by detecting the `.senzing` directory.
-1. When needed, update the following soft-links:
+1. When needed, update the following symlinks:
     1. `/path/to/my-project/data`
     1. `/path/to/my-project/g2`
 1. Modify `setupEnv`
 1. Modify `/path/to/my-project/.senzing/project-history.json` to keep pertinent history.
 
-### Detecting links
+### Detecting symlinks
 
 1. To determine if a `senzingdata` or `senzingapi` version is still needed,
    The following commands determine if the package is being linked by any project.
@@ -619,7 +619,7 @@ Currently, the project implementation conflicts with the following factors:
 Given all of the background from above, what needs changing?
 
 1. RPMs deliver versioned packages.
-   RPMs update `/opt/senzing/data` and `/opt/senzing/g2` links.
+   RPMs update `/opt/senzing/data` and `/opt/senzing/g2` symlinks.
    RPMs do not initialize nor modify `etc` or `var` directories.
    Example:
 
