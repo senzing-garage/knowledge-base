@@ -662,6 +662,16 @@ Given all of the background from above, what needs changing?
     senzingapi.x86_64    1.12.0          senzing-production
     ```
 
+1. Disambiguate the `data` directory.
+   When a customer sees `data` in their projects, they might think it's their project data, not Senzing's data.
+    1. Alternatives: `sysdata`, `g2data`.
+    1. Consider renaming RPM and yum/apt install packages
+    1. Want to keep it consistent and obvious to user
+        1. RPM name
+        1. Directory in `/opt/senzing`
+        1. Directory in project
+
+
 ## References
 
 1. Linux Filesystem Hierarchy Standard
