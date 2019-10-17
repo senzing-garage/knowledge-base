@@ -571,6 +571,7 @@ The configuration precedence now looks like this:
 Currently, the project implementation conflicts with the following factors:
 
 1. **[Codebase](https://www.12factor.net/codebase).**
+   Multiple apps sharing the same code is a violation of twelve-factor.
    A customer creating projects would include the same Senzing code in multiple projects.
 1. **[Dependencies](https://www.12factor.net/dependencies).**
    A customer project implicitly assumes the Senzing dependencies are subdirectories in the project folder.
