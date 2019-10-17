@@ -257,7 +257,7 @@ The configuration precedence now looks like this:
 1. Creating a project.
 
     1. Find current version.
-       Example:
+       Python example:
 
         ```python
         import os
