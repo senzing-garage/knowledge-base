@@ -327,6 +327,8 @@ The configuration precedence now looks like this:
 1. If a package is deleted in error, it can be recovered by a yum install.
    Example:
 
+   yum
+
     ```console
     # Current patch level.
     sudo yum install senzingapi-1.11
@@ -334,6 +336,8 @@ The configuration precedence now looks like this:
     # Specific patch level.
     sudo yum install senzingapi-1.11-2
     ```
+
+   apt-get
 
     ```console
     # Current patch level.
@@ -544,17 +548,6 @@ The configuration precedence now looks like this:
                 ├── g2 -> g2-1.12/
                 ├── g2-1.11
                 └── g2-1.12
-        ```
-
-       An alternative for `senzingdata`:
-
-        ```console
-        /
-        └── opt
-            └── senzing
-                ├── sysdata -> data-1.1.0/
-                ├── sysdata-1.0.0
-                └── sysdata-1.1.0
         ```
 
 ### RPM versioning
