@@ -328,10 +328,16 @@ The configuration precedence now looks like this:
    Example:
 
     ```console
+    sudo yum install senzingapi-1.11
+
+    # Specific patch level.
     sudo yum install senzingapi-1.11-0
     ```
 
     ```console
+    sudo apt-get install senzingapi-1.11
+
+    # Specific patch level
     sudo apt-get install senzingapi-1.11=0
     ```
 
