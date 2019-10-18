@@ -321,7 +321,7 @@ The configuration precedence now looks like this:
     ```
 
     ```console
-    find / -lname "*data-1.1.0?"
+    find / -lname "*data-1.1?"
     ```
 
 1. If a package is deleted in error, it can be recovered by a yum install.
