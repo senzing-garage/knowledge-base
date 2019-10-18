@@ -233,7 +233,7 @@ The configuration precedence now looks like this:
     /path/to/my-project
     ├── .senzing
     │   └── project-history.json
-    ├── data -> /opt/senzing/data-1.0.0/
+    ├── data -> /opt/senzing/data-1.0/
     ├── etc
     │   ├── cfgVariant.json
     │   ├── customGn.txt
@@ -245,7 +245,7 @@ The configuration precedence now looks like this:
     │   ├── G2Module.ini
     │   ├── G2Project.ini
     │   └── stb.config
-    ├── g2 -> /opt/senzing/g2-1.12.0/
+    ├── g2 -> /opt/senzing/g2-1.12/
     ├── setupEnv
     └── var
         └── sqlite
@@ -271,8 +271,8 @@ The configuration precedence now looks like this:
 
         ```console
         cd /path/to/my-project
-        ln -s /opt/senzing/data-1.0.0 data
-        ln -s /opt/senzing/g2-1.12.0  g2
+        ln -s /opt/senzing/data-1.0 data
+        ln -s /opt/senzing/g2-1.12  g2
         ```
 
     1. `/opt/senzing/g2/resources/templates`
@@ -317,18 +317,34 @@ The configuration precedence now looks like this:
    Example:
 
     ```console
-    find / -lname "*g2-1.12.0?"
+    find / -lname "*g2-1.12?"
     ```
 
     ```console
-    find / -lname "*data-1.1.0?"
+    find / -lname "*data-1.1?"
     ```
 
 1. If a package is deleted in error, it can be recovered by a yum install.
    Example:
 
+   yum
+
     ```console
-    sudo yum install senzingapi-1.11.0
+    # Current patch level.
+    sudo yum install senzingapi-1.11
+
+    # Specific patch level.
+    sudo yum install senzingapi-1.11-2
+    ```
+
+   apt-get
+
+    ```console
+    # Current patch level.
+    sudo apt-get install senzingapi-1.11
+
+    # Specific patch level
+    sudo apt-get install senzingapi-1.11=2
     ```
 
 ## Tool chain considerations
@@ -526,23 +542,12 @@ The configuration precedence now looks like this:
         /
         └── opt
             └── senzing
-                ├── data -> data-1.1.0/
-                ├── data-1.0.0
-                ├── data-1.1.0
-                ├── g2 -> g2-1.12.0/
-                ├── g2-1.11.0
-                └── g2-1.12.0
-        ```
-
-       An alternative for `senzingdata`:
-
-        ```console
-        /
-        └── opt
-            └── senzing
-                ├── sysdata -> data-1.1.0/
-                ├── sysdata-1.0.0
-                └── sysdata-1.1.0
+                ├── data -> data-1.1/
+                ├── data-1.0
+                ├── data-1.1
+                ├── g2 -> g2-1.12/
+                ├── g2-1.11
+                └── g2-1.12
         ```
 
 ### RPM versioning
@@ -558,22 +563,6 @@ The configuration precedence now looks like this:
     senzingapi.x86_64    1.10.0-19224    senzing-production
     senzingapi.x86_64    1.10.0-19229    senzing-production
     senzingapi.x86_64    1.11.0-19246    senzing-production
-    ```
-
-    Alternatively:
-
-    ```console
-    /
-    └── opt
-        └── senzing
-            ├── data -> data-1.1.0/
-            ├── data-1.0.0
-            ├── data-1.1.0
-            ├── g2 -> g2-1.12.0-19287/
-            ├── g2-1.10.0-19224
-            ├── g2-1.10.0-19229
-            ├── g2-1.11.0-19246
-            └── g2-1.12.0-19287
     ```
 
 ### Twelve factor issues
@@ -627,12 +616,12 @@ Given all of the background from above, what needs changing?
     /
     └── opt
         └── senzing
-            ├── data -> data-1.1.0/
-            ├── data-1.0.0
-            ├── data-1.1.0
-            ├── g2 -> g2-1.12.0/
-            ├── g2-1.11.0
-            └── g2-1.12.0
+            ├── data -> data-1.1/
+            ├── data-1.0
+            ├── data-1.1
+            ├── g2 -> g2-1.12/
+            ├── g2-1.11
+            └── g2-1.12
     ```
 
 1. "create project" code creates the following layout example:
@@ -641,7 +630,7 @@ Given all of the background from above, what needs changing?
     /path/to/my-project
     ├── .senzing
     │   └── project-history.json
-    ├── data -> /opt/senzing/data-1.0.0/
+    ├── data -> /opt/senzing/data-1.0/
     ├── etc
     │   ├── cfgVariant.json
     │   ├── customGn.txt
@@ -652,7 +641,7 @@ Given all of the background from above, what needs changing?
     │   ├── G2Module.ini
     │   ├── G2Project.ini
     │   └── stb.config
-    ├── g2 -> /opt/senzing/g2-1.12.0/
+    ├── g2 -> /opt/senzing/g2-1.12/
     ├── setupEnv
     └── var
         └── sqlite
@@ -690,12 +679,12 @@ Given all of the background from above, what needs changing?
     ```console
     $ sudo yum list senzingapi --showduplicates
     Available Packages
-    senzingapi.x86_64    1.10.1          senzing-production
-    senzingapi.x86_64    1.10.2          senzing-production
-    senzingapi.x86_64    1.10.3          senzing-production
-    senzingapi.x86_64    1.10.4          senzing-production
-    senzingapi.x86_64    1.11.0          senzing-production
-    senzingapi.x86_64    1.12.0          senzing-production
+    senzingapi-2.0.x86_64    0          senzing-production
+    senzingapi-2.0.x86_64    1          senzing-production
+    senzingapi-2.0.x86_64    2          senzing-production
+    senzingapi-2.1.x86_64    0          senzing-production
+    senzingapi-2.1.x86_64    1          senzing-production
+    senzingapi-2.1.x86_64    2          senzing-production
     ```
 
 1. Disambiguate the `data` directory.
