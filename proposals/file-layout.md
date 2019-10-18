@@ -332,7 +332,7 @@ The configuration precedence now looks like this:
     sudo yum install senzingapi-1.11
 
     # Specific patch level.
-    sudo yum install senzingapi-1.11-0
+    sudo yum install senzingapi-1.11-2
     ```
 
     ```console
@@ -340,7 +340,7 @@ The configuration precedence now looks like this:
     sudo apt-get install senzingapi-1.11
 
     # Specific patch level
-    sudo apt-get install senzingapi-1.11=0
+    sudo apt-get install senzingapi-1.11=2
     ```
 
 ## Tool chain considerations
