@@ -328,6 +328,7 @@ The configuration precedence now looks like this:
    Example:
 
     ```console
+    # Current patch level.
     sudo yum install senzingapi-1.11
 
     # Specific patch level.
@@ -335,6 +336,7 @@ The configuration precedence now looks like this:
     ```
 
     ```console
+    # Current patch level.
     sudo apt-get install senzingapi-1.11
 
     # Specific patch level
