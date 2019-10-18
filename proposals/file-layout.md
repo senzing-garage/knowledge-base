@@ -624,6 +624,9 @@ Given all of the background from above, what needs changing?
             └── g2-1.12
     ```
 
+    1. A new package, `senzingg2` delivers `/opt/senzing/g2/...` directories.
+       `senzingapi` is re-purposed to install `senzingdata` and `senzingg2` dependencies.
+
 1. "create project" code creates the following layout example:
 
     ```console
@@ -714,6 +717,8 @@ Given all of the background from above, what needs changing?
     1. [Order of Precedence when Configuring ASP.NET Core](https://devblogs.microsoft.com/premier-developer/order-of-precedence-when-configuring-asp-net-core/) - see "Order of Precedence"
     1. [Hashicorp Consul Configuration](https://www.consul.io/docs/agent/options.html)
     1. [Python LayeredConfig](https://layeredconfig.readthedocs.io/en/latest/usage.html#precedence)
+1. RPM versioning
+    1. [spike for packagename-Major.minor-Patch](https://github.com/docktermj/spike-rpm-versioning)
 1. Symbolic links
     1. [Symbolic links in Git](https://www.mokacoding.com/blog/symliks-in-git/)
     1. [Example symbolic link in GitHub](https://github.com/docktermj/spike-symlink-test)
