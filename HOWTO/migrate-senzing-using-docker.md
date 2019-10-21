@@ -5,6 +5,7 @@
 1. [Preparation](#preparation)
     1. [Docker network](#docker-network)
 1. [Migrations](#migrations)
+    1. [Migrate 1.11.0 to 1.12.0](#migrate-1110-to-1120)
 
 ## Preparation
 
