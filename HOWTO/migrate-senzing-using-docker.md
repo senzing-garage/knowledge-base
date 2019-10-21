@@ -39,8 +39,10 @@
 
 ### Migrate 1.11.0 to 1.12.0
 
-1. **Terminal 1:**
-   Create a docker container running on "old" Senzing installation.
+#### Copy 1.11.0 to 1.12.0 configuration
+
+1. Create a docker container running on "old" Senzing installation.
+   Perform the following instructions in a new terminal window.
     1. :pencil2: Identify location of "old" Senzing installation.
        Example:
 
@@ -67,8 +69,8 @@
           senzing/senzing-debug
         ```
 
-1. **Terminal 2:**
-   Create a docker container running on "new" Senzing installation.
+1. Create a docker container running on "new" Senzing installation.
+   Perform the following instructions in a new terminal window.
     1. :pencil2: Identify location of "new" Senzing installation.
        Example:
 
@@ -95,8 +97,8 @@
           senzing/senzing-debug
         ```
 
-1. **Terminal 3:**
-   Copy files from "old" to "new" Senzing installations.
+1. Copy files from "old" to "new" Senzing installations.
+   Perform the following instructions in a new terminal window.
     1. Make a temporary directory to hold files to be copied.
        Example:
 
@@ -113,8 +115,10 @@
         docker cp ${DOCKER_TMP_COPY_DIR}/. senzing-1.12.0:/etc/opt/senzing
         ```
 
-1. **Terminal 4:**
-   Perform G2ConfigTool operations.
+#### Update Senzing configuration to 1.12.0
+
+1. Perform G2ConfigTool operations.
+   Perform the following instructions in a new terminal window.
     1. :pencil2: Identify location of "new" Senzing installation.
        Example:
 
