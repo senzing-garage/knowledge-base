@@ -41,7 +41,7 @@
 
 #### Copy 1.11.0 to 1.12.0 configuration
 
-1. Create a docker container running on "old" Senzing installation.
+1. Create a docker container running an "old" Senzing installation.
    Perform the following instructions in a new terminal window.
     1. :pencil2: Identify location of "old" Senzing installation.
        Example:
@@ -69,7 +69,7 @@
           senzing/senzing-debug
         ```
 
-1. Create a docker container running on "new" Senzing installation.
+1. Create a docker container running a "new" Senzing installation.
    Perform the following instructions in a new terminal window.
     1. :pencil2: Identify location of "new" Senzing installation.
        Example:
