@@ -53,7 +53,7 @@ Instructions for installing the data portion of the
    Example:
 
     ```console
-    sudo yum -y install senzingdata
+    sudo yum -y install senzingdata-v1
     ```
 
 ### Ubuntu
