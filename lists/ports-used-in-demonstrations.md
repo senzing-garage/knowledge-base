@@ -76,3 +76,7 @@ Open range: 9165-9190
 ### 9175
 
 - [Kafka Manager](https://github.com/yahoo/kafka-manager)
+
+### 9176
+
+- [Jenkins Blue Ocean](https://github.com/Senzing/knowledge-base/blob/master/WHATIS/jenkins-blue-ocean.md)
