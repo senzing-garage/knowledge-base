@@ -53,7 +53,9 @@ Instructions for installing the data portion of the
    Example:
 
     ```console
-    sudo yum -y install senzingdata-v1
+    sudo yum -y install \
+      SENZING_ACCEPT_EULA=${SENZING_ACCEPT_EULA} \
+      senzingdata-v1
     ```
 
 ### Ubuntu

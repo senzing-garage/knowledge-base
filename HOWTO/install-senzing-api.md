@@ -47,12 +47,14 @@ Instructions for installing [Senzing API](../WHATIS/senzing-api.md).
         ```
 
 1. Install Senzing API.
-   During this installation, you will be prompted to accept the Senzing End User License Agreement (EULA)
+   During this installation, if `SENZING_ACCEPT_EULA` is not set, you will be prompted to accept the Senzing End User License Agreement (EULA)
    The EULA is located at [https://senzing.com/end-user-license-agreement](https://senzing.com/end-user-license-agreement/).
    Example:
 
     ```console
-    sudo yum -y install senzingapi
+    sudo yum -y install \
+      SENZING_ACCEPT_EULA=${SENZING_ACCEPT_EULA} \
+      senzingapi
     ```
 
 ### Ubuntu
