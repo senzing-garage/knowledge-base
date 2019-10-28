@@ -62,6 +62,13 @@ Instructions for installing the data portion of the
 
 ### Ubuntu
 
+1. Install `curl`
+   Example:
+
+    ```console
+    sudo apt -y install curl
+    ```
+
 1. Install Senzing APT repository metadata.
    Example:
 
