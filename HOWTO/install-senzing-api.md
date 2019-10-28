@@ -61,6 +61,13 @@ Instructions for installing [Senzing API](../WHATIS/senzing-api.md).
 
 ### Ubuntu
 
+1. Install `curl`
+   Example:
+
+    ```console
+    sudo apt -y install curl
+    ```
+
 1. Install Senzing APT repository metadata.
    Example:
 
