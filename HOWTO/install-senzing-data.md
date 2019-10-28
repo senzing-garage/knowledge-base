@@ -66,8 +66,8 @@ Instructions for installing the data portion of the
       --output ~/senzingrepo_1.0.0-1_amd64.deb \
       https://senzing-production-apt.s3.amazonaws.com/senzingrepo_1.0.0-1_amd64.deb
 
-    apt -y install ~/senzingrepo_1.0.0-1_amd64.deb
-    apt update
+    sudo apt -y install ~/senzingrepo_1.0.0-1_amd64.deb
+    sudo apt update
     ```
 
 1. :thinking: **Optional:**
@@ -95,7 +95,7 @@ Instructions for installing the data portion of the
    Example:
 
     ```console
-    apt -y install senzingdata-v1
+    sudo apt -y install senzingdata-v1
     ```
 
 ### macOS
