@@ -57,6 +57,27 @@ Instructions for installing [Senzing API](../WHATIS/senzing-api.md).
 
 ### Ubuntu
 
+1. Install Senzing APT repository metadata.
+   Example:
+
+    ```console
+    curl \
+      --output ~/senzingrepo_1.0.0-1_amd64.deb \
+      https://senzing-production-apt.s3.amazonaws.com/senzingrepo_1.0.0-1_amd64.deb
+
+    apt -y install ~/senzingrepo_1.0.0-1_amd64.deb
+    apt update
+    ```
+
+1. Install Senzing API.
+   During this installation, you will be prompted to accept the Senzing End User License Agreement (EULA)
+   The EULA is located at [https://senzing.com/end-user-license-agreement](https://senzing.com/end-user-license-agreement/).
+   Example:
+
+    ```console
+    apt -y install senzingapi
+    ```
+
 ### macOS
 
 ### Windows
