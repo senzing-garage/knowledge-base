@@ -21,6 +21,13 @@ For detailed installation, see [Docker docs](https://docs.docker.com/install/).
 
 ### CentOS
 
+1. Uninstall old docker.
+   Example:
+
+    ```console
+    sudo yum remove docker docker-common docker-selinux docker-engine
+    ```
+
 1. [CentOS](https://docs.docker.com/install/linux/docker-ce/centos/)
 
     ```console
@@ -91,10 +98,10 @@ For detailed installation, see [Docker docs](https://docs.docker.com/install/).
 
 1. Go to "Applications" and double-click on "Docker"
     1. Check the menu bar for the Docker icon
-    
+
 1. Test
     1. Open Terminal
-    
+
     ```console
     docker --version
     docker-compose --version
