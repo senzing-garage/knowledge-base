@@ -248,13 +248,13 @@
        Example:
 
         ```console
-        export SENZING_DATA_VERSION_DIR=/opt/my-senzing-1.12.0/data/1.0.0
-        export SENZING_ETC_DIR=/opt/my-senzing-1.12.0/etc
-        export SENZING_G2_DIR=/opt/my-senzing-1.12.0/g2
-        export SENZING_VAR_DIR=/opt/my-senzing-1.12.0/var
+        export SENZING_DATA_VERSION_DIR=/opt/my-senzing-1.13.0/data/1.0.0
+        export SENZING_ETC_DIR=/opt/my-senzing-1.13.0/etc
+        export SENZING_G2_DIR=/opt/my-senzing-1.13.0/g2
+        export SENZING_VAR_DIR=/opt/my-senzing-1.13.0/var
         ```
 
-    1. Perform updates in `g2core-config-upgrade-1.11.2-to-1.12.gtc`.
+    1. Perform updates in `g2core-config-upgrade-1.12-to-1.13.gtc`.
        Example:
 
         ```console
