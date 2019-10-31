@@ -1,5 +1,9 @@
 # Create SENZING_DIR
 
+## :no_entry: Deprecated
+
+See [HOWTO: Initialize Senzing with Docker](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/initialize-senzing-with-docker.md)
+
 ## Overview
 
 `SENZING_DIR` is a directory created by decompressing the `Senzing_API.tgz` file.
