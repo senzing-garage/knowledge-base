@@ -89,7 +89,7 @@ Instructions for updating Senzing Docker images on DockerHub. Example:
 1. Select "Plans & Pricing" > "Create New Plan"
 1. In new plan:
     1. General Details
-        1. **Plan Name:** vMajor.Minor.Patch
+        1. **Plan Name:** Major.Minor.Patch
         1. **Description:** Copy from existing plan
         1. **Price/Month:** 0
         1. **Pull Requirements:** Subscribed users only
