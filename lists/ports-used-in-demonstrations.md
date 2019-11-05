@@ -9,6 +9,10 @@ Also avoiding collisions with the list on [Wikipedia](https://en.wikipedia.org/w
 
 Ports used by existing components for network communication.
 
+### 1433
+
+- MSSQL
+
 ### 2181
 
 - Zookeeper
