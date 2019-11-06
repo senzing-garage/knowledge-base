@@ -7,6 +7,8 @@
 1. Synopsis:
     1. The default hostname/ip-address of the database server.
     1. See [Adminer on DockerHub](https://hub.docker.com/_/adminer)
+1. Where used:
+    1. [docker-adminer](https://github.com/Senzing/docker-adminer),
 
 ### DATABASE_DATABASE
 
