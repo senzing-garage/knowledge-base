@@ -1,5 +1,5 @@
 # Demonstrate Senzing REST API server on Windows
-  
+
 ## Overview
 
 The following instructions will demonstrate the
@@ -30,7 +30,7 @@ on a Windows system.
 
         ```console
         git clone git@github.com:Senzing/example-senzing-projects.git
-        ```  
+        ```
 
     1. Method #2 - curl
 
@@ -86,7 +86,7 @@ Loading data will be done via the Senzing App.
     java -jar %SENZING_JAR_FILE% -concurrency 4 -httpPort %SENZING_API_PORT% -bindAddr all -iniFile %SENZING_INI_FILE%
     ```
 
-## Test API server  
+## Test API server
 
 1. Check the service "heartbeat".  Example:
 

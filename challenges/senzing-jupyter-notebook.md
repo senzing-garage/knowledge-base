@@ -40,4 +40,4 @@ These are ideas to spark your imagination. They are not requirements, but may be
     1. [quantopian/qgrid](https://github.com/quantopian/qgrid)
 1. Graphs
     1. [bokeh/bokeh-notebooks](https://github.com/bokeh/bokeh-notebooks)
-    1. [jacobstallone/D3-in-Jupyter-Notebook](https://github.com/jacobstallone/D3-in-Jupyter-Notebook.git)  
+    1. [jacobstallone/D3-in-Jupyter-Notebook](https://github.com/jacobstallone/D3-in-Jupyter-Notebook.git)

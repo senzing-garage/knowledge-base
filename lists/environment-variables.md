@@ -233,6 +233,20 @@
 1. Where used:
     1. [kubernetes-demo](https://github.com/Senzing/kubernetes-demo),
 
+### G2_LICENSE_PATH
+
+1. Synopsis:
+    1. Location of the `g2.lic` file on a local workstation
+1. Examples:
+    1. Using `Downloads` directory.
+
+        ```console
+        export G2_LICENSE_PATH="~/Downloads/g2.lic"
+        ```
+
+1. Where used:
+    1. [docker-g2command](https://github.com/Senzing/docker-compose-demo),
+
 ### GIT_ACCOUNT
 
 1. Where used:

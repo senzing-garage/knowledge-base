@@ -18,7 +18,6 @@
 |------------------------|-----------------------------|----------------------------------|
 | :pencil2:              | `:pencil2:`                 | May require modification         |
 
-
 ## Problem
 
 | Emoji                  | Markdown                    | In English                       |
