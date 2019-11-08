@@ -15,23 +15,40 @@
 
 ## Install
 
+1. [Download](https://www.virtualbox.org/)
+
 ### CentOS
+
+1. [Download VirtualBox for Linux Hosts](https://www.virtualbox.org/wiki/Linux_Downloads)
+1. VirtualBox Guest Additions.
+
+    ```console
+    vagrant plugin install vagrant-vbguest
+    ```
 
 ### Ubuntu
 
-1. virtualbox 6.0 on Ubuntu 18.04
+1. [Download VirtualBox for Linux Hosts](https://www.virtualbox.org/wiki/Linux_Downloads)
+1. Example:  virtualbox 6.0 on Ubuntu 18.04
 
     ```console
     sudo apt-get update
     sudo apt-get upgrade
 
     wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
-    wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -  
+    wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -
 
     sudo add-apt-repository "deb [arch=amd64] http://download.virtualbox.org/virtualbox/debian $(lsb_release -cs) contrib"
 
-    sudo apt-get update  
+    sudo apt-get update
     sudo apt-get install -y virtualbox-6.0
+    ```
+
+1. VirtualBox Guest Additions.
+
+    ```console
+    sudo apt-get install -y virtualbox-guest-additions-iso
+    sudo vagrant plugin install vagrant-vbguest
     ```
 
 ### macOS
@@ -39,6 +56,12 @@
 ### Windows
 
 ## Test
+
+1. Test
+
+    ```console
+    vboxmanage --version
+    ```
 
 ## Troubleshooting
 
