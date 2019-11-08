@@ -1,4 +1,4 @@
-# Install Packer
+# Install packer
 
 ## Overview
 

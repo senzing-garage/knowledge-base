@@ -1,4 +1,4 @@
-# Install Packer
+# Install vagrant
 
 ## Overview
 
