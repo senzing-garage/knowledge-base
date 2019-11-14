@@ -25,11 +25,9 @@ using Docker containers.
 ## Install database drivers
 
 **Note:**
-Docker formations will install database drivers.
-Example:
-
-1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo)
-
+Docker formations
+(e.g. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo))
+will install database drivers.
 If using a docker formation, the "Install database drivers" step may be skipped;
 proceed to [Configure](#configure) step.
 
