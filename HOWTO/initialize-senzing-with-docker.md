@@ -38,8 +38,6 @@ using Docker containers.
 
 ### Db2
 
-1. FIXME:
-
 1. Determine where to store IBM Db2 drivers.
    Examples:
 
