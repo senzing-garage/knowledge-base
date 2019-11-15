@@ -1,5 +1,10 @@
 # Support MS SQL
 
+## Configuration
+
+- **[SENZING_OPT_MICROSOFT_DIR](https://github.com/Senzing/knowledge-base/blob/master/lists/environment-variables.md#senzing_opt_microsoft_dir)**
+- **[SENZING_VOLUME](https://github.com/Senzing/knowledge-base/blob/master/lists/environment-variables.md#senzing_volume)**
+
 ## Specify MS SQL driver location
 
 1. :pencil2: Determine where to store MS SQL drivers.
