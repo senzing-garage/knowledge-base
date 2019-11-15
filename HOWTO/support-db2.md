@@ -5,9 +5,13 @@
 1. :pencil2: Determine where to store IBM Db2 drivers.
    Examples:
 
+    1. **Example #1:**
+
     ```console
     export SENZING_OPT_IBM_DIR=~/opt-ibm
     ```
+
+    1. **Example #2:**
 
     ```console
     export SENZING_VOLUME=/opt/my-senzing
