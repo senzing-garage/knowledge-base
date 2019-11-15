@@ -45,50 +45,11 @@ proceed to [Configure](#configure) step.
 
 ### Db2
 
-1. Determine where to store IBM Db2 drivers.
-   Examples:
-
-    ```console
-    export SENZING_OPT_IBM_DIR=~/opt-ibm
-    ```
-
-    ```console
-    export SENZING_OPT_IBM_DIR=${SENZING_VOLUME}/opt-ibm
-    ```
-
-1. Run container.
-   Example:
-
-    ```console
-    docker run \
-      --rm \
-      --volume ${SENZING_OPT_IBM_DIR}:/opt/IBM \
-      senzing/db2-driver-installer:1.0.0
-    ```
+1. See [How to support Db2](support-db2.md).
 
 ### MS SQL
 
-1. Determine where to store MS SQL drivers.
-   Examples:
-
-    ```console
-    export SENZING_OPT_MICROSOFT_DIR=~/opt-microsoft
-    ```
-
-    ```console
-    export SENZING_OPT_MICROSOFT_DIR=${SENZING_VOLUME}/opt-microsoft
-    ```
-
-1. Run container.
-   Example:
-
-    ```console
-    docker run \
-      --env ACCEPT_EULA=Y \
-      --rm \
-      --volume ${SENZING_OPT_MICROSOFT_DIR}:/opt/microsoft \
-      senzing/apt:1.0.0 -y install msodbcsql17
-    ```
+1. See [How to support MS SQL](support-mssql.md).
 
 ## Configure
 
