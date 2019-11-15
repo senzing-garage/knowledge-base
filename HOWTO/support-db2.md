@@ -7,16 +7,16 @@
 
     1. **Example #1:**
 
-    ```console
-    export SENZING_OPT_IBM_DIR=~/opt-ibm
-    ```
+        ```console
+        export SENZING_OPT_IBM_DIR=~/opt-ibm
+        ```
 
     1. **Example #2:**
 
-    ```console
-    export SENZING_VOLUME=/opt/my-senzing
-    export SENZING_OPT_IBM_DIR=${SENZING_VOLUME}/opt-ibm
-    ```
+        ```console
+        export SENZING_VOLUME=/opt/my-senzing
+        export SENZING_OPT_IBM_DIR=${SENZING_VOLUME}/opt-ibm
+        ```
 
 ## Install Db2 drivers
 
