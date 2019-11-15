@@ -10,6 +10,7 @@
     ```
 
     ```console
+    export SENZING_VOLUME=/opt/my-senzing
     export SENZING_OPT_MICROSOFT_DIR=${SENZING_VOLUME}/opt-microsoft
     ```
 
