@@ -49,11 +49,11 @@ proceed to [Configure](#configure) step.
    Examples:
 
     ```console
-    export SENZING_IBM_DIR=~/opt-ibm
+    export SENZING_OPT_IBM_DIR=~/opt-ibm
     ```
 
     ```console
-    export SENZING_IBM_DIR=${SENZING_VOLUME}/opt-ibm
+    export SENZING_OPT_IBM_DIR=${SENZING_VOLUME}/opt-ibm
     ```
 
 1. Run container.
@@ -62,7 +62,7 @@ proceed to [Configure](#configure) step.
     ```console
     docker run \
       --rm \
-      --volume ${SENZING_IBM_DIR}:/opt/IBM \
+      --volume ${SENZING_OPT_IBM_DIR}:/opt/IBM \
       senzing/db2-driver-installer:1.0.0
     ```
 

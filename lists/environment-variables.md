@@ -658,12 +658,12 @@
 1. Where used:
     1. [resolver](https://github.com/Senzing/resolver),
 
-### SENZING_IBM_DIR
+### SENZING_OPT_IBM_DIR
 
 1. Synopsis:
     1. Path on the local system where the `/opt/IBM` code resides.
        For instance, the Db2 client driver configuration would be located at
-       `${SENZING_IBM_DIR}/db2/clidriver/cfg/db2dsdriver.cfg`
+       `${SENZING_OPT_IBM_DIR}/db2/clidriver/cfg/db2dsdriver.cfg`
 1. Values:
     1. Default: none
     1. Usually set to `/opt/IBM`
