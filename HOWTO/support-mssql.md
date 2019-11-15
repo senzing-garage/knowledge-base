@@ -44,3 +44,7 @@
     ```console
     export SENZING_OPT_MICROSOFT_DIR_PARAMETER="--volume ${SENZING_OPT_MICROSOFT_DIR}:/opt/microsoft"
     ```
+
+## References
+
+1. GitHub project for [senzing/apt](https://github.com/Senzing/docker-apt)

@@ -43,3 +43,7 @@
     ```console
     export SENZING_OPT_IBM_DIR_PARAMETER="--volume ${SENZING_OPT_IBM_DIR}:/opt/ibm"
     ```
+
+## References
+
+1. GitHub project for [senzing/db2-driver-installer](https://github.com/Senzing/docker-db2-driver-installer)
