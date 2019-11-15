@@ -5,14 +5,18 @@
 1. :pencil2: Determine where to store MS SQL drivers.
    Examples:
 
-    ```console
-    export SENZING_OPT_MICROSOFT_DIR=~/opt-microsoft
-    ```
+    1. **Example #1:**
 
-    ```console
-    export SENZING_VOLUME=/opt/my-senzing
-    export SENZING_OPT_MICROSOFT_DIR=${SENZING_VOLUME}/opt-microsoft
-    ```
+        ```console
+        export SENZING_OPT_MICROSOFT_DIR=~/opt-microsoft
+        ```
+
+    1. **Example #2:**
+
+        ```console
+        export SENZING_VOLUME=/opt/my-senzing
+        export SENZING_OPT_MICROSOFT_DIR=${SENZING_VOLUME}/opt-microsoft
+        ```
 
 ## Install MS SQL drivers
 
