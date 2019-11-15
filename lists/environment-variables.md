@@ -658,18 +658,6 @@
 1. Where used:
     1. [resolver](https://github.com/Senzing/resolver),
 
-### SENZING_OPT_IBM_DIR
-
-1. Synopsis:
-    1. Path on the local system where the `/opt/IBM` code resides.
-       For instance, the Db2 client driver configuration would be located at
-       `${SENZING_OPT_IBM_DIR}/db2/clidriver/cfg/db2dsdriver.cfg`
-1. Values:
-    1. Default: none
-    1. Usually set to `/opt/IBM`
-1. Where used:
-    1. [docker-db2-driver-installer](https://github.com/Senzing/docker-db2-driver-installer),
-
 ### SENZING_INIT_CONTAINER_SLEEP
 
 1. Synopsis:
@@ -770,6 +758,26 @@
     1. [docker-g2command](https://github.com/Senzing/docker-g2command),
        [docker-senzing-base](https://github.com/Senzing/docker-senzing-base),
        [resolver](https://github.com/Senzing/resolver),
+
+### SENZING_OPT_IBM_DIR
+
+1. Synopsis:
+    1. Path on the local system where the `/opt/IBM` code resides.
+       For instance, the Db2 client driver configuration would be located at
+       `${SENZING_OPT_IBM_DIR}/db2/clidriver/cfg/db2dsdriver.cfg`
+1. Values:
+    1. Default: none
+    1. Usually set to `/opt/IBM`
+1. Where used:
+    1. [docker-db2-driver-installer](https://github.com/Senzing/docker-db2-driver-installer),
+
+### SENZING_OPT_MICROSOFT_DIR
+
+1. Synopsis:
+    1. Path on the local system where the `/opt/microsoft` code resides.
+1. Values:
+    1. Default: none
+    1. Usually set to `/opt/microsoft`
 
 ### SENZING_OUTPUT_FILE
 
