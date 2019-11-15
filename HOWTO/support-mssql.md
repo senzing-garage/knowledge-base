@@ -2,7 +2,7 @@
 
 ## Specify MS SQL driver location
 
-1. Determine where to store MS SQL drivers.
+1. :pencil2: Determine where to store MS SQL drivers.
    Examples:
 
     ```console

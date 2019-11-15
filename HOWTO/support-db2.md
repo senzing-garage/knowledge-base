@@ -2,7 +2,7 @@
 
 ## Specify Db2 driver location
 
-1. Determine where to store IBM Db2 drivers.
+1. :pencil2: Determine where to store IBM Db2 drivers.
    Examples:
 
     ```console
