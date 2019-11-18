@@ -1,7 +1,5 @@
 # make-targets
 
-
-
 ## Targets
 
 ### clean
