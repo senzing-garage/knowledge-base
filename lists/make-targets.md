@@ -1,5 +1,7 @@
 # make-targets
 
+
+
 ## Targets
 
 ### clean
@@ -41,3 +43,7 @@
 1. Synopsis:
     1. Prints "help"
     1. Lists makefile targets.
+
+## References
+
+1. [Introduction to the (maven) Build Lifecycle](https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html)
