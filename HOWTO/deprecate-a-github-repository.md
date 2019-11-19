@@ -38,7 +38,7 @@
    Example:
 
     ```console
-    deprecated obsolete archived
+    obsolete deprecated archived
     ```
 
 ### Branches
