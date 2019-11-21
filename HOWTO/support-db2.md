@@ -41,7 +41,7 @@
    Example:
 
     ```console
-    export SENZING_OPT_IBM_DIR_PARAMETER="--volume ${SENZING_OPT_IBM_DIR}:/opt/ibm"
+    export SENZING_OPT_IBM_DIR_PARAMETER="--volume ${SENZING_OPT_IBM_DIR}:/opt/IBM"
     ```
 
 ## References
