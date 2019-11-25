@@ -279,6 +279,54 @@
        [docker-yum](https://github.com/Senzing/docker-yum),
        [docker-yumdownloader](https://github.com/Senzing/docker-yumdownloader),
 
+### GITHUB_ACTION
+
+1. See [GitHub Actions environment variables](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/using-environment-variables#default-environment-variables).
+
+### GITHUB_ACTIONS
+
+1. See [GitHub Actions environment variables](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/using-environment-variables#default-environment-variables).
+
+### GITHUB_ACTOR
+
+1. See [GitHub Actions environment variables](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/using-environment-variables#default-environment-variables).
+
+### GITHUB_BASE_REF
+
+1. See [GitHub Actions environment variables](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/using-environment-variables#default-environment-variables).
+
+### GITHUB_EVENT_NAME
+
+1. See [GitHub Actions environment variables](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/using-environment-variables#default-environment-variables).
+
+### GITHUB_EVENT_PATH
+
+1. See [GitHub Actions environment variables](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/using-environment-variables#default-environment-variables).
+
+### GITHUB_HEAD_REF
+
+1. See [GitHub Actions environment variables](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/using-environment-variables#default-environment-variables).
+
+### GITHUB_REF
+
+1. See [GitHub Actions environment variables](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/using-environment-variables#default-environment-variables).
+
+### GITHUB_REPOSITORY
+
+1. See [GitHub Actions environment variables](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/using-environment-variables#default-environment-variables).
+
+### GITHUB_SHA
+
+1. See [GitHub Actions environment variables](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/using-environment-variables#default-environment-variables).
+
+### GITHUB_WORKFLOW
+
+1. See [GitHub Actions environment variables](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/using-environment-variables#default-environment-variables).
+
+### GITHUB_WORKSPACE
+
+1. See [GitHub Actions environment variables](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/using-environment-variables#default-environment-variables).
+
 ### HELM_TLS
 
 1. Synopsis:
@@ -607,6 +655,11 @@
 
 1. Where used:
     1. [docker-yumdownloader](https://github.com/Senzing/docker-yumdownloader),
+
+### SENZING_ENGINE_CONFIGURATION_JSON
+
+1. Synopsis:
+    1. A JSON string that is a parameter to the Senzing Engine's `*.initV2()` function.
 
 ### SENZING_ENTITY_TYPE
 
@@ -963,3 +1016,7 @@
 1. Values:
     1. Usual value: `G2C.db`
     1. Default: none
+
+## References
+
+1. [GitHub environment variables](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/using-environment-variables#default-environment-variables)
