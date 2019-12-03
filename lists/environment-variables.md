@@ -533,6 +533,7 @@
 
 1. Synopsis:
     1. Default "DATA_SOURCE" value for incoming records.
+       If a JSON line does not have the `DATA_SOURCE` key/value, this value is inserted.
 1. Values:
     1. Default: none
 1. Forms:
@@ -665,6 +666,7 @@
 
 1. Synopsis:
     1. Default "ENTITY_TYPE" value for incoming records.
+       If a JSON line does not have the `ENTITY_TYPE` key/value, this value is inserted.
 1. Values:
     1. Default: none
 1. Forms:
@@ -895,6 +897,55 @@
     1. Default: "user"
 1. Where used:
     1. [stream-loader](https://github.com/Senzing/stream-loader),
+
+### SENZING_RANDOM_SEED
+
+1. Synopsis:
+    1. Identify seed for random number generator.
+       Value of 0 uses system clock.
+       Values greater than 0 give repeatable results.
+1. Values:
+    1. Default: "0"
+1. Where used:
+    1. [mock-data-generator](https://github.com/Senzing/mock-data-generator),
+
+### SENZING_RECORD_MAX
+
+1. Synopsis:
+    1. Identify highest record number to generate.
+1. Values:
+    1. Value of 0 means no maximum.
+    1. Default: "0"
+1. Where used:
+    1. [mock-data-generator](https://github.com/Senzing/mock-data-generator),
+
+### SENZING_RECORD_MIN
+
+1. Synopsis:
+    1. Identify lowest record number to generate.
+1. Values:
+    1. Default: "1"
+1. Where used:
+    1. [mock-data-generator](https://github.com/Senzing/mock-data-generator),
+
+### SENZING_RECORD_MONITOR
+
+1. Synopsis:
+    1. Write a log record every N mock records.
+1. Values:
+    1. Default: "10000"
+1. Where used:
+    1. [mock-data-generator](https://github.com/Senzing/mock-data-generator),
+
+### SENZING_RECORDS_PER_SECOND
+
+1. Synopsis:
+    1. Throttle output to a specified records per second.
+1. Values:
+    1. Value of 0 means no throttling.
+    1. Default: "0"
+1. Where used:
+    1. [mock-data-generator](https://github.com/Senzing/mock-data-generator),
 
 ### SENZING_RPM_FILENAME
 
