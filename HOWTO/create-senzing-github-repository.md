@@ -65,7 +65,7 @@ This is a checklist of what to set when creating a new GitHub Repository.
         ```
 
     1. Populate the new repository with the "Community Artifacts" found in
-       [github.com/Senzing/repository-template](https://github.com/Senzing/repository-template).
+       [github.com/Senzing/template-repository](https://github.com/Senzing/template-repository).
     1. Modify `CONTRIBUTING.md`
         1. `export GIT_REPOSITORY=<new-repository-name>`
     1. Commit the branch.
