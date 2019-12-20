@@ -57,6 +57,10 @@ Open range: 8250-8265
 
 - [Senzing Resolver](https://github.com/Senzing/resolver)
 
+### 8265
+
+- [Senzing Entity Search Web App](https://github.com/Senzing/entity-search-web-app)
+
 ## Other
 
 Open range: 9165-9190
