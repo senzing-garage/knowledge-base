@@ -35,6 +35,7 @@
       "bitnami/postgresql:11.5.0-debian-9-r34" \
       "bitnami/rabbitmq:3.7.18-debian-9-r1" \
       "bitnami/rabbitmq:3.8.2-debian-9-r0" \
+      "bitnami/rabbitmq:3.8.2-debian-9-r31" \
       "coleifer/sqlite-web:latest" \
       "confluentinc/cp-kafka:4.0.1-1" \
       "dockage/phppgadmin:latest" \
