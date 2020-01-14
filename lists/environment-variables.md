@@ -839,6 +839,22 @@
 1. Where used:
     1. [resolver](https://github.com/Senzing/resolver),
 
+### SENZING_PLUGINS_DIR
+
+1. Synopsis:
+    1. Path on the local system where plugin files are located.
+1. Values:
+    1. Default: none
+1. Examples:
+    1. Using an IP address:
+
+        ```console
+        export SENZING_PLUGINS_DIR=${GIT_REPOSITORY_DIR}/resources/plugins
+        ```
+
+1. Where used:
+    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo),
+
 ### SENZING_PORT
 
 1. Where used:
