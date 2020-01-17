@@ -20,6 +20,15 @@
        portainer/portainer
     ```
 
+1. Windows.
+   Example:
+
+    ```console
+    docker run --name portainer --publish 9170:9000 --volume //var/run/docker.sock:/var/run/docker.sock --volume C:\tmp\portainer-data:/data  portainer/portainer
+    ```
+
+   Reference: [StackOverflow](https://stackoverflow.com/questions/36765138/bind-to-docker-socket-on-windows)
+
 1. Can be viewed at [localhost:9170](http://localhost:9170), since 9170 was the published port.
 
 ## Sites
