@@ -32,7 +32,7 @@
       "arey/mysql-client:latest" \
       "bitnami/kafka:2.3.0-debian-9-r4" \
       "bitnami/phpmyadmin:4.8.5" \
-      "bitnami/postgresql:11.5.0-debian-9-r34" \
+      "bitnami/postgresql:11.6.0" \
       "bitnami/rabbitmq:3.7.18-debian-9-r1" \
       "bitnami/rabbitmq:3.8.2-debian-9-r0" \
       "bitnami/rabbitmq:3.8.2-debian-9-r31" \
