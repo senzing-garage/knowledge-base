@@ -53,6 +53,7 @@
       "senzing/mock-data-generator:latest" \
       "senzing/mysql:latest" \
       "senzing/python-demo:latest" \
+      "senzing/redoer:latest" \
       "senzing/senzing-api-server:latest" \
       "senzing/senzing-base:latest" \
       "senzing/senzing-debug:latest" \
