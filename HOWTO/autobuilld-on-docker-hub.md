@@ -15,6 +15,13 @@
         1. :radio_button: Internal and External Pull Requests
     1. Repository links:
         1. :radio_button: Enable for Base image
+    1. Build rules:
+
+        | Source Type | Source      | Docker Tag  | Dockerfile location | Build Context | Autobuild | Build Caching |
+        |-------------|-------------|-------------|---------------------|---------------|-----------|---------------|
+        | Branch      | master      | latest      | Dockerfile          | /             | On        | On            |
+        | Tag         | /^[0-9.]+$/ | {sourceref} | Dockerfile          | /             | On        | On            |
+
     1. Click "Save and Build".
 
 ## References
