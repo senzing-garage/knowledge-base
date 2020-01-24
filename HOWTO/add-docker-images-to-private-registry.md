@@ -38,6 +38,7 @@
       "confluentinc/cp-kafka:4.0.1-1" \
       "dockage/phppgadmin:latest" \
       "jbergknoff/postgresql-client:latest" \
+      "mysql:5.7.28" \
       "senzing/configurator:latest" \
       "senzing/db2:latest" \
       "senzing/db2-driver-installer:latest" \
