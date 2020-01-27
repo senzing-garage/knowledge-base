@@ -14,7 +14,7 @@
     1. Autotest:
         1. :radio_button: Internal and External Pull Requests
     1. Repository links:
-        1. :radio_button: Enable for Base image
+        1. :radio_button: Off
     1. Build rules:
 
         | Source Type | Source      | Docker Tag  | Dockerfile location | Build Context | Autobuild | Build Caching |
