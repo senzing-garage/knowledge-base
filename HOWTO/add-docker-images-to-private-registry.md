@@ -34,11 +34,17 @@
       "bitnami/phpmyadmin:4.8.5" \
       "bitnami/postgresql:11.6.0" \
       "bitnami/rabbitmq:3.8.2" \
+      "bitnami/zookeeper:3.5.6" \
       "coleifer/sqlite-web:latest" \
       "confluentinc/cp-kafka:4.0.1-1" \
       "dockage/phppgadmin:latest" \
+      "ibmcom/db2:11.5.0.0a" \
       "jbergknoff/postgresql-client:latest" \
-      "mysql:5.7.28" \
+      "kafkamanager/kafka-manager:2.0.0.2" \
+      "mysql:5.7" \
+      "phpmyadmin/phpmyadmin:4.9" \
+      "postgres:11.6" \
+      "senzing/apt:latest" \
       "senzing/configurator:latest" \
       "senzing/db2:latest" \
       "senzing/db2-driver-installer:latest" \
@@ -51,6 +57,8 @@
       "senzing/jupyter:latest" \
       "senzing/mock-data-generator:latest" \
       "senzing/mysql:latest" \
+      "senzing/mysql-init:latest" \
+      "senzing/phppgadmin:latest" \
       "senzing/python-demo:latest" \
       "senzing/redoer:latest" \
       "senzing/senzing-api-server:latest" \
