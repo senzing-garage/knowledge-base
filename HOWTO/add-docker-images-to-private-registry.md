@@ -16,8 +16,6 @@
    Example:
 
     ```console
-    sudo docker build --tag senzing/db2          https://github.com/senzing/docker-db2.git
-    sudo docker build --tag senzing/db2express-c https://github.com/senzing/docker-db2express-c.git
     sudo docker build --tag senzing/mysql        https://github.com/senzing/docker-mysql.git
     sudo docker build --tag senzing/mysql-init   https://github.com/senzing/docker-mysql-init.git
     ```
@@ -46,7 +44,6 @@
       "postgres:11.6" \
       "senzing/apt:latest" \
       "senzing/configurator:latest" \
-      "senzing/db2:latest" \
       "senzing/db2-driver-installer:latest" \
       "senzing/entity-search-web-app:latest" \
       "senzing/g2command:latest" \
