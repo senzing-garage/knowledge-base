@@ -348,6 +348,16 @@
 1. Where used:
     1. [kubernetes-demo](https://github.com/Senzing/kubernetes-demo),
 
+### JUPYTER_NOTEBOOKS_PORT
+
+1. Synopsis:
+    1. Port on localhost for [senzing/jupyter](https://github.com/Senzing/docker-jupyter).
+    1. See [Port 9178](https://github.com/Senzing/knowledge-base/blob/master/lists/ports-used-in-demonstrations.md#9178)
+1. Values:
+    1. Default: 9178
+1. Where used:
+    1. [docker-juptyer](https://github.com/Senzing/docker-jupyter),
+
 ### JUPYTER_NOTEBOOKS_SHARED_DIR
 
 1. Synopsis:

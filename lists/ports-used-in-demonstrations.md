@@ -96,3 +96,7 @@ Open range: 9165-9190
 ### 9177
 
 - [Adminer](https://github.com/Senzing/docker-adminer)
+
+### 9178
+
+- [Jupyter](https://github.com/Senzing/docker-jupyter)
