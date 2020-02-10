@@ -906,6 +906,12 @@
 1. Where used:
     1. [stream-loader](https://github.com/Senzing/stream-loader),
 
+### SENZING_RABBITMQ_PREFETCH_COUNT
+
+1. Synopsis:
+1. Values:
+1. Where used:
+
 ### SENZING_RABBITMQ_QUEUE
 
 1. Synopsis:
