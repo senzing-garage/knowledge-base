@@ -888,6 +888,24 @@
 1. Where used:
     1. [stream-loader](https://github.com/Senzing/stream-loader),
 
+### SENZING_RABBITMQ_PUBLISH_BATCH_SIZE
+
+1. Synopsis:
+    1. The number of records to publish to RabbitMQ in a batch
+1. Values:
+    1. Default: "1000"
+1. Where used:
+    1. [mock-data-generator](https://github.com/Senzing/mock-data-generator),
+
+### SENZING_RABBITMQ_EXCHANGE
+
+1. Synopsis:
+    1. Name of the RabbitMQ exchange used for communication.
+1. Values:
+    1. Default: "senzing-exchange"
+1. Where used:
+    1. [mock-data-generator](https://github.com/Senzing/mock-data-generator),
+
 ### SENZING_RABBITMQ_HOST
 
 1. Synopsis:
@@ -909,8 +927,20 @@
 ### SENZING_RABBITMQ_PREFETCH_COUNT
 
 1. Synopsis:
+    1. The number of records to get from the RabbitMQ queue in one request. Reduces the number of overall requests to the RabbitMQ server and improves performance.
 1. Values:
+    1. Default: 50
 1. Where used:
+    1. [stream-loader](https://github.com/Senzing/stream-loader),
+
+### SENZING_RABBITMQ_PUBLISH_INTERVAL
+
+1. Synopsis:
+    1. How often (in seconds) to publish a batch of records to the RabbitMQ Queue
+1. Values:
+    1. Default: "0.0"
+1. Where used:
+    1. [mock-data-generator](https://github.com/Senzing/mock-data-generator),
 
 ### SENZING_RABBITMQ_QUEUE
 
