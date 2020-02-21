@@ -23,4 +23,4 @@ file sharing must be enabled to allow docker containers to access files on the h
 ### Docker Desktop for Windows
 
 1. See "File Sharing" section of
-   [Docker Settings dialog](https://docs.docker.com/docker-for-windows/#docker-settings-dialog))
+   [Docker Settings dialog](https://docs.docker.com/docker-for-windows/#docker-settings-dialog)
