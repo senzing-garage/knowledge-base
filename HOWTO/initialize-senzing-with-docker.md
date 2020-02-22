@@ -22,6 +22,14 @@ using Docker containers.
 1. Install Senzing files using docker container.
     1. See [senzing/yum](https://github.com/Senzing/docker-yum) documentation.
 
+1. :thinking:
+   If internal database is used (e.g. SQLite), the `${SENZING_VAR_DIR}` directory permissions may need to be changed.
+   Example:
+
+    ```console
+    sudo chown $(id -u):$(id -g) -R ${SENZING_VAR_DIR}
+    ```
+
 ## Install database drivers
 
 **Note:**
