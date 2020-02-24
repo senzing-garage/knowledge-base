@@ -36,6 +36,19 @@
 1. Synopsis:
     1. Does a `docker rmi --force ...` for all images build by [docker-build-development-cache](#docker-build-development-cache).
 
+### copy-docker-files
+
+1. Synopsis:
+    1. This is necessary when the Dockerfile is in a subdirectory.
+    1. Copies the necessary files into the directory where the Dockerfile is saved.
+    1. These files need to be seen as the same context as the Dockerfile, otherwise docker will not be able to see them when building.
+
+### delete-docker-files
+
+1. Synopsis:
+    1. This is necessary when the Dockerfile is in a subdirectory.
+    1. Clean up the files that were copied after the docker build process completes.
+
 ### help
 
 1. Synopsis:
