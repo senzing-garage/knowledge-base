@@ -6,6 +6,13 @@
 
 1. Synopsis:
     1. Delete all files created by any of the Makefile targets.
+    
+### copy-docker-files
+
+1. Synopsis:
+    1. This is necessary when the Dockerfile is in a subdirectory.
+    1. Copies the necessary files into the directory where the Dockerfile is saved.
+    1. These files need to be seen as the same context as the Dockerfile, otherwise docker will not be able to see them when building.
 
 ### default
 
@@ -13,6 +20,13 @@
     1. The first target in a `Makefile`.
     1. Used to direct which action is taken by default.
     1. Suggestion: Default action is to print [Help](#help)
+
+
+### delete-docker-files
+
+1. Synopsis:
+    1. This is necessary when the Dockerfile is in a subdirectory.
+    1. Clean up the files that were copied after the docker build process completes.
 
 ### docker-build
 
