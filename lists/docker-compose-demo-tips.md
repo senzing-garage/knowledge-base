@@ -13,6 +13,7 @@ The following is a list of tips when using
     1. [Send messages to Kafka topic](#send-messages-to-kafka-topic)
     1. [Read messages from Kafka topic](#read-messages-from-kafka-topic)
     1. [Kafka references](#kafka-references)
+1. [RabbitMQ](#rabbitmq)
 1. [PostgreSQL](#postgresql)
     1. [View PostgreSQL](#view-postgresql)
     1. [View records in PostgreSQL](#view-records-in-postgresql)
@@ -111,6 +112,8 @@ The following is a list of tips when using
 ### Kafka references
 
 1. [Quickstart](https://kafka.apache.org/quickstart)
+
+## RabbitMQ
 
 ## PostgreSQL
 
