@@ -9,7 +9,7 @@ The following is a list of tips when using
     1. [Request Senzing license](#request-senzing-license)
     1. [Install Senzing license](#install-senzing-license)
 1. [Kafka](#kafka)
-    1. [View Kafka-manager](#view-kafka-manager)
+    1. [View Kafdrop](#view-kafdrop)
     1. [Send messages to Kafka topic](#send-messages-to-kafka-topic)
     1. [Read messages from Kafka topic](#read-messages-from-kafka-topic)
     1. [Kafka references](#kafka-references)
@@ -46,10 +46,14 @@ The following is a list of tips when using
 
 ## Kafka
 
-### View Kafka-manager
+### View Kafdrop
 
-1. Kafka-manager is viewable at
-   [localhost:9175](http://localhost:9175).
+1. Kafdrop is viewable at
+   [localhost:9179](http://localhost:9179).
+
+1. References:
+    1. [Kafdrop - An Open-Source Kafka Web UI](https://dev.to/ekoutanov/kafdrop-an-open-source-kafka-web-ui-mbn)
+    1. [GitHub](https://github.com/obsidiandynamics/kafdrop)
 
 ### Send messages to Kafka topic
 
