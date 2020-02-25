@@ -6,13 +6,13 @@ The following is a list of tips when using
 ## Contents
 
 1. [Kafka](#kafka)
-    1. [Send to Kafka topic](#send-to-kafka-topic)
-    1. [Read Kafka topic](#read-kafka-topic)
+    1. [Send messages to Kafka topic](#send-messages-to-kafka-topic)
+    1. [Read messages from Kafka topic](#read-messages-from-kafka-topic)
     1. [Kafka references](#kafka-references)
 
 ## Kafka
 
-### Send to Kafka topic
+### Send messages to Kafka topic
 
 1. Enter "senzing-kafka" container.
    Example:
@@ -33,7 +33,7 @@ The following is a list of tips when using
 1. Enter lines of JSON.
    Each line is a Kafka message.
 
-### Read Kafka topic
+### Read messages from Kafka topic
 
 1. Enter "senzing-kafka" container.
    Example:
