@@ -5,7 +5,7 @@ The following is a list of tips when using
 
 ## Contents
 
-1. [Kafka(#kafka)
+1. [Kafka](#kafka)
     1. [Send to Kafka topic](#send-to-kafka-topic)
     1. [Read Kafka topic](#read-kafka-topic)
     1. [Kafka references](#kafka-references)
