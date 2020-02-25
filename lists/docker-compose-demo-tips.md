@@ -21,7 +21,7 @@ The following is a list of tips when using
     sudo docker exec -it senzing-kafka /bin/bash
     ```
 
-1. Inside "senzing-kafka" container, run "kafka-local-producer.sh".
+1. Inside "senzing-kafka" container, run `kafka-local-producer.sh`.
    Example:
 
     ```console
@@ -42,7 +42,7 @@ The following is a list of tips when using
     sudo docker exec -it senzing-kafka /bin/bash
     ```
 
-1. Inside "senzing-kafka" container, run "kafka-local-consumer.sh".
+1. Inside "senzing-kafka" container, run `kafka-local-consumer.sh`.
    Example:
 
     ```console
