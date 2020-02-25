@@ -13,6 +13,19 @@ The following is a list of tips when using
     1. [Send messages to Kafka topic](#send-messages-to-kafka-topic)
     1. [Read messages from Kafka topic](#read-messages-from-kafka-topic)
     1. [Kafka references](#kafka-references)
+1. [PostgreSQL](#postgresql)
+    1. [View PostgreSQL](#view-postgresql)
+    1. [View records in PostgreSQL](#view-records-in-postgresql)
+1. [MySQL](#mysql)
+    1. [View MySQL](#view-mysql)
+    1. [View records in PostgreSQL](#view-records-in-mysql)
+1. [MS SQL](#ms-sql)
+    1. [View MS SQL](#view-ms-sql)
+    1. [View records in MS SQL](#view-records-in-ms-sql)
+1. [SQLite](#sqlite)
+    1. [View SQLite](#view-sqlite)
+    1. [View records in SQLite](#view-records-in-sqlite)
+1. [Db2](#db2)
 1. [Senzing API server](#senzing-api-server)
     1. [Senzing API server via web browser](#senzing-api-server-via-web-browser)
     1. [Senzing API server via curl](#senzing-api-server-via-curl)
@@ -98,6 +111,69 @@ The following is a list of tips when using
 ### Kafka references
 
 1. [Quickstart](https://kafka.apache.org/quickstart)
+
+## PostgreSQL
+
+### View PostgreSQL
+
+1. PostgreSQL is viewable at
+   [localhost:9171](http://localhost:9171).
+    1. **Defaults:** username: `postgres` password: `postgres`
+
+### View records in PostgreSQL
+
+1. On left-hand navigation, select "G2" database to explore.
+1. The records received from the queue can be viewed in the following Senzing tables:
+    1. G2 > DSRC_RECORD
+    1. G2 > OBS_ENT
+
+## MySQL
+
+### View MySQL
+
+1. MySQL is viewable at
+   [localhost:9173](http://localhost:9173).
+    1. **Defaults:** username: `g2` password: `g2`
+
+### View records in MySQL
+
+1. On left-hand navigation, select "G2" database to explore.
+1. The records received from the queue can be viewed in the following Senzing tables:
+    1. G2 > DSRC_RECORD
+    1. G2 > OBS_ENT
+
+## MS SQL
+
+### View MS SQL
+
+1. MSSQL is viewable at
+   [localhost:9177](http://localhost:9177).
+    1. **System:** MS SQL (beta)
+    1. **Server:** senzing-mysql
+    1. **Username:** sa
+    1. **Password:** Passw0rd
+    1. **Database:** G2
+
+### View records in MS SQL
+
+1. The records received from the queue can be viewed in the following Senzing tables:
+    1. `DSRC_RECORD`
+    1. `OBS_ENT`
+
+## SQLite
+
+### View SQLite
+
+1. SQLite is viewable at
+   [localhost:9174](http://localhost:9174).
+
+### View records in SQLite
+
+1. The records received from the queue can be viewed in the following Senzing tables:
+    1. G2 > DSRC_RECORD
+    1. G2 > OBS_ENT
+
+## Db2
 
 ## Senzing API server
 
