@@ -100,3 +100,7 @@ Open range: 9165-9190
 ### 9178
 
 - [Jupyter](https://github.com/Senzing/docker-jupyter)
+
+### 9179
+
+- [Kafdrop](https://github.com/obsidiandynamics/kafdrop)
