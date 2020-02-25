@@ -5,6 +5,9 @@ The following is a list of tips when using
 
 ## Contents
 
+1. [Senzing license](#senzing-license)
+    1. [Request Senzing license](#request-senzing-license)
+    1. [Install Senzing license](#install-senzing-license)
 1. [Kafka](#kafka)
     1. [View Kafka-manager](#view-kafka-manager)
     1. [Send messages to Kafka topic](#send-messages-to-kafka-topic)
@@ -17,6 +20,29 @@ The following is a list of tips when using
 1. [Senzing Entity Search WebApp](#senzing-entity-search-webapp)
     1. [View Senzing Entity Search WebApp](#view-senzing-entity-search-webapp)
     1. [Senzing Entity Search WebApp demo](#senzing-entity-search-webapp-demo)
+
+## Senzing license
+
+### Request Senzing license
+
+1. If working with more than 10,000 records,
+   [obtain a Senzing license](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/obtain-senzing-license.md).
+
+### Install Senzing license
+
+1. :pencil2: Identify location of `g2.lic` on local workstation.
+   Example:
+
+    ```console
+    export G2_LICENSE_PATH=/path/to/local/g2.lic
+    ```
+
+1. Copy license to volume.
+   Example:
+
+    ```console
+    sudo cp ${G2_LICENSE_PATH} ${SENZING_ETC_DIR}/g2.lic
+    ```
 
 ## Kafka
 
