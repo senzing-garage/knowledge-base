@@ -34,6 +34,7 @@ The following is a list of tips when using
 1. [Senzing Entity Search WebApp](#senzing-entity-search-webapp)
     1. [View Senzing Entity Search WebApp](#view-senzing-entity-search-webapp)
     1. [Senzing Entity Search WebApp demo](#senzing-entity-search-webapp-demo)
+1. [Jupyter Notebooks](#jupyter-notebooks)
 
 ## Senzing license
 
@@ -221,3 +222,6 @@ The Senzing REST API server supports the
 
 1. The [demonstration](https://github.com/Senzing/knowledge-base/blob/master/demonstrations/docker-compose-web-app.md)
    instructions will give a tour of the Senzing web app.
+
+## Jupyter Notebooks
+
