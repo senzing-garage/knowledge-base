@@ -25,8 +25,9 @@ from the downloaded RPMs.
 
 1. Run the docker container.
    This will download the RPM files.
-   This step only needs to be performed once.
-   If it has been performed, skip to
+   This step only needs to be performed once
+   for each version of the Senzing RPM.
+   If the files were previously downloaded, skip to
    [RPM filenames](#rpm-filenames).
    Example:
 
