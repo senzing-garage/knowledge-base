@@ -102,6 +102,10 @@ To use the Senzing code, you must agree to the End User License Agreement (EULA)
     echo ${SENZING_VOLUME}
     ```
 
+   If `SENZING_VOLUME` has the correct value,
+   the next step is to delete the directory.
+   Example:
+
     ```console
     sudo rm -rf ${SENZING_VOLUME}
     ```
