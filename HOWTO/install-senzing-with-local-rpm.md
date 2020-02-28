@@ -16,6 +16,10 @@ from the downloaded RPMs.
 
 ## Download RPM
 
+This step only needs to be performed once.
+If it has been performed, skip to
+[RPM filenames](#rpm-filenames).
+
 1. :pencil2: Specify the directory where Senzing RPM should be downloaded on the local host.
    Example:
 
