@@ -28,7 +28,7 @@ from the downloaded RPMs.
    This step only needs to be performed once
    for each version of the Senzing RPM.
    If the files were previously downloaded, skip to
-   [RPM filenames](#rpm-filenames).
+   [RPM filenames](#rpm-filenames) section.
    Example:
 
     ```console
