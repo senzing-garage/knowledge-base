@@ -125,4 +125,4 @@ To use the Senzing code, you must agree to the End User License Agreement (EULA)
       senzing/yum -y localinstall /data/${SENZING_API_RPM} /data/${SENZING_DATA_RPM}
     ```
 
-1. Once complete, the Senzing API will be4 installed into `${SENZING_VOLUME}`.
+1. Once complete, the Senzing API will be installed into `${SENZING_VOLUME}`.
