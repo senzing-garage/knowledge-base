@@ -13,8 +13,9 @@ The following gist shows how to add layers with a Senzing installation.
 
 ## View Dockerfile
 
-1. View [Dockerfile](Dockerfile).
-1. The `FROM` instruction refers to a Senzing docker image that does not have Senzing installed internally.
+The [Dockerfile](Dockerfile) shows how to build upon `senzing/senzing-api-server`.
+
+1. The `FROM` instruction refers to a Senzing docker image that does not have Senzing "baked in".
 1. The Dockerfile essentially does an `apt` install of the Senzing package.
 
 ## Build Docker image
