@@ -28,6 +28,7 @@ The following gist shows how to add layers with a Senzing installation.
 
     ```console
     docker build \
-        --build-arg SENZING_ACCEPT_EULA=XXXX
-        --tag my/senzing-api-server:latest
+        --build-arg SENZING_ACCEPT_EULA=XXXX \
+        --tag my/senzing-api-server:latest \
+        .
     ```
