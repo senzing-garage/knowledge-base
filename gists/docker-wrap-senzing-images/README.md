@@ -29,6 +29,7 @@ The [Dockerfile](Dockerfile) shows how to build upon `senzing/senzing-api-server
 
     ```console
     docker build \
+        --build-arg BASE_IMAGE=senzing/senzing-api-server:1.7.10 \
         --build-arg SENZING_ACCEPT_EULA=XXXX \
         --tag my/senzing-api-server:latest \
         .
