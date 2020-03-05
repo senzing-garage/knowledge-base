@@ -1,6 +1,8 @@
 ARG BASE_IMAGE=senzing/senzing-api-server:1.7.10
 FROM ${BASE_IMAGE}
 
+ARG SENZING_ACCEPT_EULA=no
+
 # Need to be root to do "apt" operations.
 
 USER root
@@ -27,7 +29,6 @@ RUN curl \
 
 # Install Senzing.
 
-ENV SENZING_ACCEPT_EULA=I_ACCEPT_THE_SENZING_EULA
 RUN apt -y install senzingapi
 
 # Now do any additional configuration needed.
