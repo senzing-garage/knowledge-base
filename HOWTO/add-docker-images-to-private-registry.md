@@ -40,6 +40,7 @@
       "jbergknoff/postgresql-client:latest" \
       "kafkamanager/kafka-manager:2.0.0.2" \
       "mysql:5.7" \
+      "obsidiandynamics/kafdrop:3.23.0" \
       "phpmyadmin/phpmyadmin:4.9" \
       "postgres:11.6" \
       "senzing/apt:latest" \
@@ -63,6 +64,7 @@
       "senzing/senzing-debug:latest" \
       "senzing/senzing-poc-utility:latest" \
       "senzing/stream-loader:latest" \
+      "senzing/stream-logger:latest" \
       "senzing/yum:latest" \
     )
     ```
