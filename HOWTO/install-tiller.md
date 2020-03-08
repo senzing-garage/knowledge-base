@@ -6,7 +6,7 @@ Instructions for installing the Tiller portion of [Helm](https://helm.sh).
 
 ### Contents
 
-1. [Install](#install)
+1. [Install on Kubernetes](#install-on-kubernetes)
     1. [CentOS](#centos)
     1. [Ubuntu](#ubuntu)
     1. [macOS](#macos)
@@ -15,7 +15,7 @@ Instructions for installing the Tiller portion of [Helm](https://helm.sh).
 1. [Troubleshooting](#troubleshooting)
 1. [References](#references)
 
-## Install
+## Install on Kubernetes
 
 ### CentOS
 
@@ -77,6 +77,30 @@ Instructions for installing the Tiller portion of [Helm](https://helm.sh).
 ### macOS
 
 ### Windows
+
+## Install on Minishift
+
+1. [Deploy Helm Charts on Minishift’s OpenShift for Local Development](https://blog.openshift.com/deploy-helm-charts-minishifts-openshift-local-development/)
+1. [Helm Add-on](https://github.com/minishift/minishift-addons/tree/master/add-ons/helm)
+
+1. XXX
+   Example:
+
+    ```console
+    minishift addons install --defaults
+    minishift addons enable admin-user
+    ```
+
+1. XXX
+   Example:
+
+    ```console
+    cd /tmp
+    git clone https://github.com/jorgemoralespou/minishift-addons
+    cd minishift-addons
+    minishift addons install helm
+    minishift addons apply helm
+    ```
 
 ## Test
 
