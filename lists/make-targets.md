@@ -6,7 +6,7 @@
 
 1. Synopsis:
     1. Delete all files created by any of the Makefile targets.
-    
+
 ### copy-docker-files
 
 1. Synopsis:
@@ -20,7 +20,6 @@
     1. The first target in a `Makefile`.
     1. Used to direct which action is taken by default.
     1. Suggestion: Default action is to print [Help](#help)
-
 
 ### delete-docker-files
 

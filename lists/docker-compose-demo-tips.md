@@ -36,28 +36,13 @@ The following is a list of tips when using
     1. [Senzing Entity Search WebApp demo](#senzing-entity-search-webapp-demo)
 1. [Jupyter Notebooks](#jupyter-notebooks)
 
-## Senzing license
+## Db2
 
-### Request Senzing license
+## Jupyter Notebooks
 
-1. If working with more than 10,000 records,
-   [obtain a Senzing license](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/obtain-senzing-license.md).
+### Jupyter Notebooks references
 
-### Install Senzing license
-
-1. :pencil2: Identify location of `g2.lic` on local workstation.
-   Example:
-
-    ```console
-    export G2_LICENSE_PATH=/path/to/local/g2.lic
-    ```
-
-1. Copy license to volume.
-   Example:
-
-    ```console
-    sudo cp ${G2_LICENSE_PATH} ${SENZING_ETC_DIR}/g2.lic
-    ```
+1. [github.com/Senzing/docker-jupyter](https://github.com/Senzing/docker-jupyter)
 
 ## Kafka
 
@@ -114,23 +99,6 @@ The following is a list of tips when using
 
 1. [Quickstart](https://kafka.apache.org/quickstart)
 
-## RabbitMQ
-
-## PostgreSQL
-
-### View PostgreSQL
-
-1. PostgreSQL is viewable at
-   [localhost:9171](http://localhost:9171).
-    1. **Defaults:** username: `postgres` password: `postgres`
-
-### View records in PostgreSQL
-
-1. On left-hand navigation, select "G2" database to explore.
-1. The records received from the queue can be viewed in the following Senzing tables:
-    1. G2 > DSRC_RECORD
-    1. G2 > OBS_ENT
-
 ## MySQL
 
 ### View MySQL
@@ -164,20 +132,22 @@ The following is a list of tips when using
     1. `DSRC_RECORD`
     1. `OBS_ENT`
 
-## SQLite
+## PostgreSQL
 
-### View SQLite
+### View PostgreSQL
 
-1. SQLite is viewable at
-   [localhost:9174](http://localhost:9174).
+1. PostgreSQL is viewable at
+   [localhost:9171](http://localhost:9171).
+    1. **Defaults:** username: `postgres` password: `postgres`
 
-### View records in SQLite
+### View records in PostgreSQL
 
+1. On left-hand navigation, select "G2" database to explore.
 1. The records received from the queue can be viewed in the following Senzing tables:
     1. G2 > DSRC_RECORD
     1. G2 > OBS_ENT
 
-## Db2
+## RabbitMQ
 
 ## Senzing API server
 
@@ -209,6 +179,16 @@ The Senzing REST API server supports the
 
 1. From [OpenApi "Swagger" editor](http://editor.swagger.io/?url=https://raw.githubusercontent.com/Senzing/senzing-rest-api/master/senzing-rest-api.yaml).
 
+### Senzing API server references
+
+1. [github.com/Senzing/senzing-api-server](https://github.com/Senzing/senzing-api-server)
+
+## Senzing Configurator
+
+### Senzing Configurator references
+
+1. [github.com/Senzing/configurator](https://github.com/Senzing/configurator)
+
 ## Senzing Entity Search WebApp
 
 ### View Senzing Entity Search WebApp
@@ -223,5 +203,42 @@ The Senzing REST API server supports the
 1. The [demonstration](https://github.com/Senzing/knowledge-base/blob/master/demonstrations/docker-compose-web-app.md)
    instructions will give a tour of the Senzing web app.
 
-## Jupyter Notebooks
+## Senzing Entity Search WebApp references
 
+1. [github.com/Senzing/entity-search-web-app](https://github.com/Senzing/entity-search-web-app)
+
+## Senzing license
+
+### Request Senzing license
+
+1. If working with more than 10,000 records,
+   [obtain a Senzing license](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/obtain-senzing-license.md).
+
+### Install Senzing license
+
+1. :pencil2: Identify location of `g2.lic` on local workstation.
+   Example:
+
+    ```console
+    export G2_LICENSE_PATH=/path/to/local/g2.lic
+    ```
+
+1. Copy license to volume.
+   Example:
+
+    ```console
+    sudo cp ${G2_LICENSE_PATH} ${SENZING_ETC_DIR}/g2.lic
+    ```
+
+## SQLite
+
+### View SQLite
+
+1. SQLite is viewable at
+   [localhost:9174](http://localhost:9174).
+
+### View records in SQLite
+
+1. The records received from the queue can be viewed in the following Senzing tables:
+    1. G2 > DSRC_RECORD
+    1. G2 > OBS_ENT
