@@ -34,13 +34,17 @@ This is a checklist of what to set when creating a new GitHub Repository.
         1. Rule Settings
             1. :ballot_box_with_check: Require pull request reviews before merging
         1. Click "Create" button
-    1. Click "Collaborators & teams" tab.
-        1. Click "Add a team" button.
-            1. Choose "Senzing engineering"
-            1. Change permissions to "Write"
-        1. Click "Add a team" button.
-            1. Choose "build"
-            1. Change permissions to "Admin"
+    1. Click "Manage access" tab.
+        1. Click "Invite teams or people" button.
+            1. Type "Senzing engineering"
+            1. Choose "Senzing/senzing-engineering"
+            1. Choose a role: "Write"
+            1. Click "Add Senzing/senzingeering to ..."
+        1. Click "Invite teams or people" button.
+            1. Type "build"
+            1. Choose "Senzing/build"
+            1. Choose a role: "Admin"
+            1. Click "Add Senzing/build to ..."
     1. Click "Security Alerts" tab.
         1. Search for "Senzing/senzing-engineering" and select.
         1. Click "Save changes" button
