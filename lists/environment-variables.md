@@ -428,6 +428,15 @@
 1. Where used:
     1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo),
 
+### POSTGRES_DIR
+
+1. Synopsis:
+    1. Path on local system where the database files are stored.
+1. Values:
+    1. Default: None.  Application dependent.
+1. Where used:
+    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo),
+
 ### POSTGRES_PASSWORD
 
 1. Synopsis:
@@ -446,15 +455,6 @@
 1. Where used:
     1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo),
 
-### POSTGRES_DIR
-
-1. Synopsis:
-    1. Path on local system where the database files are stored.
-1. Values:
-    1. Default: None.  Application dependent.
-1. Where used:
-    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo),
-
 ### RABBITMQ_DIR
 
 1. Synopsis:
@@ -463,6 +463,20 @@
     1. Default: None.  Application dependent.
 1. Where used:
     1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo),
+
+### RABBITMQ_PASSWORD
+
+1. Synopsis:
+    1. the password for the RabbitMQ user.
+1. Values:
+    1. Default: None.  Application dependent.
+
+### RABBITMQ_USERNAME
+
+1. Synopsis:
+    1. the username for the RabbitMQ user.
+1. Values:
+    1. Default: None.  Application dependent.
 
 ### SENZING_ACCEPT_EULA
 
@@ -475,6 +489,29 @@
        the value is "I_ACCEPT_THE_SENZING_EULA"
 1. Where used:
     1. [docker-yum](https://github.com/Senzing/docker-yum),
+
+### SENZING_API_RPM_DIR
+
+1. Synopsis:
+    1. Filename for the
+       [Senzing API](../WHATIS/senzing-api.md)
+       RPM file.
+1. Values:
+    1. Format: `senzingapi-M.m.P.x86_64.rpm`
+    1. Default: none
+1. Where used:
+    1. [docker-yum](https://github.com/Senzing/docker-yum),
+    1. [docker-yumdownloader](https://github.com/Senzing/docker-yumdownloader),
+
+### SENZING_API_SERVICE_PORT
+
+1. Synopsis:
+    1. Port on localhost for Senzing API service.
+    1. See [Port 8250](https://github.com/Senzing/knowledge-base/blob/master/lists/ports-used-in-demonstrations.md#8250)
+1. Values:
+    1. Default: 8250
+1. Where used:
+    1. [senzing-api-server](https://github.com/Senzing/senzing-api-server),
 
 ### SENZING_API_SERVER_URL
 
@@ -493,29 +530,6 @@
 
 1. Where used:
     1. [entity-search-web-app](https://github.com/Senzing/entity-search-web-app),
-
-### SENZING_API_SERVICE_PORT
-
-1. Synopsis:
-    1. Port on localhost for Senzing API service.
-    1. See [Port 8250](https://github.com/Senzing/knowledge-base/blob/master/lists/ports-used-in-demonstrations.md#8250)
-1. Values:
-    1. Default: 8250
-1. Where used:
-    1. [senzing-api-server](https://github.com/Senzing/senzing-api-server),
-
-### SENZING_API_RPM_DIR
-
-1. Synopsis:
-    1. Filename for the
-       [Senzing API](../WHATIS/senzing-api.md)
-       RPM file.
-1. Values:
-    1. Format: `senzingapi-M.m.P.x86_64.rpm`
-    1. Default: none
-1. Where used:
-    1. [docker-yum](https://github.com/Senzing/docker-yum),
-    1. [docker-yumdownloader](https://github.com/Senzing/docker-yumdownloader),
 
 ### SENZING_CONFIG_PATH
 
@@ -805,6 +819,13 @@
 1. Where used:
     1. [stream-loader](https://github.com/Senzing/stream-loader),
 
+### SENZING_MONITORING_PERIOD_IN_SECONDS
+
+1. Synopsis:
+    1. Time, in seconds, between monitoring log records.
+1. Values:
+    1. Default: 600
+
 ### SENZING_NETWORK
 
 1. Synopsis:
@@ -888,15 +909,6 @@
 1. Where used:
     1. [stream-loader](https://github.com/Senzing/stream-loader),
 
-### SENZING_RABBITMQ_PUBLISH_BATCH_SIZE
-
-1. Synopsis:
-    1. The number of records to publish to RabbitMQ in a batch
-1. Values:
-    1. Default: "1000"
-1. Where used:
-    1. [mock-data-generator](https://github.com/Senzing/mock-data-generator),
-
 ### SENZING_RABBITMQ_EXCHANGE
 
 1. Synopsis:
@@ -932,6 +944,15 @@
     1. Default: 50
 1. Where used:
     1. [stream-loader](https://github.com/Senzing/stream-loader),
+
+### SENZING_RABBITMQ_PUBLISH_BATCH_SIZE
+
+1. Synopsis:
+    1. The number of records to publish to RabbitMQ in a batch
+1. Values:
+    1. Default: "1000"
+1. Where used:
+    1. [mock-data-generator](https://github.com/Senzing/mock-data-generator),
 
 ### SENZING_RABBITMQ_PUBLISH_INTERVAL
 
@@ -1103,15 +1124,6 @@
 1. Where used:
     1. [docker-yum](https://github.com/Senzing/docker-yum),
 
-### SENZING_WEBAPP_PORT
-
-1. Synopsis:
-    1. Port on localhost for Docker web application service.
-1. Values:
-    1. Default: none
-1. Where used:
-    1. [senzing-api-server](https://github.com/Senzing/senzing-api-server),
-
 ### SENZING_WEB_SERVER_PORT
 
 1. Synopsis:
@@ -1121,6 +1133,15 @@
     1. Default: 8251
 1. Where used:
     1. [entity-search-web-app](https://github.com/Senzing/entity-search-web-app),
+
+### SENZING_WEBAPP_PORT
+
+1. Synopsis:
+    1. Port on localhost for Docker web application service.
+1. Values:
+    1. Default: none
+1. Where used:
+    1. [senzing-api-server](https://github.com/Senzing/senzing-api-server),
 
 ### SQLITE_DATABASE
 
