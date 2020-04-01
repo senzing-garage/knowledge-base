@@ -402,7 +402,6 @@
        Example:
 
         ```console
-        export SENZING_DATA_VERSION_DIR=/opt/my-senzing-1.15.0/data/1.0.0
         export SENZING_G2_DIR=/opt/my-senzing-1.15.0/g2
         ```
 
