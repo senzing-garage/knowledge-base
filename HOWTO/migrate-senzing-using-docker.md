@@ -371,6 +371,61 @@
         docker cp ${DOCKER_TMP_COPY_DIR}/. senzing-1.15.0:/etc/opt/senzing
         ```
 
+#### Update Postgres database to 1.15.0
+
+1. Determine docker network.
+    1. List docker networks.
+       Example:
+
+        ```console
+        sudo docker network ls
+        ```
+
+    1. :pencil2: Specify docker network.
+       Choose value from NAME column of `docker network ls`.
+       Example:
+
+        ```console
+        export SENZING_NETWORK=*nameofthe_network*
+        ```
+
+    1. Construct parameter for `docker run`.
+       Example:
+
+        ```console
+        export SENZING_NETWORK_PARAMETER="--net ${SENZING_NETWORK}"
+        ```
+
+1. Perform database update operations for Postgres database.
+   Perform the following instructions in a new terminal window.
+    1. :pencil2: Identify location of "new" Senzing installation.
+       Example:
+
+        ```console
+        export SENZING_DATA_VERSION_DIR=/opt/my-senzing-1.15.0/data/1.0.0
+        export SENZING_G2_DIR=/opt/my-senzing-1.15.0/g2
+        ```
+
+    1. :pencil2: Create `SENZING_DATABASE_URL`.
+       Example:
+
+        ```console
+        export SENZING_DATABASE_URL="postgresql://postgres:postgres@senzing-postgres:5432/G2"
+        ```
+
+    1. Perform updates in `g2core-config-upgrade-1.14-to-1.15.gtc`.
+       Example:
+
+        ```console
+        sudo docker run \
+          --env SENZING_DATABASE_URL=${SENZING_DATABASE_URL} \
+          --env SENZING_SQL_FILE=/opt/senzing/g2/resources/schema/g2core-schema-postgresql-upgrade-1.14-to-1.15.sql \
+          --rm \
+          --volume ${SENZING_G2_DIR}:/opt/senzing/g2 \
+          ${SENZING_NETWORK_PARAMETER} \
+          senzing/postgresql-client
+        ```
+
 #### Update Senzing configuration to 1.15.0
 
 1. List docker networks.
