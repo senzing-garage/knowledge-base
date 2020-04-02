@@ -93,7 +93,7 @@ The following instructions show how to populate a private registry (in an air-ga
     cd ${MY_OUTPUT_DIR}/docker-air-gap-helper-nnnnnnnnnn
     ```
 
-1. Perform multiple
+1. Run script to perform multiple
    [docker load](https://docs.docker.com/engine/reference/commandline/load/)
    commands.
    Example:
@@ -118,7 +118,7 @@ The following instructions show how to populate a private registry (in an air-ga
     export DOCKER_REGISTRY_URL=my.docker-registry.com:5000
     ```
 
-1. Perform multiple
+1. Run script to perform multiple
    [docker push](https://docs.docker.com/engine/reference/commandline/push/)
    commands.
    Example:
