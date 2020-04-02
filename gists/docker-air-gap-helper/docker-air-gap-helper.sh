@@ -3,8 +3,29 @@
 # Enumerate docker images to be processed
 
 DOCKER_IMAGE_NAMES=(
-  "senzing/apt:latest"
-  "senzing/configurator:latest"
+  "bitnami/kafka:2.4.0"
+  "bitnami/rabbitmq:3.8.2"
+  "bitnami/zookeeper:3.5.6"
+  "coleifer/sqlite-web:latest"
+  "ibmcom/db2:11.5.0.0a"
+  "mysql:5.7"
+  "obsidiandynamics/kafdrop:3.23.0"
+  "phpmyadmin/phpmyadmin:4.9"
+  "postgres:11.6"
+  "senzing/apt:1.0.3"
+  "senzing/db2-driver-installer:1.0.1"
+  "senzing/entity-search-web-app:1.0.4"
+  "senzing/init-container:1.5.0"
+  "senzing/jupyter:1.1.5"
+  "senzing/mock-data-generator:1.1.1"
+  "senzing/mysql-init:latest"
+  "senzing/phppgadmin:1.0.0"
+  "senzing/redoer:1.2.1"
+  "senzing/senzing-api-server:1.7.10"
+  "senzing/senzing-debug:1.3.0"
+  "senzing/stream-loader:1.5.3"
+  "senzing/stream-logger:1.0.1"
+  "senzing/yum:1.1.3"
 )
 
 # Return codes.
