@@ -6,6 +6,7 @@
     1. [Download](#download)
     1. [Modify](#modify)
     1. [Run](#run)
+1. [Transfer](#transfer)
 1. [On air-gapped system](#on-air-gapped-system)
     1. [Extract file](#extract-file)
     1. [Load local docker repository](#load-local-docker-repository)
@@ -50,10 +51,11 @@ containing docker images that can be installed on an air-gapped private docker r
 
 ### Modify
 
-1. Modify the `DOCKER_IMAGE_NAMES` in the local copy of
+1. Modify the `DOCKER_IMAGE_NAMES` list in the local copy of
    [docker-air-gap-helper.sh](docker-air-gap-helper.sh)
    (e.g. `MY_DOCKER_AIR_GAP_HELPER`)
-   to add or delete docker images to be pulled from DockerHub (docker.io).
+   to add or delete docker images to be pulled from DockerHub (docker.io)
+   and packaged to be transferred to the private registry.
 
 ### Run
 
@@ -67,6 +69,9 @@ containing docker images that can be installed on an air-gapped private docker r
 1. This produces the following output:
     1. A directory in the form `~/docker-air-gap-helper-nnnnnnnnnn.tgz` where `nnnnnnnnnn` is the Unix Timestamp of creation.
     1. A file in the form `~/docker-air-gap-helper-nnnnnnnnnn.tgz` which is a tar-gzipped version of the directory.
+
+## Transfer
+
 1. Transfer `~/docker-air-gap-helper-nnnnnnnnnn.tgz` to the air-gapped system.
 
 ## On air-gapped system
