@@ -1,9 +1,23 @@
 # docker-air-gap-helper
 
-## Creating the tar gzipped file
+## Contents
+
+1. [On non-air-gapped system](#on-non-air-gapped-system)
+    1. [Download](#download)
+    1. [Modify](#modify)
+    1. [Run](#run)
+1. [On air-gapped system](#on-air-gapped-system)
+    1. [Extract file](#extract-file)
+    1. [Load local docker repository](#load-local-docker-repository)
+    1. [Load private docker registry](#load-private-docker-registry)
+
+## On non-air-gapped system
 
 The following steps are performed on an internet-connected system.
 They will not work on an air-gapped system.
+
+The goal is to produce a compressed file of `tgz` format
+containing docker images that can be installed on an air-gapped private docker registry.
 
 ### Download
 
