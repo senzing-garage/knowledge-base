@@ -20,6 +20,8 @@ They will not work on an air-gapped system.
 The goal is to produce a compressed file of `tgz` format
 containing docker images that can be installed on an air-gapped private docker registry.
 
+This method has been tested on Linux and macOS systems.
+
 ### Download
 
 1. Get a local copy of
@@ -77,6 +79,8 @@ containing docker images that can be installed on an air-gapped private docker r
 ## On air-gapped system
 
 The following instructions show how to populate a private registry (in an air-gapped environment).
+
+This method has been tested on Linux systems.
 
 ### Extract file
 
