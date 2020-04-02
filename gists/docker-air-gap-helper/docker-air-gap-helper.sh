@@ -84,7 +84,6 @@ done
 
 # Compress results.
 
-echo "HOME: ${MY_HOME}"
 tar -zcvf ${OUTPUT_FILE} -C ${MY_HOME} ${OUTPUT_DIR_NAME}
 
 # Epilog
