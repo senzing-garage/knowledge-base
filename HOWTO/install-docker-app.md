@@ -30,6 +30,11 @@ For detailed installation, see [Docker docs](https://github.com/docker/app#insta
 ### macOS
 
 1. See [Linux or macOS](https://github.com/docker/app#linux-or-macos).
+1. After following instructions, a `docker-app` command can be created by doing
+
+    ```console
+    sudo cp /tmp/docker-app-standalone-darwin /usr/local/bin/docker-app
+    ```
 
 ### Windows
 
