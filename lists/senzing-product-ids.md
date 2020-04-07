@@ -20,6 +20,7 @@ Used in log message identifiers in the format `senzing-ppppnnnnt`, where:
 1. **5010** - [redoer.py](https://github.com/Senzing/redoer/blob/master/redoer.py)
 1. **5011** - [stream-logger.py](https://github.com/Senzing/stream-logger/blob/master/stream-logger.py)
 1. **5012** - [github-backup.py](https://github.com/Senzing/github-backup/blob/master/github-backup.py)
+1. **5014** - [stream-producer.py](https://github.com/Senzing/stream-producer/blob/master/stream-producer.py)
 
 
 ## Docker apps
