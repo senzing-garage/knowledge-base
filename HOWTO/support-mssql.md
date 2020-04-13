@@ -42,7 +42,7 @@
    Example:
 
     ```console
-    export SENZING_OPT_MICROSOFT_DIR_PARAMETER="--volume ${SENZING_OPT_MICROSOFT_DIR}:/opt/microsoft"
+    export SENZING_OPT_MICROSOFT_DIR_PARAMETER="--volume ${SENZING_OPT_MICROSOFT_DIR}:/opt/microsoft --env ODBCSYSINI=/opt/microsoft/msodbcsql17/etc"
     ```
 
 ## References
