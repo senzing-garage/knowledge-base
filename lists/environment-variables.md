@@ -681,6 +681,17 @@
 1. Where used:
     1. [docker-yumdownloader](https://github.com/Senzing/docker-yumdownloader),
 
+### SENZING_DOWNLOAD_FILE
+
+1. Synopsis:
+    1. Location of where to place a downloaded file.
+1. Examples:
+    1. Download to `/tmp/my-downloads/x-file.tmp`
+
+        ```console
+        export SENZING_DOWNLOAD_FILE=/tmp/my-downloads/x-file.tmp
+        ```
+
 ### SENZING_ENGINE_CONFIGURATION_JSON
 
 1. Synopsis:
