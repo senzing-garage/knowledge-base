@@ -1,5 +1,7 @@
 # How to initialize Senzing with Docker
 
+DEPRECATED
+
 ## Overview
 
 Instructions for installing [Senzing API](../WHATIS/senzing-api.md)
