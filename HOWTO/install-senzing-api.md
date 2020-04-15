@@ -35,28 +35,18 @@ Instructions for installing [Senzing API](../WHATIS/senzing-api.md).
 
     1. :warning: This step is intentionally tricky and not simply copy/paste.
        This ensures that you make a conscious effort to accept the EULA.
-       See
-       [SENZING_ACCEPT_EULA](https://github.com/Senzing/knowledge-base/blob/master/lists/environment-variables.md#senzing_accept_eula)
-       for the correct value.
-       Replace the double-quote character in the example with the correct value.
-       The use of the double-quote character is intentional to prevent simple copy/paste.
        Example:
 
-        ```console
-        export SENZING_ACCEPT_EULA="
-        ```
+        <pre>export SENZING_ACCEPT_EULA="&lt;the value from <a href="https://github.com/Senzing/knowledge-base/blob/master/lists/environment-variables.md#senzing_accept_eula">this link</a>&gt;"</pre>
 
 1. Install Senzing API.
-   If `SENZING_ACCEPT_EULA` is not set,
+   If `SENZING_ACCEPT_EULA` environment variable is not set,
    you will be prompted to accept the Senzing End User License Agreement (EULA)
    The EULA is located at [https://senzing.com/end-user-license-agreement](https://senzing.com/end-user-license-agreement/).
    Example:
 
     ```console
-    sudo \
-      SENZING_ACCEPT_EULA=${SENZING_ACCEPT_EULA} \
-      yum -y install \
-        senzingapi
+    sudo --preserve-env yum -y install senzingapi
     ```
 
 ### Ubuntu
@@ -88,28 +78,18 @@ Instructions for installing [Senzing API](../WHATIS/senzing-api.md).
 
     1. :warning: This step is intentionally tricky and not simply copy/paste.
        This ensures that you make a conscious effort to accept the EULA.
-       See
-       [SENZING_ACCEPT_EULA](https://github.com/Senzing/knowledge-base/blob/master/lists/environment-variables.md#senzing_accept_eula)
-       for the correct value.
-       Replace the double-quote character in the example with the correct value.
-       The use of the double-quote character is intentional to prevent simple copy/paste.
        Example:
 
-        ```console
-        export SENZING_ACCEPT_EULA="
-        ```
+        <pre>export SENZING_ACCEPT_EULA="&lt;the value from <a href="https://github.com/Senzing/knowledge-base/blob/master/lists/environment-variables.md#senzing_accept_eula">this link</a>&gt;"</pre>
 
 1. Install Senzing API.
-   If `SENZING_ACCEPT_EULA` is not set,
+   If `SENZING_ACCEPT_EULA` environment variable is not set,
    you will be prompted to accept the Senzing End User License Agreement (EULA)
    The EULA is located at [https://senzing.com/end-user-license-agreement](https://senzing.com/end-user-license-agreement/).
    Example:
 
     ```console
-    sudo \
-      SENZING_ACCEPT_EULA=${SENZING_ACCEPT_EULA} \
-      apt -y install \
-        senzingapi
+    sudo --preserve-env apt -y install senzingapi
     ```
 
 ### macOS
