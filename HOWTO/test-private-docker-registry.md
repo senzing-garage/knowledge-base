@@ -1,4 +1,4 @@
-# Test private docker registry
+# Hot to test private docker registry
 
 ## Using Rancher
 

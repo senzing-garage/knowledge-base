@@ -1,4 +1,4 @@
-# Install Jupyter Notebooks
+# How to install Jupyter Notebooks
 
 ## Overview
 

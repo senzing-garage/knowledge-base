@@ -1,4 +1,4 @@
-# Test docker images
+# How to test docker images
 
 ## Overview
 

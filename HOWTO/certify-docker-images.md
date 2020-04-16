@@ -1,4 +1,4 @@
-# Certify Docker images
+# How to certify Docker images
 
 ## Certify using DockerHub registry
 

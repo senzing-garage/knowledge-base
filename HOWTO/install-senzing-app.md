@@ -1,4 +1,4 @@
-# Install Senzing App
+# How to install Senzing App
 
 ## Overview
 

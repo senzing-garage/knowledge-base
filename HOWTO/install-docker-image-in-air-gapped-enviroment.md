@@ -1,4 +1,4 @@
-# Install docker image in an air-gapped environment
+# How to install docker image in an air-gapped environment
 
 ## Overview
 
@@ -72,7 +72,7 @@ that is on the internet to a machine that is not on the internet, (i.e. "air-gap
 
     ```console
     docker load \
-      --input ~/${DOCKER_ACCOUNT}-${DOCKER_IMAGE}-${DOCKER_TAG}.tar  
+      --input ~/${DOCKER_ACCOUNT}-${DOCKER_IMAGE}-${DOCKER_TAG}.tar
     ```
 
     Reference: [docker load](https://docs.docker.com/engine/reference/commandline/load/)

@@ -1,4 +1,4 @@
-# Tag Docker build
+# How to tag Docker build
 
 ## Create a tagged version on DockerHub
 

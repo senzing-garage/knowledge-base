@@ -1,4 +1,4 @@
-# Install Docker App
+# How to install Docker App
 
 ## Overview
 

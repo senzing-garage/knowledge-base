@@ -1,4 +1,4 @@
-# Autobuild on DockerHub
+# How to autobuild on DockerHub
 
 ## Enable Autobuild
 

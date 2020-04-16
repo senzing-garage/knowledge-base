@@ -1,4 +1,4 @@
-# View docker formations
+# How to view docker formations
 
 ## Portainer
 

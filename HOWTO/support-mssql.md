@@ -1,4 +1,4 @@
-# Support MS SQL
+# How to support MS SQL
 
 ## Configuration
 

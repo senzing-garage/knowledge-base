@@ -1,4 +1,4 @@
-# Migrate Senzing using Docker
+# How to migrate Senzing using Docker
 
 ## Contents
 

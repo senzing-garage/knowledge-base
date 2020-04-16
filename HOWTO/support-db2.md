@@ -1,4 +1,4 @@
-# Support Db2
+# How to support Db2
 
 ## Configuration
 

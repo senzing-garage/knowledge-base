@@ -1,4 +1,4 @@
-# Install docker-compose
+# How to install docker-compose
 
 ## Overview
 

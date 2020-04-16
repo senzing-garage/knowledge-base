@@ -1,4 +1,4 @@
-# Install NodeJS
+# How to install NodeJS
 
 ## Overview
 

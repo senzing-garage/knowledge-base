@@ -1,4 +1,4 @@
-# Install Python dependencies
+# How to install Python dependencies
 
 ## Overview
 

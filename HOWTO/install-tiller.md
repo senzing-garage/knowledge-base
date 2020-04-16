@@ -1,4 +1,4 @@
-# Install Tiller
+# How to install Tiller
 
 ## Overview
 

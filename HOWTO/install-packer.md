@@ -1,4 +1,4 @@
-# Install packer
+# How to install packer
 
 ## Overview
 

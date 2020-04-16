@@ -1,4 +1,4 @@
-# Install make
+# How to install make
 
 ## Overview
 

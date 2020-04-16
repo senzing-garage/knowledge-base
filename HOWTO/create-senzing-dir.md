@@ -1,4 +1,4 @@
-# Create SENZING_DIR
+# How to create SENZING_DIR
 
 ## :no_entry: Deprecated
 

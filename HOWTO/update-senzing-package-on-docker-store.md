@@ -1,4 +1,4 @@
-# Update Senzing images on Docker Store
+# How to update Senzing images on Docker Store
 
 ## Overview
 

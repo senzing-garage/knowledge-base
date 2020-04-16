@@ -1,4 +1,4 @@
-# Install Senzing using Docker
+# How to install Senzing using Docker
 
 ## Overview
 

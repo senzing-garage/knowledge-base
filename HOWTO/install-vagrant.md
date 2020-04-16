@@ -1,4 +1,4 @@
-# Install vagrant
+# How to install vagrant
 
 ## Overview
 

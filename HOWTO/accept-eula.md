@@ -1,4 +1,4 @@
-# Accept EULA
+# How to accept EULA
 
 The use of Senzing products requires acceptance of an End User License Agreement (EULA).
 

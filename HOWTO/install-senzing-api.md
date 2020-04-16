@@ -1,4 +1,4 @@
-# Install Senzing API
+# How to install Senzing API
 
 ## Overview
 

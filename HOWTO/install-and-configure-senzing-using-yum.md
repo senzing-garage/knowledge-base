@@ -1,4 +1,4 @@
-# Install and configure using yum
+# How to install and configure using yum
 
 The following instructions are meant to be "copy-and-paste"
 to install and configure Senzing Engine for repository projects.

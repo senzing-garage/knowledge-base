@@ -1,4 +1,4 @@
-# Create Senzing GitHub repository
+# How to create Senzing GitHub repository
 
 This is a checklist of what to set when creating a new GitHub Repository.
 

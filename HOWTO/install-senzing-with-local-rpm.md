@@ -1,4 +1,4 @@
-# Install Senzing with local RPM
+# How to install Senzing with local RPM
 
 ## Overview
 

@@ -1,4 +1,4 @@
-# Install Rancher
+# How to install Rancher
 
 ## Overview
 

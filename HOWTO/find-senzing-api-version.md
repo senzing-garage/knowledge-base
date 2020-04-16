@@ -1,4 +1,4 @@
-# Find Senzing API version
+# How to find Senzing API version
 
 ## Via curl
 

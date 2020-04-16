@@ -1,4 +1,4 @@
-# Install minishift
+# How to install minishift
 
 ## Overview
 

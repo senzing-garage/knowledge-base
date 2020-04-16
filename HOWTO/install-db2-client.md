@@ -1,4 +1,4 @@
-# Install IBM Db2 client
+# How to install IBM Db2 client
 
 ## Overview
 

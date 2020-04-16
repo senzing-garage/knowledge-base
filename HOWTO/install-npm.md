@@ -1,4 +1,4 @@
-# Install Node Package Manager
+# How to install Node Package Manager
 
 Also known as "npm".
 

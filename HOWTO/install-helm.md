@@ -1,4 +1,4 @@
-# Install Helm
+# How to install Helm
 
 ## Overview
 

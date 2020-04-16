@@ -1,4 +1,4 @@
-# Clone repository
+# How to clone repository
 
 ## Prerequisite software
 

@@ -1,4 +1,4 @@
-# Install Docker
+# How to install Docker
 
 ## Overview
 

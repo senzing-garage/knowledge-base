@@ -1,4 +1,4 @@
-# List repositories in GitHub
+# How to list repositories in GitHub
 
 ## Overview
 

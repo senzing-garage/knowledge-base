@@ -1,4 +1,4 @@
-# Install Java
+# How to install Java
 
 ## Overview
 

@@ -1,4 +1,4 @@
-# View SQLite database
+# How to view SQLite database
 
 ## Configuration
 

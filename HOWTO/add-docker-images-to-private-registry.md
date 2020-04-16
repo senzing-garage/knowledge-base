@@ -1,4 +1,4 @@
-# Add docker images to private registry
+# How to add docker images to private registry
 
 ## Prerequisites
 

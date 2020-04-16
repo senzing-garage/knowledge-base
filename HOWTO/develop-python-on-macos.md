@@ -1,4 +1,4 @@
-# Develop python on macOS
+# How to develop python on macOS
 
 ## Overview
 

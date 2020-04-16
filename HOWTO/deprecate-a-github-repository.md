@@ -1,4 +1,4 @@
-# Deprecate a GitHub repository
+# How to deprecate a GitHub repository
 
 ## Steps
 

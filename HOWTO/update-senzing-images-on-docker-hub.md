@@ -1,4 +1,4 @@
-# Update Senzing images on DockerHub
+# How to update Senzing images on DockerHub
 
 ## Overview
 

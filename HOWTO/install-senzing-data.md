@@ -1,4 +1,4 @@
-# Install Senzing data
+# How to install Senzing data
 
 ## Overview
 

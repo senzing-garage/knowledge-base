@@ -1,4 +1,4 @@
-# Install and configure using apt
+# How to install and configure using apt
 
 The following instructions are meant to be "copy-and-paste"
 to install and configure Senzing Engine for repository projects.

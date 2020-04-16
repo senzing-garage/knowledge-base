@@ -1,4 +1,4 @@
-# Install kubectl
+# How to install kubectl
 
 ## Overview
 

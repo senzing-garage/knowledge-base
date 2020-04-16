@@ -1,4 +1,4 @@
-# Install minikube
+# How to install minikube
 
 ## Overview
 

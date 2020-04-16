@@ -1,4 +1,4 @@
-# Install jq
+# How to install jq
 
 ## Overview
 

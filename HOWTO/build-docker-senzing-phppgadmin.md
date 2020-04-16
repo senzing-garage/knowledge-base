@@ -1,4 +1,4 @@
-# Build senzing/phppgadmin docker image
+# How to build senzing/phppgadmin docker image
 
 The docker image, `senzing/phppgadmin`, is an updated version of
 [dockage/phppgadmin](https://github.com/dockage/phppgadmin.git).

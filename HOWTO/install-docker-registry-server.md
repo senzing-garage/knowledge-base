@@ -1,4 +1,4 @@
-# Install docker registry server
+# How to install docker registry server
 
 ## Overview
 

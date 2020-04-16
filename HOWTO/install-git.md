@@ -1,4 +1,4 @@
-# Install Git
+# How to install Git
 
 ## Overview
 

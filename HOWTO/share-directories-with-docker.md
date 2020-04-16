@@ -1,4 +1,4 @@
-# Share directories with docker
+# How to share directories with docker
 
 ## Overview
 

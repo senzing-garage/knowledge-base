@@ -1,4 +1,4 @@
-# Install Python3
+# How to install Python3
 
 ## Overview
 
