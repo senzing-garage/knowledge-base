@@ -51,5 +51,5 @@ The following style guidelines help craft Senzing GitHub documentation.
         1. Environment variables are introduced via the `export` command.
         1. Examples show "working" values.
         1. If customized values are required, a pencil :pencil2: icon is present.
-        1. Any reference to an Environment Variable should have information on how it was set.
+        1. Any reference to an environment variable should have information on how it was set.
 1. Where thinking is required, a "thinking" icon :thinking: is present.
