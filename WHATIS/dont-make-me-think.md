@@ -45,11 +45,11 @@ The following style guidelines help craft Senzing GitHub documentation.
 1. Instructions are written using the [second-person, imperative mood](https://en.wikipedia.org/wiki/Imperative_mood).
     1. Instructions use present tense.
     1. Net: Words like you, I, he, she won't be seen much.  When they are used, it's personal :blush:.
-1. Each step has an example.
+1. Each step has examples.
     1. Examples gravitate toward "copy-and-paste".
     1. If variation is needed, operating system environment variable are used.
         1. Environment variables are introduced via the `export` command.
         1. Examples show "working" values.
-        1. If customized values are required, a pencil :pencil2: icon is present.
+        1. If customized values are required, a pencil icon :pencil2: is present.
         1. Any reference to an environment variable should have information on how it was set.
 1. Where thinking is required, a "thinking" icon :thinking: is present.
