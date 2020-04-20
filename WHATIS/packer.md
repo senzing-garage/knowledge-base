@@ -9,4 +9,4 @@
 ## Sites
 
 1. [Official site](https://www.packer.io/)
-1. [github.com/docker](https://github.com/docker)
+1. [github.com/docker](https://github.com/hashicorp/packer)
