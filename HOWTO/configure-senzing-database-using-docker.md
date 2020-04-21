@@ -21,7 +21,7 @@ Configuring the Senzing database in MS SQL uses the
 [sqlcmd Utility](https://docs.microsoft.com/en-us/sql/tools/sqlcmd-utility)
 in a [mcr.microsoft.com/mssql-tools](https://hub.docker.com/_/microsoft-mssql-tools) docker image.
 
-1. :pencil2: Identify the hostname of the database.
+1. :pencil2: Set environment variables.
    **Tip:** Do not set `MSSQL_HOSTNAME` to `localhost` nor `127.0.0.1` as that assumes the database is inside the docker container.
    Example:
 
@@ -70,5 +70,48 @@ in a [mcr.microsoft.com/mssql-tools](https://hub.docker.com/_/microsoft-mssql-to
     ```
 
 ## MySQL
+
+Configuring the Senzing database in MySQL uses the
+[mysql](https://dev.mysql.com/doc/refman/8.0/en/mysql.html) command
+in a locally created [senzing/mysql-init](https://github.com/Senzing/docker-mysql-init) docker image.
+
+1. Build docker image.
+   Example:
+
+    ```console
+    sudo docker build \
+      --tag senzing/mysql-init \
+      https://github.com/senzing/docker-mysql-init.git
+    ```
+
+1. :pencil2: Set environment variables.
+   **Tip:** Do not set `MYSQL_HOSTNAME` to `localhost` nor `127.0.0.1` as that assumes the database is inside the docker container.
+   Example:
+
+    ```console
+    export MYSQL_HOSTNAME=mysql.example.com
+    export MYSQL_PASSWORD=g2
+    export MYSQL_USERNAME=g2
+    export SENZING_G2_DIR=/opt/my-senzing/g2
+    ```
+
+1. Populate database.
+   Example:
+
+    ```console
+    docker run \
+      --entrypoint mysql \
+      --interactive \
+      --name senzing-mysql-init \
+      --rm \
+      --tty \
+      --volume ${SENZING_G2_DIR}:/opt/senzing/g2 \
+      senzing/mysql-init \
+        --user=root \
+        --password=root \
+        --host=${MYSQL_HOSTNAME} \
+        --database=G2 \
+        --execute="source /opt/senzing/g2/resources/schema/g2core-schema-mysql-create.sql"
+    ```
 
 ## PostgreSQL
