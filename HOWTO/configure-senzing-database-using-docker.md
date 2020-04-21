@@ -22,7 +22,7 @@ Configuring the Senzing database in MS SQL uses the
 in a [mcr.microsoft.com/mssql-tools](https://hub.docker.com/_/microsoft-mssql-tools) docker image.
 
 1. :pencil2: Identify the hostname of the database.
-   **Tip:** Do not use `localhost` nor `127.0.0.1` as that assumes the database is inside the docker container.
+   **Tip:** Do not set `MSSQL_HOSTNAME` to `localhost` nor `127.0.0.1` as that assumes the database is inside the docker container.
    Example:
 
     ```console
@@ -42,10 +42,10 @@ in a [mcr.microsoft.com/mssql-tools](https://hub.docker.com/_/microsoft-mssql-to
       --tty \
       mcr.microsoft.com/mssql-tools \
         /opt/mssql-tools/bin/sqlcmd \
-        -P ${MSSQL_SA_PASSWORD} \
-        -Q "CREATE DATABASE G2" \
-        -S ${MSSQL_HOSTNAME} \
-        -U sa
+          -P ${MSSQL_SA_PASSWORD} \
+          -Q "CREATE DATABASE G2" \
+          -S ${MSSQL_HOSTNAME} \
+          -U sa
     ```
 
 1. Populate database.
@@ -60,13 +60,13 @@ in a [mcr.microsoft.com/mssql-tools](https://hub.docker.com/_/microsoft-mssql-to
       --volume ${SENZING_G2_DIR}:/opt/senzing/g2 \
       mcr.microsoft.com/mssql-tools \
         /opt/mssql-tools/bin/sqlcmd \
-        -d G2 \
-        -e \
-        -i /opt/senzing/g2/resources/schema/g2core-schema-mssql-create.sql \
-        -o /dev/stdout \
-        -P ${MSSQL_SA_PASSWORD} \
-        -S ${MSSQL_HOSTNAME} \
-        -U sa
+          -d G2 \
+          -e \
+          -i /opt/senzing/g2/resources/schema/g2core-schema-mssql-create.sql \
+          -o /dev/stdout \
+          -P ${MSSQL_SA_PASSWORD} \
+          -S ${MSSQL_HOSTNAME} \
+          -U sa
     ```
 
 ## MySQL
