@@ -35,7 +35,7 @@ in a [mcr.microsoft.com/mssql-tools](https://hub.docker.com/_/microsoft-mssql-to
    Example:
 
     ```console
-    docker run \
+    sudo docker run \
       --interactive \
       --name senzing-mssql-create-database \
       --rm \
@@ -52,7 +52,7 @@ in a [mcr.microsoft.com/mssql-tools](https://hub.docker.com/_/microsoft-mssql-to
    Example:
 
     ```console
-    docker run \
+    sudo docker run \
       --interactive \
       --name senzing-mssql-create-senzing \
       --rm \
@@ -99,7 +99,7 @@ in a locally created [senzing/mysql-init](https://github.com/Senzing/docker-mysq
    Example:
 
     ```console
-    docker run \
+    sudo docker run \
       --entrypoint mysql \
       --interactive \
       --name senzing-mysql-init \
@@ -115,3 +115,29 @@ in a locally created [senzing/mysql-init](https://github.com/Senzing/docker-mysq
     ```
 
 ## PostgreSQL
+
+1. :pencil2: Set environment variables.
+   **Tip:** Do not set `MYSQL_HOSTNAME` to `localhost` nor `127.0.0.1` as that assumes the database is inside the docker container.
+   Example:
+
+    ```console
+    export POSTGRES_HOSTNAME=mysql.example.com
+    export POSTGRES_PASSWORD=postgres
+    export POSTGRES_USERNAME=postgres
+    export SENZING_G2_DIR=/opt/my-senzing/g2
+    ```
+
+1. Populate database.
+   Example:
+
+    ```console
+    sudo docker run \
+      --env SENZING_DATABASE_URL="postgresql://${POSTGRES_USERNAME}:${POSTGRES_PASSWORD}@${POSTGRES_HOSTNAME}:5432/G2" \
+      --env SENZING_SQL_FILE=/opt/senzing/g2/resources/schema/g2core-schema-postgresql-create.sql \
+      --interactive \
+      --name senzing-postgres-init \
+      --rm \
+      --tty \
+      --volume ${SENZING_G2_DIR}:/opt/senzing/g2 \
+      senzing/postgresql-client
+    ```
