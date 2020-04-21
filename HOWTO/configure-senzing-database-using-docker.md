@@ -116,6 +116,10 @@ in a locally created [senzing/mysql-init](https://github.com/Senzing/docker-mysq
 
 ## PostgreSQL
 
+Configuring the Senzing database in PostgreSQL uses the
+[psql](https://www.postgresql.org/docs/12/app-psql.html) command
+in a [senzing/postgresql-client](https://hub.docker.com/r/senzing/postgresql-client) docker image.
+
 1. :pencil2: Set environment variables.
    **Tip:** Do not set `MYSQL_HOSTNAME` to `localhost` nor `127.0.0.1` as that assumes the database is inside the docker container.
    Example:
