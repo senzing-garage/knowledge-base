@@ -15,7 +15,7 @@ DOCKER_IMAGE_NAMES=(
   "senzing/apt:1.0.3"
   "senzing/db2-driver-installer:1.0.1"
   "senzing/entity-search-web-app:1.0.4"
-  "senzing/init-container:1.5.0"
+  "senzing/init-container:1.5.2"
   "senzing/jupyter:1.1.5"
   "senzing/mock-data-generator:1.1.1"
   "senzing/mysql-init:latest"
