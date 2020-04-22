@@ -9,6 +9,13 @@
 
 1. [Install the Microsoft ODBC driver for SQL Server (Linux)](https://docs.microsoft.com/en-us/sql/connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server)
 
+1. Set environment variables.
+   Example:
+
+    ```console
+    export ODBCSYSINI=/opt/microsoft/msodbcsql17/etc
+    ```
+
 ## Docker
 
 ### Configuration
