@@ -61,6 +61,10 @@ Open range: 8250-8265
 
 - [Senzing Configurator](https://github.com/Senzing/configurator)
 
+### 8254
+
+- [Senzing X-term](https://github.com/Senzing/docker-xterm)
+
 ## Other
 
 Open range: 9165-9190

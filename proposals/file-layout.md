@@ -750,3 +750,33 @@ Given all of the background from above, what needs changing?
         ├── python3m -> python3.6m
         :
         ```
+
+## Issues with current G2Project
+
+### GitHub
+
+1. Projects should be under source control.
+    1. Is entire Senzing G2 and data saved in source control?
+    1. If public GitHub, Senzing API is exposed without EULA protection.
+1. One repository many deploys.
+   [12 Factor - Codebase](https://12factor.net/codebase)
+    1. Hard coded values prevent multiple clones.
+       i.e. If one person checks code into source code,
+       another person cannot use the repository because of hard-coded values.
+
+### 12 Factor
+
+1. [Config](https://12factor.net/config)
+    1. Current G2Project does not support migration from developer environment, to staging, to production.
+    1. `G2Module.ini` becomes problematic
+    1. Need to use Environment variables
+1. [Disposaability](https://12factor.net/disposability)
+    1. Concepts like `G2UpdateProject.py` promote "pets" over "cattle"
+    1. Configuration is done at deployment, not "hard-coded" into project.
+
+### Mac/Windows development
+
+1. Without yum/apt install, the files aren't in the correct place to create a G2Project.
+
+
+
