@@ -5,36 +5,38 @@ The following is a list of tips when using
 
 ## Contents
 
-1. [Senzing license](#senzing-license)
-    1. [Request Senzing license](#request-senzing-license)
-    1. [Install Senzing license](#install-senzing-license)
+1. [Db2](#db2)
+1. [Jupyter Notebooks](#jupyter-notebooks)
 1. [Kafka](#kafka)
     1. [View Kafdrop](#view-kafdrop)
     1. [Send messages to Kafka topic](#send-messages-to-kafka-topic)
     1. [Read messages from Kafka topic](#read-messages-from-kafka-topic)
     1. [Kafka references](#kafka-references)
-1. [RabbitMQ](#rabbitmq)
-1. [PostgreSQL](#postgresql)
-    1. [View PostgreSQL](#view-postgresql)
-    1. [View records in PostgreSQL](#view-records-in-postgresql)
 1. [MySQL](#mysql)
     1. [View MySQL](#view-mysql)
     1. [View records in PostgreSQL](#view-records-in-mysql)
 1. [MS SQL](#ms-sql)
     1. [View MS SQL](#view-ms-sql)
     1. [View records in MS SQL](#view-records-in-ms-sql)
-1. [SQLite](#sqlite)
-    1. [View SQLite](#view-sqlite)
-    1. [View records in SQLite](#view-records-in-sqlite)
-1. [Db2](#db2)
+1. [PostgreSQL](#postgresql)
+    1. [View PostgreSQL](#view-postgresql)
+    1. [View records in PostgreSQL](#view-records-in-postgresql)
+1. [RabbitMQ](#rabbitmq)
 1. [Senzing API server](#senzing-api-server)
     1. [Senzing API server via web browser](#senzing-api-server-via-web-browser)
     1. [Senzing API server via curl](#senzing-api-server-via-curl)
     1. [Senzing API server via Swagger editor](#senzing-api-server-via-swagger-editor)
+1. [Senzing Configurator](#senzing-configurator)
 1. [Senzing Entity Search WebApp](#senzing-entity-search-webapp)
     1. [View Senzing Entity Search WebApp](#view-senzing-entity-search-webapp)
     1. [Senzing Entity Search WebApp demo](#senzing-entity-search-webapp-demo)
-1. [Jupyter Notebooks](#jupyter-notebooks)
+1. [Senzing license](#senzing-license)
+    1. [Request Senzing license](#request-senzing-license)
+    1. [Install Senzing license](#install-senzing-license)
+1. [Senzing X-Term](#senzing-x-term)
+1. [SQLite](#sqlite)
+    1. [View SQLite](#view-sqlite)
+    1. [View records in SQLite](#view-records-in-sqlite)
 
 ## Db2
 
@@ -203,7 +205,7 @@ The Senzing REST API server supports the
 1. The [demonstration](https://github.com/Senzing/knowledge-base/blob/master/demonstrations/docker-compose-web-app.md)
    instructions will give a tour of the Senzing web app.
 
-## Senzing Entity Search WebApp references
+### Senzing Entity Search WebApp references
 
 1. [github.com/Senzing/entity-search-web-app](https://github.com/Senzing/entity-search-web-app)
 
