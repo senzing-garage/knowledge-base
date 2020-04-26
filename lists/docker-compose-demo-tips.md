@@ -230,6 +230,8 @@ The Senzing REST API server supports the
     sudo cp ${G2_LICENSE_PATH} ${SENZING_ETC_DIR}/g2.lic
     ```
 
+## Senzing X-Term
+
 ## SQLite
 
 ### View SQLite
