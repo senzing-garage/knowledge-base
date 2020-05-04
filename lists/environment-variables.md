@@ -703,6 +703,20 @@
 1. Where used:
     1. [docker-init-container](https://github.com/Senzing/docker-init-container),
 
+### SENZING_DOCKER_SOCKET
+
+1. Synopsis:
+    1. Location of socket used to communicate with Docker.
+1. Examples:
+    1. Common Linux location
+
+        ```console
+        export SENZING_DOCKER_SOCKET=/var/run/docker.sock
+        ```
+
+1. Where used:
+    1. [senzing-environment](https://github.com/Senzing/senzing-environment),
+
 ### SENZING_DOWNLOAD_DIR
 
 1. Synopsis:
@@ -937,6 +951,29 @@
 
 1. Where used:
     1. [resolver](https://github.com/Senzing/resolver),
+
+### SENZING_PORTAINER_DIR
+
+1. Synopsis:
+    1. A directory where [Portainer](https://github.com/Senzing/knowledge-base/blob/master/WHATIS/portainer.md) can keep variable data.
+1. Where used:
+    1. [senzing-environment](https://github.com/Senzing/senzing-environment),
+
+### SENZING_SQL_CONNECTION
+
+1. Synopsis:
+    1. A database URI in the form native to the database client driver.
+    1. This differs from [SENZING_DATABASE_URL](#senzing_database_url), which has been "normalized"
+       and is not in the native format.
+1. Examples:
+    1. Using an IP address:
+
+        ```console
+        export SENZING_SQL_CONNECTION=mysql://username:password@hostname:3306/?schema=schemaname
+        ```
+
+1. Where used:
+    1. [senzing-environment](https://github.com/Senzing/senzing-environment),
 
 ### SENZING_PROCESSES
 
