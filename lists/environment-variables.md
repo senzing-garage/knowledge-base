@@ -662,6 +662,42 @@
 1. Forms:
     1. Helm: senzing.senzingDir
 
+### SENZING_DOCKER_HOST_IP_ADDR
+
+1. Synopsis:
+    1. The IP address of the system hosting Docker containers.
+1. Examples:
+    1. Manually specify.
+       Example:
+
+        ```console
+        export SENZING_DOCKER_HOST_IP_ADDR=10.1.1.100
+        ```
+
+    1. To find the value for SENZING_DOCKER_HOST_IP_ADDR use Python interactively:
+       Example:
+
+        ```console
+        python3
+        ```
+
+       Copy and paste the following lines into the Python REPL (Read-Evaluate-Print Loop):
+
+        ```python
+        import socket
+
+        sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        sock.connect(("8.8.8.8", 80))
+        print("export SENZING_DOCKER_HOST_IP_ADDR={0}".format(sock.getsockname()[0]))
+        sock.close()
+        quit()
+        ```
+
+       Copy and paste the printed export statement into the host terminal.
+
+1. Where used:
+    1. [senzing-environment](https://github.com/Senzing/senzing-environment),
+
 ### SENZING_DOCKER_LAUNCHED
 
 1. Where used:
@@ -910,6 +946,37 @@
     1. Default: 1
 1. Where used:
     1. [stream-loader](https://github.com/Senzing/stream-loader),
+
+### SENZING_PROJECT_DIR
+
+1. Synopsis:
+    1. A path to a Senzing project.
+1. Examples:
+    1. A project in the home directory.
+       Example:
+
+        ```console
+        export SENZING_PROJECT_DIR=~/my-senzing-project
+        ```
+
+1. Where used:
+    1. [senzing-environment](https://github.com/Senzing/senzing-enviroment),
+
+### SENZING_PROJECT_NAME
+
+1. Synopsis:
+    1. The name of a Senzing project.
+    1. Used as a prefix when creating objects for the project.
+1. Examples:
+    1. A project in the home directory.
+       Example:
+
+        ```console
+        export SENZING_PROJECT_NAME=~/test01
+        ```
+
+1. Where used:
+    1. [senzing-environment](https://github.com/Senzing/senzing-enviroment),
 
 ### SENZING_QUEUE_MAX
 
