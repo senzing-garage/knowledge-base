@@ -1,10 +1,21 @@
 # air-gap-senzing-environment
 
+The following instructions show how to prepare a TGZ file for use with
+[senzing-enviroment](https://github.com/Senzing/senzing-environment)
+in an air-gapped environment.
+
+The method involves 3 steps:
+
+1. On a non-air-gapped system, create a TGZ file.
+1. Transfer the TGZ file from the non-air-gapped system to the air-gapped system.
+1. Use the TGZ file on the air-gapped file to populate a docker repository,
+   (optionally) populate a docker registry,
+   and run a program to add Docker support to a Senzing project.
+
 ## Contents
 
 1. [On non-air-gapped system](#on-non-air-gapped-system)
     1. [Download](#download)
-    1. [Modify](#modify)
     1. [Run](#run)
 1. [Transfer](#transfer)
 1. [On air-gapped system](#on-air-gapped-system)
@@ -66,7 +77,7 @@ This method has been tested on Linux and macOS systems.
 
 ## Transfer
 
-1. Transfer `air-gap-senzing-environment-nnnnnnnnnn.tgz` file to the air-gapped system.
+1. Transfer the `air-gap-senzing-environment-nnnnnnnnnn.tgz` file to the air-gapped system.
 
 ## On air-gapped system
 
