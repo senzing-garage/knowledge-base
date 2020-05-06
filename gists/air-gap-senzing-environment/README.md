@@ -12,7 +12,7 @@ The instructions have 3 major steps:
 1. Transfer the TGZ file from the non-air-gapped system to the air-gapped system.
 1. On the air-gapped system, use the TGZ file to populate a docker repository,
    (optionally) populate a docker registry,
-   and run a program to add Docker support to a Senzing project.
+   and run a program to add Docker support to an existing Senzing project.
 
 ## Contents
 
@@ -47,7 +47,7 @@ This method has been tested on Linux and macOS systems.
        Example:
 
         ```console
-        export MY_DOCKER_AIR_GAP_HELPER=~/air-gap-senzing-environment.sh
+        export SENZING_AIR_GAP_SCRIPT=~/air-gap-senzing-environment.sh
         ```
 
     1. Download file.
@@ -55,7 +55,7 @@ This method has been tested on Linux and macOS systems.
 
         ```console
         curl -X GET \
-          --output ${MY_DOCKER_AIR_GAP_HELPER} \
+          --output ${SENZING_AIR_GAP_SCRIPT} \
           https://raw.githubusercontent.com/Senzing/knowledge-base/master/gists/air-gap-senzing-environment/air-gap-senzing-environment.sh
         ```
 
@@ -63,7 +63,7 @@ This method has been tested on Linux and macOS systems.
        Example:
 
         ```console
-        chmod +x ${MY_DOCKER_AIR_GAP_HELPER}
+        chmod +x ${SENZING_AIR_GAP_SCRIPT}
         ```
 
 ### Run
@@ -72,11 +72,11 @@ This method has been tested on Linux and macOS systems.
    Example:
 
     ```console
-    ${MY_DOCKER_AIR_GAP_HELPER}
+    ${SENZING_AIR_GAP_SCRIPT}
     ```
 
 1. This produces the following output:
-    1. A directory in the form `~/air-gap-senzing-environment-nnnnnnnnnn.tgz` where `nnnnnnnnnn` is the Unix Timestamp of creation.
+    1. A directory in the form `~/air-gap-senzing-environment-nnnnnnnnnn` where `nnnnnnnnnn` is the Unix Timestamp of creation.
     1. A file in the form `~/air-gap-senzing-environment-nnnnnnnnnn.tgz` which is a tar-gzipped version of the directory.
 
 ## Transfer
@@ -95,7 +95,7 @@ This method has been tested on Linux systems.
    Example:
 
     ```console
-    export MY_DOCKER_AIR_GAP_HELPER_TGZ=~/air-gap-senzing-environment-nnnnnnnnnn.tgz
+    export SENZING_AIR_GAP_TGZ=~/air-gap-senzing-environment-nnnnnnnnnn.tgz
     ```
 
 1. :pencil2: Specify the output location for uncompressing the file.
@@ -111,13 +111,20 @@ This method has been tested on Linux systems.
    Example:
 
     ```console
-    tar -zxvf ${MY_DOCKER_AIR_GAP_HELPER_TGZ} --directory ${MY_OUTPUT_DIR}
+    tar -zxvf ${SENZING_AIR_GAP_TGZ} --directory ${MY_OUTPUT_DIR}
     ```
 
 ### Load local docker repository
 
 This step will add the docker images to the docker repository on the local workstation.
 The contents of the local docker repository are seen via the `docker images` command.
+
+1. View docker images before loading the new images.
+   Example:
+
+    ```console
+    sudo docker images | grep senzing
+    ```
 
 1. :pencil2: Make extracted directory the current working directory.
    Example:
