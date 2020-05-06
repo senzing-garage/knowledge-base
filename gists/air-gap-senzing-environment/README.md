@@ -1,14 +1,15 @@
 # air-gap-senzing-environment
 
-The following instructions show how to prepare a TGZ file for use with
+The following instructions show how to prepare a TGZ file containing
 [senzing-enviroment](https://github.com/Senzing/senzing-environment)
-in an air-gapped environment.
+and its dependencies.
+The TGZ file is used to add docker support to an existing Senzing project in an air-gapped environment.
 
-The method involves 3 steps:
+The instructions have 3 major steps:
 
 1. On a non-air-gapped system, create a TGZ file.
 1. Transfer the TGZ file from the non-air-gapped system to the air-gapped system.
-1. Use the TGZ file on the air-gapped file to populate a docker repository,
+1. On the air-gapped system, use the TGZ file to populate a docker repository,
    (optionally) populate a docker registry,
    and run a program to add Docker support to a Senzing project.
 
@@ -25,8 +26,9 @@ The method involves 3 steps:
 
 ## On non-air-gapped system
 
-The goal of these steps is to produce a compressed file of `tgz` format
-containing docker images that can be installed on an air-gapped private docker registry.
+The goal of these steps is to produce a compressed file in `tgz` format
+containing docker images that can be installed on an air-gapped private docker registry
+and the `senzing-environment.py` program.
 
 The following steps are performed on an internet-connected system.
 They will not work on an air-gapped system.
@@ -169,11 +171,18 @@ If working on a single workstation, this step is not necessary.
 
 ### Add Docker support to Senzing project
 
+Before installing docker support on an air-gapped system
+Senzing needs to be installed and a Senzing project needs to be created.
+Instructions for this are at
+[Install - Air Gapped Systems](https://senzing.zendesk.com/hc/en-us/articles/360039787373-Install-Air-Gapped-Systems)
+and
+[Quickstart Guide](https://senzing.zendesk.com/hc/en-us/articles/115002408867-Quickstart-Guide).
+
 1. :pencil2: Specify the location of the Senzing project on the host system.
    Example:
 
     ```console
-    export SENZING_PROJECT_DIR=~/senzing-demo-project-1
+    export SENZING_PROJECT_DIR=~/senzing-project
     ```
 
 1. Add Docker support to existing Senzing project.
