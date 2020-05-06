@@ -4,14 +4,14 @@ The following instructions show how to prepare a TGZ file containing
 [senzing-enviroment](https://github.com/Senzing/senzing-environment)
 and its dependencies.
 The TGZ file is used in an air-gapped environment
-for adding docker support to an existing Senzing project.
+for adding Docker support to an existing Senzing project.
 
 The instructions have 3 major steps:
 
 1. On a non-air-gapped system, create a TGZ file.
 1. Transfer the TGZ file from the non-air-gapped system to the air-gapped system.
-1. On the air-gapped system, use the TGZ file to populate a docker repository,
-   (optionally) populate a docker registry,
+1. On the air-gapped system, use the TGZ file to populate a Docker repository,
+   (optionally) populate a Docker registry,
    and run a program to add Docker support to an existing Senzing project.
 
 ## Contents
@@ -22,14 +22,14 @@ The instructions have 3 major steps:
 1. [Transfer](#transfer)
 1. [On air-gapped system](#on-air-gapped-system)
     1. [Extract file](#extract-file)
-    1. [Load local docker repository](#load-local-docker-repository)
-    1. [Load private docker registry](#load-private-docker-registry)
+    1. [Load local Docker repository](#load-local-docker-repository)
+    1. [Load private Docker registry](#load-private-docker-registry)
     1. [Add Docker support to Senzing project](#add-docker-support-to-senzing-project)
 
 ## On non-air-gapped system
 
 The goal of these steps is to produce a compressed file in `tgz` format
-containing docker images that can be installed on an air-gapped private docker registry
+containing Docker images that can be installed on an air-gapped private Docker registry
 and the `senzing-environment.py` program.
 
 The following steps are performed on an internet-connected system.
@@ -114,12 +114,12 @@ This method has been tested on Linux systems.
     tar -zxvf ${SENZING_AIR_GAP_TGZ} --directory ${MY_OUTPUT_DIR}
     ```
 
-### Load local docker repository
+### Load local Docker repository
 
-This step will add the docker images to the docker repository on the local workstation.
-The contents of the local docker repository are seen via the `docker images` command.
+This step will add the Docker images to the Docker repository on the local workstation.
+The contents of the local Docker repository are seen via the `docker images` command.
 
-1. View docker images before loading the new images.
+1. View Docker images before loading the new images.
    Example:
 
     ```console
@@ -142,17 +142,17 @@ The contents of the local docker repository are seen via the `docker images` com
     sudo ./docker-air-gap-load-repository.sh
     ```
 
-1. Verify the new docker images.
+1. Verify the new Docker images.
    Example:
 
     ```console
     sudo docker images | grep senzing
     ```
 
-### Load private docker registry
+### Load private Docker registry
 
-:thinking: **Optional:** This step is only needed if the docker images
-need to be added to a private docker registry.
+:thinking: **Optional:** This step is only needed if the Docker images
+need to be added to a private Docker registry.
 If working on a single workstation, this step is not necessary.
 
 1. :pencil2: Make extracted directory the current working directory.
@@ -162,7 +162,7 @@ If working on a single workstation, this step is not necessary.
     cd ${MY_OUTPUT_DIR}/air-gap-senzing-environment-nnnnnnnnnn
     ```
 
-1. :pencil2: Identify the URL of the private docker registry.
+1. :pencil2: Identify the URL of the private Docker registry.
    Example:
 
     ```console
@@ -180,7 +180,7 @@ If working on a single workstation, this step is not necessary.
 
 ### Add Docker support to Senzing project
 
-Before installing docker support on an air-gapped system
+Before installing Docker support on an air-gapped system
 Senzing needs to be installed and a Senzing project needs to be created.
 Instructions for this are at
 [Install - Air Gapped Systems](https://senzing.zendesk.com/hc/en-us/articles/360039787373-Install-Air-Gapped-Systems)
