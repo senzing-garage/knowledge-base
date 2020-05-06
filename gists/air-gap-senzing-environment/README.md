@@ -3,7 +3,8 @@
 The following instructions show how to prepare a TGZ file containing
 [senzing-enviroment](https://github.com/Senzing/senzing-environment)
 and its dependencies.
-The TGZ file is used to add docker support to an existing Senzing project in an air-gapped environment.
+The TGZ file is used in an air-gapped environment
+for adding docker support to an existing Senzing project.
 
 The instructions have 3 major steps:
 
@@ -23,6 +24,7 @@ The instructions have 3 major steps:
     1. [Extract file](#extract-file)
     1. [Load local docker repository](#load-local-docker-repository)
     1. [Load private docker registry](#load-private-docker-registry)
+    1. [Add Docker support to Senzing project](#add-docker-support-to-senzing-project)
 
 ## On non-air-gapped system
 
