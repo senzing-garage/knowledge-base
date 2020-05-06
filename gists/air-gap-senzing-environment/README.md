@@ -10,8 +10,8 @@ The instructions have 3 major steps:
 
 1. On a non-air-gapped system, create a TGZ file.
 1. Transfer the TGZ file from the non-air-gapped system to the air-gapped system.
-1. On the air-gapped system, use the TGZ file to populate a Docker repository,
-   (optionally) populate a Docker registry,
+1. On the air-gapped system, use the TGZ file to populate an local Docker repository,
+   (optionally) populate a private Docker registry,
    and run a program to add Docker support to an existing Senzing project.
 
 ## Contents
