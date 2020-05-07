@@ -83,19 +83,16 @@ do
 
 done
 
-# Save senzing-environment.py to output directory.
+# Save individual files to output directory.
 
 curl -X GET \
   --output ${OUTPUT_DIR}/senzing-environment.py \
   https://raw.githubusercontent.com/Senzing/senzing-environment/master/senzing-environment.py
-
 chmod +x ${OUTPUT_DIR}/senzing-environment.py
-
-# Save parse-1.15.0-py3-none-any.whl to output directory.
 
 curl -X GET \
   --output ${OUTPUT_DIR}/parse-1.15.0-py3-none-any.whl \
-  https://raw.githubusercontent.com/Senzing/senzing-environment/master/parse-1.15.0-py3-none-any.whl
+  https://raw.githubusercontent.com/Senzing/knowledge-base/master/gists/air-gap-senzing-environment/parse-1.15.0-py3-none-any.whl
 
 # Compress results.
 
