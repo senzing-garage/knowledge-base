@@ -3,7 +3,6 @@
 # Enumerate docker images to be processed
 
 DOCKER_IMAGE_NAMES=(
-  "senzing/init-container:latest"
   "senzing/web-app-demo:latest"
 )
 
@@ -38,6 +37,8 @@ cat <<EOT > ${OUTPUT_LOAD_REPOSITORY_SCRIPT}
 
 OK=0
 NOT_OK=1
+
+pip3 install ./parse-1.15.0-py3-none-any.whl
 
 EOT
 chmod +x ${OUTPUT_LOAD_REPOSITORY_SCRIPT}
@@ -89,6 +90,12 @@ curl -X GET \
   https://raw.githubusercontent.com/Senzing/senzing-environment/master/senzing-environment.py
 
 chmod +x ${OUTPUT_DIR}/senzing-environment.py
+
+# Save parse-1.15.0-py3-none-any.whl to output directory.
+
+curl -X GET \
+  --output ${OUTPUT_DIR}/parse-1.15.0-py3-none-any.whl \
+  https://raw.githubusercontent.com/Senzing/senzing-environment/master/parse-1.15.0-py3-none-any.whl
 
 # Compress results.
 
