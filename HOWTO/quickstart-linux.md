@@ -65,7 +65,7 @@ Depending on the distribution of Linux, there are different ways of installing S
 1. Add the Senzing apt repository to the local workstation.
    Example:
 
-    1. xxx
+    1. Download a `deb` package that will be used to add Senzing to the local apt repository.
        Example:
 
         ```console
@@ -74,21 +74,22 @@ Depending on the distribution of Linux, there are different ways of installing S
           https://senzing-production-apt.s3.amazonaws.com/senzingrepo_1.0.0-1_amd64.deb
         ```
 
-    1. xxx
+    1. Add Senzing to the local apt repository.
        Example:
 
         ```console
         sudo apt install ~/senzingrepo_1.0.0-1_amd64.deb
         ```
 
-    1. xxx
+    1. Update the local apt repository.
        Example:
 
         ```console
         sudo apt update
         ```
 
-    1. xxx
+    1. The `deb` file is no longer needed.
+       It may be deleted.
        Example:
 
         ```console
