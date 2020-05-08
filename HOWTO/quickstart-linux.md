@@ -245,6 +245,9 @@ These steps add files to the Senzing project used to bring up Docker containers.
     sudo ${SENZING_PROJECT_DIR}/docker-bin/senzing-quickstart-demo.sh
     ```
 
+   Note: On first use, the Docker image will be automatically downloaded from
+   [DockerHub](https://hub.docker.com/) and cached in the workstations local Docker repository.
+
 1. Verify the system works.
    View  [Entity search webapp](http://localhost:8251/)
     1. Search for "Robert Jones"
