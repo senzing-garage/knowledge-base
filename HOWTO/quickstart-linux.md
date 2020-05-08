@@ -6,8 +6,8 @@ Based on
 ### Contents
 
 1. [Install Senzing](#install-senzing)
-    1. [Install Senzing on Red Hat](#install-senzing-on-red-hat)
-    1. [Install Senzing on Debian](#install-senzing-on-debian)
+    1. [Install Senzing using Yum](#install-senzing-using-yum)
+    1. [Install Senzing using Apt](#install-senzing-using-apt)
 1. [Create a Senzing project](#create-a-senzing-project)
 1. [Initialize Senzing project](#initialize-senzing-project)
 1. [Add Docker support](#add-docker-support)
@@ -27,12 +27,12 @@ Depending on the distribution of Linux, there are different ways of installing S
 
 1. For installation on Red Hat, CentOS, openSuse and
    [others](https://en.wikipedia.org/wiki/List_of_Linux_distributions#RPM-based).
-    1. Proceed to [Install Senzing on Red Hat](#install-senzing-on-red-hat)
+    1. Proceed to [Install Senzing using Yum](#install-senzing-using-yum)
 1. For installation on Debian, Ubuntu and
    [others](https://en.wikipedia.org/wiki/List_of_Linux_distributions#Debian-based),
-    1. Proceed to [Install Senzing on Debian](#install-senzing-on-debian)
+    1. Proceed to [Install Senzing using Apt](#install-senzing-using-apt)
 
-### Install Senzing on Red Hat
+### Install Senzing using Yum
 
 1. Add the Senzing yum repository to the local workstation.
    Example:
@@ -53,7 +53,7 @@ Depending on the distribution of Linux, there are different ways of installing S
 
 1. Proceed to [Create a Senzing project](#create-a-senzing-project).
 
-### Install Senzing on Debian
+### Install Senzing using Apt
 
 1. Add required system packages.
    Example:
@@ -65,23 +65,35 @@ Depending on the distribution of Linux, there are different ways of installing S
 1. Add the Senzing apt repository to the local workstation.
    Example:
 
-    ```console
-    curl -X GET \
-      --output ~/senzingrepo_1.0.0-1_amd64.deb
-      https://senzing-production-apt.s3.amazonaws.com/senzingrepo_1.0.0-1_amd64.deb
-    ```
+    1. xxx
+       Example:
 
-    ```console
-    sudo apt install ~/senzingrepo_1.0.0-1_amd64.deb
-    ```
+        ```console
+        curl -X GET \
+          --output ~/senzingrepo_1.0.0-1_amd64.deb
+          https://senzing-production-apt.s3.amazonaws.com/senzingrepo_1.0.0-1_amd64.deb
+        ```
 
-    ```console
-    sudo apt update
-    ````
+    1. xxx
+       Example:
 
-    ```console
-    rm  ~/senzingrepo_1.0.0-1_amd64.deb
-    ````
+        ```console
+        sudo apt install ~/senzingrepo_1.0.0-1_amd64.deb
+        ```
+
+    1. xxx
+       Example:
+
+        ```console
+        sudo apt update
+        ```
+
+    1. xxx
+       Example:
+
+        ```console
+        rm  ~/senzingrepo_1.0.0-1_amd64.deb
+        ```
 
 1. :thinking: Install Senzing with `apt`.
    During the installation there will be prompts for acceptance.
