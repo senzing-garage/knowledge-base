@@ -10,6 +10,7 @@ Based on
     1. [Install Senzing using Yum](#install-senzing-using-yum)
     1. [Install Senzing using Apt](#install-senzing-using-apt)
 1. [Create a Senzing project](#create-a-senzing-project)
+1. [Identify Senzing database](#identify-senzing-database)
 1. [Initialize Senzing project](#initialize-senzing-project)
 1. [Add Docker support](#add-docker-support)
 1. [Run demonstration](#run-demonstration)
