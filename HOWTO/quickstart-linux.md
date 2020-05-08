@@ -127,7 +127,7 @@ Depending on the distribution of Linux, there are different ways of installing S
 
         ```console
         curl -X GET \
-          --output ~/senzingrepo_1.0.0-1_amd64.deb
+          --output ~/senzingrepo_1.0.0-1_amd64.deb \
           https://senzing-production-apt.s3.amazonaws.com/senzingrepo_1.0.0-1_amd64.deb
         ```
 
