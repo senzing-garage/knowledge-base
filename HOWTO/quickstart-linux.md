@@ -230,7 +230,7 @@ These steps add files to the Senzing project used to bring up Docker containers.
         chmod +x ${SENZING_DOWNLOAD_FILE}
         ```
 
-1. Run the command.
+1. Run the command to create additional files in the Senzing repository for Docker support.
    Example:
 
    ```console
@@ -249,5 +249,5 @@ These steps add files to the Senzing project used to bring up Docker containers.
    On first use, the Docker image will be automatically downloaded from
    [DockerHub](https://hub.docker.com/) and cached in the workstation's local Docker repository.
 
-1. View [Entity search webapp](http://localhost:8251/)
+1. View [Entity search webapp](http://localhost:8251/).
     1. Search for "Robert Jones"
