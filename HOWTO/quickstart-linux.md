@@ -3,7 +3,7 @@
 Based on
 [Quickstart Guide](https://senzing.zendesk.com/hc/en-us/articles/115002408867-Quickstart-Guide).
 
-### Contents
+## Contents
 
 1. [Prerequisites](#prerequisites)
 1. [Install Senzing](#install-senzing)
@@ -14,7 +14,7 @@ Based on
 1. [Add Docker support](#add-docker-support)
 1. [Run demonstration](#run-demonstration)
 
-#### Legend
+### Legend
 
 1. :thinking: - A "thinker" icon means that a little extra thinking may be required.
    Perhaps there are some choices to be made.
@@ -210,7 +210,7 @@ These steps add files to the Senzing project used to bring up Docker containers.
    Example:
 
     ```console
-    ${SENZING_PROJECT_DIR}/docker-bin/senzing-quickstart-demo.sh
+    sudo ${SENZING_PROJECT_DIR}/docker-bin/senzing-quickstart-demo.sh
     ```
 
 1. Verify the system works.
