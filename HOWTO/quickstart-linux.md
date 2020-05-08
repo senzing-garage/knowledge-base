@@ -36,6 +36,14 @@ These are "one-time tasks" which may already have been completed.
             sudo docker run hello-world
             ```
 
+    1. [pip3](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/install-pip3.md)
+        1. Verify.
+           Example:
+
+            ```console
+            pip3 --version
+            ```
+
     1. Python modules.
 
         1. `pip3` installs.
