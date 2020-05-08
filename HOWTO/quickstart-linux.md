@@ -63,9 +63,10 @@ These are "one-time tasks" which may already have been completed.
 
             ```python
             import parse
-            print("If this prints, then 'parse' is installed.")
             quit()
             ```
+
+           If successful, no error will appear.
 
 ## Install Senzing
 
@@ -227,8 +228,6 @@ These steps add files to the Senzing project used to bring up Docker containers.
         ```console
         chmod +x ${SENZING_DOWNLOAD_FILE}
         ```
-
-
 
 1. Run the command.
    Example:
