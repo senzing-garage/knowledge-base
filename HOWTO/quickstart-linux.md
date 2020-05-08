@@ -27,8 +27,44 @@ Based on
 :thinking: The following tasks need to be complete before proceeding.
 These are "one-time tasks" which may already have been completed.
 
-1. The following software programs need to be installed:
+1. The following software programs need to be installed and running on the workstation:
     1. [docker](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/install-docker.md)
+        1. Verify.
+           Example:
+
+            ```console
+            sudo docker run hello-world
+            ```
+
+    1. Python modules.
+
+        1. `pip3` installs.
+           Example:
+
+            ```console
+            sudo pip3 install parse
+            ```
+
+            1. :thinking: **In an air-gapped environment,** python files are installed via "wheel" files.
+               Example:
+
+                ```console
+                sudo pip3 install ./parse-1.15.0-py3-none-any.whl
+                ```
+
+        1. Verify.
+           Example:
+
+            ```console
+            python3
+            ```
+
+           Copy and paste the following lines into the Python REPL (Read-Evaluate-Print Loop):
+
+            ```python
+            import parse
+            quit()
+            ```
 
 ## Install Senzing
 
@@ -36,10 +72,10 @@ Depending on the distribution of Linux, there are different ways of installing S
 
 1. For installation on Red Hat, CentOS, openSuse and
    [others](https://en.wikipedia.org/wiki/List_of_Linux_distributions#RPM-based).
-    1. Proceed to [Install Senzing using Yum](#install-senzing-using-yum)
+    1. Proceed to [Install Senzing using Yum](#install-senzing-using-yum).
 1. For installation on Debian, Ubuntu and
    [others](https://en.wikipedia.org/wiki/List_of_Linux_distributions#Debian-based).
-    1. Proceed to [Install Senzing using Apt](#install-senzing-using-apt)
+    1. Proceed to [Install Senzing using Apt](#install-senzing-using-apt).
 
 ### Install Senzing using Yum
 
@@ -47,7 +83,8 @@ Depending on the distribution of Linux, there are different ways of installing S
    Example:
 
     ```console
-    sudo yum install https://senzing-production-yum.s3.amazonaws.com/senzingrepo-1.0.0-1.x86_64.rpm
+    sudo yum install \
+      https://senzing-production-yum.s3.amazonaws.com/senzingrepo-1.0.0-1.x86_64.rpm
     ```
 
 1. :thinking: Install Senzing with `yum`.
@@ -108,7 +145,7 @@ Depending on the distribution of Linux, there are different ways of installing S
 1. :thinking: Install Senzing with `apt`.
    During the installation there will be prompts for acceptance.
    Some prompts are for the
-   [Senzing End User License Agreement](https://senzing.com/end-user-license-agreement/)(EULA).
+   [Senzing End User License Agreement](https://senzing.com/end-user-license-agreement/) (EULA).
    Example:
 
     ```console
@@ -117,7 +154,7 @@ Depending on the distribution of Linux, there are different ways of installing S
 
 ## Create a Senzing project
 
-1. Specify the location of the Senzing project on the host system.
+1. :pencil2: Specify the location of the Senzing project on the host system.
    Example:
 
     ```console
@@ -190,12 +227,7 @@ These steps add files to the Senzing project used to bring up Docker containers.
         chmod +x ${SENZING_DOWNLOAD_FILE}
         ```
 
-1. Add python modules.
-   Example:
 
-   ```console
-   sudo pip3 install parse
-   ```
 
 1. Run the command.
    Example:
