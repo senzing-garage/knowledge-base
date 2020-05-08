@@ -63,6 +63,7 @@ These are "one-time tasks" which may already have been completed.
 
             ```python
             import parse
+            print("No error. 'parse' is installed.")
             quit()
             ```
 
