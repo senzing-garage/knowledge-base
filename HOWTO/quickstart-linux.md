@@ -5,6 +5,7 @@ Based on
 
 ### Contents
 
+1. [Prerequisites](#prerequisites)
 1. [Install Senzing](#install-senzing)
     1. [Install Senzing using Yum](#install-senzing-using-yum)
     1. [Install Senzing using Apt](#install-senzing-using-apt)
@@ -20,6 +21,14 @@ Based on
    Perhaps it's an optional step.
 1. :pencil2: - A "pencil" icon means that the instructions may need modification before performing.
 1. :warning: - A "warning" icon means that something tricky is happening, so pay attention.
+
+## Prerequisites
+
+:thinking: The following tasks need to be complete before proceeding.
+These are "one-time tasks" which may already have been completed.
+
+1. The following software programs need to be installed:
+    1. [docker](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/install-docker.md)
 
 ## Install Senzing
 
@@ -135,7 +144,8 @@ installing configuration into the Senzing database and adding exemplar data.
     source setupEnv
     ```
 
-1. Prime the database.
+1. :thinking: Prime the database.
+   A prompt will be given, type "yes".
    Example:
 
     ```console
@@ -184,7 +194,7 @@ These steps add files to the Senzing project used to bring up Docker containers.
    Example:
 
    ```console
-   pip3 install parse
+   sudo pip3 install parse
    ```
 
 1. Run the command.
