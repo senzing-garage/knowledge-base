@@ -29,7 +29,7 @@ Depending on the distribution of Linux, there are different ways of installing S
    [others](https://en.wikipedia.org/wiki/List_of_Linux_distributions#RPM-based).
     1. Proceed to [Install Senzing using Yum](#install-senzing-using-yum)
 1. For installation on Debian, Ubuntu and
-   [others](https://en.wikipedia.org/wiki/List_of_Linux_distributions#Debian-based),
+   [others](https://en.wikipedia.org/wiki/List_of_Linux_distributions#Debian-based).
     1. Proceed to [Install Senzing using Apt](#install-senzing-using-apt)
 
 ### Install Senzing using Yum
@@ -44,7 +44,7 @@ Depending on the distribution of Linux, there are different ways of installing S
 1. :thinking: Install Senzing with `yum`.
    During the installation there will be prompts for acceptance.
    Some prompts are for the
-   [Senzing End User License Agreement](https://senzing.com/end-user-license-agreement/)(EULA).
+   [Senzing End User License Agreement](https://senzing.com/end-user-license-agreement/) (EULA).
    Example:
 
     ```console
