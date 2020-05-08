@@ -215,6 +215,34 @@ installing configuration into the Senzing database and adding sample data.
     python3 python/G2Loader.py -P
     ```
 
+## Identify Senzing database
+
+:thinking: **Optional, but recommended:**
+By default, an SQLite database is used by the Quickstart instructions.
+The system runs better with a PostgreSQL database.
+To set up a PostgreSQL database, visit
+[Setup PostgreSQL on RedHat/CentOS](https://senzing.zendesk.com/hc/en-us/articles/360026348454-Setup-PostgreSQL-on-RedHat-CentOS).
+
+Once the PostgreSQL database is running and has a Senzing schema installed,
+perform the following steps:
+
+1. Edit `${SENZING_PROJECT_DIR}/etc/G2Module.ini`
+   Example:
+
+    ```console
+    vi ${SENZING_PROJECT_DIR}/etc/G2Module.ini
+    ```
+
+1. :pencil2: Modify contents of file.
+   Change the SQL.CONNECTION value to point to the PostgreSQL instance
+   using the `username`, `password`, and `hostname` of the PostgreSQL instance.
+   Example:
+
+    ```console
+    [SQL]
+       CONNECTION=postgresql://username:password@hostname:5432:G2/
+    ```
+
 ## Add Docker support
 
 These steps add files to the Senzing project used to bring up Docker containers.
