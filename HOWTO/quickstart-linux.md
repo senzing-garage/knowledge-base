@@ -239,7 +239,7 @@ These steps add files to the Senzing project used to bring up Docker containers.
 
 ## Run demonstration
 
-1. Start webapp demo.
+1. Start Entity search webapp.
    Example:
 
     ```console
@@ -249,6 +249,5 @@ These steps add files to the Senzing project used to bring up Docker containers.
    On first use, the Docker image will be automatically downloaded from
    [DockerHub](https://hub.docker.com/) and cached in the workstation's local Docker repository.
 
-1. Verify the system works.
-   View  [Entity search webapp](http://localhost:8251/)
+1. View [Entity search webapp](http://localhost:8251/)
     1. Search for "Robert Jones"
