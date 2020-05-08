@@ -199,6 +199,22 @@ To set up a PostgreSQL database, visit
 Once the PostgreSQL database is running and has a Senzing schema installed,
 perform the following steps:
 
+1. Install system packages for PostgreSQL client.
+
+    1. Yum-based install.
+       Example:
+
+        ```console
+        sudo yum install libpqxx
+        ```
+
+    1. Apt-based install.
+       Example:
+
+        ```console
+        sudo apt install libpq5
+        ```
+
 1. Edit `${SENZING_PROJECT_DIR}/etc/G2Module.ini`
    Example:
 
