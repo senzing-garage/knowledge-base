@@ -187,34 +187,6 @@ Depending on the distribution of Linux, there are different ways of installing S
     /opt/senzing/g2/python/G2CreateProject.py ${SENZING_PROJECT_DIR}
     ```
 
-## Initialize Senzing project
-
-These steps initialize the Senzing project by
-installing configuration into the Senzing database and adding sample data.
-
-1. Set environment variables
-   Example:
-
-    ```console
-    cd ${SENZING_PROJECT_DIR}
-    source setupEnv
-    ```
-
-1. :thinking: Prime the database.
-   A prompt will be given, type "yes".
-   Example:
-
-    ```console
-    python3 python/G2SetupConfig.py
-    ```
-
-1. Load sample data.
-   Example:
-
-    ```console
-    python3 python/G2Loader.py -P
-    ```
-
 ## Identify Senzing database
 
 :thinking: **Optional, but recommended:**
@@ -241,6 +213,34 @@ perform the following steps:
     ```console
     [SQL]
        CONNECTION=postgresql://username:password@hostname:5432:G2/
+    ```
+
+## Initialize Senzing project
+
+These steps initialize the Senzing project by
+installing configuration into the Senzing database and adding sample data.
+
+1. Set environment variables
+   Example:
+
+    ```console
+    cd ${SENZING_PROJECT_DIR}
+    source setupEnv
+    ```
+
+1. :thinking: Prime the database.
+   A prompt will be given, type "yes".
+   Example:
+
+    ```console
+    python3 python/G2SetupConfig.py
+    ```
+
+1. Load sample data.
+   Example:
+
+    ```console
+    python3 python/G2Loader.py -P
     ```
 
 ## Add Docker support
