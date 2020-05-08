@@ -53,13 +53,14 @@ These are "one-time tasks" which may already have been completed.
                 ```
 
         1. Verify.
+           Bring up the Python REPL (Read-Evaluate-Print Loop).
            Example:
 
             ```console
             python3
             ```
 
-           Copy and paste the following lines into the Python REPL (Read-Evaluate-Print Loop):
+           Copy and paste the following lines into the Python REPL:
 
             ```python
             import parse
@@ -113,7 +114,7 @@ Depending on the distribution of Linux, there are different ways of installing S
 1. Add the Senzing apt repository to the local workstation.
    Example:
 
-    1. Download a `deb` package that will be used to add Senzing to the local apt repository.
+    1. Download the `deb` package that will be used to add Senzing to the local apt repository.
        Example:
 
         ```console
@@ -173,7 +174,7 @@ Depending on the distribution of Linux, there are different ways of installing S
 ## Initialize Senzing project
 
 These steps initialize the Senzing project by
-installing configuration into the Senzing database and adding exemplar data.
+installing configuration into the Senzing database and adding sample data.
 
 1. Set environment variables
    Example:
@@ -191,7 +192,7 @@ installing configuration into the Senzing database and adding exemplar data.
     python3 python/G2SetupConfig.py
     ```
 
-1. Load example data.
+1. Load sample data.
    Example:
 
     ```console
@@ -245,8 +246,8 @@ These steps add files to the Senzing project used to bring up Docker containers.
     sudo ${SENZING_PROJECT_DIR}/docker-bin/senzing-quickstart-demo.sh
     ```
 
-   Note: On first use, the Docker image will be automatically downloaded from
-   [DockerHub](https://hub.docker.com/) and cached in the workstations local Docker repository.
+   On first use, the Docker image will be automatically downloaded from
+   [DockerHub](https://hub.docker.com/) and cached in the workstation's local Docker repository.
 
 1. Verify the system works.
    View  [Entity search webapp](http://localhost:8251/)
