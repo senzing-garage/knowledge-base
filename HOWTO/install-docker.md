@@ -39,7 +39,7 @@ There a a few methods to install `docker` on Ubuntu.
     sudo systemctl start docker
     ```
 
-1. Start Docker on reboot.
+1. **Optional:** Start Docker on reboot.
    Example:
 
     ```console
