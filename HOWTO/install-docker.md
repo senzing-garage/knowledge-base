@@ -21,6 +21,33 @@ For detailed installation, see [Docker docs](https://docs.docker.com/install/).
 
 ### CentOS
 
+There a a few methods to install `docker` on Ubuntu.
+
+#### CentOS - Default yum install
+
+1. Yum install Docker.
+   Example:
+
+    ```console
+    sudo yum install docker
+    ```
+
+1. Start Docker.
+   Example:
+
+    ```console
+    sudo systemctl start docker
+    ```
+
+1. Start Docker on reboot.
+   Example:
+
+    ```console
+    sudo systemctl enable docker
+    ```
+
+#### CentOS - Docker Community Edition
+
 1. Uninstall old docker.
    Example:
 
@@ -36,7 +63,6 @@ For detailed installation, see [Docker docs](https://docs.docker.com/install/).
     sudo yum -y install docker-ce
     sudo systemctl start docker
     sudo systemctl enable docker
-    sudo docker run hello-world
     ```
 
 1. Fix for unable to prepare context.
@@ -56,7 +82,16 @@ For detailed installation, see [Docker docs](https://docs.docker.com/install/).
 
 ### Ubuntu
 
-1. [Ubuntu](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
+There a a few methods to install `docker` on Ubuntu.
+
+1. **Method #1:** Install `docker.io`.
+   Example:
+
+    ```console
+    sudo apt install docker.io
+    ```
+
+1. **Method #2:** [Ubuntu](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
 
     ```console
     sudo apt-get update
