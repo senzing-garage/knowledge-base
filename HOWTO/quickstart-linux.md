@@ -205,7 +205,7 @@ perform the following steps:
        Example:
 
         ```console
-        sudo yum install libpqxx
+        sudo yum install postgresql-libs
         ```
 
     1. Apt-based install.
