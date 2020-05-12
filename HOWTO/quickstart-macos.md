@@ -79,6 +79,18 @@ These are "one-time tasks" which may already have been completed.
 
 ## Install Senzing
 
+
+1. TEST
+
+    ```console
+    sudo docker run \
+      --interactive \
+      --rm \
+      --tty \
+      --volume /opt:/opt \
+      senzing/yum
+    ```
+
 1. Identify system install location.
    **Note:** The system install location must be `/opt/senzing`.
 
@@ -90,7 +102,7 @@ These are "one-time tasks" which may already have been completed.
    must be enabled for `SENZING_VOLUME`.
 
 
-1. Identify directories on the local host.
+1. Identify directories where Senzing will be installed.
    Example:
 
     ```console
@@ -98,7 +110,7 @@ These are "one-time tasks" which may already have been completed.
     export SENZING_G2_DIR=${SENZING_VOLUME}/g2
     ```
 
-1. Create directory for Senzing installation.
+1. Create directories for Senzing installation.
    Example:
 
     ```console
