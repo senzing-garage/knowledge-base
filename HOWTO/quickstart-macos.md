@@ -86,6 +86,13 @@ These are "one-time tasks" which may already have been completed.
     export SENZING_VOLUME=/opt/senzing
     ```
 
+1. Create directory for Senzing installation.
+   Example:
+
+    ```console
+    sudo mkdir -p ${SENZING_VOLUME}
+    ```
+
 1. :warning:
    **macOS** - [File sharing](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/share-directories-with-docker.md#macos)
    must be enabled for `SENZING_VOLUME`.
