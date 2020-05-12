@@ -220,14 +220,14 @@ perform the following steps:
    using the `username`, `password`, and `hostname` of the PostgreSQL instance.
    Example:
 
-    ```console
+    ```toml
     [SQL]
        CONNECTION=postgresql://username:password@hostname:5432:G2/
     ```
 
    When complete, the entire file might look something like this:
 
-    ```console
+    ```toml
     [PIPELINE]
      SUPPORTPATH=/home/username/senzing-demo-project-1/data
      CONFIGPATH=/home/username/senzing-demo-project-1/etc
