@@ -218,7 +218,7 @@ perform the following steps:
     vi ${SENZING_PROJECT_DIR}/etc/G2Module.ini
     ```
 
-1. :pencil2: Modify contents of file.
+1. :pencil2: Modify contents of `${SENZING_PROJECT_DIR}/etc/G2Module.ini`.
    Change the SQL.CONNECTION value to point to the PostgreSQL instance
    using the `username`, `password`, and `hostname` of the PostgreSQL instance.
    Example:
