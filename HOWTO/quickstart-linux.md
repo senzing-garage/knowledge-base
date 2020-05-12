@@ -62,13 +62,6 @@ These are "one-time tasks" which may already have been completed.
             sudo pip3 install parse
             ```
 
-            1. :thinking: **In an air-gapped environment,** python files are installed via "wheel" files.
-               Example:
-
-                ```console
-                sudo pip3 install ./parse-1.15.0-py3-none-any.whl
-                ```
-
         1. Verify.
            Bring up the Python REPL (Read-Evaluate-Print Loop).
            Example:
@@ -230,6 +223,18 @@ perform the following steps:
     ```console
     [SQL]
        CONNECTION=postgresql://username:password@hostname:5432:G2/
+    ```
+
+   When complete, the entire file might look something like this:
+
+    ```console
+    [PIPELINE]
+     SUPPORTPATH=/home/username/senzing-demo-project-1/data
+     CONFIGPATH=/home/username/senzing-demo-project-1/etc
+     RESOURCEPATH=/home/username/senzing-demo-project-1/resources
+
+    [SQL]
+     CONNECTION=postgresql://postgres:postgres@10.1.1.102:5432:G2/
     ```
 
 ## Initialize Senzing project

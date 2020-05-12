@@ -21,7 +21,10 @@ For detailed installation, see [Docker docs](https://docs.docker.com/install/).
 
 ### CentOS
 
-There a a few methods to install `docker` on Ubuntu.
+There are a few methods to install `docker` on Ubuntu.
+
+1. [Default yum install](#centos---default-yum-install)
+1. [Docker Community Edition](#centos---docker-community-edition)
 
 #### CentOS - Default yum install
 
@@ -48,6 +51,8 @@ There a a few methods to install `docker` on Ubuntu.
 
 #### CentOS - Docker Community Edition
 
+:warning: This may be an out-dated method.
+
 1. Uninstall old docker.
    Example:
 
@@ -61,7 +66,19 @@ There a a few methods to install `docker` on Ubuntu.
     sudo yum -y install yum-utils device-mapper-persistent-data lvm2
     sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
     sudo yum -y install docker-ce
+    ```
+
+1. Start Docker.
+   Example:
+
+    ```console
     sudo systemctl start docker
+    ```
+
+1. **Optional:** Start Docker on reboot.
+   Example:
+
+    ```console
     sudo systemctl enable docker
     ```
 
@@ -84,14 +101,25 @@ There a a few methods to install `docker` on Ubuntu.
 
 There a a few methods to install `docker` on Ubuntu.
 
-1. **Method #1:** Install `docker.io`.
+1. [Default apt install](#ubuntu---default-apt-install)
+1. [Docker Community Edition](#ubuntu---docker-community-edition)
+
+#### Ubuntu - Default apt install
+
+1. Apt install Docker.
    Example:
 
     ```console
     sudo apt install docker.io
     ```
 
-1. **Method #2:** [Ubuntu](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
+1. Proceed to [Test](#test)
+
+#### Ubuntu - Docker Community Edition
+
+:warning: This may be an out-dated method.
+
+1. [Ubuntu](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
 
     ```console
     sudo apt-get update
@@ -114,7 +142,12 @@ There a a few methods to install `docker` on Ubuntu.
     sudo apt-get install docker-ce
     ```
 
+1. Proceed to [Test](#test)
+
+#### Ubuntu - Past edition
+
 1. Past version
+   Example:
 
     ```console
     sudo apt-get update
@@ -122,8 +155,9 @@ There a a few methods to install `docker` on Ubuntu.
     curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
     sudo apt-get update
     sudo apt -y install docker.io
-    sudo docker run hello-world
     ```
+
+1. Proceed to [Test](#test)
 
 ### macOS
 
@@ -144,11 +178,14 @@ There a a few methods to install `docker` on Ubuntu.
     docker run hello-world
     ```
 
+1. Proceed to [Test](#test)
+
 ### Windows
 
 1. **Caveat:** Requires Windows Pro.
 1. [Install Docker Desktop for Windows](https://docs.docker.com/docker-for-windows/install/)
     1. Run `Docker%20for%20%Windows%20Installer.exe`
+1. Proceed to [Test](#test)
 
 ## Test
 
