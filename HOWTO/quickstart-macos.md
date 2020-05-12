@@ -100,6 +100,9 @@ These are "one-time tasks" which may already have been completed.
     ```
 
 1. Install Senzing on macOS using Docker container running `yum`.
+   During the installation there will be prompts for acceptance.
+   Some prompts are for the
+   [Senzing End User License Agreement](https://senzing.com/end-user-license-agreement/) (EULA).
    Example:
 
     ```console
