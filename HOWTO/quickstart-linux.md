@@ -186,6 +186,9 @@ Depending on the distribution of Linux, there are different ways of installing S
 :thinking: **Optional, but recommended:**
 By default, an SQLite database is used by the Quickstart instructions.
 The system runs better with a PostgreSQL database.
+If a PostgreSQL database is not desired, proceed to
+[Initialize Senzing project](#initialize-senzing-project).
+
 To set up a PostgreSQL database, visit
 [Setup PostgreSQL on RedHat/CentOS](https://senzing.zendesk.com/hc/en-us/articles/360026348454-Setup-PostgreSQL-on-RedHat-CentOS).
 
