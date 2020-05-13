@@ -147,6 +147,13 @@ These steps add files to the Senzing project used to bring up Docker containers.
         chmod +x ${SENZING_DOWNLOAD_FILE}
         ```
 
+1. :pencil2: Specify the location of the Senzing project on the host system.
+   Example:
+
+    ```console
+    export SENZING_PROJECT_DIR=~/senzing-demo-project-1
+    ```
+
 1. Run the command to create additional files in the Senzing repository for Docker support.
    Example:
 
