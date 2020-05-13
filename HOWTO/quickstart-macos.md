@@ -179,7 +179,7 @@ To use the Senzing code, you must agree to the End User License Agreement (EULA)
    Example:
 
     ```console
-    sudo ${SENZING_PROJECT_DIR}/docker-bin/senzing-yum.sh
+    sudo --preserve-env ${SENZING_PROJECT_DIR}/docker-bin/senzing-yum.sh
     ```
 
 ## Configure Senzing
@@ -192,6 +192,13 @@ To use the Senzing code, you must agree to the End User License Agreement (EULA)
     ```
 
 ## Initialize Senzing project
+
+1. Start a terminal.
+   Example:
+
+    ```console
+    sudo ${SENZING_PROJECT_DIR}/docker-bin/senzing-xterm.sh
+    ```
 
 1. Enter docker container.
    Example:
