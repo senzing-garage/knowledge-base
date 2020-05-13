@@ -161,16 +161,52 @@ These steps add files to the Senzing project used to bring up Docker containers.
    ${SENZING_DOWNLOAD_FILE} add-quickstart-support-macos --project-dir ${SENZING_PROJECT_DIR}
    ```
 
+### EULA
+
+To use the Senzing code, you must agree to the End User License Agreement (EULA).
+
+1. :warning: This step is intentionally tricky and not simply copy/paste.
+   This ensures that you make a conscious effort to accept the EULA.
+   Example:
+
+    <pre>export SENZING_ACCEPT_EULA="&lt;the value from <a href="https://github.com/Senzing/knowledge-base/blob/master/lists/environment-variables.md#senzing_accept_eula">this link</a>&gt;"</pre>
+
 ## Install Senzing
 
 1. Install on macOS via dockerized `yum`.
+   **Note:**  If the `SENZING_ACCEPT_EULA` environment variable is not set correctly,
+   the installation will prompt for EULA acceptance.
    Example:
 
     ```console
     sudo ${SENZING_PROJECT_DIR}/docker-bin/senzing-yum.sh
     ```
 
+## Configure Senzing
 
+1. Configure `${SENZING_PROJECT_DIR}/docker-etc` and `${SENZING_PROJECT_DIR}/var` directories.
+   Example:
+
+    ```console
+    sudo ${SENZING_PROJECT_DIR}/docker-bin/senzing-init-container.sh
+    ```
+
+## Initialize Senzing project
+
+1. Enter docker container.
+   Example:
+
+    ```console
+    source ${SENZING_PROJECT_DIR}/docker-bin/docker-environment-vars.sh
+    docker exec -it ${SENZING_PROJECT_NAME}-xterm /bin/bash
+    ```
+
+1. Load sample data.
+   Example:
+
+    ```console
+    python3 python/G2Loader.py -P
+    ```
 
 ## Run demonstration
 
