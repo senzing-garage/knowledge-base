@@ -1,15 +1,10 @@
 # Quick Start for macOS
 
-Based on
-[Quickstart Guide](https://senzing.zendesk.com/hc/en-us/articles/115002408867-Quickstart-Guide).
-
 ## Contents
 
 1. [Prerequisites](#prerequisites)
 1. [Install Senzing](#install-senzing)
-1. [Create a Senzing project](#create-a-senzing-project)
 1. [Identify Senzing database](#identify-senzing-database)
-1. [Initialize Senzing project](#initialize-senzing-project)
 1. [Add Docker support](#add-docker-support)
 1. [Run demonstration](#run-demonstration)
 
@@ -77,79 +72,6 @@ These are "one-time tasks" which may already have been completed.
 
            If successful, no error will appear.
 
-## Install Senzing
-
-
-1. TEST
-
-    ```console
-    sudo docker run \
-      --interactive \
-      --rm \
-      --tty \
-      --volume /opt:/opt \
-      senzing/yum
-    ```
-
-1. Identify system install location.
-   **Note:** The system install location must be `/opt/senzing`.
-
-    ```console
-    export SENZING_VOLUME=/opt/senzing
-    ```
-
-   **macOS** - [File sharing](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/share-directories-with-docker.md#macos)
-   must be enabled for `SENZING_VOLUME`.
-
-
-1. Identify directories where Senzing will be installed.
-   Example:
-
-    ```console
-    export SENZING_DATA_DIR=${SENZING_VOLUME}/data
-    export SENZING_G2_DIR=${SENZING_VOLUME}/g2
-    ```
-
-1. Create directories for Senzing installation.
-   Example:
-
-    ```console
-    sudo mkdir -p ${SENZING_DATA_DIR}
-    sudo mkdir -p ${SENZING_G2_DIR}
-    ```
-
-1. Install Senzing on macOS using Docker container running `yum`.
-   During the installation there will be prompts for acceptance.
-   Some prompts are for the
-   [Senzing End User License Agreement](https://senzing.com/end-user-license-agreement/) (EULA).
-   Example:
-
-    ```console
-    sudo docker run \
-      --interactive \
-      --rm \
-      --tty \
-      --volume ${SENZING_DATA_DIR}:/opt/senzing/data \
-      --volume ${SENZING_G2_DIR}:/opt/senzing/g2 \
-      senzing/yum
-    ```
-
-## Create a Senzing project
-
-1. :pencil2: Specify the location of the Senzing project on the host system.
-   Example:
-
-    ```console
-    export SENZING_PROJECT_DIR=~/senzing-demo-project-1
-    ```
-
-1. Create the Senzing project.
-   Example:
-
-    ```console
-    /opt/senzing/g2/python/G2CreateProject.py ${SENZING_PROJECT_DIR}
-    ```
-
 ## Identify Senzing database
 
 :thinking: **Optional, but recommended:**
@@ -164,77 +86,34 @@ To set up a PostgreSQL database, visit
 Once the PostgreSQL database is running and has a Senzing schema installed,
 perform the following steps:
 
-1. Install system packages for PostgreSQL client.
-
-    1. Yum-based install.
-       Example:
-
-        ```console
-        sudo yum install postgresql-libs
-        ```
-
-    1. Apt-based install.
-       Example:
-
-        ```console
-        sudo apt install libpq5
-        ```
-
-1. Edit `${SENZING_PROJECT_DIR}/etc/G2Module.ini`
+1. :pencil2: Specify database.
    Example:
 
     ```console
-    vi ${SENZING_PROJECT_DIR}/etc/G2Module.ini
+    export DATABASE_PROTOCOL=postgresql
+    export DATABASE_USERNAME=postgres
+    export DATABASE_PASSWORD=postgres
+    export DATABASE_HOST=db.example.com
+    export DATABASE_PORT=5432
+    export DATABASE_DATABASE=G2
     ```
 
-1. :pencil2: Modify contents of `${SENZING_PROJECT_DIR}/etc/G2Module.ini`.
-   Change the SQL.CONNECTION value to point to the PostgreSQL instance
-   using the `username`, `password`, and `hostname` of the PostgreSQL instance.
-   Example:
+1. :thinking: If the `DATABASE_HOST` is the workstation running docker containers,
+   do not use `localhost` nor `127.0.0.1` for value of `DATABASE_HOST`.
+   Reason: the value of `DATABASE_HOST` needs to be from the perspective of *inside* the docker container.
+   To find the IP address of workstation, set the
+   [SENZING_DOCKER_HOST_IP_ADDR](https://github.com/Senzing/knowledge-base/blob/master/lists/environment-variables.md#senzing_docker_host_ip_addr)
+   environment variable. Then set:
 
-    ```ini
-    [SQL]
-       CONNECTION=postgresql://username:password@hostname:5432:G2/
+    ```console
+    export DATABASE_HOST=${SENZING_DOCKER_HOST_IP_ADDR}
     ```
 
-   When complete, the entire file might look something like this:
-
-    ```ini
-    [PIPELINE]
-     SUPPORTPATH=/home/username/senzing-demo-project-1/data
-     CONFIGPATH=/home/username/senzing-demo-project-1/etc
-     RESOURCEPATH=/home/username/senzing-demo-project-1/resources
-
-    [SQL]
-     CONNECTION=postgresql://postgres:postgres@10.1.1.102:5432:G2/
-    ```
-
-## Initialize Senzing project
-
-These steps initialize the Senzing project by
-installing configuration into the Senzing database and adding sample data.
-
-1. Set environment variables
+1. Construct Database URL.
    Example:
 
     ```console
-    cd ${SENZING_PROJECT_DIR}
-    source setupEnv
-    ```
-
-1. :thinking: Prime the database.
-   A prompt will be given, type "yes".
-   Example:
-
-    ```console
-    python3 python/G2SetupConfig.py
-    ```
-
-1. Load sample data.
-   Example:
-
-    ```console
-    python3 python/G2Loader.py -P
+    export SENZING_DATABASE_URL="${DATABASE_PROTOCOL}://${DATABASE_USERNAME}:${DATABASE_PASSWORD}@${DATABASE_HOST}:${DATABASE_PORT}/${DATABASE_DATABASE}"
     ```
 
 ## Add Docker support
@@ -272,8 +151,19 @@ These steps add files to the Senzing project used to bring up Docker containers.
    Example:
 
    ```console
-   ${SENZING_DOWNLOAD_FILE} add-quickstart-support --project-dir ${SENZING_PROJECT_DIR}
+   ${SENZING_DOWNLOAD_FILE} add-quickstart-support-macos --project-dir ${SENZING_PROJECT_DIR}
    ```
+
+## Install Senzing
+
+1. Install on macOS via dockerized `yum`.
+   Example:
+
+    ```console
+    sudo ${SENZING_PROJECT_DIR}/docker-bin/senzing-yum.sh
+    ```
+
+
 
 ## Run demonstration
 
