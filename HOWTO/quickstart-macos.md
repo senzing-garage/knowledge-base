@@ -78,7 +78,7 @@ These are "one-time tasks" which may already have been completed.
 By default, an SQLite database is used by the Quickstart instructions.
 The system runs better with a PostgreSQL database.
 If a PostgreSQL database is not desired, proceed to
-[Initialize Senzing project](#initialize-senzing-project).
+[Add Docker support](#add-docker-support).
 
 To set up a PostgreSQL database, visit
 [Setup PostgreSQL on RedHat/CentOS](https://senzing.zendesk.com/hc/en-us/articles/360026348454-Setup-PostgreSQL-on-RedHat-CentOS).
@@ -157,9 +157,9 @@ These steps add files to the Senzing project used to bring up Docker containers.
 1. Run the command to create additional files in the Senzing repository for Docker support.
    Example:
 
-   ```console
-   ${SENZING_DOWNLOAD_FILE} add-quickstart-support-macos --project-dir ${SENZING_PROJECT_DIR}
-   ```
+    ```console
+    ${SENZING_DOWNLOAD_FILE} add-quickstart-support-macos --project-dir ${SENZING_PROJECT_DIR}
+    ```
 
 ### EULA
 
@@ -173,7 +173,8 @@ To use the Senzing code, you must agree to the End User License Agreement (EULA)
 
 ## Install Senzing
 
-1. Install on macOS via dockerized `yum`.
+1. Install on macOS via dockerized `yum` job.
+   Once the job is done, the container will exit.
    **Note:**  If the `SENZING_ACCEPT_EULA` environment variable is not set correctly,
    the installation will prompt for EULA acceptance.
    Example:
@@ -184,7 +185,10 @@ To use the Senzing code, you must agree to the End User License Agreement (EULA)
 
 ## Configure Senzing
 
-1. Configure `${SENZING_PROJECT_DIR}/docker-etc` and `${SENZING_PROJECT_DIR}/var` directories.
+Configure `${SENZING_PROJECT_DIR}/docker-etc` and `${SENZING_PROJECT_DIR}/var` directories.
+
+1. Start an initialization job Docker container.
+   Once the job is done, the container will exit.
    Example:
 
     ```console
@@ -193,39 +197,32 @@ To use the Senzing code, you must agree to the End User License Agreement (EULA)
 
 ## Initialize Senzing project
 
-1. Start a terminal.
+1. Start a Senzing X-Term Docker container.
    Example:
 
     ```console
     sudo ${SENZING_PROJECT_DIR}/docker-bin/senzing-xterm.sh
     ```
 
-1. Enter docker container.
+1. Senzing X-term is viewable at
+   [localhost:8254](http://localhost:8254).
+
+1. In Senzing X-term, load sample data.
    Example:
 
     ```console
-    source ${SENZING_PROJECT_DIR}/docker-bin/docker-environment-vars.sh
-    docker exec -it ${SENZING_PROJECT_NAME}-xterm /bin/bash
-    ```
-
-1. Load sample data.
-   Example:
-
-    ```console
-    python3 python/G2Loader.py -P
+    G2Loader.py -P -c /etc/opt/senzing/G2Project.ini
     ```
 
 ## Run demonstration
 
-1. Start Entity search webapp.
+1. Start Senzing entity search webapp Docker container.
    Example:
 
     ```console
     sudo ${SENZING_PROJECT_DIR}/docker-bin/senzing-quickstart-demo.sh
     ```
 
-   On first use, the Docker image will be automatically downloaded from
-   [DockerHub](https://hub.docker.com/) and cached in the workstation's local Docker repository.
-
-1. View [Entity search webapp](http://localhost:8251/).
+1. Senzing entity search webapp is viewable at
+   [localhost:8251](http://localhost:8251/).
     1. Search for "Robert Jones"
