@@ -173,6 +173,8 @@ To use the Senzing code, you must agree to the End User License Agreement (EULA)
 
 ## Install Senzing
 
+These steps install Senzing in the `${SENZING_PROJECT_DIR}/g2` and `${SENZING_PROJECT_DIR}/data` directories.
+
 1. Install on macOS via dockerized `yum` job.
    Once the job is done, the container will exit.
    **Note:**  If the `SENZING_ACCEPT_EULA` environment variable is not set correctly,
@@ -185,7 +187,7 @@ To use the Senzing code, you must agree to the End User License Agreement (EULA)
 
 ## Configure Senzing
 
-Configure `${SENZING_PROJECT_DIR}/docker-etc` and `${SENZING_PROJECT_DIR}/var` directories.
+These steps create and configure `${SENZING_PROJECT_DIR}/docker-etc` and `${SENZING_PROJECT_DIR}/var` directories.
 
 1. Start an initialization job Docker container.
    Once the job is done, the container will exit.
@@ -196,6 +198,8 @@ Configure `${SENZING_PROJECT_DIR}/docker-etc` and `${SENZING_PROJECT_DIR}/var` d
     ```
 
 ## Initialize Senzing project
+
+These steps load the Senzing Model with sample data.
 
 1. Start a Senzing X-Term Docker container.
    Example:
@@ -215,6 +219,8 @@ Configure `${SENZING_PROJECT_DIR}/docker-etc` and `${SENZING_PROJECT_DIR}/var` d
     ```
 
 ## Run demonstration
+
+These steps show the sample data in a web application.
 
 1. Start Senzing entity search webapp Docker container.
    Example:
