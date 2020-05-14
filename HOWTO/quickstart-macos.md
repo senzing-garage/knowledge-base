@@ -116,9 +116,18 @@ perform the following steps:
     export SENZING_DATABASE_URL="${DATABASE_PROTOCOL}://${DATABASE_USERNAME}:${DATABASE_PASSWORD}@${DATABASE_HOST}:${DATABASE_PORT}/${DATABASE_DATABASE}"
     ```
 
+## Identify Senzing project
+
+1. :pencil2: Specify the location of the Senzing project on the host system.
+   Example:
+
+    ```console
+    export SENZING_PROJECT_DIR=~/senzing-demo-project-1
+    ```
+
 ## Add Docker support
 
-These steps add files to the Senzing project used to bring up Docker containers.
+These steps add files to the `${SENZING_PROJECT_DIR}/docker-bin` directory that are used to bring up Docker containers.
 
 1. Get a local copy of
    [senzing-environment.py](https://raw.githubusercontent.com/Senzing/senzing-environment/master/senzing-environment.py).
@@ -146,13 +155,6 @@ These steps add files to the Senzing project used to bring up Docker containers.
         ```console
         chmod +x ${SENZING_DOWNLOAD_FILE}
         ```
-
-1. :pencil2: Specify the location of the Senzing project on the host system.
-   Example:
-
-    ```console
-    export SENZING_PROJECT_DIR=~/senzing-demo-project-1
-    ```
 
 1. Run the command to create additional files in the Senzing repository for Docker support.
    Example:
