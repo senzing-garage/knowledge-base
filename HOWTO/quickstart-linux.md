@@ -303,7 +303,7 @@ These steps add files to the Senzing project used to bring up Docker containers.
    Example:
 
    ```console
-   ${SENZING_DOWNLOAD_FILE} add-quickstart-support --project-dir ${SENZING_PROJECT_DIR}
+   ${SENZING_DOWNLOAD_FILE} add-docker-support-linux --project-dir ${SENZING_PROJECT_DIR}
    ```
 
 ## Run demonstration
