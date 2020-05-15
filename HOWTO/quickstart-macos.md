@@ -185,7 +185,7 @@ These steps load the Senzing Model with sample data.
        Example:
 
         ```console
-        sudo ${SENZING_PROJECT_DIR}/docker-bin/senzing-init-container.s
+        sudo ${SENZING_PROJECT_DIR}/docker-bin/senzing-xterm-shell.sh
         ```
 
 1. In Senzing X-term, load sample data.
