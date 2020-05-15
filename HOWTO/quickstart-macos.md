@@ -3,9 +3,13 @@
 ## Contents
 
 1. [Prerequisites](#prerequisites)
-1. [Install Senzing](#install-senzing)
 1. [Identify Senzing database](#identify-senzing-database)
+1. [Identify Senzing project](#identify-senzing-project)
 1. [Add Docker support](#add-docker-support)
+1. [EULA](#eula)
+1. [Install Senzing](#install-senzing)
+1. [Configure Senzing](#configure-senzing)
+1. [Initialize Senzing project](#initialize-senzing-project)
 1. [Run demonstration](#run-demonstration)
 
 ### Legend
@@ -129,9 +133,13 @@ These steps add files to the `${SENZING_PROJECT_DIR}/docker-bin` directory that 
     ${SENZING_DOWNLOAD_FILE} add-docker-support-macos --project-dir ${SENZING_PROJECT_DIR}
     ```
 
-### EULA
+## EULA
 
-To use the Senzing code, you must agree to the End User License Agreement (EULA).
+:thinking: **Optional:** To use the Senzing code, you must agree to the Senzing End User License Agreement (EULA).
+The EULA is located at [https://senzing.com/end-user-license-agreement](https://senzing.com/end-user-license-agreement/).
+To improve automation, an environment variable may be set to accept the EULA.
+If no environment variable is set, the installer will prompt for the EULA acceptance before installing.
+If manual acceptance is preferred, proceed to [Install Senzing](#install-senzing).
 
 1. :warning: This step is intentionally tricky and not simply copy/paste.
    This ensures that you make a conscious effort to accept the EULA.
