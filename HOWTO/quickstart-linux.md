@@ -45,40 +45,6 @@ These are "one-time tasks" which may already have been completed.
             curl --version
             ```
 
-    1. [pip3](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/install-pip3.md)
-        1. Verify.
-           Example:
-
-            ```console
-            pip3 --version
-            ```
-
-    1. Python modules.
-
-        1. `pip3` installs.
-           Example:
-
-            ```console
-            sudo pip3 install parse
-            ```
-
-        1. Verify.
-           Bring up the Python REPL (Read-Evaluate-Print Loop).
-           Example:
-
-            ```console
-            python3
-            ```
-
-           Copy and paste the following lines into the Python REPL:
-
-            ```python
-            import parse
-            quit()
-            ```
-
-           If successful, no error will appear.
-
 ## Install Senzing
 
 Depending on the distribution of Linux, there are different ways of installing Senzing.

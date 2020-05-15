@@ -38,40 +38,6 @@ These are "one-time tasks" which may already have been completed.
             curl --version
             ```
 
-    1. [pip3](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/install-pip3.md)
-        1. Verify.
-           Example:
-
-            ```console
-            pip3 --version
-            ```
-
-    1. Python modules.
-
-        1. `pip3` installs.
-           Example:
-
-            ```console
-            sudo pip3 install parse
-            ```
-
-        1. Verify.
-           Bring up the Python REPL (Read-Evaluate-Print Loop).
-           Example:
-
-            ```console
-            python3
-            ```
-
-           Copy and paste the following lines into the Python REPL:
-
-            ```python
-            import parse
-            quit()
-            ```
-
-           If successful, no error will appear.
-
 ## Identify Senzing database
 
 :thinking: **Optional, but recommended:**
@@ -210,8 +176,17 @@ These steps load the Senzing Model with sample data.
     sudo ${SENZING_PROJECT_DIR}/docker-bin/senzing-xterm.sh
     ```
 
-1. Senzing X-term is viewable at
-   [localhost:8254](http://localhost:8254).
+1. :thinking: There are 2 methods of creating a terminal inside the Docker container.
+
+    1. Senzing X-term is viewable at
+       [localhost:8254](http://localhost:8254).
+
+    1. "ssh" into running Docker container.
+       Example:
+
+        ```console
+        sudo ${SENZING_PROJECT_DIR}/docker-bin/senzing-init-container.s
+        ```
 
 1. In Senzing X-term, load sample data.
    Example:
