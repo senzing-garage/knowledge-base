@@ -22,7 +22,7 @@
 These are "one-time tasks" which may already have been completed.
 
 1. The following software programs need to be installed and running on the workstation:
-    1. [docker](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/install-docker.md)
+    1. [docker](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/install-docker.md#macos)
         1. Verify.
            Example:
 
@@ -30,7 +30,7 @@ These are "one-time tasks" which may already have been completed.
             sudo docker run hello-world
             ```
 
-    1. [curl](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/install-curl.md)
+    1. [curl](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/install-curl.md#macos)
         1. Verify.
            Example:
 
