@@ -178,10 +178,10 @@ These steps load the Senzing Model with sample data.
 
 1. :thinking: There are 2 methods of creating a terminal inside the Docker container.
 
-    1. Senzing X-term is viewable at
+    1. **Method 1:** Senzing X-term is viewable at
        [localhost:8254](http://localhost:8254).
 
-    1. "ssh" into running Docker container.
+    1. **Method #2:** "ssh" into running Docker container.
        Example:
 
         ```console
