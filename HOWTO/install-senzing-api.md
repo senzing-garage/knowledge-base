@@ -20,11 +20,15 @@ Instructions for installing [Senzing API](../WHATIS/senzing-api.md).
 
 ### CentOS
 
+For installation on Red Hat, CentOS, openSuse and
+[others](https://en.wikipedia.org/wiki/List_of_Linux_distributions#RPM-based).
+
 1. Install Senzing YUM repository metadata.
    Example:
 
     ```console
-    sudo yum -y install https://senzing-production-yum.s3.amazonaws.com/senzingrepo-1.0.0-1.x86_64.rpm
+    sudo yum -y install \
+      https://senzing-production-yum.s3.amazonaws.com/senzingrepo-1.0.0-1.x86_64.rpm
     ```
 
 1. :thinking: **Optional:**
@@ -51,6 +55,13 @@ Instructions for installing [Senzing API](../WHATIS/senzing-api.md).
 
 ### Ubuntu
 
+1. Add required system packages.
+   Example:
+
+    ```console
+    sudo apt install apt-transport-https
+    ```
+
 1. Install `curl`
    Example:
 
@@ -68,6 +79,7 @@ Instructions for installing [Senzing API](../WHATIS/senzing-api.md).
 
     sudo apt -y install ~/senzingrepo_1.0.0-1_amd64.deb
     sudo apt update
+    rm  ~/senzingrepo_1.0.0-1_amd64.deb
     ```
 
 1. :thinking: **Optional:**
