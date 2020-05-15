@@ -1,8 +1,5 @@
 # Quick Start for linux
 
-Based on
-[Quickstart Guide](https://senzing.zendesk.com/hc/en-us/articles/115002408867-Quickstart-Guide).
-
 ## Contents
 
 1. [Prerequisites](#prerequisites)
@@ -236,7 +233,7 @@ installing configuration into the Senzing database and adding sample data.
 
 ## Add Docker support
 
-These steps add files to the Senzing project used to bring up Docker containers.
+These steps add files to the `${SENZING_PROJECT_DIR}/docker-bin` directory that are used to bring up Docker containers.
 
 1. Get a local copy of
    [senzing-environment.py](https://raw.githubusercontent.com/Senzing/senzing-environment/master/senzing-environment.py).
@@ -274,15 +271,15 @@ These steps add files to the Senzing project used to bring up Docker containers.
 
 ## Run demonstration
 
-1. Start Entity search webapp.
+These steps show the sample data in a web application.
+
+1. Start Senzing entity search webapp Docker container.
    Example:
 
     ```console
     sudo ${SENZING_PROJECT_DIR}/docker-bin/senzing-quickstart-demo.sh
     ```
 
-   On first use, the Docker image will be automatically downloaded from
-   [DockerHub](https://hub.docker.com/) and cached in the workstation's local Docker repository.
-
-1. View [Entity search webapp](http://localhost:8251/).
+1. Senzing entity search webapp is viewable at
+   [localhost:8251](http://localhost:8251/).
     1. Search for "Robert Jones"
