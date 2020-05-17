@@ -224,11 +224,20 @@ installing configuration into the Senzing database and adding sample data.
     python3 python/G2SetupConfig.py
     ```
 
+1. :thinking: **Optional:** In Senzing X-term, specify if the Senzing model data should be deleted.
+   :warning: The use of the `-P` parameter will purge the database before new data is ingested.
+   If you want to keep the existing Senzing model data, *don't* set `SENZING_PURGE`.
+   Example:
+
+    ```console
+    export SENZING_PURGE="-P"
+    ```
+
 1. Load sample data.
    Example:
 
     ```console
-    python3 python/G2Loader.py -P
+    python3 python/G2Loader.py ${SENZING_PURGE}
     ```
 
 ## Add Docker support

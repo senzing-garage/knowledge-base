@@ -196,11 +196,20 @@ These steps load the Senzing Model with sample data.
         sudo ${SENZING_PROJECT_DIR}/docker-bin/senzing-xterm-shell.sh
         ```
 
+1. :thinking: **Optional:** In Senzing X-term, specify if the Senzing model data should be deleted.
+   :warning: The use of the `-P` parameter will purge the database before new data is ingested.
+   If you want to keep the existing Senzing model data, ***don't*** set `SENZING_PURGE`.
+   Example:
+
+    ```console
+    export SENZING_PURGE="-P"
+    ```
+
 1. In Senzing X-term, load sample data.
    Example:
 
     ```console
-    G2Loader.py -P -c /etc/opt/senzing/G2Project.ini
+    G2Loader.py ${SENZING_PURGE} -c /etc/opt/senzing/G2Project.ini
     ```
 
 ## Run demonstration
