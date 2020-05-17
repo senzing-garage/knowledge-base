@@ -197,6 +197,7 @@ These steps load the Senzing Model with sample data.
         ```
 
 1. :thinking: **Optional:** In Senzing X-term, specify if the Senzing model data should be deleted.
+
    :warning: The use of the `-P` parameter will purge the database before new data is ingested.
    If you want to keep the existing Senzing model data, ***don't*** set `SENZING_PURGE`.
    Example:
