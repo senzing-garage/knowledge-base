@@ -237,3 +237,4 @@ These steps show the sample data in a web application.
 1. Senzing entity search webapp is viewable at
    [localhost:8251](http://localhost:8251/).
     1. Search for "Robert Jones"
+    1. Search for "Presto"
