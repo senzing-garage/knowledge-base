@@ -9,7 +9,7 @@
 1. [EULA](#eula)
 1. [Install Senzing](#install-senzing)
 1. [Configure Senzing](#configure-senzing)
-1. [Initialize Senzing project](#initialize-senzing-project)
+1. [Load Senzing model](#load-senzing-model)
 1. [Run demonstration](#run-demonstration)
 
 ### Legend
@@ -183,7 +183,7 @@ These steps create and configure `${SENZING_PROJECT_DIR}/docker-etc` and `${SENZ
     sudo ${SENZING_PROJECT_DIR}/docker-bin/senzing-init-container.sh
     ```
 
-## Initialize Senzing project
+## Load Senzing model
 
 These steps load the Senzing Model with sample data.
 
