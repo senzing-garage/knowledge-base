@@ -33,6 +33,7 @@ The following is a list of tips when using
 1. [Senzing license](#senzing-license)
     1. [Request Senzing license](#request-senzing-license)
     1. [Install Senzing license](#install-senzing-license)
+    1. [Updating G2Module.ini](#updating-g2moduleini)
 1. [Senzing X-Term](#senzing-x-term)
 1. [SQLite](#sqlite)
     1. [View SQLite](#view-sqlite)
@@ -236,7 +237,7 @@ The Senzing REST API server supports the
 
 When running Senzing inside Docker containers, configuration files must contain paths that are relative to
 ***inside*** the docker container. That includes the `PIPELINE`.`LICENSEFILE` path.
-From inside the Docker container, the `g2.lic` will be located at `/etc/opt/senzing/g2.lic`.
+From the perspective of *inside* the Docker container, the `g2.lic` will be located at `/etc/opt/senzing/g2.lic`.
 
 1. Edit `G2Module.ini`.
    Example:
@@ -257,7 +258,7 @@ From inside the Docker container, the `g2.lic` will be located at `/etc/opt/senz
      SUPPORTPATH  = /opt/senzing/data
 
     [SQL]
-     CONNECTION = postgresql://postgres:postgres@10.1.1.100:5432:G2/
+     CONNECTION = postgresql://username:password@10.1.1.100:5432:G2/
     ```
 
 ## Senzing X-Term
