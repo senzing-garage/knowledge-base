@@ -246,14 +246,15 @@ From inside the Docker container, the `g2.lic` will be located at `/etc/opt/senz
     ```
 
 1. Contents of G2Module.ini.
+   Notice the value of `LICENSEFILE`.
    Example:
 
     ```ini
     [PIPELINE]
-     SUPPORTPATH = /opt/senzing/data
-     CONFIGPATH = /etc/opt/senzing
+     CONFIGPATH   = /etc/opt/senzing
+     LICENSEFILE  = /etc/opt/senzing/g2.lic
      RESOURCEPATH = /opt/senzing/g2/resources
-     LICENSEFILE = /etc/opt/senzing/g2.lic
+     SUPPORTPATH  = /opt/senzing/data
 
     [SQL]
      CONNECTION = postgresql://postgres:postgres@10.1.1.100:5432:G2/
