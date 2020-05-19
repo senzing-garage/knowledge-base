@@ -232,6 +232,33 @@ The Senzing REST API server supports the
     sudo cp ${G2_LICENSE_PATH} ${SENZING_ETC_DIR}/g2.lic
     ```
 
+### Updating G2Module.ini
+
+When running Senzing inside Docker containers, configuration files must contain paths that are relative to
+***inside*** the docker container. That includes the `PIPELINE`.`LICENSEFILE` path.
+From inside the Docker container, the `g2.lic` will be located at `/etc/opt/senzing/g2.lic`.
+
+1. Edit `G2Module.ini`.
+   Example:
+
+    ```console
+    vi ${SENZING_ETC_DIR}/G2Module.ini
+    ```
+
+1. Contents of G2Module.ini.
+   Example:
+
+    ```ini
+    [PIPELINE]
+     SUPPORTPATH = /opt/senzing/data
+     CONFIGPATH = /etc/opt/senzing
+     RESOURCEPATH = /opt/senzing/g2/resources
+     LICENSEFILE = /etc/opt/senzing/g2.lic
+
+    [SQL]
+     CONNECTION = postgresql://postgres:postgres@10.1.1.100:5432:G2/
+    ```
+
 ## Senzing X-Term
 
 ## SQLite
