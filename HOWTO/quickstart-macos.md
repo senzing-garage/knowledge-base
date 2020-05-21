@@ -52,9 +52,17 @@ These are "one-time tasks" which may already have been completed.
             curl --version
             ```
 
+    1. [python3](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/install-python-3.md#macos)
+        1. Verify.
+           Example:
+
+            ```console
+            python3 --version
+            ```
+
 ## Identify Senzing database
 
-:thinking: **Optional, but recommended:**
+:thinking: **Optional:**
 By default, an SQLite database is used by the Quickstart instructions.
 The system runs better with a PostgreSQL database.
 If a PostgreSQL database is not desired, proceed to
@@ -66,7 +74,7 @@ To set up a PostgreSQL database, visit
 Once the PostgreSQL database is running and has a Senzing schema installed,
 perform the following steps:
 
-1. :pencil2: Specify database.
+1. :pencil2: In a Mac Terminal, specify database.
    Example:
 
     ```console
@@ -89,7 +97,7 @@ perform the following steps:
     export DATABASE_HOST=${SENZING_DOCKER_HOST_IP_ADDR}
     ```
 
-1. Construct Database URL.
+1. In the Mac Terminal, construct Database URL.
    Example:
 
     ```console
@@ -98,7 +106,7 @@ perform the following steps:
 
 ## Identify Senzing project
 
-1. :pencil2: Specify the location of the Senzing project on the host system.
+1. :pencil2: In the Mac Terminal, specify the location of the Senzing project on the host system.
    Example:
 
     ```console
@@ -113,14 +121,14 @@ These steps add files to the `${SENZING_PROJECT_DIR}/docker-bin` directory that 
    [senzing-environment.py](https://raw.githubusercontent.com/Senzing/senzing-environment/master/senzing-environment.py).
    Example:
 
-    1. :pencil2: Specify where to download file.
+    1. :pencil2: In the Mac Terminal, specify where to download file.
        Example:
 
         ```console
         export SENZING_DOWNLOAD_FILE=~/senzing-environment.py
         ```
 
-    1. Download file.
+    1. In the Mac Terminal, download file.
        Example:
 
         ```console
@@ -129,14 +137,14 @@ These steps add files to the `${SENZING_PROJECT_DIR}/docker-bin` directory that 
           https://raw.githubusercontent.com/Senzing/senzing-environment/master/senzing-environment.py
         ```
 
-    1. Make file executable.
+    1. In the Mac Terminal, make file executable.
        Example:
 
         ```console
         chmod +x ${SENZING_DOWNLOAD_FILE}
         ```
 
-1. Run the command to create additional files in the Senzing repository for Docker support.
+1. In the Mac Terminal, run the command to create additional files in the Senzing repository for Docker support.
    Example:
 
     ```console
@@ -161,7 +169,7 @@ If manual acceptance is preferred, proceed to [Install Senzing](#install-senzing
 
 These steps install Senzing in the `${SENZING_PROJECT_DIR}/g2` and `${SENZING_PROJECT_DIR}/data` directories.
 
-1. Install on macOS via dockerized `yum` job.
+1. In the Mac Terminal, install on macOS via dockerized `yum` job.
    Once the job is done, the container will exit.
    **Note:**  If the `SENZING_ACCEPT_EULA` environment variable is not set correctly,
    the installation will prompt for EULA acceptance.
@@ -175,7 +183,7 @@ These steps install Senzing in the `${SENZING_PROJECT_DIR}/g2` and `${SENZING_PR
 
 These steps create and configure `${SENZING_PROJECT_DIR}/docker-etc` and `${SENZING_PROJECT_DIR}/var` directories.
 
-1. Start an initialization job Docker container.
+1. In the Mac Terminal, start an initialization job Docker container.
    Once the job is done, the container will exit.
    Example:
 
@@ -187,26 +195,27 @@ These steps create and configure `${SENZING_PROJECT_DIR}/docker-etc` and `${SENZ
 
 These steps load the Senzing Model with sample data.
 
-1. Start a Senzing X-Term Docker container.
+1. In the Mac Terminal, start a Senzing X-Term Docker container.
    Example:
 
     ```console
     sudo ${SENZING_PROJECT_DIR}/docker-bin/senzing-xterm.sh
     ```
 
-1. :thinking: There are 2 methods of creating a terminal inside the Docker container.
+1. :thinking: There are 2 methods of creating a Senzing X-term inside the Docker container.
 
     1. **Method #1:** Senzing X-term is viewable at
        [localhost:8254](http://localhost:8254).
 
-    1. **Method #2:** "ssh" into running Docker container.
+    1. **Method #2:** In a **new** Mac Terminal, "ssh" into running Docker container.
+       :warning: Make sure `SENZING_PROJECT_DIR` environment variable is set.
        Example:
 
         ```console
         sudo ${SENZING_PROJECT_DIR}/docker-bin/senzing-xterm-shell.sh
         ```
 
-1. :thinking: **Optional:** In Senzing X-term, specify if the Senzing model data should be deleted.
+1. :thinking: **Optional:** In the Senzing X-term, specify if the Senzing model data should be deleted.
 
    :warning: The use of the `-P` parameter will purge the database before new data is ingested.
    If you want to keep the existing Senzing model data, ***don't*** set `SENZING_PURGE`.
@@ -216,7 +225,7 @@ These steps load the Senzing Model with sample data.
     export SENZING_PURGE="-P"
     ```
 
-1. In Senzing X-term, load sample data.
+1. In the Senzing X-term, load sample data.
    Example:
 
     ```console
@@ -227,7 +236,9 @@ These steps load the Senzing Model with sample data.
 
 These steps show the sample data in a web application.
 
-1. Start Senzing entity search webapp Docker container.
+1. In a **new** Mac Terminal, start Senzing entity search webapp Docker container.
+   :warning: If a new Mac Terminal is used,
+   make sure `SENZING_PROJECT_DIR` environment variable is set.
    Example:
 
     ```console
