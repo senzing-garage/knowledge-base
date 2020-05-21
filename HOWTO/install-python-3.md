@@ -23,6 +23,20 @@ Instructions for installing [Python3](https://www.python.org/).
 
 ### macOS
 
+1. Install `HomeBrew`.
+   Example:
+
+    ```console
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+    ```
+
+1. Install `python3` using `brew`.
+   Example:
+
+    ```console
+    brew install python3
+    ```
+
 ### Windows
 
 ## Test
