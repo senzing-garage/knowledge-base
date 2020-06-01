@@ -12,7 +12,7 @@ In a pre-test, verify that EC2 cannot be launched without multi-factor authentic
     ```
 
 1. :pencil2: Identify the key pair to be used with the running image.
-   See [AWS Console EC2 Key pairs](https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#KeyPairs:).
+   See [AWS Console EC2 Key pairs](https://console.aws.amazon.com/ec2/v2/home?#KeyPairs:).
    Example:
 
     ```console
@@ -32,13 +32,13 @@ In a pre-test, verify that EC2 cannot be launched without multi-factor authentic
     ```
 
 1. Verify EC2 is not running.
-   1. [AWS EC2 console](https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#Instances:sort=keyName)
+   1. [AWS EC2 console](https://console.aws.amazon.com/ec2/v2/home?#Instances:)
 
 ## Obtain AWS session credentials
 
 1. :pencil2: Identify the AWS multi-factor authentication serial number for the device supplying the MFA token.
    Registered devices can be found at
-   [AWS My security credentials](https://console.aws.amazon.com/iam/home?region=us-east-1#/security_credentials)
+   [AWS My security credentials](https://console.aws.amazon.com/iam/home?#/security_credentials)
    Example:
 
     ```console
@@ -102,4 +102,4 @@ In a pre-test, verify that EC2 cannot be launched without multi-factor authentic
     ```
 
 1. Verify EC2 is running.
-   1. [AWS EC2 console](https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#Instances:sort=keyName)
+   1. [AWS EC2 console](https://console.aws.amazon.com/ec2/v2/home?#Instances:)
