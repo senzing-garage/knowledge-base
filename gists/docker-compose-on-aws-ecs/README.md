@@ -97,6 +97,11 @@ Reference:
       --cluster-config senzing-example-config
     ```
 
+    ```console
+    ecs-cli down \
+      --cluster-config senzing-example-config
+    ```
+
 ## Create service
 
 1. XXX
