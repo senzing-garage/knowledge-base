@@ -15,11 +15,14 @@ An instantiation of the instructions seen at:
 Follow steps at
 [Configuring the Amazon ECS CLI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_CLI_installation.html).
 
+- [AWS ecs-cli reference](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cmd-ecs-cli.html)
+
 ### Configure ECS CLI
 
-Reference:
-[Installing the Amazon ECS CLI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_CLI_installation.html).
+References:
 
+- [Installing the Amazon ECS CLI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_CLI_installation.html).
+- [AWS ecs-cli configure reference](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cmd-ecs-cli-configure.html)
 
 1. Identify the AWS region.
    Example:
@@ -43,6 +46,10 @@ Reference:
    See (How to set AWS multi-factor authentication credentials)[../../HOWTO/set-aws-mfa-credentials.md].
 
 ### Create cluster
+
+References:
+
+- [AWS ecs-cli up reference](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cmd-ecs-cli-up.html)
 
 1. Set environment variables.
    Example:
