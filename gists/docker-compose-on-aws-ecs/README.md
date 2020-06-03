@@ -43,7 +43,7 @@ References:
     ```
 
 1. Configure environment variables.
-   See (How to set AWS multi-factor authentication credentials)[../../HOWTO/set-aws-mfa-credentials.md].
+   See [How to set AWS multi-factor authentication credentials](../../HOWTO/set-aws-mfa-credentials.md).
 
 ### Create cluster
 
