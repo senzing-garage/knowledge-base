@@ -79,7 +79,7 @@
 
 ### Create capacity provider
 
-FIXME:
+FIXME: Doesn't work.
 
 1. References:
     1. [AWS CLI Command reference](https://docs.aws.amazon.com/cli/latest/index.html)
@@ -87,7 +87,7 @@ FIXME:
            [ecs](https://docs.aws.amazon.com/cli/latest/reference/ecs/index.html#cli-aws-ecs)
            [create-capacity](https://docs.aws.amazon.com/cli/latest/reference/ecs/create-capacity-provider.html)
 
-1. XXx
+1. XXX.
    Example:
 
     ```console
@@ -96,7 +96,7 @@ FIXME:
       --auto-scaling-group-provider AutoScalingGroupArn=arn:aws:iam::488776654093:role/aws-service-role/autoscaling.amazonaws.com/AWSServiceRoleForAutoScaling,managedScaling={status=DISABLED,targetCapacity=1,minimumScalingStepSize=1,maximumScalingStepSize=1},managedTerminationProtection=DISABLED
     ```
 
-1. AWS Console: [Autoscaling](https://console.aws.amazon.com/ec2/autoscaling/home)
+1. AWS Console: [????]()
 
 ## Cleanup
 
