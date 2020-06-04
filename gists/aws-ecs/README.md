@@ -1,14 +1,16 @@
 # docker-compose-on-aws-ecs
 
-# WARNING: work in progress.
+## WARNING: work in progress
 
 ## Contents
 
-1. [AWS metadata](#aws-metadata)
-1. [Identify project](#identify-project)
-1. []()
-1. []()
-1. []()
+1. [Steps](#steps)
+    1. [AWS metadata](#aws-metadata)
+    1. [Identify project](#identify-project)
+    1. [Create launch configuration](#create-launch-configuration)
+    1. [Create auto-scaling-group-provider](#create-auto-scaling-group-provider)
+    1. [Create capacity provider](#create-capacity-provider)
+1. [Cleanup](#cleanup)
 
 ## Steps
 
@@ -32,7 +34,7 @@
     export AWS_PROJECT=project01
     ```
 
-### Create Launch configuration
+### Create launch configuration
 
 1. References:
     1. [AWS CLI Command reference](https://docs.aws.amazon.com/cli/latest/index.html)
@@ -77,6 +79,8 @@
 
 ### Create capacity provider
 
+FIXME:
+
 1. References:
     1. [AWS CLI Command reference](https://docs.aws.amazon.com/cli/latest/index.html)
         1. [aws](https://docs.aws.amazon.com/cli/latest/reference/index.html#cli-aws)
@@ -89,20 +93,21 @@
     ```console
     aws ecs create-capacity-provider \
       --name  ${AWS_PROJECT}-capacity-provider \
-      --auto-scaling-group-provider ${AWS_PROJECT}-auto-scaling-group-name
+      --auto-scaling-group-provider AutoScalingGroupArn=arn:aws:iam::488776654093:role/aws-service-role/autoscaling.amazonaws.com/AWSServiceRoleForAutoScaling,managedScaling={status=DISABLED,targetCapacity=1,minimumScalingStepSize=1,maximumScalingStepSize=1},managedTerminationProtection=DISABLED
     ```
 
 1. AWS Console: [Autoscaling](https://console.aws.amazon.com/ec2/autoscaling/home)
 
-
 ## Cleanup
 
+1. Cleanup.
+   Example:
 
     ```console
-
-    aws ecs create-capacity-provider \
-      --name  ${AWS_PROJECT}-capacity-provider \
-
     aws autoscaling delete-auto-scaling-group \
       --auto-scaling-group-name ${AWS_PROJECT}-auto-scaling-group-name \
+      --force-delete
+
+    aws autoscaling delete-launch-configuration \
+      --launch-configuration-name ${AWS_PROJECT}-launch-configuration-name
     ```
