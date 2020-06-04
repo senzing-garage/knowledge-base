@@ -10,6 +10,7 @@
 1. []()
 1. []()
 
+## Steps
 
 ### AWS metadata
 
@@ -18,6 +19,7 @@
 
     ```console
     export AWS_REGION=us-east-1
+    export AWS_AVAILABILITY_ZONE=us-east-1e
     export AWS_KEYPAIR=aws-default-key-pair
     ```
 
@@ -37,7 +39,6 @@
         1. [aws](https://docs.aws.amazon.com/cli/latest/reference/index.html#cli-aws)
            [autoscaling](https://docs.aws.amazon.com/cli/latest/reference/autoscaling/index.html#cli-aws-autoscaling)
            [create-launch-configuration](https://docs.aws.amazon.com/cli/latest/reference/autoscaling/create-launch-configuration.html)
-
 
 1. Create launch configuration.
    Example:
@@ -60,23 +61,26 @@
            [autoscaling](https://docs.aws.amazon.com/cli/latest/reference/autoscaling/index.html#cli-aws-autoscaling)
            [create-auto-scaling-group](https://docs.aws.amazon.com/cli/latest/reference/autoscaling/create-auto-scaling-group.html)
 
-1. XXx
+1. Create autoscaling group.
    Example:
 
     ```console
     aws autoscaling create-auto-scaling-group \
       --auto-scaling-group-name ${AWS_PROJECT}-auto-scaling-group-name \
+      --availability-zones ${AWS_AVAILABILITY_ZONE} \
       --launch-configuration-name ${AWS_PROJECT}-launch-configuration-name \
-      --min-size 1 \
-      --max-size 2
+      --max-size 2 \
+      --min-size 1
     ```
+
+1. AWS Console: [Autoscaling](https://console.aws.amazon.com/ec2/autoscaling/home)
 
 ### Create capacity provider
 
 1. References:
     1. [AWS CLI Command reference](https://docs.aws.amazon.com/cli/latest/index.html)
         1. [aws](https://docs.aws.amazon.com/cli/latest/reference/index.html#cli-aws)
-           [ecs](create-capacity-provider)
+           [ecs](https://docs.aws.amazon.com/cli/latest/reference/ecs/index.html#cli-aws-ecs)
            [create-capacity](https://docs.aws.amazon.com/cli/latest/reference/ecs/create-capacity-provider.html)
 
 1. XXx
@@ -85,36 +89,20 @@
     ```console
     aws ecs create-capacity-provider \
       --name  ${AWS_PROJECT}-capacity-provider \
-      --auto-scaling-group-provider XXXXX
+      --auto-scaling-group-provider ${AWS_PROJECT}-auto-scaling-group-name
     ```
 
-### Create hello-world task
+1. AWS Console: [Autoscaling](https://console.aws.amazon.com/ec2/autoscaling/home)
 
-1. XXx
-   Example:
+
+## Cleanup
+
 
     ```console
-    aws ecs register-task-definition \
-      --family mjd-test-task \
-      --cluster-config senzing-example-config \
-      --force \
-      --instance-type t2.medium \
-      --keypair ${AWS_KEY_NAME} \
-      --size 2
-    ```
 
-### Create AWS Elastic File System instance
+    aws ecs create-capacity-provider \
+      --name  ${AWS_PROJECT}-capacity-provider \
 
-1. References:
-
-    - [aws efs create-file-system reference](https://docs.aws.amazon.com/cli/latest/reference/efs/create-file-system.html)
-
-
-1. Bring up and AWS Elastic Container Service (ECS) instance.
-   Example:
-
-    ```console
-    aws efs create-file-system \
-      --creation-token senzing-g2-volume \
-      --region ${AWS_REGION}
+    aws autoscaling delete-auto-scaling-group \
+      --auto-scaling-group-name ${AWS_PROJECT}-auto-scaling-group-name \
     ```
