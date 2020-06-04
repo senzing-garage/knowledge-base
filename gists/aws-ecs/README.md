@@ -62,6 +62,9 @@
         1. [aws](https://docs.aws.amazon.com/cli/latest/reference/index.html#cli-aws)
            [autoscaling](https://docs.aws.amazon.com/cli/latest/reference/autoscaling/index.html#cli-aws-autoscaling)
            [create-auto-scaling-group](https://docs.aws.amazon.com/cli/latest/reference/autoscaling/create-auto-scaling-group.html)
+        1. [aws](https://docs.aws.amazon.com/cli/latest/reference/index.html#cli-aws)
+           [autoscaling](https://docs.aws.amazon.com/cli/latest/reference/autoscaling/index.html#cli-aws-autoscaling)
+           [describe-auto-scaling-groups](https://docs.aws.amazon.com/cli/latest/reference/autoscaling/describe-auto-scaling-groups.html)
 
 1. Create autoscaling group.
    Example:
@@ -74,16 +77,6 @@
       --max-size 2 \
       --min-size 1
     ```
-
-1. Verify in AWS Console: [Autoscaling](https://console.aws.amazon.com/ec2/autoscaling/home)
-
-### Find auto-scaling-group-arn
-
-1. References:
-    1. [AWS CLI Command reference](https://docs.aws.amazon.com/cli/latest/index.html)
-        1. [aws](https://docs.aws.amazon.com/cli/latest/reference/index.html#cli-aws)
-           [autoscaling](https://docs.aws.amazon.com/cli/latest/reference/autoscaling/index.html#cli-aws-autoscaling)
-           [describe-auto-scaling-groups](https://docs.aws.amazon.com/cli/latest/reference/autoscaling/describe-auto-scaling-groups.html)
 
 1. Find autoscaling group ARN.
    Example:
@@ -94,6 +87,8 @@
       | jq --raw-output .AutoScalingGroups[0].AutoScalingGroupARN)
     ```
 
+1. Verify in AWS Console: [Autoscaling](https://console.aws.amazon.com/ec2/autoscaling/home)
+
 ### Create default auto-scaling-group-provider
 
 1. References:
@@ -101,6 +96,9 @@
         1. [aws](https://docs.aws.amazon.com/cli/latest/reference/index.html#cli-aws)
            [autoscaling](https://docs.aws.amazon.com/cli/latest/reference/autoscaling/index.html#cli-aws-autoscaling)
            [create-auto-scaling-group](https://docs.aws.amazon.com/cli/latest/reference/autoscaling/create-auto-scaling-group.html)
+        1. [aws](https://docs.aws.amazon.com/cli/latest/reference/index.html#cli-aws)
+           [autoscaling](https://docs.aws.amazon.com/cli/latest/reference/autoscaling/index.html#cli-aws-autoscaling)
+           [describe-auto-scaling-groups](https://docs.aws.amazon.com/cli/latest/reference/autoscaling/describe-auto-scaling-groups.html)
 
 1. Create autoscaling group.
    Example:
@@ -114,16 +112,6 @@
       --min-size 1
     ```
 
-1. Verify in AWS Console: [Autoscaling](https://console.aws.amazon.com/ec2/autoscaling/home)
-
-### Find auto-scaling-group-arn
-
-1. References:
-    1. [AWS CLI Command reference](https://docs.aws.amazon.com/cli/latest/index.html)
-        1. [aws](https://docs.aws.amazon.com/cli/latest/reference/index.html#cli-aws)
-           [autoscaling](https://docs.aws.amazon.com/cli/latest/reference/autoscaling/index.html#cli-aws-autoscaling)
-           [describe-auto-scaling-groups](https://docs.aws.amazon.com/cli/latest/reference/autoscaling/describe-auto-scaling-groups.html)
-
 1. Find autoscaling group ARN.
    Example:
 
@@ -132,6 +120,8 @@
       --auto-scaling-group-name ${AWS_PROJECT}-default-auto-scaling-group-name \
       | jq --raw-output .AutoScalingGroups[0].AutoScalingGroupARN)
     ```
+
+1. Verify in AWS Console: [Autoscaling](https://console.aws.amazon.com/ec2/autoscaling/home)
 
 ### Create capacity provider
 
@@ -192,9 +182,8 @@
     aws ecs create-cluster \
       --cluster-name ${AWS_PROJECT}-cluster-name \
       --capacity-providers ${AWS_PROJECT}-capacity-provider ${AWS_PROJECT}-default-capacity-provider  \
-      --default-capacity-provider-strategy "capacityProvider=${AWS_PROJECT}-default-capacity-provider,weight=1,base=0"
+      --default-capacity-provider-strategy "capacityProvider=${AWS_PROJECT}-default-capacity-provider,weight=100,base=0"
     ```
-
 
 1. Verify in AWS Console: [Clusters](https://console.aws.amazon.com/ecs/home)
 
