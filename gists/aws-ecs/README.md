@@ -96,15 +96,13 @@
 
 ### Create capacity provider
 
-FIXME: Doesn't work.
-
 1. References:
     1. [AWS CLI Command reference](https://docs.aws.amazon.com/cli/latest/index.html)
         1. [aws](https://docs.aws.amazon.com/cli/latest/reference/index.html#cli-aws)
            [ecs](https://docs.aws.amazon.com/cli/latest/reference/ecs/index.html#cli-aws-ecs)
            [create-capacity-provider](https://docs.aws.amazon.com/cli/latest/reference/ecs/create-capacity-provider.html)
 
-1. XXX.
+1. Create capacity provider.
    Example:
 
     ```console
@@ -113,7 +111,26 @@ FIXME: Doesn't work.
       --auto-scaling-group-provider "autoScalingGroupArn=${AWS_AUTO_SCALING_GROUP_ARN},managedScaling={status=DISABLED,targetCapacity=1,minimumScalingStepSize=1,maximumScalingStepSize=1},managedTerminationProtection=DISABLED"
     ```
 
-1. Verify in AWS Console: [????]()
+1. Verify in AWS Console: [????](http://nowhere.com)
+
+### Create cluster
+
+1. References:
+    1. [AWS CLI Command reference](https://docs.aws.amazon.com/cli/latest/index.html)
+        1. [aws](https://docs.aws.amazon.com/cli/latest/reference/index.html#cli-aws)
+           [ecs](https://docs.aws.amazon.com/cli/latest/reference/ecs/index.html#cli-aws-ecs)
+           [create-cluster](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ecs/create-cluster.html)
+
+1. Create capacity provider.
+   Example:
+
+    ```console
+    aws ecs create-cluster \
+      --cluster-name ${AWS_PROJECT}-cluster-name \
+      --capacity-providers ${AWS_PROJECT}-capacity-provider
+    ```
+
+1. Verify in AWS Console: [Clusters](https://console.aws.amazon.com/ecs/home)
 
 ## Cleanup
 
