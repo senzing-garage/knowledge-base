@@ -95,9 +95,9 @@ Follow steps at
 
 1. References:
     1. [AWS CLI Command reference](https://docs.aws.amazon.com/cli/latest/index.html)
-    1. [aws](https://docs.aws.amazon.com/cli/latest/reference/index.html#cli-aws)
-       [autoscaling](https://docs.aws.amazon.com/cli/latest/reference/autoscaling/index.html#cli-aws-autoscaling)
-       [create-auto-scaling-group](https://docs.aws.amazon.com/cli/latest/reference/autoscaling/create-auto-scaling-group.html)
+        1. [aws](https://docs.aws.amazon.com/cli/latest/reference/index.html#cli-aws)
+           [autoscaling](https://docs.aws.amazon.com/cli/latest/reference/autoscaling/index.html#cli-aws-autoscaling)
+           [create-auto-scaling-group](https://docs.aws.amazon.com/cli/latest/reference/autoscaling/create-auto-scaling-group.html)
 
 1. XXx
    Example:
@@ -111,9 +111,9 @@ Follow steps at
 
 1. References:
     1. [AWS CLI Command reference](https://docs.aws.amazon.com/cli/latest/index.html)
-    1. [aws](https://docs.aws.amazon.com/cli/latest/reference/index.html#cli-aws)
-       [ecs](create-capacity-provider)
-       [create-capacity](https://docs.aws.amazon.com/cli/latest/reference/ecs/create-capacity-provider.html)
+        1. [aws](https://docs.aws.amazon.com/cli/latest/reference/index.html#cli-aws)
+           [ecs](create-capacity-provider)
+           [create-capacity](https://docs.aws.amazon.com/cli/latest/reference/ecs/create-capacity-provider.html)
 
 1. XXx
    Example:
