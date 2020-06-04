@@ -9,7 +9,10 @@
     1. [Identify project](#identify-project)
     1. [Create launch configuration](#create-launch-configuration)
     1. [Create auto-scaling-group-provider](#create-auto-scaling-group-provider)
+    1. [Create default auto-scaling-group-provider](#create-default-auto-scaling-group-provider)
     1. [Create capacity provider](#create-capacity-provider)
+    1. [Create default capacity provider](#create-default-capacity-provider)
+    1. [Create cluster](#create-cluster)
 1. [Cleanup](#cleanup)
 
 ## Steps
@@ -27,7 +30,7 @@
 
 ### Identify project
 
-1. :pencil2: XXX.
+1. :pencil2: User determined prefix to AWS objects names.
    Example:
 
     ```console
@@ -175,12 +178,6 @@
     ```console
     aws ecs create-cluster \
       --cluster-name ${AWS_PROJECT}-cluster-name \
-      --capacity-providers ${AWS_PROJECT}-capacity-provider
-    ```
-
-    ```console
-    aws ecs create-cluster \
-      --cluster-name ${AWS_PROJECT}-cluster-name \
       --capacity-providers ${AWS_PROJECT}-capacity-provider ${AWS_PROJECT}-default-capacity-provider  \
       --default-capacity-provider-strategy "capacityProvider=${AWS_PROJECT}-default-capacity-provider,weight=100,base=0"
     ```
@@ -208,6 +205,7 @@
       --launch-configuration-name ${AWS_PROJECT}-launch-configuration-name
     ```
 
-1. Verify in AWS Console
+1. Verify in AWS Console.
+    1. [Clusters](https://console.aws.amazon.com/ecs/home)
     1. [Autoscaling](https://console.aws.amazon.com/ec2/autoscaling/home)
     1. [Launch Configurations](https://console.aws.amazon.com/ec2/autoscaling/home)
