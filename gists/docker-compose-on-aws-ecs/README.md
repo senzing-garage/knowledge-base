@@ -15,7 +15,13 @@ An instantiation of the instructions seen at:
 Follow steps at
 [Configuring the Amazon ECS CLI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_CLI_installation.html).
 
-- [AWS ecs-cli reference](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cmd-ecs-cli.html)
+1. References:
+    1. [Installing the Amazon ECS CLI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_CLI_installation.html).
+    1. [AWS](https://aws.amazon.com/)
+       &gt; [Documentation](https://docs.aws.amazon.com/index.html)
+       &gt; [Amazon ECS](https://docs.aws.amazon.com/ecs/index.html)
+       &gt; [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/Welcome.html)
+       &gt; [ecs-cli](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cmd-ecs-cli.html)
 
 ### Configure ECS CLI
 
