@@ -208,7 +208,7 @@
       --cluster ${AWS_PROJECT}-cluster-name
 
     aws autoscaling delete-auto-scaling-group \
-      --auto-scaling-group-name ${AWS_PROJECT}-delete-auto-scaling-group-name \
+      --auto-scaling-group-name ${AWS_PROJECT}-default-auto-scaling-group-name \
       --force-delete
 
     aws autoscaling delete-auto-scaling-group \
