@@ -23,30 +23,42 @@ Follow steps at
        &gt; [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/Welcome.html)
        &gt; [ecs-cli](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cmd-ecs-cli.html)
 
+### AWS metadata
+
+1. :pencil2: XXX.
+   Example:
+
+    ```console
+    export AWS_REGION=us-east-1
+    export AWS_KEYPAIR=aws-default-key-pair
+
+    ```
+
+### Identify project
+
+1. :pencil2: XXX.
+   Example:
+
+    ```console
+    export AWS_PROJECT=project01
+    ```
+
 ### Configure ECS CLI
 
 1. References:
-    1. [Installing the Amazon ECS CLI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_CLI_installation.html).
     1. [AWS](https://aws.amazon.com/)
        &gt; [Documentation](https://docs.aws.amazon.com/index.html)
        &gt; [Amazon ECS](https://docs.aws.amazon.com/ecs/index.html)
        &gt; [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/Welcome.html)
        &gt; [ecs-cli configure](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cmd-ecs-cli-configure.html)
 
-1. Identify the AWS region.
-   Example:
-
-    ```console
-    export AWS_REGION=us-east-1
-    ```
-
 1. Create an AWS configuration.
    Example:
 
     ```console
     ecs-cli configure \
-       --cluster senzing-example-cluster \
-       --config-name senzing-example-config \
+       --cluster ${AWS_PROJECT}-cluster \
+       --config-name ${AWS_PROJECT}-config-name \
        --default-launch-type EC2 \
        --region ${AWS_REGION}
     ```
@@ -54,22 +66,16 @@ Follow steps at
 1. Configure environment variables.
    See [How to set AWS multi-factor authentication credentials](../../HOWTO/set-aws-mfa-credentials.md).
 
+
 ### Create cluster
 
 1. References:
-    1. [Installing the Amazon ECS CLI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_CLI_installation.html).
     1. [AWS](https://aws.amazon.com/)
        &gt; [Documentation](https://docs.aws.amazon.com/index.html)
        &gt; [Amazon ECS](https://docs.aws.amazon.com/ecs/index.html)
        &gt; [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/Welcome.html)
        &gt; [ecs-cli up](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cmd-ecs-cli-up.html)
 
-1. Set environment variables.
-   Example:
-
-    ```console
-    export export AWS_KEY_NAME=aws-default-key-pair
-    ```
 
 1. Bring up and AWS Elastic Container Service (ECS) instance.
    Example:
@@ -77,22 +83,46 @@ Follow steps at
     ```console
     ecs-cli up \
       --capability-iam \
-      --cluster-config senzing-example-config \
+      --cluster-config ${AWS_PROJECT}-config-name \
       --force \
       --instance-type t2.medium \
-      --keypair ${AWS_KEY_NAME} \
+      --keypair ${AWS_KEYPAIR} \
       --size 2
+    ```
+
+
+### Create auto-scaling-group-provider
+
+1. References:
+    1. [AWS CLI Command reference](https://docs.aws.amazon.com/cli/latest/index.html)
+    1. [aws](https://docs.aws.amazon.com/cli/latest/reference/index.html#cli-aws)
+       [autoscaling](https://docs.aws.amazon.com/cli/latest/reference/autoscaling/index.html#cli-aws-autoscaling)
+       [create-auto-scaling-group](https://docs.aws.amazon.com/cli/latest/reference/autoscaling/create-auto-scaling-group.html)
+
+1. XXx
+   Example:
+
+    ```console
+    aws autoscaling create-auto-scaling-group \
+      --auto-scaling-group-name ${AWS_PROJECT}-auto-scaling-group-name
     ```
 
 ### Create capacity provider
 
 1. References:
-    1. [AWS](https://aws.amazon.com/)
-       &gt; [Documentation](https://docs.aws.amazon.com/index.html)
-       &gt; [Amazon ECS](https://docs.aws.amazon.com/ecs/index.html)
-       &gt; [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/Welcome.html)
-       &gt; [ecs create-capacity](https://docs.aws.amazon.com/cli/latest/reference/ecs/create-capacity-provider.html)
+    1. [AWS CLI Command reference](https://docs.aws.amazon.com/cli/latest/index.html)
+    1. [aws](https://docs.aws.amazon.com/cli/latest/reference/index.html#cli-aws)
+       [ecs](create-capacity-provider)
+       [create-capacity](https://docs.aws.amazon.com/cli/latest/reference/ecs/create-capacity-provider.html)
 
+1. XXx
+   Example:
+
+    ```console
+    aws ecs create-capacity-provider \
+      --name  ${AWS_PROJECT}-capacity-provider \
+      --auto-scaling-group-provider XXXXX
+    ```
 
 ### Create hello-world task
 
