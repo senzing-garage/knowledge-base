@@ -53,7 +53,7 @@
       --key-name ${AWS_KEYPAIR}
     ```
 
-1. AWS Console: [Launch Configurations](https://console.aws.amazon.com/ec2/autoscaling/home)
+1. Verify in AWS Console: [Launch Configurations](https://console.aws.amazon.com/ec2/autoscaling/home)
 
 ### Create auto-scaling-group-provider
 
@@ -75,7 +75,7 @@
       --min-size 1
     ```
 
-1. AWS Console: [Autoscaling](https://console.aws.amazon.com/ec2/autoscaling/home)
+1. Verify in AWS Console: [Autoscaling](https://console.aws.amazon.com/ec2/autoscaling/home)
 
 ### Create capacity provider
 
@@ -93,10 +93,10 @@ FIXME: Doesn't work.
     ```console
     aws ecs create-capacity-provider \
       --name  ${AWS_PROJECT}-capacity-provider \
-      --auto-scaling-group-provider AutoScalingGroupArn=arn:aws:iam::488776654093:role/aws-service-role/autoscaling.amazonaws.com/AWSServiceRoleForAutoScaling,managedScaling={status=DISABLED,targetCapacity=1,minimumScalingStepSize=1,maximumScalingStepSize=1},managedTerminationProtection=DISABLED
+      --auto-scaling-group-provider "AutoScalingGroupArn=arn:aws:iam::488776654093:role/aws-service-role/autoscaling.amazonaws.com/AWSServiceRoleForAutoScaling,managedScaling={status=DISABLED,targetCapacity=1,minimumScalingStepSize=1,maximumScalingStepSize=1},managedTerminationProtection=DISABLED"
     ```
 
-1. AWS Console: [????]()
+1. Verify in AWS Console: [????]()
 
 ## Cleanup
 
@@ -111,3 +111,7 @@ FIXME: Doesn't work.
     aws autoscaling delete-launch-configuration \
       --launch-configuration-name ${AWS_PROJECT}-launch-configuration-name
     ```
+
+1. Verify in AWS Console
+    1. [Autoscaling](https://console.aws.amazon.com/ec2/autoscaling/home)
+    1. [Launch Configurations](https://console.aws.amazon.com/ec2/autoscaling/home)
