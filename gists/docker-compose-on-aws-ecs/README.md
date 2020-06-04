@@ -57,7 +57,12 @@ Follow steps at
 ### Create cluster
 
 1. References:
-    1. [AWS ecs-cli up reference](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cmd-ecs-cli-up.html)
+    1. [Installing the Amazon ECS CLI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_CLI_installation.html).
+    1. [AWS](https://aws.amazon.com/)
+       &gt; [Documentation](https://docs.aws.amazon.com/index.html)
+       &gt; [Amazon ECS](https://docs.aws.amazon.com/ecs/index.html)
+       &gt; [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/Welcome.html)
+       &gt; [ecs-cli up](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cmd-ecs-cli-up.html)
 
 1. Set environment variables.
    Example:
@@ -82,7 +87,11 @@ Follow steps at
 ### Create capacity provider
 
 1. References:
-    1. [aws ecs create-capacity](https://docs.aws.amazon.com/cli/latest/reference/ecs/create-capacity-provider.html)
+    1. [AWS](https://aws.amazon.com/)
+       &gt; [Documentation](https://docs.aws.amazon.com/index.html)
+       &gt; [Amazon ECS](https://docs.aws.amazon.com/ecs/index.html)
+       &gt; [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/Welcome.html)
+       &gt; [ecs create-capacity](https://docs.aws.amazon.com/cli/latest/reference/ecs/create-capacity-provider.html)
 
 
 ### Create hello-world task
