@@ -127,7 +127,8 @@
     ```console
     aws ecs create-cluster \
       --cluster-name ${AWS_PROJECT}-cluster-name \
-      --capacity-providers ${AWS_PROJECT}-capacity-provider
+      --capacity-providers ${AWS_PROJECT}-capacity-provider \
+      --default-capacity-provider-strategy ${AWS_PROJECT}-capacity-provider
     ```
 
 1. Verify in AWS Console: [Clusters](https://console.aws.amazon.com/ecs/home)
@@ -138,6 +139,9 @@
    Example:
 
     ```console
+    aws ecs delete-cluster \
+      --cluster ${AWS_PROJECT}-cluster-name
+
     aws autoscaling delete-auto-scaling-group \
       --auto-scaling-group-name ${AWS_PROJECT}-auto-scaling-group-name \
       --force-delete
