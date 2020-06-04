@@ -21,10 +21,10 @@ Follow steps at
 
 1. References:
     1. [Installing the Amazon ECS CLI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_CLI_installation.html).
-    1. AWS
-       &gt; Documentation
-       &gt; Amazon ECS
-       &gt; Developer Guide
+    1. [AWS](https://aws.amazon.com/)
+       &gt; [Documentation](https://docs.aws.amazon.com/index.html)
+       &gt; [Amazon ECS](https://docs.aws.amazon.com/ecs/index.html)
+       &gt; [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/Welcome.html)
        &gt; [ecs-cli configure](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cmd-ecs-cli-configure.html)
 
 1. Identify the AWS region.
