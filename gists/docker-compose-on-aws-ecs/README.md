@@ -20,9 +20,12 @@ Follow steps at
 ### Configure ECS CLI
 
 1. References:
-
-    - [Installing the Amazon ECS CLI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_CLI_installation.html).
-    - [AWS ecs-cli configure reference](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cmd-ecs-cli-configure.html)
+    1. [Installing the Amazon ECS CLI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_CLI_installation.html).
+    1. AWS
+       > Documentation
+       > Amazon ECS
+       > Developer Guide
+       > [ecs-cli configure](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cmd-ecs-cli-configure.html)
 
 1. Identify the AWS region.
    Example:
@@ -48,8 +51,7 @@ Follow steps at
 ### Create cluster
 
 1. References:
-
-    - [AWS ecs-cli up reference](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cmd-ecs-cli-up.html)
+    1. [AWS ecs-cli up reference](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cmd-ecs-cli-up.html)
 
 1. Set environment variables.
    Example:
@@ -64,6 +66,27 @@ Follow steps at
     ```console
     ecs-cli up \
       --capability-iam \
+      --cluster-config senzing-example-config \
+      --force \
+      --instance-type t2.medium \
+      --keypair ${AWS_KEY_NAME} \
+      --size 2
+    ```
+
+### Create capacity provider
+
+1. References:
+    1. [aws ecs create-capacity](https://docs.aws.amazon.com/cli/latest/reference/ecs/create-capacity-provider.html)
+
+
+### Create hello-world task
+
+1. XXx
+   Example:
+
+    ```console
+    aws ecs register-task-definition \
+      --family mjd-test-task \
       --cluster-config senzing-example-config \
       --force \
       --instance-type t2.medium \
