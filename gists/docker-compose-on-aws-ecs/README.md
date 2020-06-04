@@ -19,10 +19,10 @@ Follow steps at
 
 ### Configure ECS CLI
 
-References:
+1. References:
 
-- [Installing the Amazon ECS CLI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_CLI_installation.html).
-- [AWS ecs-cli configure reference](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cmd-ecs-cli-configure.html)
+    - [Installing the Amazon ECS CLI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_CLI_installation.html).
+    - [AWS ecs-cli configure reference](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cmd-ecs-cli-configure.html)
 
 1. Identify the AWS region.
    Example:
@@ -47,9 +47,9 @@ References:
 
 ### Create cluster
 
-References:
+1. References:
 
-- [AWS ecs-cli up reference](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cmd-ecs-cli-up.html)
+    - [AWS ecs-cli up reference](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cmd-ecs-cli-up.html)
 
 1. Set environment variables.
    Example:
@@ -69,6 +69,22 @@ References:
       --instance-type t2.medium \
       --keypair ${AWS_KEY_NAME} \
       --size 2
+    ```
+
+### Create AWS Elastic File System instance
+
+1. References:
+
+    - [aws efs create-file-system reference](https://docs.aws.amazon.com/cli/latest/reference/efs/create-file-system.html)
+
+
+1. Bring up and AWS Elastic Container Service (ECS) instance.
+   Example:
+
+    ```console
+    aws efs create-file-system \
+      --creation-token senzing-g2-volume \
+      --region ${AWS_REGION}
     ```
 
 ## Deploy docker-compose file to cluster
