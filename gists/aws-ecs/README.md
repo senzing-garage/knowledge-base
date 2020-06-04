@@ -77,6 +77,23 @@
 
 1. Verify in AWS Console: [Autoscaling](https://console.aws.amazon.com/ec2/autoscaling/home)
 
+### Find auto-scaling-group-arn
+
+1. References:
+    1. [AWS CLI Command reference](https://docs.aws.amazon.com/cli/latest/index.html)
+        1. [aws](https://docs.aws.amazon.com/cli/latest/reference/index.html#cli-aws)
+           [autoscaling](https://docs.aws.amazon.com/cli/latest/reference/autoscaling/index.html#cli-aws-autoscaling)
+           [describe-auto-scaling-groups](https://docs.aws.amazon.com/cli/latest/reference/autoscaling/describe-auto-scaling-groups.html)
+
+1. Find autoscaling group ARN.
+   Example:
+
+    ```console
+    export AWS_AUTO_SCALING_GROUP_ARN=$(aws autoscaling describe-auto-scaling-groups \
+      --auto-scaling-group-name ${AWS_PROJECT}-auto-scaling-group-name \
+      | jq --raw-output .AutoScalingGroups[0].AutoScalingGroupARN)
+    ```
+
 ### Create capacity provider
 
 FIXME: Doesn't work.
@@ -93,7 +110,7 @@ FIXME: Doesn't work.
     ```console
     aws ecs create-capacity-provider \
       --name  ${AWS_PROJECT}-capacity-provider \
-      --auto-scaling-group-provider "AutoScalingGroupArn=arn:aws:iam::488776654093:role/aws-service-role/autoscaling.amazonaws.com/AWSServiceRoleForAutoScaling,managedScaling={status=DISABLED,targetCapacity=1,minimumScalingStepSize=1,maximumScalingStepSize=1},managedTerminationProtection=DISABLED"
+      --auto-scaling-group-provider "autoScalingGroupArn=${AWS_AUTO_SCALING_GROUP_ARN},managedScaling={status=DISABLED,targetCapacity=1,minimumScalingStepSize=1,maximumScalingStepSize=1},managedTerminationProtection=DISABLED"
     ```
 
 1. Verify in AWS Console: [????]()
