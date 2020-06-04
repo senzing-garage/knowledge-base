@@ -85,7 +85,7 @@ FIXME: Doesn't work.
     1. [AWS CLI Command reference](https://docs.aws.amazon.com/cli/latest/index.html)
         1. [aws](https://docs.aws.amazon.com/cli/latest/reference/index.html#cli-aws)
            [ecs](https://docs.aws.amazon.com/cli/latest/reference/ecs/index.html#cli-aws-ecs)
-           [create-capacity](https://docs.aws.amazon.com/cli/latest/reference/ecs/create-capacity-provider.html)
+           [create-capacity-provider](https://docs.aws.amazon.com/cli/latest/reference/ecs/create-capacity-provider.html)
 
 1. XXX.
    Example:
