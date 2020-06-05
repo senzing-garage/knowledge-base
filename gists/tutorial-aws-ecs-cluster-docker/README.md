@@ -1,9 +1,6 @@
-# docker-compose-on-aws-ecs
+# tutorial-aws-ecs-cluster-docker
 
-# WARNING: work in progress.
-
-An instantiation of the instructions seen at:
-
+This is a copy/paste version of
 [Tutorial: Creating a Cluster with an EC2 Task Using the Amazon ECS CLI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-cli-tutorial-ec2.html)
 
 ## Contents
@@ -42,7 +39,6 @@ Follow steps at
     ```console
     export AWS_REGION=us-east-1
     export AWS_KEYPAIR=aws-default-key-pair
-
     ```
 
 #### Identify project
@@ -56,13 +52,9 @@ Follow steps at
 
 ### Configure ECS CLI
 
-1. References:
-    1. [AWS](https://aws.amazon.com/)
-       &gt; [Documentation](https://docs.aws.amazon.com/index.html)
-       &gt; [Amazon ECS](https://docs.aws.amazon.com/ecs/index.html)
-       &gt; [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/Welcome.html)
-       1. [ecs-cli](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_CLI_reference.html)
-          [configure](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cmd-ecs-cli-configure.html)
+1. References
+    1. [ecs-cli](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_CLI_reference.html)
+       [configure](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cmd-ecs-cli-configure.html)
 
 1. Create an AWS configuration.
    Example:
@@ -80,12 +72,8 @@ Follow steps at
 ### Create cluster
 
 1. References:
-    1. [AWS](https://aws.amazon.com/)
-       &gt; [Documentation](https://docs.aws.amazon.com/index.html)
-       &gt; [Amazon ECS](https://docs.aws.amazon.com/ecs/index.html)
-       &gt; [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/Welcome.html)
-       1. [ecs-cli](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_CLI_reference.html)
-          [up](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cmd-ecs-cli-up.html)
+    1. [ecs-cli](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_CLI_reference.html)
+       [up](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cmd-ecs-cli-up.html)
 
 1. Bring up and AWS Elastic Container Service (ECS) instance.
    Example:
@@ -102,17 +90,21 @@ Follow steps at
 
 ### Create hello-world task
 
+1. References:
+    1. [ecs-cli](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_CLI_reference.html)
+       [compose](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cmd-ecs-cli-compose.html)
+       up
+
 1. XXx
    Example:
 
     ```console
-    aws ecs register-task-definition \
-      --family mjd-test-task \
-      --cluster-config senzing-example-config \
-      --force \
-      --instance-type t2.medium \
-      --keypair ${AWS_KEY_NAME} \
-      --size 2
+    ecs-cli compose up \
+      --cluster-config ${AWS_PROJECT}-config-name \
+      --create-log-groups \
+      --ecs-params ~/senzing.git/knowledge-base/gists/tutorial-aws-ecs-cluster-docker/ecs-params.yaml \
+      --file ~/senzing.git/knowledge-base/gists/tutorial-aws-ecs-cluster-docker/docker-compose.yaml \
+      --project-name ${AWS_PROJECT}-project-name
     ```
 
 ### Create AWS Elastic File System instance
@@ -120,7 +112,6 @@ Follow steps at
 1. References:
 
     - [aws efs create-file-system reference](https://docs.aws.amazon.com/cli/latest/reference/efs/create-file-system.html)
-
 
 1. Bring up and AWS Elastic Container Service (ECS) instance.
    Example:
@@ -197,3 +188,11 @@ Follow steps at
     ecs-cli compose service rm \
       --cluster-config senzing-example-config
     ```
+
+
+## References
+
+1. [AWS](https://aws.amazon.com/)
+   &gt; [Documentation](https://docs.aws.amazon.com/index.html)
+   &gt; [Amazon ECS](https://docs.aws.amazon.com/ecs/index.html)
+   &gt; [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/Welcome.html)
