@@ -89,10 +89,14 @@ Follow steps at
     ```
 
 1. Verify in AWS Console:
+    1. [ec2](https://console.aws.amazon.com/ec2/v2/home)
+        1. [instances](https://console.aws.amazon.com/ec2/v2/home?#Instances)
+        1. [launch configurations](https://console.aws.amazon.com/ec2/autoscaling/home?#LaunchConfigurations)
+        1. [auto scaling groups](https://console.aws.amazon.com/ec2/autoscaling/home?#AutoScalingGroups)
     1. [ecs](https://console.aws.amazon.com/ecs/home)
-        1. [cluster ECS instances](https://console.aws.amazon.com/ecs/home?#/clusters/mjd05-cluster/containerInstances)
-    1. [ec2](https://console.aws.amazon.com/ec2/v2/home?#Instances)
-
+        1. Select ${AWS_PROJECT}-cluster
+        1. Click "Update Cluster" to update information.
+        1. Click "ECS instances" tab.
 
 ### Create hello-world task
 
@@ -101,7 +105,7 @@ Follow steps at
        [compose](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cmd-ecs-cli-compose.html)
        [up](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cmd-ecs-cli-compose-up.html)
 
-1. XXx
+1. Deploy `docker-compose.yaml` file.
    Example:
 
     ```console
@@ -115,8 +119,95 @@ Follow steps at
       --launch-type EC2
     ```
 
+1. Verify in AWS Console:
+    1. [ecs](https://console.aws.amazon.com/ecs/home)
+        1. Select ${AWS_PROJECT}-cluster
+        1. Click "Update Cluster" to update information.
+        1. Click "Tasks" tab.
 
+### View tasks
+
+:thinking: **Optional:** view the containers.
+
+1. References:
+    1. [ecs-cli](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_CLI_reference.html)
+       [ps](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cmd-ecs-cli-ps.html)
+
+1. View containers.
+   Example:
+
+    ```console
+    ecs-cli ps \
+      --cluster-config ${AWS_PROJECT}-config-name
     ```
+
+1. Verify in AWS Console:
+    1. [ecs](https://console.aws.amazon.com/ecs/home)
+        1. Select ${AWS_PROJECT}-cluster
+        1. Click "Update Cluster" to update information.
+        1. Click "Tasks" tab.
+
+### Scale tasks
+
+:thinking: **Optional:** view the containers.
+
+1. References:
+    1. [ecs-cli](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_CLI_reference.html)
+       [scale](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cmd-ecs-cli-scale.html)
+
+1. View  containers.
+   Example:
+
+    ```console
+    ecs-cli compose \
+      --cluster-config ${AWS_PROJECT}-config-name \
+      --ecs-params ~/senzing.git/knowledge-base/gists/tutorial-aws-ecs-cluster-docker/ecs-params.yaml \
+      --file ~/senzing.git/knowledge-base/gists/tutorial-aws-ecs-cluster-docker/docker-compose.yaml \
+      --project-name ${AWS_PROJECT}-project-name \
+      scale 2 \
+      --cluster-config ${AWS_PROJECT}-config-name
+    ```
+
+1. View  containers.
+   Example:
+
+    ```console
+    ecs-cli ps \
+      --cluster-config ${AWS_PROJECT}-config-name
+    ```
+
+1. Verify in AWS Console:
+    1. [ecs](https://console.aws.amazon.com/ecs/home)
+        1. Select ${AWS_PROJECT}-cluster
+        1. Click "Update Cluster" to update information.
+        1. Click "Tasks" tab.
+
+### Bring down
+
+1. References:
+    1. [ecs-cli](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_CLI_reference.html)
+       [compose](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cmd-ecs-cli-compose.html)
+       [down](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cmd-ecs-cli-down.html)
+
+1. View  containers.
+   Example:
+
+    ```console
+    ecs-cli compose \
+      --cluster-config ${AWS_PROJECT}-config-name \
+      --ecs-params ~/senzing.git/knowledge-base/gists/tutorial-aws-ecs-cluster-docker/ecs-params.yaml \
+      --file ~/senzing.git/knowledge-base/gists/tutorial-aws-ecs-cluster-docker/docker-compose.yaml \
+      --project-name ${AWS_PROJECT}-project-name \
+      down \
+      --cluster-config ${AWS_PROJECT}-config-name
+    ```
+
+1. Verify in AWS Console:
+    1. [ecs](https://console.aws.amazon.com/ecs/home)
+        1. Select ${AWS_PROJECT}-cluster
+        1. Click "Update Cluster" to update information.
+        1. Click "Tasks" tab.
+
 
 ## Cleanup
 
