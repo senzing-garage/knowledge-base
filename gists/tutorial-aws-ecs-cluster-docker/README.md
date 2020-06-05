@@ -93,100 +93,23 @@ Follow steps at
 1. References:
     1. [ecs-cli](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_CLI_reference.html)
        [compose](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cmd-ecs-cli-compose.html)
-       up
+       [up](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cmd-ecs-cli-compose-up.html)
 
 1. XXx
    Example:
 
     ```console
-    ecs-cli compose up \
+    ecs-cli compose \
       --cluster-config ${AWS_PROJECT}-config-name \
-      --create-log-groups \
       --ecs-params ~/senzing.git/knowledge-base/gists/tutorial-aws-ecs-cluster-docker/ecs-params.yaml \
       --file ~/senzing.git/knowledge-base/gists/tutorial-aws-ecs-cluster-docker/docker-compose.yaml \
-      --project-name ${AWS_PROJECT}-project-name
-    ```
-
-### Create AWS Elastic File System instance
-
-1. References:
-
-    - [aws efs create-file-system reference](https://docs.aws.amazon.com/cli/latest/reference/efs/create-file-system.html)
-
-1. Bring up and AWS Elastic Container Service (ECS) instance.
-   Example:
-
-    ```console
-    aws efs create-file-system \
-      --creation-token senzing-g2-volume \
-      --region ${AWS_REGION}
-    ```
-
-## Deploy docker-compose file to cluster
-
-1. Deploy docker-compose file.
-   Example:
-
-    ```console
-    ecs-cli compose up \
-      --cluster-config senzing-example-config \
+      --project-name ${AWS_PROJECT}-project-name \
+      up \
       --create-log-groups \
-      --file ~/senzing.git/docker-compose-demo/resources/postgresql/docker-compose-rabbitmq-postgresql.yaml \
-      --file ~/senzing.git/docker-compose-demo/resources/postgresql/ecs-params.yaml
-    ```
-
-## View Containers
-
-1. XXX
-   Example:
-
-    ```console
-    ecs-cli ps \
-      --cluster-config senzing-example-config
-    ```
-
-## Bring down
-
-1. XXX
-   Example:
-
-    ```console
-    ecs-cli compose down \
-      --cluster-config senzing-example-config
-    ```
-
-    ```console
-    ecs-cli down \
-      --cluster-config senzing-example-config
-    ```
-
-## Create service
-
-1. XXX
-   Example:
-
-    ```console
-    ecs-cli compose service up \
-      --cluster-config senzing-example-config
+      --launch-type EC2
     ```
 
 
-## clean up
-
-1. XXX
-   Example:
-
-    ```console
-    ecs-cli compose service rm \
-      --cluster-config senzing-example-config
-    ```
-
-1. XXX
-   Example:
-
-    ```console
-    ecs-cli compose service rm \
-      --cluster-config senzing-example-config
     ```
 
 
