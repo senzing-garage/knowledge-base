@@ -14,26 +14,18 @@ This is a copy/paste version of
 Follow steps at
 [Configuring the Amazon ECS CLI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_CLI_installation.html).
 
-1. References:
-    1. [Installing the Amazon ECS CLI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_CLI_installation.html).
-    1. [AWS](https://aws.amazon.com/)
-       &gt; [Documentation](https://docs.aws.amazon.com/index.html)
-       &gt; [Amazon ECS](https://docs.aws.amazon.com/ecs/index.html)
-       &gt; [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/Welcome.html)
-       &gt; [ecs-cli](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cmd-ecs-cli.html)
-
 ### Multi-factor authentication
 
 1. Configure environment variables.
    See [How to set AWS multi-factor authentication credentials](../../HOWTO/set-aws-mfa-credentials.md).
 
-## XXX
+## Tutorial
 
 ### Identify metadata
 
 #### AWS metadata
 
-1. :pencil2: XXX.
+1. :pencil2: Set AWS metadata.
    Example:
 
     ```console
@@ -43,7 +35,7 @@ Follow steps at
 
 #### Identify project
 
-1. :pencil2: XXX.
+1. :pencil2: Choose a prefix used in AWS object names.
    Example:
 
     ```console
@@ -75,7 +67,7 @@ Follow steps at
     1. [ecs-cli](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_CLI_reference.html)
        [up](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cmd-ecs-cli-up.html)
 
-1. Bring up and AWS Elastic Container Service (ECS) instance.
+1. Bring up an AWS Elastic Container Service (ECS) instance.
    Example:
 
     ```console
@@ -83,16 +75,16 @@ Follow steps at
       --capability-iam \
       --cluster-config ${AWS_PROJECT}-config-name \
       --force \
-      --instance-type t2.medium \
+      --instance-type t2.micro \
       --keypair ${AWS_KEYPAIR} \
       --size 2
     ```
 
 1. Verify in AWS Console:
     1. [ec2](https://console.aws.amazon.com/ec2/v2/home)
+        1. [auto scaling groups](https://console.aws.amazon.com/ec2/autoscaling/home?#AutoScalingGroups)
         1. [instances](https://console.aws.amazon.com/ec2/v2/home?#Instances)
         1. [launch configurations](https://console.aws.amazon.com/ec2/autoscaling/home?#LaunchConfigurations)
-        1. [auto scaling groups](https://console.aws.amazon.com/ec2/autoscaling/home?#AutoScalingGroups)
     1. [ecs](https://console.aws.amazon.com/ecs/home)
         1. Select ${AWS_PROJECT}-cluster
         1. Click "Update Cluster" to update information.
@@ -153,6 +145,7 @@ Follow steps at
 
 1. References:
     1. [ecs-cli](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_CLI_reference.html)
+       [compose](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cmd-ecs-cli-compose.html)
        [scale](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cmd-ecs-cli-scale.html)
 
 1. View  containers.
@@ -231,7 +224,7 @@ Follow steps at
 
 1. Verify in AWS Console:
     1. [ec2](https://console.aws.amazon.com/ec2/v2/home)
-        1. [Network Interfaces](https://console.aws.amazon.com/ec2/v2/home?#NIC)
+        1. [network interfaces](https://console.aws.amazon.com/ec2/v2/home?#NIC)
     1. [ecs](https://console.aws.amazon.com/ecs/home)
         1. Select ${AWS_PROJECT}-cluster
         1. Click "Update Cluster" to update information.
@@ -249,7 +242,7 @@ Follow steps at
 
 1. Find in AWS Console:
     1. [ec2](https://console.aws.amazon.com/ec2/v2/home)
-        1. [Network Interfaces](https://console.aws.amazon.com/ec2/v2/home?#NIC)
+        1. [network interfaces](https://console.aws.amazon.com/ec2/v2/home?#NIC)
 
 ## Cleanup
 
@@ -259,8 +252,7 @@ Follow steps at
     1. [ecs-cli](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_CLI_reference.html)
        [compose](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cmd-ecs-cli-compose.html)
        [service](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cmd-ecs-cli-compose-service.html)
-       [down](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cmd-ecs-cli-compose-service-rm.html)
-
+       [rm](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cmd-ecs-cli-compose-service-rm.html)
 
 1. Find ip address.
    Example:
@@ -290,8 +282,22 @@ Follow steps at
       --cluster-config ${AWS_PROJECT}-config-name
     ```
 
+### Verify in AWS console
+
+1. Verify in AWS Console:
+    1. [ec2](https://console.aws.amazon.com/ec2/v2/home)
+        1. [auto scaling groups](https://console.aws.amazon.com/ec2/autoscaling/home?#AutoScalingGroups)
+        1. [instances](https://console.aws.amazon.com/ec2/v2/home?#Instances)
+        1. [launch configurations](https://console.aws.amazon.com/ec2/autoscaling/home?#LaunchConfigurations)
+        1. [network interfaces](https://console.aws.amazon.com/ec2/v2/home?#NIC)
+    1. [ecs](https://console.aws.amazon.com/ecs/home)
+        1. Select ${AWS_PROJECT}-cluster
+        1. Click "Update Cluster" to update information.
+        1. Click "ECS instances" tab.
+
 ## References
 
+1. [Installing the Amazon ECS CLI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_CLI_installation.html).
 1. [AWS](https://aws.amazon.com/)
    &gt; [Documentation](https://docs.aws.amazon.com/index.html)
    &gt; [Amazon ECS](https://docs.aws.amazon.com/ecs/index.html)
