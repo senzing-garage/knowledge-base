@@ -259,7 +259,36 @@ Follow steps at
     1. [ecs-cli](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_CLI_reference.html)
        [compose](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cmd-ecs-cli-compose.html)
        [service](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cmd-ecs-cli-compose-service.html)
-       [up](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cmd-ecs-cli-compose-service-up.html)
+       [down](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cmd-ecs-cli-compose-service-rm.html)
+
+
+1. Find ip address.
+   Example:
+
+    ```console
+    ecs-cli compose \
+      --cluster-config ${AWS_PROJECT}-config-name \
+      --ecs-params ~/senzing.git/knowledge-base/gists/tutorial-aws-ecs-cluster-docker/ecs-params.yaml \
+      --file ~/senzing.git/knowledge-base/gists/tutorial-aws-ecs-cluster-docker/docker-compose.yaml \
+      --project-name ${AWS_PROJECT}-project-name \
+      service rm \
+      --cluster-config ${AWS_PROJECT}-config-name
+    ```
+
+### Bring down cluster
+
+1. References:
+    1. [ecs-cli](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_CLI_reference.html)
+       [down](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cmd-ecs-cli-down.html)
+
+1. Find ip address.
+   Example:
+
+    ```console
+    ecs-cli down \
+      --force \
+      --cluster-config ${AWS_PROJECT}-config-name
+    ```
 
 ## References
 
