@@ -208,8 +208,58 @@ Follow steps at
         1. Click "Update Cluster" to update information.
         1. Click "Tasks" tab.
 
+### Bring up service
+
+1. References:
+    1. [ecs-cli](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_CLI_reference.html)
+       [compose](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cmd-ecs-cli-compose.html)
+       [service](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cmd-ecs-cli-compose-service.html)
+       [up](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cmd-ecs-cli-compose-service-up.html)
+
+1. Bring up service.
+   Example:
+
+    ```console
+    ecs-cli compose \
+      --cluster-config ${AWS_PROJECT}-config-name \
+      --ecs-params ~/senzing.git/knowledge-base/gists/tutorial-aws-ecs-cluster-docker/ecs-params.yaml \
+      --file ~/senzing.git/knowledge-base/gists/tutorial-aws-ecs-cluster-docker/docker-compose.yaml \
+      --project-name ${AWS_PROJECT}-project-name \
+      service up \
+      --cluster-config ${AWS_PROJECT}-config-name
+    ```
+
+1. Verify in AWS Console:
+    1. [ec2](https://console.aws.amazon.com/ec2/v2/home)
+        1. [Network Interfaces](https://console.aws.amazon.com/ec2/v2/home?#NIC)
+    1. [ecs](https://console.aws.amazon.com/ecs/home)
+        1. Select ${AWS_PROJECT}-cluster
+        1. Click "Update Cluster" to update information.
+        1. Click "Services" tab.
+
+### View Web App
+
+1. Find ip address.
+   Example:
+
+    ```console
+    ecs-cli ps \
+      --cluster-config ${AWS_PROJECT}-config-name
+    ```
+
+1. Find in AWS Console:
+    1. [ec2](https://console.aws.amazon.com/ec2/v2/home)
+        1. [Network Interfaces](https://console.aws.amazon.com/ec2/v2/home?#NIC)
 
 ## Cleanup
+
+### Bring down service
+
+1. References:
+    1. [ecs-cli](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_CLI_reference.html)
+       [compose](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cmd-ecs-cli-compose.html)
+       [service](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cmd-ecs-cli-compose-service.html)
+       [up](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cmd-ecs-cli-compose-service-up.html)
 
 ## References
 
