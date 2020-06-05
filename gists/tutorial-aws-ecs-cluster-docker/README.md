@@ -5,19 +5,25 @@ This is a copy/paste version of
 
 ## Contents
 
-1. [Install ECS CLI](#install-ecs-cli)
+1. [Prerequisites](#prerequisites)
+    1. [Install ECS CLI](#install-ecs-cli)
+    1. [Multi-factor authentication](#multi-factor-authentication)
+1. [Tutorial](#tutorial)
+    1. [Identify metadata](#identify-metadata)
+1. [Cleanup](#cleanup)
+1. [References](#references)
 
 ## Prerequisites
 
 ### Install ECS CLI
 
-Follow steps at
+To install `ecs-cli`, follow steps at
 [Configuring the Amazon ECS CLI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_CLI_installation.html).
 
 ### Multi-factor authentication
 
-1. Configure environment variables.
-   See [How to set AWS multi-factor authentication credentials](../../HOWTO/set-aws-mfa-credentials.md).
+:thinking: **Optional:** If multi-factor authentication is used to access AWS,
+see [How to set AWS multi-factor authentication credentials](../../HOWTO/set-aws-mfa-credentials.md).
 
 ## Tutorial
 
