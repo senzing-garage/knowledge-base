@@ -88,6 +88,12 @@ Follow steps at
       --size 2
     ```
 
+1. Verify in AWS Console:
+    1. [clusters](https://console.aws.amazon.com/ecs/home)
+    1. [ecs](https://console.aws.amazon.com/ecs/home)
+    1. [cluster ECS instances](https://console.aws.amazon.com/ecs/home?#/clusters/mjd05-cluster/containerInstances)
+
+
 ### Create hello-world task
 
 1. References:
@@ -112,6 +118,7 @@ Follow steps at
 
     ```
 
+## Cleanup
 
 ## References
 
