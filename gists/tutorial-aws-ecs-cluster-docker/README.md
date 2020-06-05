@@ -297,9 +297,6 @@ see [How to set AWS multi-factor authentication credentials](../../HOWTO/set-aws
         1. [launch configurations](https://console.aws.amazon.com/ec2/autoscaling/home?#LaunchConfigurations)
         1. [network interfaces](https://console.aws.amazon.com/ec2/v2/home?#NIC)
     1. [ecs](https://console.aws.amazon.com/ecs/home)
-        1. Select ${AWS_PROJECT}-cluster
-        1. Click "Update Cluster" to update information.
-        1. Click "ECS instances" tab.
 
 ## References
 
