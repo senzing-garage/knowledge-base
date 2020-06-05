@@ -67,6 +67,10 @@ see [How to set AWS multi-factor authentication credentials](../../HOWTO/set-aws
 
 1. Configuration values are stored in `~/.ecs/config`.
 
+    ```console
+    cat ~/.ecs/config
+    ```
+
 ### Create cluster
 
 1. References:
@@ -249,6 +253,9 @@ see [How to set AWS multi-factor authentication credentials](../../HOWTO/set-aws
 1. Find in AWS Console:
     1. [ec2](https://console.aws.amazon.com/ec2/v2/home)
         1. [network interfaces](https://console.aws.amazon.com/ec2/v2/home?#NIC)
+
+1. Open web browser to IP address.
+   A "Simple PHP App" banner will be displayed.
 
 ## Cleanup
 
