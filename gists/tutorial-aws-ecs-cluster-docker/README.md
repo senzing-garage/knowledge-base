@@ -89,9 +89,9 @@ Follow steps at
     ```
 
 1. Verify in AWS Console:
-    1. [clusters](https://console.aws.amazon.com/ecs/home)
     1. [ecs](https://console.aws.amazon.com/ecs/home)
-    1. [cluster ECS instances](https://console.aws.amazon.com/ecs/home?#/clusters/mjd05-cluster/containerInstances)
+        1. [cluster ECS instances](https://console.aws.amazon.com/ecs/home?#/clusters/mjd05-cluster/containerInstances)
+    1. [ec2](https://console.aws.amazon.com/ec2/v2/home)
 
 
 ### Create hello-world task
