@@ -45,7 +45,7 @@ This is a checklist of what to set when creating a new GitHub Repository.
             1. Choose "Senzing/build"
             1. Choose a role: "Admin"
             1. Click "Add Senzing/build to ..."
-    1. Click "Security Alerts" tab.
+    1. Click "Dependabot alerts" tab.
         1. Search for "Senzing/senzing-engineering" and select.
         1. Click "Save changes" button
 1. On repository home page, click "Issues" tab.
