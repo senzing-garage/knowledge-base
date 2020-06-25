@@ -18,6 +18,13 @@ Instructions for installing [Helm](https://helm.sh).
 ## Install
 
 ### CentOS
+1. Example:
+
+    ```console
+    curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
+    chmod 700 get_helm.sh
+    ./get_helm.sh
+    ```
 
 ### Ubuntu
 
@@ -42,3 +49,4 @@ Instructions for installing [Helm](https://helm.sh).
 ## References
 
 1. [How to Create Your First Helm Chart](https://docs.bitnami.com/kubernetes/how-to/create-your-first-helm-chart/)
+1. [Helm installation instructions](https://helm.sh/docs/intro/install/)
