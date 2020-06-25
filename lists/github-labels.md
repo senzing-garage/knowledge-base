@@ -10,7 +10,7 @@
 </th>
 <tr>
 <td>Problems</td>
-<td style="background-color:#FF0000;">&nbsp;</td>
+<td style="color:#FF0000;">bob</td>
 </td>bug</td>
 </tr>
 
