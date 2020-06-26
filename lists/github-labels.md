@@ -10,7 +10,7 @@
 </tr>
 <tr>
   <td>Problems</td>
-  <td style="background-color:#FF0000">January</td>
+  <td><div class="bg-yellow">January</div></td>
   <td>bug</td>
 </tr>
 
