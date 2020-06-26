@@ -9,9 +9,9 @@
   <th>Labels</th>
 </tr>
 <tr>
-<td>Problems</td>
-<td style='background-color:#FF0000;'>bob</td>
-<td>bug</td>
+  <td>Problems</td>
+  <td style="background-color:#FF0000">January</td>
+  <td>bug</td>
 </tr>
 
 </table>
