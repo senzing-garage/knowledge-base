@@ -3,14 +3,14 @@
 ## Process labels
 
 <table>
-<th>
-<td>Category</td>
-<td>Color</td>
-<td>Labels</td>
-</th>
+<tr>
+  <th>Category</th>
+  <th>Color</th>
+  <th>Labels</th>
+</tr>
 <tr>
 <td>Problems</td>
-<td style='color:#FF0000;'>bob</td>
+<td style='background-color:#FF0000;'>bob</td>
 <td>bug</td>
 </tr>
 
