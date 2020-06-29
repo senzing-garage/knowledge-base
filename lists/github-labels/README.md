@@ -24,6 +24,8 @@ These labels will be assigned predominantly in the "**Backlog**", "**On deck**",
 
 ## Details
 
+Labels in alphabetical order.
+
 | Text             |                                                                   | Color   | Description                                  |
 |------------------|-------------------------------------------------------------------|---------|----------------------------------------------|
 | blocked          | ![FF0000](https://via.placeholder.com/30x30/FF0000/FF0000?text=.) | #FF0000 | Cannot make progress                         |
