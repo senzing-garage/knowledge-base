@@ -28,3 +28,4 @@
 ## References
 
 1. [How we organize GitHub issues: A simple styleguide for tagging](https://robinpowered.com/blog/best-practice-system-for-organizing-and-tagging-github-issues/)
+1. [Senzing repository labels](https://github.com/organizations/Senzing/settings/labels) - may only be available to account admins
