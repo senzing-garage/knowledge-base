@@ -5,7 +5,7 @@
 | Category   | Labels |
 |------------|--------|
 | Problems   | ![blocked](blocked.png) |
-| Pending    | ![waiting to merge](waiting-to-merge.png)|
+| Pending    | ![waiting to merge](waiting-to-merge.png) |
 | Inactive   |   |
 
 ## Non-process
