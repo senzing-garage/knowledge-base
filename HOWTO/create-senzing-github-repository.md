@@ -22,7 +22,7 @@ This is a checklist of what to set when creating a new GitHub Repository.
 
 ## Configure repository
 
-1. On repository home page, click "releases" link.
+1. On repository home page, in **Releases** section, click "Create a new release" link.
     1. Click "Create a new release" button.
     1. Tag version: 0.0.0
     1. Release title: 0.0.0
@@ -45,9 +45,11 @@ This is a checklist of what to set when creating a new GitHub Repository.
             1. Choose "Senzing/build"
             1. Choose a role: "Admin"
             1. Click "Add Senzing/build to ..."
-    1. Click "Dependabot alerts" tab.
-        1. Search for "Senzing/senzing-engineering" and select.
-        1. Click "Save changes" button
+    1. Click "Security & analysis" tab.
+        1. "Enable" Dependabot security updates
+        1. In "Dependabot alerts":
+            1. Search for "Senzing/senzing-engineering" and select.
+            1. Click "Save changes" button
 1. On repository home page, click "Issues" tab.
     1. Click "New issue" button.
         1. Title:  "Initial content"
