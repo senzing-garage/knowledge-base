@@ -6,7 +6,7 @@
 |------------|--------|
 | Problems   | ![blocked](blocked.png) |
 | Pending    | ![waiting to merge](waiting-to-merge.png) ![fixed](fixed.png)|
-| Inactive   | ![duplicate](duplicate.png)  |
+| Inactive   | ![duplicate](duplicate.png) ![invalid](invalid.png) ![wontfix](wontfix.png) |
 
 ## Non-process
 
