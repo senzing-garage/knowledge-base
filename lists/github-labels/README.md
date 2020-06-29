@@ -4,7 +4,7 @@
 
 ### Process states
 
-These labels will be assigned and removed predominantly in the "**In progress**" Kanban column ("swimlanes").
+These labels will be assigned and removed predominantly in the "**In progress**" Kanban column ("swimlane").
 
 | Category   | Labels                                                                      |
 |------------|-----------------------------------------------------------------------------|
@@ -30,10 +30,10 @@ These labels will be assigned predominantly in the "**Backlog**", "**On deck**",
 | bug              | ![66FFFF](https://via.placeholder.com/30x30/66FFFF/66FFFF?text=.) | #66FFFF | Something isn't working                      |
 | conversation     | ![CCCCFF](https://via.placeholder.com/30x30/CCCCFF/CCCCFF?text=.) | #CCCCFF | In conversation on design or usage           |
 | documentation    | ![66FFFF](https://via.placeholder.com/30x30/66FFFF/66FFFF?text=.) | #66FFFF | Improvements or additions to documentation   |
-| duplicate        | ![999999](https://via.placeholder.com/30x30/999999/999999?text=.) | #999999 | This issue or pull request already exists    |
+| duplicate        | ![000000](https://via.placeholder.com/30x30/000000/000000?text=.) | #000000 | This issue or pull request already exists    |
 | enhancement      | ![66FFFF](https://via.placeholder.com/30x30/66FFFF/66FFFF?text=.) | #66FFFF | New feature request                          |
 | fixed            | ![00FF00](https://via.placeholder.com/30x30/00FF00/00FF00?text=.) | #00FF00 | Fixed. Waiting for issue creator to close    |
-| invalid          | ![666666](https://via.placeholder.com/30x30/666666/666666?text=.) | #666666 | This doesn't seem right                      |
+| invalid          | ![000000](https://via.placeholder.com/30x30/000000/000000?text=.) | #000000 | This doesn't seem right                      |
 | performance      | ![66FFFF](https://via.placeholder.com/30x30/66FFFF/66FFFF?text=.) | #66FFFF | Correct behavior, but slow performance       |
 | question         | ![000000](https://via.placeholder.com/30x30/000000/000000?text=.) | #000000 | User-submitted question                      |
 | refactoring      | ![66FFFF](https://via.placeholder.com/30x30/66FFFF/66FFFF?text=.) | #66FFFF | No behavioral change, internal restructuring |
