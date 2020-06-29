@@ -28,7 +28,7 @@
 
 | Text             | Color   | Description                               |
 |------------------|---------|-------------------------------------------|
-| blocked          | #FF0000 | ![FF0000](https://via.placeholder.com/468x60/000000/FFFFFF?text=Cannot+make+progress)                      |
+| blocked          | ![FF0000](https://via.placeholder.com/508x30/000000/FF0000?text=#FF0000) | Cannot make progress |
 | duplicate        | #808080 | This issue or pull request already exists |
 | fixed            | #00FF00 | Fixed. Waiting for issue creator to close |
 | invalid          | #404040 | This doesn't seem right                   |
