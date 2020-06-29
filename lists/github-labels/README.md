@@ -31,18 +31,18 @@
 1. [How we organize GitHub issues: A simple styleguide for tagging](https://robinpowered.com/blog/best-practice-system-for-organizing-and-tagging-github-issues/)
 1. [Senzing repository labels](https://github.com/organizations/Senzing/settings/labels) - may only be available to account admins
 1. Legacy tags:
- 1. accepted
- 1. bug
- 1. conversation
- 1. dependencies
- 1. documentation
- 1. duplicate
- 1. enhancement
- 1. fixed
- 1. invalid
- 1. open
- 1. performance
- 1. question
- 1. refactoring
- 1. testing
- 1. wontfix
+   1. accepted
+   1. bug
+   1. conversation
+   1. dependencies
+   1. documentation
+   1. duplicate
+   1. enhancement
+   1. fixed
+   1. invalid
+   1. open
+   1. performance
+   1. question
+   1. refactoring
+   1. testing
+   1. wontfix
