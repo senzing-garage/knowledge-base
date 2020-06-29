@@ -5,23 +5,20 @@
 | Category   | Labels |
 |------------|--------|
 | Problems   | ![blocked](blocked.png) |
-| Pending    | ![waiting to merge](waiting-to-merge.png) |
+| Pending    | ![waiting to merge](waiting-to-merge.png) ![fixed](fixed.png)|
 | Inactive   |   |
 
 ## Non-process
 
 | Category   | Labels |
 |------------|--------|
-| Problems   | |
-
-
+| Problems   |        |
 
 ## Values
 
-
-| Text             | Color   | Description |
-|------------------|---------|-------------|
-| wontfix          | #000000 | This will not be worked on |
-| waiting-to-merge | #00FF00 | Code complete, cannot merge yet |
-| blocked  | #FF0000 |
-| bug      | #------ |
+| Text             | Color   | Description                               |
+|------------------|---------|-------------------------------------------|
+| blocked          | #FF0000 | Cannot make progress                      |
+| fixed            | #00FF00 | Fixed. Waiting for issue creator to close |
+| waiting-to-merge | #00FF00 | Code complete, cannot merge yet           |
+| wontfix          | #000000 | This will not be worked on                |
