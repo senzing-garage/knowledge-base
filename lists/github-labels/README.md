@@ -13,7 +13,8 @@
 
 | Category   | Labels |
 |------------|--------|
-| Issue type |        |
+| Issue type | [bug](bug.png) [documentation](documentation.png) [enhancement](enhancement.png) [performance](performance.png) [refactoring](refactoring.png) |
+| Info       | [conversation](conversation.png) [question](question.png) |
 
 ## Values
 
