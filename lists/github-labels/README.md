@@ -24,7 +24,7 @@ These labels will be assigned predominantly in the "**Backlog**", "**On deck**",
 
 ## Details
 
-Labels in alphabetical order.
+Labels listed in alphabetical order.
 
 | Text             |                                                                   | Color   | Description                                  |
 |------------------|-------------------------------------------------------------------|---------|----------------------------------------------|
