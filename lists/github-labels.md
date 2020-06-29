@@ -1,7 +1,3 @@
-
-
-## Process labels
-
 <table>
 <tr>
   <th>Category</th>
@@ -10,11 +6,8 @@
 </tr>
 <tr>
   <td>Problems</td>
-  <td><div class="bg-yellow">January</div></td>
+  <td style="color:yellow">January</td>
   <td>bug</td>
 </tr>
 
 </table>
-
-## Non-process labels
-
