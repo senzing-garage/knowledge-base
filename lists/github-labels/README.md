@@ -24,3 +24,7 @@
 | invalid          | ![FF0000](https://via.placeholder.com/30x30/404040/404040?text=.) | #404040 | This doesn't seem right                   |
 | waiting-to-merge | ![FF0000](https://via.placeholder.com/30x30/00FF00/00FF00?text=.) | #00FF00 | Code complete, cannot merge yet           |
 | wontfix          | ![FF0000](https://via.placeholder.com/30x30/000000/000000?text=.) | #000000 | This will not be worked on                |
+
+## References
+
+1. [How we organize GitHub issues: A simple styleguide for tagging](https://robinpowered.com/blog/best-practice-system-for-organizing-and-tagging-github-issues/)
