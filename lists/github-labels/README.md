@@ -1,22 +1,28 @@
 # GitHub labels
 
-## Process states
+## Categories
 
-| Category   | Labels |
-|------------|--------|
-| Problems   | ![blocked](blocked.png) |
-| Pending    | ![waiting to merge](waiting-to-merge.png) |
-| Done       | ![fixed](fixed.png)|
+### Process states
+
+These labels will be assigned and removed predominantly in the "**In progress**" Kanban column ("swimlanes").
+
+| Category   | Labels                                                                      |
+|------------|-----------------------------------------------------------------------------|
+| Problems   | ![blocked](blocked.png)                                                     |
+| Pending    | ![waiting to merge](waiting-to-merge.png)                                   |
+| Done       | ![fixed](fixed.png)                                                         |
 | Inactive   | ![duplicate](duplicate.png) ![invalid](invalid.png) ![wontfix](wontfix.png) |
 
-## Non-process
+### Non-process attributes
+
+These labels will be assigned predominantly in the "**Backlog**", "**On deck**", and "**In progress**" Kanban columns ("swimlanes").
 
 | Category   | Labels |
 |------------|--------|
 | Issue type | ![bug](bug.png) ![documentation](documentation.png) ![enhancement](enhancement.png) ![performance](performance.png) ![refactoring](refactoring.png) |
 | Info       | ![conversation](conversation.png) ![question](question.png) |
 
-## Values
+## Details
 
 | Text             |                                                                   | Color   | Description                               |
 |------------------|-------------------------------------------------------------------|---------|-------------------------------------------|
