@@ -14,7 +14,7 @@
 
 1. Synopsis:
     1. The access key for your AWS account.
-1. For python programs, see [Boto3 Configuration, Using environment variables](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/configuration.html#using-environment-variables).
+    1. When used in python programs, see [Boto3 Configuration, Using environment variables](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/configuration.html#using-environment-variables).
 1. Where used:
     1. [stream-producer](https://github.com/Senzing/stream-producer),
 
@@ -22,7 +22,7 @@
 
 1. Synopsis:
     1. The secret key for your AWS account.
-1. For python programs, see [Boto3 Configuration, Using environment variables](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/configuration.html#using-environment-variables).
+    1. When used in python programs, see [Boto3 Configuration, Using environment variables](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/configuration.html#using-environment-variables).
 1. Where used:
     1. [stream-producer](https://github.com/Senzing/stream-producer),
 
