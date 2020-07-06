@@ -18,10 +18,113 @@
 1. Where used:
     1. [stream-producer](https://github.com/Senzing/stream-producer),
 
+### AWS_CA_BUNDLE
+
+1. Synopsis:
+    1. The path to a custom certificate bundle to use when establishing SSL/TLS connections.
+    1. When used in python programs, see [Boto3 Configuration, Using environment variables](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/configuration.html#using-environment-variables).
+1. Where used:
+    1. [stream-producer](https://github.com/Senzing/stream-producer),
+
+### AWS_CONFIG_FILE
+
+1. Synopsis:
+    1. The location of the config file.
+    1. When used in python programs, see [Boto3 Configuration, Using environment variables](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/configuration.html#using-environment-variables).
+1. Where used:
+    1. [stream-producer](https://github.com/Senzing/stream-producer),
+
+### AWS_DATA_PATH
+
+1. Synopsis:
+    1. A list of additional directories to check when loading botocore data.
+    1. When used in python programs, see [Boto3 Configuration, Using environment variables](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/configuration.html#using-environment-variables).
+1. Where used:
+    1. [stream-producer](https://github.com/Senzing/stream-producer),
+
+### AWS_DEFAULT_REGION
+
+1. Synopsis:
+    1. The default AWS Region to use.
+    1. When used in python programs, see [Boto3 Configuration, Using environment variables](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/configuration.html#using-environment-variables).
+1. Examples:
+    1. `us-east-1`
+    1. `us-west-2`
+1. Where used:
+    1. [stream-producer](https://github.com/Senzing/stream-producer),
+
+### AWS_MAX_ATTEMPTS
+
+1. Synopsis:
+    1. The total number of attempts made for a single request.
+    1. When used in python programs, see [Boto3 Configuration, Using environment variables](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/configuration.html#using-environment-variables).
+1. Where used:
+    1. [stream-producer](https://github.com/Senzing/stream-producer),
+
+### AWS_METADATA_SERVICE_NUM_ATTEMPTS
+
+1. Synopsis:
+    1. Number of attempts to retrieve credentials on an Amazon EC2 instance.
+    1. When used in python programs, see [Boto3 Configuration, Using environment variables](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/configuration.html#using-environment-variables).
+1. Values:
+    - Default: 1
+1. Where used:
+    1. [stream-producer](https://github.com/Senzing/stream-producer),
+
+### AWS_METADATA_SERVICE_TIMEOUT
+
+1. Synopsis:
+    1. The number of seconds before a connection to the instance metadata service should time out.
+    1. When used in python programs, see [Boto3 Configuration, Using environment variables](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/configuration.html#using-environment-variables).
+1. Where used:
+    1. [stream-producer](https://github.com/Senzing/stream-producer),
+
+### AWS_PROFILE
+
+1. Synopsis:
+    1. The default profile to use, if any.
+    1. When used in python programs, see [Boto3 Configuration, Using environment variables](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/configuration.html#using-environment-variables).
+1. Where used:
+    1. [stream-producer](https://github.com/Senzing/stream-producer),
+
+### AWS_RETRY_MODE
+
+1. Synopsis:
+    1. Specifies the types of retries the SDK will use.
+    1. When used in python programs, see [Boto3 Configuration, Using environment variables](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/configuration.html#using-environment-variables).
+1. Where used:
+    1. [stream-producer](https://github.com/Senzing/stream-producer),
+
 ### AWS_SECRET_ACCESS_KEY
 
 1. Synopsis:
     1. The secret key for your AWS account.
+    1. When used in python programs, see [Boto3 Configuration, Using environment variables](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/configuration.html#using-environment-variables).
+1. Where used:
+    1. [stream-producer](https://github.com/Senzing/stream-producer),
+
+### AWS_SESSION_TOKEN
+
+1. Synopsis:
+    1. The session key for your AWS account.
+    1. When used in python programs, see [Boto3 Configuration, Using environment variables](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/configuration.html#using-environment-variables).
+1. Where used:
+    1. [stream-producer](https://github.com/Senzing/stream-producer),
+
+### AWS_SHARED_CREDENTIALS_FILE
+
+1. Synopsis:
+    1. The location of the shared credentials file.
+    1. When used in python programs, see [Boto3 Configuration, Using environment variables](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/configuration.html#using-environment-variables).
+1. Values:
+    - Default: `~/.aws/credentials`
+1. Where used:
+    1. [stream-producer](https://github.com/Senzing/stream-producer),
+
+### AWS_STS_REGIONAL_ENDPOINTS
+
+1. Synopsis:
+    1. Sets AWS STS endpoint resolution logic.
     1. When used in python programs, see [Boto3 Configuration, Using environment variables](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/configuration.html#using-environment-variables).
 1. Where used:
     1. [stream-producer](https://github.com/Senzing/stream-producer),
