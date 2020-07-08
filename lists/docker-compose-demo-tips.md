@@ -155,7 +155,7 @@ The following is a list of tips when using
 ## Senzing API server
 
 The Senzing REST API server supports the
-[Senzing REST API](https://github.com/Senzing/senzing-rest-api).
+[Senzing REST API](https://github.com/Senzing/senzing-rest-api-specification).
 
 ### Senzing API server via web browser
 
@@ -180,7 +180,7 @@ The Senzing REST API server supports the
 
 ### Senzing API server via Swagger editor
 
-1. From [OpenApi "Swagger" editor](http://editor.swagger.io/?url=https://raw.githubusercontent.com/Senzing/senzing-rest-api/master/senzing-rest-api.yaml).
+1. From [OpenApi "Swagger" editor](http://editor.swagger.io/?url=https://raw.githubusercontent.com/Senzing/senzing-rest-api-specification/master/senzing-rest-api.yaml).
 
 ### Senzing API server references
 
