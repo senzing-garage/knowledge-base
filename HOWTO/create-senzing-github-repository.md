@@ -22,8 +22,8 @@ This is a checklist of what to set when creating a new GitHub Repository.
 
 ## Configure repository
 
-1. On repository home page, in **Releases** section, click "Create a new release" link.
-    1. Click "Create a new release" button.
+1. On repository home page, in **Releases** section:
+    1. Click "Create a new release" link.
     1. Tag version: 0.0.0
     1. Release title: 0.0.0
     1. Click "Publish release" button.
@@ -31,7 +31,7 @@ This is a checklist of what to set when creating a new GitHub Repository.
     1. Click "Branches" tab.
         1. Click "Add rule" button.
         1. Branch name pattern:  "master"
-        1. Rule Settings
+        1. Protect matching branches
             1. :ballot_box_with_check: Require pull request reviews before merging
         1. Click "Create" button
     1. Click "Manage access" tab.
