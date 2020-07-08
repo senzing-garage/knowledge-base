@@ -80,5 +80,8 @@ This is a checklist of what to set when creating a new GitHub Repository.
        [github.com/Senzing/template-repository](https://github.com/Senzing/template-repository).
     1. Modify `CONTRIBUTING.md`
         1. `export GIT_REPOSITORY=<new-repository-name>`
+    1. Modify `README.md`
+        1. Use contents from `.github/README_TEMPLATE/demonstration/README.md`
+    1. Delete `.github/README_TEMPLATE` directory.
     1. Commit the branch.
     1. Merge `issue-1.[your-name].1` branch into master branch.
