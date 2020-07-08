@@ -1306,6 +1306,36 @@
 1. Where used:
     1. [resolver](https://github.com/Senzing/resolver),
 
+### SENZING_SQS_FAILURE_QUEUE_URL
+
+1. Synopsis:
+    1. The Amazon SQS Queue URL used convey messages that cannot be processed by the Senzing Engine.
+1. Examples:
+    1. `https://sqs.us-east-1.amazonaws.com/000000000000/senzing-failure-queue`
+1. Where used:
+    1. [stream-loader](https://github.com/Senzing/stream-loader),
+    1. [stream-producer](https://github.com/Senzing/stream-producer),
+
+### SENZING_SQS_INFO_QUEUE_URL
+
+1. Synopsis:
+    1. The Amazon SQS Queue URL used convey "withInfo" messages from the Senzing Engine.
+1. Examples:
+    1. `https://sqs.us-east-1.amazonaws.com/000000000000/senzing-info-queue`
+1. Where used:
+    1. [stream-loader](https://github.com/Senzing/stream-loader),
+    1. [stream-producer](https://github.com/Senzing/stream-producer),
+
+### SENZING_SQS_QUEUE_URL
+
+1. Synopsis:
+    1. The Amazon SQS Queue URL used convey messages for ingestion into the Senzing Engine.
+1. Examples:
+    1. `https://sqs.us-east-1.amazonaws.com/000000000000/senzing-queue`
+1. Where used:
+    1. [stream-loader](https://github.com/Senzing/stream-loader),
+    1. [stream-producer](https://github.com/Senzing/stream-producer),
+
 ### SENZING_SUBCOMMAND
 
 1. Synopsis:
