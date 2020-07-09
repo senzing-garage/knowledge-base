@@ -6,12 +6,12 @@
 
 These labels will be assigned and removed predominantly in the "**In progress**" Kanban column ("swimlane").
 
-| Category   | Labels                                                                      |
-|------------|-----------------------------------------------------------------------------|
-| Problems   | ![blocked](blocked.png)                                                     |
-| Pending    | ![waiting to merge](waiting-to-merge.png)                                   |
-| Done       | ![fixed](fixed.png)                                                         |
-| Inactive   | ![duplicate](duplicate.png) ![invalid](invalid.png) ![wontfix](wontfix.png) |
+| Category   | Labels                                                                                      |
+|------------|---------------------------------------------------------------------------------------------|
+| Problems   | ![blocked](blocked.png)                                                                     |
+| Pending    | ![waiting to merge](waiting-to-merge.png) ![waiting for customer](waiting-for-customer.png) |
+| Done       | ![fixed](fixed.png)                                                                         |
+| Inactive   | ![duplicate](duplicate.png) ![invalid](invalid.png) ![wontfix](wontfix.png)                 |
 
 ### Non-process attributes
 
@@ -26,21 +26,22 @@ These labels will be assigned predominantly in the "**Backlog**", "**On deck**",
 
 Labels listed in alphabetical order.
 
-| Label text       |                                                                   | Color   | Description                                  |
-|------------------|-------------------------------------------------------------------|---------|----------------------------------------------|
-| blocked          | ![FF0000](https://via.placeholder.com/30x30/FF0000/FF0000?text=.) | #FF0000 | Cannot make progress                         |
-| bug              | ![66FFFF](https://via.placeholder.com/30x30/66FFFF/66FFFF?text=.) | #66FFFF | Something isn't working                      |
-| conversation     | ![CCCCFF](https://via.placeholder.com/30x30/CCCCFF/CCCCFF?text=.) | #CCCCFF | In conversation on design or usage           |
-| documentation    | ![66FFFF](https://via.placeholder.com/30x30/66FFFF/66FFFF?text=.) | #66FFFF | Improvements or additions to documentation   |
-| duplicate        | ![000000](https://via.placeholder.com/30x30/000000/000000?text=.) | #000000 | This issue or pull request already exists    |
-| enhancement      | ![66FFFF](https://via.placeholder.com/30x30/66FFFF/66FFFF?text=.) | #66FFFF | New feature request                          |
-| fixed            | ![00FF00](https://via.placeholder.com/30x30/00FF00/00FF00?text=.) | #00FF00 | Fixed. Waiting for issue creator to close    |
-| invalid          | ![000000](https://via.placeholder.com/30x30/000000/000000?text=.) | #000000 | This doesn't seem right                      |
-| performance      | ![66FFFF](https://via.placeholder.com/30x30/66FFFF/66FFFF?text=.) | #66FFFF | Correct behavior, but slow performance       |
-| question         | ![CCCCFF](https://via.placeholder.com/30x30/CCCCFF/CCCCFF?text=.) | #CCCCFF | User-submitted question                      |
-| refactoring      | ![66FFFF](https://via.placeholder.com/30x30/66FFFF/66FFFF?text=.) | #66FFFF | No behavioral change, internal restructuring |
-| waiting-to-merge | ![FF9900](https://via.placeholder.com/30x30/FF9900/FF9900?text=.) | #FF9900 | Code complete, cannot merge yet              |
-| wontfix          | ![000000](https://via.placeholder.com/30x30/000000/000000?text=.) | #000000 | This will not be worked on                   |
+| Label text           |                                                                   | Color   | Description                                  |
+|----------------------|-------------------------------------------------------------------|---------|----------------------------------------------|
+| blocked              | ![FF0000](https://via.placeholder.com/30x30/FF0000/FF0000?text=.) | #FF0000 | Cannot make progress                         |
+| bug                  | ![66FFFF](https://via.placeholder.com/30x30/66FFFF/66FFFF?text=.) | #66FFFF | Something isn't working                      |
+| conversation         | ![CCCCFF](https://via.placeholder.com/30x30/CCCCFF/CCCCFF?text=.) | #CCCCFF | In conversation on design or usage           |
+| documentation        | ![66FFFF](https://via.placeholder.com/30x30/66FFFF/66FFFF?text=.) | #66FFFF | Improvements or additions to documentation   |
+| duplicate            | ![000000](https://via.placeholder.com/30x30/000000/000000?text=.) | #000000 | This issue or pull request already exists    |
+| enhancement          | ![66FFFF](https://via.placeholder.com/30x30/66FFFF/66FFFF?text=.) | #66FFFF | New feature request                          |
+| fixed                | ![00FF00](https://via.placeholder.com/30x30/00FF00/00FF00?text=.) | #00FF00 | Fixed. Waiting for issue creator to close    |
+| invalid              | ![000000](https://via.placeholder.com/30x30/000000/000000?text=.) | #000000 | This doesn't seem right                      |
+| performance          | ![66FFFF](https://via.placeholder.com/30x30/66FFFF/66FFFF?text=.) | #66FFFF | Correct behavior, but slow performance       |
+| question             | ![CCCCFF](https://via.placeholder.com/30x30/CCCCFF/CCCCFF?text=.) | #CCCCFF | User-submitted question                      |
+| refactoring          | ![66FFFF](https://via.placeholder.com/30x30/66FFFF/66FFFF?text=.) | #66FFFF | No behavioral change, internal restructuring |
+| waiting-for-customer | ![FF9900](https://via.placeholder.com/30x30/FF9900/FF9900?text=.) | #FF9900 | Customer needs to verify fix or close issue  |
+| waiting-to-merge     | ![FF9900](https://via.placeholder.com/30x30/FF9900/FF9900?text=.) | #FF9900 | Code complete, cannot merge yet              |
+| wontfix              | ![000000](https://via.placeholder.com/30x30/000000/000000?text=.) | #000000 | This will not be worked on                   |
 
 ## References
 
