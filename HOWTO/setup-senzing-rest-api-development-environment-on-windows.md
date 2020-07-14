@@ -11,8 +11,7 @@ With a running Senzing API server on a local Windows machine, a developer can wr
 ### Install Docker for Windows
 
 1. [Install Docker Desktop on Windows](https://docs.docker.com/docker-for-windows/install/)
-    1. Get Stable
-
+    1. Suggestion: Use "Get Stable"
 1. Test. In a command prompt, run the following.
    Example:
 
