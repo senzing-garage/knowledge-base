@@ -13,6 +13,14 @@ With a running Senzing API server on a local Windows machine, a developer can wr
 1. [Install Docker Desktop on Windows](https://docs.docker.com/docker-for-windows/install/)
     1. Get Stable
 
+1. Test. In a command prompt, run the following.
+   Example:
+
+    ```console
+    docker version
+    docker run hello-world
+    ```
+
 ### Curl
 
 1.
@@ -21,7 +29,7 @@ With a running Senzing API server on a local Windows machine, a developer can wr
 
 ### Verify variables
 
-1. XXX
+1. The following variables will be used to construct `SENZING_PROJECT_DIR`.
    Example:
 
     ```console
@@ -29,9 +37,10 @@ With a running Senzing API server on a local Windows machine, a developer can wr
     echo %HOMEPATH%
     ```
 
-### XXX
+### Choose project name
 
-1. :pencil2: XXX
+1. :pencil2: Choose a project name.
+   This will be used to create a subdirectory containing all of the Senzing artifacts.
    Example:
 
     ```console
@@ -50,7 +59,7 @@ To use the Senzing code, you must agree to the End User License Agreement (EULA)
 
 ### Synthesize variables
 
-1. XXX
+1. Given the variables set before, create new environment variables for use with docker commands.
    Example:
 
     ```console
@@ -67,7 +76,9 @@ To use the Senzing code, you must agree to the End User License Agreement (EULA)
 
 ### Download Senzing
 
-1. XXX
+1. Running the [senzing/yum](https://github.com/Senzing/docker-yum)
+   docker container will install Senzing binaries
+   into the `SENZING_PROJECT_DIR` directory.
    Example:
 
     ```console
@@ -79,9 +90,13 @@ To use the Senzing code, you must agree to the End User License Agreement (EULA)
       senzing/yum
     ```
 
+1. Wait until docker container exits.
+
 ### Configure files and database
 
-1. XXX
+1. Running the [senzing/init-container](https://github.com/Senzing/docker-init-container)
+   docker container will create Senzing configuration files
+   in the `SENZING_PROJECT_DIR` directory.
    Example:
 
     ```console
@@ -94,14 +109,17 @@ To use the Senzing code, you must agree to the End User License Agreement (EULA)
       senzing/init-container
     ```
 
+1. Wait until docker container exits.
+
 ### Populate database using G2Loader
 
 :thinking: **Optional:** This optional step uses the `G2Loader.py` to populate
 the Senzing Model with data.
 
-1. Copy data to the %SENZING_VAR_DIR% folder.
+1. Copy data to the `%SENZING_VAR_DIR%` folder.
 
-1. Run the `senzing/xterm` docker container.
+1. Running the [senzing/xterm](https://github.com/Senzing/docker-xterm)
+   docker container will allow a user to run a command terminal.
    Example:
 
     ```console
@@ -125,9 +143,8 @@ the Senzing Model with data.
 
 ### Run Senzing API service
 
-The [Senzing API Server](https://github.com/Senzing/senzing-api-server) will serve HTTP requests on port 8250
-
-1. XXX
+1. Running the [Senzing API Server](https://github.com/Senzing/senzing-api-server)
+   docker container will serve HTTP requests on port 8250.
    Example:
 
     ```console
@@ -146,7 +163,7 @@ The [Senzing API Server](https://github.com/Senzing/senzing-api-server) will ser
         -iniFile /etc/opt/senzing/G2Module.ini
     ```
 
-1. Use a curl call to verify the Senzing API Servie is running
+1. From a separate Command Prompt window, use a curl call to verify the Senzing API Servie is running
    Example:
 
     ```console
