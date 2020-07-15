@@ -19,6 +19,15 @@ a developer can write code that makes network requests
     1. [EULA](#eula)
     1. [Synthesize variables](#synthesize-variables)
     1. [Enable file sharing](#enable-file-sharing)
+1. [Install and configure Senzing](#install-and-configure-senzing)
+    1. [Download Senzing](#download-senzing)
+    1. [Configure files and database](#configure-files-and-database)
+1. [Load Senzing Engine](#load-senzing-engine)
+    1. [Load Senzing Truth Set](#load-senzing-truth-set)
+    1. [Load custom file](#load-custom-file)
+1. [Access Senzing Model](#access-senzing-model)
+    1. [Run Senzing API service](#run-senzing-api-service)
+    1. [Run Senzing Entity search web app](#run-senzing-entity-search-web-app)
 
 ## Prerequisites
 
@@ -139,7 +148,7 @@ These steps only need to be run once per `SENZING_PROJECT_NAME` to install and c
 
 1. Wait until docker container exits.
 
-## Load Senzing engine
+## Load Senzing Engine
 
 :thinking:  **Optional:**
 These steps show how to load the Senzing Engine using the `G2Loader.py` program.
@@ -243,7 +252,7 @@ the Senzing Model with data.
 ## Access Senzing Model
 
 These steps set up services that can be used to access the Senzing Model.
-They may be started and stopped repeatedly with out having to perform the prior steps.
+They may be started and stopped repeatedly without having to perform the prior steps.
 
 ### Run Senzing API service
 
