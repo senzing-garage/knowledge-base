@@ -179,7 +179,7 @@ the Senzing Model with data.
 
 1. Create `%SENZING_VAR_DIR%/sample-data-project.ini` file with following contents:
 
-    ```TOML
+    ```console
     [g2]
     G2Connection=sqlite3://na:na@/var/opt/senzing/sqlite/G2C.db
     iniPath=/etc/opt/senzing/G2Module.ini
