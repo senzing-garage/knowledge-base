@@ -1,10 +1,24 @@
 # Setup Senzing REST API development environment on Windows
 
-This set of instructions show how to use Windows Command prompt instructions to setup and run a
+This set of instructions show how to use Windows Command Prompt instructions
+to setup and run a
 [Senzing API Server](https://github.com/Senzing/senzing-api-server).
 
-With a running Senzing API server on a local Windows machine, a developer can write code that makes network requests
-(i.e. HTTP request) to the Senzing API server
+With a running Senzing API server on a local Windows machine,
+a developer can write code that makes network requests
+(i.e. HTTP request) to the Senzing API server.
+
+## Contents
+
+1. [Prerequisites](#prerequisites)
+    1. [Install Docker for Windows](#install-docker-for-windows)
+    1. [Install curl](#install-curl)
+1. [Set environment](#set-environment)
+    1. [Verify variables](#verify-variables)
+    1. [Specify project name](#specify-project-name)
+    1. [EULA](#eula)
+    1. [Synthesize variables](#synthesize-variables)
+    1. [Enable file sharing](#enable-file-sharing)
 
 ## Prerequisites
 
@@ -20,7 +34,7 @@ With a running Senzing API server on a local Windows machine, a developer can wr
     docker run hello-world
     ```
 
-### Curl
+### Install curl
 
 1. Test.
    Example:
@@ -41,7 +55,7 @@ With a running Senzing API server on a local Windows machine, a developer can wr
     echo %HOMEPATH%
     ```
 
-### Choose project name
+### Specify project name
 
 1. :pencil2: Choose a project name.
    This will be used to create a subdirectory containing all of the Senzing artifacts.
@@ -82,11 +96,14 @@ To use the Senzing code, you must agree to the End User License Agreement (EULA)
    **Windows** - [File sharing](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/share-directories-with-docker.md#windows)
    must be enabled for `SENZING_PROJECT_DIR`.
 
-## Run one-time only docker images
+## Install and configure Senzing
+
+These steps only need to be run once per `SENZING_PROJECT_NAME` to install and configure Senzing.
 
 ### Download Senzing
 
-1. Running the [senzing/yum](https://github.com/Senzing/docker-yum)
+1. Running the
+   [senzing/yum](https://github.com/Senzing/docker-yum)
    docker container will install Senzing binaries
    into the `SENZING_PROJECT_DIR` directory.
    Example:
@@ -104,7 +121,8 @@ To use the Senzing code, you must agree to the End User License Agreement (EULA)
 
 ### Configure files and database
 
-1. Running the [senzing/init-container](https://github.com/Senzing/docker-init-container)
+1. Running the
+   [senzing/init-container](https://github.com/Senzing/docker-init-container)
    docker container will create Senzing configuration files
    in the `SENZING_PROJECT_DIR` directory.
    Example:
@@ -121,37 +139,16 @@ To use the Senzing code, you must agree to the End User License Agreement (EULA)
 
 1. Wait until docker container exits.
 
-### Populate database using G2Loader
+## Load Senzing engine
 
-:thinking: **Optional:** This optional step uses the `G2Loader.py` to populate
-the Senzing Model with data.
+:thinking:  **Optional:**
+These steps show how to load the Senzing Engine using the `G2Loader.py` program.
+Once they are run, the Senzing model is persisted in the SQLite database located at
+`%SENZING_VAR_DIR%/var/sqlite`.
 
-1. Copy data to the `%SENZING_VAR_DIR%` folder.
+### Load Senzing Truth Set
 
-1. Running the [senzing/xterm](https://github.com/Senzing/docker-xterm)
-   docker container will allow a user to run a command terminal.
-   Example:
-
-    ```console
-    docker run ^
-      --interactive ^
-      --rm ^
-      --tty ^
-      --volume %SENZING_DATA_VERSION_DIR%:/opt/senzing/data ^
-      --volume %SENZING_ETC_DIR%:/etc/opt/senzing ^
-      --volume %SENZING_G2_DIR%:/opt/senzing/g2 ^
-      --volume %SENZING_VAR_DIR%:/var/opt/senzing ^
-      senzing/xterm
-    ```
-
-1. Using a web browser, visit [localhost:5000](http://localhost:5000)
-1. In Senzing Xterm, run
-
-    ```console
-    G2loader.py /var/opt/senzing/<name-of-file>
-    ```
-
-### Optional load of Truth Set
+:thinking:  **Optional:**
 
 1. Download "truth set" files.
    Example:
@@ -196,7 +193,9 @@ the Senzing Model with data.
     reportCategoryLimit=1000
     ```
 
-1. Run container.
+1. Running the
+   [senzing/g2loader](https://github.com/Senzing/docker-g2loader)
+   docker container loads the contents of the downloaded files.
    Example:
 
     ```console
@@ -211,11 +210,45 @@ the Senzing Model with data.
             -p /var/opt/senzing/sample-data-project.csv
     ```
 
-## Run docker images to view data
+### Load custom file
+
+:thinking: **Optional:** This optional step uses the `G2Loader.py` to populate
+the Senzing Model with data.
+
+1. Copy files to the `%SENZING_VAR_DIR%` folder.
+
+1. Running the [senzing/xterm](https://github.com/Senzing/docker-xterm)
+   docker container will allow a user to run a command terminal.
+   Example:
+
+    ```console
+    docker run ^
+      --interactive ^
+      --rm ^
+      --tty ^
+      --volume %SENZING_DATA_VERSION_DIR%:/opt/senzing/data ^
+      --volume %SENZING_ETC_DIR%:/etc/opt/senzing ^
+      --volume %SENZING_G2_DIR%:/opt/senzing/g2 ^
+      --volume %SENZING_VAR_DIR%:/var/opt/senzing ^
+      senzing/xterm
+    ```
+
+1. Using a web browser, visit [localhost:5000](http://localhost:5000)
+1. In Senzing Xterm, run
+
+    ```console
+    G2loader.py /var/opt/senzing/<name-of-file>
+    ```
+
+## Access Senzing Model
+
+These steps set up services that can be used to access the Senzing Model.
+They may be started and stopped repeatedly with out having to perform the prior steps.
 
 ### Run Senzing API service
 
-1. Running the [Senzing API Server](https://github.com/Senzing/senzing-api-server)
+1. Running the
+   [Senzing API Server](https://github.com/Senzing/senzing-api-server)
    docker container will serve HTTP requests on port 8250.
    Example:
 
@@ -235,7 +268,7 @@ the Senzing Model with data.
         -iniFile /etc/opt/senzing/G2Module.ini
     ```
 
-1. From a separate Command Prompt window, use a curl call to verify the Senzing API Servie is running
+1. From a separate Command Prompt window, use a `curl` call to verify the Senzing API Service is running
    Example:
 
     ```console
@@ -246,13 +279,23 @@ the Senzing Model with data.
 
 ### Run Senzing Entity search web app
 
-1. Running the [Senzing Entity Search Web App](https://github.com/Senzing/entity-search-web-app)
+1. Specify hostname/IP address of `senzing/senzing-api-server` docker container.
+   **Note:** The use of `localhost` does not work.
+   It must be an hostname/address that can be accessed from *within* the docker container.
+   Example:
+
+    ```console
+    SENZING_API_SERVER_HOSTNAME=172.17.0.1
+    ```
+
+1. Running the
+   [Senzing Entity Search Web App](https://github.com/Senzing/entity-search-web-app)
    docker container will deliver the Entity Search Web App on port 8251.
    Example:
 
     ```console
     docker run ^
-      --env SENZING_API_SERVER_URL=http://localhost:8250 ^
+      --env SENZING_API_SERVER_URL=http://%SENZING_API_SERVER_HOSTNAME%:8250 ^
       --env SENZING_WEB_SERVER_PORT=8251 ^
       --publish 8251:8251 ^
       --rm ^
