@@ -1,6 +1,6 @@
 # Setup Senzing REST API development environment on Windows
 
-This set of instructions show how to use Windows Command Prompt instructions
+This set of instructions shows how to use Windows Command Prompt instructions
 to setup and run a
 [Senzing API Server](https://github.com/Senzing/senzing-api-server).
 
@@ -222,11 +222,12 @@ Once they are run, the Senzing model is persisted in the SQLite database located
 ### Load custom file
 
 :thinking: **Optional:** This optional step uses the `G2Loader.py` to populate
-the Senzing Model with data.
+the Senzing Model with custom data.
 
-1. Copy files to the `%SENZING_VAR_DIR%` folder.
+1. Copy source files to the `%SENZING_VAR_DIR%` folder.
 
-1. Running the [senzing/xterm](https://github.com/Senzing/docker-xterm)
+1. Running the
+   [senzing/xterm](https://github.com/Senzing/docker-xterm)
    docker container will allow a user to run a command terminal.
    Example:
 
