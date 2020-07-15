@@ -169,7 +169,7 @@ the Senzing Model with data.
         https://public-read-access.s3.amazonaws.com/TestDataSets/SenzingTruthSet/truthset-person-v1-set2.csv
     ```
 
-1. Create %SENZING_VAR_DIR%/sample-data-project.csv file with following contents:
+1. Create `%SENZING_VAR_DIR%/sample-data-project.csv` file with following contents:
 
     ```csv
     DATA_SOURCE,FILE_FORMAT,FILE_NAME
@@ -177,9 +177,9 @@ the Senzing Model with data.
     watchlist,CSV,/var/opt/senzing/truthset-person-v1-set2.csv
     ```
 
-1. Create %SENZING_VAR_DIR%/sample-data-project.ini file with following contents:
+1. Create `%SENZING_VAR_DIR%/sample-data-project.ini` file with following contents:
 
-    ```toml
+    ```TOML
     [g2]
     G2Connection=sqlite3://na:na@/var/opt/senzing/sqlite/G2C.db
     iniPath=/etc/opt/senzing/G2Module.ini
