@@ -22,7 +22,12 @@ With a running Senzing API server on a local Windows machine, a developer can wr
 
 ### Curl
 
-1.
+1. Test.
+   Example:
+
+    ```console
+    curl --version
+    ```
 
 ## Set environment
 
