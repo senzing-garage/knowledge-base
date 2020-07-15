@@ -151,6 +151,67 @@ the Senzing Model with data.
     G2loader.py /var/opt/senzing/<name-of-file>
     ```
 
+### Optional load of Truth Set
+
+1. Download "truth set" files.
+   Example:
+
+    ```console
+    curl -X GET ^
+        --output %SENZING_VAR_DIR%\truthset-person-v1-set1.csv ^
+        ^
+        https://public-read-access.s3.amazonaws.com/TestDataSets/SenzingTruthSet/truthset-person-v1-set1.csv
+    ```
+
+    ```console
+    curl -X GET ^
+        --output %SENZING_VAR_DIR%/truthset-person-v1-set2.csv ^
+        https://public-read-access.s3.amazonaws.com/TestDataSets/SenzingTruthSet/truthset-person-v1-set2.csv
+    ```
+
+1. Create %SENZING_VAR_DIR%/sample-data-project.csv file with following contents:
+
+    ```csv
+    DATA_SOURCE,FILE_FORMAT,FILE_NAME
+    customer,CSV,/var/opt/senzing/truthset-person-v1-set1.csv
+    watchlist,CSV,/var/opt/senzing/truthset-person-v1-set2.csv
+    ```
+
+1. Create %SENZING_VAR_DIR%/sample-data-project.ini file with following contents:
+
+    ```toml
+    [g2]
+    G2Connection=sqlite3://na:na@/var/opt/senzing/sqlite/G2C.db
+    iniPath=/etc/opt/senzing/G2Module.ini
+    collapsedTableSchema=Y
+    evalQueueProcessing=1
+
+    [project]
+    projectFileName=/var/opt/senzing/sample-data-project.csv
+
+    [transport]
+    numThreads=4
+
+    [report]
+    sqlCommitSize=1000
+    reportCategoryLimit=1000
+    ```
+
+1. Run container.
+   Example:
+
+    ```console
+    docker run ^
+        --rm ^
+        --volume %SENZING_DATA_DIR%:/opt/senzing/data ^
+        --volume %SENZING_ETC_DIR%:/etc/opt/senzing ^
+        --volume %SENZING_G2_DIR%:/opt/senzing/g2 ^
+        --volume %SENZING_VAR_DIR%:/var/opt/senzing ^
+        senzing/g2loader:latest ^
+            -c /var/opt/senzing/sample-data-project.ini ^
+            -p /var/opt/senzing/sample-data-project.csv
+    ```
+
 ## Run docker images to view data
 
 ### Run Senzing API service
