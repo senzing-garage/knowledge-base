@@ -82,7 +82,7 @@ To use the Senzing code, you must agree to the End User License Agreement (EULA)
    **Windows** - [File sharing](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/share-directories-with-docker.md#windows)
    must be enabled for `SENZING_PROJECT_DIR`.
 
-## Run docker images
+## Run one-time only docker images
 
 ### Download Senzing
 
@@ -151,6 +151,8 @@ the Senzing Model with data.
     G2loader.py /var/opt/senzing/<name-of-file>
     ```
 
+## Run docker images to view data
+
 ### Run Senzing API service
 
 1. Running the [Senzing API Server](https://github.com/Senzing/senzing-api-server)
@@ -181,3 +183,20 @@ the Senzing Model with data.
     ```
 
 1. Use the [Swagger Editor](http://editor.swagger.io/?url=https://raw.githubusercontent.com/Senzing/senzing-rest-api-specification/master/senzing-rest-api.yaml) to test drive the [Senzing API](https://github.com/Senzing/senzing-rest-api-specification).
+
+### Run Senzing Entity search web app
+
+1. Running the [Senzing Entity Search Web App](https://github.com/Senzing/entity-search-web-app)
+   docker container will deliver the Entity Search Web App on port 8251.
+   Example:
+
+    ```console
+    docker run ^
+      --env SENZING_API_SERVER_URL=http://localhost:8250 ^
+      --env SENZING_WEB_SERVER_PORT=8251 ^
+      --publish 8251:8251 ^
+      --rm ^
+      senzing/entity-search-web-app
+    ```
+
+1. Visit Senzing Entity Search Web App at [localhost:8251](http://localhost:8251).
