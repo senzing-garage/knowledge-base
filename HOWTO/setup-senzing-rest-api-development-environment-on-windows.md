@@ -76,6 +76,12 @@ To use the Senzing code, you must agree to the End User License Agreement (EULA)
     set SENZING_VAR_DIR=%SENZING_PROJECT_DIR%\var
     ```
 
+### Enable file sharing
+
+1. :warning:
+   **Windows** - [File sharing](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/share-directories-with-docker.md#windows)
+   must be enabled for `SENZING_PROJECT_DIR`.
+
 ## Run docker images
 
 ### Download Senzing
