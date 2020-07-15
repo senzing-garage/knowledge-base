@@ -202,7 +202,7 @@ the Senzing Model with data.
     ```console
     docker run ^
         --rm ^
-        --volume %SENZING_DATA_DIR%:/opt/senzing/data ^
+        --volume %SENZING_DATA_VERSION_DIR%:/opt/senzing/data ^
         --volume %SENZING_ETC_DIR%:/etc/opt/senzing ^
         --volume %SENZING_G2_DIR%:/opt/senzing/g2 ^
         --volume %SENZING_VAR_DIR%:/var/opt/senzing ^
