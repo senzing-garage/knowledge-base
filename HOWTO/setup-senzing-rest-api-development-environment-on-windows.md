@@ -159,7 +159,6 @@ the Senzing Model with data.
     ```console
     curl -X GET ^
         --output %SENZING_VAR_DIR%\truthset-person-v1-set1.csv ^
-        ^
         https://public-read-access.s3.amazonaws.com/TestDataSets/SenzingTruthSet/truthset-person-v1-set1.csv
     ```
 
