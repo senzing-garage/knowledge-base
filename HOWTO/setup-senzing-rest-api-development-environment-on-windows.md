@@ -206,7 +206,7 @@ the Senzing Model with data.
         --volume %SENZING_ETC_DIR%:/etc/opt/senzing ^
         --volume %SENZING_G2_DIR%:/opt/senzing/g2 ^
         --volume %SENZING_VAR_DIR%:/var/opt/senzing ^
-        senzing/g2loader:latest ^
+        senzing/g2loader ^
             -c /var/opt/senzing/sample-data-project.ini ^
             -p /var/opt/senzing/sample-data-project.csv
     ```
