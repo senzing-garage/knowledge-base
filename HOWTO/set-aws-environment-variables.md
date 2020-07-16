@@ -66,8 +66,6 @@ If using `AWS_SESSION_TOKEN`, a session will need to be created and environment 
 
 ### AWS_ACCESS_KEY_ID
 
-1. [Usage](https://github.com/Senzing/knowledge-base/blob/master/lists/environment-variables.md#aws_access_key_id)
-
 1. Pull information from `~/.aws/credentials`
    Example:
 
@@ -84,9 +82,10 @@ If using `AWS_SESSION_TOKEN`, a session will need to be created and environment 
     export AWS_ACCESS_KEY_ID=$(jq --raw-output ".Credentials.AccessKeyId" ~/aws-sts-get-session-token.json)
     ```
 
-### AWS_DEFAULT_REGION
+1. References:
+    1. [Usage](https://github.com/Senzing/knowledge-base/blob/master/lists/environment-variables.md#aws_access_key_id)
 
-1. [Usage](https://github.com/Senzing/knowledge-base/blob/master/lists/environment-variables.md#aws_default_region)
+### AWS_DEFAULT_REGION
 
 1. Pull information from `~/.aws/config`
    Example:
@@ -95,9 +94,10 @@ If using `AWS_SESSION_TOKEN`, a session will need to be created and environment 
     export AWS_DEFAULT_REGION=$(aws configure get default.region)
     ```
 
-### AWS_SECRET_ACCESS_KEY
+1. References:
+    1. [Usage](https://github.com/Senzing/knowledge-base/blob/master/lists/environment-variables.md#aws_default_region)
 
-1. [Usage](https://github.com/Senzing/knowledge-base/blob/master/lists/environment-variables.md#aws_secret_access_key)
+### AWS_SECRET_ACCESS_KEY
 
 1. Pull information from `~/.aws/credentials`
    Example:
@@ -115,9 +115,10 @@ If using `AWS_SESSION_TOKEN`, a session will need to be created and environment 
     export AWS_SECRET_ACCESS_KEY=$(jq --raw-output ".Credentials.SecretAccessKey" ~/aws-sts-get-session-token.json)
     ```
 
-### AWS_SESSION_TOKEN
+1. References:
+    1. [Usage](https://github.com/Senzing/knowledge-base/blob/master/lists/environment-variables.md#aws_secret_access_key)
 
-1. [Usage](https://github.com/Senzing/knowledge-base/blob/master/lists/environment-variables.md#aws_session_token)
+### AWS_SESSION_TOKEN
 
 1. For a [session](#aws-session),
    pull information from `~/aws-sts-get-session-token.json`,
@@ -127,6 +128,9 @@ If using `AWS_SESSION_TOKEN`, a session will need to be created and environment 
     ```console
     export AWS_SESSION_TOKEN=$(jq --raw-output ".Credentials.SessionToken" ~/aws-sts-get-session-token.json)
     ```
+
+1. References:
+    1. [Usage](https://github.com/Senzing/knowledge-base/blob/master/lists/environment-variables.md#aws_session_token)
 
 ## Non-AWS environment variables
 
