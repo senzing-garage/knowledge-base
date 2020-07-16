@@ -54,30 +54,30 @@ In a pre-test, verify that EC2 cannot be launched without multi-factor authentic
     export AWS_MFA_TOKEN_CODE=nnnnnn
     ```
 
-1. Get session information from AWS and place into `~/aws-session-token.json` file.
+1. Get session information from AWS and place into `~/aws-sts-get-session-token.json` file.
    Example:
 
     ```console
     aws sts get-session-token \
       --serial-number ${AWS_MFA_SERIAL_NUMBER} \
       --token-code ${AWS_MFA_TOKEN_CODE} \
-      > ~/aws-session-token.json
+      > ~/aws-sts-get-session-token.json
     ```
 
 1. Parse values out of AWS session information and place in environment variables.
    Example:
 
     ```console
-    export AWS_ACCESS_KEY_ID=$(jq --raw-output ".Credentials.AccessKeyId" ~/aws-session-token.json)
-    export AWS_SECRET_ACCESS_KEY=$(jq --raw-output ".Credentials.SecretAccessKey" ~/aws-session-token.json)
-    export AWS_SESSION_TOKEN=$(jq --raw-output ".Credentials.SessionToken" ~/aws-session-token.json)
+    export AWS_ACCESS_KEY_ID=$(jq --raw-output ".Credentials.AccessKeyId" ~/aws-sts-get-session-token.json)
+    export AWS_SECRET_ACCESS_KEY=$(jq --raw-output ".Credentials.SecretAccessKey" ~/aws-sts-get-session-token.json)
+    export AWS_SESSION_TOKEN=$(jq --raw-output ".Credentials.SessionToken" ~/aws-sts-get-session-token.json)
     ```
 
 1. :thinking: **Optional:** View expiration time of AWS session.
    Example:
 
     ```console
-    echo "AWS token expires: $(jq --raw-output ".Credentials.Expiration" ~/aws-session-token.json)"
+    echo "AWS token expires: $(jq --raw-output ".Credentials.Expiration" ~/aws-sts-get-session-token.json)"
     ```
 
 1. :thinking: **Optional:** View AWS session token.
