@@ -15,6 +15,8 @@
 1. Synopsis:
     1. The access key for your AWS account.
     1. When used in python programs, see [Boto3 Configuration, Using environment variables](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/configuration.html#using-environment-variables).
+1. Examples:
+    1. See [How to set AWS environment variables](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/set-aws-environment-variables.md#aws_access_key_id)
 1. Where used:
     1. [stream-producer](https://github.com/Senzing/stream-producer),
 
@@ -50,6 +52,7 @@
 1. Examples:
     1. `us-east-1`
     1. `us-west-2`
+    1. See [How to set AWS environment variables](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/set-aws-environment-variables.md#aws_default_region)
 1. Where used:
     1. [stream-producer](https://github.com/Senzing/stream-producer),
 
@@ -100,6 +103,8 @@
 1. Synopsis:
     1. The secret key for your AWS account.
     1. When used in python programs, see [Boto3 Configuration, Using environment variables](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/configuration.html#using-environment-variables).
+1. Examples:
+    1. See [How to set AWS environment variables](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/set-aws-environment-variables.md#aws_secret_access_key)
 1. Where used:
     1. [stream-producer](https://github.com/Senzing/stream-producer),
 
@@ -108,6 +113,8 @@
 1. Synopsis:
     1. The session key for your AWS account.
     1. When used in python programs, see [Boto3 Configuration, Using environment variables](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/configuration.html#using-environment-variables).
+1. Examples:
+    1. See [How to set AWS environment variables](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/set-aws-environment-variables.md#aws_session_token)
 1. Where used:
     1. [stream-producer](https://github.com/Senzing/stream-producer),
 
