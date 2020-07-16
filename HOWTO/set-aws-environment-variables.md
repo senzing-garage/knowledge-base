@@ -66,6 +66,8 @@ If using `AWS_SESSION_TOKEN`, a session will need to be created and environment 
 
 ### AWS_ACCESS_KEY_ID
 
+1. [Usage](https://github.com/Senzing/knowledge-base/blob/master/lists/environment-variables.md#aws_access_key_id)
+
 1. Pull information from `~/.aws/credentials`
    Example:
 
@@ -84,6 +86,8 @@ If using `AWS_SESSION_TOKEN`, a session will need to be created and environment 
 
 ### AWS_DEFAULT_REGION
 
+1. [Usage](https://github.com/Senzing/knowledge-base/blob/master/lists/environment-variables.md#aws_default_region)
+
 1. Pull information from `~/.aws/config`
    Example:
 
@@ -92,6 +96,8 @@ If using `AWS_SESSION_TOKEN`, a session will need to be created and environment 
     ```
 
 ### AWS_SECRET_ACCESS_KEY
+
+1. [Usage](https://github.com/Senzing/knowledge-base/blob/master/lists/environment-variables.md#aws_secret_access_key)
 
 1. Pull information from `~/.aws/credentials`
    Example:
@@ -110,6 +116,8 @@ If using `AWS_SESSION_TOKEN`, a session will need to be created and environment 
     ```
 
 ### AWS_SESSION_TOKEN
+
+1. [Usage](https://github.com/Senzing/knowledge-base/blob/master/lists/environment-variables.md#aws_session_token)
 
 1. For a [session](#aws-session),
    pull information from `~/aws-sts-get-session-token.json`,
