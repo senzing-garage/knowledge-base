@@ -16,7 +16,7 @@ In a pre-test, verify that EC2 cannot be launched without multi-factor authentic
    Example:
 
     ```console
-    export AWS_KEY_NAME=aws-default-key-pair
+    export SENZING_AWS_KEYPAIR=aws-default-key-pair
     ```
 
 1. Try launching the image.
@@ -28,7 +28,7 @@ In a pre-test, verify that EC2 cannot be launched without multi-factor authentic
       --image-id ${AWS_IMAGE_ID} \
       --count 1 \
       --instance-type t2.micro \
-      --key-name ${AWS_KEY_NAME}
+      --key-name ${SENZING_AWS_KEYPAIR}
     ```
 
 1. Verify EC2 is not running.
@@ -98,7 +98,7 @@ In a pre-test, verify that EC2 cannot be launched without multi-factor authentic
       --image-id ${AWS_IMAGE_ID} \
       --count 1 \
       --instance-type t2.micro \
-      --key-name ${AWS_KEY_NAME}
+      --key-name ${SENZING_AWS_KEYPAIR}
     ```
 
 1. Verify EC2 is running.
