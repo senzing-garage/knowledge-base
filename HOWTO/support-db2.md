@@ -32,7 +32,7 @@
     docker run \
       --rm \
       --volume ${SENZING_OPT_IBM_DIR}:/opt/IBM \
-      senzing/db2-driver-installer:1.0.0
+      senzing/db2-driver-installer:1.0.1
     ```
 
 ## Set parameter for docker run
