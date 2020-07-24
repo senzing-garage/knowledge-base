@@ -37,7 +37,7 @@ Delete Senzing images from local Docker repository.
     sudo docker build --tag senzing/g2command           https://github.com/senzing/docker-g2command.git
     sudo docker build --tag senzing/g2loader            https://github.com/senzing/docker-g2loader.git
     sudo docker build --tag senzing/jupyter             https://github.com/senzing/docker-jupyter.git
-    sudo docker build --tag senzing/mock-data-generator https://github.com/senzing/mock-data-generator.git
+    sudo docker build --tag senzing/stream-producer     https://github.com/senzing/stream-producer.git
     sudo docker build --tag senzing/python-demo         https://github.com/senzing/docker-python-demo.git
     sudo docker build --tag senzing/senzing-poc-utility https://github.com/senzing/docker-senzing-poc-utility.git
     sudo docker build --tag senzing/stream-loader       https://github.com/senzing/stream-loader.git
@@ -69,7 +69,7 @@ Delete Senzing images from local Docker repository.
       "senzing/g2command" \
       "senzing/g2loader" \
       "senzing/jupyter" \
-      "senzing/mock-data-generator" \
+      "senzing/stream-producer" \
       "senzing/python-demo" \
       "senzing/senzing-api-server" \
       "senzing/senzing-poc-utility" \

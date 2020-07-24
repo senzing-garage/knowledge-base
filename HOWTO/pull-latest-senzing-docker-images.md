@@ -33,7 +33,7 @@
       "senzing/ibm-db2:latest" \
       "senzing/init-container:latest" \
       "senzing/jupyter:latest" \
-      "senzing/mock-data-generator:latest" \
+      "senzing/stream-producer:latest" \
       "senzing/mysql-init:latest" \
       "senzing/mysql:latest" \
       "senzing/phppgadmin:latest" \
