@@ -17,7 +17,7 @@ DOCKER_IMAGE_NAMES=(
   "senzing/entity-search-web-app:2.0.0"
   "senzing/init-container:1.5.5"
   "senzing/jupyter:1.1.5"
-  "senzing/mock-data-generator:1.1.1"
+  "senzing/stream-producer:1.1.1"
   "senzing/mysql-init:latest"
   "senzing/phppgadmin:1.0.0"
   "senzing/redoer:1.3.0"

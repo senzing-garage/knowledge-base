@@ -1157,7 +1157,7 @@
 1. Values:
     1. Default: "senzing-exchange"
 1. Where used:
-    1. [mock-data-generator](https://github.com/Senzing/mock-data-generator),
+    1. [stream-producer](https://github.com/Senzing/stream-producer),
 
 ### SENZING_RABBITMQ_HOST
 
@@ -1193,7 +1193,7 @@
 1. Values:
     1. Default: "1000"
 1. Where used:
-    1. [mock-data-generator](https://github.com/Senzing/mock-data-generator),
+    1. [stream-producer](https://github.com/Senzing/stream-producer),
 
 ### SENZING_RABBITMQ_PUBLISH_INTERVAL
 
@@ -1202,7 +1202,7 @@
 1. Values:
     1. Default: "0.0"
 1. Where used:
-    1. [mock-data-generator](https://github.com/Senzing/mock-data-generator),
+    1. [stream-producer](https://github.com/Senzing/stream-producer),
 
 ### SENZING_RABBITMQ_QUEUE
 
@@ -1231,7 +1231,7 @@
 1. Values:
     1. Default: "0"
 1. Where used:
-    1. [mock-data-generator](https://github.com/Senzing/mock-data-generator),
+    1. [stream-producer](https://github.com/Senzing/stream-producer),
 
 ### SENZING_RECORD_MAX
 
@@ -1241,7 +1241,7 @@
     1. Value of 0 means no maximum.
     1. Default: "0"
 1. Where used:
-    1. [mock-data-generator](https://github.com/Senzing/mock-data-generator),
+    1. [stream-producer](https://github.com/Senzing/stream-producer),
 
 ### SENZING_RECORD_MIN
 
@@ -1250,7 +1250,7 @@
 1. Values:
     1. Default: "1"
 1. Where used:
-    1. [mock-data-generator](https://github.com/Senzing/mock-data-generator),
+    1. [stream-producer](https://github.com/Senzing/stream-producer),
 
 ### SENZING_RECORD_MONITOR
 
@@ -1259,7 +1259,7 @@
 1. Values:
     1. Default: "10000"
 1. Where used:
-    1. [mock-data-generator](https://github.com/Senzing/mock-data-generator),
+    1. [stream-producer](https://github.com/Senzing/stream-producer),
 
 ### SENZING_RECORDS_PER_SECOND
 
@@ -1269,7 +1269,7 @@
     1. Value of 0 means no throttling.
     1. Default: "0"
 1. Where used:
-    1. [mock-data-generator](https://github.com/Senzing/mock-data-generator),
+    1. [stream-producer](https://github.com/Senzing/stream-producer),
 
 ### SENZING_RPM_FILENAME
 
