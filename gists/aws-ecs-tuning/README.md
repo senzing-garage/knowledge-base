@@ -25,11 +25,18 @@
 
 ## SQS to Senzing engine using stream-loader
 
-- Rate = messages inserted per second
+- **cpu_limit** Specified ecs-params.yaml `task_definition.task_size.cpu_limit`
+- **CPUUtilization** Percent CPU used
+- **DB capacity** Specified Database capacity
+- **DB CPU** Percent database CPU used
+- **mem_limit** Specified ecs-params.yaml `task_definition.task_size.mem_limit`
+- **MemoryUtilization** Percent memory used
+- **Rate** Messages inserted per second
+- **Threads** Specified SENZING_THREADS_PER_PROCESS
 
-| Rate | loader threads | mem_limit | MemoryUtilization | cpu_limit | CPUUtilization | DB capacity | DB CPU |
-|-----:|---------------:|----------:|------------------:|----------:|---------------:|------------:|-------:|
-|   20 |              4 |      16GB |               16% |      2048 |            23% |           8 |    25% |
+| Rate | Threads | mem_limit | cpu_limit | DB capacity | MemoryUtilization | CPUUtilization | DB CPU |
+|-----:|--------:|----------:|----------:|------------:|------------------:|---------------:|-------:|
+|   20 |       4 |      16GB |      2048 |           8 |               18% |            23% |    25% |
 
 ## References
 
