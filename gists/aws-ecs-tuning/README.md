@@ -12,7 +12,7 @@
 - **Internal queue:** Specified SENZING_READ_QUEUE_MAXSIZE
 
 
-| Rate | Threads | mem_limit | cpu_limit | internal queue |
+| Rate | Threads | mem_limit | cpu_limit | Internal queue |
 |-----:|--------:|----------:|----------:|---------------:|
 |  170 |       4 |       4GB |       512 |             50 |
 |  280 |       8 |       8GB |      1024 |             50 |
@@ -24,7 +24,7 @@
 
 ### SQS ingestion using stream-producer json-to-sqs-batch
 
-| Rate | Threads | mem_limit | cpu_limit | internal queue |
+| Rate | Threads | mem_limit | cpu_limit | Internal queue |
 |-----:|--------:|----------:|----------:|---------------:|
 | 1700 |      16 |      16GB |      2048 |            200 |
 
@@ -39,11 +39,11 @@
 - **Rate:** Messages inserted per second
 - **Threads:** Specified SENZING_THREADS_PER_PROCESS
 
-| Rate | Threads | mem_limit | cpu_limit | DB capacity | MemoryUtilization | CPUUtilization | DB CPU |
-|-----:|--------:|----------:|----------:|------------:|------------------:|---------------:|-------:|
-|   20 |       4 |      16GB |      2048 |           8 |               18% |            23% |    25% |
-|   40 |       8 |      16GB |      2048 |           8 |               20% |            55% |    42% |
-|   60 |      10 |      16GB |      2048 |           8 |               23% |            84% |    60% |
+| Rate | Threads | mem_limit | cpu_limit | DB capacity |               |MemoryUtilization | CPUUtilization | DB CPU |
+|-----:|--------:|----------:|----------:|------------:|:-------------:|------------------:|---------------:|-------:|
+|   20 |       4 |      16GB |      2048 |           8 | :arrow_right: |               18% |            23% |    25% |
+|   40 |       8 |      16GB |      2048 |           8 |               |               20% |            55% |    42% |
+|   60 |      10 |      16GB |      2048 |           8 |               |               23% |            84% |    60% |
 
 ## References
 
