@@ -39,11 +39,11 @@
 - **Rate:** Messages inserted per second
 - **Threads:** Specified SENZING_THREADS_PER_PROCESS
 
-| Rate | Threads | mem_limit | cpu_limit | DB capacity |               |MemoryUtilization | CPUUtilization | DB CPU |
-|-----:|--------:|----------:|----------:|------------:|:-------------:|------------------:|---------------:|-------:|
-|   20 |       4 |      16GB |      2048 |           8 | :arrow_right: |               18% |            23% |    25% |
-|   40 |       8 |      16GB |      2048 |           8 |               |               20% |            55% |    42% |
-|   60 |      10 |      16GB |      2048 |           8 |               |               23% |            84% |    60% |
+| Threads | mem_limit | cpu_limit | DB capacity | :arrow_right: | Rate | MemoryUtilization | CPUUtilization | DB CPU |
+|--------:|----------:|----------:|------------:|:-------------:|-----:|------------------:|---------------:|-------:|
+|       4 |      16GB |      2048 |           8 | :arrow_right: |   20 |               18% |            23% |    25% |
+|       8 |      16GB |      2048 |           8 | :arrow_right: |   40 |               20% |            55% |    42% |
+|      10 |      16GB |      2048 |           8 | :arrow_right: |   60 |               23% |            84% |    60% |
 
 ## References
 
