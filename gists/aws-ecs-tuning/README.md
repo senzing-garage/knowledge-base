@@ -5,34 +5,39 @@
 
 ### SQS ingestion using stream-producer json-to-sqs
 
-- Rate = messages queued per second
+- **cpu_limit:** Specified ecs-params.yaml `task_definition.task_size.cpu_limit`
+- **mem_limit:** Specified ecs-params.yaml `task_definition.task_size.mem_limit`
+- **Rate:** Messages queued per second
+- **Threads:** Specified SENZING_THREADS_PER_PROCESS
+- **Internal queue:** Specified SENZING_READ_QUEUE_MAXSIZE
 
-| Rate | producer threads | mem_limit | cpu_limit | internal queue |
-|-----:|-----------------:|----------:|----------:|---------------:|
-|  170 |                4 |       4GB |       512 |             50 |
-|  280 |                8 |       8GB |      1024 |             50 |
-|  375 |                8 |      16GB |      2048 |             50 |
-|  380 |               16 |      16GB |      2048 |             50 |
-|  385 |               16 |      30GB |      4096 |             50 |
-|  385 |               30 |      30GB |      4096 |             50 |
+
+| Rate | Threads | mem_limit | cpu_limit | internal queue |
+|-----:|--------:|----------:|----------:|---------------:|
+|  170 |       4 |       4GB |       512 |             50 |
+|  280 |       8 |       8GB |      1024 |             50 |
+|  375 |       8 |      16GB |      2048 |             50 |
+|  380 |      16 |      16GB |      2048 |             50 |
+|  385 |      16 |      30GB |      4096 |             50 |
+|  385 |      30 |      30GB |      4096 |             50 |
 
 
 ### SQS ingestion using stream-producer json-to-sqs-batch
 
-| Rate | producer threads | mem_limit | cpu_limit | internal queue |
-|-----:|-----------------:|----------:|----------:|---------------:|
-| 1700 |               16 |      16GB |      2048 |            200 |
+| Rate | Threads | mem_limit | cpu_limit | internal queue |
+|-----:|--------:|----------:|----------:|---------------:|
+| 1700 |      16 |      16GB |      2048 |            200 |
 
 ## SQS to Senzing engine using stream-loader
 
-- **cpu_limit** Specified ecs-params.yaml `task_definition.task_size.cpu_limit`
-- **CPUUtilization** Percent CPU used
-- **DB capacity** Specified Database capacity
-- **DB CPU** Percent database CPU used
-- **mem_limit** Specified ecs-params.yaml `task_definition.task_size.mem_limit`
-- **MemoryUtilization** Percent memory used
-- **Rate** Messages inserted per second
-- **Threads** Specified SENZING_THREADS_PER_PROCESS
+- **cpu_limit:** Specified ecs-params.yaml `task_definition.task_size.cpu_limit`
+- **CPUUtilization:** Percent CPU used
+- **DB capacity:** Specified Database capacity
+- **DB CPU:** Percent database CPU used
+- **mem_limit:** Specified ecs-params.yaml `task_definition.task_size.mem_limit`
+- **MemoryUtilization:** Percent memory used
+- **Rate:** Messages inserted per second
+- **Threads:** Specified SENZING_THREADS_PER_PROCESS
 
 | Rate | Threads | mem_limit | cpu_limit | DB capacity | MemoryUtilization | CPUUtilization | DB CPU |
 |-----:|--------:|----------:|----------:|------------:|------------------:|---------------:|-------:|
