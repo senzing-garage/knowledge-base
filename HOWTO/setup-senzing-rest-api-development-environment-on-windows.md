@@ -317,6 +317,8 @@ They may be started and stopped repeatedly without having to perform the prior s
 
 ### Run Senzing Entity search web app
 
+1. Xxx
+
     ```console
     docker run ^
       --interactive ^
