@@ -313,3 +313,18 @@ They may be started and stopped repeatedly without having to perform the prior s
     ```
 
 1. Visit Senzing Entity Search Web App at [localhost:8251](http://localhost:8251).
+
+
+### Run Senzing Entity search web app
+
+    ```console
+    docker run ^
+      --interactive ^
+      --rm ^
+      --tty ^
+      --volume %SENZING_DATA_VERSION_DIR%:/opt/senzing/data ^
+      --volume %SENZING_ETC_DIR%:/etc/opt/senzing ^
+      --volume %SENZING_G2_DIR%:/opt/senzing/g2 ^
+      --volume %SENZING_VAR_DIR%:/var/opt/senzing ^
+      senzing/senzing-console /bin/bash
+    ```
