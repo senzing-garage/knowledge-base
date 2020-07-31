@@ -317,7 +317,8 @@ They may be started and stopped repeatedly without having to perform the prior s
 
 ### Run Senzing Entity search web app
 
-1. Xxx
+1. To run a Linux shell using Docker, run the Senzing console.
+   Example:
 
     ```console
     docker run ^
