@@ -351,5 +351,5 @@ They may be started and stopped repeatedly without having to perform the prior s
       senzing/jupyter start.sh jupyter notebook --NotebookApp.token=''
     ```
 
-1. Open a browser to
+1. Visit Senzing Jupyter notebooks
    [localhost:9178](http://localhost:9178).
