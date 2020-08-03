@@ -314,8 +314,7 @@ They may be started and stopped repeatedly without having to perform the prior s
 
 1. Visit Senzing Entity Search Web App at [localhost:8251](http://localhost:8251).
 
-
-### Run Senzing Entity search web app
+### Run Senzing Console
 
 1. To run a Linux shell using Docker, run the Senzing console.
    Example:
@@ -331,3 +330,26 @@ They may be started and stopped repeatedly without having to perform the prior s
       --volume %SENZING_VAR_DIR%:/var/opt/senzing ^
       senzing/senzing-console /bin/bash
     ```
+
+### Run Jupyter notebooks
+
+1. Run Jupyter notebooks using Docker.
+   Example:
+
+    ```console
+    docker run ^
+      --env SENZING_SQL_CONNECTION=sqlite3://na:na@/var/opt/senzing/sqlite/G2C.db ^
+      --interactive ^
+      --publish 9178:8888 ^
+      --rm ^
+      --tty ^
+      --volume %SENZING_PROJECT_DIR%/notebooks/shared ^
+      --volume %SENZING_DATA_VERSION_DIR%:/opt/senzing/data ^
+      --volume %SENZING_ETC_DIR%:/etc/opt/senzing ^
+      --volume %SENZING_G2_DIR%:/opt/senzing/g2 ^
+      --volume %SENZING_VAR_DIR%:/var/opt/senzing ^
+      senzing/jupyter start.sh jupyter notebook --NotebookApp.token=''
+    ```
+
+1. Open a browser to
+   [localhost:9178](http://localhost:9178).
