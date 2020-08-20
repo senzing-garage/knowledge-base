@@ -597,6 +597,17 @@
 1. Values:
     1. Default: None.  Application dependent.
 
+### RABBITMQ_USE_EXISTING_ENTITIES
+1. Synopsis:
+    1. Should preexisting RabbitMQ exchanges, queues, and mappings be used.
+1. Values:
+    1. Default: Varies
+    2. True: Connect to an existing exchange or queue using the given name. Fails if the entity does not exist.
+    3. False: Create the entities if they do not exist, or connect to a prexisting entity if it has the right settings. Fails if the settings passed when conncting differ from the settings on the existing entity.
+1. Where used:
+    1. [stream-loader](https://github.com/Senzing/stream-loader)
+    1. [stream-producer](https://github.com/Senzing/stream-producer)
+
 ### RABBITMQ_USERNAME
 
 1. Synopsis:
