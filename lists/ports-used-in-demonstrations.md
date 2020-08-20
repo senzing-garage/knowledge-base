@@ -108,3 +108,7 @@ Open range: 9165-9190
 ### 9179
 
 - [Kafdrop](https://github.com/obsidiandynamics/kafdrop)
+
+### 9180
+
+- [Swagger UI](https://github.com/swagger-api/swagger-ui)
