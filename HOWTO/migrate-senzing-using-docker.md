@@ -8,6 +8,7 @@
     1. [Migrate 1.11.0 to 1.12.0](#migrate-1110-to-1120)
     1. [Migrate 1.12.0 to 1.13.0](#migrate-1120-to-1130)
     1. [Migrate 1.14.0 to 1.15.0](#migrate-1140-to-1150)
+    1. [Migrate 1.15.x to 2.0.x](#migrate-1140-to-1150)
 
 ## Preparation
 
@@ -476,3 +477,101 @@
             -c /etc/opt/senzing/G2Module.ini \
             -f /opt/senzing/g2/resources/config/g2core-config-upgrade-1.14-to-1.15.gtc
         ```
+
+### Migrate 1.15.x to 2.0.x
+
+#### Database support
+
+:thinking: **Optional:**
+Some databases need additional support.
+For other databases, these steps may be skipped.
+
+1. **Db2:** See
+   [Support Db2](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/support-db2.md)
+   instructions to set `SENZING_OPT_IBM_DIR_PARAMETER`.
+1. **MS SQL:** See
+   [Support MS SQL](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/support-mssql.md)
+   instructions to set `SENZING_OPT_MICROSOFT_DIR_PARAMETER`.
+
+#### Docker network
+
+:thinking: **Optional:**
+Use if docker container is part of a docker network.
+
+See
+[Support Docker Network](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/support-docker-network.md)
+instructions to set `SENZING_NETWORK_PARAMETER`.
+
+#### Docker user
+
+:thinking: **Optional:**
+The `senzing/senzing-console container runs as "USER root".
+Use if a different userid (UID) is required.
+
+See
+[Support Docker User](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/support-docker-network.md)
+instructions to set `SENZING_RUNAS_USER_PARAMETER`.
+
+#### Identify Senzing installation
+
+1. :pencil2: Identify location of Senzing 2.0.x installation.
+   Example:
+
+    ```console
+    export SENZING_DATA_VERSION_DIR=/opt/senzing/data/1.0.0
+    export SENZING_ETC_DIR=/opt/senzing/etc
+    export SENZING_G2_DIR=/opt/senzing/g2
+    export SENZING_VAR_DIR=/opt/senzing/var
+    ```
+
+#### Update Senzing database
+
+1. Update the Senzing database schema.
+   Example:
+
+    ```console
+    sudo docker run \
+      --rm \
+      --volume ${SENZING_DATA_VERSION_DIR}:/opt/senzing/data \
+      --volume ${SENZING_ETC_DIR}:/etc/opt/senzing \
+      --volume ${SENZING_G2_DIR}:/opt/senzing/g2 \
+      --volume ${SENZING_VAR_DIR}:/var/opt/senzing \
+      ${SENZING_NETWORK_PARAMETER} \
+      ${SENZING_OPT_IBM_DIR_PARAMETER} \
+      ${SENZING_OPT_MICROSOFT_DIR_PARAMETER} \
+      ${SENZING_RUNAS_USER_PARAMETER} \
+      senzing/senzing-console \
+        /opt/senzing/g2/bin/g2dbupgrade \
+          -c /etc/opt/senzing/G2Module.ini \
+          -a
+    ```
+
+#### Update Senzing configuration
+
+1. :pencil2: Identify the configuration file that needs to be applied.
+   In a system install the files will be located in `/opt/senzing/g2/resources/config`.
+   Example:
+
+    ```console
+    export SENZING_CONFIG_FILENAME=g2core-config-upgrade-1.15-to-2.0.gtc
+    ```
+
+1. Apply the configuration file.
+   Example:
+
+    ```console
+    sudo docker run \
+      --rm \
+      --volume ${SENZING_DATA_VERSION_DIR}:/opt/senzing/data \
+      --volume ${SENZING_ETC_DIR}:/etc/opt/senzing \
+      --volume ${SENZING_G2_DIR}:/opt/senzing/g2 \
+      --volume ${SENZING_VAR_DIR}:/var/opt/senzing \
+      ${SENZING_NETWORK_PARAMETER} \
+      ${SENZING_OPT_IBM_DIR_PARAMETER} \
+      ${SENZING_OPT_MICROSOFT_DIR_PARAMETER} \
+      ${SENZING_RUNAS_USER_PARAMETER} \
+      senzing/senzing-console \
+        /opt/senzing/g2/python/G2ConfigTool.py \
+          -c /etc/opt/senzing/G2Module.ini \
+          -f /opt/senzing/g2/resources/config/${SENZING_CONFIG_FILENAME}
+    ```
