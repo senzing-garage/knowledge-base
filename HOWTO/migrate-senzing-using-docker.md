@@ -8,7 +8,7 @@
     1. [Migrate 1.11.0 to 1.12.0](#migrate-1110-to-1120)
     1. [Migrate 1.12.0 to 1.13.0](#migrate-1120-to-1130)
     1. [Migrate 1.14.0 to 1.15.0](#migrate-1140-to-1150)
-    1. [Migrate 1.15.x to 2.0.x](#migrate-1140-to-1150)
+    1. [Migrate 1.15.x to 2.0.x](#migrate-115x-to-20x)
 
 ## Preparation
 
@@ -509,7 +509,7 @@ The `senzing/senzing-console container runs as "USER root".
 Use if a different userid (UID) is required.
 
 See
-[Support Docker User](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/support-docker-network.md)
+[Support Docker User](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/support-docker-user.md)
 instructions to set `SENZING_RUNAS_USER_PARAMETER`.
 
 #### Identify Senzing installation
@@ -549,7 +549,7 @@ instructions to set `SENZING_RUNAS_USER_PARAMETER`.
 #### Update Senzing configuration
 
 1. :pencil2: Identify the configuration file that needs to be applied.
-   In a system install the files will be located in `/opt/senzing/g2/resources/config`.
+   In a system install, the files will be located in `/opt/senzing/g2/resources/config`.
    Example:
 
     ```console
