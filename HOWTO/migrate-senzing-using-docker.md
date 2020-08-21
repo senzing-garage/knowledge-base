@@ -12,31 +12,37 @@
 
 ## Preparation
 
+### Database support
+
+:thinking: **Optional:**
+Some databases need additional support.
+For other databases, these steps may be skipped.
+
+1. **Db2:** See
+   [Support Db2](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/support-db2.md)
+   instructions to set `SENZING_OPT_IBM_DIR_PARAMETER`.
+1. **MS SQL:** See
+   [Support MS SQL](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/support-mssql.md)
+   instructions to set `SENZING_OPT_MICROSOFT_DIR_PARAMETER`.
+
 ### Docker network
 
-:thinking: **Optional:**  Use if docker container is part of a docker network.
+:thinking: **Optional:**
+Use if docker container is part of a docker network.
 
-1. List docker networks.
-   Example:
+See
+[Support Docker Network](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/support-docker-network.md)
+instructions to set `SENZING_NETWORK_PARAMETER`.
 
-    ```console
-    sudo docker network ls
-    ```
+### Docker user
 
-1. :pencil2: Specify docker network.
-   Choose value from NAME column of `docker network ls`.
-   Example:
+:thinking: **Optional:**
+The `senzing/senzing-console container runs as "USER root".
+Use if a different userid (UID) is required.
 
-    ```console
-    export SENZING_NETWORK=*nameofthe_network*
-    ```
-
-1. Construct parameter for `docker run`.
-   Example:
-
-    ```console
-    export SENZING_NETWORK_PARAMETER="--net ${SENZING_NETWORK}"
-    ```
+See
+[Support Docker User](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/support-docker-user.md)
+instructions to set `SENZING_RUNAS_USER_PARAMETER`.
 
 ## Migrations
 
@@ -480,37 +486,9 @@
 
 ### Migrate 1.15.x to 2.0.x
 
-#### Database support
-
-:thinking: **Optional:**
-Some databases need additional support.
-For other databases, these steps may be skipped.
-
-1. **Db2:** See
-   [Support Db2](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/support-db2.md)
-   instructions to set `SENZING_OPT_IBM_DIR_PARAMETER`.
-1. **MS SQL:** See
-   [Support MS SQL](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/support-mssql.md)
-   instructions to set `SENZING_OPT_MICROSOFT_DIR_PARAMETER`.
-
-#### Docker network
-
-:thinking: **Optional:**
-Use if docker container is part of a docker network.
-
 See
-[Support Docker Network](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/support-docker-network.md)
-instructions to set `SENZING_NETWORK_PARAMETER`.
-
-#### Docker user
-
-:thinking: **Optional:**
-The `senzing/senzing-console container runs as "USER root".
-Use if a different userid (UID) is required.
-
-See
-[Support Docker User](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/support-docker-user.md)
-instructions to set `SENZING_RUNAS_USER_PARAMETER`.
+[Preparation](#preparation)
+to set environment variables needed by specific Senzing installations.
 
 #### Identify Senzing installation
 
