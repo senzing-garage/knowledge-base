@@ -296,7 +296,7 @@ They may be started and stopped repeatedly without having to perform the prior s
    Example:
 
     ```console
-    SENZING_API_SERVER_HOSTNAME=172.17.0.1
+    set SENZING_API_SERVER_HOSTNAME=172.17.0.1
     ```
 
 1. Running the
