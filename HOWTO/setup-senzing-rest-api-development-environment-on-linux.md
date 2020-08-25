@@ -103,7 +103,7 @@ These steps only need to be run once per `SENZING_PROJECT_NAME` to install and c
     docker run \
       --env SENZING_ACCEPT_EULA=${SENZING_ACCEPT_EULA} \
       --rm \
-      --volume %SENZING_DATA_DIR%:/opt/senzing/data \
+      --volume ${SENZING_DATA_DIR}:/opt/senzing/data \
       --volume ${SENZING_G2_DIR}:/opt/senzing/g2 \
       senzing/yum
     ```
