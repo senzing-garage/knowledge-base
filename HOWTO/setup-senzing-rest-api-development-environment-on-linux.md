@@ -1,10 +1,10 @@
-# Setup Senzing REST API development environment on Windows
+# Setup Senzing REST API development environment on Linux
 
-This set of instructions shows how to use Windows Command Prompt instructions
+This set of instructions shows how to use Linux terminal instructions
 to setup and run a
 [Senzing API Server](https://github.com/Senzing/senzing-api-server).
 
-With a running Senzing API server on a local Windows machine,
+With a running Senzing API server on a local Linux machine,
 a developer can write code that makes network requests
 (i.e. HTTP request) to the Senzing API server.
 
@@ -14,11 +14,9 @@ a developer can write code that makes network requests
     1. [Install Docker for Windows](#install-docker-for-windows)
     1. [Install curl](#install-curl)
 1. [Set environment](#set-environment)
-    1. [Verify variables](#verify-variables)
     1. [Specify project name](#specify-project-name)
     1. [EULA](#eula)
     1. [Synthesize variables](#synthesize-variables)
-    1. [Enable file sharing](#enable-file-sharing)
 1. [Install and configure Senzing](#install-and-configure-senzing)
     1. [Download Senzing](#download-senzing)
     1. [Configure files and database](#configure-files-and-database)
@@ -53,16 +51,6 @@ a developer can write code that makes network requests
     ```
 
 ## Set environment
-
-### Verify variables
-
-1. The following variables will be used to construct `SENZING_PROJECT_DIR`.
-   Example:
-
-    ```console
-    echo %HOMEDRIVE%
-    echo %HOMEPATH%
-    ```
 
 ### Specify project name
 
