@@ -121,7 +121,7 @@ These steps only need to be run once per `SENZING_PROJECT_NAME` to install and c
     ```console
     docker run \
       --rm \
-      --user 0 \
+      --user $(id -u):$(id -g) \
       --volume ${SENZING_DATA_VERSION_DIR}:/opt/senzing/data \
       --volume ${SENZING_ETC_DIR}:/etc/opt/senzing \
       --volume ${SENZING_G2_DIR}:/opt/senzing/g2 \
