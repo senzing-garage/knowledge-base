@@ -234,6 +234,7 @@ the Senzing Model with custom data.
     ```console
     docker run ^
       --interactive ^
+      --publish 8254:5000 ^
       --rm ^
       --tty ^
       --volume %SENZING_DATA_VERSION_DIR%:/opt/senzing/data ^
@@ -243,11 +244,11 @@ the Senzing Model with custom data.
       senzing/xterm
     ```
 
-1. Using a web browser, visit [localhost:5000](http://localhost:5000)
+1. Using a web browser, visit [localhost:8254](http://localhost:8254)
 1. In Senzing Xterm, run
 
     ```console
-    G2loader.py /var/opt/senzing/<name-of-file>
+    G2Loader.py /var/opt/senzing/<name-of-file>
     ```
 
 ## Access Senzing Model
@@ -306,7 +307,11 @@ They may be started and stopped repeatedly without having to perform the prior s
     ```console
     docker run ^
       --env SENZING_API_SERVER_URL=http://%SENZING_API_SERVER_HOSTNAME%:8250 ^
+      --env SENZING_WEB_SERVER_ADMIN_AUTH_MODE=JWT ^
+      --env SENZING_WEB_SERVER_ADMIN_AUTH_PATH=http://localhost:8251 ^
+      --env SENZING_WEB_SERVER_API_PATH=/api ^
       --env SENZING_WEB_SERVER_PORT=8251 ^
+      --env SENZING_WEB_SERVER_URL=http://localhost:8251 ^
       --publish 8251:8251 ^
       --rm ^
       senzing/entity-search-web-app
