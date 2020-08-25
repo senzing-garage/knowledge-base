@@ -80,11 +80,11 @@ To use the Senzing code, you must agree to the End User License Agreement (EULA)
     ```console
     export SENZING_PROJECT_DIR=~/${SENZING_PROJECT_NAME}
 
-    export SENZING_DATA_DIR=${SENZING_PROJECT_DIR}\data
-    export SENZING_DATA_VERSION_DIR=${SENZING_PROJECT_DIR}\data\1.0.0
-    export SENZING_ETC_DIR=${SENZING_PROJECT_DIR}\etc
-    export SENZING_G2_DIR=${SENZING_PROJECT_DIR}\g2
-    export SENZING_VAR_DIR=${SENZING_PROJECT_DIR}\var
+    export SENZING_DATA_DIR=${SENZING_PROJECT_DIR}/data
+    export SENZING_DATA_VERSION_DIR=${SENZING_PROJECT_DIR}/data/1.0.0
+    export SENZING_ETC_DIR=${SENZING_PROJECT_DIR}/etc
+    export SENZING_G2_DIR=${SENZING_PROJECT_DIR}/g2
+    export SENZING_VAR_DIR=${SENZING_PROJECT_DIR}/var
     ```
 
 ## Install and configure Senzing
