@@ -290,14 +290,15 @@ They may be started and stopped repeatedly without having to perform the prior s
 
 ### Run Senzing Entity search web app
 
-1. Specify hostname/IP address of `senzing/senzing-api-server` docker container.
-   **Note:** The use of `localhost` does not work.
-   It must be an hostname/address that can be accessed from *within* the docker container.
+1. :pencil2: Identify the IP address of the host system.
    Example:
 
     ```console
-    set SENZING_API_SERVER_HOSTNAME=172.17.0.1
+    set SENZING_DOCKER_HOST_IP_ADDR=10.1.1.100
     ```
+
+    1. To find the value for `SENZING_DOCKER_HOST_IP_ADDR` by using Python interactively, visit
+       [SENZING_DOCKER_HOST_IP_ADDR](https://github.com/Senzing/knowledge-base/blob/master/lists/environment-variables.md#senzing_docker_host_ip_addr).
 
 1. Running the
    [Senzing Entity Search Web App](https://github.com/Senzing/entity-search-web-app)
