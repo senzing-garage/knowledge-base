@@ -1287,15 +1287,6 @@
 
 1. Synopsis:
     1. Name of the RabbitMQ exchange used for routing messages.
-1. Values:
-    1. Default: "senzing-exchange"
-1. Where used:
-    1. [stream-producer](https://github.com/Senzing/stream-producer)
-
-### SENZING_RABBITMQ_EXCHANGE
-
-1. Synopsis:
-    1. The exchange to publish records to.
 1. Values
     1. Default: "senzing-rabbitmq-exchange"
 1. Where used:
