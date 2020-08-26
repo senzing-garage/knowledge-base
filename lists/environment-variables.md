@@ -590,14 +590,6 @@
 1. Where used:
     1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo),
 
-### SENZING_RABBITMQ_EXCHANGE
-1. Synopsis:
-    1. The exchange to publish records to.
-1. Values
-    1. Default: "senzing-rabbitmq-exchange"
-1. Where used: 
-    1. [stream-producer](https://github.com/Senzing/stream-producer)
-
 ### RABBITMQ_PASSWORD
 
 1. Synopsis:
@@ -606,6 +598,7 @@
     1. Default: None.  Application dependent.
 
 ### RABBITMQ_USE_EXISTING_ENTITIES
+
 1. Synopsis:
     1. Should preexisting RabbitMQ exchanges, queues, and mappings be used.
 1. Values:
@@ -938,6 +931,127 @@
 1. Where used:
     1. [docker-init-container](https://github.com/Senzing/docker-init-container),
 
+### SENZING_GOVERNOR_DATABASE_URLS
+
+1. Synopsis:
+    1. A list of one or more comma-separated
+       [SENZING_DATABASE_URL](#senzing_database_url)s.
+1. Examples:
+    1. Single SENZING_DATABASE_URL.
+       Example:
+
+        ```console
+        export SENZING_GOVERNOR_DATABASE_URLS=postgresql://postgres:postgres@localhost:5432/G2
+        ```
+
+    1. Multiple SENZING_DATABASE_URLs.
+       Example:
+
+        ```console
+        export SENZING_GOVERNOR_DATABASE_URLS=postgresql://postgres:postgres@localhost:5432/G2,postgresql://postgres:postgres@localhost:5432/G2_RES
+        ```
+
+1. Where used:
+    1. [governor-postgresql-transaction-id](https://github.com/Senzing/governor-postgresql-transaction-id),
+
+### SENZING_GOVERNOR_INTERVAL
+
+1. Synopsis:
+    1. The number of records "skipped" before executing the analysis for governing.
+1. Examples:
+    1. Analyze once every 10 million records.
+       Example:
+
+        ```console
+        export SENZING_GOVERNOR_INTERVAL=10000000
+        ```
+
+1. Where used:
+    1. [governor-postgresql-transaction-id](https://github.com/Senzing/governor-postgresql-transaction-id),
+
+### SENZING_GOVERNOR_LIST_SEPARATOR
+
+1. Synopsis:
+    1. The character used to separate items in a list.
+1. Values:
+    1. Default: ","  (a single comma)
+1. Examples:
+    1. Use a plus sign instead of a comma.
+       Example:
+
+        ```console
+        export SENZING_GOVERNOR_LIST_SEPARATOR="+"
+        ```
+
+1. Where used:
+    1. [governor-postgresql-transaction-id](https://github.com/Senzing/governor-postgresql-transaction-id),
+
+### SENZING_GOVERNOR_POSTGRESQL_HIGH_WATERMARK
+
+1. Synopsis:
+    1. The maximum age of the PostgreSQL transaction ID (XID) before "governance" starts.
+1. Values:
+    1. Default: 10000000000  (10 billion)
+1. Examples:
+    1. Set to 9 billion.
+       Example:
+
+        ```console
+        export SENZING_GOVERNOR_POSTGRESQL_HIGH_WATERMARK=9000000000
+        ```
+
+1. Where used:
+    1. [governor-postgresql-transaction-id](https://github.com/Senzing/governor-postgresql-transaction-id),
+
+### SENZING_GOVERNOR_POSTGRESQL_LOW_WATERMARK
+
+1. Synopsis:
+    1. The maximum age of the PostgreSQL transaction ID (XID) before "governance" stops.
+1. Values:
+    1. Default: 9000000000 (9 billion)
+1. Examples:
+    1. Set to 7 billion.
+       Example:
+
+        ```console
+        export SENZING_GOVERNOR_POSTGRESQL_LOW_WATERMARK=7000000000
+        ```
+
+1. Where used:
+    1. [governor-postgresql-transaction-id](https://github.com/Senzing/governor-postgresql-transaction-id),
+
+### SENZING_GOVERNOR_PROJECT_DIR
+
+1. Synopsis:
+    1. A directory where governor and test code are placed.
+1. Examples:
+    1. Set to 7 billion.
+       Example:
+
+        ```console
+        export SENZING_GOVERNOR_PROJECT_DIR=~/test-governor
+        ```
+
+1. Where used:
+    1. [governor-postgresql-transaction-id](https://github.com/Senzing/governor-postgresql-transaction-id),
+
+### SENZING_GOVERNOR_WAIT
+
+1. Synopsis:
+    1. The number of seconds to wait before querying the database.
+1. Values:
+    1. Default: 15 seconds
+1. Examples:
+    1. Set to 10 minutes.
+       Example:
+
+        ```console
+        export SENZING_GOVERNOR_WAIT=600
+        ```
+
+1. Where used:
+    1. [governor-postgresql-transaction-id](https://github.com/Senzing/governor-postgresql-transaction-id),
+
 ### SENZING_HOST
 
 1. Where used:
@@ -1178,6 +1292,15 @@
 1. Where used:
     1. [stream-producer](https://github.com/Senzing/stream-producer)
 
+### SENZING_RABBITMQ_EXCHANGE
+
+1. Synopsis:
+    1. The exchange to publish records to.
+1. Values
+    1. Default: "senzing-rabbitmq-exchange"
+1. Where used:
+    1. [stream-producer](https://github.com/Senzing/stream-producer)
+
 ### SENZING_RABBITMQ_FAILURE_EXCHANGE
 
 1. Synopsis:
@@ -1196,15 +1319,6 @@
 1. Where used:
     1. [stream-loader](https://github.com/Senzing/stream-loader)
 
-### SENZING_RABBITMQ_FAILURE_PORT
-
-1. Synopsis:
-    1. The port to use to connect to the RabbitMQ server specified by SENZING_RABBITMQ_FAILURE_HOST
-1. Values:
-    1. Default: The value of SENZING_RABBITMQ_PORT
-1. Where used:
-    1. [stream-loader](https://github.com/Senzing/stream-loader)
-
 ### SENZING_RABBITMQ_FAILURE_PASSWORD
 
 1. Synopsis:
@@ -1214,21 +1328,21 @@
 1. Where used:
     1. [stream-loader](https://github.com/Senzing/stream-loader)
 
+### SENZING_RABBITMQ_FAILURE_PORT
+
+1. Synopsis:
+    1. The port to use to connect to the RabbitMQ server specified by SENZING_RABBITMQ_FAILURE_HOST
+1. Values:
+    1. Default: The value of SENZING_RABBITMQ_PORT
+1. Where used:
+    1. [stream-loader](https://github.com/Senzing/stream-loader)
+
 ### SENZING_RABBITMQ_FAILURE_QUEUE
 
 1. Synopsis:
     1. Name of the RabbitMQ queue used for records that failed to load.
 1. Values:
     1. Default: "senzing-rabbitmq-queue"
-1. Where used:
-    1. [stream-loader](https://github.com/Senzing/stream-loader)
-
-### SENZING_RABBITMQ_ROUTING_FAILURE_KEY
-
-1. Synopsis:
-    1. The RabbitMQ routing key to use when creating a binding to the failure queue or publishing to the failure exchange.
-1. Values:
-    1. Default: "senzing.failure"
 1. Where used:
     1. [stream-loader](https://github.com/Senzing/stream-loader)
 
@@ -1270,15 +1384,6 @@
 1. Where used:
     1. [stream-loader](https://github.com/Senzing/stream-loader)
 
-### SENZING_RABBITMQ_INFO_PORT
-
-1. Synopsis:
-    1. The port to use to connect to the RabbitMQ server specified by SENZING_RABBITMQ_INFO_HOST
-1. Values:
-    1. Default: The value of SENZING_RABBITMQ_PORT
-1. Where used:
-    1. [stream-loader](https://github.com/Senzing/stream-loader)
-
 ### SENZING_RABBITMQ_INFO_PASSWORD
 
 1. Synopsis:
@@ -1288,21 +1393,21 @@
 1. Where used:
     1. [stream-loader](https://github.com/Senzing/stream-loader)
 
+### SENZING_RABBITMQ_INFO_PORT
+
+1. Synopsis:
+    1. The port to use to connect to the RabbitMQ server specified by SENZING_RABBITMQ_INFO_HOST
+1. Values:
+    1. Default: The value of SENZING_RABBITMQ_PORT
+1. Where used:
+    1. [stream-loader](https://github.com/Senzing/stream-loader)
+
 ### SENZING_RABBITMQ_INFO_QUEUE
 
 1. Synopsis:
     1. Name of the RabbitMQ queue used for communication.
 1. Values:
     1. Default: "senzing-rabbitmq-queue"
-1. Where used:
-    1. [stream-loader](https://github.com/Senzing/stream-loader)
-
-### SENZING_RABBITMQ_ROUTING_INFO_KEY
-
-1. Synopsis:
-    1. The RabbitMQ routing key to use when creating a binding to the info queue or publishing to the info exchange.
-1. Values:
-    1. Default: "senzing.info"
 1. Where used:
     1. [stream-loader](https://github.com/Senzing/stream-loader)
 
@@ -1370,6 +1475,24 @@
     1. Default: "senzing-rabbitmq-queue"
 1. Where used:
     1. [stream-loader](https://github.com/Senzing/stream-loader),
+
+### SENZING_RABBITMQ_ROUTING_FAILURE_KEY
+
+1. Synopsis:
+    1. The RabbitMQ routing key to use when creating a binding to the failure queue or publishing to the failure exchange.
+1. Values:
+    1. Default: "senzing.failure"
+1. Where used:
+    1. [stream-loader](https://github.com/Senzing/stream-loader)
+
+### SENZING_RABBITMQ_ROUTING_INFO_KEY
+
+1. Synopsis:
+    1. The RabbitMQ routing key to use when creating a binding to the info queue or publishing to the info exchange.
+1. Values:
+    1. Default: "senzing.info"
+1. Where used:
+    1. [stream-loader](https://github.com/Senzing/stream-loader)
 
 ### SENZING_RABBITMQ_ROUTING_KEY
 
