@@ -590,6 +590,14 @@
 1. Where used:
     1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo),
 
+### SENZING_RABBITMQ_EXCHANGE
+1. Synopsis:
+    1. The exchange to publish records to.
+1. Values
+    1. Default: "senzing-rabbitmq-exchange"
+1. Where used: 
+    1. [stream-producer](https://github.com/Senzing/stream-producer)
+
 ### RABBITMQ_PASSWORD
 
 1. Synopsis:
@@ -1164,20 +1172,148 @@
 ### SENZING_RABBITMQ_EXCHANGE
 
 1. Synopsis:
-    1. Name of the RabbitMQ exchange used for communication.
+    1. Name of the RabbitMQ exchange used for routing messages.
 1. Values:
     1. Default: "senzing-exchange"
 1. Where used:
-    1. [stream-producer](https://github.com/Senzing/stream-producer),
+    1. [stream-producer](https://github.com/Senzing/stream-producer)
+
+### SENZING_RABBITMQ_FAILURE_EXCHANGE
+
+1. Synopsis:
+    1. Name of the RabbitMQ exchange used for routing info messages about loaded records
+1. Values:
+    1. Default: The value of SENZING_RABBITMQ_INFO_EXCHANGE
+1. Where used:
+    1. [stream-producer](https://github.com/Senzing/stream-loader)
+
+### SENZING_RABBITMQ_FAILURE_HOST
+
+1. Synopsis:
+    1. Host name of the RabbitMQ server used to post records that failed to load
+1. Values:
+    1. Default: The value of SENZING_RABBITMQ_HOST
+1. Where used:
+    1. [stream-loader](https://github.com/Senzing/stream-loader)
+
+### SENZING_RABBITMQ_FAILURE_PORT
+
+1. Synopsis:
+    1. The port to use to connect to the RabbitMQ server specified by SENZING_RABBITMQ_FAILURE_HOST
+1. Values:
+    1. Default: The value of SENZING_RABBITMQ_PORT
+1. Where used:
+    1. [stream-loader](https://github.com/Senzing/stream-loader)
+
+### SENZING_RABBITMQ_FAILURE_PASSWORD
+
+1. Synopsis:
+    1. The password for the RabbitMQ failure server.
+1. Values:
+    1. Default: The value of SENZING_RABBITMQ_PASSWORD
+1. Where used:
+    1. [stream-loader](https://github.com/Senzing/stream-loader)
+
+### SENZING_RABBITMQ_FAILURE_QUEUE
+
+1. Synopsis:
+    1. Name of the RabbitMQ queue used for records that failed to load.
+1. Values:
+    1. Default: "senzing-rabbitmq-queue"
+1. Where used:
+    1. [stream-loader](https://github.com/Senzing/stream-loader)
+
+### SENZING_RABBITMQ_ROUTING_FAILURE_KEY
+
+1. Synopsis:
+    1. The RabbitMQ routing key to use when creating a binding to the failure queue or publishing to the failure exchange.
+1. Values:
+    1. Default: "senzing.failure"
+1. Where used:
+    1. [stream-loader](https://github.com/Senzing/stream-loader)
+
+### SENZING_RABBITMQ_FAILURE_USERNAME
+
+1. Synopsis:
+    1. The username for the RabbitMQ server.
+1. Values:
+    1. Default: The value of SENZING_RABBITMQ_USERNAME
+1. Where used:
+    1. [stream-producer](https://github.com/Senzing/stream-producer)
 
 ### SENZING_RABBITMQ_HOST
 
 1. Synopsis:
-    1. Host name of the RabbitMQ exchange.
+    1. Host name of the RabbitMQ server.
 1. Values:
     1. Default: "localhost:5672"
 1. Where used:
-    1. [stream-loader](https://github.com/Senzing/stream-loader),
+    1. [stream-loader](https://github.com/Senzing/stream-loader)
+    1. [stream-producer](https://github.com/Senzing/stream-producer)
+    1. [stream-logger](https://github.com/Senzing/stream-logger)
+
+### SENZING_RABBITMQ_INFO_EXCHANGE
+
+1. Synopsis:
+    1. Name of the RabbitMQ exchange used for routing info messages about loaded records
+1. Values:
+    1. Default: The value of SENZING_RABBITMQ_INFO_EXCHANGE
+1. Where used:
+    1. [stream-producer](https://github.com/Senzing/stream-loader)
+
+### SENZING_RABBITMQ_INFO_HOST
+
+1. Synopsis:
+    1. Host name of the RabbitMQ server used to post the info about a loaded record
+1. Values:
+    1. Default: The value of SENZING_RABBITMQ_HOST
+1. Where used:
+    1. [stream-loader](https://github.com/Senzing/stream-loader)
+
+### SENZING_RABBITMQ_INFO_PORT
+
+1. Synopsis:
+    1. The port to use to connect to the RabbitMQ server specified by SENZING_RABBITMQ_INFO_HOST
+1. Values:
+    1. Default: The value of SENZING_RABBITMQ_PORT
+1. Where used:
+    1. [stream-loader](https://github.com/Senzing/stream-loader)
+
+### SENZING_RABBITMQ_INFO_PASSWORD
+
+1. Synopsis:
+    1. The password for the RabbitMQ info server.
+1. Values:
+    1. Default: The value of SENZING_RABBITMQ_PASSWORD
+1. Where used:
+    1. [stream-loader](https://github.com/Senzing/stream-loader)
+
+### SENZING_RABBITMQ_INFO_QUEUE
+
+1. Synopsis:
+    1. Name of the RabbitMQ queue used for communication.
+1. Values:
+    1. Default: "senzing-rabbitmq-queue"
+1. Where used:
+    1. [stream-loader](https://github.com/Senzing/stream-loader)
+
+### SENZING_RABBITMQ_ROUTING_INFO_KEY
+
+1. Synopsis:
+    1. The RabbitMQ routing key to use when creating a binding to the info queue or publishing to the info exchange.
+1. Values:
+    1. Default: "senzing.info"
+1. Where used:
+    1. [stream-loader](https://github.com/Senzing/stream-loader)
+
+### SENZING_RABBITMQ_INFO_USERNAME
+
+1. Synopsis:
+    1. The username for the RabbitMQ server.
+1. Values:
+    1. Default: The value of SENZING_RABBITMQ_USERNAME
+1. Where used:
+    1. [stream-producer](https://github.com/Senzing/stream-producer)
 
 ### SENZING_RABBITMQ_PASSWORD
 
@@ -1187,6 +1323,17 @@
     1. Default: "bitnami"
 1. Where used:
     1. [stream-loader](https://github.com/Senzing/stream-loader),
+
+### SENZING_RABBITMQ_PORT
+
+1. Synopsis:
+    1. The port to use to connect to the RabbitMQ server specified by SENZING_RABBITMQ_HOST
+1. Values:
+    1. Default: "5672"
+1. Where used:
+    1. [stream-producer](https://github.com/Senzing/stream-producer)
+    1. [stream-loader](https://github.com/Senzing/stream-loader)
+    1. [stream-logger](https://github.com/Senzing/stream-logger)
 
 ### SENZING_RABBITMQ_PREFETCH_COUNT
 
@@ -1223,6 +1370,15 @@
     1. Default: "senzing-rabbitmq-queue"
 1. Where used:
     1. [stream-loader](https://github.com/Senzing/stream-loader),
+
+### SENZING_RABBITMQ_ROUTING_KEY
+
+1. Synopsis:
+    1. The RabbitMQ routing key to use when creating a binding or publishing a record.
+1. Values:
+    1. Default: "senzing.records"
+1. Where used:
+    1. [stream-producer](https://github.com/Senzing/stream-producer)
 
 ### SENZING_RABBITMQ_USERNAME
 
