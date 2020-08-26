@@ -28,6 +28,8 @@ a developer can write code that makes network requests
 1. [Access Senzing Model](#access-senzing-model)
     1. [Run Senzing API service](#run-senzing-api-service)
     1. [Run Senzing Entity search web app](#run-senzing-entity-search-web-app)
+    1. [Run Senzing Console](#run-senzing-console)
+    1. [run Jupyter notebooks](#run-jupyter-notebooks)
 
 ## Prerequisites
 
