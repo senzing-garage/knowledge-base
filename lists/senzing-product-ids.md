@@ -23,6 +23,7 @@ Used in log message identifiers in the format `senzing-ppppnnnnt`, where:
 1. **5014** - [stream-producer.py](https://github.com/Senzing/stream-producer/blob/master/stream-producer.py)
 1. **5015** - [senzing-environment.py](https://github.com/Senzing/stream-producer/blob/master/senzing-environment.py)
 1. **5016** - [awesome.py](https://github.com/Senzing/awesome/blob/master/awesome.py)
+1. **5017** - [senzing_governor.py](https://github.com/Senzing/governor-postgresql-transaction-id/blob/master/senzing_governor.py) for PostgreSQL Transaction ID management
 
 ## Docker apps
 
