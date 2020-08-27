@@ -11,7 +11,7 @@ a developer can write code that makes network requests
 ## Contents
 
 1. [Prerequisites](#prerequisites)
-    1. [Install Docker for Windows](#install-docker-for-windows)
+    1. [Install Docker](#install-docker)
     1. [Install curl](#install-curl)
 1. [Set environment](#set-environment)
     1. [Specify project name](#specify-project-name)
@@ -31,10 +31,10 @@ a developer can write code that makes network requests
 
 ## Prerequisites
 
-### Install Docker for Windows
+### Install Docker
 
-1. [Install Docker Desktop on Windows](https://docs.docker.com/docker-for-windows/install/)
-    1. Suggestion: Use "Get Stable"
+1. See [How to install docker](install-docker.md).
+
 1. Test. In a command prompt, run the following.
    Example:
 
