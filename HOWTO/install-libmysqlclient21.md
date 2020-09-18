@@ -40,6 +40,14 @@ In particular the `database_initialization_mysql(...)` function of
     wget http://repo.mysql.com/apt/debian/pool/mysql-8.0/m/mysql-community/libmysqlclient21_8.0.20-1debian10_amd64.deb
     ```
 
+
+1. :thinking: If needed, create directories.
+   Example:
+
+    ```console
+    mkdir -p /opt/senzing/g2/lib
+    ```
+
 1. Extract `libmysqlclient.so.21.1.20` from **deb** file.
    Example:
 
