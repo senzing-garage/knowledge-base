@@ -669,10 +669,22 @@
 1. Where used:
     1. [entity-search-web-app](https://github.com/Senzing/entity-search-web-app),
 
+### SENZING_CONFIGURATION_CHECK_FREQUENCY
+
+1. Synopsis:
+    1. Determine how often to check for a change in the Senzing configuration.
+1. Where used:
+    1. [stream-loader](https://github.com/Senzing/stream-loader),
+
 ### SENZING_CONFIG_PATH
 
+1. Synopsis:
+    1. Used for `PIPELINE.CONFIGPATH` value in G2 Engine configuration.
+1. Values:
+    1. Default: `/etc/opt/senzing`
 1. Where used:
     1. [resolver](https://github.com/Senzing/resolver),
+    1. [stream-loader](https://github.com/Senzing/stream-loader),
 
 ### SENZING_DATA_DIR
 
@@ -785,6 +797,14 @@
        [docker-senzing-base](https://github.com/Senzing/docker-senzing-base),
        [resolver](https://github.com/Senzing/resolver),
        [stream-loader](https://github.com/Senzing/stream-loader),
+
+### SENZING_DELAY_IN_SECONDS
+
+1. Synopsis:
+    1. Time to delay before actually starting process
+    1. Used for simple choreography.
+1. Where used:
+    1. [stream-loader](https://github.com/Senzing/stream-loader),
 
 ### SENZING_DIR
 
@@ -911,6 +931,35 @@
        [docker-senzing-base](https://github.com/Senzing/docker-senzing-base),
        [docker-yum](https://github.com/Senzing/docker-yum),
        [stream-loader](https://github.com/Senzing/stream-loader),
+
+### SENZING_EXIT_ON_EMPTY_QUEUE
+
+1. Synopsis:
+    1. Signify that program should end when queue is empty.
+1. Values:
+     1. Datatype: boolean
+     1. Default: False
+1. Where used:
+    1. [stream-loader](https://github.com/Senzing/stream-loader),
+
+### SENZING_EXIT_SLEEP_TIME_IN_SECONDS
+
+1. Synopsis:
+    1. Amount of time to sleep before exiting.
+    1. Used in autoscaling to slow down "cool down".
+1. Values:
+     1. Default: 0
+1. Where used:
+    1. [stream-loader](https://github.com/Senzing/stream-loader),
+
+### SENZING_EXPIRATION_WARNING_IN_DAYS
+
+1. Synopsis:
+    1. Number of days before logging Senzing license expiration notices.
+1. Values:
+     1. Default: 30
+1. Where used:
+    1. [stream-loader](https://github.com/Senzing/stream-loader),
 
 ### SENZING_G2_DIR
 
@@ -1130,6 +1179,15 @@
     1. [docker-init-container](https://github.com/Senzing/docker-init-container),
        [stream-loader](https://github.com/Senzing/stream-loader),
 
+### SENZING_LOG_LICENSE_PERIOD_IN_SECONDS
+
+1. Synopsis:
+    1. Interval between logging Senzing license information.
+1. Values:
+     1. Default: 1 day
+1. Where used:
+    1. [stream-loader](https://github.com/Senzing/stream-loader),
+
 ### SENZING_MONITORING_PERIOD
 
 1. Synopsis:
@@ -1296,10 +1354,9 @@
 
 1. Synopsis:
     1. Name of the RabbitMQ exchange used for routing info messages about loaded records
-1. Values:
-    1. Default: The value of SENZING_RABBITMQ_INFO_EXCHANGE
 1. Where used:
     1. [stream-producer](https://github.com/Senzing/stream-loader)
+    1. [stream-loader](https://github.com/Senzing/stream-loader)
 
 ### SENZING_RABBITMQ_FAILURE_HOST
 
@@ -1337,6 +1394,16 @@
 1. Where used:
     1. [stream-loader](https://github.com/Senzing/stream-loader)
 
+### SENZING_RABBITMQ_FAILURE_ROUTING_KEY
+
+1. Synopsis:
+    1. The RabbitMQ routing key to use when creating a binding or publishing a record.
+1. Values:
+    1. Default: "senzing.failure"
+1. Where used:
+    1. [stream-producer](https://github.com/Senzing/stream-producer)
+    1. [stream-loader](https://github.com/Senzing/stream-loader)
+
 ### SENZING_RABBITMQ_FAILURE_USERNAME
 
 1. Synopsis:
@@ -1361,8 +1428,6 @@
 
 1. Synopsis:
     1. Name of the RabbitMQ exchange used for routing info messages about loaded records
-1. Values:
-    1. Default: The value of SENZING_RABBITMQ_INFO_EXCHANGE
 1. Where used:
     1. [stream-producer](https://github.com/Senzing/stream-loader)
 
@@ -1400,6 +1465,16 @@
 1. Values:
     1. Default: "senzing-rabbitmq-queue"
 1. Where used:
+    1. [stream-loader](https://github.com/Senzing/stream-loader)
+
+### SENZING_RABBITMQ_INFO_ROUTING_KEY
+
+1. Synopsis:
+    1. The RabbitMQ routing key to use when creating a binding or publishing a record.
+1. Values:
+    1. Default: "senzing.info"
+1. Where used:
+    1. [stream-producer](https://github.com/Senzing/stream-producer)
     1. [stream-loader](https://github.com/Senzing/stream-loader)
 
 ### SENZING_RABBITMQ_INFO_USERNAME
@@ -1493,6 +1568,7 @@
     1. Default: "senzing.records"
 1. Where used:
     1. [stream-producer](https://github.com/Senzing/stream-producer)
+    1. [stream-loader](https://github.com/Senzing/stream-loader)
 
 ### SENZING_RABBITMQ_USERNAME
 
@@ -1501,6 +1577,14 @@
 1. Values:
     1. Default: "user"
 1. Where used:
+    1. [stream-loader](https://github.com/Senzing/stream-loader),
+
+### SENZING_RABBITMQ_USE_EXISTING_ENTITIES
+
+1. Synopsis:
+    1. Use existing entities. That is, don't create the entities.
+1. Where used:
+    1. [stream-producer](https://github.com/Senzing/stream-producer),
     1. [stream-loader](https://github.com/Senzing/stream-loader),
 
 ### SENZING_RANDOM_SEED
@@ -1552,6 +1636,15 @@
 1. Where used:
     1. [stream-producer](https://github.com/Senzing/stream-producer),
 
+### SENZING_RESOURCE_PATH
+
+1. Synopsis:
+    1. Used in `PIPELINE_RESOURCEPATH` for G2 Engine configuration.
+1. Values:
+    1. Default: `/opt/senzing/g2/resources`
+1. Where used:
+    1. [stream-loader](https://github.com/Senzing/stream-loader),
+
 ### SENZING_RPM_FILENAME
 
 1. Synopsis:
@@ -1580,6 +1673,13 @@
 1. Where used:
     1. [docker-init-container](https://github.com/Senzing/docker-init-container),
 
+### SENZING_SKIP_DATABASE_PERFORMANCE_TEST
+
+1. Synopsis:
+    1. When true, do not perform initial performance evaluation.
+1. Where used:
+    1. [stream-loader](https://github.com/Senzing/stream-loader),
+
 ### SENZING_SLEEP_TIME
 
 1. Synopsis:
@@ -1593,6 +1693,14 @@
 
 1. Where used:
     1. [resolver](https://github.com/Senzing/resolver),
+
+### SENZING_SQS_DEAD_LETTER_QUEUE_ENABLED
+
+1. Synopsis:
+    1. Indicate that an AWS SQS "dead-letter" queue has been enables.
+    1. This changes the logging behavior.
+1. Where used:
+    1. [stream-loader](https://github.com/Senzing/stream-loader),
 
 ### SENZING_SQS_FAILURE_QUEUE_URL
 
@@ -1623,6 +1731,13 @@
 1. Where used:
     1. [stream-loader](https://github.com/Senzing/stream-loader),
     1. [stream-producer](https://github.com/Senzing/stream-producer),
+
+### SENZING_SQS_WAIT_TIME_SECONDS
+
+1. Synopsis:
+    1. For use with SQS "long-polling"
+1. Where used:
+    1. [stream-loader](https://github.com/Senzing/stream-loader),
 
 ### SENZING_SUBCOMMAND
 
