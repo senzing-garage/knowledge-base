@@ -1413,6 +1413,15 @@
 1. Where used:
     1. [stream-producer](https://github.com/Senzing/stream-producer)
 
+### SENZING_RABBITMQ_HEARTBEAT_IN_SECONDS
+
+1. Synopsis:
+    1. Heartbeat time in seconds on connections to the RabbitMQ server.
+1. Values:
+    1. Default: "60"
+1. Where used:
+    1. [stream-loader](https://github.com/Senzing/stream-loader)
+
 ### SENZING_RABBITMQ_HOST
 
 1. Synopsis:
