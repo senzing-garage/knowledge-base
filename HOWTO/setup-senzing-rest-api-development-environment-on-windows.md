@@ -106,7 +106,7 @@ To use the Senzing code, you must agree to the End User License Agreement (EULA)
 1. :warning:
    **Windows** - [File sharing](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/share-directories-with-docker.md#windows)
    must be enabled for `SENZING_PROJECT_DIR`.
-   :thinker: If Docker Desktop uses the WSL 2 based engine, file sharing is automatically enabled. If Docker Desktop uses the Hyper-V backend, file sharing must be manually enabled.
+   :thinking: If Docker Desktop uses the WSL 2 based engine, file sharing is automatically enabled. If Docker Desktop uses the Hyper-V backend, file sharing must be manually enabled.
 
 ## Install and configure Senzing
 
