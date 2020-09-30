@@ -180,8 +180,8 @@ Once they are run, the Senzing model is persisted in the SQLite database located
 
     ```csv
     DATA_SOURCE,FILE_FORMAT,FILE_NAME
-    customer,CSV,/opt/senzing/g2/python/demo/truth/truthset-person-v1-set1.csv
-    watchlist,CSV,/opt/senzing/g2/python/demo/truth/truthset-person-v1-set2.csv
+    customer,CSV,/opt/senzing/g2/python/demo/truth/truthset-person-v1-set1-data.csv
+    watchlist,CSV,/opt/senzing/g2/python/demo/truth/truthset-person-v1-set2-data.csv
     ```
 
 1. Create `%SENZING_VAR_DIR%/sample-data-project.ini` file with following contents:
