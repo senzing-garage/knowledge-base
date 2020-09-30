@@ -161,21 +161,6 @@ Once they are run, the Senzing model is persisted in the SQLite database located
 
 :thinking:  **Optional:**
 
-1. Download "truth set" files.
-   Example:
-
-    ```console
-    curl -X GET ^
-        --output %SENZING_VAR_DIR%\truthset-person-v1-set1.csv ^
-        https://public-read-access.s3.amazonaws.com/TestDataSets/SenzingTruthSet/truthset-person-v1-set1.csv
-    ```
-
-    ```console
-    curl -X GET ^
-        --output %SENZING_VAR_DIR%/truthset-person-v1-set2.csv ^
-        https://public-read-access.s3.amazonaws.com/TestDataSets/SenzingTruthSet/truthset-person-v1-set2.csv
-    ```
-
 1. Create `%SENZING_VAR_DIR%/sample-data-project.csv` file with following contents:
 
     ```csv
