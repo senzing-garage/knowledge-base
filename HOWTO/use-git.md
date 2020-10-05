@@ -89,7 +89,22 @@ git push origin <branch_name>
 git branch --set-upstream-to=origin/<branch_name> <branch_name>
 ```
 
+## Merge changes in main to current branch
+
+In repositories created after October 2020, the "main" branch is used.
+
+```console
+GIT_CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+git checkout master
+git pull
+git checkout ${GIT_CURRENT_BRANCH}
+git merge origin/master
+git push
+```
+
 ## Merge changes in master to current branch
+
+In repositories created before October 2020, the "master" branch is used.
 
 ```console
 GIT_CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)

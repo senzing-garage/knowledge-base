@@ -15,11 +15,11 @@
         1. :radio_button: Internal and External Pull Requests
     1. Repository links:
         1. :radio_button: Off
-    1. Build rules:
+    1. Build rules.  Note: uses "main" branch.  For "master" see [Archive](#archive)
 
         | Source Type | Source      | Docker Tag  | Dockerfile location | Build Context | Autobuild | Build Caching |
         |-------------|-------------|-------------|---------------------|---------------|-----------|---------------|
-        | Branch      | master      | latest      | Dockerfile          | /             | On        | On            |
+        | Branch      | main        | latest      | Dockerfile          | /             | On        | On            |
         | Tag         | /^[0-9.]+$/ | {sourceref} | Dockerfile          | /             | On        | On            |
 
     1. Click "Save and Build".
@@ -27,3 +27,10 @@
 ## References
 
 1. [Set up Automated builds](https://docs.docker.com/docker-hub/builds/)
+
+## Archive
+
+        | Source Type | Source      | Docker Tag  | Dockerfile location | Build Context | Autobuild | Build Caching |
+        |-------------|-------------|-------------|---------------------|---------------|-----------|---------------|
+        | Branch      | master      | latest      | Dockerfile          | /             | On        | On            |
+        | Tag         | /^[0-9.]+$/ | {sourceref} | Dockerfile          | /             | On        | On

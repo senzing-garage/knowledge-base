@@ -20,7 +20,7 @@
     [![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
     ```
 
-1. Pull changes to README.md into "master" branch.
+1. Pull changes to README.md into "master/main" branch.
 
 ### Change title
 
@@ -43,13 +43,13 @@
 
 ### Branches
 
-1. On `https://github.com/{account}/{repository}` page, see if there are any branches that need to be merged into "master" branch.
+1. On `https://github.com/{account}/{repository}` page, see if there are any branches that need to be merged into "master/main" branch.
 
 1. Delete unwanted branches.
 
 ### Pull requests
 
-1. On `https://github.com/{account}/{repository}` page, see if there are any "Pull requests" that need to be merged into "master" branch.
+1. On `https://github.com/{account}/{repository}` page, see if there are any "Pull requests" that need to be merged into "master/main" branch.
 
 ### Release
 

@@ -30,7 +30,7 @@ This is a checklist of what to set when creating a new GitHub Repository.
 1. On repository home page, click "Settings" tab.
     1. Click "Branches" tab.
         1. Click "Add rule" button.
-        1. Branch name pattern:  "master"
+        1. Branch name pattern:  "main"
         1. Protect matching branches
             1. :ballot_box_with_check: Require pull request reviews before merging
         1. Click "Create" button
@@ -60,7 +60,7 @@ This is a checklist of what to set when creating a new GitHub Repository.
     1. Click "New issue" button.
         1. Title:  "Initial content"
         1. Click "Submit new issue" button
-1. On repository home page, click "Branch: master" button.
+1. On repository home page, click "Branch: main" button.
     1. Create new branch.
        Example:
        "issue-1.[your-name].1"
@@ -84,4 +84,4 @@ This is a checklist of what to set when creating a new GitHub Repository.
         1. Use contents from `.github/README_TEMPLATE/demonstration/README.md`
     1. Delete `.github/README_TEMPLATE` directory.
     1. Commit the branch.
-    1. Merge `issue-1.[your-name].1` branch into master branch.
+    1. Merge `issue-1.[your-name].1` branch into main branch.
