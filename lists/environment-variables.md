@@ -1607,6 +1607,16 @@
 1. Where used:
     1. [stream-producer](https://github.com/Senzing/stream-producer),
 
+### SENZING_RECORD_IDENTIFIER
+
+1. Synopsis:
+    1. JSON key whose value uniquely identifies a record.
+    1. Used to identify specific records when logging errors.
+1. Values:
+    1. Default: "RECORD_ID"
+1. Where used:
+    1. [stream-producer](https://github.com/Senzing/stream-producer),
+
 ### SENZING_RECORD_MAX
 
 1. Synopsis:
@@ -1641,6 +1651,18 @@
     1. Throttle output to a specified records per second.
 1. Values:
     1. Value of 0 means no throttling.
+    1. Default: "0"
+1. Where used:
+    1. [stream-producer](https://github.com/Senzing/stream-producer),
+
+### SENZING_RECORD_SIZE_MAX
+
+1. Synopsis:
+    1. Maximum size of a record that will be sent to a Queue.
+    1. Records that exceed the maximum size will be logged.
+        1. See [SENZING_RECORD_IDENTIFIER](#senzing_record_identifier)
+1. Values:
+    1. Value of 0 means no maximum.
     1. Default: "0"
 1. Where used:
     1. [stream-producer](https://github.com/Senzing/stream-producer),
