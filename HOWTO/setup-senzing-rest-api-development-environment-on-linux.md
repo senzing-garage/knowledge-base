@@ -123,7 +123,7 @@ These steps only need to be run once per `SENZING_PROJECT_NAME` to install and c
     ```console
     docker run \
       --rm \
-      --user $(id -u):$(id -g) \
+      --user 0 \
       --volume ${SENZING_DATA_VERSION_DIR}:/opt/senzing/data \
       --volume ${SENZING_ETC_DIR}:/etc/opt/senzing \
       --volume ${SENZING_G2_DIR}:/opt/senzing/g2 \
@@ -200,7 +200,6 @@ Once they are run, the Senzing model is persisted in the SQLite database located
         --volume ${SENZING_G2_DIR}:/opt/senzing/g2 \
         --volume ${SENZING_VAR_DIR}:/var/opt/senzing \
         senzing/g2loader \
-            -c /var/opt/senzing/sample-data-project.ini \
             -p /var/opt/senzing/sample-data-project.csv
     ```
 
