@@ -856,6 +856,117 @@
 1. Where used:
     1. [senzing-environment](https://github.com/Senzing/senzing-environment),
 
+### SENZING_DOCKER_IMAGE_VERSION_ADMINER
+
+1. Where used:
+    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo)
+    
+### SENZING_DOCKER_IMAGE_VERSION_APT
+
+1. Where used:
+    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo)
+    
+### SENZING_DOCKER_IMAGE_VERSION_DB2_DRIVER_INSTALLER
+
+1. Where used:
+    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo)
+    
+### SENZING_DOCKER_IMAGE_VERSION_ENTITY_SEARCH_WEB_APP
+
+1. Where used:
+    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo)
+    
+### SENZING_DOCKER_IMAGE_VERSION_ENVIRONMENT
+
+
+### SENZING_DOCKER_IMAGE_VERSION_INIT_CONTAINER
+
+1. Where used:
+    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo)
+    
+### SENZING_DOCKER_IMAGE_VERSION_JUPYTER
+
+1. Where used:
+    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo)
+    
+### SENZING_DOCKER_IMAGE_VERSION_PHPPGADMIN
+
+1. Where used:
+    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo)
+
+### SENZING_DOCKER_IMAGE_VERSION_PORTAINER
+
+
+### SENZING_DOCKER_IMAGE_VERSION_POSTGRES
+
+
+### SENZING_DOCKER_IMAGE_VERSION_POSTGRESQL_CLIENT
+
+1. Where used:
+    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo)
+    
+### SENZING_DOCKER_IMAGE_VERSION_RABBITMQ
+
+
+### SENZING_DOCKER_IMAGE_VERSION_REDOER
+
+1. Where used:
+    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo)
+    
+### SENZING_DOCKER_IMAGE_VERSION_RESOLVER
+
+1. Where used:
+    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo)
+    
+### SENZING_DOCKER_IMAGE_VERSION_SENZING_API_SERVER
+
+1. Where used:
+    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo)
+    1. [entity-search-web-app](https://github.com/Senzing/entity-search-web-app)
+    
+### SENZING_DOCKER_IMAGE_VERSION_SENZING_CONSOLE
+
+
+### SENZING_DOCKER_IMAGE_VERSION_SENZING_DEBUG
+
+1. Where used:
+    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo)
+    
+### SENZING_DOCKER_IMAGE_VERSION_SQLITE_WEB
+
+
+### SENZING_DOCKER_IMAGE_VERSION_SSHD
+
+
+### SENZING_DOCKER_IMAGE_VERSION_STREAM_LOADER
+
+1. Where used:
+    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo)
+    
+### SENZING_DOCKER_IMAGE_VERSION_STREAM_LOGGER
+
+1. Where used:
+    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo)
+    
+### SENZING_DOCKER_IMAGE_VERSION_STREAM_PRODUCER
+
+1. Where used:
+    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo)
+    1. [stream-producer](https://github.com/Senzing/stream-producer)
+    
+### SENZING_DOCKER_IMAGE_VERSION_WEB_APP_DEMO
+
+
+### SENZING_DOCKER_IMAGE_VERSION_XTERM
+
+1. Where used:
+    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo)
+    
+### SENZING_DOCKER_IMAGE_VERSION_YUM
+
+1. Where used:
+    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo)
+
 ### SENZING_DOCKER_LAUNCHED
 
 1. Where used:
