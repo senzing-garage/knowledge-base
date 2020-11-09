@@ -2,7 +2,8 @@
 
 ## Overview
 
-Instructions for installing [AWS ECS CLI](https://docs.aws.amazon.com/ecs/index.html).
+[AWS ECS CLI](https://docs.aws.amazon.com/ecs/index.html).
+Instructions for installing [AWS ECS CLI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_CLI_installation.html).
 
 ### Contents
 
