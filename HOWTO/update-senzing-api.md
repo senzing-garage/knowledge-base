@@ -98,7 +98,7 @@ To perform this method, no processes can be using the Senzing Engine nor Senzing
 
    Example response:
 
-    ```json
+    ```js
     {
         "PLATFORM": "Linux",
         "VERSION": "2.3.0",
