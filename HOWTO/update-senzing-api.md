@@ -84,8 +84,8 @@ To use the Senzing code, you must agree to the End User License Agreement (EULA)
    Example:
 
     ```console
-    cp -R ${SENZING_VOLUME_BACKUP}/etc ${SENZING_ETC_DIR}
-    cp -R ${SENZING_VOLUME_BACKUP}/var ${SENZING_VAR_DIR}
+    sudo cp -R ${SENZING_VOLUME_BACKUP}/etc ${SENZING_ETC_DIR}
+    sudo cp -R ${SENZING_VOLUME_BACKUP}/var ${SENZING_VAR_DIR}
     ```
 
 ## Test
