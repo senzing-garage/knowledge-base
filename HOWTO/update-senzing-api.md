@@ -32,8 +32,8 @@ This method shows an "in-place" update of Senzing API.
 To perform this method, no processes can be using the Senzing Engine nor Senzing SDK API
 (i.e. they must be shut down).
 
-1. To use the Senzing code, you must agree to the End User License Agreement (EULA).
-   :warning: This step is intentionally tricky and not simply copy/paste.
+1. :warning: To use the Senzing code, you must agree to the End User License Agreement (EULA).
+   This step is intentionally tricky and not simply copy/paste.
    This ensures that you make a conscious effort to accept the EULA.
    Example:
 
