@@ -1,8 +1,8 @@
-# How to install Senzing API
+# How to update Senzing API
 
 ## Overview
 
-Instructions for installing [Senzing API](../WHATIS/senzing-api.md).
+Instructions for updating [Senzing API](../WHATIS/senzing-api.md).
 
 ### Contents
 
@@ -94,6 +94,18 @@ To perform this method, no processes can be using the Senzing Engine nor Senzing
 
     ```console
     cat ${SENZING_G2_DIR}/g2BuildVersion.json
+    ```
+
+   Example response:
+
+    ```javascript
+    {
+        "PLATFORM": "Linux",
+        "VERSION": "2.3.0",
+        "BUILD_VERSION": "2.3.0.20342",
+        "BUILD_NUMBER": "2020_12_07__02_00",
+        "DATA_VERSION": "1.0.0"
+    }
     ```
 
 ## Troubleshooting
