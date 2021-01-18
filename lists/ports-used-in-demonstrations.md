@@ -65,6 +65,10 @@ Open range: 8250-8265
 
 - [Senzing X-term](https://github.com/Senzing/docker-xterm)
 
+### 8255
+
+- [stream-producer](https://github.com/Senzing/stream-producer)
+
 ## Other
 
 Open range: 9165-9190
