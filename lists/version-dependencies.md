@@ -50,12 +50,12 @@
 
 ### charts
 
-1. [charts](https://github.com/Senzing/charts/tree/master/charts)/`<chart-name>/<chart-name>/values.yaml` files.
+1. [charts](https://github.com/Senzing/charts/tree/master/charts)`/<chart-name>/<chart-name>/values.yaml` files.
 
 ### docker-app-demo
 
-1. [senzing-demo-dockerapp/docker-compose.yml](https://github.com/Senzing/docker-app-demo/blob/master/senzing-demo.dockerapp/docker-compose.yml)
-1. [senzing-install.dockerapp/docker-compose.yml](https://github.com/Senzing/docker-app-demo/blob/master/senzing-install.dockerapp/docker-compose.yml)
+1. `image:` values in [senzing-demo-dockerapp/docker-compose.yml](https://github.com/Senzing/docker-app-demo/blob/master/senzing-demo.dockerapp/docker-compose.yml)
+1. `image:` values in [senzing-install.dockerapp/docker-compose.yml](https://github.com/Senzing/docker-app-demo/blob/master/senzing-install.dockerapp/docker-compose.yml)
 
 ### docker-compose-aws-ecscli-demo
 
