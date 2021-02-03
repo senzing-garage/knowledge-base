@@ -42,11 +42,15 @@
 
 ### aws-cloudformation-ecs
 
+1. `Image:` values in `cloudformation.yaml` files in [cloudformation](https://github.com/Senzing/aws-cloudformation-ecs/tree/main/cloudformation) folder.
+
 ### aws-cloudformation-ecs-poc-simple
+
+1. `Image:` values in [cloudformation.yaml](https://github.com/Senzing/aws-cloudformation-ecs-poc-simple/blob/main/cloudformation.yaml)
 
 ### charts
 
-1. `<chart-name>/<chart-name>/values.yaml`
+1. [charts](https://github.com/Senzing/charts/tree/master/charts)/`<chart-name>/<chart-name>/values.yaml` files.
 
 ### docker-app-demo
 
