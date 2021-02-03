@@ -2,7 +2,10 @@
 
 ## Latest versions
 
-1. Latest versions
+1. Find Docker images at
+   [hub.docker.com/u/senzing](https://hub.docker.com/u/senzing).
+
+1. Latest versions:
 
     ```console
     export SENZING_DOCKER_IMAGE_VERSION_ADMINER=1.0.0
