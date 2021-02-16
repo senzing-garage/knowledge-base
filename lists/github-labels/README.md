@@ -19,6 +19,7 @@ These labels will be assigned predominantly in the "**Backlog**", "**On deck**",
 
 | Category   | Labels |
 |------------|--------|
+| Submitter  | ![customer-submission](customer-submission.png)             |
 | Issue type | ![bug](bug.png) ![documentation](documentation.png) ![enhancement](enhancement.png) ![performance](performance.png) ![refactoring](refactoring.png) |
 | Info       | ![conversation](conversation.png) ![question](question.png) |
 
@@ -31,6 +32,7 @@ Labels listed in alphabetical order.
 | blocked              | ![FF0000](https://via.placeholder.com/30x30/FF0000/FF0000?text=.) | #FF0000 | Cannot make progress                         |
 | bug                  | ![66FFFF](https://via.placeholder.com/30x30/66FFFF/66FFFF?text=.) | #66FFFF | Something isn't working                      |
 | conversation         | ![CCCCFF](https://via.placeholder.com/30x30/CCCCFF/CCCCFF?text=.) | #CCCCFF | In conversation on design or usage           |
+| customer-submission  | ![FFFF00](https://via.placeholder.com/30x30/FFFF00/FFFF00?text=.) | #FFFF00 | Issue submitted by customer                  |
 | documentation        | ![66FFFF](https://via.placeholder.com/30x30/66FFFF/66FFFF?text=.) | #66FFFF | Improvements or additions to documentation   |
 | duplicate            | ![000000](https://via.placeholder.com/30x30/000000/000000?text=.) | #000000 | This issue or pull request already exists    |
 | enhancement          | ![66FFFF](https://via.placeholder.com/30x30/66FFFF/66FFFF?text=.) | #66FFFF | New feature request                          |
