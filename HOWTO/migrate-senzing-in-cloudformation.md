@@ -29,10 +29,6 @@
         --stack-name ${SENZING_AWS_CLOUDFORMATION_STACK_NAME} \
         > ${SENZING_AWS_CLOUDFORMATION_DIR}/describe-stacks.json
 
-    aws cloudformation describe-stack-resources \
-        --stack-name ${SENZING_AWS_CLOUDFORMATION_STACK_NAME} \
-        > ${SENZING_AWS_CLOUDFORMATION_DIR}/describe-stack-resources.json
-
     aws ecs list-tasks \
         --cluster ${SENZING_AWS_ECS_CLUSTER_NAME} \
         --family ${SENZING_AWS_CLOUDFORMATION_STACK_NAME}-task-definition-sshd \
