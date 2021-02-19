@@ -56,9 +56,7 @@
    Example:
 
     ```console
-    echo "Host: ${SENZING_AWS_SSHD_HOST}"
-    echo "Username: ${SENZING_AWS_SSHD_USERNAME}"
-    echo "Password: ${SENZING_AWS_SSHD_PASSWORD}"
+    echo -e "Host: ${SENZING_AWS_SSHD_HOST}\nUsername: ${SENZING_AWS_SSHD_USERNAME}\nPassword: ${SENZING_AWS_SSHD_PASSWORD}"
     ```
 
 1. Login to SSHD container.
