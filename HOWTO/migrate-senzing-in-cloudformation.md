@@ -38,11 +38,6 @@
         --family ${SENZING_AWS_CLOUDFORMATION_STACK_NAME}-task-definition-sshd \
         > ${SENZING_AWS_CLOUDFORMATION_DIR}/list-tasks-sshd.json
 
-    aws ecs list-tasks \
-        --cluster ${SENZING_AWS_ECS_CLUSTER_NAME} \
-        --family ${SENZING_AWS_CLOUDFORMATION_STACK_NAME}-task-definition-sshd \
-        > ${SENZING_AWS_CLOUDFORMATION_DIR}/list-tasks-sshd.json
-
     export SENZING_AWS_ARN_SSHD=$(jq --raw-output ".taskArns[0]" ${SENZING_AWS_CLOUDFORMATION_DIR}/list-tasks-sshd.json)
 
     aws ecs describe-tasks \
