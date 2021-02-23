@@ -58,3 +58,4 @@ or locally at
         1. Example: "taskdefinition"
 1. In upper-left, click blue **Generate** button.
     1. The result will be a CloudFormation template with the selected AWS resource specifications.
+    1. The contents can be copied and pasted into a text file to be shared.
