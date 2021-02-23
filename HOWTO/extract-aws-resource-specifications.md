@@ -1,4 +1,4 @@
-# How to extract AWS Cloudformtion specifications
+# How to extract AWS resource specifications
 
 [Former2](https://github.com/iann0036/former2) creates templates
 from existing AWS resources.
@@ -30,7 +30,6 @@ you may want to run it locally.
 1. Former2 can be viewed at
    [localhost](http://localhost)
 
-
 ## Extracting
 
 At this point, access
@@ -38,18 +37,24 @@ At this point, access
 or locally at
 [localhost](http://localhost).
 
-
 1. In upper-right, select the appropriate AWS region.
 1. In left-hand navigation, expand **Setup**
     1. Under **Setup**, select **Introduction**
         1. Add the browser helper for the specific browser.
     1. Under **Setup**, select **Credentials**
         1. Enter your AWS credentials
-1. In upper-right, click **Scan** button.
+        1. If successful, **Logged in as:** will show your account.
+    1. Under **Setup**, select **Settings**
+        1. Turn **Enable Related Resources** on.
+        1. Other changes are optional.
+1. In upper-right, click green **Scan Account** button.
+    1. There may be some errors for access errors.
+       In general, they may be ignored.
 1. Select Resources to extract.
     1. In left-hand navigation, select **Dashboard**
         1. Choose AWS resources to extract.
     1. In left-hand navigation, select **Search**
         1. Search for AWS resources to extract.
         1. Example: "taskdefinition"
-1. In upper-left, click **Generate** button.
+1. In upper-left, click blue **Generate** button.
+    1. The result will be a CloudFormation template with the selected AWS resource specifications.
