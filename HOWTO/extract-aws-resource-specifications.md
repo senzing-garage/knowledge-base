@@ -45,7 +45,7 @@ or locally at
         1. Add the browser helper for the specific browser.
     1. Under **Setup**, select **Credentials**
         1. Enter your AWS credentials
-1. In upper-right, click **Scan** button
+1. In upper-right, click **Scan** button.
 1. Select Resources to extract.
     1. In left-hand navigation, select **Dashboard**
         1. Choose AWS resources to extract.
