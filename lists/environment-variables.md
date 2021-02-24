@@ -2030,6 +2030,17 @@
     1. [stream-loader](https://github.com/Senzing/stream-loader),
     1. [stream-producer](https://github.com/Senzing/stream-producer),
 
+### SENZING_SQS_INFO_QUEUE_DELAY_SECONDS
+
+1. Synopsis:
+    1. The length of time, in seconds, for which to delay a specific message on the Info queue.
+1. Values:
+    1. Default: 10
+1. References:
+    1. [Boto3 send_message](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/sqs.html#SQS.Client.send_message) See `DelaySeconds` parameter.
+1. Where used:
+    1. [stream-loader](https://github.com/Senzing/stream-loader),
+
 ### SENZING_SQS_INFO_QUEUE_URL
 
 1. Synopsis:
