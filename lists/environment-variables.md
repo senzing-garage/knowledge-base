@@ -1579,15 +1579,6 @@
 1. Where used:
     1. [senzing-environment](https://github.com/Senzing/senzing-environment),
 
-### SENZING_PROCESSES
-
-1. Synopsis:
-    1. Number of processes to allocated for processing.
-1. Values:
-    1. Default: 1
-1. Where used:
-    1. [stream-loader](https://github.com/Senzing/stream-loader),
-
 ### SENZING_PROJECT_DIR
 
 1. Synopsis:
