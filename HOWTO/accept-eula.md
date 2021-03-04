@@ -1,3 +1,8 @@
+# Deprecated
+
+This information is obsolete.
+It will be deleted after December 2021.
+
 # How to accept EULA
 
 The use of Senzing products requires acceptance of an End User License Agreement (EULA).
