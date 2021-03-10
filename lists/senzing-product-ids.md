@@ -25,6 +25,7 @@ Used in log message identifiers in the format `senzing-ppppnnnnt`, where:
 1. **5016** - [awesome.py](https://github.com/Senzing/awesome/blob/master/awesome.py)
 1. **5017** - [senzing_governor.py](https://github.com/Senzing/governor-postgresql-transaction-id/blob/master/senzing_governor.py) for PostgreSQL Transaction ID management
 1. **5018** - [dockerhub-util.py](https://github.com/Senzing/dockerhub-util/blob/master/dockerhub-util.py)
+1. **5019** - [self-signed-certificates.py](https://github.com/Senzing/aws-lambda-docker-self-signed-certificates/blob/main/self-signed-certificates.py)
 
 ## Docker apps
 
