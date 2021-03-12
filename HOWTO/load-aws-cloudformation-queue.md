@@ -8,60 +8,44 @@ and loading the SQS queue from a local workstation.
 
 ### Contents
 
-1. [OS](#os)
-    1. [Windows](#windows)
+1. [Launch Cloudformation template](#launch-cloudformation-template)
+1. [Load SQS](#load-sqs)
+    1. [Load SQS from Linux or macOS](#load-sqs-from-linux-or-macos)
+    1. [Load SQS from Windows](#load-sqs-from-windows)
+1. [Manual Cloudformation template Launch](#manual-cloudformation-template-launch)
 
-## OS
+## Launch Cloudformation template
 
-### Windows
-
-1. :pencil2: Identify where `cloudformation.yaml` file will be downloaded.
-   Example:
-
-    ```console
-    SET SENZING_DOWNLOAD_FILE=\tmp\cloudformation.yaml
-    ```
-
-1. Download `cloudformation.yaml`.
-   Example:
-
-    ```console
-    curl -X GET ^
-      --output %SENZING_DOWNLOAD_FILE% ^
-      https://raw.githubusercontent.com/Senzing/aws-cloudformation-ecs-poc-simple/main/cloudformation.yaml
-    ```
-
-1. :pencil2: Modify `cloudformation.yaml`.
-    Change Mappings.Constants.Run.StreamProducer value to "No"
-    Example:
-
-     ```yaml
-    Mappings:
-      :
-      Constants:
-        :
-        Run:
-          :
-          StreamProducer: No
-     ```
-
-1. Deploy `cloudformation.yaml`
-    1. Visit
-       [AWS Cloudformation management console](https://console.aws.amazon.com/cloudformation/home)
-    1. Click "Create stack" drop-down > "With new resources (standard)".
-    1. in "Create stack":
-        1. Click "Upload a template file" button.
-        1. Click "Choose file" button and locate the file specified by `SENZING_DOWNLOAD_FILE`.
-        1. Click "Next" button.
-    1. In "Specify stack details":
-        1. Enter **Stack name**.
-        1. Enter **Parameters**.
-        1. Click "Next" button.
-    1. In "Configure stack options":
-        1. Click "Next" button.
-    1. In "Review [stack-name]":
-        1. Check "I acknowledge that AWS CloudFormation might create IAM resources".
-        1. Click "Create stack" button.
+1. Launch Cloudformation template.
+    1. Visit [AWS Cloudformation with Senzing template](https://console.aws.amazon.com/cloudformation/home#/stacks/new?stackName=senzing-poc&templateURL=https://s3.amazonaws.com/public-read-access/aws-cloudformation-ecs-poc-simple/cloudformation.yaml)
+        1. In lower-right, click on "Next" button.
+        1. If access error,
+           see [Manual Cloudformation template Launch](#manual-cloudformation-template-launch)
+           to load Cloudformation template.
+           Then proceed to next step.
+    1. In **Specify stack details**
+        1. In **Stack name**
+            1. Stack name: senzing-poc
+        1. In **Parameters**
+            1. In **Acknowledge insecure system**
+                1. Read, understand, and agree to the nature of the security in the deployment.
+            1. In **Senzing installation**
+                1. Accept the End User Licence Agreement
+        1. In **Options**
+            1. For "Optional: Would you like to have sample data imported?", select "No".
+        1. Other parameters are optional.
+        1. In lower-right, click "Next" button.
+    1. In **Configure stack options**
+        1. In lower-right, click "Next" button.
+    1. In **Review senzing-poc**
+        1. Near the bottom, in **Capabilities**
+            1. Check ":ballot_box_with_check: I acknowledge that AWS CloudFormation might create IAM resources."
+        1. In lower-right, click "Create stack" button.
+    1. Visit [AWS CloudFormation console](https://console.aws.amazon.com/cloudformation/home).
+        1. Make sure correct AWS region is selected.
+    1. Wait until "senzing-poc" status is `CREATE_COMPLETE`.
+        1. Senzing formation takes about 15 minutes to fully deploy.
+        1. May have to hit the refresh button a few times to get updated information.
 
 1. Add data sources to Senzing configuration.
     1. In the Cloudformation "Outputs" tab, launch the **UrlXterm** URL.
@@ -75,6 +59,105 @@ and loading the SQS queue from a local workstation.
         (g2cfg) addDataSource MY_SECOND_DATASOURCE NAME
         (g2cfg) save
         ```
+
+1. The next steps are done from your local workstation.
+   Depending on your workstation operating system, visit:
+    1. [Load SQS from Docker](#load-sqs-from-docker)
+    1. [Load SQS from Linux or macOS](#load-sqs-from-linux-or-macos)
+    1. [Load SQS from Windows](#load-sqs-from-windows)
+
+## Load SQS
+
+### Load SQS from Docker
+
+1. :pencil2: Set AWS variables:
+   Example:
+
+    ```console
+    export AWS_ACCESS_KEY_ID=AAAAAAAAAAAAAAAAAAAA
+    export AWS_SECRET_ACCESS_KEY=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+    export AWS_DEFAULT_REGION=us-xxxx-1
+    ```
+
+1. :pencil2: Set AWS variables:
+   Example:
+
+    ```console
+    export SENZING_INPUT_URL=~/senzing.git/aws-cloudformation-ecs-poc-simple/simple.csv
+    ```
+
+### Load SQS from Linux or macOS
+
+
+1. Install [stream-produer](https://github.com/Senzing/stream-producer).
+    1. Install prerequisites.
+       Example:
+
+        ```console
+        pip3 install -r https://raw.githubusercontent.com/Senzing/stream-producer/master/requirements.txt
+        ```
+
+    1. :pencil2: Specify location for `stream-producer.py`.
+       Example:
+
+        ```console
+        SET SENZING_DOWNLOAD_FILE=\tmp\stream-producer.py
+        ```
+
+    1. Download `stream-producer.py`.
+       Example:
+
+        ```console
+        curl -X GET ^
+          --output %SENZING_DOWNLOAD_FILE% ^
+          https://raw.githubusercontent.com/Senzing/stream-producer/master/stream-producer.py
+        ```
+
+1. Load SQS queue using
+   [stream-produer](https://github.com/Senzing/stream-producer)
+
+    1. :pencil2: Set AWS variables:
+       Example:
+
+        ```console
+        SET AWS_ACCESS_KEY_ID=AAAAAAAAAAAAAAAAAAAA
+        SET AWS_SECRET_ACCESS_KEY=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+        SET AWS_DEFAULT_REGION=us-east-1
+        ```
+
+    1. :pencil2: Location of input file in CSV format.
+       Example:
+
+        ```console
+        SET SENZING_INPUT_URL=\tmp\input-file.csv
+        ```
+
+    1. :pencil2: Set URL of
+       [SQS queue](https://console.aws.amazon.com/sqs/v2/home)
+       Example:
+
+        ```console
+        SET SENZING_SQS_QUEUE_URL="https://sqs.us-xxxx-1.amazonaws.com/000000000000/queue-name"
+        ```
+
+    1. :pencil2: Set subcommand for
+       [stream-producer.py](https://github.com/Senzing/stream-producer)
+       Example:
+
+        ```console
+        SET SENZING_SUBCOMMAND="csv-to-sqs"
+        ```
+
+    1. Read file and send to SQS queue.
+       Example:
+
+        ```console
+        python stream-producer.py %SENZING_SUBCOMMAND% ^
+            --input-url %SENZING_INPUT_URL% ^
+            --sqs-queue-url %SENZING_SQS_QUEUE_URL%
+        ```
+
+### Load SQS from Windows
 
 1. Install [stream-produer](https://github.com/Senzing/stream-producer).
     1. Install prerequisites.
@@ -143,3 +226,36 @@ and loading the SQS queue from a local workstation.
             --input-url %SENZING_INPUT_URL% ^
             --sqs-queue-url %SENZING_SQS_QUEUE_URL%
         ```
+
+## Manual Cloudformation template Launch
+
+### Windows - Manual Cloudformation template launch
+
+1. :pencil2: Identify the `cloudformation.yaml` to be downloaded.
+   Example:
+
+    ```console
+    SET SENZING_CLOUDFORMATION_URL=https://raw.githubusercontent.com/Senzing/aws-cloudformation-ecs-poc-simple/main/cloudformation.yaml
+    ```
+
+1. :pencil2: Identify where `cloudformation.yaml` file will be downloaded.
+   Example:
+
+    ```console
+    SET SENZING_DOWNLOAD_FILE=\tmp\cloudformation.yaml
+    ```
+
+1. Download `cloudformation.yaml`.
+   Example:
+
+    ```console
+    curl -X GET --output %SENZING_DOWNLOAD_FILE% %SENZING_CLOUDFORMATION_URL%
+    ```
+
+1. Visit
+   [AWS Cloudformation management console](https://console.aws.amazon.com/cloudformation/home)
+1. Click "Create stack" drop-down > "With new resources (standard)".
+1. in "Create stack":
+    1. Click "Upload a template file" button.
+    1. Click "Choose file" button and locate the file specified by `SENZING_DOWNLOAD_FILE`.
+    1. Click "Next" button.
