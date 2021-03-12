@@ -71,9 +71,9 @@ and loading the SQS queue from a local workstation.
         ```console
         $ G2Command.py
 
-        () addDataSource MY_FIRST_DATASOURCE_NAME
-        () addDataSource MY_SECOND_DATASOURCE NAME
-        () save
+        (g2cfg) addDataSource MY_FIRST_DATASOURCE_NAME
+        (g2cfg) addDataSource MY_SECOND_DATASOURCE NAME
+        (g2cfg) save
         ```
 
 1. Install [stream-produer](https://github.com/Senzing/stream-producer).
@@ -84,14 +84,14 @@ and loading the SQS queue from a local workstation.
         pip install -r https://raw.githubusercontent.com/Senzing/stream-producer/master/requirements.txt
         ```
 
-    1. :pencil2: Specify location for `stream-loader.py`.
+    1. :pencil2: Specify location for `stream-producer.py`.
        Example:
 
         ```console
-        SET SENZING_DOWNLOAD_FILE=\tmp\stream-loader.py
+        SET SENZING_DOWNLOAD_FILE=\tmp\stream-producer.py
         ```
 
-    1. Download `stream-loader.py`.
+    1. Download `stream-producer.py`.
        Example:
 
         ```console
