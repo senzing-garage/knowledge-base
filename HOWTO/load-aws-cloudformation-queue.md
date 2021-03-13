@@ -55,8 +55,7 @@ and loading the SQS queue from a local workstation.
         ```console
         $ G2Command.py
 
-        (g2cfg) addDataSource MY_FIRST_DATASOURCE_NAME
-        (g2cfg) addDataSource MY_SECOND_DATASOURCE NAME
+        (g2cfg) addDataSource MY_DATA_SOURCE
         (g2cfg) save
         ```
 
@@ -303,7 +302,8 @@ and loading the SQS queue from a local workstation.
 1. Visit
    [AWS Cloudformation management console](https://console.aws.amazon.com/cloudformation/home)
 1. Click "Create stack" drop-down > "With new resources (standard)".
-1. in "Create stack":
+1. In "Create stack":
     1. Click "Upload a template file" button.
     1. Click "Choose file" button and locate the file specified by `SENZING_DOWNLOAD_FILE`.
     1. Click "Next" button.
+1. Return to instructions for **Specify stack details**.
