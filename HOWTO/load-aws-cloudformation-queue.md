@@ -70,7 +70,14 @@ and loading the SQS queue from a local workstation.
 
 ### Load SQS from Docker
 
-1. :pencil2: Set AWS variables:
+1. Get latest docker image.
+   Example:
+
+    ```console
+    docker pull senzing/stream-producer:latest
+    ```
+
+1. :pencil2: Set AWS variables.
    Example:
 
     ```console
@@ -79,15 +86,56 @@ and loading the SQS queue from a local workstation.
     export AWS_DEFAULT_REGION=us-xxxx-1
     ```
 
-1. :pencil2: Set AWS variables:
+1. :pencil2: Identify file to be loaded into Senzing.
    Example:
 
     ```console
-    export SENZING_INPUT_URL=~/senzing.git/aws-cloudformation-ecs-poc-simple/simple.csv
+    export SENZING_INPUT_URL=/path/to/my/example.json
+    ```
+
+1. :pencil2: Set default `DATA_SOURCE` and `ENTITY_TYPE` values.
+   Example:
+
+    ```console
+    export SENZING_DEFAULT_DATA_SOURCE=MY_DATA_SOURCE
+    export SENZING_DEFAULT_ENTITY_TYPE=MY_ENTITY_TYPE
+    ```
+
+1. :pencil2: Set URL of [SQS queue](https://console.aws.amazon.com/sqs/v2/home)
+   Example:
+
+    ```console
+    export SENZING_SQS_QUEUE_URL="https://sqs.us-xxxx-1.amazonaws.com/000000000000/queue-name"
+    ```
+
+1. :pencil2: Set `stream-producer.py` subcommand.
+   Example:
+
+    ```console
+    export SENZING_SUBCOMMAND=json-to-sqs
+    ```
+
+1. Run docker container.
+   Example:
+
+    ```
+    docker run \
+      --env AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID} \
+      --env AWS_DEFAULT_REGION=${AWS_DEFAULT_REGION} \
+      --env AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY} \
+      --env SENZING_DEFAULT_DATA_SOURCE=${SENZING_DEFAULT_DATA_SOURCE} \
+      --env SENZING_DEFAULT_ENTITY_TYPE=${SENZING_DEFAULT_ENTITY_TYPE} \
+      --env SENZING_INPUT_URL="/data/${SENZING_INPUT_FILE##*/}" \
+      --env SENZING_SQS_QUEUE_URL=${SENZING_SQS_QUEUE_URL} \
+      --env SENZING_SUBCOMMAND=${SENZING_SUBCOMMAND} \
+      --interactive \
+      --rm \
+      --tty \
+      --volume ${SENZING_INPUT_FILE%\/*}:/data \
+      senzing/stream-producer
     ```
 
 ### Load SQS from Linux or macOS
-
 
 1. Install [stream-produer](https://github.com/Senzing/stream-producer).
     1. Install prerequisites.
@@ -101,15 +149,15 @@ and loading the SQS queue from a local workstation.
        Example:
 
         ```console
-        SET SENZING_DOWNLOAD_FILE=\tmp\stream-producer.py
+        export SENZING_DOWNLOAD_FILE=/tmp/stream-producer.py
         ```
 
     1. Download `stream-producer.py`.
        Example:
 
         ```console
-        curl -X GET ^
-          --output %SENZING_DOWNLOAD_FILE% ^
+        curl -X GET \
+          --output ${SENZING_DOWNLOAD_FILE} \
           https://raw.githubusercontent.com/Senzing/stream-producer/master/stream-producer.py
         ```
 
@@ -120,16 +168,16 @@ and loading the SQS queue from a local workstation.
        Example:
 
         ```console
-        SET AWS_ACCESS_KEY_ID=AAAAAAAAAAAAAAAAAAAA
-        SET AWS_SECRET_ACCESS_KEY=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-        SET AWS_DEFAULT_REGION=us-east-1
+        export AWS_ACCESS_KEY_ID=AAAAAAAAAAAAAAAAAAAA
+        export AWS_SECRET_ACCESS_KEY=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+        export AWS_DEFAULT_REGION=us-east-1
         ```
 
     1. :pencil2: Location of input file in CSV format.
        Example:
 
         ```console
-        SET SENZING_INPUT_URL=\tmp\input-file.csv
+        export SENZING_INPUT_URL=/path/to/my/example.json
         ```
 
     1. :pencil2: Set URL of
@@ -137,7 +185,7 @@ and loading the SQS queue from a local workstation.
        Example:
 
         ```console
-        SET SENZING_SQS_QUEUE_URL="https://sqs.us-xxxx-1.amazonaws.com/000000000000/queue-name"
+        export SENZING_SQS_QUEUE_URL="https://sqs.us-xxxx-1.amazonaws.com/000000000000/queue-name"
         ```
 
     1. :pencil2: Set subcommand for
@@ -145,16 +193,16 @@ and loading the SQS queue from a local workstation.
        Example:
 
         ```console
-        SET SENZING_SUBCOMMAND="csv-to-sqs"
+        export SENZING_SUBCOMMAND="json-to-sqs"
         ```
 
     1. Read file and send to SQS queue.
        Example:
 
         ```console
-        python stream-producer.py %SENZING_SUBCOMMAND% ^
-            --input-url %SENZING_INPUT_URL% ^
-            --sqs-queue-url %SENZING_SQS_QUEUE_URL%
+        python stream-producer.py ${SENZING_SUBCOMMAND} \
+            --input-url ${SENZING_INPUT_URL} \
+            --sqs-queue-url ${SENZING_SQS_QUEUE_URL}
         ```
 
 ### Load SQS from Windows
