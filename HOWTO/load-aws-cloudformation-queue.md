@@ -170,14 +170,22 @@ and loading the SQS queue from a local workstation.
         ```console
         export AWS_ACCESS_KEY_ID=AAAAAAAAAAAAAAAAAAAA
         export AWS_SECRET_ACCESS_KEY=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-        export AWS_DEFAULT_REGION=us-east-1
+        export AWS_DEFAULT_REGION=us-xxxx-1
         ```
 
-    1. :pencil2: Location of input file in CSV format.
+    1. :pencil2: Identify file to be loaded into Senzing.
        Example:
 
         ```console
-        export SENZING_INPUT_URL=/path/to/my/example.json
+        export SENZING_INPUT_URL=file:///path/to/my/example.json
+        ```
+
+    1. :pencil2: Set default `DATA_SOURCE` and `ENTITY_TYPE` values.
+       Example:
+
+        ```console
+        export SENZING_DEFAULT_DATA_SOURCE=MY_DATA_SOURCE
+        export SENZING_DEFAULT_ENTITY_TYPE=MY_ENTITY_TYPE
         ```
 
     1. :pencil2: Set URL of
@@ -185,7 +193,7 @@ and loading the SQS queue from a local workstation.
        Example:
 
         ```console
-        export SENZING_SQS_QUEUE_URL="https://sqs.us-xxxx-1.amazonaws.com/000000000000/queue-name"
+        export SENZING_SQS_QUEUE_URL="https://sqs.us-xxxx-1.amazonaws.com/000000000000/senzing-poc-sqs-queue"
         ```
 
     1. :pencil2: Set subcommand for
@@ -200,7 +208,9 @@ and loading the SQS queue from a local workstation.
        Example:
 
         ```console
-        python stream-producer.py ${SENZING_SUBCOMMAND} \
+        python /tmp/stream-producer.py ${SENZING_SUBCOMMAND} \
+            --default-data-source ${SENZING_DEFAULT_DATA_SOURCE} \
+            --default-entity-type ${SENZING_DEFAULT_ENTITY_TYPE} \
             --input-url ${SENZING_INPUT_URL} \
             --sqs-queue-url ${SENZING_SQS_QUEUE_URL}
         ```
