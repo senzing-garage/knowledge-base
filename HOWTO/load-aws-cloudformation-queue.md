@@ -53,9 +53,10 @@ and loading the SQS queue from a local workstation.
        Example:
 
         ```console
-        $ G2Command.py
+        $ G2ConfigTool.py
 
         (g2cfg) addDataSource MY_DATA_SOURCE
+        (g2cfg) addEntityType MY_ENTITY_TYPE
         (g2cfg) save
         ```
 
@@ -89,7 +90,7 @@ and loading the SQS queue from a local workstation.
    Example:
 
     ```console
-    export SENZING_INPUT_URL=/path/to/my/example.json
+    export SENZING_INPUT_FILE=/path/to/my/example.json
     ```
 
 1. :pencil2: Set default `DATA_SOURCE` and `ENTITY_TYPE` values.
@@ -104,7 +105,7 @@ and loading the SQS queue from a local workstation.
    Example:
 
     ```console
-    export SENZING_SQS_QUEUE_URL="https://sqs.us-xxxx-1.amazonaws.com/000000000000/queue-name"
+    export SENZING_SQS_QUEUE_URL="https://sqs.us-xxxx-1.amazonaws.com/000000000000/senzing-poc-sqs-queue"
     ```
 
 1. :pencil2: Set `stream-producer.py` subcommand.
@@ -136,7 +137,7 @@ and loading the SQS queue from a local workstation.
 
 ### Load SQS from Linux or macOS
 
-1. Install [stream-produer](https://github.com/Senzing/stream-producer).
+1. Install [stream-producer](https://github.com/Senzing/stream-producer).
     1. Install prerequisites.
        Example:
 
