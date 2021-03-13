@@ -118,7 +118,7 @@ and loading the SQS queue from a local workstation.
 1. Run docker container.
    Example:
 
-    ```
+    ```console
     docker run \
       --env AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID} \
       --env AWS_DEFAULT_REGION=${AWS_DEFAULT_REGION} \
@@ -162,7 +162,7 @@ and loading the SQS queue from a local workstation.
         ```
 
 1. Load SQS queue using
-   [stream-produer](https://github.com/Senzing/stream-producer)
+   [stream-producer](https://github.com/Senzing/stream-producer).
 
     1. :pencil2: Set AWS variables:
        Example:
@@ -217,7 +217,7 @@ and loading the SQS queue from a local workstation.
 
 ### Load SQS from Windows
 
-1. Install [stream-produer](https://github.com/Senzing/stream-producer).
+1. Install [stream-producer](https://github.com/Senzing/stream-producer).
     1. Install prerequisites.
        Example:
 
@@ -242,7 +242,7 @@ and loading the SQS queue from a local workstation.
         ```
 
 1. Load SQS queue using
-   [stream-produer](https://github.com/Senzing/stream-producer)
+   [stream-producer](https://github.com/Senzing/stream-producer).
 
     1. :pencil2: Set AWS variables:
        Example:
@@ -250,14 +250,22 @@ and loading the SQS queue from a local workstation.
         ```console
         SET AWS_ACCESS_KEY_ID=AAAAAAAAAAAAAAAAAAAA
         SET AWS_SECRET_ACCESS_KEY=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-        SET AWS_DEFAULT_REGION=us-east-1
+        SET AWS_DEFAULT_REGION=us-xxxx-1
         ```
 
-    1. :pencil2: Location of input file in CSV format.
+    1. :pencil2: Identify file to be loaded into Senzing.
        Example:
 
         ```console
         SET SENZING_INPUT_URL=\tmp\input-file.csv
+        ```
+
+    1. :pencil2: Set default `DATA_SOURCE` and `ENTITY_TYPE` values.
+       Example:
+
+        ```console
+        SET SENZING_DEFAULT_DATA_SOURCE=MY_DATA_SOURCE
+        SET SENZING_DEFAULT_ENTITY_TYPE=MY_ENTITY_TYPE
         ```
 
     1. :pencil2: Set URL of
@@ -265,7 +273,7 @@ and loading the SQS queue from a local workstation.
        Example:
 
         ```console
-        SET SENZING_SQS_QUEUE_URL="https://sqs.us-xxxx-1.amazonaws.com/000000000000/queue-name"
+        SET SENZING_SQS_QUEUE_URL="https://sqs.us-xxxx-1.amazonaws.com/000000000000/senzing-poc-sqs-queue"
         ```
 
     1. :pencil2: Set subcommand for
@@ -273,14 +281,16 @@ and loading the SQS queue from a local workstation.
        Example:
 
         ```console
-        SET SENZING_SUBCOMMAND="csv-to-sqs"
+        SET SENZING_SUBCOMMAND="json-to-sqs"
         ```
 
     1. Read file and send to SQS queue.
        Example:
 
         ```console
-        python stream-producer.py %SENZING_SUBCOMMAND% ^
+        python /tmp/stream-producer.py %SENZING_SUBCOMMAND% ^
+            --default-data-source %SENZING_DEFAULT_DATA_SOURCE% ^
+            --default-entity-type %SENZING_DEFAULT_ENTITY_TYPE% ^
             --input-url %SENZING_INPUT_URL% ^
             --sqs-queue-url %SENZING_SQS_QUEUE_URL%
         ```
