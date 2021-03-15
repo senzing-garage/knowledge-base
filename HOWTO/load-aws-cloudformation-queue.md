@@ -229,7 +229,7 @@ and loading the SQS queue from a local workstation.
        Example:
 
         ```console
-        SET SENZING_DOWNLOAD_FILE=\tmp\stream-producer.py
+        SET SENZING_DOWNLOAD_FILE=C:\tmp\stream-producer.py
         ```
 
     1. Download `stream-producer.py`.
@@ -257,7 +257,7 @@ and loading the SQS queue from a local workstation.
        Example:
 
         ```console
-        SET SENZING_INPUT_URL=\tmp\input-file.csv
+        SET SENZING_INPUT_URL=C:\tmp\input-file.csv
         ```
 
     1. :pencil2: Set default `DATA_SOURCE` and `ENTITY_TYPE` values.
@@ -288,7 +288,7 @@ and loading the SQS queue from a local workstation.
        Example:
 
         ```console
-        python /tmp/stream-producer.py %SENZING_SUBCOMMAND% ^
+        python C:\tmp\stream-producer.py %SENZING_SUBCOMMAND% ^
             --default-data-source %SENZING_DEFAULT_DATA_SOURCE% ^
             --default-entity-type %SENZING_DEFAULT_ENTITY_TYPE% ^
             --input-url %SENZING_INPUT_URL% ^
@@ -310,7 +310,7 @@ and loading the SQS queue from a local workstation.
    Example:
 
     ```console
-    SET SENZING_DOWNLOAD_FILE=\tmp\cloudformation.yaml
+    SET SENZING_DOWNLOAD_FILE=C:\tmp\cloudformation.yaml
     ```
 
 1. Download `cloudformation.yaml`.
