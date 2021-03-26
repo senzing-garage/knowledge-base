@@ -581,6 +581,8 @@
 1. Where used:
     1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo),
 
+### PYTHONPATH
+
 ### RABBITMQ_DIR
 
 1. Synopsis:
@@ -805,6 +807,8 @@
     1. Used for simple choreography.
 1. Where used:
     1. [stream-loader](https://github.com/Senzing/stream-loader),
+
+### SENZING_DELAY_RANDOMIZED
 
 ### SENZING_DIR
 
@@ -1430,6 +1434,10 @@
 1. Where used:
     1. [stream-loader](https://github.com/Senzing/stream-loader),
 
+### SENZING_KAFKA_FAILURE_BOOTSTRAP_SERVER
+
+### SENZING_KAFKA_FAILURE_TOPIC
+
 ### SENZING_KAFKA_GROUP
 
 1. Synopsis:
@@ -1438,6 +1446,10 @@
     1. Default: "senzing-kafka-group"
 1. Where used:
     1. [stream-loader](https://github.com/Senzing/stream-loader),
+
+### SENZING_KAFKA_INFO_BOOTSTRAP_SERVER
+
+### SENZING_KAFKA_INFO_TOPIC
 
 ### SENZING_KAFKA_TOPIC
 
@@ -1562,6 +1574,10 @@
     1. A directory where [Portainer](https://github.com/Senzing/knowledge-base/blob/master/WHATIS/portainer.md) can keep variable data.
 1. Where used:
     1. [senzing-environment](https://github.com/Senzing/senzing-environment),
+
+### SENZING_PRIME_ENGINE
+
+### SENZING_PSTACK_PID
 
 ### SENZING_SQL_CONNECTION
 
@@ -1829,6 +1845,10 @@
 1. Where used:
     1. [stream-loader](https://github.com/Senzing/stream-loader),
 
+### SENZING_RABBITMQ_RECONNECT_DELAY_IN_SECONDS
+
+### SENZING_RABBITMQ_RECONNECT_NUMBER_OF_RETRIES
+
 ### SENZING_RABBITMQ_ROUTING_FAILURE_KEY
 
 1. Synopsis:
@@ -1988,6 +2008,10 @@
     1. When true, do not perform initial performance evaluation.
 1. Where used:
     1. [stream-loader](https://github.com/Senzing/stream-loader),
+
+### SENZING_SKIP_GOVERNOR
+
+### SENZING_SKIP_INFO_FILTER
 
 ### SENZING_SLEEP_TIME
 
