@@ -71,4 +71,5 @@ use the following method.
     1. `-task-definition-stream-loader:`
     1. `-task-definition-api-server:`
     1. `-task-definition-redoer:`
+
    The "service" will restart all of these tasks using the new license.
