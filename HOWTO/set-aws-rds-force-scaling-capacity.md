@@ -1,4 +1,4 @@
-# HOWTO Set AWS RDS force-scaling-capacity
+# How to set AWS RDS force-scaling-capacity
 
 ## The issue
 
