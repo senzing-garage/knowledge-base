@@ -5,6 +5,7 @@
 ### Accuracy
 ### Ambiguous entity
 ### Ambiguous match
+### Anomaly Detection
 ### Attribute
 ### Background checks
 ### C SDK API
@@ -12,11 +13,12 @@
 ### Compression
 ### Cross source summary
 ### Customer on-boarding
+### Data Source Record
 ### Data source
 ### Data source summary
 ### Derived relationships
 ### Desktop App
-### Disclosed relationships
+### Disclosed relationship
 ### Duplicates
 ### EDA tools
 ### Entity Centric Learning
@@ -37,6 +39,8 @@
 ### G2Loader
 ### G2Snapshot
 ### Generic Entity Specification
+### Global address comparison
+### Global name recognition
 ### HTTP REST API
 ### Java SDK API
 ### Know your customer
@@ -87,12 +91,14 @@
 
 ## Acronyms
 
-### PbD
+### AKA
+### DOB
+### DSR
+### ECL
 ### EDA
 ### F1
 ### KYC
 ### MDM
-### AKA
 ### POC
-### ECL
+### PbD
 ### STB
