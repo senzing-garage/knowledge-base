@@ -4,38 +4,44 @@
 
 ### Snapshot databases in old cloudformation
 
+These steps take snapshots of all databases used by the Senzing Engine.
+
 1. Visit [AWS RDS Console](https://console.aws.amazon.com/rds/home?#databases:).
 1. Identify the 3 databases from the "old" cloudformation:
     1. ${OldStackName}-aurora-senzing-core-cluster
     1. ${OldStackName}-aurora-senzing-libfeat-cluster
     1. ${OldStackName}-aurora-senzing-res-cluster
 1. For each database:
-    1. In **DB identifier** column, select database.
-    1. In "RDS > Databases > [database]" page, on upper-right, drop-down the "Actions" button, select "Take snapshot".
+    1. In "DB identifier" column, select database.
+    1. On **RDS > Databases > [database]** page, in upper-right, drop-down the "Actions" button, select "Take snapshot".
     1. In **Take DB snapshot**:
-        1. **Snapshot name:** ${StackName}-aurora-senzing-XXXX-cluster
-        1. In lower-right, click "Take snapshot" button
+        1. **Snapshot name:** ${OldStackName}-aurora-senzing-XXXX-cluster
+            1. where `XXXX` is `core`, `libfeat`, or `res` to match the database name.
+        1. At lower-right, click "Take snapshot" button
 
 ### Delete databases from new cloudformation
 
+These steps are necessary because AWS RDS does not allow restoring a snapshot to a new database
+that has the name of an existing database.
+
 1. Visit [AWS RDS Console](https://console.aws.amazon.com/rds/home?#databases:).
-1. Identify the 3 databases from the "new" cloudformation:
+1. Identify the 3 databases from the **new** cloudformation:
     1. ${NewStackName}-aurora-senzing-core-cluster
     1. ${NewStackName}-aurora-senzing-libfeat-cluster
     1. ${NewStackName}-aurora-senzing-res-cluster
 1. For each database:
     1. In **DB identifier** column, select database.
     1. In "RDS > Databases > [database]" page, on upper-right, drop-down the "Actions" button, select "Delete".
-    1. Create final snapshot?  Select ":large_blue_circle: No".
+    1. Create final snapshot?  ":large_blue_circle: No".
     1. Check ":ballot_box_with_check: I acknowledge that upon cluster deletion, automated backups, including system snapshots and point-in-time recovery, will no longer be available."
-    1. Click "Delete DB Cluster" button.
+    1. At lower-right, click "Delete DB Cluster" button.
 
 ### Create new databases
 
 1. Visit [AWS RDS Console](https://console.aws.amazon.com/rds/home?#databases:).
 1. Wait until databases from "new" cloudformation have been deleted.
-1. On left-hand navigation bar, choose "Snapshots".
-1. Identify the 3 shapshots from the "old" cloudformation:
+1. In left-hand navigation bar, choose "Snapshots".
+1. Identify the 3 snapshots from the "old" cloudformation:
     1. ${OldStackName}-aurora-senzing-core-cluster
     1. ${OldStackName}-aurora-senzing-libfeat-cluster
     1. ${OldtackName}-aurora-senzing-res-cluster
@@ -48,7 +54,7 @@
             1. Capacity type: :large_blue_circle: Serverless
         1. In **Settings**:
             1. DB instance identifier: ${NewStackName}-aurora-senzing-XXXX,
-               where XXXX is `core`, `libfeat`, or `res` to match snapshot name.
+                1. where `XXXX` is `core`, `libfeat`, or `res` to match snapshot name.
                 1. :warning: Use the **New** stack name
                 1. :warning: **TRICKY:** Truncate the "-cluster" from the original database name
                    because AWS adds a `-cluster` suffix.
@@ -64,7 +70,7 @@
                 1. Check ":ballot_box_with_check: Data API"
         1. In **Capacity settings**:
             1. Expand "Additional scaling configuration"
-                1. Check ":ballot_box_with_check: Force scaling the capacity to the specified values when the timeout is reachedI"
+                1. Check ":ballot_box_with_check: Force scaling the capacity to the specified values when the timeout is reached"
                 1. :thinking: Optional: Check ":ballot_box_with_check: Pause compute capacity after consecutive minutes of inactivity"
         1. At bottom-right, click "Restore DB cluster" button
 
