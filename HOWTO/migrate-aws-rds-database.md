@@ -83,11 +83,12 @@
         1. In **Settings**
             1. New master password: [Enter value of *DatabasePassword* from cloudformation "Outputs" tab]
             1. Confirm password: [Enter value of *DatabasePassword* from cloudformation "Outputs" tab]
-    1. At bottom-right, click "Continue" button
+            1. :warning: Verify that the password has no leading or trailing spaces.
+        1. At bottom-right, click "Continue" button
     1. In **Modify DB cluster: ${NewStackName}-aurora-senzing-XXXX-cluster**
         1. In **Scheduling of modifications**
             1. :thinking: :large_blue_circle: Apply immediately
-        1. At bottom-right, click "Modifyi cluster" button
+        1. At bottom-right, click "Modify cluster" button
 
 
 
