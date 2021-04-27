@@ -89,26 +89,3 @@
         1. In **Scheduling of modifications**
             1. :thinking: :large_blue_circle: Apply immediately
         1. At bottom-right, click "Modify cluster" button
-
-
-
-## Misc
-
-1. In **Settings**
-    1. DB cluster identifier:  ${StackName}-aurora-senzing-core-cluster
-    1. New master password:  [senzing password
-1. In **Capacity settings**
-    1. Expand "Additional Scaling Configuration"
-        1. Check ":ballot_box_with_check: Force scaling the capacity to the specified values when the timeout is reached"
-1. In **Connectivity**
-    1. VPC security group:  ${StackName}-Ec2SecurityGroupInternal-XXXXXXXXXXXX
-1. In **Additional configuration**
-    1. DB cluster parameter group: ${StackName}-rdsdbclusterparametergroup-xxxxxxxxxxxx
-
-
-1. VPC: ${StackName}-ec2-vpc
-1. Subnet group: ${StackName}-db-subnet
-1. VPC security group: ${StackName}-Ec2SecurityGroupInternal-XXXXXXXXXXXX
-1. Subnets:
-    1. ${StackName}-ec2-subnet-private-1
-    1. ${StackName}-ec2-subnet-private-2
