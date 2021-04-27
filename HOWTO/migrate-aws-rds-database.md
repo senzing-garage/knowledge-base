@@ -13,7 +13,7 @@ These steps take snapshots of all databases used by the Senzing Engine.
     1. ${OldStackName}-aurora-senzing-res-cluster
 1. For each database:
     1. In "DB identifier" column, select database.
-    1. On **RDS > Databases > [database]** page, in upper-right, drop-down the "Actions" button, select "Take snapshot".
+    1. In the **RDS > Databases > [database]** page, at upper-right, drop-down the "Actions" button, select "Take snapshot".
     1. In **Take DB snapshot**:
         1. **Snapshot name:** ${OldStackName}-aurora-senzing-XXXX-cluster
             1. where `XXXX` is `core`, `libfeat`, or `res` to match the database name.
@@ -22,7 +22,7 @@ These steps take snapshots of all databases used by the Senzing Engine.
 ### Delete databases from new cloudformation
 
 These steps are necessary because AWS RDS does not allow restoring a snapshot to a new database
-that has the name of an existing database.
+that has the same name as an existing database.
 
 1. Visit [AWS RDS Console](https://console.aws.amazon.com/rds/home?#databases:).
 1. Identify the 3 databases from the **new** cloudformation:
@@ -31,12 +31,14 @@ that has the name of an existing database.
     1. ${NewStackName}-aurora-senzing-res-cluster
 1. For each database:
     1. In **DB identifier** column, select database.
-    1. In "RDS > Databases > [database]" page, on upper-right, drop-down the "Actions" button, select "Delete".
-    1. Create final snapshot?  ":large_blue_circle: No".
+    1. In "RDS > Databases > [database]" page, at upper-right, drop-down the "Actions" button, select "Delete".
+    1. Create final snapshot?  :large_blue_circle: No
     1. Check ":ballot_box_with_check: I acknowledge that upon cluster deletion, automated backups, including system snapshots and point-in-time recovery, will no longer be available."
     1. At lower-right, click "Delete DB Cluster" button.
 
 ### Create new databases
+
+The following steps create new databases for Senzing Engine based on previous AWS RDS snapshots.
 
 1. Visit [AWS RDS Console](https://console.aws.amazon.com/rds/home?#databases:).
 1. Wait until databases from "new" cloudformation have been deleted.
@@ -75,6 +77,11 @@ that has the name of an existing database.
         1. At bottom-right, click "Restore DB cluster" button
 
 ### Modify new databases
+
+The following steps are final modifications needed to allow the
+new cloudformation to communicate with the new databases.
+Specifically, each cloudformation has a different randomly generated database password.
+The password generated for the "new" cloudformation needs to be set in the databases.
 
 1. Visit [AWS RDS Console](https://console.aws.amazon.com/rds/home?#databases:)
 1. Wait until databases from "new" cloudformation have been created.
