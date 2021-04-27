@@ -38,7 +38,7 @@ that has the same name as an existing database.
 
 ### Create new databases
 
-The following steps create new databases for Senzing Engine based on previous AWS RDS snapshots.
+The following steps create new databases for Senzing Engine based on the previously generated AWS RDS snapshots.
 
 1. Visit [AWS RDS Console](https://console.aws.amazon.com/rds/home?#databases:).
 1. Wait until databases from "new" cloudformation have been deleted.
@@ -91,7 +91,7 @@ The password generated for the "new" cloudformation needs to be set in the datab
     1. ${NewStackName}-aurora-senzing-res-cluster
 1. For each database:
     1. In **DB identifier** column, select database.
-    1. In "RDS > Databases > [database]" page, on upper-right, click "Modify" button.
+    1. In the **RDS > Databases > [database]** page, at upper-right, click "Modify" button.
     1. In **Modify DB cluster: ${NewStackName}-aurora-senzing-XXXX-cluster**
         1. In **Settings**
             1. New master password: [Enter value of *DatabasePassword* from cloudformation "Outputs" tab]
