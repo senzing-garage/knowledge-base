@@ -72,6 +72,22 @@
 
 1. Visit [AWS RDS Console](https://console.aws.amazon.com/rds/home?#databases:)
 1. Wait until databases from "new" cloudformation have been created.
+1. Identify the 3 databases from the "new" cloudformation:
+    1. ${NewStackName}-aurora-senzing-core-cluster
+    1. ${NewStackName}-aurora-senzing-libfeat-cluster
+    1. ${NewStackName}-aurora-senzing-res-cluster
+1. For each database:
+    1. In **DB identifier** column, select database.
+    1. In "RDS > Databases > [database]" page, on upper-right, click "Modify" button.
+    1. In **Modify DB cluster: ${NewStackName}-aurora-senzing-XXXX-cluster**
+        1. In **Settings**
+            1. New master password: [Enter value of *DatabasePassword* from cloudformation "Outputs" tab]
+            1. Confirm password: [Enter value of *DatabasePassword* from cloudformation "Outputs" tab]
+    1. At bottom-right, click "Continue" button
+    1. In **Modify DB cluster: ${NewStackName}-aurora-senzing-XXXX-cluster**
+        1. In **Scheduling of modifications**
+            1. :thinking: :large_blue_circle: Apply immediately
+        1. At bottom-right, click "Modifyi cluster" button
 
 
 
