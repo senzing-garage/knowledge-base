@@ -48,8 +48,8 @@ The following steps create new databases for Senzing Engine based on the previou
     1. ${OldStackName}-aurora-senzing-libfeat-cluster
     1. ${OldtackName}-aurora-senzing-res-cluster
 1. For each snapshot:
-    1. Select the snapshot.
-    1. Actions > Restore snapshot
+    1. In "Snapshot name" column, select snapshot.
+    1. On the "RDS > Snapshots > [snapshot]" page, at upper-right, drop-down the "Actions" button, select "Restore snapshot".
     1. In **Restore snapshot**:
         1. In **Db specifications**:
             1. Engine: Amazon Aurora with PostgreSQL compatibility
