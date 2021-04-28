@@ -103,7 +103,6 @@ The password generated for the "new" cloudformation needs to be set in the datab
             1. :thinking: :large_blue_circle: Apply immediately
         1. At bottom-right, click "Modify cluster" button
 
-
 ## Notes
 
 1. If a new database is introduced into the cloudformation,
