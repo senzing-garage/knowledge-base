@@ -13,7 +13,7 @@ These steps take snapshots of all databases used by the Senzing Engine.
     1. ${OldStackName}-aurora-senzing-res-cluster
 1. For each database:
     1. In "DB identifier" column, select database.
-    1. In the **RDS > Databases > [database]** page, at upper-right, drop-down the "Actions" button, select "Take snapshot".
+    1. In the "RDS > Databases > [database]" page, at upper-right, drop-down the "Actions" button, select "Take snapshot".
     1. In **Take DB snapshot**:
         1. **Snapshot name:** ${OldStackName}-aurora-senzing-XXXX-cluster
             1. where `XXXX` is `core`, `libfeat`, or `res` to match the database name.
@@ -91,7 +91,7 @@ The password generated for the "new" cloudformation needs to be set in the datab
     1. ${NewStackName}-aurora-senzing-res-cluster
 1. For each database:
     1. In **DB identifier** column, select database.
-    1. In the **RDS > Databases > [database]** page, at upper-right, click "Modify" button.
+    1. In the "RDS > Databases > [database]" page, at upper-right, click "Modify" button.
     1. In **Modify DB cluster: ${NewStackName}-aurora-senzing-XXXX-cluster**
         1. In **Settings**
             1. New master password: [Enter value of *DatabasePassword* from cloudformation "Outputs" tab]
