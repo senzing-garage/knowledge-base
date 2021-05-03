@@ -79,6 +79,6 @@ Everything installed by the RPM is in `/opt/senzing`.
 1. `/opt/senzing/g2/resources`
     1. `/opt/senzing/g2/resources/config` is a set files for updating Senzing configuration from release to release.
     1. `/opt/senzing/g2/resources/schema` has files for database creation and updating.
-    1. `/opt/senzing/g2/resources/templates` has "template" files
-        1. `G2C.db.template` is an example SQLite database
+    1. `/opt/senzing/g2/resources/templates` has "template" files.
+        1. `G2C.db.template` is an example SQLite database.
         1. Other files that can be instantiated using `envsubst`.
