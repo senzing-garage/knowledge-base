@@ -22,7 +22,7 @@ as well as deploy Senzing.
 
 For instance if you want to try something on Ubuntu, run
 
-```
+```console
 docker run \
   --interactive \
   --rm \
@@ -32,7 +32,7 @@ docker run \
 
 If you want to try the same thing on Centos:
 
-```
+```console
 docker run \
   --interactive \
   --rm \
@@ -96,13 +96,3 @@ is the style of documentation used in GitHub.
 ### Hashicorp Terraform
 
 ### Hashicorp Packer
-
-
-
-
-
-
-
-
-
-
