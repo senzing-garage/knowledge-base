@@ -2,6 +2,26 @@
 
 This exercise introduces some of the major tooling used by the Senzing Community.
 
+## Contents
+
+1. [Introductory tools](#introductory-tools)
+    1. [GitHub](#github)
+    1. [Docker](#docker)
+    1. [Python](#python)
+    1. [Markdown](#markdown)
+    1. [Tools for Thinking](#tools-for-thinking)
+1. [Intermediate tools](#intermediate-tools)
+    1. [docker-compose](#docker-compose)
+    1. [Integrated Development Environments](#integrated-developent-enviroments)
+    1. [Portainer](#portainer)
+1. [Advanced tools](#advanced-tools)
+    1. [AWS Cloudformation](#aws-cloudformation)
+    1. [Jupyter notebooks](#jupyter-notebooks)
+    1. [Kubernetes](#kubernetes)
+    1. [OpenShift](#openshift)
+    1. [Packer](#packer)
+    1. [Terraform](#terraform)
+
 ## Introductory tools
 
 ### GitHub
@@ -46,13 +66,11 @@ If you are a Java programmer and see variables written in
 [snake case](https://en.wikipedia.org/wiki/Snake_case),
 you'd probably think that the person who wrote the Java program
 didn't know much about Java.
-
 Well, the same is true in
 [Python](../../WHATIS/python.md).
 If lower camelCase is used in for local Python variables,
 one wonders if the person knows Python
 or is still a Java programmer trying out a new language.
-
 To learn how to speak "Python", knowledge of
 [PEP-8](https://www.python.org/dev/peps/pep-0008/)
 is essential.
@@ -67,7 +85,7 @@ is essential.
 [Markdown](../../WHATIS/markdown.md)
 is the style of documentation used in GitHub.
 
-### Tools for thinking
+### Tools for Thinking
 
 1. [The Twelve-Factor App](https://12factor.net/) is a compendium of know-how for building software in the cloud.
    As such, Senzing wants to build software that is conducive to the Twelve-Factor approach.
@@ -99,7 +117,7 @@ is the style of documentation used in GitHub.
 
 ### Kubernetes
 
-### minikube
+#### minikube
 
 ### OpenShift
 
