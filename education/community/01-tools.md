@@ -49,6 +49,9 @@ didn't know much about Java.
 
 Well, the same is true in
 [Python](../../WHATIS/python.md).
+If lower camelCase is used in for local Python variables,
+one wonders if the person knows Python
+or is still a Java programmer trying out a new language.
 
 To learn how to speak "Python", knowledge of
 [PEP-8](https://www.python.org/dev/peps/pep-0008/)
