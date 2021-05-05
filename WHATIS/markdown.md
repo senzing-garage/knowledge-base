@@ -8,6 +8,8 @@
 
 1. [Official site](https://commonmark.org/)
 1. [Wikipedia](https://en.wikipedia.org/wiki/Markdown)
+1. [GitHub Guides](https://guides.github.com/)
+1. [Github Guide](https://guides.github.com/features/mastering-markdown/)
 
 ## Markdown linter
 

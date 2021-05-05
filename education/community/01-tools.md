@@ -1,18 +1,14 @@
 # Tools used in Community
 
+This exercise introduces some of the major tooling used by the Senzing Community.
+
 ## Introductory tools
 
 ### GitHub
 
-The corpus of the Community code resides in
-[GitHub](https://github.com/senzing).
-
+[GitHub](../../WHATIS/github.md)
+holds the corpus of the Senzing Community code.
 You'll want to create a "GitHub username" for yourself.
-
-Some of the features of GitHub used by Senzing Community:
-
-1. GitHub Issues
-1. GitHub Pages
 
 ### Docker
 
@@ -51,7 +47,8 @@ If you are a Java programmer and see variables written in
 you'd probably think that the person who wrote the Java program
 didn't know much about Java.
 
-Well, the same is true in Python.
+Well, the same is true in
+[Python](../../WHATIS/python.md).
 
 To learn how to speak "Python", knowledge of
 [PEP-8](https://www.python.org/dev/peps/pep-0008/)
@@ -64,10 +61,8 @@ is essential.
 
 ### Markdown
 
-[Markdown](../../markdown.md)
+[Markdown](../../WHATIS/markdown.md)
 is the style of documentation used in GitHub.
-
-1. [Markdown linter](https://dlaa.me/markdownlint/)
 
 ### Tools for thinking
 
@@ -81,18 +76,33 @@ is the style of documentation used in GitHub.
 
 ### docker-compose
 
+[docker-compose](../../WHATIS/docker-compose.md)
+
 ### Integrated Development Environments (IDE)
 
 #### Eclipse
 
 ### Portainer
 
-## Advanced tools
+[Portainer](../../WHATIS/portainer.md) is a web interface for `docker` commands.
 
-### minikube
+## Advanced tools
 
 ### AWS Cloudformation
 
-### Hashicorp Terraform
+### Jupyter notebooks
 
-### Hashicorp Packer
+[Jupyter Notebooks](../../WHATIS/jupyter-notebook.md)
+
+### Kubernetes
+
+### minikube
+
+### OpenShift
+
+### Packer
+
+[Packer](../../WHATIS/packer.md)
+
+### Terraform
+
