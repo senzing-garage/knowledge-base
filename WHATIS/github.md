@@ -18,6 +18,7 @@ Some of the features of GitHub used by Senzing Community:
 1. [GitHub Issues](https://guides.github.com/features/issues/)
 1. [GitHub Pages](https://guides.github.com/features/pages/)
 1. [GitHub Markdown](https://guides.github.com/features/mastering-markdown/)
+1. [GitHub Actions](https://docs.github.com/en/actions)
 1. Versioning
 
 ## Sites
