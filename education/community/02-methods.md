@@ -10,3 +10,4 @@
 
 1. [The Twelve-factor App](../../WHATIS/twelve-factor-app.md)
 1. [Linux Hierarchical File standard](../../WHATIS/linux-filesystem-hierarchy-standard.md)
+1. [cattle vs. pets](../../WHATIS/cattle-vs-pets.md)
