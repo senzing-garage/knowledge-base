@@ -79,6 +79,12 @@ git branch -v -a
 git checkout <branch_name>
 ```
 
+You can also use
+
+```console
+git switch <branch_name>
+```
+
 ## Create a new remote branch
 
 First create the branch locally, then push it to github
@@ -127,4 +133,37 @@ then delete it on github
 
 ```console
 git push origin --delete <branch_name>
+```
+
+# Help!  I tried to commit to main, now what?
+
+No problem, we got you.  
+Make sure you are on the branch to which you have been committing. 
+`git log` to check how many commits you want to roll back. 
+undo the commits with git reset HEAD~N where “N” is the number of commits you want to undo.
+
+eg, to undo one commit:
+
+```console
+git reset HEAD~1
+```
+
+now create your branch, switch to it, and continue on as if that didn't happen.  
+Do be sure to verify that you're only committing the changes you want with `git status`
+
+# One time configuration for your git command line
+
+## set up globals
+
+Set up your name and email
+
+```console
+git config --global user.name "Your Name"
+git config --global user.email your_git_email@email.com
+```
+
+Prune deleted branches from your local when you pull
+
+```console
+git config --global fetch.prune true
 ```
