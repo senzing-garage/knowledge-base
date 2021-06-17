@@ -27,7 +27,7 @@ I think we're looking for something like the [Apple support community](https://d
 
 - :heavy_check_mark: Can convert posts to tickets
 
-We already use [Zendesk Guide](https://support.zendesk.com/hc/en-us/articles/204231676) for self server knowledge base
+We already use [Zendesk Guide](https://support.zendesk.com/hc/en-us/articles/204231676) for self serve knowledge base
 
 ## GitHub discussions
 
@@ -38,13 +38,13 @@ We already use [Zendesk Guide](https://support.zendesk.com/hc/en-us/articles/204
 
 ## Stackoverflow
 
-[Stackoverflow for support](https://meta.stackoverflow.com/questions/326374/how-can-i-use-stack-overflow-to-support-our-developer-community)
-[Follow Google Android model and use a Senzing tag?](https://android-developers.googleblog.com/2009/12/hello-stack-overflow.html)
+- [Stackoverflow for support](https://meta.stackoverflow.com/questions/326374/how-can-i-use-stack-overflow-to-support-our-developer-community)
+- [Follow Google Android model and use a Senzing tag?](https://android-developers.googleblog.com/2009/12/hello-stack-overflow.html)
 
 Private stackoverflow? with [Stackoverflow teams](https://meta.stackexchange.com/questions/16054/is-stack-exchange-stack-overflow-available-for-private-or-internal-use)
 
 - Stackoverflow teams.  It is private, but itegrates with regular stack overflow
-- New [Stackexchange](https://area51.stackexchange.com)   probably not.
+- New [Stackexchange](https://area51.stackexchange.com)?   probably not.
 
 ## Discourse
 
