@@ -22,6 +22,7 @@ I think we're looking for something like the [Apple support community](https://d
 [Zendesk Gather help center](https://www.zendesk.com/service/help-center/community-software/)
 
 - :heavy_check_mark: Can convert posts to tickets
+- :x: seems to require login to participate
 
 We already use [Zendesk Guide](https://support.zendesk.com/hc/en-us/articles/204231676) for self serve knowledge base
 
