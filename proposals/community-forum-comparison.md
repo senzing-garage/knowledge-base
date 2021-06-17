@@ -60,6 +60,6 @@ Private stackoverflow? with [Stackoverflow teams](https://meta.stackexchange.com
 
 ## Sub-Reddit?
 
-Back to the question are we looking for or community engagement?
-__public support__  NOT community engagement behavior.
+Back to the question are we looking for public support or community engagement?
+
 
