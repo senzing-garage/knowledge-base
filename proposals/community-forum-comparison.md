@@ -11,7 +11,7 @@ I think we're looking for something like the [Apple support community](https://d
 | Public                                         | :heavy_check_mark:       | :heavy_check_mark:       | :heavy_check_mark:                 | :heavy_check_mark: |
 | Search engine indexed                          | :heavy_check_mark:       | :heavy_check_mark:       | :heavy_check_mark:                 | :heavy_check_mark: |
 | Provides notifications                         | :heavy_check_mark:       | :heavy_check_mark:       | :heavy_check_mark: via tag sets(?) | :heavy_check_mark: |
-| Provides handling workflow, queue of questions | :x: / :heavy_check_mark: | :x: / :heavy_check_mark: | :x:                                | :x:                |
+| Provides handling workflow, queue of questions | :heavy_check_mark: / :x: | :heavy_check_mark: / :x: | :x:                                | :x:                |
 | Email privacy                                  | same as zendesk          | same as github           | :heavy_check_mark:                 | :heavy_check_mark: |
 | Tools to manage content/ posts                 | :heavy_check_mark:       | :heavy_check_mark:       | :x:                                | :heavy_check_mark: |
 | Managed by Senzing staff                       | :heavy_check_mark:       | :heavy_check_mark:       | :x:                                | :heavy_check_mark: |
