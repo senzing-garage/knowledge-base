@@ -1,12 +1,8 @@
 
 # Comparison of Community / Forum technology
 
-Learn from those who do it all the time:
 
-"...a standalone site needs about 500 total users. Fewer than that and there’s just not enough activity to keep people regularly engaged."
-[Jon Ericson](https://stackoverflow.blog/2018/05/23/how-stack-overflow-for-teams-fits-into-the-community/)
-
-### The question is are we looking for public support or community engagement?
+### The question:  are we looking for public support or community engagement?
 I think we're looking for something like the [Apple support community](https://discussions.apple.com)
 
 
@@ -63,3 +59,7 @@ Private stackoverflow? with [Stackoverflow teams](https://meta.stackexchange.com
 Back to the question are we looking for public support or community engagement?
 
 
+# If we're looking to build a community, Learn from those who do it all the time:
+
+"...a standalone site needs about 500 total users. Fewer than that and there’s just not enough activity to keep people regularly engaged."
+[Jon Ericson](https://stackoverflow.blog/2018/05/23/how-stack-overflow-for-teams-fits-into-the-community/)
