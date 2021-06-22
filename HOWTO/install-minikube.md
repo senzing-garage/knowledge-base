@@ -27,22 +27,26 @@ Instructions for installing [minikube](https://kubernetes.io/docs/tasks/tools/in
 1. [Ubuntu](https://kubernetes.io/docs/tasks/tools/install-minikube/#linux)
 
     ```console
-    curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
-    chmod +x minikube
-    sudo mv minikube /usr/local/bin/
+    curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+    sudo install minikube-linux-amd64 /usr/local/bin/minikube
     ```
 
 1. Example for a specific release:
 
     ```console
-    curl -Lo minikube https://storage.googleapis.com/minikube/releases/v1.2.0/minikube-linux-amd64
-    chmod +x minikube
-    sudo cp minikube /usr/local/bin/ && rm minikube
+    curl -LO https://storage.googleapis.com/minikube/releases/v1.2.0/minikube-linux-amd64
+    sudo install minikube-linux-amd64 /usr/local/bin/minikube
     ```
+
+1. For more information, visit [minikube start](https://minikube.sigs.k8s.io/docs/start/)
 
 ### macOS
 
+1. Visit [minikube start](https://minikube.sigs.k8s.io/docs/start/)
+
 ### Windows
+
+1. Visit [minikube start](https://minikube.sigs.k8s.io/docs/start/)
 
 ## Test
 
