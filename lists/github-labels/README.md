@@ -21,7 +21,8 @@ These labels will be assigned predominantly in the "**Backlog**", "**On deck**",
 |------------|--------|
 | Submitter  | ![customer-submission](customer-submission.png)             |
 | Issue type | ![bug](bug.png) ![documentation](documentation.png) ![enhancement](enhancement.png) ![performance](performance.png) ![refactoring](refactoring.png) |
-| Info       | ![conversation](conversation.png) ![question](question.png) |
+| Info       | ![conversation](conversation.png) ![triaged](triaged.png) ![question](question.png) |
+| Group      | ![G2Tool](G2Tool.png) |
 
 ## Details
 
@@ -37,13 +38,26 @@ Labels listed in alphabetical order.
 | duplicate            | ![000000](https://via.placeholder.com/30x30/000000/000000?text=.) | #000000 | This issue or pull request already exists    |
 | enhancement          | ![66FFFF](https://via.placeholder.com/30x30/66FFFF/66FFFF?text=.) | #66FFFF | New feature request                          |
 | fixed                | ![00FF00](https://via.placeholder.com/30x30/00FF00/00FF00?text=.) | #00FF00 | Fixed. Waiting for issue creator to close    |
+| G2Tool               | ![0000FF](https://via.placeholder.com/30x30/00FF00/00FF00?text=.) | #0000FF | Concerns G2Tools package                     |
 | invalid              | ![000000](https://via.placeholder.com/30x30/000000/000000?text=.) | #000000 | This doesn't seem right                      |
 | performance          | ![66FFFF](https://via.placeholder.com/30x30/66FFFF/66FFFF?text=.) | #66FFFF | Correct behavior, but slow performance       |
 | question             | ![CCCCFF](https://via.placeholder.com/30x30/CCCCFF/CCCCFF?text=.) | #CCCCFF | User-submitted question                      |
 | refactoring          | ![66FFFF](https://via.placeholder.com/30x30/66FFFF/66FFFF?text=.) | #66FFFF | No behavioral change, internal restructuring |
+| triaged              | ![CCCCFF](https://via.placeholder.com/30x30/CCCCFF/CCCCFF?text=.) | #CCCCFF | Has been through a triage                    |
 | waiting-for-customer | ![FF9900](https://via.placeholder.com/30x30/FF9900/FF9900?text=.) | #FF9900 | Customer needs to verify fix or close issue  |
 | waiting-to-merge     | ![FF9900](https://via.placeholder.com/30x30/FF9900/FF9900?text=.) | #FF9900 | Code complete, cannot merge yet              |
 | wontfix              | ![000000](https://via.placeholder.com/30x30/000000/000000?text=.) | #000000 | This will not be worked on                   |
+
+## Colors used
+
+1. 000000
+1. 0000FF
+1. 00FF00
+1. 66FFFF
+1. CCCCFF
+1. FF0000
+1. FF9900
+1. FFFF00
 
 ## References
 
