@@ -38,7 +38,7 @@ Labels listed in alphabetical order.
 | duplicate            | ![000000](https://via.placeholder.com/30x30/000000/000000?text=.) | #000000 | This issue or pull request already exists    |
 | enhancement          | ![66FFFF](https://via.placeholder.com/30x30/66FFFF/66FFFF?text=.) | #66FFFF | New feature request                          |
 | fixed                | ![00FF00](https://via.placeholder.com/30x30/00FF00/00FF00?text=.) | #00FF00 | Fixed. Waiting for issue creator to close    |
-| G2Tool               | ![0000FF](https://via.placeholder.com/30x30/00FF00/0000FF?text=.) | #0000FF | Concerns G2Tools package                     |
+| G2Tool               | ![0000FF](https://via.placeholder.com/30x30/0000FF/0000FF?text=.) | #0000FF | Concerns G2Tools package                     |
 | invalid              | ![000000](https://via.placeholder.com/30x30/000000/000000?text=.) | #000000 | This doesn't seem right                      |
 | performance          | ![66FFFF](https://via.placeholder.com/30x30/66FFFF/66FFFF?text=.) | #66FFFF | Correct behavior, but slow performance       |
 | question             | ![CCCCFF](https://via.placeholder.com/30x30/CCCCFF/CCCCFF?text=.) | #CCCCFF | User-submitted question                      |
