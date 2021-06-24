@@ -866,7 +866,7 @@
     1. The desired version of
        [senzing/adminer](https://hub.docker.com/r/senzing/adminer).
 1. To see latest version, visit
-   [versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/versions-latest.sh)
+   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-latest.sh)
 1. Where used:
     1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo)
 
@@ -876,7 +876,7 @@
     1. The desired version of
        [senzing/apt](https://hub.docker.com/r/senzing/apt).
 1. To see latest version, visit
-   [versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/versions-latest.sh)
+   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-latest.sh)
 1. Where used:
     1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo)
 
@@ -886,7 +886,7 @@
     1. The desired version of
        [senzing/db2-driver-installer](https://hub.docker.com/r/senzing/db2-driver-installer).
 1. To see latest version, visit
-   [versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/versions-latest.sh)
+   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-latest.sh)
 1. Where used:
     1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo)
 
@@ -896,7 +896,7 @@
     1. The desired version of
        [senzing/entity-search-web-app](https://hub.docker.com/r/senzing/entity-search-web-app).
 1. To see latest version, visit
-   [versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/versions-latest.sh)
+   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-latest.sh)
 1. Where used:
     1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo)
 
@@ -906,7 +906,7 @@
     1. The desired version of
        [senzing/init-container](https://hub.docker.com/r/senzing/init-container).
 1. To see latest version, visit
-   [versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/versions-latest.sh)
+   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-latest.sh)
 1. Where used:
     1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo)
 
@@ -916,7 +916,7 @@
     1. The desired version of
        [senzing/jupyter](https://hub.docker.com/r/senzing/jupyter).
 1. To see latest version, visit
-   [versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/versions-latest.sh)
+   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-latest.sh)
 1. Where used:
     1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo)
 
@@ -926,7 +926,7 @@
     1. The desired version of
        [senzing/phppgadmin](https://hub.docker.com/r/senzing/phppgadmin).
 1. To see latest version, visit
-   [versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/versions-latest.sh)
+   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-latest.sh)
 1. Where used:
     1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo)
 
@@ -936,7 +936,7 @@
     1. The desired version of
        [portainer/portainer](https://hub.docker.com/r/portainer/portainer).
 1. To see latest version, visit
-   [versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/versions-latest.sh)
+   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-latest.sh)
 
 ### SENZING_DOCKER_IMAGE_VERSION_POSTGRES
 
@@ -944,7 +944,7 @@
     1. The desired version of
        [postgres](https://hub.docker.com/_/postgres).
 1. To see latest version, visit
-   [versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/versions-latest.sh)
+   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-latest.sh)
 
 ### SENZING_DOCKER_IMAGE_VERSION_POSTGRESQL_CLIENT
 
@@ -952,7 +952,7 @@
     1. The desired version of
        [senzing/postgresql-client](https://hub.docker.com/r/senzing/postgresql-client).
 1. To see latest version, visit
-   [versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/versions-latest.sh)
+   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-latest.sh)
 1. Where used:
     1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo)
 
@@ -962,7 +962,7 @@
     1. The desired version of
        [bitnami/rabbitmq](https://hub.docker.com/r/bitnami/rabbitmq).
 1. To see latest version, visit
-   [versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/versions-latest.sh)
+   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-latest.sh)
 
 ### SENZING_DOCKER_IMAGE_VERSION_REDOER
 
@@ -970,7 +970,7 @@
     1. The desired version of
        [senzing/redoer](https://hub.docker.com/r/senzing/redoer).
 1. To see latest version, visit
-   [versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/versions-latest.sh)
+   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-latest.sh)
 1. Where used:
     1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo)
 
@@ -980,7 +980,7 @@
     1. The desired version of
        [senzing/resolver](https://hub.docker.com/r/senzing/resolver).
 1. To see latest version, visit
-   [versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/versions-latest.sh)
+   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-latest.sh)
 1. Where used:
     1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo)
 
@@ -990,7 +990,7 @@
     1. The desired version of
        [senzing/senzing-api-server](https://hub.docker.com/r/senzing/senzing-api-server).
 1. To see latest version, visit
-   [versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/versions-latest.sh)
+   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-latest.sh)
 1. Where used:
     1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo)
     1. [entity-search-web-app](https://github.com/Senzing/entity-search-web-app)
@@ -1001,7 +1001,7 @@
     1. The desired version of
        [senzing/console](https://hub.docker.com/r/senzing/console).
 1. To see latest version, visit
-   [versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/versions-latest.sh)
+   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-latest.sh)
 
 ### SENZING_DOCKER_IMAGE_VERSION_SENZING_DEBUG
 
@@ -1009,7 +1009,7 @@
     1. The desired version of
        [senzing/senzing-debug](https://hub.docker.com/r/senzing/senzing-debug).
 1. To see latest version, visit
-   [versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/versions-latest.sh)
+   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-latest.sh)
 1. Where used:
     1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo)
 
@@ -1019,7 +1019,7 @@
     1. The desired version of
        [coleifer/sqlite-web](https://hub.docker.com/r/coleifer/sqlite-web).
 1. To see latest version, visit
-   [versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/versions-latest.sh)
+   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-latest.sh)
 
 ### SENZING_DOCKER_IMAGE_VERSION_SSHD
 
@@ -1027,7 +1027,7 @@
     1. The desired version of
        [senzing/sshd](https://hub.docker.com/r/senzing/sshd).
 1. To see latest version, visit
-   [versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/versions-latest.sh)
+   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-latest.sh)
 
 ### SENZING_DOCKER_IMAGE_VERSION_STREAM_LOADER
 
@@ -1035,7 +1035,7 @@
     1. The desired version of
        [senzing/stream-loader](https://hub.docker.com/r/senzing/stream-loader).
 1. To see latest version, visit
-   [versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/versions-latest.sh)
+   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-latest.sh)
 1. Where used:
     1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo)
 
@@ -1045,7 +1045,7 @@
     1. The desired version of
        [senzing/stream-logger](https://hub.docker.com/r/senzing/stream-logger).
 1. To see latest version, visit
-   [versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/versions-latest.sh)
+   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-latest.sh)
 1. Where used:
     1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo)
 
@@ -1055,7 +1055,7 @@
     1. The desired version of
        [senzing/stream-producer](https://hub.docker.com/r/senzing/stream-producer).
 1. To see latest version, visit
-   [versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/versions-latest.sh)
+   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-latest.sh)
 1. Where used:
     1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo)
     1. [stream-producer](https://github.com/Senzing/stream-producer)
@@ -1066,7 +1066,7 @@
     1. The desired version of
        [senzing/web-app-demo](https://hub.docker.com/r/senzing/web-app-demo).
 1. To see latest version, visit
-   [versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/versions-latest.sh)
+   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-latest.sh)
 
 ### SENZING_DOCKER_IMAGE_VERSION_XTERM
 
@@ -1074,7 +1074,7 @@
     1. The desired version of
        [senzing/xterm](https://hub.docker.com/r/senzing/xterm).
 1. To see latest version, visit
-   [versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/versions-latest.sh)
+   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-latest.sh)
 1. Where used:
     1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo)
 
@@ -1084,7 +1084,7 @@
     1. The desired version of
        [senzing/yum](https://hub.docker.com/r/senzing/yum).
 1. To see latest version, visit
-   [versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/versions-latest.sh)
+   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-latest.sh)
 1. Where used:
     1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo)
 
