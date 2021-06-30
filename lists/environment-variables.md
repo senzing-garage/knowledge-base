@@ -1707,6 +1707,8 @@
 1. Where used:
     1. [stream-producer](https://github.com/Senzing/stream-producer)
 
+### SENZING_RABBITMQ_FAILURE_VIRTUAL_HOST
+
 ### SENZING_RABBITMQ_HEARTBEAT_IN_SECONDS
 
 1. Synopsis:
@@ -1788,6 +1790,8 @@
     1. Default: The value of SENZING_RABBITMQ_USERNAME
 1. Where used:
     1. [stream-producer](https://github.com/Senzing/stream-producer)
+
+### SENZING_RABBITMQ_INFO_VIRTUAL_HOST
 
 ### SENZING_RABBITMQ_PASSWORD
 
@@ -1893,6 +1897,8 @@
 1. Where used:
     1. [stream-producer](https://github.com/Senzing/stream-producer),
     1. [stream-loader](https://github.com/Senzing/stream-loader),
+
+### SENZING_RABBITMQ_VIRTUAL_HOST
 
 ### SENZING_RANDOM_SEED
 
@@ -2082,6 +2088,17 @@
     1. For use with SQS "long-polling"
 1. Where used:
     1. [stream-loader](https://github.com/Senzing/stream-loader),
+
+### SENZING_STREAM_LOADER_DIRECTIVE_NAME
+
+1. Synopsis:
+    1. The property name in a JSON Message that identifies a JSON property with information
+       to be used by the
+       [stream-loader](https://github.com/Senzing/stream-loader).
+    1. More information at
+       [stream-loader](https://github.com/Senzing/stream-loader#directive).
+1. Values:
+    1. Default: `senzingStreamLoader`
 
 ### SENZING_SUBCOMMAND
 
