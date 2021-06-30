@@ -32,3 +32,9 @@ export SENZING_DOCKER_IMAGE_VERSION_SWAGGERAPI_SWAGGER_UI=latest
 export SENZING_DOCKER_IMAGE_VERSION_WEB_APP_DEMO=2.1.1
 export SENZING_DOCKER_IMAGE_VERSION_XTERM=1.1.0
 export SENZING_DOCKER_IMAGE_VERSION_YUM=1.1.4
+
+echo "ERROR:"
+echo "Deprecated.  Will be removed after September 30, 2021"
+echo "Contents have moved to https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-stable.sh"
+
+exit 1
