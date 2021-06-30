@@ -17,7 +17,7 @@ DOCKER_IMAGE_NAMES=(
   "senzing/db2-driver-installer:1.0.2"
   "senzing/entity-search-web-app:2.1.1"
   "senzing/init-container:1.6.4"
-  "senzing/jupyter:1.2.0"
+  "senzing/jupyter:1.3.0"
   "senzing/mysql-init:latest"
   "senzing/phppgadmin:1.0.0"
   "senzing/postgresql-client:1.0.0"
