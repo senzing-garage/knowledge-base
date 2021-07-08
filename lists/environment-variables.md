@@ -1709,6 +1709,13 @@
 
 ### SENZING_RABBITMQ_FAILURE_VIRTUAL_HOST
 
+1. Synopsis:
+    1. The name of the virtual host where the failure queue exists.
+1. Values:
+    1. Default: SENZING_RABBITMQ_VIRTUAL_HOST
+1. Where used:
+    1. [stream-producer](https://github.com/Senzing/stream-producer)
+
 ### SENZING_RABBITMQ_HEARTBEAT_IN_SECONDS
 
 1. Synopsis:
@@ -1793,6 +1800,13 @@
 
 ### SENZING_RABBITMQ_INFO_VIRTUAL_HOST
 
+1. Synopsis:
+    1. The name of the virtual host where the info queue exists.
+1. Values:
+    1. Default: SENZING_RABBITMQ_VIRTUAL_HOST
+1. Where used:
+    1. [stream-producer](https://github.com/Senzing/stream-producer)
+
 ### SENZING_RABBITMQ_PASSWORD
 
 1. Synopsis:
@@ -1851,7 +1865,21 @@
 
 ### SENZING_RABBITMQ_RECONNECT_DELAY_IN_SECONDS
 
+1. Synopsis:
+    1. The time (in seconds) to wait between attempts to reconnect to the RabbitMQ broker.
+1. Values:
+    1. Default: 60
+1. Where used:
+    1. [stream-loader](https://github.com/Senzing/stream-loader),
+
 ### SENZING_RABBITMQ_RECONNECT_NUMBER_OF_RETRIES
+
+1. Synopsis:
+    1. The number of times to try reconnecting a dropped connection to the RabbitMQ broker.
+1. Values:
+    1. Default: 10
+1. Where used:
+    1. [stream-loader](https://github.com/Senzing/stream-loader),
 
 ### SENZING_RABBITMQ_ROUTING_FAILURE_KEY
 
@@ -1893,12 +1921,19 @@
 ### SENZING_RABBITMQ_USE_EXISTING_ENTITIES
 
 1. Synopsis:
-    1. Use existing entities. That is, don't create the entities.
+    1. Use existing RabbitMQ entities (exchanges, queues). That is, don't create the entities.
 1. Where used:
     1. [stream-producer](https://github.com/Senzing/stream-producer),
     1. [stream-loader](https://github.com/Senzing/stream-loader),
 
 ### SENZING_RABBITMQ_VIRTUAL_HOST
+
+1. Synopsis:
+    1. The name of the virtual host where the queues exists.
+1. Values:
+    1. Default: The RabbitMQ defined default virtual host, which is currently '\'
+1. Where used:
+    1. [stream-producer](https://github.com/Senzing/stream-producer)
 
 ### SENZING_RANDOM_SEED
 
