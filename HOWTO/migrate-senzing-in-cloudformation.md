@@ -4,7 +4,7 @@
 
 1. [Log into SSHD container](#log-into-sshd-container)
 1. [Upgrade Senzing binaries](#upgrade-senzing-binaries)
-1. [Upgrade database configuration](#upgrade-database-configuration)
+1. [Upgrade database schema](#upgrade-database-schema)
 1. [Upgrade Senzing configuration](#upgrade-senzing-configuration)
 
 ## Log into SSHD container
@@ -109,11 +109,14 @@ The following commands are performed inside the SSHD container.
 
    When prompted, accept the license terms and conditions.
 
-## Upgrade database configuration
+## Upgrade database schema
 
 The following commands are performed inside the SSHD container.
 
-1. Upgrade database configuration.
+:thinking: This step may not be required when upgrading.
+Review the [Senzing API Release Notes](https://senzing.com/releases/#api-releases) to check if a schema upgrade is optional or required. Specific enhancements or fixes may require a schema update to be functional. Schema upgrade files are located in `/opt/senzing/g2/resources/schema/`.
+
+1. Upgrade database schema.
    Example:
 
     ```console
@@ -127,7 +130,7 @@ The following commands are performed inside the SSHD container.
 The following commands are performed inside the SSHD container.
 
 :thinking: This step may not be required when upgrading.
-Review the upgrade files in `/opt/senzing/g2/resources/config/` to see if an upgrade is required.
+Review the [Senzing API Release Notes](https://senzing.com/releases/#api-releases) to check if a configuration upgrade is optional or required. Specific enhancements or fixes may require a configuration update to be functional. If you are upgrading between multiple versions, you must run every configuration update script in consecutive order from your current version to the latest version. Senzing configuration upgrade files are located in `/opt/senzing/g2/resources/config/`.
 
 1. :pencil2: Identify Senzing configuration file.
    Example:
