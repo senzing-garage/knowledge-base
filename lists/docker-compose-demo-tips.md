@@ -226,12 +226,13 @@ The Senzing REST API server supports the
     export G2_LICENSE_PATH=/path/to/local/g2.lic
     ```
 
-1. Copy license to volume.
+1. Copy license to volume. Note, the license file must be named g2.lic
    Example:
 
     ```console
     sudo cp ${G2_LICENSE_PATH} ${SENZING_ETC_DIR}/g2.lic
     ```
+1. :warning: Restart the entire stack or individual contatiners that instantiate Senzing engine objects, e.g. stream-loader, redoer, API server. The license file is referenced at engine initialization and isn't dynamically read when a license file is first deployed or updated. 
 
 ### Updating G2Module.ini
 
