@@ -6,6 +6,7 @@
 ## Install
 
 1. [Install](https://docs.microsoft.com/en-us/azure/azure-resource-manager/bicep/install)
+1. [Alternative installation instructions](https://github.com/Azure/bicep/blob/main/docs/installing.md)
 
 
 ## References
