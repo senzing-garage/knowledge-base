@@ -8,6 +8,7 @@
 ## References
 
 1. [Official site](https://docs.microsoft.com/en-us/azure/azure-resource-manager/bicep/)
+    1. [Install](https://docs.microsoft.com/en-us/azure/azure-resource-manager/bicep/install)
 1. [GitHub](https://github.com/Azure/bicep)
 
 
