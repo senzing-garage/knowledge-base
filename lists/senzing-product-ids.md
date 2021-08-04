@@ -29,6 +29,7 @@ Used in log message identifiers in the format `senzing-ppppnnnnt`, where:
 1. **5020** - [senzing_accountant.py](https://github.com/Senzing/accountant-aws-marketplace)
 1. **5021** - [accountant-aws-marketplace.py](https://github.com/Senzing/accountant-aws-marketplace)
 1. **5022** - [cognito_authorizer.py](https://github.com/Senzing/aws-lambda-cognito-authorizer/blob/main/cognito_authorizer.py)
+1. **5023** - [git-submodule-versions.py](https://github.com/Senzing/g2-python/blob/main/bin/github-submodule-versions.py)
 
 ## Docker apps
 
