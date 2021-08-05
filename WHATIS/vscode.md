@@ -9,6 +9,12 @@
 
 1. [Video: Demo of formatting with Pylance](https://youtu.be/mt91AHxUyMw?t=719)
 
+### Sort lines
+
+1. Hilight lines to be sorted
+1. Ctrl-Shift-P
+1. In the drop-down, search for "Sort"
+
 ## Sites
 
 1. [Wikipedia](https://en.wikipedia.org/wiki/Kanban_(development))
