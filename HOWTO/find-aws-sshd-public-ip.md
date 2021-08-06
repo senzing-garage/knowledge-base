@@ -18,3 +18,21 @@ From the list of services, click the sshd service name.
 
 ![Open sshd service](find-aws-sshd-public-ip/openSshd.png "Open sshd service")
 
+## Select the tasks tab
+
+On the sshd service page select the tasks tab
+
+![Open tasks tab](find-aws-sshd-public-ip/taskTab.png "Open tasks tab")
+
+## Select the task id
+
+On the tasks tab click the task id link, left hand column.
+
+![Open task id link](find-aws-sshd-public-ip/taskIDLink.png "Open task id link")
+
+## Find the public ip
+
+On the task page, the public IP can be found in the network section
+
+![Find task id](find-aws-sshd-public-ip/publicIP.png "Find task id")
+
