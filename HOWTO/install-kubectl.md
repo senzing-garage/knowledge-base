@@ -39,6 +39,18 @@ For detailed installation, see [Kubernetes documentation](https://kubernetes.io/
 
 ### Windows
 
+### Azure
+
+1. If
+   [Azure Command Line Interface (CLI)](https://github.com/Senzing/knowledge-base/blob/master/WHATIS/azure-cli.md)
+   is installed, `kubectl` can be installed using
+   [az aks install-cli](https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest#az_aks_install_cli)
+   Example:
+
+    ```console
+    az aks install-cli
+    ```
+
 ## Test
 
 ## Troubleshooting
