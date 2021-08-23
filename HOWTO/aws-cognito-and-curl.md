@@ -87,5 +87,5 @@ So do expect it to work, yet.
       --location \
       --insecure \
       --header "Authorization: Bearer ${SENZING_COGNITO_ACCESS_TOKEN}" \
-      ${SENZING_UrlApiServerHeartbeat}
+      ${SENZING_URLAPISERVERHEARTBEAT}
     ```
