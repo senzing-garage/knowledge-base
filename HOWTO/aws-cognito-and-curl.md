@@ -1,5 +1,10 @@
 # How to use curl with AWS Cognito
 
+## NOT COMPLETE!
+
+Currently these instructions are a work in progress and do not produce a successful result.
+So do expect it to work, yet.
+
 ## Create App client in UserPool
 
 1. Visit [AWS Your User pools](https://console.aws.amazon.com/cognito/users)
