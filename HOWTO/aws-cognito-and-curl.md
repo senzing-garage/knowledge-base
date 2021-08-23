@@ -1,6 +1,6 @@
 # How to use curl with AWS Cognito
 
-## NOT COMPLETE!
+## WARNING - NOT COMPLETE
 
 Currently these instructions are a work in progress and do not produce a successful result.
 So do expect it to work, yet.
@@ -8,9 +8,9 @@ So do expect it to work, yet.
 ## Create App client in UserPool
 
 1. Visit [AWS Your User pools](https://console.aws.amazon.com/cognito/users)
-1. General Settings > [App clients](https://console.aws.amazon.com/cognito/users/?#/pool)
+1. General Settings > App clients
 1. Click "Add another app client"
-    1. **App client name:** [pick anything]
+    1. App client name: [pick anything]
     1. Expirations: [pick anything]
     1. Uncheck :black_square_button: Generate client secret
     1. Check :ballot_box_with_check: Enable username password based authentication (`ALLOW_USER_PASSWORD_AUTH`)
@@ -23,13 +23,18 @@ So do expect it to work, yet.
    Example:
 
     ```console
-    export AWS_REGION=us-east-1
     export AWS_COGNITO_CLIENT_ID=xxxxxxxxxxxxxxxxxxxxxxxxxx
-    export AWS_COGNITO_USERNAME=xxxxxxx@senzing.com
     export AWS_COGNITO_PASSWORD=xxxxxxxxxxxxxxxx
+    export AWS_COGNITO_USERNAME=xxxxxxx@senzing.com
+    export AWS_REGION=us-east-1
     export SENZING_COGNITO_PROJECT_DIR=~/test-cognito
-    export SENZING_UrlApiServerHeartbeat="https://stack-name-alb-public-0000000000.aws-region.elb.amazonaws.com/api/heartbeat/"
+    export SENZING_URLAPISERVERHEARTBEAT="https://stack-name-alb-public-0000000000.aws-region.elb.amazonaws.com/api/heartbeat/"
     ```
+
+    1. **AWS_COGNITO_CLIENT_ID** - from prior step
+    1. **AWS_COGNITO_PASSWORD** - The password you gave after entering the "one-time" password
+    1. **AWS_COGNITO_USERNAME** - From Cloudformation output *UserName*
+    1. **SENZING_URLAPISERVERHEARTBEAT** - From Cloudformation output *UrlApiServerHeartbeat*
 
 1. Create project directory.
    Example:
