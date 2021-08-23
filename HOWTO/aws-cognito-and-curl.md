@@ -28,7 +28,7 @@ So do expect it to work, yet.
     export AWS_COGNITO_USERNAME=xxxxxxx@senzing.com
     export AWS_REGION=us-east-1
     export SENZING_COGNITO_PROJECT_DIR=~/test-cognito
-    export SENZING_URLAPISERVERHEARTBEAT="https://stack-name-alb-public-0000000000.aws-region.elb.amazonaws.com/api/heartbeat/"
+    export SENZING_URLAPISERVERHEARTBEAT="https://.../api/heartbeat/"
     ```
 
     1. **AWS_COGNITO_CLIENT_ID** - from prior step
