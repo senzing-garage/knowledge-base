@@ -51,7 +51,6 @@ So do expect it to work, yet.
     ```console
     curl -X POST \
       --verbose \
-      --include \
       --header 'X-Amz-Target: AWSCognitoIdentityProviderService.InitiateAuth' \
       --header 'Content-Type: application/x-amz-json-1.1' \
       --data "
