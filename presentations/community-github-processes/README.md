@@ -16,6 +16,22 @@
    The issue is the basis of all provenance.
    It identifies *why* code is being changed and
    ties together branches, pull requests, and merges.
+1. Input:
+    1. **Title:** Concise description of the issue.
+    1. **Write:** Detailed description of the issue.
+    1. **Assignees:** Individual(s) responsible for completing the issue.
+       Can remain unassigned in the "Backlog" and "On deck".
+       Needs to be assigned when "In Progress".
+    1. **Labels:** Used to identify issue as a member of 0 or more groups
+       "Triage" will be added automatically and can be removed if no triage is needed.
+    1. **Projects:** Used to track progress of issue in a team Kanban project board.
+1. Examples:
+    1. In https://github.com/Senzing/stream-loader/issues/231
+        1. "mentions" - See other related issues and whether they are open or closed
+        1. "commits" - by clicking on an abbreviated "commit SHA", the change is shown.
+        1. "build status" - by clicking on the "x" or "check", you can see the checks that were performed
+        1. , "labels", "github-actions", "merges", "comments"
+
 
 ### Create a branch
 
@@ -45,6 +61,7 @@
 
 ### Create a Pull Request
 
+1. Review your changes
 1. Assign a reviewer
 1. Make "Assignees" yourself.
    **Why?**
