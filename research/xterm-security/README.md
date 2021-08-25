@@ -2,6 +2,12 @@
 
 ## XTerm vs. SSHD container
 
+The following chart compares security attributes of
+[XTerm](https://github.com/Senzing/docker-xterm)
+and
+[sshd](https://github.com/Senzing/docker-sshd).
+
+
 | Feature             | XTerm      | SSHD       | Notes                                  |
 |---------------------|------------|------------| ---------------------------------------|
 | Inbound CIDR        | Yes        | Yes        | Configured by cloudformation template. |
