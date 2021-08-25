@@ -22,13 +22,13 @@
 ### Network traffic for socketio
 
 Using
-[wireshark](https://www.wireshark.org/)
-it is seen that the network traffic for XTerm is protected by TLSv1.2
-and network traffic for SSH is protected by SSH
+[wireshark](https://www.wireshark.org/),
+it is seen that the network traffic for XTerm is encrypted by the TLSv1.2 protocol
+and network traffic for SSH is encrypted by the SSH protocol.
 
 #### XTerm to host traffic
 
-In the image, five keys were hit `test<return`.
+In the image, five keys were hit "`test<return>`".
 Five packets were sent to the host, all using TLSv1.2
 When inspecting the packets, the keystrokes were not seen in cleartext.
 
