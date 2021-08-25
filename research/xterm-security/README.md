@@ -2,20 +2,30 @@
 
 ## XTerm vs. SSHD container
 
-| Feature            | XTerm      | SSHD       | Notes                                  |
-|--------------------|------------|------------| ---------------------------------------|
-| Inbound CIDR       | Yes        | Yes        | Configured by cloudformation template. |
-| AWS Cognito        | Yes        | No         | |
-| - Unique users     | Yes        | No         | |
-| - Unique passwords | Yes        | No         | |
-| - Revoke users     | Yes        | No         | |
-| - MFA support      | Yes        | No         | |
-| Network transport  | TLSv1.2    | SSH        | |
-| Runs as            | 1001       | root       | Configured by cloudformation template. |
-| sudo command       | No         | Yes        | |
-| /opt/senzing       | read-only  | read-write | Configured by cloudformation template. |
-| /etc/opt/senzing   | read-only  | read-write | Configured by cloudformation template. |
-| /var/opt/senzing   | read-write | read-write | Configured by cloudformation template. |
+| Feature             | XTerm      | SSHD       | Notes                                  |
+|---------------------|------------|------------| ---------------------------------------|
+| Inbound CIDR        | Yes        | Yes        | Configured by cloudformation template. |
+| AWS Cognito         | Yes        | No         | |
+| - Unique users      | Yes        | No         | |
+| - Unique passwords  | Yes        | No         | |
+| - Revoke users      | Yes        | No         | |
+| - MFA support       | Yes        | No         | |
+| Network transport   | TLSv1.2    | SSH        | |
+| Runs as             | 1001       | root       | Configured by cloudformation template. |
+| sudo command        | No         | Yes        | |
+| /opt/senzing        | read-only  | read-write | Configured by cloudformation template. |
+| /etc/opt/senzing    | read-only  | read-write | Configured by cloudformation template. |
+| /var/opt/senzing    | read-write | read-write | Configured by cloudformation template. |
+| Individual sessions | No         | Yes        | |
+
+1. **Inbound CIDR:**
+   Access to the service (XTerm or SSH) can be limited by specifying a CIDR at Cloudformation deployment time.
+1. **sudo command:**
+   Does the `sudo` command exist.
+1. **Individual sessions:**
+   Does each login have an individual terminal?
+   "No" means that all logged in users see exactly the same terminal.
+   "Yes" means that each logged in user gets a separate terminal shell.
 
 ## Details
 
