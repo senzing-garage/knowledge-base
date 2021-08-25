@@ -7,7 +7,6 @@ The following chart compares security attributes of
 and
 [sshd](https://github.com/Senzing/docker-sshd).
 
-
 | Feature             | XTerm      | SSHD       | Notes                                  |
 |---------------------|------------|------------| ---------------------------------------|
 | Inbound CIDR        | Yes        | Yes        | Configured by cloudformation template. |
@@ -15,7 +14,8 @@ and
 | - Unique users      | Yes        | No         | |
 | - Unique passwords  | Yes        | No         | |
 | - Revoke users      | Yes        | No         | |
-| - MFA support       | Yes        | No         | |
+| - MFA support       | Yes        | No         | Optional Cognito feature. |
+| - Auditing          | Yes        | No         | Optional Cognito feature. |
 | Network transport   | TLSv1.2    | SSH        | |
 | Runs as             | 1001       | 0 - root   | Configured by cloudformation template. |
 | sudo command        | No         | Yes        | |
@@ -24,6 +24,8 @@ and
 | /var/opt/senzing    | read-write | read-write | Configured by cloudformation template. |
 | Individual sessions | No         | Yes        | |
 | scp                 | No         | Yes        | |
+| su                  | No         | Yes        | |
+| adduser / useradd   | No         | Yes        | Root authority is needed to add users. |
 
 1. **Inbound CIDR:**
    Access to the service (XTerm or SSH) can be limited by specifying a CIDR at Cloudformation deployment time.
@@ -35,7 +37,9 @@ and
    "Yes" means that each logged in user gets a separate terminal shell.
 1. **scp:**
    Can `scp` be used to upload/download files?
-
+1. **su:**
+   Can `su` be used to switch "Run As" user?
+   In "XTerm", there is no user 1001 in `/etc/passwd`, so the password for a `su` doesn't exist.
 
 ## Details
 
