@@ -11,7 +11,7 @@
 | - Revoke users      | Yes        | No         | |
 | - MFA support       | Yes        | No         | |
 | Network transport   | TLSv1.2    | SSH        | |
-| Runs as             | 1001       | root       | Configured by cloudformation template. |
+| Runs as             | 1001       | 0 - root   | Configured by cloudformation template. |
 | sudo command        | No         | Yes        | |
 | /opt/senzing        | read-only  | read-write | Configured by cloudformation template. |
 | /etc/opt/senzing    | read-only  | read-write | Configured by cloudformation template. |
