@@ -43,6 +43,11 @@ and
 
 ## Details
 
+### xterm.js
+
+1. [GitHub repository](https://github.com/xtermjs/xterm.js)
+1. [Real world uses](https://github.com/xtermjs/xterm.js#real-world-uses)
+
 ### Network traffic for socketio
 
 Using
