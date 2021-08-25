@@ -23,15 +23,19 @@ and
 | /etc/opt/senzing    | read-only  | read-write | Configured by cloudformation template. |
 | /var/opt/senzing    | read-write | read-write | Configured by cloudformation template. |
 | Individual sessions | No         | Yes        | |
+| scp                 | No         | Yes        | |
 
 1. **Inbound CIDR:**
    Access to the service (XTerm or SSH) can be limited by specifying a CIDR at Cloudformation deployment time.
 1. **sudo command:**
-   Does the `sudo` command exist.
+   Does the `sudo` command exist?
 1. **Individual sessions:**
    Does each login have an individual terminal?
    "No" means that all logged in users see exactly the same terminal.
    "Yes" means that each logged in user gets a separate terminal shell.
+1. **scp:**
+   Can `scp` be used to upload/download files?
+
 
 ## Details
 
