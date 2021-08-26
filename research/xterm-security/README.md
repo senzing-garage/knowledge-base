@@ -10,10 +10,10 @@ and
 | Feature             | XTerm      | SSHD       | Notes                                  |
 |---------------------|------------|------------| ---------------------------------------|
 | Inbound CIDR        | Yes        | Yes        | Configured by cloudformation template. |
-| AWS Cognito         | Yes        | No         | |
-| - Unique users      | Yes        | No         | |
-| - Unique passwords  | Yes        | No         | |
-| - Revoke users      | Yes        | No         | |
+| Authentication      | Yes        | Yes        | |
+| - Unique users      | Yes        | Yes        | |
+| - Unique passwords  | Yes        | Yes        | |
+| - Revoke users      | Yes        | Yes        | |
 | - MFA support       | Yes        | No         | Optional Cognito feature. |
 | - Auditing          | Yes        | No         | Optional Cognito feature. |
 | Network transport   | TLSv1.2    | SSH        | |
@@ -47,6 +47,7 @@ and
 
 1. [GitHub repository](https://github.com/xtermjs/xterm.js)
 1. [Real world uses](https://github.com/xtermjs/xterm.js#real-world-uses)
+1. [Hardening xterm](https://xtermjs.org/docs/guides/security/#gain-back-users-trust---harden-your-application)
 
 ### Network traffic for socketio
 
