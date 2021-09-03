@@ -9,6 +9,8 @@
     1. See [Adminer on DockerHub](https://hub.docker.com/_/adminer)
 1. Where used:
     1. [docker-adminer](https://github.com/Senzing/docker-adminer),
+1. [Where used](https://github.com/search?q=org%3ASenzing+ADMINER_DEFAULT_SERVER&type=code)
+
 
 ### AWS_ACCESS_KEY_ID
 
