@@ -1,5 +1,7 @@
 # How to migrate Senzing in AWS Cloudformation
 
+:no_entry: [DEPRECATED] These instructions are for older Cloudformations. For current Cloudformations, please create a stack using the newer Senzing API version connecting to the current stack's database. Test the new stack, and then delete the old stack as desired.
+
 ## Contents
 
 1. [Log into SSHD container](#log-into-sshd-container)
