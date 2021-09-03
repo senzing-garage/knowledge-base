@@ -7,10 +7,7 @@
 1. Synopsis:
     1. The default hostname/ip-address of the database server.
     1. See [Adminer on DockerHub](https://hub.docker.com/_/adminer)
-1. Where used:
-    1. [docker-adminer](https://github.com/Senzing/docker-adminer),
 1. [Where used](https://github.com/search?q=org%3ASenzing+ADMINER_DEFAULT_SERVER&type=code)
-
 
 ### AWS_ACCESS_KEY_ID
 
@@ -19,24 +16,21 @@
     1. When used in python programs, see [Boto3 Configuration, Using environment variables](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/configuration.html#using-environment-variables).
 1. Examples:
     1. See [How to set AWS environment variables](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/set-aws-environment-variables.md#aws_access_key_id)
-1. Where used:
-    1. [stream-producer](https://github.com/Senzing/stream-producer),
+1. [Where used](https://github.com/search?q=org%3ASenzing+AWS_ACCESS_KEY_ID&type=code)
 
 ### AWS_CA_BUNDLE
 
 1. Synopsis:
     1. The path to a custom certificate bundle to use when establishing SSL/TLS connections.
     1. When used in python programs, see [Boto3 Configuration, Using environment variables](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/configuration.html#using-environment-variables).
-1. Where used:
-    1. [stream-producer](https://github.com/Senzing/stream-producer),
+1. [Where used](https://github.com/search?q=org%3ASenzing+AWS_CA_BUNDLE&type=code)
 
 ### AWS_CONFIG_FILE
 
 1. Synopsis:
     1. The location of the config file.
     1. When used in python programs, see [Boto3 Configuration, Using environment variables](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/configuration.html#using-environment-variables).
-1. Where used:
-    1. [stream-producer](https://github.com/Senzing/stream-producer),
+1. [Where used](https://github.com/search?q=org%3ASenzing+AWS_CONFIG_FILE&type=code)
 
 ### AWS_DATA_PATH
 
