@@ -31,6 +31,8 @@ Used in log message identifiers in the format `senzing-ppppnnnnt`, where:
 1. **5022** - [cognito_authorizer.py](https://github.com/Senzing/aws-lambda-cognito-authorizer/blob/main/cognito_authorizer.py)
 1. **5023** - [git-submodule-versions.py](https://github.com/Senzing/g2-python/blob/main/bin/github-submodule-versions.py)
 1. **5024** - [docker-xterm](https://github.com/Senzing/docker-xterm)
+1. **5025** - [senzing-api-server](https://github.com/Senzing/senzing-api-server)
+1. **5026** - [senzing-poc-server](https://github.com/Senzing/senzing-poc-server)
 
 ## Docker apps
 
