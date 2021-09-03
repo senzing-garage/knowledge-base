@@ -6,7 +6,7 @@ Used in log message identifiers in the format `senzing-ppppnnnnt`, where:
 - "n" is the 4 digit message identifier within product
 - "t" is the 1 character message type: Info, Warn, Error
 
-## Python scripts
+## Senzing components
 
 1. **5001** - [stream-loader.py](https://github.com/Senzing/stream-loader/blob/master/stream-loader.py)
 1. **5002** - [mock-data-generator.py](https://github.com/Senzing/mock-data-generator/blob/master/mock-data-generator.py)
