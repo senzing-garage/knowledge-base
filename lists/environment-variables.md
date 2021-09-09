@@ -37,8 +37,7 @@
 1. Synopsis:
     1. A list of additional directories to check when loading botocore data.
     1. When used in python programs, see [Boto3 Configuration, Using environment variables](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/configuration.html#using-environment-variables).
-1. Where used:
-    1. [stream-producer](https://github.com/Senzing/stream-producer),
+1. [Where used](https://github.com/search?q=org%3ASenzing+AWS_DATA_PATH&type=code)
 
 ### AWS_DEFAULT_REGION
 
@@ -49,16 +48,14 @@
     1. `us-east-1`
     1. `us-west-2`
     1. See [How to set AWS environment variables](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/set-aws-environment-variables.md#aws_default_region)
-1. Where used:
-    1. [stream-producer](https://github.com/Senzing/stream-producer),
+1. [Where used](https://github.com/search?q=org%3ASenzing+AWS_DEFAULT_REGION&type=code)
 
 ### AWS_MAX_ATTEMPTS
 
 1. Synopsis:
     1. The total number of attempts made for a single request.
     1. When used in python programs, see [Boto3 Configuration, Using environment variables](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/configuration.html#using-environment-variables).
-1. Where used:
-    1. [stream-producer](https://github.com/Senzing/stream-producer),
+1. [Where used](https://github.com/search?q=org%3ASenzing+AWS_MAX_ATTEMPTS&type=code)
 
 ### AWS_METADATA_SERVICE_NUM_ATTEMPTS
 
@@ -67,32 +64,28 @@
     1. When used in python programs, see [Boto3 Configuration, Using environment variables](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/configuration.html#using-environment-variables).
 1. Values:
     - Default: 1
-1. Where used:
-    1. [stream-producer](https://github.com/Senzing/stream-producer),
+1. [Where used](https://github.com/search?q=org%3ASenzing+AWS_METADATA_SERVICE_NUM_ATTEMPTS&type=code)
 
 ### AWS_METADATA_SERVICE_TIMEOUT
 
 1. Synopsis:
     1. The number of seconds before a connection to the instance metadata service should time out.
     1. When used in python programs, see [Boto3 Configuration, Using environment variables](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/configuration.html#using-environment-variables).
-1. Where used:
-    1. [stream-producer](https://github.com/Senzing/stream-producer),
+1. [Where used](https://github.com/search?q=org%3ASenzing+AWS_METADATA_SERVICE_TIMEOUT&type=code)
 
 ### AWS_PROFILE
 
 1. Synopsis:
     1. The default profile to use, if any.
     1. When used in python programs, see [Boto3 Configuration, Using environment variables](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/configuration.html#using-environment-variables).
-1. Where used:
-    1. [stream-producer](https://github.com/Senzing/stream-producer),
+1. [Where used](https://github.com/search?q=org%3ASenzing+AWS_PROFILE&type=code)
 
 ### AWS_RETRY_MODE
 
 1. Synopsis:
     1. Specifies the types of retries the SDK will use.
     1. When used in python programs, see [Boto3 Configuration, Using environment variables](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/configuration.html#using-environment-variables).
-1. Where used:
-    1. [stream-producer](https://github.com/Senzing/stream-producer),
+1. [Where used](https://github.com/search?q=org%3ASenzing+AWS_RETRY_MODE&type=code)
 
 ### AWS_SECRET_ACCESS_KEY
 
@@ -101,8 +94,7 @@
     1. When used in python programs, see [Boto3 Configuration, Using environment variables](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/configuration.html#using-environment-variables).
 1. Examples:
     1. See [How to set AWS environment variables](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/set-aws-environment-variables.md#aws_secret_access_key)
-1. Where used:
-    1. [stream-producer](https://github.com/Senzing/stream-producer),
+1. [Where used](https://github.com/search?q=org%3ASenzing+AWS_SECRET_ACCESS_KEY&type=code)
 
 ### AWS_SESSION_TOKEN
 
@@ -111,8 +103,7 @@
     1. When used in python programs, see [Boto3 Configuration, Using environment variables](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/configuration.html#using-environment-variables).
 1. Examples:
     1. See [How to set AWS environment variables](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/set-aws-environment-variables.md#aws_session_token)
-1. Where used:
-    1. [stream-producer](https://github.com/Senzing/stream-producer),
+1. [Where used](https://github.com/search?q=org%3ASenzing+AWS_SESSION_TOKEN&type=code)
 
 ### AWS_SHARED_CREDENTIALS_FILE
 
@@ -121,16 +112,14 @@
     1. When used in python programs, see [Boto3 Configuration, Using environment variables](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/configuration.html#using-environment-variables).
 1. Values:
     - Default: `~/.aws/credentials`
-1. Where used:
-    1. [stream-producer](https://github.com/Senzing/stream-producer),
+1. [Where used](https://github.com/search?q=org%3ASenzing+AWS_SHARED_CREDENTIALS_FILE&type=code)
 
 ### AWS_STS_REGIONAL_ENDPOINTS
 
 1. Synopsis:
     1. Sets AWS STS endpoint resolution logic.
     1. When used in python programs, see [Boto3 Configuration, Using environment variables](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/configuration.html#using-environment-variables).
-1. Where used:
-    1. [stream-producer](https://github.com/Senzing/stream-producer),
+1. [Where used](https://github.com/search?q=org%3ASenzing+AWS_STS_REGIONAL_ENDPOINTS&type=code)
 
 ### DATABASE_DATABASE
 
@@ -147,9 +136,7 @@
         export DATABASE_DATABASE=G2
         ```
 
-1. Where used:
-    1. [docker-g2command](https://github.com/Senzing/docker-g2command),
-       [docker-senzing-base](https://github.com/Senzing/docker-senzing-base),
+1. [Where used](https://github.com/search?q=org%3ASenzing+DATABASE_DATABASE&type=code)
 
 ### DATABASE_HOST
 
@@ -163,9 +150,7 @@
         export DATABASE_HOST=10.1.1.17
         ```
 
-1. Where used:
-    1. [docker-g2command](https://github.com/Senzing/docker-g2command),
-       [docker-senzing-base](https://github.com/Senzing/docker-senzing-base),
+1. [Where used](https://github.com/search?q=org%3ASenzing+DATABASE_HOST&type=code)
 
 ### DATABASE_PASSWORD
 
