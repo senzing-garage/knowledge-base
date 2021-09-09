@@ -253,8 +253,7 @@
     1. Password for the database "root" username.
 1. Values:
     1. Default: "db2inst1"
-1. Where used:
-    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo),
+1. [Where used](https://github.com/search?q=org%3ASenzing+DB2_PASSWORD&type=code)
 
 ### DB2_USERNAME
 
@@ -262,8 +261,7 @@
     1. The username for the the database "root" user.
 1. Values:
     1. Default: "db2inst1"
-1. Where used:
-    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo),
+1. [Where used](https://github.com/search?q=org%3ASenzing+DB2_USERNAME&type=code)
 
 ### DB2INST1_PASSWORD
 
@@ -271,8 +269,7 @@
     1. The password for the "db2inst1" user name.
 1. Values:
     1. Default: "db2inst1"
-1. Where used:
-    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo),
+1. [Where used](https://github.com/search?q=org%3ASenzing+DB2INST1_PASSWORD&type=code)
 
 ### DEMO_NAMESPACE
 
@@ -280,8 +277,7 @@
     1. In a Kubernetes environment, a value used for the namespace.
 1. Values:
     1. Example: "my-namespace"
-1. Where used:
-    1. [kubernetes-demo](https://github.com/Senzing/kubernetes-demo),
+1. [Where used](https://github.com/search?q=org%3ASenzing+DEMO_NAMESPACE&type=code)
 
 ### DEMO_PREFIX
 
@@ -289,8 +285,7 @@
     1. In a Kubernetes environment, a value prefixed used to object names.
 1. Values:
     1. Example: "my"
-1. Where used:
-    1. [kubernetes-demo](https://github.com/Senzing/kubernetes-demo),
+1. [Where used](https://github.com/search?q=org%3ASenzing+DEMO_PREFIX&type=code)
 
 ### DOCKER_APP
 
@@ -301,8 +296,7 @@
     1. "docker-app"
     1. "docker app"
     1. Default: None
-1. Where used:
-    1. [docker-app-demo](https://github.com/Senzing/docker-app-demo),
+1. [Where used](https://github.com/search?q=org%3ASenzing+DOCKER_APP&type=code)
 
 ### DOCKER_APP_PARAMETERS_FILE
 
@@ -310,15 +304,13 @@
     1. Location of file used in Docker App `--parameters-file` command-line option.
 1. Values:
     1. Default: None
-1. Where used:
-    1. [docker-app-demo](https://github.com/Senzing/docker-app-demo),
+1. [Where used](https://github.com/search?q=org%3ASenzing+DOCKER_APP_PARAMETERS_FILE&type=code)
 
 ### DOCKER_REGISTRY_SECRET
 
 1. Synopsis:
     1. In a Kubernetes environment, the name of the Kubernetes Secret for accessing the public or local Docker registry.
-1. Where used:
-    1. [kubernetes-demo](https://github.com/Senzing/kubernetes-demo),
+1. [Where used](https://github.com/search?q=org%3ASenzing+DOCKER_REGISTRY_SECRET&type=code)
 
 ### DOCKER_REGISTRY_URL
 
@@ -326,8 +318,7 @@
     1. URL of a public or local Docker registry.
 1. Values:
     1. Example: "docker.io"
-1. Where used:
-    1. [kubernetes-demo](https://github.com/Senzing/kubernetes-demo),
+1. [Where used](https://github.com/search?q=org%3ASenzing+DOCKER_REGISTRY_URL&type=code)
 
 ### G2_LICENSE_PATH
 
@@ -340,8 +331,7 @@
         export G2_LICENSE_PATH="~/Downloads/g2.lic"
         ```
 
-1. Where used:
-    1. [docker-g2command](https://github.com/Senzing/docker-compose-demo),
+1. [Where used](https://github.com/search?q=org%3ASenzing+G2_LICENSE_PATH&type=code)
 
 ### GIT_ACCOUNT
 
@@ -470,6 +460,22 @@
 1. Where used:
     1. [kubernetes-demo](https://github.com/Senzing/kubernetes-demo),
 
+### MSSQL_ACCEPT_EULA
+
+1. Synopsis:
+    1. This is your acceptance of the
+       "MICROSOFT ODBC DRIVER 17 FOR SQL SERVER" End User License Agreement (EULA).
+       The EULA is located at
+       [https://aka.ms/odbc17eula](https://aka.ms/odbc17eula).
+    1. This is for the `yum`/`apt` package named `msodbcsql17`.
+1. Values:
+    1. If you accept the "MICROSOFT ODBC DRIVER 17 FOR SQL SERVER" End User License Agreement (EULA),
+       (i.e. the `msodbcsql17` package)
+       the value is "Y"
+1. Examples:
+    1. See [Install the Microsoft ODBC driver for SQL Server (Linux)](https://docs.microsoft.com/en-us/sql/connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server)
+1. [Where used](https://github.com/search?q=org%3ASenzing+MSSQL_ACCEPT_EULA&type=code)
+
 ### MYSQL_DATABASE
 
 1. Synopsis:
@@ -595,7 +601,7 @@
        The EULA is located at
        [https://senzing.com/end-user-license-agreement](https://senzing.com/end-user-license-agreement/).
 1. Values:
-    1. If you accept the Senzing End User Licence Agreement (EULA),
+    1. If you accept the Senzing End User License Agreement (EULA),
        the value is "I_ACCEPT_THE_SENZING_EULA"
 1. Where used:
     1. [docker-yum](https://github.com/Senzing/docker-yum),
