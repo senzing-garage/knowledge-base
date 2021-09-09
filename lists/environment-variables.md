@@ -164,9 +164,7 @@
         export DATABASE_PASSWORD="my;password!"
         ```
 
-1. Where used:
-    1. [docker-g2command](https://github.com/Senzing/docker-g2command),
-       [docker-senzing-base](https://github.com/Senzing/docker-senzing-base),
+1. [Where used](https://github.com/search?q=org%3ASenzing+DATABASE_PASSWORD&type=code)
 
 ### DATABASE_PORT
 
@@ -186,9 +184,7 @@
         export DATABASE_PORT=5432
         ```
 
-1. Where used:
-    1. [docker-g2command](https://github.com/Senzing/docker-g2command),
-       [docker-senzing-base](https://github.com/Senzing/docker-senzing-base),
+1. [Where used](https://github.com/search?q=org%3ASenzing+DATABASE_PORT&type=code)
 
 ### DATABASE_PROTOCOL
 
@@ -209,9 +205,7 @@
         export DATABASE_PROTOCOL=postgresql
         ```
 
-1. Where used:
-    1. [docker-g2command](https://github.com/Senzing/docker-g2command),
-       [docker-senzing-base](https://github.com/Senzing/docker-senzing-base),
+1. [Where used](https://github.com/search?q=org%3ASenzing+DATABASE_PROTOCOL&type=code)
 
 ### DATABASE_USERNAME
 
@@ -225,9 +219,7 @@
         export DATABASE_USERNAME="my-user"
         ```
 
-1. Where used:
-    1. [docker-g2command](https://github.com/Senzing/docker-g2command),
-       [docker-senzing-base](https://github.com/Senzing/docker-senzing-base),
+1. [Where used](https://github.com/search?q=org%3ASenzing+DATABASE_USERNAME&type=code)
 
 ### DB2_CUSTOM_DIR
 
@@ -237,8 +229,7 @@
        docker container. Is mounted to `/var/custom`.
 1. Values:
     1. Default: None
-1. Where used:
-    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo),
+1. [Where used](https://github.com/search?q=org%3ASenzing+DB2_CUSTOM_DIR&type=code)
 
 ### DB2_DB
 
@@ -246,8 +237,7 @@
     1. The database schema name.
 1. Values:
     1. Default: "G2"
-1. Where used:
-    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo),
+1. [Where used](https://github.com/search?q=org%3ASenzing+DB2_DB&type=code)
 
 ### DB2_DIR
 
@@ -255,8 +245,7 @@
     1. Path on local system where the database files are stored.
 1. Values:
     1. Default: None.  Application dependent.
-1. Where used:
-    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo),
+1. [Where used](https://github.com/search?q=org%3ASenzing+DB2_DIR&type=code)
 
 ### DB2_PASSWORD
 
