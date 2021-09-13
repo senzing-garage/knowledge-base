@@ -335,83 +335,79 @@
 
 ### GIT_ACCOUNT
 
-1. Where used:
-    1. [docker-g2command](https://github.com/Senzing/docker-g2command),
-       [docker-senzing-base](https://github.com/Senzing/docker-senzing-base),
-       [docker-yum](https://github.com/Senzing/docker-yum),
-       [docker-yumdownloader](https://github.com/Senzing/docker-yumdownloader),
+1. [Where used](https://github.com/search?q=org%3ASenzing+GIT_ACCOUNT&type=code)
 
 ### GIT_ACCOUNT_DIR
 
-1. Where used:
-    1. [docker-g2command](https://github.com/Senzing/docker-g2command),
-       [docker-senzing-base](https://github.com/Senzing/docker-senzing-base),
-       [docker-yum](https://github.com/Senzing/docker-yum),
-       [docker-yumdownloader](https://github.com/Senzing/docker-yumdownloader),
+1. [Where used](https://github.com/search?q=org%3ASenzing+GIT_ACCOUNT_DIR&type=code)
 
 ### GIT_REPOSITORY
 
-1. Where used:
-    1. [docker-g2command](https://github.com/Senzing/docker-g2command),
-       [docker-senzing-base](https://github.com/Senzing/docker-senzing-base),
-       [docker-yum](https://github.com/Senzing/docker-yum),
-       [docker-yumdownloader](https://github.com/Senzing/docker-yumdownloader),
+1. [Where used](https://github.com/search?q=org%3ASenzing+GIT_REPOSITORY&type=code)
 
 ### GIT_REPOSITORY_DIR
 
-1. Where used:
-    1. [docker-g2command](https://github.com/Senzing/docker-g2command),
-       [docker-senzing-base](https://github.com/Senzing/docker-senzing-base),
-       [docker-yum](https://github.com/Senzing/docker-yum),
-       [docker-yumdownloader](https://github.com/Senzing/docker-yumdownloader),
+1. [Where used](https://github.com/search?q=org%3ASenzing+GIT_REPOSITORY_DIR&type=code)
 
 ### GITHUB_ACTION
 
 1. See [GitHub Actions environment variables](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/using-environment-variables#default-environment-variables).
+1. [Where used](https://github.com/search?q=org%3ASenzing+GITHUB_ACTION&type=code)
 
 ### GITHUB_ACTIONS
 
 1. See [GitHub Actions environment variables](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/using-environment-variables#default-environment-variables).
+1. [Where used](https://github.com/search?q=org%3ASenzing+GITHUB_ACTIONS&type=code)
 
 ### GITHUB_ACTOR
 
 1. See [GitHub Actions environment variables](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/using-environment-variables#default-environment-variables).
+1. [Where used](https://github.com/search?q=org%3ASenzing+GITHUB_ACTOR&type=code)
 
 ### GITHUB_BASE_REF
 
 1. See [GitHub Actions environment variables](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/using-environment-variables#default-environment-variables).
+1. [Where used](https://github.com/search?q=org%3ASenzing+GITHUB_BASE_REF&type=code)
 
 ### GITHUB_EVENT_NAME
 
 1. See [GitHub Actions environment variables](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/using-environment-variables#default-environment-variables).
+1. [Where used](https://github.com/search?q=org%3ASenzing+GITHUB_EVENT_NAME&type=code)
 
 ### GITHUB_EVENT_PATH
 
 1. See [GitHub Actions environment variables](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/using-environment-variables#default-environment-variables).
+1. [Where used](https://github.com/search?q=org%3ASenzing+GITHUB_EVENT_PATH&type=code)
 
 ### GITHUB_HEAD_REF
 
 1. See [GitHub Actions environment variables](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/using-environment-variables#default-environment-variables).
+1. [Where used](https://github.com/search?q=org%3ASenzing+GITHUB_HEAD_REF&type=code)
 
 ### GITHUB_REF
 
 1. See [GitHub Actions environment variables](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/using-environment-variables#default-environment-variables).
+1. [Where used](https://github.com/search?q=org%3ASenzing+GITHUB_REF&type=code)
 
 ### GITHUB_REPOSITORY
 
 1. See [GitHub Actions environment variables](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/using-environment-variables#default-environment-variables).
+1. [Where used](https://github.com/search?q=org%3ASenzing+GITHUB_REPOSITORY&type=code)
 
 ### GITHUB_SHA
 
 1. See [GitHub Actions environment variables](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/using-environment-variables#default-environment-variables).
+1. [Where used](https://github.com/search?q=org%3ASenzing+GITHUB_SHA&type=code)
 
 ### GITHUB_WORKFLOW
 
 1. See [GitHub Actions environment variables](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/using-environment-variables#default-environment-variables).
+1. [Where used](https://github.com/search?q=org%3ASenzing+GITHUB_WORKFLOW&type=code)
 
 ### GITHUB_WORKSPACE
 
 1. See [GitHub Actions environment variables](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/using-environment-variables#default-environment-variables).
+1. [Where used](https://github.com/search?q=org%3ASenzing+GITHUB_WORKSPACE&type=code)
 
 ### HELM_TLS
 
@@ -424,15 +420,13 @@
         export HELM_TLS="--tls"
         ```
 
-1. Where used:
-    1. [ibm-openshift-guide](https://github.com/Senzing/ibm-openshift-guide),
+1. [Where used](https://github.com/search?q=org%3ASenzing+HELM_TLS&type=code)
 
 ### HELM_VALUES_DIR
 
 1. Synopsis:
     1. In a Kubernetes environment, a directory holding files for use in the `helm --values` parameter.
-1. Where used:
-    1. [kubernetes-demo](https://github.com/Senzing/kubernetes-demo),
+1. [Where used](https://github.com/search?q=org%3ASenzing+HELM_VALUES_DIR&type=code)
 
 ### JUPYTER_NOTEBOOKS_PORT
 
@@ -441,8 +435,7 @@
     1. See [Port 9178](https://github.com/Senzing/knowledge-base/blob/master/lists/ports-used-in-demonstrations.md#9178)
 1. Values:
     1. Default: 9178
-1. Where used:
-    1. [docker-juptyer](https://github.com/Senzing/docker-jupyter),
+1. [Where used](https://github.com/search?q=org%3ASenzing+JUPYTER_NOTEBOOKS_PORT&type=code)
 
 ### JUPYTER_NOTEBOOKS_SHARED_DIR
 
