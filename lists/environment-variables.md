@@ -443,15 +443,13 @@
     1. A directory on the localhost that is shared with the docker container as Jupyter's `shared` folder.
 1. Values:
     1. Default: None
-1. Where used:
-    1. [docker-jupyter](https://github.com/Senzing/docker-jupyter),
+1. [Where used](https://github.com/search?q=org%3ASenzing+JUPYTER_NOTEBOOKS_SHARED_DIR&type=code)
 
 ### KUBERNETES_DIR
 
 1. Synopsis:
     1. In a Kubernetes environment, a directory holding files for use in the helm `kubectl --filename` parameter.
-1. Where used:
-    1. [kubernetes-demo](https://github.com/Senzing/kubernetes-demo),
+1. [Where used](https://github.com/search?q=org%3ASenzing+KUBERNETES_DIR&type=code)
 
 ### MSSQL_ACCEPT_EULA
 
@@ -475,8 +473,7 @@
     1. The database schema name.
 1. Values:
     1. Default: "G2"
-1. Where used:
-    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo),
+1. [Where used](https://github.com/search?q=org%3ASenzing+MYSQL_DATABASE&type=code)
 
 ### MYSQL_DIR
 
@@ -484,8 +481,7 @@
     1. Path on local system where the database files are stored.
 1. Values:
     1. Default: None.  Application dependent.
-1. Where used:
-    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo),
+1. [Where used](https://github.com/search?q=org%3ASenzing+MYSQL_DIR&type=code)
 
 ### MYSQL_PASSWORD
 
@@ -493,8 +489,7 @@
     1. Password for [MYSQL_USERNAME](#mysql_username).
 1. Values:
     1. Default: "g2"
-1. Where used:
-    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo),
+1. [Where used](https://github.com/search?q=org%3ASenzing+MYSQL_PASSWORD&type=code)
 
 ### MYSQL_ROOT_PASSWORD
 
@@ -502,8 +497,7 @@
     1. The password for the the database "root" user name.
 1. Values:
     1. Default: "root"
-1. Where used:
-    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo),
+1. [Where used](https://github.com/search?q=org%3ASenzing+MYSQL_ROOT_PASSWORD&type=code)
 
 ### MYSQL_USERNAME
 
@@ -511,8 +505,7 @@
     1. Non-root MySQL user.
 1. Values:
     1. Default: "g2"
-1. Where used:
-    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo),
+1. [Where used](https://github.com/search?q=org%3ASenzing+MYSQL_USERNAME&type=code)
 
 ### POSTGRES_DB
 
@@ -520,8 +513,7 @@
     1. The database schema name.
 1. Values:
     1. Default: "G2"
-1. Where used:
-    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo),
+1. [Where used](https://github.com/search?q=org%3ASenzing+POSTGRES_DB&type=code)
 
 ### POSTGRES_DIR
 
@@ -529,8 +521,7 @@
     1. Path on local system where the database files are stored.
 1. Values:
     1. Default: None.  Application dependent.
-1. Where used:
-    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo),
+1. [Where used](https://github.com/search?q=org%3ASenzing+POSTGRES_DIR&type=code)
 
 ### POSTGRES_PASSWORD
 
@@ -538,8 +529,7 @@
     1. The password for the the database "root" user name.
 1. Values:
     1. Default: "postgres"
-1. Where used:
-    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo),
+1. [Where used](https://github.com/search?q=org%3ASenzing+POSTGRES_PASSWORD&type=code)
 
 ### POSTGRES_USERNAME
 
@@ -547,10 +537,11 @@
     1. The username for the the database "root" user name.
 1. Values:
     1. Default: "postgres"
-1. Where used:
-    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo),
+1. [Where used](https://github.com/search?q=org%3ASenzing+POSTGRES_USERNAME&type=code)
 
 ### PYTHONPATH
+
+1. [Where used](https://github.com/search?q=org%3ASenzing+PYTHONPATH&type=code)
 
 ### RABBITMQ_DIR
 
@@ -558,8 +549,7 @@
     1. Path on local system where RabbitMQ files are stored.
 1. Values:
     1. Default: None.  Application dependent.
-1. Where used:
-    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo),
+1. [Where used](https://github.com/search?q=org%3ASenzing+RABBITMQ_DIR&type=code)
 
 ### RABBITMQ_PASSWORD
 
@@ -567,6 +557,7 @@
     1. the password for the RabbitMQ user.
 1. Values:
     1. Default: None.  Application dependent.
+1. [Where used](https://github.com/search?q=org%3ASenzing+RABBITMQ_PASSWORD&type=code)
 
 ### RABBITMQ_USE_EXISTING_ENTITIES
 
@@ -576,9 +567,7 @@
     1. Default: Varies
     2. True: Connect to an existing exchange or queue using the given name. Fails if the entity does not exist.
     3. False: Create the entities if they do not exist, or connect to a prexisting entity if it has the right settings. Fails if the settings passed when conncting differ from the settings on the existing entity.
-1. Where used:
-    1. [stream-loader](https://github.com/Senzing/stream-loader)
-    1. [stream-producer](https://github.com/Senzing/stream-producer)
+1. [Where used](https://github.com/search?q=org%3ASenzing+RABBITMQ_USE_EXISTING_ENTITIES&type=code)
 
 ### RABBITMQ_USERNAME
 
@@ -586,6 +575,7 @@
     1. the username for the RabbitMQ user.
 1. Values:
     1. Default: None.  Application dependent.
+1. [Where used](https://github.com/search?q=org%3ASenzing+RABBITMQ_USERNAME&type=code)
 
 ### SENZING_ACCEPT_EULA
 
@@ -596,8 +586,7 @@
 1. Values:
     1. If you accept the Senzing End User License Agreement (EULA),
        the value is "I_ACCEPT_THE_SENZING_EULA"
-1. Where used:
-    1. [docker-yum](https://github.com/Senzing/docker-yum),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_ACCEPT_EULA&type=code)
 
 ### SENZING_API_RPM_DIR
 
@@ -608,9 +597,7 @@
 1. Values:
     1. Format: `senzingapi-M.m.P.x86_64.rpm`
     1. Default: none
-1. Where used:
-    1. [docker-yum](https://github.com/Senzing/docker-yum),
-    1. [docker-yumdownloader](https://github.com/Senzing/docker-yumdownloader),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_RPM_DIR&type=code)
 
 ### SENZING_API_SERVICE_PORT
 
@@ -619,8 +606,7 @@
     1. See [Port 8250](https://github.com/Senzing/knowledge-base/blob/master/lists/ports-used-in-demonstrations.md#8250)
 1. Values:
     1. Default: 8250
-1. Where used:
-    1. [senzing-api-server](https://github.com/Senzing/senzing-api-server),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVICE_PORT&type=code)
 
 ### SENZING_API_SERVER_URL
 
@@ -637,15 +623,13 @@
         export SENZING_API_SERVER_URL="http://example.com:8250"
         ```
 
-1. Where used:
-    1. [entity-search-web-app](https://github.com/Senzing/entity-search-web-app),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_URL&type=code)
 
 ### SENZING_CONFIGURATION_CHECK_FREQUENCY
 
 1. Synopsis:
     1. Determine how often to check for a change in the Senzing configuration.
-1. Where used:
-    1. [stream-loader](https://github.com/Senzing/stream-loader),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_CONFIGURATION_CHECK_FREQUENCY&type=code)
 
 ### SENZING_CONFIG_PATH
 
@@ -653,14 +637,11 @@
     1. Used for `PIPELINE.CONFIGPATH` value in G2 Engine configuration.
 1. Values:
     1. Default: `/etc/opt/senzing`
-1. Where used:
-    1. [resolver](https://github.com/Senzing/resolver),
-    1. [stream-loader](https://github.com/Senzing/stream-loader),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_CONFIG_PATH&type=code)
 
 ### SENZING_DATA_DIR
 
-1. Where used:
-    1. [docker-yum](https://github.com/Senzing/docker-yum),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DATA_DIR&type=code)
 
 ### SENZING_DATA_RPM_DIR
 
@@ -670,9 +651,7 @@
 1. Values:
     1. Format: `senzingdata-M.m.P.x86_64.rpm`
     1. Default: none
-1. Where used:
-    1. [docker-yum](https://github.com/Senzing/docker-yum),
-    1. [docker-yumdownloader](https://github.com/Senzing/docker-yumdownloader),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DATA_RPM_DIR&type=code)
 
 ### SENZING_DATA_SOURCE
 
@@ -683,9 +662,7 @@
     1. Default: none
 1. Forms:
     1. Helm: senzing.dataSource
-1. Where used:
-    1. [resolver](https://github.com/Senzing/resolver),
-       [stream-loader](https://github.com/Senzing/stream-loader),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DATA_SOURCE&type=code)
 
 ### SENZING_DATA_VERSION_DIR
 
@@ -700,10 +677,7 @@
 1. Values:
     1. Default: none
     1. Usually set to `/opt/senzing/data/1.0.0`
-1. Where used:
-    1. [docker-g2command](https://github.com/Senzing/docker-g2command),
-       [docker-senzing-base](https://github.com/Senzing/docker-senzing-base),
-       [stream-loader](https://github.com/Senzing/stream-loader),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DATA_VERSION_DIR&type=code)
 
 ### SENZING_DATABASE_URL
 
@@ -740,11 +714,7 @@
 
 1. Forms:
     1. Helm: senzing.databaseUrl
-1. Where used:
-    1. [docker-g2command](https://github.com/Senzing/docker-g2command),
-       [docker-senzing-base](https://github.com/Senzing/docker-senzing-base),
-       [resolver](https://github.com/Senzing/resolver),
-       [stream-loader](https://github.com/Senzing/stream-loader),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DATABASE_URL&type=code)
 
 ### SENZING_DEBUG
 
@@ -763,11 +733,7 @@
 
 1. Forms:
     1. Helm: senzing.debug
-1. Where used:
-    1. [docker-g2command](https://github.com/Senzing/docker-g2command),
-       [docker-senzing-base](https://github.com/Senzing/docker-senzing-base),
-       [resolver](https://github.com/Senzing/resolver),
-       [stream-loader](https://github.com/Senzing/stream-loader),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DEBUG&type=code)
 
 ### SENZING_DELAY_IN_SECONDS
 
@@ -778,6 +744,8 @@
     1. [stream-loader](https://github.com/Senzing/stream-loader),
 
 ### SENZING_DELAY_RANDOMIZED
+
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DELAY_RANDOMIZED&type=code)
 
 ### SENZING_DIR
 
@@ -792,6 +760,7 @@
     1. Usually set to "/opt/senzing".
 1. Forms:
     1. Helm: senzing.senzingDir
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DIR&type=code)
 
 ### SENZING_DOCKER_HOST_IP_ADDR
 
@@ -826,8 +795,7 @@
 
        Copy and paste the printed export statement into the host terminal.
 
-1. Where used:
-    1. [senzing-environment](https://github.com/Senzing/senzing-environment),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_HOST_IP_ADDR&type=code)
 
 ### SENZING_DOCKER_IMAGE_VERSION_ADMINER
 
@@ -836,8 +804,7 @@
        [senzing/adminer](https://hub.docker.com/r/senzing/adminer).
 1. To see latest version, visit
    [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-latest.sh)
-1. Where used:
-    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo)
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_ADMINER&type=code)
 
 ### SENZING_DOCKER_IMAGE_VERSION_APT
 
@@ -846,8 +813,7 @@
        [senzing/apt](https://hub.docker.com/r/senzing/apt).
 1. To see latest version, visit
    [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-latest.sh)
-1. Where used:
-    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo)
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_APT&type=code)
 
 ### SENZING_DOCKER_IMAGE_VERSION_DB2_DRIVER_INSTALLER
 
@@ -856,8 +822,7 @@
        [senzing/db2-driver-installer](https://hub.docker.com/r/senzing/db2-driver-installer).
 1. To see latest version, visit
    [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-latest.sh)
-1. Where used:
-    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo)
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_DB2_DRIVER_INSTALLER&type=code)
 
 ### SENZING_DOCKER_IMAGE_VERSION_ENTITY_SEARCH_WEB_APP
 
@@ -866,8 +831,7 @@
        [senzing/entity-search-web-app](https://hub.docker.com/r/senzing/entity-search-web-app).
 1. To see latest version, visit
    [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-latest.sh)
-1. Where used:
-    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo)
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_ENTITY_SEARCH_WEB_APP&type=code)
 
 ### SENZING_DOCKER_IMAGE_VERSION_INIT_CONTAINER
 
@@ -876,8 +840,7 @@
        [senzing/init-container](https://hub.docker.com/r/senzing/init-container).
 1. To see latest version, visit
    [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-latest.sh)
-1. Where used:
-    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo)
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_INIT_CONTAINER&type=code)
 
 ### SENZING_DOCKER_IMAGE_VERSION_JUPYTER
 
@@ -886,8 +849,7 @@
        [senzing/jupyter](https://hub.docker.com/r/senzing/jupyter).
 1. To see latest version, visit
    [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-latest.sh)
-1. Where used:
-    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo)
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_JUPYTER&type=code)
 
 ### SENZING_DOCKER_IMAGE_VERSION_PHPPGADMIN
 
@@ -896,8 +858,7 @@
        [senzing/phppgadmin](https://hub.docker.com/r/senzing/phppgadmin).
 1. To see latest version, visit
    [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-latest.sh)
-1. Where used:
-    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo)
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_PHPPGADMIN&type=code)
 
 ### SENZING_DOCKER_IMAGE_VERSION_PORTAINER
 
@@ -906,6 +867,7 @@
        [portainer/portainer](https://hub.docker.com/r/portainer/portainer).
 1. To see latest version, visit
    [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-latest.sh)
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_PORTAINER&type=code)
 
 ### SENZING_DOCKER_IMAGE_VERSION_POSTGRES
 
@@ -914,6 +876,7 @@
        [postgres](https://hub.docker.com/_/postgres).
 1. To see latest version, visit
    [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-latest.sh)
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_POSTGRES&type=code)
 
 ### SENZING_DOCKER_IMAGE_VERSION_POSTGRESQL_CLIENT
 
@@ -922,8 +885,7 @@
        [senzing/postgresql-client](https://hub.docker.com/r/senzing/postgresql-client).
 1. To see latest version, visit
    [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-latest.sh)
-1. Where used:
-    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo)
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_POSTGRESQL_CLIENT&type=code)
 
 ### SENZING_DOCKER_IMAGE_VERSION_RABBITMQ
 
@@ -932,6 +894,7 @@
        [bitnami/rabbitmq](https://hub.docker.com/r/bitnami/rabbitmq).
 1. To see latest version, visit
    [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-latest.sh)
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_RABBITMQ&type=code)
 
 ### SENZING_DOCKER_IMAGE_VERSION_REDOER
 
@@ -940,8 +903,7 @@
        [senzing/redoer](https://hub.docker.com/r/senzing/redoer).
 1. To see latest version, visit
    [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-latest.sh)
-1. Where used:
-    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo)
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_REDOER&type=code)
 
 ### SENZING_DOCKER_IMAGE_VERSION_RESOLVER
 
@@ -950,8 +912,7 @@
        [senzing/resolver](https://hub.docker.com/r/senzing/resolver).
 1. To see latest version, visit
    [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-latest.sh)
-1. Where used:
-    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo)
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_RESOLVER&type=code)
 
 ### SENZING_DOCKER_IMAGE_VERSION_SENZING_API_SERVER
 
@@ -960,9 +921,7 @@
        [senzing/senzing-api-server](https://hub.docker.com/r/senzing/senzing-api-server).
 1. To see latest version, visit
    [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-latest.sh)
-1. Where used:
-    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo)
-    1. [entity-search-web-app](https://github.com/Senzing/entity-search-web-app)
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_SENZING_API_SERVER&type=code)
 
 ### SENZING_DOCKER_IMAGE_VERSION_SENZING_CONSOLE
 
@@ -971,6 +930,7 @@
        [senzing/console](https://hub.docker.com/r/senzing/console).
 1. To see latest version, visit
    [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-latest.sh)
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_SENZING_CONSOLE&type=code)
 
 ### SENZING_DOCKER_IMAGE_VERSION_SENZING_DEBUG
 
@@ -979,8 +939,7 @@
        [senzing/senzing-debug](https://hub.docker.com/r/senzing/senzing-debug).
 1. To see latest version, visit
    [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-latest.sh)
-1. Where used:
-    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo)
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_SENZING_DEBUG&type=code)
 
 ### SENZING_DOCKER_IMAGE_VERSION_SQLITE_WEB
 
@@ -989,6 +948,7 @@
        [coleifer/sqlite-web](https://hub.docker.com/r/coleifer/sqlite-web).
 1. To see latest version, visit
    [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-latest.sh)
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_SQLITE_WEB&type=code)
 
 ### SENZING_DOCKER_IMAGE_VERSION_SSHD
 
@@ -997,6 +957,7 @@
        [senzing/sshd](https://hub.docker.com/r/senzing/sshd).
 1. To see latest version, visit
    [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-latest.sh)
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_SSHD&type=code)
 
 ### SENZING_DOCKER_IMAGE_VERSION_STREAM_LOADER
 
@@ -1005,8 +966,7 @@
        [senzing/stream-loader](https://hub.docker.com/r/senzing/stream-loader).
 1. To see latest version, visit
    [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-latest.sh)
-1. Where used:
-    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo)
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_STREAM_LOADER&type=code)
 
 ### SENZING_DOCKER_IMAGE_VERSION_STREAM_LOGGER
 
@@ -1015,8 +975,7 @@
        [senzing/stream-logger](https://hub.docker.com/r/senzing/stream-logger).
 1. To see latest version, visit
    [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-latest.sh)
-1. Where used:
-    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo)
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_STREAM_LOGGER&type=code)
 
 ### SENZING_DOCKER_IMAGE_VERSION_STREAM_PRODUCER
 
@@ -1025,9 +984,7 @@
        [senzing/stream-producer](https://hub.docker.com/r/senzing/stream-producer).
 1. To see latest version, visit
    [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-latest.sh)
-1. Where used:
-    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo)
-    1. [stream-producer](https://github.com/Senzing/stream-producer)
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_STREAM_PRODUCER&type=code)
 
 ### SENZING_DOCKER_IMAGE_VERSION_WEB_APP_DEMO
 
@@ -1036,6 +993,7 @@
        [senzing/web-app-demo](https://hub.docker.com/r/senzing/web-app-demo).
 1. To see latest version, visit
    [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-latest.sh)
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_WEB_APP_DEMO&type=code)
 
 ### SENZING_DOCKER_IMAGE_VERSION_XTERM
 
@@ -1044,8 +1002,7 @@
        [senzing/xterm](https://hub.docker.com/r/senzing/xterm).
 1. To see latest version, visit
    [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-latest.sh)
-1. Where used:
-    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo)
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_XTERM&type=code)
 
 ### SENZING_DOCKER_IMAGE_VERSION_YUM
 
@@ -1054,13 +1011,11 @@
        [senzing/yum](https://hub.docker.com/r/senzing/yum).
 1. To see latest version, visit
    [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-latest.sh)
-1. Where used:
-    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo)
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_YUM&type=code)
 
 ### SENZING_DOCKER_LAUNCHED
 
-1. Where used:
-    1. [docker-init-container](https://github.com/Senzing/docker-init-container),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_LAUNCHED&type=code)
 
 ### SENZING_DOCKER_SOCKET
 
@@ -1073,8 +1028,7 @@
         export SENZING_DOCKER_SOCKET=/var/run/docker.sock
         ```
 
-1. Where used:
-    1. [senzing-environment](https://github.com/Senzing/senzing-environment),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_LAUNCHED&type=code)
 
 ### SENZING_DOCKERHUB_API_ENDPOINT_V1
 
@@ -1088,8 +1042,7 @@
         export SENZING_DOCKERHUB_API_ENDPOINT_V1=https://registry.hub.docker.com/v1
         ```
 
-1. Where used:
-    1. [dockerhub-util](https://github.com/Senzing/dockerhub-util),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKERHUB_API_ENDPOINT_V1&type=code)
 
 ### SENZING_DOCKERHUB_API_ENDPOINT_V2
 
@@ -1103,8 +1056,7 @@
         export SENZING_DOCKERHUB_API_ENDPOINT_V2=https://hub.docker.com/v2
         ```
 
-1. Where used:
-    1. [dockerhub-util](https://github.com/Senzing/dockerhub-util),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKERHUB_API_ENDPOINT_V2&type=code)
 
 ### SENZING_DOCKERHUB_ORGANIZATION
 
@@ -1118,22 +1070,19 @@
         export SENZING_DOCKERHUB_ORGANIZATION=senzing
         ```
 
-1. Where used:
-    1. [dockerhub-util](https://github.com/Senzing/dockerhub-util),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKERHUB_ORGANIZATION&type=code)
 
 ### SENZING_DOCKERHUB_PASSWORD
 
 1. Synopsis:
     1. [SENZING_DOCKERHUB_USERNAME](#senzing_dockerhub_username)'s password for logging into [hub.docker.com](https://hub.docker.com)
-1. Where used:
-    1. [dockerhub-util](https://github.com/Senzing/dockerhub-util),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKERHUB_PASSWORD&type=code)
 
 ### SENZING_DOCKERHUB_USERNAME
 
 1. Synopsis:
     1. Login username for for [hub.docker.com](https://hub.docker.com)
-1. Where used:
-    1. [dockerhub-util](https://github.com/Senzing/dockerhub-util),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKERHUB_USERNAME&type=code)
 
 ### SENZING_DOWNLOAD_DIR
 
@@ -1146,8 +1095,7 @@
         export SENZING_DOWNLOAD_DIR=/tmp/my-downloads
         ```
 
-1. Where used:
-    1. [docker-yumdownloader](https://github.com/Senzing/docker-yumdownloader),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOWNLOAD_DIR&type=code)
 
 ### SENZING_DOWNLOAD_FILE
 
@@ -1160,10 +1108,13 @@
         export SENZING_DOWNLOAD_FILE=/tmp/my-downloads/x-file.tmp
         ```
 
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOWNLOAD_FILE&type=code)
+
 ### SENZING_ENGINE_CONFIGURATION_JSON
 
 1. Synopsis:
     1. A JSON string that is a parameter to the Senzing Engine's `*.initV2()` function.
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_ENGINE_CONFIGURATION_JSON&type=code)
 
 ### SENZING_ENTITY_TYPE
 
@@ -1174,9 +1125,7 @@
     1. Default: none
 1. Forms:
     1. Helm: senzing.entityType
-1. Where used:
-    1. [resolver](https://github.com/Senzing/resolver),
-       [stream-loader](https://github.com/Senzing/stream-loader),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_ENTITY_TYPE&type=code)
 
 ### SENZING_ETC_DIR
 
@@ -1186,11 +1135,7 @@
 1. Values:
     1. Default: none
     1. Usually set to `/etc/opt/senzing`
-1. Where used:
-    1. [docker-g2command](https://github.com/Senzing/docker-g2command),
-       [docker-senzing-base](https://github.com/Senzing/docker-senzing-base),
-       [docker-yum](https://github.com/Senzing/docker-yum),
-       [stream-loader](https://github.com/Senzing/stream-loader),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_ETC_DIR&type=code)
 
 ### SENZING_EXIT_ON_EMPTY_QUEUE
 
@@ -1199,8 +1144,7 @@
 1. Values:
      1. Datatype: boolean
      1. Default: False
-1. Where used:
-    1. [stream-loader](https://github.com/Senzing/stream-loader),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_EXIT_ON_EMPTY_QUEUE&type=code)
 
 ### SENZING_EXIT_SLEEP_TIME_IN_SECONDS
 
@@ -1209,8 +1153,7 @@
     1. Used in autoscaling to slow down "cool down".
 1. Values:
      1. Default: 0
-1. Where used:
-    1. [stream-loader](https://github.com/Senzing/stream-loader),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_EXIT_SLEEP_TIME_IN_SECONDS&type=code)
 
 ### SENZING_EXPIRATION_WARNING_IN_DAYS
 
@@ -1218,8 +1161,7 @@
     1. Number of days before logging Senzing license expiration notices.
 1. Values:
      1. Default: 30
-1. Where used:
-    1. [stream-loader](https://github.com/Senzing/stream-loader),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_EXPIRATION_WARNING_IN_DAYS&type=code)
 
 ### SENZING_G2_DIR
 
@@ -1229,11 +1171,7 @@
 1. Values:
     1. Default: none
     1. Usually set to `/opt/senzing/g2`
-1. Where used:
-    1. [docker-g2command](https://github.com/Senzing/docker-g2command),
-       [docker-senzing-base](https://github.com/Senzing/docker-senzing-base),
-       [docker-yum](https://github.com/Senzing/docker-yum),
-       [stream-loader](https://github.com/Senzing/stream-loader),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_G2_DIR&type=code)
 
 ### SENZING_GID
 
