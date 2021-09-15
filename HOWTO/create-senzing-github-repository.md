@@ -55,6 +55,7 @@ This is a checklist of what to set when creating a new GitHub Repository.
     1. Add Topics:
         1. `t-ast` for Api Server / Web App scrum
         1. `t-comm` for Community scrum
+        1. `t-g2-python` for G2Python projects
         1. `t-gdev` for ????
         1. `t-unknown` if not known
 1. On repository home page, click "Issues" tab.
@@ -84,5 +85,7 @@ This is a checklist of what to set when creating a new GitHub Repository.
     1. Modify `README.md`
         1. Use contents from `.github/README_TEMPLATE/demonstration/README.md`
     1. Delete `.github/README_TEMPLATE` directory.
+    1. Delete `.github/workflows/examples` directory.
+    1. Delete `.github/workflows` files that do not apply.
     1. Commit the branch.
     1. Merge `issue-1.[your-name].1` branch into main branch.
