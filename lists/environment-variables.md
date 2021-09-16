@@ -1175,8 +1175,7 @@
 
 ### SENZING_GID
 
-1. Where used:
-    1. [docker-init-container](https://github.com/Senzing/docker-init-container),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_GID&type=code)
 
 ### SENZING_GOVERNOR_DATABASE_URLS
 
@@ -1198,8 +1197,7 @@
         export SENZING_GOVERNOR_DATABASE_URLS=postgresql://postgres:postgres@localhost:5432/G2,postgresql://postgres:postgres@localhost:5432/G2_RES
         ```
 
-1. Where used:
-    1. [governor-postgresql-transaction-id](https://github.com/Senzing/governor-postgresql-transaction-id),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_GOVERNOR_DATABASE_URLS&type=code)
 
 ### SENZING_GOVERNOR_INTERVAL
 
@@ -1213,8 +1211,7 @@
         export SENZING_GOVERNOR_INTERVAL=10000000
         ```
 
-1. Where used:
-    1. [governor-postgresql-transaction-id](https://github.com/Senzing/governor-postgresql-transaction-id),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_GOVERNOR_INTERVAL&type=code)
 
 ### SENZING_GOVERNOR_LIST_SEPARATOR
 

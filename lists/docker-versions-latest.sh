@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Generated on 2021-09-13 by https://github.com/Senzing/dockerhub-util dockerhub-util.py version: 1.0.3 update: 2021-08-23
+# Generated on 2021-09-16 by https://github.com/Senzing/dockerhub-util dockerhub-util.py version: 1.0.3 update: 2021-08-23
 
 export SENZING_DOCKER_IMAGE_VERSION_ADMINER=1.0.0
 export SENZING_DOCKER_IMAGE_VERSION_APT=1.0.5
