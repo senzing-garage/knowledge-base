@@ -33,6 +33,8 @@ Used in log message identifiers in the format `senzing-ppppnnnnt`, where:
 1. **5024** - [docker-xterm](https://github.com/Senzing/docker-xterm)
 1. **5025** - [senzing-api-server](https://github.com/Senzing/senzing-api-server)
 1. **5026** - [senzing-poc-server](https://github.com/Senzing/senzing-poc-server)
+1. **5027** - [G2Engine](https://github.com/Senzing/g2engine)
+
 
 ## Docker apps
 
