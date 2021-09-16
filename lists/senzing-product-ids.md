@@ -35,7 +35,6 @@ Used in log message identifiers in the format `senzing-ppppnnnnt`, where:
 1. **5026** - [senzing-poc-server](https://github.com/Senzing/senzing-poc-server)
 1. **5027** - [G2Engine](https://github.com/Senzing/g2engine)
 
-
 ## Docker apps
 
 1. **6001** - [senzing/python-flask-rest-api](https://github.com/Senzing/docker-python-flask-rest-api)
