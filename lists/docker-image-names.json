@@ -1,4 +1,7 @@
 {
+    "arey/mysql-client": {
+        "environment_variable": "SENZING_DOCKER_IMAGE_VERSION_AREY_MYSQL_CLIENT"
+    },
     "bitnami/kafka": {
         "environment_variable": "SENZING_DOCKER_IMAGE_VERSION_BITNAMI_KAFKA"
     },
@@ -130,9 +133,6 @@
     },
     "senzing/web-app-demo": {
         "environment_variable": "SENZING_DOCKER_IMAGE_VERSION_WEB_APP_DEMO"
-    },
-    "senzing/x-mysql-client": {
-        "environment_variable": "SENZING_DOCKER_IMAGE_VERSION_AREY_MYSQL_CLIENT"
     },
     "senzing/xterm": {
         "environment_variable": "SENZING_DOCKER_IMAGE_VERSION_XTERM"
