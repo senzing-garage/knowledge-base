@@ -3,6 +3,8 @@
 ## :no_entry: Deprecated
 Use [bitnami/phppgadmin](https://hub.docker.com/r/bitnami/phppgadmin) instead.
 
+## Synopsis
+
 The docker image, `senzing/phppgadmin`, is an updated version of
 [dockage/phppgadmin](https://github.com/dockage/phppgadmin.git).
 
