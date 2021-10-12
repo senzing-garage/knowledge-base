@@ -1,5 +1,8 @@
 # How to build senzing/phppgadmin docker image
 
+## :no-entry:  Deprecated
+Use [bitnami/phppgadmin](https://hub.docker.com/r/bitnami/phppgadmin) instead.
+
 The docker image, `senzing/phppgadmin`, is an updated version of
 [dockage/phppgadmin](https://github.com/dockage/phppgadmin.git).
 
