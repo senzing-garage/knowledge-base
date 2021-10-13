@@ -36,12 +36,12 @@ This is a checklist of what to set when creating a new GitHub Repository.
                 1. :ballot_box_with_check: Require review from Code Owners
         1. Click "Create" button
     1. Click "Manage access" tab.
-        1. Click "Invite teams or people" button.
+        1. Click "Add teams" button.
             1. Type "Senzing engineering"
             1. Choose "Senzing/senzing-engineering"
             1. Choose a role: "Write"
             1. Click "Add Senzing/senzingeering to ..."
-        1. Click "Invite teams or people" button.
+        1. Click "Add teams" button.
             1. Type "build"
             1. Choose "Senzing/build"
             1. Choose a role: "Admin"
