@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-# Generated on 2021-03-24 by https://github.com/Senzing/dockerhub-util dockerhub-util.py version: 1.0.0 update: 2021-02-22
-
 export SENZING_HELM_VERSION_SENZING_API_SERVER=1.3.0
 export SENZING_HELM_VERSION_SENZING_BASE=1.3.0
 export SENZING_HELM_VERSION_SENZING_COLIFER_SQLITE_WEB=1.1.3
