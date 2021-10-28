@@ -1,4 +1,4 @@
-# Howto find the SSHD container's public ip address in AWS
+# How to find the SSHD container's public ip address in AWS
 
 ## Open ECS
 
