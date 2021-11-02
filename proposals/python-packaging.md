@@ -137,8 +137,8 @@ This alternative `from`/`import` syntax allows object creation to remain unchang
 ## Prototypes
 
 1. init-container
-    1. [Import](https://github.com/Senzing/stream-loader/compare/master...issue-128.dockter.1)
-    1. [Import alternative](https://github.com/Senzing/stream-loader/compare/master...issue-128.dockter.2)
+    1. [Import](https://github.com/Senzing/docker-init-container/compare/master...issue-128.dockter.1)
+    1. [Import alternative](https://github.com/Senzing/docker-init-container/compare/master...issue-128.dockter.2)
 1. stream-loader
     1. [Import](https://github.com/Senzing/stream-loader/compare/master...issue-246.dockter.1)
     1. [Import alternative](https://github.com/Senzing/stream-loader/compare/master...issue-246.dockter.2)
