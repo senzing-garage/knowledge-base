@@ -132,7 +132,119 @@ This alternative `from`/`import` syntax allows object creation to remain unchang
 
 ## Modification to RPM/DEB directory structure
 
-1. Move Senzing SDK for Python modules to a `senzing` subdirectory.
+1. `g2/python` before.
+   Example:
+
+    ```console
+    $ tree
+    .
+    ├── CompressedFile.py
+    ├── demo
+    │   ├── sample
+    │   │   ├── project.csv
+    │   │   ├── project.json
+    │   │   ├── sample_company.csv
+    │   │   ├── sample_company.json
+    │   │   ├── sample_person.csv
+    │   │   └── sample_person.json
+    │   └── truth
+    │       ├── project.csv
+    │       ├── project.json
+    │       ├── truthset-person-v1-set1-data.csv
+    │       ├── truthset-person-v1-set1-key.csv
+    │       ├── truthset-person-v1-set1.sh
+    │       ├── truthset-person-v1-set2-data.csv
+    │       ├── truthset-person-v1-set2-key.csv
+    │       └── truthset-person-v1-set2.sh
+    ├── DumpStack.py
+    ├── G2Audit.py
+    ├── G2Command.py
+    ├── G2ConfigMgr.py
+    ├── G2Config.py
+    ├── G2ConfigTables.py
+    ├── G2ConfigTool.py
+    ├── G2ConfigTool.readme
+    ├── G2CreateProject.py
+    ├── G2Database.py
+    ├── G2Diagnostic.py
+    ├── G2Engine.py
+    ├── G2Exception.py
+    ├── G2Explorer.py
+    ├── G2Export.py
+    ├── G2Hasher.py
+    ├── G2Health.py
+    ├── G2IniParams.py
+    ├── G2Loader.py
+    ├── G2Paths.py
+    ├── G2Product.py
+    ├── G2Project.py
+    ├── g2purge.umf
+    ├── G2S3.py
+    ├── G2SetupConfig.py
+    ├── G2Snapshot.py
+    ├── G2UpdateProject.py
+    └── governor_postgres_xid.py
+    ```
+
+1. `g2/python` after.
+   Example:
+
+    ```console
+    $ tree
+    .
+    ├── CompressedFile.py
+    ├── demo
+    │   ├── sample
+    │   │   ├── project.csv
+    │   │   ├── project.json
+    │   │   ├── sample_company.csv
+    │   │   ├── sample_company.json
+    │   │   ├── sample_person.csv
+    │   │   └── sample_person.json
+    │   └── truth
+    │       ├── project.csv
+    │       ├── project.json
+    │       ├── truthset-person-v1-set1-data.csv
+    │       ├── truthset-person-v1-set1-key.csv
+    │       ├── truthset-person-v1-set1.sh
+    │       ├── truthset-person-v1-set2-data.csv
+    │       ├── truthset-person-v1-set2-key.csv
+    │       └── truthset-person-v1-set2.sh
+    ├── DumpStack.py
+    ├── G2Audit.py
+    ├── G2Command.py
+    ├── G2ConfigTables.py
+    ├── G2ConfigTool.py
+    ├── G2ConfigTool.readme
+    ├── G2CreateProject.py
+    ├── G2Database.py
+    ├── G2Explorer.py
+    ├── G2Export.py
+    ├── G2Health.py
+    ├── G2Loader.py
+    ├── G2Paths.py
+    ├── G2Project.py
+    ├── g2purge.umf
+    ├── G2S3.py
+    ├── G2SetupConfig.py
+    ├── G2Snapshot.py
+    ├── G2UpdateProject.py
+    ├── governor_postgres_xid.py
+    ├── senzing
+    │   ├── G2ConfigMgr.py
+    │   ├── G2Config.py
+    │   ├── G2Diagnostic.py
+    │   ├── G2Engine.py
+    │   ├── G2Exception.py
+    │   ├── G2Hasher.py
+    │   ├── G2IniParams.py
+    │   ├── G2Product.py
+    │   └── __init__.py
+    └── senzing_governor.py
+    ```
+
+1. In terms of code it would look like this.
+   Move Senzing SDK for Python modules to a `senzing` subdirectory.
    Example:
 
     ```console
@@ -149,7 +261,7 @@ This alternative `from`/`import` syntax allows object creation to remain unchang
     mv ${SENZING_PYTHON_DIR}/G2Product.py    ${SENZING_PYTHON_DIR}/senzing/
     ```
 
-1. Add
+1. Then add `__init__.py`.
    Example:
 
     ```console
