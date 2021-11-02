@@ -34,6 +34,7 @@ to the industry-standard packaging format.
 
 ### Contents
 
+1. [Installation](#installation)
 1. [Modification to client code](#modification-to-client-code)
     1. [Imports](#imports)
     1. [Object creation](#object-creation)
@@ -41,6 +42,20 @@ to the industry-standard packaging format.
 1. [Modification to Senzing SDK for Python](#modification-to-senzing-sdk-for-python)
     1. [Use relative path](#use-relative-path)
 1. [Modification to RPM/DEB directory structure](#modification-to-rpm-deb-directory-structure)
+
+## Installation
+
+Installation is done with `pip`.
+
+1. Using the `pip` test server.
+   Example:
+
+    ```console
+    python3 -m pip install \
+      --index-url https://test.pypi.org/simple/ \
+      --no-deps \
+      senzing
+    ```
 
 ## Modification to client code
 
