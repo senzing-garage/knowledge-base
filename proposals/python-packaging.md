@@ -32,7 +32,6 @@ This will not preclude the use of the directories shipped with the SenzingAPI RP
 However, the directory structure of the Senzing SDK for Python will need to be modified
 to the industry-standard packaging format.
 
-
 ## Modification to client code
 
 ### Imports
@@ -98,3 +97,7 @@ to the industry-standard packaging format.
     ```
 
 1. Notice the preceeding dot in `.G2Exception`.  It means "look for G2Exception in the same directory as the calling python module".  It is a "relative path" indicator.
+
+## Modification to RPM/DEB directory structure
+
+1. TODO: Show a new "senzing" directory. Perhaps add `__pycache__` (do think about that first, though)
