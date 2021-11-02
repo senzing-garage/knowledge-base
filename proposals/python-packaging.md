@@ -32,6 +32,8 @@ This will not preclude the use of the directories shipped with the SenzingAPI RP
 However, the directory structure of the Senzing SDK for Python will need to be modified
 to the industry-standard packaging format.
 
+Because this is a "breaking change", the recommendation is to introduce the functionality into Senzing API 3.0.0.
+
 ### Contents
 
 1. [Installation](#installation)
