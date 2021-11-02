@@ -8,9 +8,9 @@ to become more in-line with industry standards.
 ## Overview
 
 The current Senzing SDK for Python is shipped in the RPM/DEB file as a
-dirctory (`g2/sdk/python`) and is intermingled with client programs in
+directory (`g2/sdk/python`) and is intermingled with client programs in
 another directory (`g2/python`).
-To accommdate this setup, a user has to modify `PYTHONPATH` to locate these files.
+To accommodate this setup, a user has to modify `PYTHONPATH` to locate these files.
 
 This approach has shortcomings:
 
