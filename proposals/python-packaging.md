@@ -132,7 +132,31 @@ This alternative `from`/`import` syntax allows object creation to remain unchang
 
 ## Modification to RPM/DEB directory structure
 
-1. TODO: Show a new "senzing" directory. Perhaps add `__pycache__` (do think about that first, though)
+1. Move Senzing SDK for Python modules to a `senzing` subdirectory.
+   Example:
+
+    ```console
+    export SENZING_PYTHON_DIR=~/my-senzing/g2/python
+
+    mkdir ${SENZING_PYTHON_DIR}/senzing
+    mv ${SENZING_PYTHON_DIR}/G2Config.py     ${SENZING_PYTHON_DIR}/senzing/
+    mv ${SENZING_PYTHON_DIR}/G2ConfigMgr.py  ${SENZING_PYTHON_DIR}/senzing/
+    mv ${SENZING_PYTHON_DIR}/G2Diagnostic.py ${SENZING_PYTHON_DIR}/senzing/
+    mv ${SENZING_PYTHON_DIR}/G2Engine.py     ${SENZING_PYTHON_DIR}/senzing/
+    mv ${SENZING_PYTHON_DIR}/G2Exception.py  ${SENZING_PYTHON_DIR}/senzing/
+    mv ${SENZING_PYTHON_DIR}/G2Hasher.py     ${SENZING_PYTHON_DIR}/senzing/
+    mv ${SENZING_PYTHON_DIR}/G2IniParams.py  ${SENZING_PYTHON_DIR}/senzing/
+    mv ${SENZING_PYTHON_DIR}/G2Product.py    ${SENZING_PYTHON_DIR}/senzing/
+    ```
+
+1. Add
+   Example:
+
+    ```console
+    cat <<EOT > ${SENZING_PYTHON_DIR}/senzing/__init__.py
+    __all__ = ["G2Config", "G2ConfigMgr", "G2Diagnostic", "G2Engine", "G2Exception", "G2Hasher", "G2IniParams", "G2Product"]
+    EOT
+    ```
 
 ## Prototypes
 
