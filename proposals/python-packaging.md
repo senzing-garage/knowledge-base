@@ -134,8 +134,6 @@ This alternative `from`/`import` syntax allows object creation to remain unchang
 
 1. TODO: Show a new "senzing" directory. Perhaps add `__pycache__` (do think about that first, though)
 
-
-
 ## Prototypes
 
 1. init-container
