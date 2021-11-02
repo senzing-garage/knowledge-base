@@ -23,9 +23,9 @@ This approach has shortcomings:
 
 The proposed approach:
 
-1. Create industry-standard Python packaging.
-1. Host packages in industry standard location, [Python Package Index](https://pypi.org/).
-1. Update Senzing Python programs (i.e. `g2/python/*`) to use packages correctly.
+1. Creates industry-standard Python packaging.
+1. Hosts packages in industry standard location, [Python Package Index](https://pypi.org/).
+1. Updates Senzing Python programs (i.e. `g2/python/*`) to use packages correctly.
 
 **Note:**
 This will not preclude the use of the directories shipped with the SenzingAPI RPM/DEB packages.
