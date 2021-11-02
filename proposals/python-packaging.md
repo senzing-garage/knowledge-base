@@ -32,6 +32,16 @@ This will not preclude the use of the directories shipped with the SenzingAPI RP
 However, the directory structure of the Senzing SDK for Python will need to be modified
 to the industry-standard packaging format.
 
+### Contents
+
+1. [Modification to client code](#modification-to-client-code)
+    1. [Imports](#imports)
+    1. [Object creation](#object-creation)
+    1. [Import alternative](#import-alternative)
+1. [Modification to Senzing SDK for Python](#modification-to-senzing-sdk-for-python)
+    1. [Use relative path](#use-relative-path)
+1. [Modification to RPM/DEB directory structure](#modification-to-rpm-deb-directory-structure)
+
 ## Modification to client code
 
 ### Imports
@@ -78,7 +88,29 @@ to the industry-standard packaging format.
     an_object = G2Product.G2Product()
     ```
 
-## Modification to Senzing SDK Python
+### Import alternative
+
+This alternative `from`/`import` syntax allows object creation to remain unchanged.
+
+1. Use `from` containing path.
+   Example:
+
+    ```python
+    from senzing.G2Exception import G2Exception
+    from senzing.G2Config import G2Config
+    from senzing.G2ConfigMgr import G2ConfigMgr
+    from senzing.G2Diagnostic import G2Diagnostic
+    from senzing.G2Engine import G2Engine
+    from senzing.G2Product import G2Product
+    ```
+
+1. Then object creation can remain:
+
+    ```python
+    an_object = G2Product()
+    ```
+
+## Modification to Senzing SDK for Python
 
 ### Use relative path
 
@@ -101,3 +133,14 @@ to the industry-standard packaging format.
 ## Modification to RPM/DEB directory structure
 
 1. TODO: Show a new "senzing" directory. Perhaps add `__pycache__` (do think about that first, though)
+
+
+
+## Prototypes
+
+1. init-container
+    1. [Import](https://github.com/Senzing/stream-loader/compare/master...issue-128.dockter.1)
+    1. [Import alternative](https://github.com/Senzing/stream-loader/compare/master...issue-128.dockter.2)
+1. stream-loader
+    1. [Import](https://github.com/Senzing/stream-loader/compare/master...issue-246.dockter.1)
+    1. [Import alternative](https://github.com/Senzing/stream-loader/compare/master...issue-246.dockter.2)
