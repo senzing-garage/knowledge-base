@@ -2,39 +2,60 @@
 
 ## Use AWS EC2 to copy docker images from DockerHub to AWS ECR
 
-1. :pencil2: Identify your AWS "key pair".
+### Launch EC2 instance
+
+1. Use a "CFn Team Sandbox" account.
+
+1. Create EC2 using
+   [AWS EC2 management console](https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#Instances:).
+
+    1. On left-hand navigation, select "Instances"
+    1. In upper-right, click "Launch instances".
+    1. In "Step 1: Choose an Amazon Machine Image (AMI)"
+        1. Select "Amazon Linux 2 AMI (HVM), SSD Volume Type - ami-04ad2567c9e3d7893 (64-bit x86)"
+    1. In "Step 2: Choose an Instance Type"
+        1. Select "t2.micro"
+        1. Click "Next: Configure Instance Details"
+    1. In "Step 3: Configure Instance Details"
+        1. *Shutdown behavior:* Terminate
+        1. Click "Next: Add Storage"
+    1. In "Step 4: Add storage"
+        1. *Size:* 32 (GiB)
+        1. Click "Next: Add Tags"
+    1. In "Step 5: Add Tags"
+        1. Click "Next: Configure Security Group"
+    1. In "Step 6: Configure Security Group"
+        1. Select "(*) Select and existing security group"
+        1. Choose "Default" group
+        1. Click "Review and Launch"
+    1. In "Step 7: Review Instance launch"
+        1. Click "Launch"
+
+### Login to EC2 instance
+
+1. :pencil2: Identify "Public IPv4 DNS"
+   Information on [AWS EC2 Management console](https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#Instances:)
    Example:
 
     ```console
-    export AWS_KEY_NAME=MyKeyPair
+    export AWS_ECS_HOSTNAME=ec2-18-207-150-41.compute-1.amazonaws.com
     ```
 
-1. :pencil2: Identify your local `.pem` file for the "key pair"
+1. :pencil2: Identify your local `.pem` file for the "key pair".
    Example:
 
     ```console
-    export AWS_KEY_NAME_PEM=~/.ssh/my-sso.pem
+    export AWS_KEY_NAME_PEM=~/.ssh/my-key-pair.pem
     ```
 
-1. Create AWS EC2 machine.
+1. Login to AWS EC2.
+   Example:
 
     ```console
-    aws ec2 run-instances \
-      --image-id ami-0c2b8ca1dad447f8a \
-      --count 1 \
-      --instance-type t2.micro
-      --key-name ${AWS_KEY_NAME} \
-      --security-group-ids sg-903004f8 \
-      --subnet-id subnet-6e7f829e
+    ssh -i ${AWS_KEY_NAME_PEM} ec2-user@${AWS_ECS_HOSTNAME}
     ```
 
-**NOTE:** Need 32GB storage.
-
-1. :pencil2: Login to AWS EC2
-
-    ```console
-    ssh -i ${AWS_KEY_NAME_PEM} ec2-user@ec2-54-162-110-105.compute-1.amazonaws.com
-    ```
+### Use EC2 to copy docker images
 
 1. Become root.
 
@@ -65,7 +86,7 @@
     sudo ./aws/install
     ```
 
-1. :pencil2: Use credentials from SSO Docker_Registry AWSPowerUserAccess
+1. :pencil2: Use credentials from *Docker_Registry* > *AWSPowerUserAccess*.
 
     ```console
     export AWS_ACCESS_KEY_ID=
