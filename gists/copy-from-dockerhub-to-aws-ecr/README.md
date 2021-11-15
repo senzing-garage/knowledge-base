@@ -55,15 +55,17 @@
     ssh -i ${AWS_KEY_NAME_PEM} ec2-user@${AWS_ECS_HOSTNAME}
     ```
 
-### Use EC2 to copy docker images
+### Prepare EC2 instance
 
 1. Become root.
+   Example:
 
     ```console
     sudo su -
     ```
 
 1. Install and run docker.
+   Example:
 
     ```console
     sudo yum -y update
@@ -71,6 +73,7 @@
     ```
 
 1. Restart and enable docker on restart.
+   Example:
 
     ```console
     systemctl restart docker.service
@@ -79,6 +82,7 @@
     ```
 
 1. Install latest `aws` CLI.
+   Example:
 
     ```console
     curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
@@ -86,22 +90,8 @@
     sudo ./aws/install
     ```
 
-1. :pencil2: Use credentials from *Docker_Registry* > *AWSPowerUserAccess*.
-
-    ```console
-    export AWS_ACCESS_KEY_ID=
-    export AWS_SECRET_ACCESS_KEY=
-    export AWS_SESSION_TOKEN=
-    ```
-
-1. Login to ECR.
-
-    ```console
-    aws ecr-public get-login-password --region us-east-1 \
-      | docker login --username AWS --password-stdin public.ecr.aws/d5v4a2g3
-    ```
-
 1. Install utility program.
+   Example:
 
     ```console
     mkdir ~/senzing.git
@@ -110,7 +100,61 @@
     git clone https://github.com/Senzing/knowledge-base.git
     ```
 
-1. Run utility program
+### Copy image to public ECR
+
+1. :pencil2: Use credentials from *Docker_Registry* > *AWSPowerUserAccess*.
+   Example:
+
+    ```console
+    export AWS_ACCESS_KEY_ID=
+    export AWS_SECRET_ACCESS_KEY=
+    export AWS_SESSION_TOKEN=
+    ```
+
+1. Login to public ECR.
+   Example:
+
+    ```console
+    aws ecr-public get-login-password --region us-east-1 \
+      | docker login --username AWS --password-stdin public.ecr.aws/d5v4a2g3
+    ```
+
+1. Run utility program.
+   Example:
+
+    ```console
+    cd ~/senzing.git/aws-cloudformation-ecs-poc-simple/utils
+    ./migrate-images-from-docker-hub.sh
+    ```
+
+### Copy image to private ECR
+
+1. :pencil2: Use credentials from *Docker_Registry* > *AWSPowerUserAccess*.
+   Example:
+
+    ```console
+    export AWS_ACCESS_KEY_ID=
+    export AWS_SECRET_ACCESS_KEY=
+    export AWS_SESSION_TOKEN=
+    ```
+
+1. Login to private ECR.
+   Example:
+
+    ```console
+    aws ecr get-login-password --region us-east-1 \
+      | docker login --username AWS --password-stdin 513176624027.dkr.ecr.us-east-1.amazonaws.com
+    ```
+
+1. Identify private ECR.
+   Example:
+
+    ```console
+    export SENZING_PRIVATE_DOCKER_REGISTRY=513176624027.dkr.ecr.us-east-1.amazonaws.com
+    ```
+
+1. Run utility program.
+   Example:
 
     ```console
     cd ~/senzing.git/aws-cloudformation-ecs-poc-simple/utils
