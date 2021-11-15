@@ -97,7 +97,8 @@
 1. Login to ECR.
 
     ```console
-    aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/d5v4a2g3
+    aws ecr-public get-login-password --region us-east-1 \
+      | docker login --username AWS --password-stdin public.ecr.aws/d5v4a2g3
     ```
 
 1. Install utility program.
