@@ -32,8 +32,17 @@
     "confluentinc/cp-kafka": {
         "environment_variable": "SENZING_DOCKER_IMAGE_VERSION_CONFLUENTINC_CP_KAFKA"
     },
+    "elasticsearch": {
+        "environment_variable": "SENZING_DOCKER_IMAGE_VERSION_ELASTICSEARCH"
+    },
     "ibmcom/db2": {
         "environment_variable": "SENZING_DOCKER_IMAGE_VERSION_IBMCOM_DB2"
+    },
+    "kibana": {
+        "environment_variable": "SENZING_DOCKER_IMAGE_VERSION_KIBANA"
+    },
+    "logstash": {
+        "environment_variable": "SENZING_DOCKER_IMAGE_VERSION_LOGSTASH"
     },
     "mcr.microsoft.com/mssql-tools": {
         "environment_variable": "SENZING_DOCKER_IMAGE_VERSION_MSSQL_TOOLS"
@@ -104,6 +113,9 @@
     "senzing/resolver": {
         "environment_variable": "SENZING_DOCKER_IMAGE_VERSION_RESOLVER"
     },
+    "senzing/risk-score-calculator": {
+        "environment_variable": "SENZING_DOCKER_IMAGE_VERSION_RISK_SCORE_CALCULATOR"
+    },
     "senzing/senzing-api-server": {
         "environment_variable": "SENZING_DOCKER_IMAGE_VERSION_SENZING_API_SERVER"
     },
@@ -115,6 +127,9 @@
     },
     "senzing/senzing-debug": {
         "environment_variable": "SENZING_DOCKER_IMAGE_VERSION_SENZING_DEBUG"
+    },
+    "senzing/senzing-listener": {
+        "environment_variable": "SENZING_DOCKER_IMAGE_VERSION_SENZING_LISTENER"
     },
     "senzing/senzing-poc-server": {
         "environment_variable": "SENZING_DOCKER_IMAGE_VERSION_SENZING_POC_SERVER"
