@@ -33,9 +33,10 @@ This is a checklist of what to set when creating a new GitHub Repository.
         1. Branch name pattern:  "main"
         1. Protect matching branches
             1. :ballot_box_with_check: Require pull request reviews before merging
+                1. :ballot_box_with_check: Require approvals
                 1. :ballot_box_with_check: Require review from Code Owners
         1. Click "Create" button
-    1. Click "Manage access" tab.
+    1. Click "Collaborators & teams" tab.
         1. Click "Add teams" button.
             1. Type "Senzing engineering"
             1. Choose "Senzing/senzing-engineering"
