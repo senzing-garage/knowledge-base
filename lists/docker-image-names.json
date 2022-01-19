@@ -56,6 +56,9 @@
     "portainer/portainer": {
         "environment_variable": "SENZING_DOCKER_IMAGE_VERSION_PORTAINER"
     },
+    "portainer/portainer-ce": {
+        "environment_variable": "SENZING_DOCKER_IMAGE_VERSION_PORTAINER_CE"
+    },
     "senzing/adminer": {
         "environment_variable": "SENZING_DOCKER_IMAGE_VERSION_ADMINER"
     },
