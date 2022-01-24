@@ -11,6 +11,7 @@
 ## Immutable tags
 
 1. [Why tag mutability is a real security threat](https://sysdig.com/blog/toctou-tag-mutability/)
+1. [Bitnami's recommendation](https://github.com/bitnami/charts/tree/master/bitnami/nginx#rolling-vs-immutable-tags)
 
 ## GitHub flow
 
