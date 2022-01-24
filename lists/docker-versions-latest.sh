@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Generated on 2022-01-24 by https://github.com/Senzing/dockerhub-util dockerhub-util.py version: 1.0.3 update: 2022-01-19
+# Generated on 2022-01-24 by https://github.com/Senzing/dockerhub-util dockerhub-util.py version: 1.0.3 update: 2022-01-24
 
 export SENZING_DOCKER_IMAGE_VERSION_ADMINER=1.0.1
 export SENZING_DOCKER_IMAGE_VERSION_APT=1.0.6
@@ -8,6 +8,7 @@ export SENZING_DOCKER_IMAGE_VERSION_APT_DOWNLOADER=1.1.3
 export SENZING_DOCKER_IMAGE_VERSION_AREY_MYSQL_CLIENT=latest
 export SENZING_DOCKER_IMAGE_VERSION_BITNAMI_KAFKA=2.8.1-debian-10-r105
 export SENZING_DOCKER_IMAGE_VERSION_BITNAMI_MYSQL=8.0.28-debian-10-r1
+export SENZING_DOCKER_IMAGE_VERSION_BITNAMI_NGINX=1.21.5-debian-10-r26
 export SENZING_DOCKER_IMAGE_VERSION_BITNAMI_PHPMYADMIN=5.1.1-debian-10-r99
 export SENZING_DOCKER_IMAGE_VERSION_BITNAMI_PHPPGADMIN=7.13.0-debian-10-r402
 export SENZING_DOCKER_IMAGE_VERSION_BITNAMI_POSTGRESQL=11.14.0-debian-10-r35
