@@ -24,6 +24,7 @@ Instructions for installing [minikube](https://kubernetes.io/docs/tasks/tools/in
 
 ### Ubuntu
 
+1. [minikube start](https://minikube.sigs.k8s.io/docs/start/) has installation instructions for multiple platforms.
 1. [Ubuntu](https://kubernetes.io/docs/tasks/tools/install-minikube/#linux)
 
     ```console
