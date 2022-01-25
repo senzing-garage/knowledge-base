@@ -53,7 +53,7 @@ This is a checklist of what to set when creating a new GitHub Repository.
             1. Search for "Senzing/senzing-engineering" and select.
             1. Click "Save changes" button
 1. On repository home page, click "Insights" tab.
-    1. Click on "Community" tab.
+    1. Click on "Community Standards" tab.
         1. "Enable" Repository admins accept content reports.
             1. :ballot_box_with_check: Accept content reports from collaborators and prior contributors
 1. On repository home page, click **About** gear
