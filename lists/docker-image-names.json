@@ -8,6 +8,12 @@
     "bitnami/mysql": {
         "environment_variable": "SENZING_DOCKER_IMAGE_VERSION_BITNAMI_MYSQL"
     },
+    "bitnami/nginx": {
+        "environment_variable": "SENZING_DOCKER_IMAGE_VERSION_BITNAMI_NGINX"
+    },
+    "bitnami/nginx-ingress-controller": {
+        "environment_variable": "SENZING_DOCKER_IMAGE_VERSION_BITNAMI_NGINX_INGRESS_CONTROLLER"
+    },
     "bitnami/phpmyadmin": {
         "environment_variable": "SENZING_DOCKER_IMAGE_VERSION_BITNAMI_PHPMYADMIN"
     },
