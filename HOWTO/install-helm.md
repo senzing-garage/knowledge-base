@@ -17,7 +17,10 @@ Instructions for installing [Helm](https://helm.sh).
 
 ## Install
 
+1. [Installing Helm](https://helm.sh/docs/intro/install/)
+
 ### CentOS
+
 1. Example:
 
     ```console
