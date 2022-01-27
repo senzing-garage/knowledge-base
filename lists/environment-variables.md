@@ -451,6 +451,8 @@
     1. In a Kubernetes environment, a directory holding files for use in the helm `kubectl --filename` parameter.
 1. [Where used](https://github.com/search?q=org%3ASenzing+KUBERNETES_DIR&type=code)
 
+### LD_LIBRARY_PATH
+
 ### MSSQL_ACCEPT_EULA
 
 1. Synopsis:
@@ -624,6 +626,18 @@
         ```
 
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_URL&type=code)
+
+### SENZING_AZURE_CONNECTION_STRING
+
+### SENZING_AZURE_FAILURE_CONNECTION_STRING
+
+### SENZING_AZURE_FAILURE_QUEUE_NAME
+
+### SENZING_AZURE_INFO_CONNECTION_STRING
+
+### SENZING_AZURE_INFO_QUEUE_NAME
+
+### SENZING_AZURE_QUEUE_NAME
 
 ### SENZING_CONFIGURATION_CHECK_FREQUENCY
 
@@ -1338,7 +1352,11 @@
 1. Where used:
     1. [stream-loader](https://github.com/Senzing/stream-loader),
 
+### SENZING_KAFKA_CONFIGURATION
+
 ### SENZING_KAFKA_FAILURE_BOOTSTRAP_SERVER
+
+### SENZING_KAFKA_FAILURE_CONFIGURATION
 
 ### SENZING_KAFKA_FAILURE_TOPIC
 
@@ -1352,6 +1370,8 @@
     1. [stream-loader](https://github.com/Senzing/stream-loader),
 
 ### SENZING_KAFKA_INFO_BOOTSTRAP_SERVER
+
+### SENZING_KAFKA_INFO_CONFIGURATION
 
 ### SENZING_KAFKA_INFO_TOPIC
 
@@ -1483,22 +1503,6 @@
 
 ### SENZING_PSTACK_PID
 
-### SENZING_SQL_CONNECTION
-
-1. Synopsis:
-    1. A database URI in the form native to the database client driver.
-    1. This differs from [SENZING_DATABASE_URL](#senzing_database_url), which has been "normalized"
-       and is not in the native format.
-1. Examples:
-    1. Using an IP address:
-
-        ```console
-        export SENZING_SQL_CONNECTION=mysql://username:password@hostname:3306/?schema=schemaname
-        ```
-
-1. Where used:
-    1. [senzing-environment](https://github.com/Senzing/senzing-environment),
-
 ### SENZING_PROJECT_DIR
 
 1. Synopsis:
@@ -1529,6 +1533,22 @@
 
 1. Where used:
     1. [senzing-environment](https://github.com/Senzing/senzing-enviroment),
+
+### SENZING_SQL_CONNECTION
+
+1. Synopsis:
+    1. A database URI in the form native to the database client driver.
+    1. This differs from [SENZING_DATABASE_URL](#senzing_database_url), which has been "normalized"
+       and is not in the native format.
+1. Examples:
+    1. Using an IP address:
+
+        ```console
+        export SENZING_SQL_CONNECTION=mysql://username:password@hostname:3306/?schema=schemaname
+        ```
+
+1. Where used:
+    1. [senzing-environment](https://github.com/Senzing/senzing-environment),
 
 ### SENZING_QUEUE_MAX
 
