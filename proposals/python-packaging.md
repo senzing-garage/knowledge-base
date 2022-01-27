@@ -79,7 +79,7 @@ Installation is done with `pip`.
    Example:
 
     ```python
-    from senzing import G2Config, G2ConfigMgr, G2Diagnostic, G2Engine, G2Exception, G2Hasher, G2iniParams, G2Product
+    from senzing import G2Config, G2ConfigMgr, G2Diagnostic, G2Engine, G2Exception, G2Hasher, G2IniParams, G2Product
     ```
 
 1. After alternative.
