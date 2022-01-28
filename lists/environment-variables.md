@@ -453,6 +453,8 @@
 
 ### LD_LIBRARY_PATH
 
+1. [Where used](https://github.com/search?q=org%3ASenzing+LD_LIBRARY_PATH&type=code)
+
 ### MSSQL_ACCEPT_EULA
 
 1. Synopsis:
@@ -629,15 +631,27 @@
 
 ### SENZING_AZURE_CONNECTION_STRING
 
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_AZURE_CONNECTION_STRING&type=code)
+
 ### SENZING_AZURE_FAILURE_CONNECTION_STRING
+
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_AZURE_FAILURE_CONNECTION_STRING&type=code)
 
 ### SENZING_AZURE_FAILURE_QUEUE_NAME
 
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_AZURE_FAILURE_QUEUE_NAME&type=code)
+
 ### SENZING_AZURE_INFO_CONNECTION_STRING
+
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_AZURE_INFO_CONNECTION_STRING&type=code)
 
 ### SENZING_AZURE_INFO_QUEUE_NAME
 
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_AZURE_INFO_QUEUE_NAME&type=code)
+
 ### SENZING_AZURE_QUEUE_NAME
+
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_AZURE_QUEUE_NAME&type=code)
 
 ### SENZING_CONFIGURATION_CHECK_FREQUENCY
 
