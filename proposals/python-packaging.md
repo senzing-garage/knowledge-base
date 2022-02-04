@@ -149,6 +149,8 @@ This alternative `from`/`import` syntax allows object creation to remain unchang
 
 ## Modification to RPM/DEB directory structure
 
+### Before
+
 1. `g2/python` before.
    Example:
 
@@ -202,6 +204,8 @@ This alternative `from`/`import` syntax allows object creation to remain unchang
     ├── G2UpdateProject.py
     └── governor_postgres_xid.py
     ```
+
+### After
 
 1. `g2/python` after.
    Example:
