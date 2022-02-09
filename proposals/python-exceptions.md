@@ -46,27 +46,26 @@ Because this is a "breaking change", the recommendation is to introduce the func
    Example:
 
     ```python
+    try:
+        self.g2_engine.process(redo_record)
 
-        try:
+    except G2Exception.G2ExceptionCritical as err:
+        logging.exception(message_critical(901, threading.current_thread().name, err, redo_record))
+        sys.exit(1)
+
+    except G2Exception.G2ExceptionError as err:
+        if self.is_g2_default_configuration_changed():
+            self.update_active_g2_configuration()
             self.g2_engine.process(redo_record)
+        else:
+            logging.error(message_error(701, threading.current_thread().name, err))
 
-        except G2Exception.G2ExceptionCritical as err:
-            logging.exception(message_critical(707, threading.current_thread().name, err, redo_record))
-            sys.exit(1)
+    except G2Exception.G2ExceptionWarning as err:
+        logging.warning(message_warning(501, threading.current_thread().name, err, redo_record))
 
-        except G2Exception.G2ExceptionError as err:
-
-            if self.is_g2_default_configuration_changed():
-                self.update_active_g2_configuration()
-                self.g2_engine.process(redo_record)
-            else:
-                logging.error(message_error(709, threading.current_thread().name, err))
-
-        except G2Exception.G2ExceptionWarning as err:
-            logging.warning(message_warning(906, threading.current_thread().name, redo_record, err))
-
-        except Exception as err:
-            exit_error(799, threading.current_thread().name, err, redo_record)
+    except Exception as err:
+        logging.exception(message_critical(902, threading.current_thread().name, err, redo_record))
+        sys.exit(1)
     ```
 
 1. Python logging levels [list](https://docs.python.org/3/library/logging.html#logging.info).
