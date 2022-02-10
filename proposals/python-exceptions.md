@@ -119,10 +119,8 @@ The emphasis on the proposed design it to help the python programmer catch excep
         | G2ExceptionInfo      | Yes        | No       | No   |
         | Exception            | ??         | ??       | Yes  |
 
-    1. xxx
-
 1. Message numbers have
-   [ranges](https://github.com/Senzing/stream-loader/blob/30c9fe591137793c063152cee04c0478523d7357/stream-loader.py#L892-L908)
+   [ranges](https://github.com/Senzing/stream-loader/blob/30c9fe591137793c063152cee04c0478523d7357/stream-loader.py#L892-L908).
 
     - 1xx Informational (i.e. logging.info())
     - 3xx Warning (i.e. logging.warning())
