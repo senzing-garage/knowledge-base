@@ -108,12 +108,14 @@ The emphasis on the proposed design it to help the python programmer catch excep
     1. Synopsis:
 
 
-| Log Level            | Processing | Remedies | Halt |
-|----------------------|------------|----------|------|
-| G2ExceptionCritical  | No         | No       | Yes  |
-| G2ExceptionError     | No         | Yes      | No   |
-| G2ExceptionWarning   | No         | No       | No   |
-| G2ExceptionInfo      | Yes        | No       | No   |
-| Exception            | ??         | ??       | Yes  |
+        | Log Level            | Processing | Remedies | Halt |
+        |----------------------|------------|----------|------|
+        | G2ExceptionCritical  | No         | No       | Yes  |
+        | G2ExceptionError     | No         | Yes      | No   |
+        | G2ExceptionWarning   | No         | No       | No   |
+        | G2ExceptionInfo      | Yes        | No       | No   |
+        | Exception            | ??         | ??       | Yes  |
+
+    1. xxx
 
 
