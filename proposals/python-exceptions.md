@@ -12,7 +12,7 @@ has a plethora of
 [Exceptions](https://github.com/Senzing/g2-sdk-python/blob/main/src/senzing/G2Exception.py)
 that could be thrown by the underlying SDK.
 
-When an Exception is thrown by the Senzing Python SDK
+When an Exception is thrown by the Senzing Python SDK,
 the question is the Python programmer's mind is:
 
 > When I catch the Exception, do I log the exception and:
@@ -22,7 +22,9 @@ the question is the Python programmer's mind is:
 
 The proposed approach:
 
-1. Simplifies the decision making process when writing Python code
+1. Simplifies the decision making process when writing Python code.
+1. Encapsulates the severity in the underlying Senzing Python SDK.
+1. Reduces the need for "if-elseif-elseif-else" logic in the exception handling.
 
 Because this is a "breaking change", the recommendation is to introduce the functionality into Senzing API 3.0.0.
 
@@ -37,8 +39,15 @@ Because this is a "breaking change", the recommendation is to introduce the func
     1. [Use relative path](#use-relative-path)
 1. [Modification to RPM/DEB directory structure](#modification-to-rpm-deb-directory-structure)
 
+### Proposed approach
 
-### Customer view
+The emphasis on the proposed design it to help the python programmer catch exceptions and know whether to:
+
+1. Log a message and exit
+2. Diagnose the cause of the exception and perhaps correct
+3. Simply log the message and continue
+
+### Implementation
 
 1. [Before](https://github.com/Senzing/redoer/blob/c3d3aeaf281d091d2ca370da1c5c56f54d736a66/redoer.py#L2061-L2083)
 
