@@ -59,7 +59,7 @@ The emphasis on the proposed design it to help the python programmer catch excep
         self.g2_engine.process(redo_record)
 
     except G2Exception.G2ExceptionCritical as err:
-        logging.exception(message_critical(901, threading.current_thread().name, err, redo_record))
+        logging.exception(message_critical(850, threading.current_thread().name, err, redo_record))
         sys.exit(1)
 
     except G2Exception.G2ExceptionError as err:
@@ -67,13 +67,16 @@ The emphasis on the proposed design it to help the python programmer catch excep
             self.update_active_g2_configuration()
             self.g2_engine.process(redo_record)
         else:
-            logging.error(message_error(701, threading.current_thread().name, err))
+            logging.error(message_error(750, threading.current_thread().name, err))
 
     except G2Exception.G2ExceptionWarning as err:
-        logging.warning(message_warning(501, threading.current_thread().name, err, redo_record))
+        logging.warning(message_warning(350, threading.current_thread().name, err, redo_record))
+
+    except G2Exception.G2ExceptionInfo as err:
+        logging.info(message_info(250, threading.current_thread().name, err, redo_record))
 
     except Exception as err:
-        logging.exception(message_critical(902, threading.current_thread().name, err, redo_record))
+        logging.exception(message_critical(950, threading.current_thread().name, err, redo_record))
         sys.exit(1)
     ```
 
@@ -102,7 +105,7 @@ The emphasis on the proposed design it to help the python programmer catch excep
        Processing **did** occur.
        There is a message that needs to be conveyed to the user.
        There is no need to halt operation.
-    1. **Exception -
+    1. **Exception** -
        Processing unknown.
        Catches any unanticipated errors and halts the program.
     1. Synopsis:
@@ -117,5 +120,27 @@ The emphasis on the proposed design it to help the python programmer catch excep
         | Exception            | ??         | ??       | Yes  |
 
     1. xxx
+
+1. Message numbers have
+   [ranges](https://github.com/Senzing/stream-loader/blob/30c9fe591137793c063152cee04c0478523d7357/stream-loader.py#L892-L908)
+
+    - 1xx Informational (i.e. logging.info())
+    - 3xx Warning (i.e. logging.warning())
+    - 5xx User configuration issues (either logging.warning() or logging.err() for Client errors)
+    - 7xx Internal error (i.e. logging.error for Server errors)
+    - 9xx Debugging (i.e. logging.debug())# 1xx Informational (i.e. logging.info())
+
+   Log message identifiers have the format `senzing-ppppnnnnt`, where:
+
+    - "p" is the 4 digit [product identifier](https://github.com/Senzing/knowledge-base/blob/master/lists/senzing-product-ids.md)
+    - "n" is the 4 digit message identifier within product
+    - "t" is the 1 character message type: Info, Warn, Error
+
+   This is formatted to aid in internet searches.
+   Example, search for [senzing-50010406E](https://www.google.com/search?channel=fs&client=ubuntu&q=senzing-50070896E).
+
+
+
+
 
 
