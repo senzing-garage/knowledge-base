@@ -77,4 +77,43 @@ The emphasis on the proposed design it to help the python programmer catch excep
         sys.exit(1)
     ```
 
-1. Python logging levels [list](https://docs.python.org/3/library/logging.html#logging.info).
+1. The structure follows the [Python logging levels](https://docs.python.org/3/library/logging.html#logging-levels):
+    1. critical
+    1. error
+    1. warning
+    1. info
+    1. debug
+    1. notset
+1. The structure uses [logging.exception()](https://docs.python.org/3/library/logging.html#logging.Logger.exception)
+   as it provides additional logging information.
+
+1. Semantics for exceptions:
+    1. **G2ExceptionCritical** -
+       Processing **did not** occur.
+       There are no programmatic remedies.
+       Therefore, exit the program.
+    1. **G2ExceptionError** -
+       Processing **did not** occur.
+       There may be programmatic remedies before the operation can be tried again.
+    1. **G2ExceptionWarning** -
+       Processing **did not** occur.
+       There is no need to halt operation.
+    1. **G2ExceptionInfo** -
+       Processing **did** occur.
+       There is a message that needs to be conveyed to the user.
+       There is no need to halt operation.
+    1. **Exception -
+       Processing unknown.
+       Catches any unanticipated errors and halts the program.
+    1. Synopsis:
+
+
+| Log Level            | Processing | Remedies | Halt |
+|----------------------|------------|----------|------|
+| G2ExceptionCritical  | No         | No       | Yes  |
+| G2ExceptionError     | No         | Yes      | No   |
+| G2ExceptionWarning   | No         | No       | No   |
+| G2ExceptionInfo      | Yes        | No       | No   |
+| Exception            | ??         | ??       | Yes  |
+
+
