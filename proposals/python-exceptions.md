@@ -13,7 +13,7 @@ has a plethora of
 that could be thrown by the underlying SDK.
 
 When an Exception is thrown by the Senzing Python SDK,
-the question is the Python programmer's mind is:
+the question in the Python programmer's mind is:
 
 > When I catch the Exception, do I log the exception and:
 >   1) Exit my program
