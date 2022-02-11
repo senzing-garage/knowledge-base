@@ -111,13 +111,13 @@ It also facilitates "future-proofing" applications using the Senzing Python API.
        Catches any unanticipated errors and halts the program.
     1. Synopsis:
 
-        | Log Level            | Processing | Remedies | Halt |
-        |----------------------|------------|----------|------|
-        | G2ExceptionCritical  | No         | No       | Yes  |
-        | G2ExceptionError     | No         | Yes      | No   |
-        | G2ExceptionWarning   | No         | No       | No   |
-        | G2ExceptionInfo      | Yes        | No       | No   |
-        | Exception            | ??         | ??       | Yes  |
+        | Log Level            | Completed | Remedies | Halt |
+        |----------------------|-----------|----------|------|
+        | G2ExceptionCritical  | No        | No       | Yes  |
+        | G2ExceptionError     | No        | Yes      | No   |
+        | G2ExceptionWarning   | No        | No       | No   |
+        | G2ExceptionInfo      | Yes       | No       | No   |
+        | Exception            | ??        | ??       | Yes  |
 
 1. Message numbers have
    [ranges](https://github.com/Senzing/stream-loader/blob/30c9fe591137793c063152cee04c0478523d7357/stream-loader.py#L892-L908).
