@@ -31,8 +31,8 @@ The proposed approach:
 ### Contents
 
 1. [Proposed approach](#proposed-approach)
+1. [Usage](#usage)
 1. [Implementation](#implementation)
-1. [Examples](#examples)
 
 ## Proposed approach
 
@@ -48,7 +48,14 @@ It also facilitates "future-proofing" applications using the Senzing Python API.
    have having to change.  Especially true for new "critical" exceptions.
 1. No new Exception attributes are created.  Thus simplifying Exception chaining and logging.
 
-## Implementation
+The approach creates 4 new exception classes:
+
+    1. **G2ExceptionCritical** -
+    1. **G2ExceptionError** -
+    1. **G2ExceptionWarning** -
+    1. **G2ExceptionInfo** -
+
+## Usage
 
 1. [Before](https://github.com/Senzing/redoer/blob/c3d3aeaf281d091d2ca370da1c5c56f54d736a66/redoer.py#L2061-L2083)
 
@@ -137,7 +144,7 @@ It also facilitates "future-proofing" applications using the Senzing Python API.
    This is formatted to aid in internet searches.
    Example, search for [senzing-50010406E](https://www.google.com/search?channel=fs&client=ubuntu&q=senzing-50070896E).
 
-## Examples
+## Implementation
 
 1. See [exceptions.py](python-exceptions/exceptions.py)
 1. [Try it](https://code.labstack.com/gFysm75U)
