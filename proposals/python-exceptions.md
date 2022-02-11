@@ -30,24 +30,19 @@ Because this is a "breaking change", the recommendation is to introduce the func
 
 ### Contents
 
-1. [Installation](#installation)
-1. [Modification to client code](#modification-to-client-code)
-    1. [Imports](#imports)
-    1. [Object creation](#object-creation)
-    1. [Import alternative](#import-alternative)
-1. [Modification to Senzing SDK for Python](#modification-to-senzing-sdk-for-python)
-    1. [Use relative path](#use-relative-path)
-1. [Modification to RPM/DEB directory structure](#modification-to-rpm-deb-directory-structure)
+1. [Proposed approach](#proposed-approach)
+1. [Implementation](#implementation)
+1. [Example](#example)
 
-### Proposed approach
+## Proposed approach
 
-The emphasis on the proposed design it to help the python programmer catch exceptions and know whether to:
+The emphasis on the proposed design it to help the Python programmer catch exceptions and know whether to:
 
 1. Log a message and exit
 2. Diagnose the cause of the exception and perhaps correct
 3. Simply log the message and continue
 
-### Implementation
+## Implementation
 
 1. [Before](https://github.com/Senzing/redoer/blob/c3d3aeaf281d091d2ca370da1c5c56f54d736a66/redoer.py#L2061-L2083)
 
@@ -110,7 +105,6 @@ The emphasis on the proposed design it to help the python programmer catch excep
        Catches any unanticipated errors and halts the program.
     1. Synopsis:
 
-
         | Log Level            | Processing | Remedies | Halt |
         |----------------------|------------|----------|------|
         | G2ExceptionCritical  | No         | No       | Yes  |
@@ -137,8 +131,6 @@ The emphasis on the proposed design it to help the python programmer catch excep
    This is formatted to aid in internet searches.
    Example, search for [senzing-50010406E](https://www.google.com/search?channel=fs&client=ubuntu&q=senzing-50070896E).
 
+## Example
 
-
-
-
-
+1. See [exceptions.py](python-exceptions/exceptions.py)
