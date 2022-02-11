@@ -32,7 +32,7 @@ Because this is a "breaking change", the recommendation is to introduce the func
 
 1. [Proposed approach](#proposed-approach)
 1. [Implementation](#implementation)
-1. [Example](#example)
+1. [Examples](#examples)
 
 ## Proposed approach
 
@@ -131,6 +131,7 @@ The emphasis on the proposed design it to help the Python programmer catch excep
    This is formatted to aid in internet searches.
    Example, search for [senzing-50010406E](https://www.google.com/search?channel=fs&client=ubuntu&q=senzing-50070896E).
 
-## Example
+## Examples
 
 1. See [exceptions.py](python-exceptions/exceptions.py)
+1. [Try it](https://code.labstack.com/gFysm75U)
