@@ -42,6 +42,12 @@ The emphasis on the proposed design it to help the Python programmer catch excep
 2. Diagnose the cause of the exception and perhaps correct
 3. Simply log the message and continue
 
+It also facilitates "future-proofing" applications using the Senzing Python API.
+
+1. New "specific" Exceptions can be added to the Senzing Python API without the applications
+   have having to change.  Especially true for new "critical" exceptions.
+1. No new Exception attributes are created.  Thus simplifying Exception chaining and logging.
+
 ## Implementation
 
 1. [Before](https://github.com/Senzing/redoer/blob/c3d3aeaf281d091d2ca370da1c5c56f54d736a66/redoer.py#L2061-L2083)
