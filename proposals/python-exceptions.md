@@ -25,6 +25,7 @@ The proposed approach:
 1. Simplifies the decision making process when writing Python code.
 1. Encapsulates the severity in the underlying Senzing Python SDK.
 1. Reduces the need for "if-elseif-elseif-else" logic in the exception handling.
+1. Doesn't introduce attributes on Exceptions.
 
 Because this is a "breaking change", the recommendation is to introduce the functionality into Senzing API 3.0.0.
 
