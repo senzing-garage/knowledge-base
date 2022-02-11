@@ -50,10 +50,10 @@ It also facilitates "future-proofing" applications using the Senzing Python API.
 
 The approach creates 4 new exception classes:
 
-    1. **G2ExceptionCritical** -
-    1. **G2ExceptionError** -
-    1. **G2ExceptionWarning** -
-    1. **G2ExceptionInfo** -
+1. **G2ExceptionCritical**
+1. **G2ExceptionError**
+1. **G2ExceptionWarning**
+1. **G2ExceptionInfo**
 
 ## Usage
 
