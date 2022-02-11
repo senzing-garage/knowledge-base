@@ -56,7 +56,7 @@ Examples:
 1. **G2Exception** > **G2ExceptionWarning** > **G2DBExceptionWarning**
 1. **G2Exception** > **G2ExceptionInfo** > **G2ModuleResolveMissingResEnt**
 
-It also facilitates "future-proofing" applications using the Senzing Python API.
+The approach facilitates "future-proofing" applications using the Senzing Python API.
 
 1. New "specific" Exceptions can be added to the Senzing Python API without the applications
    have having to change.  Especially true for new "critical" exceptions.
