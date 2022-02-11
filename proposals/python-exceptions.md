@@ -42,18 +42,25 @@ The emphasis on the proposed design it to help the Python programmer catch excep
 2. Diagnose the cause of the exception and perhaps correct
 3. Simply log the message and continue
 
-It also facilitates "future-proofing" applications using the Senzing Python API.
-
-1. New "specific" Exceptions can be added to the Senzing Python API without the applications
-   have having to change.  Especially true for new "critical" exceptions.
-1. No new Exception attributes are created.  Thus simplifying Exception chaining and logging.
-
 The approach creates 4 new exception classes:
 
 1. **G2ExceptionCritical**
 1. **G2ExceptionError**
 1. **G2ExceptionWarning**
 1. **G2ExceptionInfo**
+
+Specific Exceptions are mapped into a hierarchy.
+Examples:
+
+1. **G2Exception** > **G2ExceptionCritical** > **G2DBExceptionCritical**
+1. **G2Exception** > **G2ExceptionWarning** > **G2DBExceptionWarning**
+1. **G2Exception** > **G2ExceptionInfo** > **G2ModuleResolveMissingResEnt**
+
+It also facilitates "future-proofing" applications using the Senzing Python API.
+
+1. New "specific" Exceptions can be added to the Senzing Python API without the applications
+   have having to change.  Especially true for new "critical" exceptions.
+1. No new Exception attributes are created.  Thus simplifying Exception chaining and logging.
 
 ## Usage
 
