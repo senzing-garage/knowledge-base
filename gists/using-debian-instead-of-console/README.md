@@ -69,3 +69,36 @@ Load the `debian:11-slim` docker image into a private Docker registry.
       --namespace ${DEMO_NAMESPACE} \
       --values ${HELM_VALUES_DIR}/senzing-debian.yaml
     ```
+
+
+## Copy
+
+1. XXX
+   Example:
+
+
+    ```console
+    main:
+
+      args:
+        - cp
+        - --no-perserve=ownership
+        - --archive
+        - /opt/local-senzing/.
+        - /opt/senzing
+
+      containerSecurityContext:
+        enabled: true
+        privileged: true
+        runAsGroup: 0
+        runAsUser: 0
+
+      image:
+        registry: ${DOCKER_REGISTRY_URL}
+        tag: ${SENZING_VERSION_SENZINGAPI}
+
+      senzing:
+        persistentVolumeClaim: senzing-persistent-volume-claim
+
+
+    ```
