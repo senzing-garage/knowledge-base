@@ -129,3 +129,26 @@ Load the `debian:11-slim` docker image into a private Docker registry.
         persistentVolumeClaim: senzing-persistent-volume-claim
 
      ```
+
+
+ ### init-container
+
+ 1. Update the database
+    Example:
+
+     ```console
+    main:
+
+      args: infinity
+      command: sleep
+
+      image:
+        registry: ${DOCKER_REGISTRY_URL}
+        tag: ${SENZING_DOCKER_IMAGE_VERSION_REDOER}
+
+      senzing:
+        databaseUrl: "postgresql://postgres:postgres@${DEMO_PREFIX}-bitnami-postgresql:5432/G2"
+        persistentVolumeClaim: senzing-persistent-volume-claim
+        subcommand: redo
+
+     ```
