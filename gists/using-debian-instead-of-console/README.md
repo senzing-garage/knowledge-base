@@ -70,44 +70,12 @@ Load the `debian:11-slim` docker image into a private Docker registry.
       --values ${HELM_VALUES_DIR}/senzing-debian.yaml
     ```
 
+## init-container update database only
 
-## Copy
-
-1. XXX
+1. Update the database
    Example:
 
-
-    ```console
-    main:
-
-      args:
-        - cp
-        - -r
-        - /opt/local-senzing/.
-        - /opt/senzing
-
-      containerSecurityContext:
-        enabled: true
-        privileged: true
-        runAsGroup: 0
-        runAsUser: 0
-
-      image:
-        registry: ${DOCKER_REGISTRY_URL}
-        tag: ${SENZING_VERSION_SENZINGAPI}
-
-      senzing:
-        persistentVolumeClaim: senzing-persistent-volume-claim
-
-
-    ```
-
- ### init-container
-
- 1. Update the database
-    Example:
-
-     ```console
+    ```yaml
     main:
 
       containerSecurityContext:
@@ -128,27 +96,65 @@ Load the `debian:11-slim` docker image into a private Docker registry.
         databaseUrl: "postgresql://postgres:postgres@${DEMO_PREFIX}-bitnami-postgresql:5432/G2"
         persistentVolumeClaim: senzing-persistent-volume-claim
 
-     ```
+    ```
 
+## senzing-api-server with ingress
 
- ### init-container
+See senzing-api-server's [ingress:](https://github.com/Senzing/charts/blob/1d0b26c90858498c6e29c39ccf948c0959836f75/charts/senzing-api-server/values.yaml#L413-L510)
 
- 1. Update the database
-    Example:
+1. `senzing-api-server-postgresql.yaml`
+   Example:
 
-     ```console
+    ```yaml
     main:
 
-      args: infinity
-      command: sleep
+      autoscaling:
+        enabled: true
 
       image:
         registry: ${DOCKER_REGISTRY_URL}
-        tag: ${SENZING_DOCKER_IMAGE_VERSION_REDOER}
+        tag: ${SENZING_DOCKER_IMAGE_VERSION_SENZING_API_SERVER}
 
       senzing:
-        databaseUrl: "postgresql://postgres:postgres@${DEMO_PREFIX}-bitnami-postgresql:5432/G2"
+        concurrency: 8
+        engineConfigurationJson: >-
+          {
+            "PIPELINE": {
+              "CONFIGPATH": "/etc/opt/senzing",
+              "RESOURCEPATH": "/opt/senzing/g2/resources",
+              "SUPPORTPATH": "/opt/senzing/data"
+            },
+            "SQL": {
+              "BACKEND": "HYBRID",
+              "CONNECTION": "postgresql://postgres:postgres@${DEMO_PREFIX}-bitnami-postgresql:5432:G2"
+            }
+          }
         persistentVolumeClaim: senzing-persistent-volume-claim
-        subcommand: redo
 
-     ```
+    ingress:
+        enabled: true
+    ```
+
+## entity-search-web-app with ingress
+
+See `senzing/entity-search-web-app`'s [ingress:](https://github.com/Senzing/charts/blob/1d0b26c90858498c6e29c39ccf948c0959836f75/charts/senzing-entity-search-web-app/values.yaml#L386-L483)
+
+1. `senzing-entity-search-web-app.yaml`
+   Example:
+
+    ```yaml
+    main:
+
+      autoscaling:
+        enabled: true
+
+      image:
+        registry: ${DOCKER_REGISTRY_URL}
+        tag: ${SENZING_DOCKER_IMAGE_VERSION_ENTITY_SEARCH_WEB_APP}
+
+    ingress:
+        enabled: true
+
+      senzing:
+        apiServerUrl: "http://${DEMO_PREFIX}-senzing-api-server"
+    ```
