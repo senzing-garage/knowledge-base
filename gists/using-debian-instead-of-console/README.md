@@ -101,3 +101,31 @@ Load the `debian:11-slim` docker image into a private Docker registry.
 
 
     ```
+
+ ### init-container
+
+ 1. Update the database
+    Example:
+
+     ```console
+    main:
+
+      containerSecurityContext:
+        enabled: true
+        privileged: true
+        runAsGroup: 0
+        runAsUser: 0
+
+      extraEnvVars:
+        - name: SENZING_SUBCOMMAND
+          value: initialize-database
+
+      image:
+        registry: ${DOCKER_REGISTRY_URL}
+        tag: ${SENZING_DOCKER_IMAGE_VERSION_INIT_CONTAINER}
+
+      senzing:
+        databaseUrl: "postgresql://postgres:postgres@${DEMO_PREFIX}-bitnami-postgresql:5432/G2"
+        persistentVolumeClaim: senzing-persistent-volume-claim
+
+     ```
