@@ -74,7 +74,8 @@ Load the `debian:11-slim` docker image into a private Docker registry.
 
 Add `SENZING_SUBCOMMAND` so `senzing/init-container` docker container just updates the database.
 
-1. `helm-values/senzing-init-container-postgresql-database.yaml`
+1. `helm-values/senzing-init-container-postgresql-database.yaml`.
+   Replace the `${...}` variables with actual values.
    Example:
 
     ```yaml
@@ -101,9 +102,12 @@ Add `SENZING_SUBCOMMAND` so `senzing/init-container` docker container just updat
 
 ## senzing-api-server with ingress
 
-See senzing-api-server's [ingress:](https://github.com/Senzing/charts/blob/1d0b26c90858498c6e29c39ccf948c0959836f75/charts/senzing-api-server/values.yaml#L413-L510)
+Deploy the `senzing/senzing-api-server` Helm Chart with an Ingress defined.
+For more options, see `senzing/senzing-api-server`'s
+[ingress:](https://github.com/Senzing/charts/blob/1d0b26c90858498c6e29c39ccf948c0959836f75/charts/senzing-api-server/values.yaml#L413-L510)
 
-1. `helm-values/senzing-api-server-postgresql.yaml`
+1. `helm-values/senzing-api-server-postgresql.yaml`.
+   Replace the `${...}` variables with actual values.
    Example:
 
     ```yaml
@@ -138,9 +142,12 @@ See senzing-api-server's [ingress:](https://github.com/Senzing/charts/blob/1d0b2
 
 ## entity-search-web-app with ingress
 
-See `senzing/entity-search-web-app`'s [ingress:](https://github.com/Senzing/charts/blob/1d0b26c90858498c6e29c39ccf948c0959836f75/charts/senzing-entity-search-web-app/values.yaml#L386-L483)
+Deploy the `senzing/entity-search-web-app` Helm Chart with an Ingress defined.
+For more options, see `senzing/entity-search-web-app`'s
+[ingress:](https://github.com/Senzing/charts/blob/1d0b26c90858498c6e29c39ccf948c0959836f75/charts/senzing-entity-search-web-app/values.yaml#L386-L483)
 
-1. `helm-values/senzing-entity-search-web-app.yaml`
+1. `helm-values/senzing-entity-search-web-app.yaml`.
+   Replace the `${...}` variables with actual values.
    Example:
 
     ```yaml
