@@ -1,7 +1,7 @@
 # using-debian-instead-of-console
 
 The following instructions show how to use a `debian:11-slim` docker container
-instead of the `senzing/console` container.
+instead of the `senzing/console` container in the `senzing/console` Helm Chart.
 
 ## Obtain docker image
 
@@ -72,7 +72,9 @@ Load the `debian:11-slim` docker image into a private Docker registry.
 
 ## init-container update database only
 
-1. Update the database
+Add `SENZING_SUBCOMMAND` so `senzing/init-container` docker container just updates the database.
+
+1. `helm-values/senzing-init-container-postgresql-database.yaml`
    Example:
 
     ```yaml
@@ -95,14 +97,13 @@ Load the `debian:11-slim` docker image into a private Docker registry.
       senzing:
         databaseUrl: "postgresql://postgres:postgres@${DEMO_PREFIX}-bitnami-postgresql:5432/G2"
         persistentVolumeClaim: senzing-persistent-volume-claim
-
     ```
 
 ## senzing-api-server with ingress
 
 See senzing-api-server's [ingress:](https://github.com/Senzing/charts/blob/1d0b26c90858498c6e29c39ccf948c0959836f75/charts/senzing-api-server/values.yaml#L413-L510)
 
-1. `senzing-api-server-postgresql.yaml`
+1. `helm-values/senzing-api-server-postgresql.yaml`
    Example:
 
     ```yaml
@@ -139,7 +140,7 @@ See senzing-api-server's [ingress:](https://github.com/Senzing/charts/blob/1d0b2
 
 See `senzing/entity-search-web-app`'s [ingress:](https://github.com/Senzing/charts/blob/1d0b26c90858498c6e29c39ccf948c0959836f75/charts/senzing-entity-search-web-app/values.yaml#L386-L483)
 
-1. `senzing-entity-search-web-app.yaml`
+1. `helm-values/senzing-entity-search-web-app.yaml`
    Example:
 
     ```yaml
