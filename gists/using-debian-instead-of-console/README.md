@@ -83,7 +83,6 @@ Load the `debian:11-slim` docker image into a private Docker registry.
       args:
         - cp
         - --no-preserve=ownership
-        - --archive
         - /opt/local-senzing/.
         - /opt/senzing
 
