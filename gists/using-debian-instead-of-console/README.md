@@ -106,6 +106,9 @@ See senzing-api-server's [ingress:](https://github.com/Senzing/charts/blob/1d0b2
    Example:
 
     ```yaml
+    ingress:
+        enabled: true
+
     main:
 
       autoscaling:
@@ -130,9 +133,6 @@ See senzing-api-server's [ingress:](https://github.com/Senzing/charts/blob/1d0b2
             }
           }
         persistentVolumeClaim: senzing-persistent-volume-claim
-
-    ingress:
-        enabled: true
     ```
 
 ## entity-search-web-app with ingress
@@ -143,6 +143,9 @@ See `senzing/entity-search-web-app`'s [ingress:](https://github.com/Senzing/char
    Example:
 
     ```yaml
+    ingress:
+        enabled: true
+
     main:
 
       autoscaling:
@@ -151,9 +154,6 @@ See `senzing/entity-search-web-app`'s [ingress:](https://github.com/Senzing/char
       image:
         registry: ${DOCKER_REGISTRY_URL}
         tag: ${SENZING_DOCKER_IMAGE_VERSION_ENTITY_SEARCH_WEB_APP}
-
-    ingress:
-        enabled: true
 
       senzing:
         apiServerUrl: "http://${DEMO_PREFIX}-senzing-api-server"
