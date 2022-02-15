@@ -175,7 +175,8 @@ For more options, see `senzing/entity-search-web-app`'s
     ```yaml
     main:
 
-      args: infinity
+      args:
+        - infinity
 
       autoscaling:
         enabled: false
@@ -184,7 +185,8 @@ For more options, see `senzing/entity-search-web-app`'s
         targetCPU: 10
         targetMemory: 10
 
-      command: sleep
+      command:
+        - sleep
 
       extraVolumeMounts:
         - name: name-of-volume
