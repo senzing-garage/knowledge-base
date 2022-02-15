@@ -166,3 +166,50 @@ For more options, see `senzing/entity-search-web-app`'s
       senzing:
         apiServerUrl: "http://${DEMO_PREFIX}-senzing-api-server"
     ```
+
+## Secrets in stream-loader
+
+1. `helm-values/stream0
+   Example:
+
+    ```yaml
+    main:
+
+      args: infinity
+
+      autoscaling:
+        enabled: false
+        maxReplicas: 10
+        minReplicas: 3
+        targetCPU: 10
+        targetMemory: 10
+
+      command: sleep
+
+      extraVolumeMounts:
+        - name: name-of-volume
+          mountPath: "/etc/kafka-tls"
+          readOnly: true
+
+      extraVolumes:
+        - name: name-of-volume
+          secret:
+            secretName: name-of-secret
+
+      image:
+        registry: ${DOCKER_REGISTRY_URL}
+        tag: ${SENZING_DOCKER_IMAGE_VERSION_STREAM_LOADER}
+
+      senzing:
+        dataSource: TEST
+        databaseUrl: "postgresql://postgres:postgres@${DEMO_PREFIX}-bitnami-postgresql:5432/G2"
+        entityType: GENERIC
+        kafkaBootstrapServerHost: "${DEMO_PREFIX}-bitnami-kafka"
+        kafkaBootstrapServerPort: 9092
+        kafkaTopic: senzing-kafka-topic
+        logLevel: info
+        monitoringPeriod: 60
+        persistentVolumeClaim: senzing-persistent-volume-claim
+        subcommand: kafka
+        threadsPerProcess: 4
+    ```
