@@ -215,3 +215,45 @@ For more options, see `senzing/entity-search-web-app`'s
         subcommand: kafka
         threadsPerProcess: 4
     ```
+
+
+## Test
+
+1. x
+
+    ```yaml
+    main:
+
+      autoscaling:
+        enabled: true
+        maxReplicas: 10
+        minReplicas: 3
+        targetCPU: 10
+        targetMemory: 10
+
+      image:
+        registry: docker.io
+        tag: 1.9.7
+
+      senzing:
+        dataSource: TEST
+        databaseUrl: "postgresql://postgres:postgres@my-bitnami-postgresql:5432/G2"
+        entityType: GENERIC
+        kafkaBootstrapServerHost: "my-bitnami-kafka"
+        kafkaBootstrapServerPort: 9092
+        kafkaTopic: senzing-kafka-topic
+        logLevel: info
+        monitoringPeriod: 60
+        persistentVolumeClaim: senzing-persistent-volume-claim
+        subcommand: kafka
+        threadsPerProcess: 4
+        kafkaConfiguration: >-
+          {
+            "security.protocol": "SSL",
+            "ssl.truststore.location": "/kafka-all_truststore.jks",
+            "ssl.truststore.password": "test",
+            "ssl.keystore.location": "/k-staging-wild-keystore.jks",
+            "ssl.keystore.password": "test",
+            "ssl.key.password": "text"
+          }
+    ```
