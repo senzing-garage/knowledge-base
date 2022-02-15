@@ -169,7 +169,7 @@ For more options, see `senzing/entity-search-web-app`'s
 
 ## Secrets in stream-loader
 
-1. `helm-values/stream0
+1. `helm-values/senzing-stream-loader-kafka-postgresql.yaml`.
    Example:
 
     ```yaml
