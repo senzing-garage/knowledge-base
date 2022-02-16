@@ -152,7 +152,9 @@ For more options, see `senzing/entity-search-web-app`'s
 
     ```yaml
     ingress:
+        annotations: {}
         enabled: true
+        hostname: senzing-webapp.apps.k8s-nonprod.uscis.dhs.gov
 
     main:
 
