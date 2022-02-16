@@ -154,7 +154,7 @@ For more options, see `senzing/entity-search-web-app`'s
     ingress:
         annotations: {}
         enabled: true
-        hostname: senzing-webapp.apps.k8s-nonprod.uscis.dhs.gov
+        hostname: senzing-webapp.apps.k8s.uscis.dhs.gov
 
     main:
 
