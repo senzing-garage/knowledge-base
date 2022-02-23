@@ -154,4 +154,4 @@ The approach facilitates "future-proofing" applications using the Senzing Python
 ## Implementation
 
 1. See [exceptions.py](python-exceptions/exceptions.py)
-1. [Try it](https://code.labstack.com/gFysm75U)
+1. [Try it](https://code.labstack.com/CVJwiDLD)
