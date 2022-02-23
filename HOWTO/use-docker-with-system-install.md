@@ -36,7 +36,7 @@ The following shows how to use docker containers with a Senzing system installat
    Example:
 
     ```console
-    export SENZING_DATA_VERSION_DIR=/opt/senzing/data/1.0.0
+    export SENZING_DATA_VERSION_DIR=/opt/senzing/data/2.0.0
     export SENZING_ETC_DIR=/etc/opt/senzing
     export SENZING_G2_DIR=/opt/senzing/g2
     export SENZING_VAR_DIR=/var/opt/senzing
