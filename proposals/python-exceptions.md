@@ -95,6 +95,11 @@ The approach facilitates "future-proofing" applications using the Senzing Python
         sys.exit(1)
     ```
 
+    1. **Note:**
+       `G2Exception.G2ExceptionWarning` and
+       `G2Exception.G2ExceptionInfo`
+       seem to mis-use the notion of "exception"
+
 1. The structure follows the [Python logging levels](https://docs.python.org/3/library/logging.html#logging-levels):
     1. critical
     1. error
