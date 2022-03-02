@@ -34,11 +34,9 @@ Instructions for installing [Helm](https://helm.sh).
 1. Example:
 
     ```console
-    curl https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get > get_helm.sh
-    chmod +x get_helm.sh
-    ./get_helm.sh --help
-    sudo ./get_helm.sh
-    rm get_helm.sh
+    curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
+    chmod 700 get_helm.sh
+    ./get_helm.sh
     ```
 
 ### macOS
