@@ -768,8 +768,7 @@
 1. Synopsis:
     1. Time to delay before actually starting process
     1. Used for simple choreography.
-1. Where used:
-    1. [stream-loader](https://github.com/Senzing/stream-loader),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DELAY_IN_SECONDS&type=code)
 
 ### SENZING_DELAY_RANDOMIZED
 
@@ -1255,8 +1254,7 @@
         export SENZING_GOVERNOR_LIST_SEPARATOR="+"
         ```
 
-1. Where used:
-    1. [governor-postgresql-transaction-id](https://github.com/Senzing/governor-postgresql-transaction-id),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_GOVERNOR_LIST_SEPARATOR&type=code)
 
 ### SENZING_GOVERNOR_POSTGRESQL_HIGH_WATERMARK
 
@@ -1272,8 +1270,7 @@
         export SENZING_GOVERNOR_POSTGRESQL_HIGH_WATERMARK=9000000000
         ```
 
-1. Where used:
-    1. [governor-postgresql-transaction-id](https://github.com/Senzing/governor-postgresql-transaction-id),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_GOVERNOR_POSTGRESQL_HIGH_WATERMARK&type=code)
 
 ### SENZING_GOVERNOR_POSTGRESQL_LOW_WATERMARK
 
@@ -1289,8 +1286,7 @@
         export SENZING_GOVERNOR_POSTGRESQL_LOW_WATERMARK=7000000000
         ```
 
-1. Where used:
-    1. [governor-postgresql-transaction-id](https://github.com/Senzing/governor-postgresql-transaction-id),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_GOVERNOR_POSTGRESQL_LOW_WATERMARK&type=code)
 
 ### SENZING_GOVERNOR_PROJECT_DIR
 
@@ -1304,8 +1300,7 @@
         export SENZING_GOVERNOR_PROJECT_DIR=~/test-governor
         ```
 
-1. Where used:
-    1. [governor-postgresql-transaction-id](https://github.com/Senzing/governor-postgresql-transaction-id),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_GOVERNOR_PROJECT_DIR&type=code)
 
 ### SENZING_GOVERNOR_WAIT
 
@@ -1321,13 +1316,11 @@
         export SENZING_GOVERNOR_WAIT=600
         ```
 
-1. Where used:
-    1. [governor-postgresql-transaction-id](https://github.com/Senzing/governor-postgresql-transaction-id),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_GOVERNOR_WAIT&type=code)
 
 ### SENZING_HOST
 
-1. Where used:
-    1. [resolver](https://github.com/Senzing/resolver),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_HOST&type=code)
 
 ### SENZING_INIT_CONTAINER_SLEEP
 
@@ -1335,13 +1328,11 @@
     1. Time to sleep, in seconds, before doing initialization
 1. Values:
     1. Default: 0
-1. Where used:
-    1. [docker-init-container](https://github.com/Senzing/docker-init-container),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_INIT_CONTAINER_SLEEP&type=code)
 
 ### SENZING_INPUT_FILE
 
-1. Where used:
-    1. [resolver](https://github.com/Senzing/resolver),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_INPUT_FILE&type=code)
 
 ### SENZING_INPUT_URL
 
@@ -1349,13 +1340,11 @@
     1. URL of source file.
 1. Values:
     1. Default: none
-1. Where used:
-    1. [stream-loader](https://github.com/Senzing/stream-loader),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_INPUT_URL&type=code)
 
 ### SENZING_INTERNAL_DATABASE
 
-1. Where used:
-    1. [resolver](https://github.com/Senzing/resolver),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_INTERNAL_DATABASE&type=code)
 
 ### SENZING_KAFKA_BOOTSTRAP_SERVER
 
@@ -1363,16 +1352,23 @@
     1. Hostname and port of Kafka server.
 1. Values:
     1. Default: localhost:9092
-1. Where used:
-    1. [stream-loader](https://github.com/Senzing/stream-loader),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_KAFKA_BOOTSTRAP_SERVER&type=code)
 
 ### SENZING_KAFKA_CONFIGURATION
 
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_KAFKA_CONFIGURATION&type=code)
+
 ### SENZING_KAFKA_FAILURE_BOOTSTRAP_SERVER
+
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_KAFKA_FAILURE_BOOTSTRAP_SERVER&type=code)
 
 ### SENZING_KAFKA_FAILURE_CONFIGURATION
 
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_KAFKA_FAILURE_CONFIGURATION&type=code)
+
 ### SENZING_KAFKA_FAILURE_TOPIC
+
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_KAFKA_FAILURE_TOPIC&type=code)
 
 ### SENZING_KAFKA_GROUP
 
@@ -1380,14 +1376,19 @@
     1. Kafka group.
 1. Values:
     1. Default: "senzing-kafka-group"
-1. Where used:
-    1. [stream-loader](https://github.com/Senzing/stream-loader),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_KAFKA_GROUP&type=code)
 
 ### SENZING_KAFKA_INFO_BOOTSTRAP_SERVER
 
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_KAFKA_INFO_BOOTSTRAP_SERVER&type=code)
+
 ### SENZING_KAFKA_INFO_CONFIGURATION
 
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_KAFKA_INFO_CONFIGURATION&type=code)
+
 ### SENZING_KAFKA_INFO_TOPIC
+
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_KAFKA_INFO_TOPIC&type=code)
 
 ### SENZING_KAFKA_TOPIC
 
@@ -1395,8 +1396,7 @@
     1. Kafka topic.
 1. Values:
     1. Default: "senzing-kafka-topic"
-1. Where used:
-    1. [stream-loader](https://github.com/Senzing/stream-loader),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_KAFKA_TOPIC&type=code)
 
 ### SENZING_LOG_LEVEL
 
@@ -1412,9 +1412,7 @@
     1. Default: info
 1. Forms:
     1. Helm: senzing.logLevel
-1. Where used:
-    1. [docker-init-container](https://github.com/Senzing/docker-init-container),
-       [stream-loader](https://github.com/Senzing/stream-loader),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_LOG_LEVEL&type=code)
 
 ### SENZING_LOG_LICENSE_PERIOD_IN_SECONDS
 
@@ -1422,8 +1420,7 @@
     1. Interval between logging Senzing license information.
 1. Values:
      1. Default: 1 day
-1. Where used:
-    1. [stream-loader](https://github.com/Senzing/stream-loader),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_LOG_LICENSE_PERIOD_IN_SECONDS&type=code)
 
 ### SENZING_MONITORING_PERIOD
 
@@ -1431,8 +1428,7 @@
     1. Time, in seconds, between monitoring log records.
 1. Values:
     1. Default: 300
-1. Where used:
-    1. [stream-loader](https://github.com/Senzing/stream-loader),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_MONITORING_PERIOD&type=code)
 
 ### SENZING_MONITORING_PERIOD_IN_SECONDS
 
@@ -1440,6 +1436,7 @@
     1. Time, in seconds, between monitoring log records.
 1. Values:
     1. Default: 600
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_MONITORING_PERIOD_IN_SECONDS&type=code)
 
 ### SENZING_NETWORK
 
@@ -1455,10 +1452,7 @@
         export SENZING_NETWORK=nameofthe_network
         ```
 
-1. Where used:
-    1. [docker-g2command](https://github.com/Senzing/docker-g2command),
-       [docker-senzing-base](https://github.com/Senzing/docker-senzing-base),
-       [resolver](https://github.com/Senzing/resolver),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_NETWORK&type=code)
 
 ### SENZING_OPT_IBM_DIR
 
@@ -1469,8 +1463,7 @@
 1. Values:
     1. Default: none
     1. Usually set to `/opt/IBM`
-1. Where used:
-    1. [docker-db2-driver-installer](https://github.com/Senzing/docker-db2-driver-installer),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_OPT_IBM_DIR&type=code)
 
 ### SENZING_OPT_MICROSOFT_DIR
 
@@ -1479,11 +1472,11 @@
 1. Values:
     1. Default: none
     1. Usually set to `/opt/microsoft`
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_OPT_MICROSOFT_DIR&type=code)
 
 ### SENZING_OUTPUT_FILE
 
-1. Where used:
-    1. [resolver](https://github.com/Senzing/resolver),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_OUTPUT_FILE&type=code)
 
 ### SENZING_PLUGINS_DIR
 
@@ -1498,24 +1491,25 @@
         export SENZING_PLUGINS_DIR=${GIT_REPOSITORY_DIR}/resources/plugins
         ```
 
-1. Where used:
-    1. [docker-compose-demo](https://github.com/Senzing/docker-compose-demo),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_PLUGINS_DIR&type=code)
 
 ### SENZING_PORT
 
-1. Where used:
-    1. [resolver](https://github.com/Senzing/resolver),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_PORT&type=code)
 
 ### SENZING_PORTAINER_DIR
 
 1. Synopsis:
     1. A directory where [Portainer](https://github.com/Senzing/knowledge-base/blob/master/WHATIS/portainer.md) can keep variable data.
-1. Where used:
-    1. [senzing-environment](https://github.com/Senzing/senzing-environment),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_PORTAINER_DIR&type=code)
 
 ### SENZING_PRIME_ENGINE
 
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_PRIME_ENGINE&type=code)
+
 ### SENZING_PSTACK_PID
+
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_PSTACK_PID&type=code)
 
 ### SENZING_PROJECT_DIR
 
@@ -1529,8 +1523,7 @@
         export SENZING_PROJECT_DIR=~/my-senzing-project
         ```
 
-1. Where used:
-    1. [senzing-environment](https://github.com/Senzing/senzing-enviroment),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_PROJECT_DIR&type=code)
 
 ### SENZING_PROJECT_NAME
 
@@ -1545,8 +1538,7 @@
         export SENZING_PROJECT_NAME=~/test01
         ```
 
-1. Where used:
-    1. [senzing-environment](https://github.com/Senzing/senzing-enviroment),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_PROJECT_NAME&type=code)
 
 ### SENZING_SQL_CONNECTION
 
@@ -1561,8 +1553,7 @@
         export SENZING_SQL_CONNECTION=mysql://username:password@hostname:3306/?schema=schemaname
         ```
 
-1. Where used:
-    1. [senzing-environment](https://github.com/Senzing/senzing-environment),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_SQL_CONNECTION&type=code)
 
 ### SENZING_QUEUE_MAX
 
@@ -1570,8 +1561,7 @@
     1. Maximum items for internal queue.
 1. Values:
     1. Default: 10
-1. Where used:
-    1. [stream-loader](https://github.com/Senzing/stream-loader),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_QUEUE_MAX&type=code)
 
 ### SENZING_RABBITMQ_EXCHANGE
 
@@ -1579,16 +1569,13 @@
     1. Name of the RabbitMQ exchange used for routing messages.
 1. Values
     1. Default: "senzing-rabbitmq-exchange"
-1. Where used:
-    1. [stream-producer](https://github.com/Senzing/stream-producer)
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RABBITMQ_EXCHANGE&type=code)
 
 ### SENZING_RABBITMQ_FAILURE_EXCHANGE
 
 1. Synopsis:
     1. Name of the RabbitMQ exchange used for routing info messages about loaded records
-1. Where used:
-    1. [stream-producer](https://github.com/Senzing/stream-loader)
-    1. [stream-loader](https://github.com/Senzing/stream-loader)
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RABBITMQ_FAILURE_EXCHANGE&type=code)
 
 ### SENZING_RABBITMQ_FAILURE_HOST
 
@@ -1596,8 +1583,7 @@
     1. Host name of the RabbitMQ server used to post records that failed to load
 1. Values:
     1. Default: The value of SENZING_RABBITMQ_HOST
-1. Where used:
-    1. [stream-loader](https://github.com/Senzing/stream-loader)
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RABBITMQ_FAILURE_HOST&type=code)
 
 ### SENZING_RABBITMQ_FAILURE_PASSWORD
 
@@ -1605,8 +1591,7 @@
     1. The password for the RabbitMQ failure server.
 1. Values:
     1. Default: The value of SENZING_RABBITMQ_PASSWORD
-1. Where used:
-    1. [stream-loader](https://github.com/Senzing/stream-loader)
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RABBITMQ_FAILURE_PASSWORD&type=code)
 
 ### SENZING_RABBITMQ_FAILURE_PORT
 
@@ -1614,8 +1599,7 @@
     1. The port to use to connect to the RabbitMQ server specified by SENZING_RABBITMQ_FAILURE_HOST
 1. Values:
     1. Default: The value of SENZING_RABBITMQ_PORT
-1. Where used:
-    1. [stream-loader](https://github.com/Senzing/stream-loader)
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RABBITMQ_FAILURE_PORT&type=code)
 
 ### SENZING_RABBITMQ_FAILURE_QUEUE
 
@@ -1623,8 +1607,7 @@
     1. Name of the RabbitMQ queue used for records that failed to load.
 1. Values:
     1. Default: "senzing-rabbitmq-queue"
-1. Where used:
-    1. [stream-loader](https://github.com/Senzing/stream-loader)
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RABBITMQ_FAILURE_QUEUE&type=code)
 
 ### SENZING_RABBITMQ_FAILURE_ROUTING_KEY
 
@@ -1632,9 +1615,7 @@
     1. The RabbitMQ routing key to use when creating a binding or publishing a record.
 1. Values:
     1. Default: "senzing.failure"
-1. Where used:
-    1. [stream-producer](https://github.com/Senzing/stream-producer)
-    1. [stream-loader](https://github.com/Senzing/stream-loader)
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RABBITMQ_FAILURE_ROUTING_KEY&type=code)
 
 ### SENZING_RABBITMQ_FAILURE_USERNAME
 
@@ -1642,8 +1623,7 @@
     1. The username for the RabbitMQ server.
 1. Values:
     1. Default: The value of SENZING_RABBITMQ_USERNAME
-1. Where used:
-    1. [stream-producer](https://github.com/Senzing/stream-producer)
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RABBITMQ_FAILURE_USERNAME&type=code)
 
 ### SENZING_RABBITMQ_FAILURE_VIRTUAL_HOST
 
@@ -1651,8 +1631,7 @@
     1. The name of the virtual host where the failure queue exists.
 1. Values:
     1. Default: SENZING_RABBITMQ_VIRTUAL_HOST
-1. Where used:
-    1. [stream-producer](https://github.com/Senzing/stream-producer)
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RABBITMQ_FAILURE_VIRTUAL_HOST&type=code)
 
 ### SENZING_RABBITMQ_HEARTBEAT_IN_SECONDS
 
@@ -1660,7 +1639,7 @@
     1. Heartbeat time in seconds on connections to the RabbitMQ server.
 1. Values:
     1. Default: "60"
-1. Where used:
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RABBITMQ_HEARTBEAT_IN_SECONDS&type=code)
     1. [stream-loader](https://github.com/Senzing/stream-loader)
 
 ### SENZING_RABBITMQ_HOST
@@ -1669,17 +1648,13 @@
     1. Host name of the RabbitMQ server.
 1. Values:
     1. Default: "localhost:5672"
-1. Where used:
-    1. [stream-loader](https://github.com/Senzing/stream-loader)
-    1. [stream-producer](https://github.com/Senzing/stream-producer)
-    1. [stream-logger](https://github.com/Senzing/stream-logger)
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RABBITMQ_HOST&type=code)
 
 ### SENZING_RABBITMQ_INFO_EXCHANGE
 
 1. Synopsis:
     1. Name of the RabbitMQ exchange used for routing info messages about loaded records
-1. Where used:
-    1. [stream-producer](https://github.com/Senzing/stream-loader)
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RABBITMQ_INFO_EXCHANGE&type=code)
 
 ### SENZING_RABBITMQ_INFO_HOST
 
@@ -1687,8 +1662,7 @@
     1. Host name of the RabbitMQ server used to post the info about a loaded record
 1. Values:
     1. Default: The value of SENZING_RABBITMQ_HOST
-1. Where used:
-    1. [stream-loader](https://github.com/Senzing/stream-loader)
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RABBITMQ_INFO_HOST&type=code)
 
 ### SENZING_RABBITMQ_INFO_PASSWORD
 
@@ -1696,8 +1670,7 @@
     1. The password for the RabbitMQ info server.
 1. Values:
     1. Default: The value of SENZING_RABBITMQ_PASSWORD
-1. Where used:
-    1. [stream-loader](https://github.com/Senzing/stream-loader)
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RABBITMQ_INFO_PASSWORD&type=code)
 
 ### SENZING_RABBITMQ_INFO_PORT
 
@@ -1705,8 +1678,7 @@
     1. The port to use to connect to the RabbitMQ server specified by SENZING_RABBITMQ_INFO_HOST
 1. Values:
     1. Default: The value of SENZING_RABBITMQ_PORT
-1. Where used:
-    1. [stream-loader](https://github.com/Senzing/stream-loader)
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RABBITMQ_INFO_PORT&type=code)
 
 ### SENZING_RABBITMQ_INFO_QUEUE
 
@@ -1714,8 +1686,7 @@
     1. Name of the RabbitMQ queue used for communication.
 1. Values:
     1. Default: "senzing-rabbitmq-queue"
-1. Where used:
-    1. [stream-loader](https://github.com/Senzing/stream-loader)
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RABBITMQ_INFO_QUEUE&type=code)
 
 ### SENZING_RABBITMQ_INFO_ROUTING_KEY
 
@@ -1723,9 +1694,7 @@
     1. The RabbitMQ routing key to use when creating a binding or publishing a record.
 1. Values:
     1. Default: "senzing.info"
-1. Where used:
-    1. [stream-producer](https://github.com/Senzing/stream-producer)
-    1. [stream-loader](https://github.com/Senzing/stream-loader)
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RABBITMQ_INFO_ROUTING_KEY&type=code)
 
 ### SENZING_RABBITMQ_INFO_USERNAME
 
@@ -1733,8 +1702,7 @@
     1. The username for the RabbitMQ server.
 1. Values:
     1. Default: The value of SENZING_RABBITMQ_USERNAME
-1. Where used:
-    1. [stream-producer](https://github.com/Senzing/stream-producer)
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RABBITMQ_INFO_USERNAME&type=code)
 
 ### SENZING_RABBITMQ_INFO_VIRTUAL_HOST
 
@@ -1742,8 +1710,7 @@
     1. The name of the virtual host where the info queue exists.
 1. Values:
     1. Default: SENZING_RABBITMQ_VIRTUAL_HOST
-1. Where used:
-    1. [stream-producer](https://github.com/Senzing/stream-producer)
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RABBITMQ_INFO_VIRTUAL_HOST&type=code)
 
 ### SENZING_RABBITMQ_PASSWORD
 
@@ -1751,8 +1718,7 @@
     1. The password for the RabbitMQ queue.
 1. Values:
     1. Default: "bitnami"
-1. Where used:
-    1. [stream-loader](https://github.com/Senzing/stream-loader),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RABBITMQ_PASSWORD&type=code)
 
 ### SENZING_RABBITMQ_PORT
 
@@ -1760,10 +1726,7 @@
     1. The port to use to connect to the RabbitMQ server specified by SENZING_RABBITMQ_HOST
 1. Values:
     1. Default: "5672"
-1. Where used:
-    1. [stream-producer](https://github.com/Senzing/stream-producer)
-    1. [stream-loader](https://github.com/Senzing/stream-loader)
-    1. [stream-logger](https://github.com/Senzing/stream-logger)
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RABBITMQ_PORT&type=code)
 
 ### SENZING_RABBITMQ_PREFETCH_COUNT
 
@@ -1771,8 +1734,7 @@
     1. The number of records to get from the RabbitMQ queue in one request. Reduces the number of overall requests to the RabbitMQ server and improves performance.
 1. Values:
     1. Default: 50
-1. Where used:
-    1. [stream-loader](https://github.com/Senzing/stream-loader),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RABBITMQ_PREFETCH_COUNT&type=code)
 
 ### SENZING_RABBITMQ_PUBLISH_BATCH_SIZE
 
@@ -1780,8 +1742,7 @@
     1. The number of records to publish to RabbitMQ in a batch
 1. Values:
     1. Default: "1000"
-1. Where used:
-    1. [stream-producer](https://github.com/Senzing/stream-producer),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RABBITMQ_PUBLISH_BATCH_SIZE&type=code)
 
 ### SENZING_RABBITMQ_PUBLISH_INTERVAL
 
@@ -1789,8 +1750,7 @@
     1. How often (in seconds) to publish a batch of records to the RabbitMQ Queue
 1. Values:
     1. Default: "0.0"
-1. Where used:
-    1. [stream-producer](https://github.com/Senzing/stream-producer),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RABBITMQ_PUBLISH_INTERVAL&type=code)
 
 ### SENZING_RABBITMQ_QUEUE
 
@@ -1798,8 +1758,7 @@
     1. Name of the RabbitMQ queue used for communication.
 1. Values:
     1. Default: "senzing-rabbitmq-queue"
-1. Where used:
-    1. [stream-loader](https://github.com/Senzing/stream-loader),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RABBITMQ_QUEUE&type=code)
 
 ### SENZING_RABBITMQ_RECONNECT_DELAY_IN_SECONDS
 
@@ -1807,8 +1766,7 @@
     1. The time (in seconds) to wait between attempts to reconnect to the RabbitMQ broker.
 1. Values:
     1. Default: 60
-1. Where used:
-    1. [stream-loader](https://github.com/Senzing/stream-loader),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RABBITMQ_RECONNECT_DELAY_IN_SECONDS&type=code)
 
 ### SENZING_RABBITMQ_RECONNECT_NUMBER_OF_RETRIES
 
@@ -1816,8 +1774,7 @@
     1. The number of times to try reconnecting a dropped connection to the RabbitMQ broker.
 1. Values:
     1. Default: 10
-1. Where used:
-    1. [stream-loader](https://github.com/Senzing/stream-loader),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RABBITMQ_RECONNECT_NUMBER_OF_RETRIES&type=code)
 
 ### SENZING_RABBITMQ_ROUTING_FAILURE_KEY
 
@@ -1825,8 +1782,7 @@
     1. The RabbitMQ routing key to use when creating a binding to the failure queue or publishing to the failure exchange.
 1. Values:
     1. Default: "senzing.failure"
-1. Where used:
-    1. [stream-loader](https://github.com/Senzing/stream-loader)
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RABBITMQ_ROUTING_FAILURE_KEY&type=code)
 
 ### SENZING_RABBITMQ_ROUTING_INFO_KEY
 
@@ -1834,8 +1790,7 @@
     1. The RabbitMQ routing key to use when creating a binding to the info queue or publishing to the info exchange.
 1. Values:
     1. Default: "senzing.info"
-1. Where used:
-    1. [stream-loader](https://github.com/Senzing/stream-loader)
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RABBITMQ_ROUTING_INFO_KEY&type=code)
 
 ### SENZING_RABBITMQ_ROUTING_KEY
 
@@ -1843,9 +1798,7 @@
     1. The RabbitMQ routing key to use when creating a binding or publishing a record.
 1. Values:
     1. Default: "senzing.records"
-1. Where used:
-    1. [stream-producer](https://github.com/Senzing/stream-producer)
-    1. [stream-loader](https://github.com/Senzing/stream-loader)
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RABBITMQ_ROUTING_KEY&type=code)
 
 ### SENZING_RABBITMQ_USERNAME
 
@@ -1853,16 +1806,13 @@
     1. The username for the RabbitMQ queue.
 1. Values:
     1. Default: "user"
-1. Where used:
-    1. [stream-loader](https://github.com/Senzing/stream-loader),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RABBITMQ_USERNAME&type=code)
 
 ### SENZING_RABBITMQ_USE_EXISTING_ENTITIES
 
 1. Synopsis:
     1. Use existing RabbitMQ entities (exchanges, queues). That is, don't create the entities.
-1. Where used:
-    1. [stream-producer](https://github.com/Senzing/stream-producer),
-    1. [stream-loader](https://github.com/Senzing/stream-loader),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RABBITMQ_USE_EXISTING_ENTITIES&type=code)
 
 ### SENZING_RABBITMQ_VIRTUAL_HOST
 
@@ -1870,8 +1820,7 @@
     1. The name of the virtual host where the queues exists.
 1. Values:
     1. Default: The RabbitMQ defined default virtual host, which is currently '\'
-1. Where used:
-    1. [stream-producer](https://github.com/Senzing/stream-producer)
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RABBITMQ_VIRTUAL_HOST&type=code)
 
 ### SENZING_RANDOM_SEED
 
@@ -1881,8 +1830,7 @@
        Values greater than 0 give repeatable results.
 1. Values:
     1. Default: "0"
-1. Where used:
-    1. [stream-producer](https://github.com/Senzing/stream-producer),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RANDOM_SEED&type=code)
 
 ### SENZING_RECORD_IDENTIFIER
 
@@ -1891,8 +1839,7 @@
     1. Used to identify specific records when logging errors.
 1. Values:
     1. Default: "RECORD_ID"
-1. Where used:
-    1. [stream-producer](https://github.com/Senzing/stream-producer),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RECORD_IDENTIFIER&type=code)
 
 ### SENZING_RECORD_MAX
 
@@ -1901,8 +1848,7 @@
 1. Values:
     1. Value of 0 means no maximum.
     1. Default: "0"
-1. Where used:
-    1. [stream-producer](https://github.com/Senzing/stream-producer),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RECORD_MAX&type=code)
 
 ### SENZING_RECORD_MIN
 
@@ -1910,8 +1856,7 @@
     1. Identify lowest record number to generate.
 1. Values:
     1. Default: "1"
-1. Where used:
-    1. [stream-producer](https://github.com/Senzing/stream-producer),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RECORD_MIN&type=code)
 
 ### SENZING_RECORD_MONITOR
 
@@ -1919,8 +1864,7 @@
     1. Write a log record every N mock records.
 1. Values:
     1. Default: "10000"
-1. Where used:
-    1. [stream-producer](https://github.com/Senzing/stream-producer),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RECORD_MONITOR&type=code)
 
 ### SENZING_RECORDS_PER_SECOND
 
@@ -1929,8 +1873,7 @@
 1. Values:
     1. Value of 0 means no throttling.
     1. Default: "0"
-1. Where used:
-    1. [stream-producer](https://github.com/Senzing/stream-producer),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RECORDS_PER_SECOND&type=code)
 
 ### SENZING_RECORD_SIZE_MAX
 
@@ -1941,8 +1884,7 @@
 1. Values:
     1. Value of 0 means no maximum.
     1. Default: "0"
-1. Where used:
-    1. [stream-producer](https://github.com/Senzing/stream-producer),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RECORD_SIZE_MAX&type=code)
 
 ### SENZING_RESOURCE_PATH
 
@@ -1950,8 +1892,7 @@
     1. Used in `PIPELINE_RESOURCEPATH` for G2 Engine configuration.
 1. Values:
     1. Default: `/opt/senzing/g2/resources`
-1. Where used:
-    1. [stream-loader](https://github.com/Senzing/stream-loader),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RESOURCE_PATH&type=code)
 
 ### SENZING_RPM_FILENAME
 
@@ -1962,8 +1903,7 @@
 1. Values:
     1. Format: `senzingapi-MM.mm.PP.x86_64.rpm`
     1. Default: none
-1. Where used:
-    1. [docker-yum](https://github.com/Senzing/docker-yum),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RPM_FILENAME&type=code)
 
 ### SENZING_RUNAS_USER
 
@@ -1978,19 +1918,21 @@
         export SENZING_RUNAS_USER="0"
         ```
 
-1. Where used:
-    1. [docker-init-container](https://github.com/Senzing/docker-init-container),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RUNAS_USER&type=code)
 
 ### SENZING_SKIP_DATABASE_PERFORMANCE_TEST
 
 1. Synopsis:
     1. When true, do not perform initial performance evaluation.
-1. Where used:
-    1. [stream-loader](https://github.com/Senzing/stream-loader),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_SKIP_DATABASE_PERFORMANCE_TEST&type=code)
 
 ### SENZING_SKIP_GOVERNOR
 
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_SKIP_GOVERNOR&type=code)
+
 ### SENZING_SKIP_INFO_FILTER
+
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_SKIP_INFO_FILTER&type=code)
 
 ### SENZING_SLEEP_TIME
 
@@ -1998,21 +1940,18 @@
     1. Amount of time to sleep, in seconds, before running command.
 1. Forms:
     1. Helm: senzing.sleepTime
-1. Where used:
-    1. [stream-loader](https://github.com/Senzing/stream-loader),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_SLEEP_TIME&type=code)
 
 ### SENZING_SLEEP_TIME_IN_SECONDS
 
-1. Where used:
-    1. [resolver](https://github.com/Senzing/resolver),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_SLEEP_TIME_IN_SECONDS&type=code)
 
 ### SENZING_SQS_DEAD_LETTER_QUEUE_ENABLED
 
 1. Synopsis:
     1. Indicate that an AWS SQS "dead-letter" queue has been enables.
     1. This changes the logging behavior.
-1. Where used:
-    1. [stream-loader](https://github.com/Senzing/stream-loader),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_SQS_DEAD_LETTER_QUEUE_ENABLED&type=code)
 
 ### SENZING_SQS_FAILURE_QUEUE_URL
 
@@ -2020,9 +1959,7 @@
     1. The Amazon SQS Queue URL used convey messages that cannot be processed by the Senzing Engine.
 1. Examples:
     1. `https://sqs.us-east-1.amazonaws.com/000000000000/senzing-failure-queue`
-1. Where used:
-    1. [stream-loader](https://github.com/Senzing/stream-loader),
-    1. [stream-producer](https://github.com/Senzing/stream-producer),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_SQS_FAILURE_QUEUE_URL&type=code)
 
 ### SENZING_SQS_INFO_QUEUE_DELAY_SECONDS
 
@@ -2032,8 +1969,7 @@
     1. Default: 10
 1. References:
     1. [Boto3 send_message](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/sqs.html#SQS.Client.send_message) See `DelaySeconds` parameter.
-1. Where used:
-    1. [stream-loader](https://github.com/Senzing/stream-loader),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_SQS_INFO_QUEUE_DELAY_SECONDS&type=code)
 
 ### SENZING_SQS_INFO_QUEUE_URL
 
@@ -2041,9 +1977,7 @@
     1. The Amazon SQS Queue URL used convey "withInfo" messages from the Senzing Engine.
 1. Examples:
     1. `https://sqs.us-east-1.amazonaws.com/000000000000/senzing-info-queue`
-1. Where used:
-    1. [stream-loader](https://github.com/Senzing/stream-loader),
-    1. [stream-producer](https://github.com/Senzing/stream-producer),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_SQS_INFO_QUEUE_URL&type=code)
 
 ### SENZING_SQS_QUEUE_URL
 
@@ -2051,16 +1985,13 @@
     1. The Amazon SQS Queue URL used convey messages for ingestion into the Senzing Engine.
 1. Examples:
     1. `https://sqs.us-east-1.amazonaws.com/000000000000/senzing-queue`
-1. Where used:
-    1. [stream-loader](https://github.com/Senzing/stream-loader),
-    1. [stream-producer](https://github.com/Senzing/stream-producer),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_SQS_QUEUE_URL&type=code)
 
 ### SENZING_SQS_WAIT_TIME_SECONDS
 
 1. Synopsis:
     1. For use with SQS "long-polling"
-1. Where used:
-    1. [stream-loader](https://github.com/Senzing/stream-loader),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_SQS_WAIT_TIME_SECONDS&type=code)
 
 ### SENZING_STREAM_LOADER_DIRECTIVE_NAME
 
@@ -2072,6 +2003,7 @@
        [stream-loader](https://github.com/Senzing/stream-loader#directive).
 1. Values:
     1. Default: `senzingStreamLoader`
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_STREAM_LOADER_DIRECTIVE_NAME&type=code)
 
 ### SENZING_SUBCOMMAND
 
@@ -2081,14 +2013,11 @@
     1. Run `program-name --help` for complete list.
 1. Forms:
     1. Helm: senzing.subcommand
-1. Where used:
-    1. [resolver](https://github.com/Senzing/resolver),
-       [stream-loader](https://github.com/Senzing/stream-loader),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_SUBCOMMAND&type=code)
 
 ### SENZING_SUPPORT_PATH
 
-1. Where used:
-    1. [resolver](https://github.com/Senzing/resolver),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_SUPPORT_PATH&type=code)
 
 ### SENZING_THREADS_PER_PROCESS
 
@@ -2096,13 +2025,11 @@
     1. Number of threads per process to allocate for processing.
 1. Values:
     1. Default: 4
-1. Where used:
-    1. [stream-loader](https://github.com/Senzing/stream-loader),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_THREADS_PER_PROCESS&type=code)
 
 ### SENZING_UID
 
-1. Where used:
-    1. [docker-init-container](https://github.com/Senzing/docker-init-container),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_UID&type=code)
 
 ### SENZING_VAR_DIR
 
@@ -2112,18 +2039,11 @@
 1. Values:
     1. Default: none
     1. Usually set to `/var/opt/senzing`
-
-1. Where used:
-    1. [docker-g2command](https://github.com/Senzing/docker-g2command),
-       [docker-senzing-base](https://github.com/Senzing/docker-senzing-base),
-       [docker-yum](https://github.com/Senzing/docker-yum),
-       [resolver](https://github.com/Senzing/resolver),
-       [stream-loader](https://github.com/Senzing/stream-loader),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_VAR_DIR&type=code)
 
 ### SENZING_VOLUME
 
-1. Where used:
-    1. [docker-yum](https://github.com/Senzing/docker-yum),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_VOLUME&type=code)
 
 ### SENZING_WEB_SERVER_PORT
 
@@ -2132,8 +2052,7 @@
     1. See [Port 8251](https://github.com/Senzing/knowledge-base/blob/master/lists/ports-used-in-demonstrations.md#8251)
 1. Values:
     1. Default: 8251
-1. Where used:
-    1. [entity-search-web-app](https://github.com/Senzing/entity-search-web-app),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_WEB_SERVER_PORT&type=code)
 
 ### SENZING_WEBAPP_PORT
 
@@ -2141,8 +2060,7 @@
     1. Port on localhost for Docker web application service.
 1. Values:
     1. Default: none
-1. Where used:
-    1. [senzing-api-server](https://github.com/Senzing/senzing-api-server),
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_WEBAPP_PORT&type=code)
 
 ### SQLITE_DATABASE
 
@@ -2151,6 +2069,7 @@
 1. Values:
     1. Usual value: `G2C.db`
     1. Default: none
+1. [Where used](https://github.com/search?q=org%3ASenzing+SQLITE_DATABASE&type=code)
 
 ## References
 
