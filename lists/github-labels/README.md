@@ -22,7 +22,7 @@ These labels will be assigned predominantly in the "**Backlog**", "**On deck**",
 | Submitter  | ![customer-submission](customer-submission.png)             |
 | Issue type | ![bug](bug.png) ![documentation](documentation.png) ![enhancement](enhancement.png) ![performance](performance.png) ![refactoring](refactoring.png) |
 | Info       | ![conversation](conversation.png) ![triage](triage.png) ![question](question.png) |
-| Group      | ![G2Tool](G2Tool.png) |
+| Group      | ![G2Tool](G2Tool.png) ![V3](V3.png)|
 
 ## Details
 
@@ -44,6 +44,7 @@ Labels listed in alphabetical order.
 | question             | ![CCCCFF](https://via.placeholder.com/30x30/CCCCFF/CCCCFF?text=.) | #CCCCFF | User-submitted question                      |
 | refactoring          | ![66FFFF](https://via.placeholder.com/30x30/66FFFF/66FFFF?text=.) | #66FFFF | No behavioral change, internal restructuring |
 | triage               | ![CCCCFF](https://via.placeholder.com/30x30/CCCCFF/CCCCFF?text=.) | #CCCCFF | Need to triage                               |
+| V3                   | ![0000FF](https://via.placeholder.com/30x30/0000FF/0000FF?text=.) | #0000FF | Needed for Senzing V3                        |
 | waiting-for-customer | ![FF9900](https://via.placeholder.com/30x30/FF9900/FF9900?text=.) | #FF9900 | Customer needs to verify fix or close issue  |
 | waiting-to-merge     | ![FF9900](https://via.placeholder.com/30x30/FF9900/FF9900?text=.) | #FF9900 | Code complete, cannot merge yet              |
 | wontfix              | ![000000](https://via.placeholder.com/30x30/000000/000000?text=.) | #000000 | This will not be worked on                   |
