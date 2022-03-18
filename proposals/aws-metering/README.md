@@ -1,12 +1,19 @@
 # AWS Metering
 
-## Assumptions
+Proposals:
+
+- [Periodic unlimited license proposal](#periodic-unlimited-license-proposal)
+- [???][]
+
+## Periodic unlimited license proposal
+
+### Assumptions
 
 1. Senzing license is stored in the database.
 1. The G2Engine looks for the license in the database,
    not as a file on individual filesystems.
 
-## Process
+### Process
 
 1. Every "period" (say 24 hours), an AWS lambda function
    performs the following:
@@ -29,7 +36,7 @@
    "in good standing".   If the customer is in good standing,
    a new "2-period" unlimited license is returned to the request.
 
-## Billing
+### Billing
 
 1. The billing is based on the number of records actually stored,
    not the "size" of the license.
@@ -37,8 +44,6 @@
    The price calculations will be done at the "AWS Marketplace"
    level, not the level of operational code.
 
-## Holes in the architecture
+### Adverse aspect of proposal
 
 1. A customer could copy the "unlimited, two-day license" from one system to another.
-
-
