@@ -1,6 +1,5 @@
 # AWS Metering
 
-
 ## Assumptions
 
 1. Senzing license is stored in the database.
@@ -28,6 +27,6 @@
 
 ## Holes in the architecture
 
-1. A customer could copy the "unlimited, two-day license from one system to another.
+1. A customer could copy the "unlimited, two-day license" from one system to another.
 
 
