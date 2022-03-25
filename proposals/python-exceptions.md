@@ -142,6 +142,41 @@ The approach facilitates "future-proofing" applications using the Senzing Python
    This is formatted to aid in internet searches.
    Example, search for [senzing-50010406E](https://www.google.com/search?channel=fs&client=ubuntu&q=senzing-50070896E).
 
+### Proposal 2 Exception hierarchy
+
+List of [Senzing Engine error codes](https://senzing.zendesk.com/hc/en-us/articles/360026678133-Engine-Error-codes)
+
+
+```console
+Exception
+└── G2Exception
+    ├── G2BadInputException
+    │   ├── G2DBUniqueConstraintViolation
+    │   ├── G2IncompleteRecordException
+    │   ├── G2InvalidFileTypeContentsException
+    │   ├── G2MalformedJsonException
+    │   ├── G2MissingConfigurationException
+    │   ├── G2MissingDataSourceException
+    │   ├── G2UnsupportedFileTypeException
+    │   └── UnconfiguredDataSourceException
+    ├── G2RetryableException
+    └── G2UnrecoverableException
+        ├── G2DBException
+        │   ├── G2DBMNotStarted
+        │   ├── G2DBNotFound
+        │   ├── G2DBUnknownException
+        │   ├── G2TableNoExist
+        │   └── G2UnsupportedDatabaseType
+        └── G2ModuleException
+            ├── G2ModuleEmptyMessage
+            ├── G2ModuleGenericException
+            ├── G2ModuleInvalidXML
+            ├── G2ModuleLicenseException
+            ├── G2ModuleMySQLNoSchema
+            ├── G2ModuleNotInitialized
+            └── G2ModuleResolveMissingResEnt
+```
+
 ## Proposal 1
 
 ### Proposal 1 Synopsis
@@ -318,7 +353,7 @@ The approach facilitates "future-proofing" applications using the Senzing Python
 ### Senzing 2.x G2Exception hierarchy
 
 ```console
-Exception/
+Exception
 └── G2Exception
     ├── G2DBException
     │   ├── G2DBMNotStarted
