@@ -315,7 +315,7 @@ The approach facilitates "future-proofing" applications using the Senzing Python
 
 ## Reference
 
-### Existing G2Exception hierarchy
+### Senzing 2.x G2Exception hierarchy
 
 ```console
 Exception/
