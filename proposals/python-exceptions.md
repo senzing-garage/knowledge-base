@@ -2,11 +2,11 @@
 
 ## Proposal 2
 
-### Proposal 2 ynopsis
+### Proposal 2 Synopsis
 
 Improve the customer experience in Exception handling in the Senzing Python SDK.
 
-### Proposal 2 verview
+### Proposal 2 Overview
 
 Currently a Python programmer using the
 [Senzing Python SDK](https://github.com/Senzing/g2-sdk-python/tree/main/src/senzing)
@@ -71,6 +71,7 @@ The approach facilitates "future-proofing" applications using the Senzing Python
 
     from senzing import G2BadUserInputException, G2RetryableException
 
+    retry_number = 0
     while True:
         try:
             self.g2_engine.addRecord(record)
@@ -79,9 +80,15 @@ The approach facilitates "future-proofing" applications using the Senzing Python
             logging.warning("Incorrect user input or configuration. Record: {0}; Error {1}".format(record, err))
             break
         except G2RetryableException as err:
-            if self.is_g2_default_configuration_changed():
+            retry_number += 1
+            if retry_number > 5:
+                logging.warning("Maximum number of retries. Record: {0}; Error {1}". format(record, err))
+                break
+            elif self.is_g2_default_configuration_changed(err):
                 logging.warning("Updating G2 configuration")
                 self.update_active_g2_configuration()
+            elif self.is_sleep_needed(err):
+                self.sleep(err)
             else:
                 logging.warning("Cannot retry. Record: {0}; Error {1}". format(record, err))
                 break
