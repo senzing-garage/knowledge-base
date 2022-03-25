@@ -115,7 +115,7 @@ The approach facilitates "future-proofing" applications using the Senzing Python
         |-------------------------|-----------|----------|------|
         | G2BadUserInputException | No        | No       | No   |
         | G2RetryableException    | No        | Yes      | No   |
-        | Exception               | ??        | ??       | Yes  |
+        | Exception               | No        | No       | Yes  |
 
 1. Message numbers have
    [ranges](https://github.com/Senzing/stream-loader/blob/30c9fe591137793c063152cee04c0478523d7357/stream-loader.py#L892-L908).
