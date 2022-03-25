@@ -34,7 +34,6 @@ The proposed approach:
 
 1. [Proposed approach](#proposal-2-proposed-approach)
 1. [Usage](#proposal-2-usage)
-1. [Implementation](#proposal-2-implementation)
 
 ### Proposal 2 Proposed approach
 
