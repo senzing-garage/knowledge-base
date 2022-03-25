@@ -311,3 +311,31 @@ The approach facilitates "future-proofing" applications using the Senzing Python
 1. [PEP-3151](https://www.python.org/dev/peps/pep-3151/) - Restructuring of the hierarchy.
 
 > The standard exception hierarchy is an important part of the Python language. It has two defining qualities: it is both generic and selective. Generic in that the same exception type can be raised - and handled - regardless of the context (for example, whether you are trying to add something to an integer, to call a string method, or to write an object on a socket, a TypeError will be raised for bad argument types). Selective in that it allows the user to easily handle (silence, examine, process, store or encapsulate...) specific kinds of error conditions while letting other errors bubble up to higher calling contexts. For example, you can choose to catch ZeroDivisionErrors without affecting the default handling of other ArithmeticErrors (such as OverflowErrors).
+
+
+## Reference
+
+### Existing G2Exception hierarchy
+
+```console
+Exception/
+└── G2Exception
+    ├── G2DBException
+    │   ├── G2DBMNotStarted
+    │   ├── G2DBNotFound
+    │   ├── G2DBUniqueConstraintViolation
+    │   ├── G2DBUnknownException
+    │   ├── G2TableNoExist
+    │   └── G2UnsupportedDatabaseType
+    ├── G2InvalidFileTypeContentsException
+    ├── G2ModuleException
+    │   ├── G2ModuleEmptyMessage
+    │   ├── G2ModuleGenericException
+    │   ├── G2ModuleInvalidXML
+    │   ├── G2ModuleLicenseException
+    │   ├── G2ModuleMySQLNoSchema
+    │   ├── G2ModuleNotInitialized
+    │   └── G2ModuleResolveMissingResEnt
+    ├── G2UnsupportedFileTypeException
+    └── UnconfiguredDataSourceException
+```
