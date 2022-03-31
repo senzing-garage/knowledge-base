@@ -77,11 +77,13 @@ The approach facilitates "future-proofing" applications using the Senzing Python
             self.g2_engine.addRecord(record)
             break
         except G2BadUserInputException as err:
+            # Senzing record to failure queue.
             logging.warning("Incorrect user input or configuration. Record: {0}; Error {1}".format(record, err))
             break
         except G2RetryableException as err:
             retry_number += 1
             if retry_number > 5:
+                # Senzing record to failure queue.
                 logging.warning("Maximum number of retries. Record: {0}; Error {1}". format(record, err))
                 break
             elif self.is_g2_default_configuration_changed(err):
@@ -90,9 +92,11 @@ The approach facilitates "future-proofing" applications using the Senzing Python
             elif self.is_sleep_needed(err):
                 self.sleep(err)
             else:
+                # Senzing record to failure queue.
                 logging.warning("Cannot retry. Record: {0}; Error {1}". format(record, err))
                 break
         except Exception as err:
+            # Senzing record to failure queue.
             logging.exception("Fatal error on Record: {0}; Error: {1}".format(record, err))
             sys.exit(1)
     ```
