@@ -2,6 +2,17 @@
 
 ## Docker senzing stack
 
+These instructions create a Senzing stack with
+stream-producer,
+stream-loader,
+senzing-poc-server,
+entity-search-web-app,
+and other "helper" docker containers.
+
+1. :thinking: **Optional:**
+   Start
+   [portainer](../WHATIS/portainer.md).
+
 1. Create a docker-based Senzing installer.
 
    **NOTES:**
@@ -22,6 +33,7 @@
     ```
 
 1. :pencil2: Identify a new directory for the Senzing installation.
+   That is, don't use an existing directory.
    Example:
 
     ```console
@@ -39,6 +51,9 @@
         --user 0 \
         --volume ${SENZING_VOLUME}:/opt/senzing \
         senzing/installer-staging:3.0.0
+
+    sudo chown $(id -u):$(id -g) -R ${SENZING_VOLUME}
+    sudo chmod 775 -R ${SENZING_VOLUME}
     ```
 
 1. :pencil2: Identify `docker-compose.yaml` file.
@@ -49,6 +64,13 @@
     ```console
     export SENZING_DOCKER_COMPOSE_YAML=postgresql/docker-compose-rabbitmq-postgresql.yaml
     ```
+
+   Other candidate values:
+        1. mysql/docker-compose-kafka-mysql.yaml
+        1. mysql/docker-compose-rabbitmq-mysql.yaml
+        1. postgresql/docker-compose-kafka-postgresql.yaml
+        1. postgresql/docker-compose-rabbitmq-postgresql-redoer-rabbitmq-withinfo.yaml
+        1. postgresql/docker-compose-rabbitmq-postgresql.yaml
 
 1. Download the `docker-compose.yaml` file.
    Example:
@@ -78,8 +100,17 @@
     sudo mkdir -p ${RABBITMQ_DIR}
 
     sudo chmod -R 777 ${SENZING_VAR_DIR}
+    ```
 
-    source <(curl -X GET https://raw.githubusercontent.com/Senzing/knowledge-base/master/lists/docker-versions-v3.sh)
+1. Download and source the list of docker image versions to set enviroment variables.
+   Example:
+
+   ```console
+    curl -X GET \
+        --output ${SENZING_VOLUME}/docker-versions-v3.sh \
+        https://raw.githubusercontent.com/Senzing/knowledge-base/master/lists/docker-versions-v3.sh}
+
+    source ${SENZING_VOLUME}/docker-versions-v3.sh
     ```
 
 1. :thinking: **Optional:**
@@ -90,6 +121,16 @@
     ```console
     export SENZING_DOCKER_IMAGE_VERSION_SENZING_API_SERVER=latest
     ```
+
+   Other candidate values:
+        1. SENZING_DOCKER_IMAGE_VERSION_SENZING_API_SERVER
+        1. SENZING_DOCKER_IMAGE_VERSION_STREAM_PRODUCER
+        1. SENZING_DOCKER_IMAGE_VERSION_POSTGRESQL_CLIENT
+        1. SENZING_DOCKER_IMAGE_VERSION_INIT_CONTAINER
+        1. SENZING_DOCKER_IMAGE_VERSION_STREAM_LOADER
+        1. SENZING_DOCKER_IMAGE_VERSION_REDOER
+        1. SENZING_DOCKER_IMAGE_VERSION_SENZING_POC_SERVER
+        1. SENZING_DOCKER_IMAGE_VERSION_ENTITY_SEARCH_WEB_APP
 
 1. Bring docker-compose stack up.
    Example:
