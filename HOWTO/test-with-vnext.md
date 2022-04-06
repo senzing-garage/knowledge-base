@@ -110,7 +110,7 @@ and other "helper" docker containers.
    ```console
     curl -X GET \
         --output ${SENZING_VOLUME}/docker-versions-v3.sh \
-        https://raw.githubusercontent.com/Senzing/knowledge-base/master/lists/docker-versions-v3.sh}
+        https://raw.githubusercontent.com/Senzing/knowledge-base/master/lists/docker-versions-v3.sh
 
     source ${SENZING_VOLUME}/docker-versions-v3.sh
     ```
