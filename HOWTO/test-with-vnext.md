@@ -82,7 +82,7 @@ and other "helper" docker containers.
         https://raw.githubusercontent.com/Senzing/docker-compose-demo/master/resources/${SENZING_DOCKER_COMPOSE_YAML}
     ```
 
-1. XX
+1. Identify ane prepare directories.
    Example:
 
     ```console
@@ -103,7 +103,7 @@ and other "helper" docker containers.
     sudo chmod -R 777 ${SENZING_VAR_DIR}
     ```
 
-1. Download and source the list of docker image versions to set enviroment variables.
+1. Download and source the list of docker image version environment variables.
    Example:
 
    ```console
@@ -150,3 +150,5 @@ and other "helper" docker containers.
     cd ${SENZING_VOLUME}
     sudo --preserve-env docker-compose down
     ```
+
+1. To cleanup, delete the `${SENZING_VOLUME}` directory.
