@@ -15,7 +15,7 @@ and other "helper" docker containers.
 
 1. Create a docker-based Senzing installer.
 
-   **NOTES:**
+   **Notes:**
 
     1. By running the command using `--build-arg SENZING_ACCEPT_EULA` you consent to the Senzing EULA.
     1. When there is a change in the packages on staging, the command needs to be re-run to pick up the latest package.
