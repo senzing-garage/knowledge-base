@@ -143,7 +143,7 @@ and other "helper" docker containers.
     sudo --preserve-env docker-compose up
     ```
 
-1. Do testing.
+1. Do your testing.
     1. For help using the "helper" tools, see one of the following:
         1. [docker-compose-rabbitmq-postgresql](https://github.com/Senzing/docker-compose-demo/tree/master/docs/docker-compose-rabbitmq-postgresql#view-data)
         1. [docker-compose-rabbitmq-mysql](https://github.com/Senzing/docker-compose-demo/tree/master/docs/docker-compose-rabbitmq-mysql#view-data)
