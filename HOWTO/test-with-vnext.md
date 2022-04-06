@@ -99,9 +99,7 @@
     sudo --preserve-env docker-compose up
     ```
 
-1. Do testing
-
-
+1. Do testing.
 1. Bring docker-compose stack down.
    Example:
 
