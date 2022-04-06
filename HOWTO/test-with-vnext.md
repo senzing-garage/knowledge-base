@@ -50,6 +50,15 @@
     export SENZING_DOCKER_COMPOSE_YAML=postgresql/docker-compose-rabbitmq-postgresql.yaml
     ```
 
+1. Download the `docker-compose.yaml` file.
+   Example:
+
+   ```console
+    curl -X GET \
+        --output ${SENZING_VOLUME}/docker-compose.yaml \
+        https://raw.githubusercontent.com/Senzing/docker-compose-demo/master/resources/${SENZING_DOCKER_COMPOSE_YAML}
+    ```
+
 1. XX
    Example:
 
@@ -70,10 +79,33 @@
 
     sudo chmod -R 777 ${SENZING_VAR_DIR}
 
-    source <(curl -X GET https://raw.githubusercontent.com/Senzing/knowledge-base/master/lists/docker-versions-latest.sh)
-    export SENZING_DOCKER_IMAGE_VERSION_SENZING_API_SERVER=latest
+    source <(curl -X GET https://raw.githubusercontent.com/Senzing/knowledge-base/master/lists/docker-versions-v3.sh)
+    ```
 
-    curl -X GET \
-        --output ${SENZING_VOLUME}/docker-compose.yaml \
-        https://raw.githubusercontent.com/Senzing/docker-compose-demo/master/resources/${SENZING_DOCKER_COMPOSE_YAML}
+1. :thinking: **Optional:**
+   If you are testing locally built ("latest") docker images,
+   `export` the appropriate `SENZING_DOCKER_IMAGE_VERSION_xxxx` variable(s).
+   Example:
+
+    ```console
+    export SENZING_DOCKER_IMAGE_VERSION_SENZING_API_SERVER=latest
+    ```
+
+1. Bring docker-compose stack up.
+   Example:
+
+   ```console
+    cd ${SENZING_VOLUME}
+    sudo --preserve-env docker-compose up
+    ```
+
+1. Do testing
+
+
+1. Bring docker-compose stack down.
+   Example:
+
+   ```console
+    cd ${SENZING_VOLUME}
+    sudo --preserve-env docker-compose down
     ```
