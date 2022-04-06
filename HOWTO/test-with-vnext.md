@@ -121,7 +121,7 @@ and other "helper" docker containers.
    Example:
 
     ```console
-    export SENZING_DOCKER_IMAGE_VERSION_SENZING_API_SERVER=latest
+    export SENZING_DOCKER_IMAGE_VERSION_SENZING_POC_SERVER=latest
     ```
 
    Other candidate values:
