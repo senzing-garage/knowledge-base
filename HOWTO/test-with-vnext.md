@@ -100,6 +100,7 @@ and other "helper" docker containers.
     sudo mkdir -p ${POSTGRES_DIR}
     sudo mkdir -p ${RABBITMQ_DIR}
 
+    sudo chown $(id -u):$(id -g) -R ${SENZING_VAR_DIR}
     sudo chmod -R 777 ${SENZING_VAR_DIR}
     ```
 
