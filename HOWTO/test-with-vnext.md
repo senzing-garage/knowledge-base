@@ -67,11 +67,11 @@ and other "helper" docker containers.
 
    Other candidate values:
 
-        1. mysql/docker-compose-kafka-mysql.yaml
-        1. mysql/docker-compose-rabbitmq-mysql.yaml
-        1. postgresql/docker-compose-kafka-postgresql.yaml
-        1. postgresql/docker-compose-rabbitmq-postgresql-redoer-rabbitmq-withinfo.yaml
-        1. postgresql/docker-compose-rabbitmq-postgresql.yaml
+    1. mysql/docker-compose-kafka-mysql.yaml
+    1. mysql/docker-compose-rabbitmq-mysql.yaml
+    1. postgresql/docker-compose-kafka-postgresql.yaml
+    1. postgresql/docker-compose-rabbitmq-postgresql-redoer-rabbitmq-withinfo.yaml
+    1. postgresql/docker-compose-rabbitmq-postgresql.yaml
 
 1. Download the `docker-compose.yaml` file.
    Example:
@@ -125,14 +125,14 @@ and other "helper" docker containers.
 
    Other candidate values:
 
-        1. SENZING_DOCKER_IMAGE_VERSION_SENZING_API_SERVER
-        1. SENZING_DOCKER_IMAGE_VERSION_STREAM_PRODUCER
-        1. SENZING_DOCKER_IMAGE_VERSION_POSTGRESQL_CLIENT
-        1. SENZING_DOCKER_IMAGE_VERSION_INIT_CONTAINER
-        1. SENZING_DOCKER_IMAGE_VERSION_STREAM_LOADER
-        1. SENZING_DOCKER_IMAGE_VERSION_REDOER
-        1. SENZING_DOCKER_IMAGE_VERSION_SENZING_POC_SERVER
-        1. SENZING_DOCKER_IMAGE_VERSION_ENTITY_SEARCH_WEB_APP
+    1. SENZING_DOCKER_IMAGE_VERSION_SENZING_API_SERVER
+    1. SENZING_DOCKER_IMAGE_VERSION_STREAM_PRODUCER
+    1. SENZING_DOCKER_IMAGE_VERSION_POSTGRESQL_CLIENT
+    1. SENZING_DOCKER_IMAGE_VERSION_INIT_CONTAINER
+    1. SENZING_DOCKER_IMAGE_VERSION_STREAM_LOADER
+    1. SENZING_DOCKER_IMAGE_VERSION_REDOER
+    1. SENZING_DOCKER_IMAGE_VERSION_SENZING_POC_SERVER
+    1. SENZING_DOCKER_IMAGE_VERSION_ENTITY_SEARCH_WEB_APP
 
 1. Bring docker-compose stack up.
    Example:
