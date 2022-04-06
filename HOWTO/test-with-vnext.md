@@ -66,6 +66,7 @@ and other "helper" docker containers.
     ```
 
    Other candidate values:
+
         1. mysql/docker-compose-kafka-mysql.yaml
         1. mysql/docker-compose-rabbitmq-mysql.yaml
         1. postgresql/docker-compose-kafka-postgresql.yaml
@@ -123,6 +124,7 @@ and other "helper" docker containers.
     ```
 
    Other candidate values:
+
         1. SENZING_DOCKER_IMAGE_VERSION_SENZING_API_SERVER
         1. SENZING_DOCKER_IMAGE_VERSION_STREAM_PRODUCER
         1. SENZING_DOCKER_IMAGE_VERSION_POSTGRESQL_CLIENT
