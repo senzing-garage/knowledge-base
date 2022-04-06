@@ -145,9 +145,9 @@ and other "helper" docker containers.
 
 1. Do testing.
     1. For help using the "helper" tools, see one of the following:
-        1. [docker-compose-kafka-postgresql](https://github.com/Senzing/docker-compose-demo/tree/master/docs/docker-compose-kafka-postgresql#view-data)
         1. [docker-compose-rabbitmq-postgresql](https://github.com/Senzing/docker-compose-demo/tree/master/docs/docker-compose-rabbitmq-postgresql#view-data)
         1. [docker-compose-rabbitmq-mysql](https://github.com/Senzing/docker-compose-demo/tree/master/docs/docker-compose-rabbitmq-mysql#view-data)
+        1. [docker-compose-kafka-postgresql](https://github.com/Senzing/docker-compose-demo/tree/master/docs/docker-compose-kafka-postgresql#view-data)
 
 1. Bring docker-compose stack down.
    Example:
