@@ -28,6 +28,7 @@ and other "helper" docker containers.
       --build-arg SENZING_APT_INSTALL_PACKAGE=senzingapi \
       --build-arg SENZING_APT_REPOSITORY=https://senzing-staging-apt.s3.amazonaws.com/senzingstagingrepo_1.0.0-1_amd64.deb \
       --build-arg SENZING_DATA_VERSION=3.0.0 \
+      --no-cache \
       --tag senzing/installer-staging:3.0.0 \
       https://github.com/senzing/docker-installer.git
     ```
