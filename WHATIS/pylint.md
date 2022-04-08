@@ -20,6 +20,8 @@
     pylint --msg-template="{symbol}" ${SENZING_PYTHON} | sort | uniq
     ```
 
-## Github workflo
+## Uses
+
+### Github workflow
 
 1. See [.github/workflows/pylint.yaml](https://github.com/Senzing/stream-loader/blob/master/.github/workflows/pylint.yaml)
