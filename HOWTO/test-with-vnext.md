@@ -30,7 +30,7 @@ and other "helper" docker containers.
       --build-arg SENZING_DATA_VERSION=3.0.0 \
       --no-cache \
       --tag senzing/installer-staging:3.0.0 \
-      https://github.com/senzing/docker-installer.git
+      https://github.com/senzing/docker-installer.git#main
     ```
 
 1. :pencil2: Identify a new directory for the Senzing installation.
