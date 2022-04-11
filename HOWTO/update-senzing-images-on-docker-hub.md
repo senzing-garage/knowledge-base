@@ -32,15 +32,15 @@ Delete Senzing images from local Docker repository.
 1. Create docker images from repositories.  Example:
 
     ```console
-    sudo docker build --tag senzing/senzing-base        https://github.com/senzing/docker-senzing-base.git
-    sudo docker build --tag senzing/senzing-debug       https://github.com/senzing/docker-senzing-debug.git
-    sudo docker build --tag senzing/g2command           https://github.com/senzing/docker-g2command.git
-    sudo docker build --tag senzing/g2loader            https://github.com/senzing/docker-g2loader.git
-    sudo docker build --tag senzing/jupyter             https://github.com/senzing/docker-jupyter.git
-    sudo docker build --tag senzing/stream-producer     https://github.com/senzing/stream-producer.git
-    sudo docker build --tag senzing/python-demo         https://github.com/senzing/docker-python-demo.git
-    sudo docker build --tag senzing/senzing-poc-utility https://github.com/senzing/docker-senzing-poc-utility.git
-    sudo docker build --tag senzing/stream-loader       https://github.com/senzing/stream-loader.git
+    sudo docker build --tag senzing/senzing-base        https://github.com/senzing/docker-senzing-base.git#main
+    sudo docker build --tag senzing/senzing-debug       https://github.com/senzing/docker-senzing-debug.git#main
+    sudo docker build --tag senzing/g2command           https://github.com/senzing/docker-g2command.git#main
+    sudo docker build --tag senzing/g2loader            https://github.com/senzing/docker-g2loader.git#main
+    sudo docker build --tag senzing/jupyter             https://github.com/senzing/docker-jupyter.git#main
+    sudo docker build --tag senzing/stream-producer     https://github.com/senzing/stream-producer.git#main
+    sudo docker build --tag senzing/python-demo         https://github.com/senzing/docker-python-demo.git#main
+    sudo docker build --tag senzing/senzing-poc-utility https://github.com/senzing/docker-senzing-poc-utility.git#main
+    sudo docker build --tag senzing/stream-loader       https://github.com/senzing/stream-loader.git#main
     ```
 
 1. Manual builds.

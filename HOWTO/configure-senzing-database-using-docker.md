@@ -81,7 +81,7 @@ in a locally created [senzing/mysql-init](https://github.com/Senzing/docker-mysq
     ```console
     sudo docker build \
       --tag senzing/mysql-init \
-      https://github.com/senzing/docker-mysql-init.git
+      https://github.com/senzing/docker-mysql-init.git#main
     ```
 
 1. :pencil2: Set environment variables.

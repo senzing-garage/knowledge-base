@@ -16,8 +16,8 @@
    Example:
 
     ```console
-    sudo docker build --tag senzing/mysql        https://github.com/senzing/docker-mysql.git
-    sudo docker build --tag senzing/mysql-init   https://github.com/senzing/docker-mysql-init.git
+    sudo docker build --tag senzing/mysql        https://github.com/senzing/docker-mysql.git#main
+    sudo docker build --tag senzing/mysql-init   https://github.com/senzing/docker-mysql-init.git#main
     ```
 
 ## Identify docker images
