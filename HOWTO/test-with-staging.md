@@ -95,7 +95,7 @@ and other "helper" docker containers.
         https://raw.githubusercontent.com/Senzing/docker-compose-demo/main/resources/${SENZING_DOCKER_COMPOSE_YAML}
     ```
 
-1. Identify ane prepare directories.
+1. Identify and prepare directories.
    Example:
 
     ```console
