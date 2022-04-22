@@ -41,7 +41,7 @@ and other "helper" docker containers.
       --build-arg SENZING_APT_REPOSITORY=https://senzing-staging-apt.s3.amazonaws.com/senzingstagingrepo_1.0.0-1_amd64.deb \
       --build-arg SENZING_DATA_VERSION=${SENZING_VERSION_SENZINGDATA} \
       --no-cache \
-      --tag senzing/installer:${SENZING_VERSION_SENZINGAPI} \
+      --tag senzing/installer-staging:${SENZING_VERSION_SENZINGAPI} \
       https://github.com/senzing/docker-installer.git#main
     ```
 
@@ -63,7 +63,7 @@ and other "helper" docker containers.
         --rm \
         --user 0 \
         --volume ${SENZING_VOLUME}:/opt/senzing \
-        senzing/installer:${SENZING_VERSION_SENZINGAPI}
+        senzing/installer-staging:${SENZING_VERSION_SENZINGAPI}
     ```
 
 1. :pencil2: Identify `docker-compose.yaml` file.
