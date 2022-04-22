@@ -19,7 +19,7 @@ and other "helper" docker containers.
    ```console
     curl -X GET \
         --output /tmp/senzing-versions-latest.sh \
-        https://raw.githubusercontent.com/Senzing/knowledge-base/master/lists/senzing-versions-latest.sh
+        https://raw.githubusercontent.com/Senzing/knowledge-base/main/lists/senzing-versions-latest.sh
 
     source /tmp/senzing-versions-latest.sh
     ```
@@ -29,6 +29,7 @@ and other "helper" docker containers.
    **Notes:**
 
     1. By running the command using `--build-arg SENZING_ACCEPT_EULA` you consent to the Senzing EULA.
+    1. `SENZING_VERSION_*` variable were "sourced" above.
     1. When there is a change in the packages on staging, the command needs to be re-run to pick up the latest package.
 
    Example:
@@ -69,7 +70,7 @@ and other "helper" docker containers.
 
 1. :pencil2: Identify `docker-compose.yaml` file.
    List of files at
-   [docker-compose-demo/resources](https://github.com/Senzing/docker-compose-demo/tree/master/resources).
+   [docker-compose-demo/resources](https://github.com/Senzing/docker-compose-demo/tree/main/resources).
    Example:
 
     ```console
@@ -90,7 +91,7 @@ and other "helper" docker containers.
    ```console
     curl -X GET \
         --output ${SENZING_VOLUME}/docker-compose.yaml \
-        https://raw.githubusercontent.com/Senzing/docker-compose-demo/master/resources/${SENZING_DOCKER_COMPOSE_YAML}
+        https://raw.githubusercontent.com/Senzing/docker-compose-demo/main/resources/${SENZING_DOCKER_COMPOSE_YAML}
     ```
 
 1. Identify ane prepare directories.
@@ -118,16 +119,16 @@ and other "helper" docker containers.
 1. Download and source the list of docker image version environment variables.
    Example:
 
-   ```console
+    ```console
     curl -X GET \
         --output ${SENZING_VOLUME}/docker-versions-latest.sh \
-        https://raw.githubusercontent.com/Senzing/knowledge-base/master/lists/docker-versions-latest.sh
+        https://raw.githubusercontent.com/Senzing/knowledge-base/main/lists/docker-versions-latest.sh
 
     source ${SENZING_VOLUME}/docker-versions-latest.sh
     ```
 
 1. :thinking: **Optional:**
-   If you are testing locally built ("latest") docker images,
+   If you are testing locally built (i.e. "latest") docker images,
    `export` the appropriate `SENZING_DOCKER_IMAGE_VERSION_xxxx` variable(s).
    Example:
 
@@ -156,9 +157,9 @@ and other "helper" docker containers.
 
 1. Do your testing.
     1. For help using the "helper" tools, see one of the following:
-        1. [docker-compose-rabbitmq-postgresql](https://github.com/Senzing/docker-compose-demo/tree/master/docs/docker-compose-rabbitmq-postgresql#view-data)
-        1. [docker-compose-rabbitmq-mysql](https://github.com/Senzing/docker-compose-demo/tree/master/docs/docker-compose-rabbitmq-mysql#view-data)
-        1. [docker-compose-kafka-postgresql](https://github.com/Senzing/docker-compose-demo/tree/master/docs/docker-compose-kafka-postgresql#view-data)
+        1. [docker-compose-rabbitmq-postgresql](https://github.com/Senzing/docker-compose-demo/tree/main/docs/docker-compose-rabbitmq-postgresql#view-data)
+        1. [docker-compose-rabbitmq-mysql](https://github.com/Senzing/docker-compose-demo/tree/main/docs/docker-compose-rabbitmq-mysql#view-data)
+        1. [docker-compose-kafka-postgresql](https://github.com/Senzing/docker-compose-demo/tree/main/docs/docker-compose-kafka-postgresql#view-data)
 
 1. Bring docker-compose stack down.
    Example:
