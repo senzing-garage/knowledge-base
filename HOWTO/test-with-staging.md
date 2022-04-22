@@ -30,6 +30,7 @@
         https://raw.githubusercontent.com/Senzing/knowledge-base/main/lists/senzing-versions-staging.sh
     source /tmp/senzing-versions-staging.sh
     export SENZING_VOLUME=~/senzing-${SENZING_VERSION_SENZINGAPI_BUILD}
+    rm -rf ${SENZING_VOLUME}
     mkdir -p ${SENZING_VOLUME}
     sudo docker run \
         --rm \
