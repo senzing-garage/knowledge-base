@@ -64,9 +64,6 @@ and other "helper" docker containers.
         --user 0 \
         --volume ${SENZING_VOLUME}:/opt/senzing \
         senzing/installer:${SENZING_VERSION_SENZINGAPI}
-
-    sudo chown $(id -u):$(id -g) -R ${SENZING_VOLUME}
-    sudo chmod 775 -R ${SENZING_VOLUME}
     ```
 
 1. :pencil2: Identify `docker-compose.yaml` file.
