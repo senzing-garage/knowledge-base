@@ -1,4 +1,4 @@
-# HOWTO - Test with VNext
+# HOWTO - Test with staging
 
 ## Docker senzing stack
 
@@ -13,11 +13,23 @@ and other "helper" docker containers.
    Start
    [portainer](../WHATIS/portainer.md).
 
+1. Download and source the list of docker image version environment variables.
+   Example:
+
+   ```console
+    curl -X GET \
+        --output /tmp/senzing-versions-latest.sh \
+        https://raw.githubusercontent.com/Senzing/knowledge-base/main/lists/senzing-versions-staging.sh
+
+    source /tmp/senzing-versions-staging.sh
+    ```
+
 1. Create a docker-based Senzing installer.
 
    **Notes:**
 
     1. By running the command using `--build-arg SENZING_ACCEPT_EULA` you consent to the Senzing EULA.
+    1. `SENZING_VERSION_*` variable were "sourced" above.
     1. When there is a change in the packages on staging, the command needs to be re-run to pick up the latest package.
 
    Example:
@@ -25,11 +37,11 @@ and other "helper" docker containers.
     ```console
     sudo docker build \
       --build-arg SENZING_ACCEPT_EULA=I_ACCEPT_THE_SENZING_EULA \
-      --build-arg SENZING_APT_INSTALL_PACKAGE=senzingapi \
+      --build-arg SENZING_APT_INSTALL_PACKAGE=senzingapi=${SENZING_VERSION_SENZINGAPI_BUILD} \
       --build-arg SENZING_APT_REPOSITORY=https://senzing-staging-apt.s3.amazonaws.com/senzingstagingrepo_1.0.0-1_amd64.deb \
-      --build-arg SENZING_DATA_VERSION=3.0.0 \
+      --build-arg SENZING_DATA_VERSION=${SENZING_VERSION_SENZINGDATA} \
       --no-cache \
-      --tag senzing/installer-staging:3.0.0 \
+      --tag senzing/installer:${SENZING_VERSION_SENZINGAPI} \
       https://github.com/senzing/docker-installer.git#main
     ```
 
@@ -38,7 +50,7 @@ and other "helper" docker containers.
    Example:
 
     ```console
-    export SENZING_VOLUME=~/senzing-3.0.0
+    export SENZING_VOLUME=~/senzing-${SENZING_VERSION_SENZINGAPI}
     ```
 
 1. Install Senzing binaries into new directory.
@@ -51,7 +63,7 @@ and other "helper" docker containers.
         --rm \
         --user 0 \
         --volume ${SENZING_VOLUME}:/opt/senzing \
-        senzing/installer-staging:3.0.0
+        senzing/installer:${SENZING_VERSION_SENZINGAPI}
 
     sudo chown $(id -u):$(id -g) -R ${SENZING_VOLUME}
     sudo chmod 775 -R ${SENZING_VOLUME}
@@ -59,7 +71,7 @@ and other "helper" docker containers.
 
 1. :pencil2: Identify `docker-compose.yaml` file.
    List of files at
-   [docker-compose-demo/resources](https://github.com/Senzing/docker-compose-demo/tree/master/resources).
+   [docker-compose-demo/resources](https://github.com/Senzing/docker-compose-demo/tree/main/resources).
    Example:
 
     ```console
@@ -80,7 +92,7 @@ and other "helper" docker containers.
    ```console
     curl -X GET \
         --output ${SENZING_VOLUME}/docker-compose.yaml \
-        https://raw.githubusercontent.com/Senzing/docker-compose-demo/master/resources/${SENZING_DOCKER_COMPOSE_YAML}
+        https://raw.githubusercontent.com/Senzing/docker-compose-demo/main/resources/${SENZING_DOCKER_COMPOSE_YAML}
     ```
 
 1. Identify ane prepare directories.
@@ -108,16 +120,16 @@ and other "helper" docker containers.
 1. Download and source the list of docker image version environment variables.
    Example:
 
-   ```console
+    ```console
     curl -X GET \
-        --output ${SENZING_VOLUME}/docker-versions-v3.sh \
-        https://raw.githubusercontent.com/Senzing/knowledge-base/master/lists/docker-versions-v3.sh
+        --output ${SENZING_VOLUME}/docker-versions-staging.sh \
+        https://raw.githubusercontent.com/Senzing/knowledge-base/main/lists/docker-versions-staging.sh
 
-    source ${SENZING_VOLUME}/docker-versions-v3.sh
+    source ${SENZING_VOLUME}/docker-versions-staging.sh
     ```
 
 1. :thinking: **Optional:**
-   If you are testing locally built ("latest") docker images,
+   If you are testing locally built (i.e. "latest") docker images,
    `export` the appropriate `SENZING_DOCKER_IMAGE_VERSION_xxxx` variable(s).
    Example:
 
@@ -146,9 +158,9 @@ and other "helper" docker containers.
 
 1. Do your testing.
     1. For help using the "helper" tools, see one of the following:
-        1. [docker-compose-rabbitmq-postgresql](https://github.com/Senzing/docker-compose-demo/tree/master/docs/docker-compose-rabbitmq-postgresql#view-data)
-        1. [docker-compose-rabbitmq-mysql](https://github.com/Senzing/docker-compose-demo/tree/master/docs/docker-compose-rabbitmq-mysql#view-data)
-        1. [docker-compose-kafka-postgresql](https://github.com/Senzing/docker-compose-demo/tree/master/docs/docker-compose-kafka-postgresql#view-data)
+        1. [docker-compose-rabbitmq-postgresql](https://github.com/Senzing/docker-compose-demo/tree/main/docs/docker-compose-rabbitmq-postgresql#view-data)
+        1. [docker-compose-rabbitmq-mysql](https://github.com/Senzing/docker-compose-demo/tree/main/docs/docker-compose-rabbitmq-mysql#view-data)
+        1. [docker-compose-kafka-postgresql](https://github.com/Senzing/docker-compose-demo/tree/main/docs/docker-compose-kafka-postgresql#view-data)
 
 1. Bring docker-compose stack down.
    Example:
