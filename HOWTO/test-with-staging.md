@@ -1,5 +1,74 @@
 # HOWTO - Test with staging
 
+## TL;DR
+
+1. Perform once per new version on staging:
+
+    ```console
+    curl -X GET \
+        --output /tmp/senzing-versions-staging.sh \
+        https://raw.githubusercontent.com/Senzing/knowledge-base/main/lists/senzing-versions-staging.sh
+
+    source /tmp/senzing-versions-staging.sh
+
+    sudo docker build \
+      --build-arg SENZING_ACCEPT_EULA=I_ACCEPT_THE_SENZING_EULA \
+      --build-arg SENZING_APT_INSTALL_PACKAGE=senzingapi=${SENZING_VERSION_SENZINGAPI_BUILD} \
+      --build-arg SENZING_APT_REPOSITORY=https://senzing-staging-apt.s3.amazonaws.com/senzingstagingrepo_1.0.0-1_amd64.deb \
+      --build-arg SENZING_DATA_VERSION=${SENZING_VERSION_SENZINGDATA} \
+      --no-cache \
+      --tag senzing/installer-staging:${SENZING_VERSION_SENZINGAPI_BUILD} \
+      https://github.com/senzing/docker-installer.git#main
+    ```
+
+1. Bring up docker-compose stack.
+
+    ```console
+    sudo date
+    curl -X GET \
+        --output /tmp/senzing-versions-staging.sh \
+        https://raw.githubusercontent.com/Senzing/knowledge-base/main/lists/senzing-versions-staging.sh
+    source /tmp/senzing-versions-staging.sh
+    export SENZING_VOLUME=~/senzing-${SENZING_VERSION_SENZINGAPI_BUILD}
+    mkdir -p ${SENZING_VOLUME}
+    sudo docker run \
+        --rm \
+        --user 0 \
+        --volume ${SENZING_VOLUME}:/opt/senzing \
+        senzing/installer-staging:${SENZING_VERSION_SENZINGAPI_BUILD}
+    export SENZING_DOCKER_COMPOSE_YAML=postgresql/docker-compose-rabbitmq-postgresql.yaml
+    curl -X GET \
+        --output ${SENZING_VOLUME}/docker-compose.yaml \
+        https://raw.githubusercontent.com/Senzing/docker-compose-demo/main/resources/${SENZING_DOCKER_COMPOSE_YAML}
+    export SENZING_DATA_DIR=${SENZING_VOLUME}/data
+    export SENZING_DATA_VERSION_DIR=${SENZING_DATA_DIR}
+    export SENZING_ETC_DIR=${SENZING_VOLUME}/etc
+    export SENZING_G2_DIR=${SENZING_VOLUME}/g2
+    export SENZING_VAR_DIR=${SENZING_VOLUME}/var
+    export PGADMIN_DIR=${SENZING_VAR_DIR}/pgadmin
+    export POSTGRES_DIR=${SENZING_VAR_DIR}/postgres
+    export RABBITMQ_DIR=${SENZING_VAR_DIR}/rabbitmq
+    sudo mkdir -p ${PGADMIN_DIR}
+    sudo mkdir -p ${POSTGRES_DIR}
+    sudo mkdir -p ${RABBITMQ_DIR}
+    sudo chown $(id -u):$(id -g) -R ${SENZING_VOLUME}
+    sudo chmod -R 770 ${SENZING_VOLUME}
+    sudo chmod -R 777 ${PGADMIN_DIR}
+    curl -X GET \
+        --output ${SENZING_VOLUME}/docker-versions-staging.sh \
+        https://raw.githubusercontent.com/Senzing/knowledge-base/main/lists/docker-versions-staging.sh
+    source ${SENZING_VOLUME}/docker-versions-staging.sh
+    cd ${SENZING_VOLUME}
+    sudo --preserve-env docker-compose up
+    ```
+
+1. Bring docker-compose stack down.
+
+    ```console
+    cd ${SENZING_VOLUME}
+    sudo --preserve-env docker-compose down
+    ```
+
 ## Docker senzing stack
 
 These instructions create a Senzing stack with
