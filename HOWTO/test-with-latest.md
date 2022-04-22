@@ -112,8 +112,9 @@ and other "helper" docker containers.
     sudo mkdir -p ${POSTGRES_DIR}
     sudo mkdir -p ${RABBITMQ_DIR}
 
-    sudo chown $(id -u):$(id -g) -R ${SENZING_VAR_DIR}
-    sudo chmod -R 777 ${SENZING_VAR_DIR}
+    sudo chown $(id -u):$(id -g) -R ${SENZING_VOLUME}
+    sudo chmod -R 770 ${SENZING_VOLUME}
+    sudo chmod -R 777 ${PGADMIN_DIR}
     ```
 
 1. Download and source the list of docker image version environment variables.
