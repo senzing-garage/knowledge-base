@@ -16,7 +16,7 @@ and other "helper" docker containers.
 1. Download and source the list of docker image version environment variables.
    Example:
 
-   ```console
+    ```console
     curl -X GET \
         --output /tmp/senzing-versions-staging.sh \
         https://raw.githubusercontent.com/Senzing/knowledge-base/main/lists/senzing-versions-staging.sh
@@ -86,7 +86,7 @@ and other "helper" docker containers.
 1. Download the `docker-compose.yaml` file.
    Example:
 
-   ```console
+    ```console
     curl -X GET \
         --output ${SENZING_VOLUME}/docker-compose.yaml \
         https://raw.githubusercontent.com/Senzing/docker-compose-demo/main/resources/${SENZING_DOCKER_COMPOSE_YAML}
@@ -149,7 +149,7 @@ and other "helper" docker containers.
 1. Bring docker-compose stack up.
    Example:
 
-   ```console
+    ```console
     cd ${SENZING_VOLUME}
     sudo --preserve-env docker-compose up
     ```
@@ -163,7 +163,7 @@ and other "helper" docker containers.
 1. Bring docker-compose stack down.
    Example:
 
-   ```console
+    ```console
     cd ${SENZING_VOLUME}
     sudo --preserve-env docker-compose down
     ```
