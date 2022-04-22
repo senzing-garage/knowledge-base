@@ -2,6 +2,9 @@
     "arey/mysql-client": {
         "environment_variable": "SENZING_DOCKER_IMAGE_VERSION_AREY_MYSQL_CLIENT"
     },
+    "bitnami/bitnami-shell": {
+        "environment_variable": "SENZING_DOCKER_IMAGE_VERSION_BITNAMI_SHELL"
+    },
     "bitnami/kafka": {
         "environment_variable": "SENZING_DOCKER_IMAGE_VERSION_BITNAMI_KAFKA"
     },
@@ -37,6 +40,9 @@
     },
     "confluentinc/cp-kafka": {
         "environment_variable": "SENZING_DOCKER_IMAGE_VERSION_CONFLUENTINC_CP_KAFKA"
+    },
+    "dpage/pgadmin4": {
+        "environment_variable": "SENZING_DOCKER_IMAGE_VERSION_DPAGE_PGADMIN4"
     },
     "elasticsearch": {
         "environment_variable": "SENZING_DOCKER_IMAGE_VERSION_ELASTICSEARCH"
