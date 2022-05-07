@@ -1,4 +1,4 @@
-# HOWTO - Test with latest
+# HOWTO - Test with Senzing V2
 
 ## Docker senzing stack
 
@@ -19,9 +19,9 @@ and other "helper" docker containers.
    ```console
     curl -X GET \
         --output /tmp/senzing-versions-latest.sh \
-        https://raw.githubusercontent.com/Senzing/knowledge-base/main/lists/senzing-versions-latest.sh
+        https://raw.githubusercontent.com/Senzing/knowledge-base/main/lists/senzing-versions-v2.sh
 
-    source /tmp/senzing-versions-latest.sh
+    source /tmp/senzing-versions-v2.sh
     ```
 
 1. Create a docker-based Senzing installer.
