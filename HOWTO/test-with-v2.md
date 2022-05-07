@@ -18,7 +18,7 @@ and other "helper" docker containers.
 
    ```console
     curl -X GET \
-        --output /tmp/senzing-versions-latest.sh \
+        --output /tmp/senzing-versions-v2.sh \
         https://raw.githubusercontent.com/Senzing/knowledge-base/main/lists/senzing-versions-v2.sh
 
     source /tmp/senzing-versions-v2.sh
