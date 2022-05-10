@@ -39,7 +39,7 @@
     export SENZING_DOCKER_COMPOSE_YAML=postgresql/docker-compose-rabbitmq-postgresql.yaml
     curl -X GET \
         --output ${SENZING_VOLUME}/docker-compose.yaml \
-        https://raw.githubusercontent.com/Senzing/docker-compose-demo/main/resources/${SENZING_DOCKER_COMPOSE_YAML}
+        "https://raw.githubusercontent.com/Senzing/docker-compose-demo/main/resources/${SENZING_DOCKER_COMPOSE_YAML}"
     export SENZING_DATA_DIR=${SENZING_VOLUME}/data
     export SENZING_DATA_VERSION_DIR=${SENZING_DATA_DIR}
     export SENZING_ETC_DIR=${SENZING_VOLUME}/etc
@@ -157,7 +157,7 @@ and other "helper" docker containers.
     ```console
     curl -X GET \
         --output ${SENZING_VOLUME}/docker-compose.yaml \
-        https://raw.githubusercontent.com/Senzing/docker-compose-demo/main/resources/${SENZING_DOCKER_COMPOSE_YAML}
+        "https://raw.githubusercontent.com/Senzing/docker-compose-demo/main/resources/${SENZING_DOCKER_COMPOSE_YAML}"
     ```
 
 1. Identify and prepare directories.
