@@ -3,12 +3,12 @@
 ## Prerequisites
 
 1. If you need to create a private docker registry, see
-       [HOWTO - Install docker registry server](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/install-docker-registry-server.md).
+       [HOWTO - Install docker registry server](https://github.com/Senzing/knowledge-base/blob/main/HOWTO/install-docker-registry-server.md).
 
 ## Accept End User License Agreement
 
 1. Accept End User License Agreement (EULA) for `store/senzing/senzing-package` docker image.
-    1. Visit [HOWTO - Accept EULA](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/accept-eula.md#storesenzingsenzing-package-docker-image).
+    1. Visit [HOWTO - Accept EULA](https://github.com/Senzing/knowledge-base/blob/main/HOWTO/accept-eula.md#storesenzingsenzing-package-docker-image).
 
 ## Build docker images
 

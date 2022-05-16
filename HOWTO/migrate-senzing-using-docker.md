@@ -19,10 +19,10 @@ Some databases need additional support.
 For other databases, these steps may be skipped.
 
 1. **Db2:** See
-   [Support Db2](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/support-db2.md)
+   [Support Db2](https://github.com/Senzing/knowledge-base/blob/main/HOWTO/support-db2.md)
    instructions to set `SENZING_OPT_IBM_DIR_PARAMETER`.
 1. **MS SQL:** See
-   [Support MS SQL](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/support-mssql.md)
+   [Support MS SQL](https://github.com/Senzing/knowledge-base/blob/main/HOWTO/support-mssql.md)
    instructions to set `SENZING_OPT_MICROSOFT_DIR_PARAMETER`.
 
 ### Docker network
@@ -31,7 +31,7 @@ For other databases, these steps may be skipped.
 Use if docker container is part of a docker network.
 
 See
-[Support Docker Network](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/support-docker-network.md)
+[Support Docker Network](https://github.com/Senzing/knowledge-base/blob/main/HOWTO/support-docker-network.md)
 instructions to set `SENZING_NETWORK_PARAMETER`.
 
 ### Docker user
@@ -41,7 +41,7 @@ The `senzing/senzing-console container runs as "USER root".
 Use if a different userid (UID) is required.
 
 See
-[Support Docker User](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/support-docker-user.md)
+[Support Docker User](https://github.com/Senzing/knowledge-base/blob/main/HOWTO/support-docker-user.md)
 instructions to set `SENZING_RUNAS_USER_PARAMETER`.
 
 ## Migrations

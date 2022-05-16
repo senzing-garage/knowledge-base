@@ -14,7 +14,7 @@ but test the running of the scripts in a Linux Docker container.
 ### Create SENZING_DIR
 
 1. If you do not already have an `/opt/senzing` directory on your local system, visit
-[HOWTO - Create SENZING_DIR](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/create-senzing-dir.md).
+[HOWTO - Create SENZING_DIR](https://github.com/Senzing/knowledge-base/blob/main/HOWTO/create-senzing-dir.md).
 
 1. Identify SENZING_DIR.
    Example:

@@ -2,7 +2,7 @@
 
 ## :no_entry: Deprecated
 
-See [HOWTO: Initialize Senzing with Docker](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/initialize-senzing-with-docker.md)
+See [HOWTO: Initialize Senzing with Docker](https://github.com/Senzing/knowledge-base/blob/main/HOWTO/initialize-senzing-with-docker.md)
 
 ## Overview
 

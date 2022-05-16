@@ -41,7 +41,7 @@ For installation on Red Hat, CentOS, openSuse and
        This ensures that you make a conscious effort to accept the EULA.
        Example:
 
-        <pre>export SENZING_ACCEPT_EULA="&lt;the value from <a href="https://github.com/Senzing/knowledge-base/blob/master/lists/environment-variables.md#senzing_accept_eula">this link</a>&gt;"</pre>
+        <pre>export SENZING_ACCEPT_EULA="&lt;the value from <a href="https://github.com/Senzing/knowledge-base/blob/main/lists/environment-variables.md#senzing_accept_eula">this link</a>&gt;"</pre>
 
 1. Install Senzing API.
    If `SENZING_ACCEPT_EULA` environment variable is not set,
@@ -92,7 +92,7 @@ For installation on Red Hat, CentOS, openSuse and
        This ensures that you make a conscious effort to accept the EULA.
        Example:
 
-        <pre>export SENZING_ACCEPT_EULA="&lt;the value from <a href="https://github.com/Senzing/knowledge-base/blob/master/lists/environment-variables.md#senzing_accept_eula">this link</a>&gt;"</pre>
+        <pre>export SENZING_ACCEPT_EULA="&lt;the value from <a href="https://github.com/Senzing/knowledge-base/blob/main/lists/environment-variables.md#senzing_accept_eula">this link</a>&gt;"</pre>
 
 1. Install Senzing API.
    If `SENZING_ACCEPT_EULA` environment variable is not set,

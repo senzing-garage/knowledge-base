@@ -15,7 +15,7 @@
 ### Docker registry
 
 1. If you need to create a private docker registry, see
-       [HOWTO - Install docker registry server](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/install-docker-registry-server.md).
+       [HOWTO - Install docker registry server](https://github.com/Senzing/knowledge-base/blob/main/HOWTO/install-docker-registry-server.md).
 1. :pencil2: Set environment variables.  Example:
 
     ```console

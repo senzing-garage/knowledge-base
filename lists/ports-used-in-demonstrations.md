@@ -103,7 +103,7 @@ Open range: 9165-9190
 
 ### 9176
 
-- [Jenkins Blue Ocean](https://github.com/Senzing/knowledge-base/blob/master/WHATIS/jenkins-blue-ocean.md)
+- [Jenkins Blue Ocean](https://github.com/Senzing/knowledge-base/blob/main/WHATIS/jenkins-blue-ocean.md)
 
 ### 9177
 

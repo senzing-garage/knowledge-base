@@ -26,7 +26,7 @@
 These are "one-time tasks" which may already have been completed.
 
 1. The following software programs need to be installed and running on the workstation:
-    1. [docker](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/install-docker.md#macos)
+    1. [docker](https://github.com/Senzing/knowledge-base/blob/main/HOWTO/install-docker.md#macos)
 
         1. Verify sufficient resources.
             1. Docker desktop > "Preferences..." > "Resources" > "Advanced"
@@ -44,7 +44,7 @@ These are "one-time tasks" which may already have been completed.
             sudo docker run hello-world
             ```
 
-    1. [curl](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/install-curl.md#macos)
+    1. [curl](https://github.com/Senzing/knowledge-base/blob/main/HOWTO/install-curl.md#macos)
         1. Verify.
            Example:
 
@@ -52,7 +52,7 @@ These are "one-time tasks" which may already have been completed.
             curl --version
             ```
 
-    1. [python3](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/install-python-3.md#macos)
+    1. [python3](https://github.com/Senzing/knowledge-base/blob/main/HOWTO/install-python-3.md#macos)
         1. Verify.
            Example:
 
@@ -90,7 +90,7 @@ perform the following steps:
    do not use `localhost` nor `127.0.0.1` for value of `DATABASE_HOST`.
    Reason: the value of `DATABASE_HOST` needs to be from the perspective of *inside* the docker container.
    To find the IP address of workstation, set the
-   [SENZING_DOCKER_HOST_IP_ADDR](https://github.com/Senzing/knowledge-base/blob/master/lists/environment-variables.md#senzing_docker_host_ip_addr)
+   [SENZING_DOCKER_HOST_IP_ADDR](https://github.com/Senzing/knowledge-base/blob/main/lists/environment-variables.md#senzing_docker_host_ip_addr)
    environment variable. Then set:
 
     ```console
@@ -118,7 +118,7 @@ perform the following steps:
 These steps add files to the `${SENZING_PROJECT_DIR}/docker-bin` directory that are used to bring up Docker containers.
 
 1. Get a local copy of
-   [senzing-environment.py](https://raw.githubusercontent.com/Senzing/senzing-environment/master/senzing-environment.py).
+   [senzing-environment.py](https://raw.githubusercontent.com/Senzing/senzing-environment/main/senzing-environment.py).
    Example:
 
     1. :pencil2: In the Mac Terminal, specify where to download file.
@@ -134,7 +134,7 @@ These steps add files to the `${SENZING_PROJECT_DIR}/docker-bin` directory that 
         ```console
         curl -X GET \
           --output ${SENZING_DOWNLOAD_FILE} \
-          https://raw.githubusercontent.com/Senzing/senzing-environment/master/senzing-environment.py
+          https://raw.githubusercontent.com/Senzing/senzing-environment/main/senzing-environment.py
         ```
 
     1. In the Mac Terminal, make file executable.
@@ -163,7 +163,7 @@ If manual acceptance is preferred, proceed to [Install Senzing](#install-senzing
    This ensures that you make a conscious effort to accept the EULA.
    Example:
 
-    <pre>export SENZING_ACCEPT_EULA="&lt;the value from <a href="https://github.com/Senzing/knowledge-base/blob/master/lists/environment-variables.md#senzing_accept_eula">this link</a>&gt;"</pre>
+    <pre>export SENZING_ACCEPT_EULA="&lt;the value from <a href="https://github.com/Senzing/knowledge-base/blob/main/lists/environment-variables.md#senzing_accept_eula">this link</a>&gt;"</pre>
 
 ## Install Senzing
 

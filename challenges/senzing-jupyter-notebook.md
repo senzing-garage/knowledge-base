@@ -15,7 +15,7 @@ This challenge is to show your skills in:
 ## Overview
 
 **The challenge:** Given an existing Senzing Jupyter Notebook,
-[senzing-addRecord.ipynb](https://github.com/Senzing/docker-jupyter/blob/master/senzing-example-notebooks/python/senzing-addRecord.ipynb),
+[senzing-addRecord.ipynb](https://github.com/Senzing/docker-jupyter/blob/main/senzing-example-notebooks/python/senzing-addRecord.ipynb),
 make it better.
 Add, delete, or modify anything to improve the communication and education.
 Use python, markdown, tables, grids, graphs, or any other visual output.

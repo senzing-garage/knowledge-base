@@ -35,8 +35,8 @@ on a Windows system.
     1. Method #2 - curl
 
         ```console
-        curl -X GET --output %HOMEPATH%\Downloads\Co-workers.csv https://raw.githubusercontent.com/Senzing/example-senzing-projects/master/coworkers/csv/Co-workers.csv
-        curl -X GET --output %HOMEPATH%\Downloads\Company-Directory.csv https://raw.githubusercontent.com/Senzing/example-senzing-projects/master/coworkers/csv/Company-Directory.csv
+        curl -X GET --output %HOMEPATH%\Downloads\Co-workers.csv https://raw.githubusercontent.com/Senzing/example-senzing-projects/main/coworkers/csv/Co-workers.csv
+        curl -X GET --output %HOMEPATH%\Downloads\Company-Directory.csv https://raw.githubusercontent.com/Senzing/example-senzing-projects/main/coworkers/csv/Company-Directory.csv
         ```
 
 ## Load data

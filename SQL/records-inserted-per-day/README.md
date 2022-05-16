@@ -20,7 +20,7 @@ Get per-day record insertion rates.
     ```console
     curl -X GET \
       --output records-inserted-per-day-postgresql.sql \
-      https://raw.githubusercontent.com/Senzing/knowledge-base/master/SQL/records-inserted-per-day/records-inserted-per-day-postgresql.sql
+      https://raw.githubusercontent.com/Senzing/knowledge-base/main/SQL/records-inserted-per-day/records-inserted-per-day-postgresql.sql
     ```
 
 ### MySQL
@@ -30,7 +30,7 @@ Get per-day record insertion rates.
     ```console
     curl -X GET \
       --output records-inserted-per-day-mysql.sql \
-      https://raw.githubusercontent.com/Senzing/knowledge-base/master/SQL/records-inserted-per-day/records-inserted-per-day-mysql.sql
+      https://raw.githubusercontent.com/Senzing/knowledge-base/main/SQL/records-inserted-per-day/records-inserted-per-day-mysql.sql
     ```
 
 ### Db2
@@ -40,5 +40,5 @@ Get per-day record insertion rates.
     ```console
     curl -X GET \
       --output records-inserted-per-day-db2.sql \
-      https://raw.githubusercontent.com/Senzing/knowledge-base/master/SQL/records-inserted-per-day/records-inserted-per-day-db2.sql
+      https://raw.githubusercontent.com/Senzing/knowledge-base/main/SQL/records-inserted-per-day/records-inserted-per-day-db2.sql
     ```

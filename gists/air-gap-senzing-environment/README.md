@@ -56,7 +56,7 @@ This method has been tested on Linux and macOS systems.
         ```console
         curl -X GET \
           --output ${SENZING_AIR_GAP_SCRIPT} \
-          https://raw.githubusercontent.com/Senzing/knowledge-base/master/gists/air-gap-senzing-environment/air-gap-senzing-environment.sh
+          https://raw.githubusercontent.com/Senzing/knowledge-base/main/gists/air-gap-senzing-environment/air-gap-senzing-environment.sh
         ```
 
     1. Make file executable.

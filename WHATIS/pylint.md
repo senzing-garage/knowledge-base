@@ -24,4 +24,4 @@
 
 ### Github workflow
 
-1. See [.github/workflows/pylint.yaml](https://github.com/Senzing/stream-loader/blob/master/.github/workflows/pylint.yaml)
+1. See [.github/workflows/pylint.yaml](https://github.com/Senzing/stream-loader/blob/main/.github/workflows/pylint.yaml)

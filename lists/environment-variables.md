@@ -15,7 +15,7 @@
     1. The access key for your AWS account.
     1. When used in python programs, see [Boto3 Configuration, Using environment variables](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/configuration.html#using-environment-variables).
 1. Examples:
-    1. See [How to set AWS environment variables](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/set-aws-environment-variables.md#aws_access_key_id)
+    1. See [How to set AWS environment variables](https://github.com/Senzing/knowledge-base/blob/main/HOWTO/set-aws-environment-variables.md#aws_access_key_id)
 1. [Where used](https://github.com/search?q=org%3ASenzing+AWS_ACCESS_KEY_ID&type=code)
 
 ### AWS_CA_BUNDLE
@@ -47,7 +47,7 @@
 1. Examples:
     1. `us-east-1`
     1. `us-west-2`
-    1. See [How to set AWS environment variables](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/set-aws-environment-variables.md#aws_default_region)
+    1. See [How to set AWS environment variables](https://github.com/Senzing/knowledge-base/blob/main/HOWTO/set-aws-environment-variables.md#aws_default_region)
 1. [Where used](https://github.com/search?q=org%3ASenzing+AWS_DEFAULT_REGION&type=code)
 
 ### AWS_MAX_ATTEMPTS
@@ -93,7 +93,7 @@
     1. The secret key for your AWS account.
     1. When used in python programs, see [Boto3 Configuration, Using environment variables](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/configuration.html#using-environment-variables).
 1. Examples:
-    1. See [How to set AWS environment variables](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/set-aws-environment-variables.md#aws_secret_access_key)
+    1. See [How to set AWS environment variables](https://github.com/Senzing/knowledge-base/blob/main/HOWTO/set-aws-environment-variables.md#aws_secret_access_key)
 1. [Where used](https://github.com/search?q=org%3ASenzing+AWS_SECRET_ACCESS_KEY&type=code)
 
 ### AWS_SESSION_TOKEN
@@ -102,7 +102,7 @@
     1. The session key for your AWS account.
     1. When used in python programs, see [Boto3 Configuration, Using environment variables](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/configuration.html#using-environment-variables).
 1. Examples:
-    1. See [How to set AWS environment variables](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/set-aws-environment-variables.md#aws_session_token)
+    1. See [How to set AWS environment variables](https://github.com/Senzing/knowledge-base/blob/main/HOWTO/set-aws-environment-variables.md#aws_session_token)
 1. [Where used](https://github.com/search?q=org%3ASenzing+AWS_SESSION_TOKEN&type=code)
 
 ### AWS_SHARED_CREDENTIALS_FILE
@@ -432,7 +432,7 @@
 
 1. Synopsis:
     1. Port on localhost for [senzing/jupyter](https://github.com/Senzing/docker-jupyter).
-    1. See [Port 9178](https://github.com/Senzing/knowledge-base/blob/master/lists/ports-used-in-demonstrations.md#9178)
+    1. See [Port 9178](https://github.com/Senzing/knowledge-base/blob/main/lists/ports-used-in-demonstrations.md#9178)
 1. Values:
     1. Default: 9178
 1. [Where used](https://github.com/search?q=org%3ASenzing+JUPYTER_NOTEBOOKS_PORT&type=code)
@@ -607,7 +607,7 @@
 
 1. Synopsis:
     1. Port on localhost for Senzing API service.
-    1. See [Port 8250](https://github.com/Senzing/knowledge-base/blob/master/lists/ports-used-in-demonstrations.md#8250)
+    1. See [Port 8250](https://github.com/Senzing/knowledge-base/blob/main/lists/ports-used-in-demonstrations.md#8250)
 1. Values:
     1. Default: 8250
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVICE_PORT&type=code)
@@ -616,7 +616,7 @@
 
 1. Synopsis:
     1. A URL consisting of host:port running Senzing API server.
-    1. See [Port 8250](https://github.com/Senzing/knowledge-base/blob/master/lists/ports-used-in-demonstrations.md#8250)
+    1. See [Port 8250](https://github.com/Senzing/knowledge-base/blob/main/lists/ports-used-in-demonstrations.md#8250)
 1. Values:
     1. Format: `http://${hostname}:${SENZING_API_SERVICE_PORT}`
     1. Default: None
@@ -781,7 +781,7 @@
     1. Path on the local system where
        [Senzing_API.tgz](https://s3.amazonaws.com/public-read-access/SenzingComDownloads/Senzing_API.tgz)
        has been extracted.
-       See [HOWTO - Create SENZING_DIR](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/create-senzing-dir.md).
+       See [HOWTO - Create SENZING_DIR](https://github.com/Senzing/knowledge-base/blob/main/HOWTO/create-senzing-dir.md).
 1. Values:
     1. Default: None
     1. Usually set to "/opt/senzing".
@@ -830,7 +830,7 @@
     1. The desired version of
        [senzing/adminer](https://hub.docker.com/r/senzing/adminer).
 1. To see latest version, visit
-   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-latest.sh)
+   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/main/lists/docker-versions-latest.sh)
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_ADMINER&type=code)
 
 ### SENZING_DOCKER_IMAGE_VERSION_APT
@@ -839,7 +839,7 @@
     1. The desired version of
        [senzing/apt](https://hub.docker.com/r/senzing/apt).
 1. To see latest version, visit
-   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-latest.sh)
+   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/main/lists/docker-versions-latest.sh)
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_APT&type=code)
 
 ### SENZING_DOCKER_IMAGE_VERSION_DB2_DRIVER_INSTALLER
@@ -848,7 +848,7 @@
     1. The desired version of
        [senzing/db2-driver-installer](https://hub.docker.com/r/senzing/db2-driver-installer).
 1. To see latest version, visit
-   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-latest.sh)
+   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/main/lists/docker-versions-latest.sh)
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_DB2_DRIVER_INSTALLER&type=code)
 
 ### SENZING_DOCKER_IMAGE_VERSION_ENTITY_SEARCH_WEB_APP
@@ -857,7 +857,7 @@
     1. The desired version of
        [senzing/entity-search-web-app](https://hub.docker.com/r/senzing/entity-search-web-app).
 1. To see latest version, visit
-   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-latest.sh)
+   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/main/lists/docker-versions-latest.sh)
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_ENTITY_SEARCH_WEB_APP&type=code)
 
 ### SENZING_DOCKER_IMAGE_VERSION_INIT_CONTAINER
@@ -866,7 +866,7 @@
     1. The desired version of
        [senzing/init-container](https://hub.docker.com/r/senzing/init-container).
 1. To see latest version, visit
-   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-latest.sh)
+   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/main/lists/docker-versions-latest.sh)
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_INIT_CONTAINER&type=code)
 
 ### SENZING_DOCKER_IMAGE_VERSION_JUPYTER
@@ -875,7 +875,7 @@
     1. The desired version of
        [senzing/jupyter](https://hub.docker.com/r/senzing/jupyter).
 1. To see latest version, visit
-   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-latest.sh)
+   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/main/lists/docker-versions-latest.sh)
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_JUPYTER&type=code)
 
 ### SENZING_DOCKER_IMAGE_VERSION_PHPPGADMIN
@@ -884,7 +884,7 @@
     1. The desired version of
        [senzing/phppgadmin](https://hub.docker.com/r/senzing/phppgadmin).
 1. To see latest version, visit
-   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-latest.sh)
+   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/main/lists/docker-versions-latest.sh)
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_PHPPGADMIN&type=code)
 
 ### SENZING_DOCKER_IMAGE_VERSION_PORTAINER
@@ -893,7 +893,7 @@
     1. The desired version of
        [portainer/portainer](https://hub.docker.com/r/portainer/portainer).
 1. To see latest version, visit
-   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-latest.sh)
+   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/main/lists/docker-versions-latest.sh)
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_PORTAINER&type=code)
 
 ### SENZING_DOCKER_IMAGE_VERSION_POSTGRES
@@ -902,7 +902,7 @@
     1. The desired version of
        [postgres](https://hub.docker.com/_/postgres).
 1. To see latest version, visit
-   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-latest.sh)
+   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/main/lists/docker-versions-latest.sh)
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_POSTGRES&type=code)
 
 ### SENZING_DOCKER_IMAGE_VERSION_POSTGRESQL_CLIENT
@@ -911,7 +911,7 @@
     1. The desired version of
        [senzing/postgresql-client](https://hub.docker.com/r/senzing/postgresql-client).
 1. To see latest version, visit
-   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-latest.sh)
+   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/main/lists/docker-versions-latest.sh)
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_POSTGRESQL_CLIENT&type=code)
 
 ### SENZING_DOCKER_IMAGE_VERSION_RABBITMQ
@@ -920,7 +920,7 @@
     1. The desired version of
        [bitnami/rabbitmq](https://hub.docker.com/r/bitnami/rabbitmq).
 1. To see latest version, visit
-   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-latest.sh)
+   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/main/lists/docker-versions-latest.sh)
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_RABBITMQ&type=code)
 
 ### SENZING_DOCKER_IMAGE_VERSION_REDOER
@@ -929,7 +929,7 @@
     1. The desired version of
        [senzing/redoer](https://hub.docker.com/r/senzing/redoer).
 1. To see latest version, visit
-   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-latest.sh)
+   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/main/lists/docker-versions-latest.sh)
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_REDOER&type=code)
 
 ### SENZING_DOCKER_IMAGE_VERSION_RESOLVER
@@ -938,7 +938,7 @@
     1. The desired version of
        [senzing/resolver](https://hub.docker.com/r/senzing/resolver).
 1. To see latest version, visit
-   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-latest.sh)
+   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/main/lists/docker-versions-latest.sh)
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_RESOLVER&type=code)
 
 ### SENZING_DOCKER_IMAGE_VERSION_SENZING_API_SERVER
@@ -947,7 +947,7 @@
     1. The desired version of
        [senzing/senzing-api-server](https://hub.docker.com/r/senzing/senzing-api-server).
 1. To see latest version, visit
-   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-latest.sh)
+   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/main/lists/docker-versions-latest.sh)
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_SENZING_API_SERVER&type=code)
 
 ### SENZING_DOCKER_IMAGE_VERSION_SENZING_CONSOLE
@@ -956,7 +956,7 @@
     1. The desired version of
        [senzing/console](https://hub.docker.com/r/senzing/console).
 1. To see latest version, visit
-   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-latest.sh)
+   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/main/lists/docker-versions-latest.sh)
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_SENZING_CONSOLE&type=code)
 
 ### SENZING_DOCKER_IMAGE_VERSION_SENZING_DEBUG
@@ -965,7 +965,7 @@
     1. The desired version of
        [senzing/senzing-debug](https://hub.docker.com/r/senzing/senzing-debug).
 1. To see latest version, visit
-   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-latest.sh)
+   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/main/lists/docker-versions-latest.sh)
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_SENZING_DEBUG&type=code)
 
 ### SENZING_DOCKER_IMAGE_VERSION_SQLITE_WEB
@@ -974,7 +974,7 @@
     1. The desired version of
        [coleifer/sqlite-web](https://hub.docker.com/r/coleifer/sqlite-web).
 1. To see latest version, visit
-   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-latest.sh)
+   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/main/lists/docker-versions-latest.sh)
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_SQLITE_WEB&type=code)
 
 ### SENZING_DOCKER_IMAGE_VERSION_SSHD
@@ -983,7 +983,7 @@
     1. The desired version of
        [senzing/sshd](https://hub.docker.com/r/senzing/sshd).
 1. To see latest version, visit
-   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-latest.sh)
+   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/main/lists/docker-versions-latest.sh)
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_SSHD&type=code)
 
 ### SENZING_DOCKER_IMAGE_VERSION_STREAM_LOADER
@@ -992,7 +992,7 @@
     1. The desired version of
        [senzing/stream-loader](https://hub.docker.com/r/senzing/stream-loader).
 1. To see latest version, visit
-   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-latest.sh)
+   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/main/lists/docker-versions-latest.sh)
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_STREAM_LOADER&type=code)
 
 ### SENZING_DOCKER_IMAGE_VERSION_STREAM_LOGGER
@@ -1001,7 +1001,7 @@
     1. The desired version of
        [senzing/stream-logger](https://hub.docker.com/r/senzing/stream-logger).
 1. To see latest version, visit
-   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-latest.sh)
+   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/main/lists/docker-versions-latest.sh)
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_STREAM_LOGGER&type=code)
 
 ### SENZING_DOCKER_IMAGE_VERSION_STREAM_PRODUCER
@@ -1010,7 +1010,7 @@
     1. The desired version of
        [senzing/stream-producer](https://hub.docker.com/r/senzing/stream-producer).
 1. To see latest version, visit
-   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-latest.sh)
+   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/main/lists/docker-versions-latest.sh)
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_STREAM_PRODUCER&type=code)
 
 ### SENZING_DOCKER_IMAGE_VERSION_WEB_APP_DEMO
@@ -1019,7 +1019,7 @@
     1. The desired version of
        [senzing/web-app-demo](https://hub.docker.com/r/senzing/web-app-demo).
 1. To see latest version, visit
-   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-latest.sh)
+   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/main/lists/docker-versions-latest.sh)
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_WEB_APP_DEMO&type=code)
 
 ### SENZING_DOCKER_IMAGE_VERSION_XTERM
@@ -1028,7 +1028,7 @@
     1. The desired version of
        [senzing/xterm](https://hub.docker.com/r/senzing/xterm).
 1. To see latest version, visit
-   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-latest.sh)
+   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/main/lists/docker-versions-latest.sh)
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_XTERM&type=code)
 
 ### SENZING_DOCKER_IMAGE_VERSION_YUM
@@ -1037,7 +1037,7 @@
     1. The desired version of
        [senzing/yum](https://hub.docker.com/r/senzing/yum).
 1. To see latest version, visit
-   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/master/lists/docker-versions-latest.sh)
+   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/main/lists/docker-versions-latest.sh)
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_YUM&type=code)
 
 ### SENZING_DOCKER_LAUNCHED
@@ -1500,7 +1500,7 @@
 ### SENZING_PORTAINER_DIR
 
 1. Synopsis:
-    1. A directory where [Portainer](https://github.com/Senzing/knowledge-base/blob/master/WHATIS/portainer.md) can keep variable data.
+    1. A directory where [Portainer](https://github.com/Senzing/knowledge-base/blob/main/WHATIS/portainer.md) can keep variable data.
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_PORTAINER_DIR&type=code)
 
 ### SENZING_PRIME_ENGINE
@@ -2049,7 +2049,7 @@
 
 1. Synopsis:
     1. Port on localhost for Senzing Entity Search WebApp.
-    1. See [Port 8251](https://github.com/Senzing/knowledge-base/blob/master/lists/ports-used-in-demonstrations.md#8251)
+    1. See [Port 8251](https://github.com/Senzing/knowledge-base/blob/main/lists/ports-used-in-demonstrations.md#8251)
 1. Values:
     1. Default: 8251
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_WEB_SERVER_PORT&type=code)
