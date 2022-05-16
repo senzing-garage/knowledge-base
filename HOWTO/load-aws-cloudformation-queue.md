@@ -142,7 +142,7 @@ and loading the SQS queue from a local workstation.
        Example:
 
         ```console
-        pip3 install -r https://raw.githubusercontent.com/Senzing/stream-producer/master/requirements.txt
+        pip3 install -r https://raw.githubusercontent.com/Senzing/stream-producer/main/requirements.txt
         ```
 
     1. :pencil2: Specify location for `stream-producer.py`.
@@ -158,7 +158,7 @@ and loading the SQS queue from a local workstation.
         ```console
         curl -X GET \
           --output ${SENZING_DOWNLOAD_FILE} \
-          https://raw.githubusercontent.com/Senzing/stream-producer/master/stream-producer.py
+          https://raw.githubusercontent.com/Senzing/stream-producer/main/stream-producer.py
         ```
 
 1. Load SQS queue using
@@ -222,7 +222,7 @@ and loading the SQS queue from a local workstation.
        Example:
 
         ```console
-        pip install -r https://raw.githubusercontent.com/Senzing/stream-producer/master/requirements.txt
+        pip install -r https://raw.githubusercontent.com/Senzing/stream-producer/main/requirements.txt
         ```
 
     1. :pencil2: Specify location for `stream-producer.py`.
@@ -238,7 +238,7 @@ and loading the SQS queue from a local workstation.
         ```console
         curl -X GET ^
           --output %SENZING_DOWNLOAD_FILE% ^
-          https://raw.githubusercontent.com/Senzing/stream-producer/master/stream-producer.py
+          https://raw.githubusercontent.com/Senzing/stream-producer/main/stream-producer.py
         ```
 
 1. Load SQS queue using

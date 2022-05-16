@@ -20,24 +20,24 @@
 
 ### charts
 
-1. [charts](https://github.com/Senzing/charts/tree/master/charts)`/<chart-name>/<chart-name>/values.yaml` files.
+1. [charts](https://github.com/Senzing/charts/tree/main/charts)`/<chart-name>/<chart-name>/values.yaml` files.
 
 ### docker-app-demo
 
-1. `image:` values in [senzing-demo-dockerapp/docker-compose.yml](https://github.com/Senzing/docker-app-demo/blob/master/senzing-demo.dockerapp/docker-compose.yml)
-1. `image:` values in [senzing-install.dockerapp/docker-compose.yml](https://github.com/Senzing/docker-app-demo/blob/master/senzing-install.dockerapp/docker-compose.yml)
+1. `image:` values in [senzing-demo-dockerapp/docker-compose.yml](https://github.com/Senzing/docker-app-demo/blob/main/senzing-demo.dockerapp/docker-compose.yml)
+1. `image:` values in [senzing-install.dockerapp/docker-compose.yml](https://github.com/Senzing/docker-app-demo/blob/main/senzing-install.dockerapp/docker-compose.yml)
 
 ### docker-compose-aws-ecscli-demo
 
-1. `docker-compose-xxx.yaml` files in [resources](https://github.com/Senzing/docker-compose-aws-ecscli-demo/tree/master/resources) folder.
+1. `docker-compose-xxx.yaml` files in [resources](https://github.com/Senzing/docker-compose-aws-ecscli-demo/tree/main/resources) folder.
 
 ### docker-compose-demo
 
-1. `docker-compose-xxx.yaml` files in [resources](https://github.com/Senzing/docker-compose-demo/tree/master/resources) folder.
+1. `docker-compose-xxx.yaml` files in [resources](https://github.com/Senzing/docker-compose-demo/tree/main/resources) folder.
 
 ### senzing-environment
 
-1. [senzing-environment.py](https://github.com/Senzing/senzing-environment/blob/master/senzing-environment.py)
+1. [senzing-environment.py](https://github.com/Senzing/senzing-environment/blob/main/senzing-environment.py)
 
     ```bash
     export SENZING_DOCKER_IMAGE_VERSION_APT=M.m.P
@@ -64,7 +64,7 @@
 
 ### senzing-up
 
-1. [senzing-up.sh](https://github.com/Senzing/senzing-up/blob/master/senzing-up.sh)
+1. [senzing-up.sh](https://github.com/Senzing/senzing-up/blob/main/senzing-up.sh)
 
     ```bash
     SENZING_DOCKER_IMAGE_VERSION_G2LOADER=M.m.P

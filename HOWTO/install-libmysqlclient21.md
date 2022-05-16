@@ -7,7 +7,7 @@ Manual instructions for installing `libmysqlclient21` which is the database driv
 This is done automatically by
 [docker-init-container](https://github.com/Senzing/docker-init-container).
 In particular the `database_initialization_mysql(...)` function of
-[init-container.py](https://github.com/Senzing/docker-init-container/blob/master/init-container.py)
+[init-container.py](https://github.com/Senzing/docker-init-container/blob/main/init-container.py)
 
 ### Contents
 

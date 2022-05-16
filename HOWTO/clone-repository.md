@@ -6,7 +6,7 @@ The following software programs need to be installed.
 
 ### git
 
-1. [Install Git](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/install-git.md)
+1. [Install Git](https://github.com/Senzing/knowledge-base/blob/main/HOWTO/install-git.md)
 1. Test
 
     ```console

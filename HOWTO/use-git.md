@@ -101,23 +101,24 @@ In repositories created after October 2020, the "main" branch is used.
 
 ```console
 GIT_CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
-git checkout master
+git checkout main
 git pull
 git checkout ${GIT_CURRENT_BRANCH}
-git merge origin/master
+git merge origin/main
 git push
 ```
 
-## Merge changes in master to current branch
+## Merge changes in main to current branch
 
 In repositories created before October 2020, the "master" branch is used.
+However, they've since been migrated to "main" in May 2022.
 
 ```console
 GIT_CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
-git checkout master
+git checkout main
 git pull
 git checkout ${GIT_CURRENT_BRANCH}
-git merge origin/master
+git merge origin/main
 git push
 ```
 
@@ -137,9 +138,9 @@ git push origin --delete <branch_name>
 
 # Help!  I tried to commit to main, now what?
 
-No problem, we got you.  
-Make sure you are on the branch to which you have been committing. 
-`git log` to check how many commits you want to roll back. 
+No problem, we got you.
+Make sure you are on the branch to which you have been committing.
+`git log` to check how many commits you want to roll back.
 undo the commits with git reset HEAD~N where “N” is the number of commits you want to undo.
 
 eg, to undo one commit:
@@ -148,7 +149,7 @@ eg, to undo one commit:
 git reset HEAD~1
 ```
 
-now create your branch, switch to it, and continue on as if that didn't happen.  
+now create your branch, switch to it, and continue on as if that didn't happen.
 Do be sure to verify that you're only committing the changes you want with `git status`
 
 # One time configuration for your git command line

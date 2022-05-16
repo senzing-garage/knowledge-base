@@ -37,7 +37,7 @@ Instructions for installing the data portion of the
     1. :warning: This step is intentionally tricky and not simply copy/paste.
        This ensures that you make a conscious effort to accept the EULA.
        See
-       [SENZING_ACCEPT_EULA](https://github.com/Senzing/knowledge-base/blob/master/lists/environment-variables.md#senzing_accept_eula)
+       [SENZING_ACCEPT_EULA](https://github.com/Senzing/knowledge-base/blob/main/lists/environment-variables.md#senzing_accept_eula)
        for the correct value.
        Replace the double-quote character in the example with the correct value.
        The use of the double-quote character is intentional to prevent simple copy/paste.
@@ -90,7 +90,7 @@ Instructions for installing the data portion of the
     1. :warning: This step is intentionally tricky and not simply copy/paste.
        This ensures that you make a conscious effort to accept the EULA.
        See
-       [SENZING_ACCEPT_EULA](https://github.com/Senzing/knowledge-base/blob/master/lists/environment-variables.md#senzing_accept_eula)
+       [SENZING_ACCEPT_EULA](https://github.com/Senzing/knowledge-base/blob/main/lists/environment-variables.md#senzing_accept_eula)
        for the correct value.
        Replace the double-quote character in the example with the correct value.
        The use of the double-quote character is intentional to prevent simple copy/paste.

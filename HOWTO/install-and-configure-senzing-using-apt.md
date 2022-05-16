@@ -18,8 +18,8 @@ This process requires the following files:
 
 The following software programs need to be installed:
 
-1. [senzingdata](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/install-senzing-data.md#ubuntu)
-1. [senzingapi](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/install-senzing-api.md#ubuntu)
+1. [senzingdata](https://github.com/Senzing/knowledge-base/blob/main/HOWTO/install-senzing-data.md#ubuntu)
+1. [senzingapi](https://github.com/Senzing/knowledge-base/blob/main/HOWTO/install-senzing-api.md#ubuntu)
 
 ## Set Environment variables
 
@@ -56,7 +56,7 @@ The following software programs need to be installed:
     ```console
     curl -X GET \
       --output ~/init-container.py \
-      https://raw.githubusercontent.com/Senzing/docker-init-container/master/init-container.py
+      https://raw.githubusercontent.com/Senzing/docker-init-container/main/init-container.py
     ```
 
 1. Make `init-container.py` executable.

@@ -2,8 +2,8 @@
 
 ## Configuration
 
-- **[SENZING_OPT_IBM_DIR](https://github.com/Senzing/knowledge-base/blob/master/lists/environment-variables.md#senzing_opt_ibm_dir)**
-- **[SENZING_VOLUME](https://github.com/Senzing/knowledge-base/blob/master/lists/environment-variables.md#senzing_volume)**
+- **[SENZING_OPT_IBM_DIR](https://github.com/Senzing/knowledge-base/blob/main/lists/environment-variables.md#senzing_opt_ibm_dir)**
+- **[SENZING_VOLUME](https://github.com/Senzing/knowledge-base/blob/main/lists/environment-variables.md#senzing_volume)**
 
 ## Specify Db2 driver location
 

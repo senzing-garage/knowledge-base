@@ -41,7 +41,7 @@ This method has been tested on Linux and macOS systems.
         ```console
         curl -X GET \
           --output ${MY_DOCKER_AIR_GAP_HELPER} \
-          https://raw.githubusercontent.com/Senzing/knowledge-base/master/gists/docker-air-gap-helper/docker-air-gap-helper.sh
+          https://raw.githubusercontent.com/Senzing/knowledge-base/main/gists/docker-air-gap-helper/docker-air-gap-helper.sh
         ```
 
     1. Make file executable.

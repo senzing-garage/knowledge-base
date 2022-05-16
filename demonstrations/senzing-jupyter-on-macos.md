@@ -31,8 +31,8 @@ Budget 4 hours to get the demonstration up-and-running, depending on CPU and net
 
 This repository assumes a working knowledge of:
 
-1. [Docker](https://github.com/Senzing/knowledge-base/blob/master/WHATIS/docker.md)
-1. [Jupyter](https://github.com/Senzing/knowledge-base/blob/master/WHATIS/jupyter.md)
+1. [Docker](https://github.com/Senzing/knowledge-base/blob/main/WHATIS/docker.md)
+1. [Jupyter](https://github.com/Senzing/knowledge-base/blob/main/WHATIS/jupyter.md)
 
 ## Preparation
 
@@ -40,8 +40,8 @@ This repository assumes a working knowledge of:
 
 The following software programs need to be installed:
 
-1. [Docker](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/install-docker.md)
-1. [Jupyter Notebooks](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/install-jupyter-notebooks.md)
+1. [Docker](https://github.com/Senzing/knowledge-base/blob/main/HOWTO/install-docker.md)
+1. [Jupyter Notebooks](https://github.com/Senzing/knowledge-base/blob/main/HOWTO/install-jupyter-notebooks.md)
 
 ### Clone repositories
 
@@ -52,7 +52,7 @@ The following software programs need to be installed:
     export GIT_REPOSITORY=docker-jupyter
     ```
 
-1. Follow steps in [clone-repository](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/clone-repository.md).
+1. Follow steps in [clone-repository](https://github.com/Senzing/knowledge-base/blob/main/HOWTO/clone-repository.md).
 
 1. Set these environment variable values:
 
@@ -61,7 +61,7 @@ The following software programs need to be installed:
     export GIT_REPOSITORY=jupyter-examples
     ```
 
-1. Follow steps in [clone-repository](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/clone-repository.md).
+1. Follow steps in [clone-repository](https://github.com/Senzing/knowledge-base/blob/main/HOWTO/clone-repository.md).
 
 ### Install python libraries
 
@@ -75,7 +75,7 @@ The following software programs need to be installed:
 ### Create SENZING_DIR
 
 1. If you do not already have an `/opt/senzing` directory on your local system, visit
-[HOWTO - Create SENZING_DIR](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/create-senzing-dir.md).
+[HOWTO - Create SENZING_DIR](https://github.com/Senzing/knowledge-base/blob/main/HOWTO/create-senzing-dir.md).
 
 ### Pull senzing/jupyter
 

@@ -180,7 +180,7 @@ The Senzing REST API server supports the
 
 ### Senzing API server via Swagger editor
 
-1. From [OpenApi "Swagger" editor](http://editor.swagger.io/?url=https://raw.githubusercontent.com/Senzing/senzing-rest-api-specification/master/senzing-rest-api.yaml).
+1. From [OpenApi "Swagger" editor](http://editor.swagger.io/?url=https://raw.githubusercontent.com/Senzing/senzing-rest-api-specification/main/senzing-rest-api.yaml).
 
 ### Senzing API server references
 
@@ -203,7 +203,7 @@ The Senzing REST API server supports the
 
 ### Senzing Entity Search WebApp demo
 
-1. The [demonstration](https://github.com/Senzing/knowledge-base/blob/master/demonstrations/docker-compose-web-app.md)
+1. The [demonstration](https://github.com/Senzing/knowledge-base/blob/main/demonstrations/docker-compose-web-app.md)
    instructions will give a tour of the Senzing web app.
 
 ### Senzing Entity Search WebApp references
@@ -215,7 +215,7 @@ The Senzing REST API server supports the
 ### Request Senzing license
 
 1. If working with more than 10,000 records,
-   [obtain a Senzing license](https://github.com/Senzing/knowledge-base/blob/master/HOWTO/obtain-senzing-license.md).
+   [obtain a Senzing license](https://github.com/Senzing/knowledge-base/blob/main/HOWTO/obtain-senzing-license.md).
 
 ### Install Senzing license
 

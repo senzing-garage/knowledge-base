@@ -37,7 +37,7 @@
 
 1. Branch name format:  `issue-000`.`[your-name]`.`[anything-you-want]`
 1. **Why a branch?**
-   The main/master branch is protected.
+   The main branch is protected.
    The assumption is that the main branch always deployable
    (i.e. it is never broken).
    The only way to modify the main branch

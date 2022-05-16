@@ -139,7 +139,7 @@ The approach facilitates "future-proofing" applications using the Senzing Python
 
    Log message identifiers have the format `senzing-ppppnnnnt`, where:
 
-    - "p" is the 4 digit [product identifier](https://github.com/Senzing/knowledge-base/blob/master/lists/senzing-product-ids.md)
+    - "p" is the 4 digit [product identifier](https://github.com/Senzing/knowledge-base/blob/main/lists/senzing-product-ids.md)
     - "n" is the 4 digit message identifier within product
     - "t" is the 1 character message type: Info, Warn, Error
 
@@ -332,7 +332,7 @@ The approach facilitates "future-proofing" applications using the Senzing Python
 
    Log message identifiers have the format `senzing-ppppnnnnt`, where:
 
-    - "p" is the 4 digit [product identifier](https://github.com/Senzing/knowledge-base/blob/master/lists/senzing-product-ids.md)
+    - "p" is the 4 digit [product identifier](https://github.com/Senzing/knowledge-base/blob/main/lists/senzing-product-ids.md)
     - "n" is the 4 digit message identifier within product
     - "t" is the 1 character message type: Info, Warn, Error
 

@@ -48,7 +48,7 @@ On the air-gapped system, perform the following:
        This ensures that you make a conscious effort to accept the EULA.
        Example:
 
-    <pre>export SENZING_ACCEPT_EULA="&lt;the value from <a href="https://github.com/Senzing/knowledge-base/blob/master/lists/environment-variables.md#senzing_accept_eula">this link</a>&gt;"</pre>
+    <pre>export SENZING_ACCEPT_EULA="&lt;the value from <a href="https://github.com/Senzing/knowledge-base/blob/main/lists/environment-variables.md#senzing_accept_eula">this link</a>&gt;"</pre>
 
 1. :pencil2: Specify RPM files and the directory where they are located on the air-gapped system.
    Example:

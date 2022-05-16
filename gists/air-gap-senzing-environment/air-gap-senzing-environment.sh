@@ -87,12 +87,12 @@ done
 
 curl -X GET \
   --output ${OUTPUT_DIR}/senzing-environment.py \
-  https://raw.githubusercontent.com/Senzing/senzing-environment/master/senzing-environment.py
+  https://raw.githubusercontent.com/Senzing/senzing-environment/main/senzing-environment.py
 chmod +x ${OUTPUT_DIR}/senzing-environment.py
 
 curl -X GET \
   --output ${OUTPUT_DIR}/parse-1.15.0-py3-none-any.whl \
-  https://raw.githubusercontent.com/Senzing/knowledge-base/master/gists/air-gap-senzing-environment/parse-1.15.0-py3-none-any.whl
+  https://raw.githubusercontent.com/Senzing/knowledge-base/main/gists/air-gap-senzing-environment/parse-1.15.0-py3-none-any.whl
 
 # Compress results.
 
