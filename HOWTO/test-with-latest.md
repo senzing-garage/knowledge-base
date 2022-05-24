@@ -11,13 +11,13 @@
 
     source /tmp/senzing-versions-latest.sh
 
-	sudo docker build \
-	  --build-arg SENZING_ACCEPT_EULA=I_ACCEPT_THE_SENZING_EULA \
-	  --build-arg SENZING_APT_INSTALL_PACKAGE=senzingapi=${SENZING_VERSION_SENZINGAPI_BUILD} \
-	  --build-arg SENZING_DATA_VERSION=${SENZING_VERSION_SENZINGDATA} \
-	  --no-cache \
-	  --tag senzing/installer:${SENZING_VERSION_SENZINGAPI} \
-	  https://github.com/senzing/docker-installer.git#main
+  sudo docker build \
+    --build-arg SENZING_ACCEPT_EULA=I_ACCEPT_THE_SENZING_EULA \
+    --build-arg SENZING_APT_INSTALL_PACKAGE=senzingapi=${SENZING_VERSION_SENZINGAPI_BUILD} \
+    --build-arg SENZING_DATA_VERSION=${SENZING_VERSION_SENZINGDATA} \
+    --no-cache \
+    --tag senzing/installer:${SENZING_VERSION_SENZINGAPI} \
+    https://github.com/senzing/docker-installer.git#main
     ```
 
 1. Bring up docker-compose stack.
@@ -48,12 +48,10 @@
     export PGADMIN_DIR=${SENZING_VAR_DIR}/pgadmin
     export POSTGRES_DIR=${SENZING_VAR_DIR}/postgres
     export RABBITMQ_DIR=${SENZING_VAR_DIR}/rabbitmq
-    sudo mkdir -p ${PGADMIN_DIR}
-    sudo mkdir -p ${POSTGRES_DIR}
-    sudo mkdir -p ${RABBITMQ_DIR}
+    sudo mkdir -p ${PGADMIN_DIR} ${POSTGRES_DIR} ${RABBITMQ_DIR}
     sudo chown $(id -u):$(id -g) -R ${SENZING_VOLUME}
     sudo chmod -R 770 ${SENZING_VOLUME}
-    sudo chmod -R 777 ${PGADMIN_DIR}
+    sudo chmod -R 777 ${PGADMIN_DIR} ${POSTGRES_DIR} ${RABBITMQ_DIR}
     curl -X GET \
         --output ${SENZING_VOLUME}/docker-versions-latest.sh \
         https://raw.githubusercontent.com/Senzing/knowledge-base/main/lists/docker-versions-latest.sh
