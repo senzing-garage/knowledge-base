@@ -4,22 +4,33 @@
 
 1. Perform once per new version on staging:
 
-    ```console
-    curl -X GET \
-        --output /tmp/senzing-versions-staging.sh \
-        https://raw.githubusercontent.com/Senzing/knowledge-base/main/lists/senzing-versions-staging.sh
+    1. To use the Senzing code, you must agree to the End User License Agreement (EULA).
 
-    source /tmp/senzing-versions-staging.sh
+       :warning: This step is intentionally tricky and not simply copy/paste.
+       This ensures that you make a conscious effort to accept the EULA.
+       Example:
 
-    sudo docker build \
-      --build-arg SENZING_ACCEPT_EULA=I_ACCEPT_THE_SENZING_EULA \
-      --build-arg SENZING_APT_INSTALL_PACKAGE=senzingapi=${SENZING_VERSION_SENZINGAPI_BUILD} \
-      --build-arg SENZING_APT_REPOSITORY=https://senzing-staging-apt.s3.amazonaws.com/senzingstagingrepo_1.0.0-1_amd64.deb \
-      --build-arg SENZING_DATA_VERSION=${SENZING_VERSION_SENZINGDATA} \
-      --no-cache \
-      --tag senzing/installer-staging:${SENZING_VERSION_SENZINGAPI_BUILD} \
-      https://github.com/senzing/docker-installer.git#main
-    ```
+        <pre>export SENZING_ACCEPT_EULA="&lt;the value from <a href="https://github.com/Senzing/knowledge-base/blob/main/lists/environment-variables.md#senzing_accept_eula">this link</a>&gt;"</pre>
+
+    1. Build a Docker image which will be used to install Senzing.
+       Example:
+
+        ```console
+        curl -X GET \
+            --output /tmp/senzing-versions-staging.sh \
+            https://raw.githubusercontent.com/Senzing/knowledge-base/main/lists/senzing-versions-staging.sh
+
+        source /tmp/senzing-versions-staging.sh
+
+        sudo docker build \
+          --build-arg SENZING_ACCEPT_EULA=${SENZING_ACCEPT_EULA} \
+          --build-arg SENZING_APT_INSTALL_PACKAGE=senzingapi=${SENZING_VERSION_SENZINGAPI_BUILD} \
+          --build-arg SENZING_APT_REPOSITORY=https://senzing-staging-apt.s3.amazonaws.com/senzingstagingrepo_1.0.0-1_amd64.deb \
+          --build-arg SENZING_DATA_VERSION=${SENZING_VERSION_SENZINGDATA} \
+          --no-cache \
+          --tag senzing/installer-staging:${SENZING_VERSION_SENZINGAPI_BUILD} \
+          https://github.com/senzing/docker-installer.git#main
+        ```
 
 1. Bring up docker-compose stack.
 
@@ -49,12 +60,10 @@
     export PGADMIN_DIR=${SENZING_VAR_DIR}/pgadmin
     export POSTGRES_DIR=${SENZING_VAR_DIR}/postgres
     export RABBITMQ_DIR=${SENZING_VAR_DIR}/rabbitmq
-    sudo mkdir -p ${PGADMIN_DIR}
-    sudo mkdir -p ${POSTGRES_DIR}
-    sudo mkdir -p ${RABBITMQ_DIR}
+    sudo mkdir -p ${PGADMIN_DIR} ${POSTGRES_DIR} ${RABBITMQ_DIR}
     sudo chown $(id -u):$(id -g) -R ${SENZING_VOLUME}
     sudo chmod -R 770 ${SENZING_VOLUME}
-    sudo chmod -R 777 ${PGADMIN_DIR}
+    sudo chmod -R 777 ${PGADMIN_DIR} ${POSTGRES_DIR} ${RABBITMQ_DIR}
     curl -X GET \
         --output ${SENZING_VOLUME}/docker-versions-staging.sh \
         https://raw.githubusercontent.com/Senzing/knowledge-base/main/lists/docker-versions-staging.sh

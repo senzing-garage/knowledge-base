@@ -94,7 +94,7 @@ and other "helper" docker containers.
 1. Download and source the list of docker image version environment variables.
    Example:
 
-   ```console
+    ```console
     curl -X GET \
         --output /tmp/senzing-versions-latest.sh \
         https://raw.githubusercontent.com/Senzing/knowledge-base/main/lists/senzing-versions-latest.sh
