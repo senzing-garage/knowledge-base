@@ -12,7 +12,7 @@
 
         <pre>export SENZING_ACCEPT_EULA="&lt;the value from <a href="https://github.com/Senzing/knowledge-base/blob/main/lists/environment-variables.md#senzing_accept_eula">this link</a>&gt;"</pre>
 
-    1. Build a Docker image for installing Senzing.
+    1. Build a Docker image which will be used to install Senzing.
        Example:
 
         ```console
