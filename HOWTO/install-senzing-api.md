@@ -8,8 +8,8 @@ Instructions for installing
 ### Contents
 
 1. [Install](#install)
-    1. [CentOS](#centos)
     1. [Ubuntu](#ubuntu)
+    1. [CentOS](#centos)
     1. [macOS](#macos)
     1. [Windows](#windows)
     1. [Docker](#docker)
@@ -19,51 +19,15 @@ Instructions for installing
 
 ## Install
 
-### CentOS
-
-For installation on Red Hat, CentOS, openSuse and
-[others](https://en.wikipedia.org/wiki/List_of_Linux_distributions#RPM-based).
-
-1. Install Senzing YUM repository metadata.
-   Example:
-
-    ```console
-    sudo yum -y install https://senzing-production-yum.s3.amazonaws.com/senzingrepo-1.0.0-1.x86_64.rpm
-    ```
-
-1. :thinking: **Optional:**
-   To use the Senzing code, you must agree to the End User License Agreement (EULA).
-
-    1. :warning: This step is intentionally tricky and not simply copy/paste.
-       This ensures that you make a conscious effort to accept the EULA.
-       Example:
-
-        <pre>export SENZING_ACCEPT_EULA="&lt;the value from <a href="https://github.com/Senzing/knowledge-base/blob/main/lists/environment-variables.md#senzing_accept_eula">this link</a>&gt;"</pre>
-
-1. Install Senzing API.
-   If `SENZING_ACCEPT_EULA` environment variable is not set,
-   you will be prompted to accept the Senzing End User License Agreement (EULA)
-   The EULA is located at [https://senzing.com/end-user-license-agreement](https://senzing.com/end-user-license-agreement/).
-   Example:
-
-    ```console
-    sudo --preserve-env yum -y install senzingapi
-    ```
-
 ### Ubuntu
 
 1. Add required system packages.
    Example:
 
     ```console
-    sudo apt install apt-transport-https
-    ```
-
-1. Install `curl`
-   Example:
-
-    ```console
-    sudo apt -y install curl
+    sudo apt install \
+        apt-transport-https \
+        curl
     ```
 
 1. Install Senzing APT repository metadata.
@@ -96,6 +60,37 @@ For installation on Red Hat, CentOS, openSuse and
 
     ```console
     sudo --preserve-env apt -y install senzingapi
+    ```
+
+### CentOS
+
+For installation on Red Hat, CentOS, openSuse and
+[others](https://en.wikipedia.org/wiki/List_of_Linux_distributions#RPM-based).
+
+1. Install Senzing YUM repository metadata.
+   Example:
+
+    ```console
+    sudo yum -y install https://senzing-production-yum.s3.amazonaws.com/senzingrepo-1.0.0-1.x86_64.rpm
+    ```
+
+1. :thinking: **Optional:**
+   To use the Senzing code, you must agree to the End User License Agreement (EULA).
+
+    1. :warning: This step is intentionally tricky and not simply copy/paste.
+       This ensures that you make a conscious effort to accept the EULA.
+       Example:
+
+        <pre>export SENZING_ACCEPT_EULA="&lt;the value from <a href="https://github.com/Senzing/knowledge-base/blob/main/lists/environment-variables.md#senzing_accept_eula">this link</a>&gt;"</pre>
+
+1. Install Senzing API.
+   If `SENZING_ACCEPT_EULA` environment variable is not set,
+   you will be prompted to accept the Senzing End User License Agreement (EULA)
+   The EULA is located at [https://senzing.com/end-user-license-agreement](https://senzing.com/end-user-license-agreement/).
+   Example:
+
+    ```console
+    sudo --preserve-env yum -y install senzingapi
     ```
 
 ### macOS
