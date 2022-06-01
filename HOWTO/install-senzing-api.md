@@ -2,7 +2,8 @@
 
 ## Overview
 
-Instructions for installing [Senzing API](../WHATIS/senzing-api.md).
+Instructions for installing 
+[Senzing API](../WHATIS/senzing-api.md).
 
 ### Contents
 
@@ -33,9 +34,6 @@ For installation on Red Hat, CentOS, openSuse and
 
 1. :thinking: **Optional:**
    To use the Senzing code, you must agree to the End User License Agreement (EULA).
-   The EULA is located at [https://senzing.com/end-user-license-agreement](https://senzing.com/end-user-license-agreement/).
-   To agree to Senzing EULA in an automated fashion,
-   set the `SENZING_ACCEPT_EULA` environment variable before running `yum install`.
 
     1. :warning: This step is intentionally tricky and not simply copy/paste.
        This ensures that you make a conscious effort to accept the EULA.
@@ -84,9 +82,6 @@ For installation on Red Hat, CentOS, openSuse and
 
 1. :thinking: **Optional:**
    To use the Senzing code, you must agree to the End User License Agreement (EULA).
-   The EULA is located at [https://senzing.com/end-user-license-agreement](https://senzing.com/end-user-license-agreement/).
-   To agree to Senzing EULA in an automated fashion,
-   set the `SENZING_ACCEPT_EULA` environment variable before running `yum install`.
 
     1. :warning: This step is intentionally tricky and not simply copy/paste.
        This ensures that you make a conscious effort to accept the EULA.

@@ -21,46 +21,44 @@ Instructions for installing the data portion of the
 
 ### CentOS
 
+For installation on Red Hat, CentOS, openSuse and
+[others](https://en.wikipedia.org/wiki/List_of_Linux_distributions#RPM-based).
+
 1. Install Senzing YUM repository metadata.
    Example:
 
     ```console
-    sudo yum -y install https://senzing-production-yum.s3.amazonaws.com/senzingrepo-1.0.0-1.x86_64.rpm
+    sudo yum -y install \
+      https://senzing-production-yum.s3.amazonaws.com/senzingrepo-1.0.0-1.x86_64.rpm
     ```
 
 1. :thinking: **Optional:**
    To use the Senzing code, you must agree to the End User License Agreement (EULA).
-   The EULA is located at [https://senzing.com/end-user-license-agreement](https://senzing.com/end-user-license-agreement/).
-   To agree to Senzing EULA in an automated fashion,
-   set the `SENZING_ACCEPT_EULA` environment variable before running `yum install`.
 
     1. :warning: This step is intentionally tricky and not simply copy/paste.
        This ensures that you make a conscious effort to accept the EULA.
-       See
-       [SENZING_ACCEPT_EULA](https://github.com/Senzing/knowledge-base/blob/main/lists/environment-variables.md#senzing_accept_eula)
-       for the correct value.
-       Replace the double-quote character in the example with the correct value.
-       The use of the double-quote character is intentional to prevent simple copy/paste.
        Example:
 
-        ```console
-        export SENZING_ACCEPT_EULA="
-        ```
+        <pre>export SENZING_ACCEPT_EULA="&lt;the value from <a href="https://github.com/Senzing/knowledge-base/blob/main/lists/environment-variables.md#senzing_accept_eula">this link</a>&gt;"</pre>
 
 1. Install Senzing API.
-   If `SENZING_ACCEPT_EULA` is not set,
+   If `SENZING_ACCEPT_EULA` environment variable is not set,
    you will be prompted to accept the Senzing End User License Agreement (EULA)
    The EULA is located at [https://senzing.com/end-user-license-agreement](https://senzing.com/end-user-license-agreement/).
    Example:
 
     ```console
-    sudo \
-      SENZING_ACCEPT_EULA=${SENZING_ACCEPT_EULA} \
-      yum -y install \
-        senzingdata-v1
+    sudo --preserve-env yum -y install senzingdata-v3
     ```
 
 ### Ubuntu
+
+1. Add required system packages.
+   Example:
+
+    ```console
+    sudo apt install apt-transport-https
+    ```
 
 1. Install `curl`
    Example:
@@ -79,38 +77,26 @@ Instructions for installing the data portion of the
 
     sudo apt -y install ~/senzingrepo_1.0.0-1_amd64.deb
     sudo apt update
+    rm  ~/senzingrepo_1.0.0-1_amd64.deb
     ```
 
 1. :thinking: **Optional:**
    To use the Senzing code, you must agree to the End User License Agreement (EULA).
-   The EULA is located at [https://senzing.com/end-user-license-agreement](https://senzing.com/end-user-license-agreement/).
-   To agree to Senzing EULA in an automated fashion,
-   set the `SENZING_ACCEPT_EULA` environment variable before running `yum install`.
 
     1. :warning: This step is intentionally tricky and not simply copy/paste.
        This ensures that you make a conscious effort to accept the EULA.
-       See
-       [SENZING_ACCEPT_EULA](https://github.com/Senzing/knowledge-base/blob/main/lists/environment-variables.md#senzing_accept_eula)
-       for the correct value.
-       Replace the double-quote character in the example with the correct value.
-       The use of the double-quote character is intentional to prevent simple copy/paste.
        Example:
 
-        ```console
-        export SENZING_ACCEPT_EULA="
-        ```
+        <pre>export SENZING_ACCEPT_EULA="&lt;the value from <a href="https://github.com/Senzing/knowledge-base/blob/main/lists/environment-variables.md#senzing_accept_eula">this link</a>&gt;"</pre>
 
 1. Install Senzing API.
-   If `SENZING_ACCEPT_EULA` is not set,
+   If `SENZING_ACCEPT_EULA` environment variable is not set,
    you will be prompted to accept the Senzing End User License Agreement (EULA)
    The EULA is located at [https://senzing.com/end-user-license-agreement](https://senzing.com/end-user-license-agreement/).
    Example:
 
     ```console
-    sudo \
-      SENZING_ACCEPT_EULA=${SENZING_ACCEPT_EULA} \
-      apt -y install \
-        senzingdata-v1
+    sudo --preserve-env apt -y install senzingdata-v3
     ```
 
 ### macOS
