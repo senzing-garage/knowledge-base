@@ -33,6 +33,14 @@ Perform once per new Senzing version:
 
 ## Install Senzing using Docker container
 
+1. :pencil2: Identify location to install Senzing.
+   Example:
+
+    ```console
+    export SENZING_VOLUME=~/my-senzing
+    mkdir -p ${SENZING_VOLUME}
+    ```
+
 1. Install Senzing using locally-built Docker container.
    ${SENZING_VOLUME} is the installation location and may be changed.
    Example:
@@ -41,11 +49,7 @@ Perform once per new Senzing version:
     curl -X GET \
         --output /tmp/senzing-versions-latest.sh \
         https://raw.githubusercontent.com/Senzing/knowledge-base/main/lists/senzing-versions-latest.sh
-
     source /tmp/senzing-versions-latest.sh
-    export SENZING_VOLUME=~/senzing-${SENZING_VERSION_SENZINGAPI}
-    rm -rf ${SENZING_VOLUME}
-    mkdir -p ${SENZING_VOLUME}
 
     sudo docker run \
         --rm \
