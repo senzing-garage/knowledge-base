@@ -28,8 +28,7 @@ For installation on Red Hat, CentOS, openSuse and
    Example:
 
     ```console
-    sudo yum -y install \
-      https://senzing-production-yum.s3.amazonaws.com/senzingrepo-1.0.0-1.x86_64.rpm
+    sudo yum -y install https://senzing-production-yum.s3.amazonaws.com/senzingrepo-1.0.0-1.x86_64.rpm
     ```
 
 1. :thinking: **Optional:**
