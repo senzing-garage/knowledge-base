@@ -22,18 +22,18 @@
 
 1. Pull changes to README.md into "main" branch.
 
-### Change title
+### Change About
 
-1. On `https://github.com/{account}/{repository}` page, click the title "Edit" button.
+On `https://github.com/{account}/{repository}` page, click the "About" gear icon.
+
+1. Change the **Description**.
    Example:
 
     ```console
     :no_entry: [DEPRECATED] Please use https://github.com/{account}/{new-repository} instead.
     ```
 
-### Topics
-
-1. On `https://github.com/{account}/{repository}` page, click "Manage topics" link.
+1. Change the **Topics**.
    Type the topics in and use the spacebar between topics.  (i.e. Don't just copy/paste the following)
    Example:
 
@@ -41,15 +41,17 @@
     obsolete deprecated archived
     ```
 
+1. Click "Save changes" button.
+
+### Pull requests
+
+1. On `https://github.com/{account}/{repository}` page, see if there are any "Pull requests" that need to be merged into "main" branch.
+
 ### Branches
 
 1. On `https://github.com/{account}/{repository}` page, see if there are any branches that need to be merged into "main" branch.
 
 1. Delete unwanted branches.
-
-### Pull requests
-
-1. On `https://github.com/{account}/{repository}` page, see if there are any "Pull requests" that need to be merged into "main" branch.
 
 ### Release
 
