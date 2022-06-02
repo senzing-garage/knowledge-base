@@ -47,6 +47,10 @@ On `https://github.com/{account}/{repository}` page, click the "About" gear icon
 
 1. On `https://github.com/{account}/{repository}` page, see if there are any "Pull requests" that need to be merged into "main" branch.
 
+### Issues
+
+1. On `https://github.com/{account}/{repository}` page, see if there are any issues that need to be closed.
+
 ### Branches
 
 1. On `https://github.com/{account}/{repository}` page, see if there are any branches that need to be merged into "main" branch.
@@ -57,10 +61,6 @@ On `https://github.com/{account}/{repository}` page, click the "About" gear icon
 
 1. On `https://github.com/{account}/{repository}` page, click "XX releases" link.
 1. Create a final release version.
-
-### Issues
-
-1. On `https://github.com/{account}/{repository}` page, see if there are any issues that need to be closed.
 
 ### Archive
 
