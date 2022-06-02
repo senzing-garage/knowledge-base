@@ -67,6 +67,7 @@ On `https://github.com/{account}/{repository}` page, click the "About" gear icon
     ```console
     Final release before archiving.
     ```
+1. Click "Publish release" button.
 
 ### Archive
 
