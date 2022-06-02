@@ -72,7 +72,7 @@ On `https://github.com/{account}/{repository}` page, click the "About" gear icon
 ### Archive
 
 1. On `https://github.com/{account}/{repository}` page, click the "Settings" tab.
-1. In "Options" pane, in the "Danger Zone", click "Archive this repository"
+1. In "General" pane, in the "Danger Zone", click "Archive this repository"
 
 ## Examples
 
