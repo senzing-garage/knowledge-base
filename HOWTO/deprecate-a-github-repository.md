@@ -59,8 +59,14 @@ On `https://github.com/{account}/{repository}` page, click the "About" gear icon
 
 ### Release
 
-1. On `https://github.com/{account}/{repository}` page, click "XX releases" link.
-1. Create a final release version.
+1. On `https://github.com/{account}/{repository}` page, click "Releases" link.
+1. Click "Draft a new release" button
+1. Increase the Semantic Version "Patch" value. (i.e. Major.minor.Patch format)
+1. In the description, enter:
+
+    ```console
+    Final release before archiving.
+    ```
 
 ### Archive
 
