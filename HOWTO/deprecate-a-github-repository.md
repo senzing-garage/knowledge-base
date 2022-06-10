@@ -57,6 +57,11 @@ On `https://github.com/{account}/{repository}` page, click the "About" gear icon
 
 1. Delete unwanted branches.
 
+### GitHub Pages
+
+1. On `https://github.com/{account}/{repository}` > Settings > Pages page,
+   set **Source:**  to `None` and click "Save" button.
+
 ### Release
 
 1. On `https://github.com/{account}/{repository}` page, click "Releases" link.
