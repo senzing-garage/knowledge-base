@@ -1,10 +1,11 @@
 
-# From AWS account
+# How to use the SSHD service when a public IP has not been created.
 
+1. From AWS account that has SSHD service deployed
 1. Goto EC2 in management console
 1. Instances new -> launch instances
 1. Select Ubuntu 20.04 LTS (free tier)
-    - Select appropriate subnet
+    - Select appropriate VPC and subnet
     - Enable auto assign public IP
     - Select appropriate security group.
     - Select a key pair to use (or create one)
