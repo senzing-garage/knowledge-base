@@ -1,4 +1,4 @@
-# Filesystem layout in Senzing 3.0.0
+# Filesystem layout proposal 1
 
 ```console
 /
@@ -6,7 +6,6 @@
 │   └── opt
 │       └── senzing
 │           ├── G2Config.gtc
-│           ├── G2Module.ini
 │           ├── cfgVariant.json
 │           ├── customGn.txt
 │           ├── customOn.txt
@@ -29,7 +28,6 @@
 │       │   ├── cnv.ibm
 │       │   ├── conv.ibm
 │       │   ├── ctaq.ibm
-│       │   ├── current -> /etc/alternatives/senzingdata
 │       │   ├── cyrillicOnTransRule.ibm
 │       │   ├── cyrillicTransRule.ibm
 │       │   ├── farsiRegRule.ibm
@@ -608,64 +606,6 @@
 │           │   ├── libpostgresqlplugin.so
 │           │   ├── libscoring.so
 │           │   └── libsqliteplugin.so
-│           ├── python
-│           │   ├── CompressedFile.py
-│           │   ├── DumpStack.py
-│           │   ├── G2Audit.py
-│           │   ├── G2Command.py
-│           │   ├── G2ConfigTables.py
-│           │   ├── G2ConfigTool.py
-│           │   ├── G2ConfigTool.readme
-│           │   ├── G2CreateProject.py
-│           │   ├── G2Database.py
-│           │   ├── G2Explorer.py
-│           │   ├── G2Export.py
-│           │   ├── G2Loader.py
-│           │   ├── G2Paths.py
-│           │   ├── G2Project.py
-│           │   ├── G2S3.py
-│           │   ├── G2SetupConfig.py
-│           │   ├── G2Snapshot.py
-│           │   ├── G2UpdateProject.py
-│           │   ├── SenzingGo.py
-│           │   ├── demo
-│           │   │   ├── sample
-│           │   │   │   ├── project.csv
-│           │   │   │   ├── project.json
-│           │   │   │   ├── sample_company.csv
-│           │   │   │   ├── sample_company.json
-│           │   │   │   ├── sample_person.csv
-│           │   │   │   └── sample_person.json
-│           │   │   └── truth
-│           │   │       ├── customers.csv
-│           │   │       ├── customers.json
-│           │   │       ├── reference.csv
-│           │   │       ├── reference.json
-│           │   │       ├── truthset-config.g2c
-│           │   │       ├── truthset-load1-key.csv
-│           │   │       ├── truthset-load1.sh
-│           │   │       ├── truthset-load2-key.csv
-│           │   │       ├── truthset-load2.sh
-│           │   │       ├── truthset-load3-key.csv
-│           │   │       ├── truthset-load3.sh
-│           │   │       ├── truthset-project1.json
-│           │   │       ├── truthset-project2.json
-│           │   │       ├── truthset-project3.json
-│           │   │       ├── watchlist.csv
-│           │   │       └── watchlist.json
-│           │   ├── governor_postgres_xid.py
-│           │   ├── senzing
-│           │   │   ├── G2Config.py
-│           │   │   ├── G2ConfigMgr.py
-│           │   │   ├── G2Diagnostic.py
-│           │   │   ├── G2Engine.py
-│           │   │   ├── G2EngineFlags.py
-│           │   │   ├── G2Exception.py
-│           │   │   ├── G2Hasher.py
-│           │   │   ├── G2IniParams.py
-│           │   │   ├── G2Product.py
-│           │   │   └── __init__.py
-│           │   └── senzing_governor.py
 │           ├── resources
 │           │   ├── config
 │           │   │   ├── g2core-configuration-upgrade-3-to-3.1.gtc
@@ -745,27 +685,6 @@
 │           │   │   ├── g2core-schema-sqlite-upgrade-1.8-to-1.9.sql
 │           │   │   ├── g2core-schema-sqlite-upgrade-1.9-to-1.10.sql
 │           │   │   └── g2core-schema-sqlite-upgrade-2.0-to-3.0.sql
-│           │   └── templates
-│           │       ├── G2C.db
-│           │       ├── G2C.db.template
-│           │       ├── G2Module.ini
-│           │       ├── G2Module.ini.template
-│           │       ├── cfgVariant.json
-│           │       ├── cfgVariant.json.template
-│           │       ├── customGn.txt
-│           │       ├── customGn.txt.template
-│           │       ├── customOn.txt
-│           │       ├── customOn.txt.template
-│           │       ├── customSn.txt
-│           │       ├── customSn.txt.template
-│           │       ├── defaultGNRCP.config
-│           │       ├── defaultGNRCP.config.template
-│           │       ├── g2config.json
-│           │       ├── g2config.json.template
-│           │       ├── senzing_governor.py
-│           │       ├── setupEnv
-│           │       ├── stb.config
-│           │       └── stb.config.template
 │           └── sdk
 │               ├── c
 │               │   ├── g2PluginInterface.h
@@ -805,19 +724,3 @@
 │                       ├── G2IniParams.py
 │                       ├── G2Product.py
 │                       └── __init__.py
-└── var
-    └── opt
-        └── senzing
-            ├── pgadmin
-            │   └── ...
-            ├── postgres
-            │   └── ...
-            ├── rabbitmq
-            │   └── ...
-            └── sqlite
-                ├── G2C.db
-                ├── G2C.db.template
-                ├── G2C_LIBFEAT.db
-                └── G2C_RES.db
-
-```
