@@ -5,7 +5,6 @@
 ├── etc
 │   └── opt
 │       └── senzing
-│           ├── G2Config.gtc
 │           ├── cfgVariant.json
 │           ├── customGn.txt
 │           ├── customOn.txt
@@ -249,93 +248,22 @@
 │           │   └── libsqliteplugin.so
 │           ├── resources
 │           │   ├── config
-│           │   │   ├── g2core-configuration-upgrade-3-to-3.1.gtc
-│           │   │   ├── g2core-configuration-upgrade-3-to-4.gtc
-│           │   │   ├── g2core-configuration-upgrade-3.1-to-4.1.gtc
-│           │   │   ├── g2core-configuration-upgrade-4-to-4.1.gtc
-│           │   │   ├── g2core-configuration-upgrade-4.1-to-5.gtc
-│           │   │   ├── g2core-configuration-upgrade-5-to-6.gtc
-│           │   │   ├── g2core-configuration-upgrade-6-to-7.gtc
-│           │   │   ├── g2core-configuration-upgrade-7-to-8.gtc
 │           │   │   ├── g2core-configuration-upgrade-8-to-9.gtc
 │           │   │   ├── g2core-configuration-upgrade-9-to-9.1.gtc
 │           │   │   └── g2core-configuration-upgrade-9.1-to-10.gtc
 │           │   ├── schema
 │           │   │   ├── g2core-schema-db2-create.sql
-│           │   │   ├── g2core-schema-db2-upgrade-1.1-to-1.2.sql
-│           │   │   ├── g2core-schema-db2-upgrade-1.10-to-1.11.sql
-│           │   │   ├── g2core-schema-db2-upgrade-1.11-to-1.12.sql
-│           │   │   ├── g2core-schema-db2-upgrade-1.12-to-1.13.sql
-│           │   │   ├── g2core-schema-db2-upgrade-1.13-to-1.14.sql
-│           │   │   ├── g2core-schema-db2-upgrade-1.14-to-1.14.2.sql
-│           │   │   ├── g2core-schema-db2-upgrade-1.14-to-1.15.sql
-│           │   │   ├── g2core-schema-db2-upgrade-1.14.2-to-1.15.sql
-│           │   │   ├── g2core-schema-db2-upgrade-1.15-to-2.0.sql
-│           │   │   ├── g2core-schema-db2-upgrade-1.2-to-1.3.sql
-│           │   │   ├── g2core-schema-db2-upgrade-1.3-to-1.4.sql
-│           │   │   ├── g2core-schema-db2-upgrade-1.8-to-1.9.sql
-│           │   │   ├── g2core-schema-db2-upgrade-1.9-to-1.10.sql
 │           │   │   ├── g2core-schema-db2-upgrade-2.0-to-3.0.sql
 │           │   │   ├── g2core-schema-mssql-create.sql
-│           │   │   ├── g2core-schema-mssql-upgrade-1.13-to-1.14.sql
-│           │   │   ├── g2core-schema-mssql-upgrade-1.14-to-1.14.2.sql
-│           │   │   ├── g2core-schema-mssql-upgrade-1.14-to-1.15.sql
-│           │   │   ├── g2core-schema-mssql-upgrade-1.14.2-to-1.15.sql
-│           │   │   ├── g2core-schema-mssql-upgrade-1.15-to-2.0.sql
 │           │   │   ├── g2core-schema-mssql-upgrade-2.0-to-3.0.sql
 │           │   │   ├── g2core-schema-mysql-create.sql
-│           │   │   ├── g2core-schema-mysql-upgrade-1.1-to-1.2.sql
-│           │   │   ├── g2core-schema-mysql-upgrade-1.10-to-1.11.sql
-│           │   │   ├── g2core-schema-mysql-upgrade-1.11-to-1.12.sql
-│           │   │   ├── g2core-schema-mysql-upgrade-1.12-to-1.13.sql
-│           │   │   ├── g2core-schema-mysql-upgrade-1.13-to-1.14.sql
-│           │   │   ├── g2core-schema-mysql-upgrade-1.14-to-1.14.2.sql
-│           │   │   ├── g2core-schema-mysql-upgrade-1.14-to-1.15.sql
-│           │   │   ├── g2core-schema-mysql-upgrade-1.14.2-to-1.15.sql
-│           │   │   ├── g2core-schema-mysql-upgrade-1.15-to-2.0.sql
-│           │   │   ├── g2core-schema-mysql-upgrade-1.2-to-1.3.sql
-│           │   │   ├── g2core-schema-mysql-upgrade-1.3-to-1.4.sql
-│           │   │   ├── g2core-schema-mysql-upgrade-1.8-to-1.9.sql
-│           │   │   ├── g2core-schema-mysql-upgrade-1.9-to-1.10.sql
 │           │   │   ├── g2core-schema-mysql-upgrade-2.0-to-3.0.sql
 │           │   │   ├── g2core-schema-oracle-create.sql
 │           │   │   ├── g2core-schema-postgresql-create.sql
-│           │   │   ├── g2core-schema-postgresql-upgrade-1.10-to-1.11.sql
-│           │   │   ├── g2core-schema-postgresql-upgrade-1.11-to-1.12.sql
-│           │   │   ├── g2core-schema-postgresql-upgrade-1.12-to-1.13.sql
-│           │   │   ├── g2core-schema-postgresql-upgrade-1.13-to-1.14.sql
-│           │   │   ├── g2core-schema-postgresql-upgrade-1.14-to-1.14.2.sql
-│           │   │   ├── g2core-schema-postgresql-upgrade-1.14-to-1.15.sql
-│           │   │   ├── g2core-schema-postgresql-upgrade-1.14.2-to-1.15.sql
-│           │   │   ├── g2core-schema-postgresql-upgrade-1.15-to-2.0.sql
-│           │   │   ├── g2core-schema-postgresql-upgrade-1.8-to-1.9.sql
-│           │   │   ├── g2core-schema-postgresql-upgrade-1.9-to-1.10.sql
 │           │   │   ├── g2core-schema-postgresql-upgrade-2.0-to-3.0.sql
 │           │   │   ├── g2core-schema-sqlite-create.sql
-│           │   │   ├── g2core-schema-sqlite-upgrade-1.1-to-1.2.sql
-│           │   │   ├── g2core-schema-sqlite-upgrade-1.10-to-1.11.sql
-│           │   │   ├── g2core-schema-sqlite-upgrade-1.11-to-1.12.sql
-│           │   │   ├── g2core-schema-sqlite-upgrade-1.12-to-1.13.sql
-│           │   │   ├── g2core-schema-sqlite-upgrade-1.13-to-1.14.sql
-│           │   │   ├── g2core-schema-sqlite-upgrade-1.14-to-1.14.2.sql
-│           │   │   ├── g2core-schema-sqlite-upgrade-1.14-to-1.15.sql
-│           │   │   ├── g2core-schema-sqlite-upgrade-1.14.2-to-1.15.sql
-│           │   │   ├── g2core-schema-sqlite-upgrade-1.15-to-2.0.sql
-│           │   │   ├── g2core-schema-sqlite-upgrade-1.2-to-1.3.sql
-│           │   │   ├── g2core-schema-sqlite-upgrade-1.3-to-1.4.sql
-│           │   │   ├── g2core-schema-sqlite-upgrade-1.8-to-1.9.sql
-│           │   │   ├── g2core-schema-sqlite-upgrade-1.9-to-1.10.sql
 │           │   │   └── g2core-schema-sqlite-upgrade-2.0-to-3.0.sql
 │           └── sdk
-│               ├── c
-│               │   ├── g2PluginInterface.h
-│               │   ├── libg2.h
-│               │   ├── libg2config.h
-│               │   ├── libg2configmgr.h
-│               │   ├── libg2diagnostic.h
-│               │   ├── libg2hasher.h
-│               │   ├── libg2product.h
-│               │   └── libg2ssadm.h
 │               ├── java
 │               │   └── com
 │               │       └── senzing
