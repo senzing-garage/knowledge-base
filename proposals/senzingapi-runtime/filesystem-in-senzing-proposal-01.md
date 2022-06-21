@@ -92,12 +92,6 @@
 │           ├── LICENSE
 │           ├── NOTICES
 │           ├── README.1ST
-│           ├── bin
-│           │   ├── g2configupgrade
-│           │   ├── g2dbencrypt
-│           │   ├── g2dbupgrade
-│           │   ├── g2saltadm
-│           │   └── g2ssadm
 │           ├── g2BuildVersion.json
 │           ├── lib
 │           │   ├── g2.jar
@@ -248,39 +242,21 @@
 │           │   └── libsqliteplugin.so
 │           ├── resources
 │           │   ├── config
-│           │   │   ├── g2core-configuration-upgrade-8-to-9.gtc
 │           │   │   ├── g2core-configuration-upgrade-9-to-9.1.gtc
 │           │   │   └── g2core-configuration-upgrade-9.1-to-10.gtc
-│           │   ├── schema
-│           │   │   ├── g2core-schema-db2-create.sql
-│           │   │   ├── g2core-schema-db2-upgrade-2.0-to-3.0.sql
-│           │   │   ├── g2core-schema-mssql-create.sql
-│           │   │   ├── g2core-schema-mssql-upgrade-2.0-to-3.0.sql
-│           │   │   ├── g2core-schema-mysql-create.sql
-│           │   │   ├── g2core-schema-mysql-upgrade-2.0-to-3.0.sql
-│           │   │   ├── g2core-schema-oracle-create.sql
-│           │   │   ├── g2core-schema-postgresql-create.sql
-│           │   │   ├── g2core-schema-postgresql-upgrade-2.0-to-3.0.sql
-│           │   │   ├── g2core-schema-sqlite-create.sql
-│           │   │   └── g2core-schema-sqlite-upgrade-2.0-to-3.0.sql
+│           │   └── schema
+│           │       ├── g2core-schema-db2-create.sql
+│           │       ├── g2core-schema-db2-upgrade-2.0-to-3.0.sql
+│           │       ├── g2core-schema-mssql-create.sql
+│           │       ├── g2core-schema-mssql-upgrade-2.0-to-3.0.sql
+│           │       ├── g2core-schema-mysql-create.sql
+│           │       ├── g2core-schema-mysql-upgrade-2.0-to-3.0.sql
+│           │       ├── g2core-schema-oracle-create.sql
+│           │       ├── g2core-schema-postgresql-create.sql
+│           │       ├── g2core-schema-postgresql-upgrade-2.0-to-3.0.sql
+│           │       ├── g2core-schema-sqlite-create.sql
+│           │       └── g2core-schema-sqlite-upgrade-2.0-to-3.0.sql
 │           └── sdk
-│               ├── java
-│               │   └── com
-│               │       └── senzing
-│               │           └── g2
-│               │               └── engine
-│               │                   ├── G2Config.java
-│               │                   ├── G2ConfigJNI.java
-│               │                   ├── G2ConfigMgr.java
-│               │                   ├── G2ConfigMgrJNI.java
-│               │                   ├── G2Diagnostic.java
-│               │                   ├── G2DiagnosticJNI.java
-│               │                   ├── G2Engine.java
-│               │                   ├── G2Fallible.java
-│               │                   ├── G2JNI.java
-│               │                   ├── G2Product.java
-│               │                   ├── G2ProductJNI.java
-│               │                   └── Result.java
 │               └── python
 │                   └── senzing
 │                       ├── G2Config.py
@@ -290,6 +266,5 @@
 │                       ├── G2EngineFlags.py
 │                       ├── G2Exception.py
 │                       ├── G2Hasher.py
-│                       ├── G2IniParams.py
 │                       ├── G2Product.py
 │                       └── __init__.py
