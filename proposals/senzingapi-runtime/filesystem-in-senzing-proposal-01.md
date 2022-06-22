@@ -95,10 +95,8 @@
 │           ├── g2BuildVersion.json
 │           ├── lib
 │           │   ├── g2.jar
-│           │   ├── g2rst.jar
 │           │   ├── libG2.so
 │           │   ├── libG2Hasher.so
-│           │   ├── libG2SSAdm.so
 │           │   ├── libNameDataObject.so
 │           │   ├── libSpaceTimeBoxStandardizer.so
 │           │   ├── libanalytics.so
@@ -241,21 +239,13 @@
 │           │   ├── libscoring.so
 │           │   └── libsqliteplugin.so
 │           ├── resources
-│           │   ├── config
-│           │   │   ├── g2core-configuration-upgrade-9-to-9.1.gtc
-│           │   │   └── g2core-configuration-upgrade-9.1-to-10.gtc
 │           │   ├── schema
 │           │   │   ├── g2core-schema-db2-create.sql
-│           │   │   ├── g2core-schema-db2-upgrade-2.0-to-3.0.sql
 │           │   │   ├── g2core-schema-mssql-create.sql
-│           │   │   ├── g2core-schema-mssql-upgrade-2.0-to-3.0.sql
 │           │   │   ├── g2core-schema-mysql-create.sql
-│           │   │   ├── g2core-schema-mysql-upgrade-2.0-to-3.0.sql
 │           │   │   ├── g2core-schema-oracle-create.sql
 │           │   │   ├── g2core-schema-postgresql-create.sql
-│           │   │   ├── g2core-schema-postgresql-upgrade-2.0-to-3.0.sql
-│           │   │   ├── g2core-schema-sqlite-create.sql
-│           │   │   └── g2core-schema-sqlite-upgrade-2.0-to-3.0.sql
+│           │   │   └── g2core-schema-sqlite-create.sql
 │           └── sdk
 │               └── python
 │                   └── senzing
