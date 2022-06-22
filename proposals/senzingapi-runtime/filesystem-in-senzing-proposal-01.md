@@ -239,6 +239,8 @@
 │           │   ├── libscoring.so
 │           │   └── libsqliteplugin.so
 │           ├── resources
+│           │   └── templates
+│           │       ├── g2config.json
 │           └── sdk
 │               └── python
 │                   └── senzing
