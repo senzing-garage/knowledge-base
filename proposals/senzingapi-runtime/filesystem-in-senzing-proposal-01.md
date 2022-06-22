@@ -242,6 +242,8 @@
 │           │   └── templates
 │           │       ├── g2config.json
 │           └── sdk
+│               ├── java
+│               │   └── README.txt
 │               └── python
 │                   └── senzing
 │                       ├── G2Config.py
