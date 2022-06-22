@@ -239,13 +239,6 @@
 │           │   ├── libscoring.so
 │           │   └── libsqliteplugin.so
 │           ├── resources
-│           │   ├── schema
-│           │   │   ├── g2core-schema-db2-create.sql
-│           │   │   ├── g2core-schema-mssql-create.sql
-│           │   │   ├── g2core-schema-mysql-create.sql
-│           │   │   ├── g2core-schema-oracle-create.sql
-│           │   │   ├── g2core-schema-postgresql-create.sql
-│           │   │   └── g2core-schema-sqlite-create.sql
 │           └── sdk
 │               └── python
 │                   └── senzing
