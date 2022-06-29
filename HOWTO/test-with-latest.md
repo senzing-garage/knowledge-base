@@ -61,7 +61,7 @@
     export RABBITMQ_DIR=${SENZING_VAR_DIR}/rabbitmq
     sudo mkdir -p ${PGADMIN_DIR} ${POSTGRES_DIR} ${RABBITMQ_DIR}
     sudo chown $(id -u):$(id -g) -R ${SENZING_VOLUME}
-    sudo chmod -R 770 ${SENZING_VOLUME}
+    sudo chmod -R 777 ${SENZING_VOLUME}
     sudo chmod -R 777 ${PGADMIN_DIR} ${POSTGRES_DIR} ${RABBITMQ_DIR}
     curl -X GET \
         --output ${SENZING_VOLUME}/docker-versions-latest.sh \
