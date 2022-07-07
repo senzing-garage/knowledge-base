@@ -860,6 +860,15 @@
    [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/main/lists/docker-versions-latest.sh)
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_ENTITY_SEARCH_WEB_APP&type=code)
 
+### SENZING_DOCKER_IMAGE_VERSION_ENTITY_SEARCH_WEB_APP_CONSOLE
+
+1. Synopsis:
+    1. The desired version of
+       [senzing/entity-search-web-app-console](https://hub.docker.com/r/senzing/entity-search-web-app).
+1. To see latest version, visit
+   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/main/lists/docker-versions-latest.sh)
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_ENTITY_SEARCH_WEB_APP_CONSOLE&type=code)
+
 ### SENZING_DOCKER_IMAGE_VERSION_INIT_CONTAINER
 
 1. Synopsis:

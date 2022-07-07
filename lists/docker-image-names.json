@@ -92,6 +92,9 @@
     "senzing/entity-search-web-app": {
         "environment_variable": "SENZING_DOCKER_IMAGE_VERSION_ENTITY_SEARCH_WEB_APP"
     },
+    "senzing/entity-search-web-app-console": {
+        "environment_variable": "SENZING_DOCKER_IMAGE_VERSION_ENTITY_SEARCH_WEB_APP_CONSOLE"
+    },
     "senzing/g2command": {
         "environment_variable": "SENZING_DOCKER_IMAGE_VERSION_G2COMMAND"
     },
