@@ -34,7 +34,7 @@ Periodically the following files need to be updated:
 
 ### Compare insert-senzing-configuration.sql
 
-1. Using pgAdmin
+1. Using pgAdmin from the docker-compose stack:
     1. Servers > senzing > Databases > G2 > Schemas > public > Tables > sys_cfg
     1. Right-click > Backup...
     1. General
