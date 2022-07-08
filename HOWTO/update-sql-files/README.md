@@ -27,7 +27,7 @@ Periodically the following files need to be updated:
     source /tmp/senzing-versions-latest.sh
     export SENZING_VOLUME=~/senzing-${SENZING_VERSION_SENZINGAPI}
 
-    export SOURCE_FILE=~/${SENZING_VOLUME}/g2/resources/schema/g2core-schema-postgresql-create.sql
+    export SOURCE_FILE=${SENZING_VOLUME}/g2/resources/schema/g2core-schema-postgresql-create.sql
     export TARGET_FILE=~/senzing.git/postgresql-client/rootfs/opt/senzing/g2/resources/schema/g2core-schema-postgresql-create.sql
     diff ${SOURCE_FILE} ${TARGET_FILE}
     ```
@@ -51,7 +51,7 @@ Periodically the following files need to be updated:
    Example:
 
     ```console
-    export SOURCE_FILE=~/${SENZING_VOLUME}/var/pgadmin/postgres_postgres.com/sys_cfg.sql
+    export SOURCE_FILE=${SENZING_VOLUME}/var/pgadmin/postgres_postgres.com/sys_cfg.sql
     export TARGET_FILE=~/senzing.git/postgresql-client/rootfs/app/insert-senzing-configuration.sql
     diff ${SOURCE_FILE} ${TARGET_FILE}
     ```
