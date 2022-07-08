@@ -1,12 +1,11 @@
 # How to update sql files
 
-# Synopsis
+## Synopsis
 
 Periodically the following files need to be updated:
 
 1. [g2core-schema-postgresql-create.sql](https://github.com/Senzing/postgresql-client/blob/main/rootfs/opt/senzing/g2/resources/schema/g2core-schema-postgresql-create.sql)
 1. [insert-senzing-configuration.sql](https://github.com/Senzing/postgresql-client/blob/main/rootfs/app/insert-senzing-configuration.sql)
-
 
 ## Procedure
 
@@ -57,7 +56,7 @@ Periodically the following files need to be updated:
     diff ${SOURCE_FILE} ${TARGET_FILE}
     ```
 
-1.  A better strategy is to compare the JSON by "beautifying" it via
+1. A better strategy is to compare the JSON by "beautifying" it via
     [jsonlint.com](https://jsonlint.com/) or `jq`.
     Then compare the "before" and "after" using a file comparison tool.
 
