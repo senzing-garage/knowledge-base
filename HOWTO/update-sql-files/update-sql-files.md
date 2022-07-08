@@ -35,10 +35,10 @@ Periodically the following files need to be updated:
 ### Compare insert-senzing-configuration.sql
 
 1. Using pgAdmin from the docker-compose stack:
-    1. Servers > senzing > Databases > G2 > Schemas > public > Tables > sys_cfg
+    1. Select: Servers > senzing > Databases > G2 > Schemas > public > Tables > sys_cfg
     1. Right-click > Backup...
     1. General
-        1. Filename: sys_cfg.txt
+        1. Filename: sys_cfg.sql
         1. Format: Plain
     1. Data/Objects
         1. Only data: On
@@ -46,8 +46,9 @@ Periodically the following files need to be updated:
     1. Options
         1. Use Column Inserts: On
         1. Use Insert Commands: On
+    1. Click "Backup" button
 
-1. XXX
+1. Using `diff`.   Not really effective, though.
    Example:
 
     ```console
@@ -55,3 +56,9 @@ Periodically the following files need to be updated:
     export TARGET_FILE=~/senzing.git/postgresql-client/rootfs/app/insert-senzing-configuration.sql
     diff ${SOURCE_FILE} ${TARGET_FILE}
     ```
+
+1.  A better strategy is to compare the JSON by "beautifying" it via
+    [jsonlint.com](https://jsonlint.com/) or `jq`.
+    Then compare the "before" and "after" using a file comparison tool.
+
+1. If there is a difference in `sys_cfg.config_data`, then the `sys_vars` will also have to be checked.
