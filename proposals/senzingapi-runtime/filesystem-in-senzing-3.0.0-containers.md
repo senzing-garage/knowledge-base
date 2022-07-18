@@ -5,7 +5,7 @@
 ├── etc
 │   └── opt
 │       └── senzing
-│           ├── G2Config.gtc
+│           ├── G2Config.gtc DELETE THIS??
 │           ├── G2Module.ini
 │           ├── cfgVariant.json
 │           ├── customGn.txt
@@ -29,7 +29,7 @@
 │       │   ├── cnv.ibm
 │       │   ├── conv.ibm
 │       │   ├── ctaq.ibm
-│       │   ├── current -> /etc/alternatives/senzingdata
+│       │   ├── current -> /etc/alternatives/senzingdata DELETE THIS???
 │       │   ├── cyrillicOnTransRule.ibm
 │       │   ├── cyrillicTransRule.ibm
 │       │   ├── farsiRegRule.ibm
@@ -95,7 +95,7 @@
 │           ├── LICENSE
 │           ├── NOTICES
 │           ├── README.1ST
-│           ├── bin
+│           ├── bin DELETE THIS dir???
 │           │   ├── g2configupgrade
 │           │   ├── g2dbencrypt
 │           │   ├── g2dbupgrade
@@ -104,8 +104,8 @@
 │           ├── g2BuildVersion.json
 │           ├── lib
 │           │   ├── g2.jar
-│           │   ├── g2rst.jar
-│           │   ├── jdk-11.0.10+9-jre
+│           │   ├── g2rst.jar WHAT IS THIS???
+│           │   ├── jdk-11.0.10+9-jre DO WE NEED THE JRE? @jae?
 │           │   │   ├── bin
 │           │   │   │   ├── jaotc
 │           │   │   │   ├── java
@@ -608,7 +608,7 @@
 │           │   ├── libpostgresqlplugin.so
 │           │   ├── libscoring.so
 │           │   └── libsqliteplugin.so
-│           ├── python
+│           ├── python DELETE THIS???
 │           │   ├── CompressedFile.py
 │           │   ├── DumpStack.py
 │           │   ├── G2Audit.py
@@ -654,7 +654,7 @@
 │           │   │       ├── watchlist.csv
 │           │   │       └── watchlist.json
 │           │   ├── governor_postgres_xid.py
-│           │   ├── senzing
+│           │   ├── senzing USE THE sdk/python tree
 │           │   │   ├── G2Config.py
 │           │   │   ├── G2ConfigMgr.py
 │           │   │   ├── G2Diagnostic.py
@@ -745,7 +745,7 @@
 │           │   │   ├── g2core-schema-sqlite-upgrade-1.8-to-1.9.sql
 │           │   │   ├── g2core-schema-sqlite-upgrade-1.9-to-1.10.sql
 │           │   │   └── g2core-schema-sqlite-upgrade-2.0-to-3.0.sql
-│           │   └── templates
+│           │   └── templates DELETE THIS??
 │           │       ├── G2C.db
 │           │       ├── G2C.db.template
 │           │       ├── G2Module.ini
