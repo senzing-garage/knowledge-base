@@ -25,7 +25,7 @@
         sudo docker build \
           --build-arg SENZING_ACCEPT_EULA=${SENZING_ACCEPT_EULA} \
           --build-arg SENZING_APT_INSTALL_PACKAGE=senzingapi=${SENZING_VERSION_SENZINGAPI_BUILD} \
-          --build-arg SENZING_APT_REPOSITORY=https://senzing-staging-apt.s3.amazonaws.com/senzingstagingrepo_1.0.0-1_amd64.deb \
+          --build-arg SENZING_APT_REPOSITORY_URL=https://senzing-staging-apt.s3.amazonaws.com/senzingstagingrepo_1.0.0-1_amd64.deb \
           --build-arg SENZING_DATA_VERSION=${SENZING_VERSION_SENZINGDATA} \
           --no-cache \
           --tag senzing/installer-staging:${SENZING_VERSION_SENZINGAPI_BUILD} \
