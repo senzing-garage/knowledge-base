@@ -133,7 +133,7 @@
         --no-cache \
         --tag senzing/senzing-console \
         --tag senzing/senzing-console:staging \
-        https://github.com/senzing/senzing-console.git#main
+        https://github.com/senzing/docker-senzing-console.git#main
     ```
 
 1. Push to DockerHub.
@@ -273,7 +273,7 @@
         --no-cache \
         --tag senzing/senzing-console \
         --tag senzing/senzing-console:staging \
-        https://github.com/senzing/senzing-console.git#main
+        https://github.com/senzing/docker-senzing-console.git#main
 
     docker push senzing/senzing-console:staging
 
