@@ -99,6 +99,27 @@
 
 ### senzing/senzing-api-server
 
+1. Build `senzing/senzing-api-server:staging`.
+   Example:
+
+    ```console
+    docker pull senzing/senzingapi-runtime:staging
+
+    docker build \
+        --build-arg BASE_IMAGE=senzing/senzingapi-runtime:staging \
+        --no-cache \
+        --tag senzing/senzing-api-server \
+        --tag senzing/senzing-api-server:staging \
+        https://github.com/senzing/senzing-api-server.git#main
+    ```
+
+1. Push to DockerHub.
+   Example:
+
+    ```console
+    docker push senzing/senzing-api-server:staging
+    ```
+
 ### senzing/senzing-console
 
 ### senzing/sshd
