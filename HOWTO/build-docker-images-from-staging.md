@@ -120,6 +120,29 @@
     docker push senzing/senzing-api-server:staging
     ```
 
+### senzing/senzing-poc-server
+
+1. Build `senzing/senzing-poc-server:staging`.
+   Example:
+
+    ```console
+    docker pull senzing/senzingapi-runtime:staging
+
+    docker build \
+        --build-arg BASE_IMAGE=senzing/senzingapi-runtime:staging \
+        --no-cache \
+        --tag senzing/senzing-poc-server \
+        --tag senzing/senzing-poc-server:staging \
+        https://github.com/senzing/senzing-poc-server.git#main
+    ```
+
+1. Push to DockerHub.
+   Example:
+
+    ```console
+    docker push senzing/senzing-poc-server:staging
+    ```
+
 ### senzing/senzing-console
 
 1. Build `senzing/senzing-console:staging`.
@@ -267,6 +290,15 @@
         https://github.com/senzing/senzing-api-server.git#main
 
     docker push senzing/senzing-api-server:staging
+
+    docker build \
+        --build-arg BASE_IMAGE=senzing/senzingapi-runtime:staging \
+        --no-cache \
+        --tag senzing/senzing-poc-server \
+        --tag senzing/senzing-poc-server:staging \
+        https://github.com/senzing/senzing-poc-server.git#main
+
+    docker push senzing/senzing-poc-server:staging
 
     docker build \
         --build-arg BASE_IMAGE=senzing/senzingapi-tools:staging \
