@@ -76,6 +76,27 @@
 
 ### senzing/redoer
 
+1. Build `senzing/redoer:staging`.
+   Example:
+
+    ```console
+    docker pull senzing/senzingapi-runtime:staging
+
+    docker build \
+        --build-arg BASE_IMAGE=senzing/senzingapi-runtime:staging \
+        --no-cache \
+        --tag senzing/redoer \
+        --tag senzing/redoer:staging \
+        https://github.com/senzing/redoer.git#main
+    ```
+
+1. Push to DockerHub.
+   Example:
+
+    ```console
+    docker push senzing/redoer:staging
+    ```
+
 ### senzing/senzing-api-server
 
 ### senzing/senzing-console
