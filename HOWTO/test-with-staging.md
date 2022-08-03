@@ -29,6 +29,15 @@
     sudo --preserve-env docker-compose up
     ```
 
+1. Bring docker-compose stack down.
+
+    ```console
+    cd ${SENZING_VOLUME}
+    sudo --preserve-env docker-compose down
+    ```
+
+1. To clean up everything, simply delete the ${SENZING_VOLUME} directory.
+
 ## :no_entry: Deprecated
 
 ### Old TL;DR
