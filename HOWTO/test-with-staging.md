@@ -11,9 +11,9 @@
     export POSTGRES_DIR=${SENZING_VAR_DIR}/postgres
     export RABBITMQ_DIR=${SENZING_VAR_DIR}/rabbitmq
     rm -rf ${SENZING_VOLUME:-/tmp/nowhere}
-    sudo mkdir -p ${PGADMIN_DIR} ${POSTGRES_DIR} ${RABBITMQ_DIR}
-    sudo chmod -R 770 ${SENZING_VOLUME}
-    sudo chmod -R 777 ${PGADMIN_DIR} ${POSTGRES_DIR} ${RABBITMQ_DIR}
+    mkdir -p ${PGADMIN_DIR} ${POSTGRES_DIR} ${RABBITMQ_DIR}
+    chmod -R 770 ${SENZING_VOLUME}
+    chmod -R 777 ${PGADMIN_DIR} ${POSTGRES_DIR} ${RABBITMQ_DIR}
     curl -X GET \
         --output ${SENZING_VOLUME}/docker-compose.yaml \
         https://raw.githubusercontent.com/Senzing/docker-compose-demo/issue-283.dockter.2/resources/postgresql/docker-compose-rabbitmq-postgresql.yaml
