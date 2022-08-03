@@ -6,20 +6,17 @@
 
     ```console
     export SENZING_VOLUME=~/senzing-staging
-    rm -rf ${SENZING_VOLUME:-/tmp/nowhere}
-    mkdir -p ${SENZING_VOLUME}
-    export SENZING_DOCKER_COMPOSE_YAML=https://raw.githubusercontent.com/Senzing/docker-compose-demo/issue-283.dockter.2/resources/postgresql/docker-compose-rabbitmq-postgresql.yaml
-    curl -X GET \
-        --output ${SENZING_VOLUME}/docker-compose.yaml \
-        "${SENZING_DOCKER_COMPOSE_YAML}"
     export SENZING_VAR_DIR=${SENZING_VOLUME}/var
     export PGADMIN_DIR=${SENZING_VAR_DIR}/pgadmin
     export POSTGRES_DIR=${SENZING_VAR_DIR}/postgres
     export RABBITMQ_DIR=${SENZING_VAR_DIR}/rabbitmq
+    rm -rf ${SENZING_VOLUME:-/tmp/nowhere}
     sudo mkdir -p ${PGADMIN_DIR} ${POSTGRES_DIR} ${RABBITMQ_DIR}
-    sudo chown $(id -u):$(id -g) -R ${SENZING_VOLUME}
     sudo chmod -R 770 ${SENZING_VOLUME}
     sudo chmod -R 777 ${PGADMIN_DIR} ${POSTGRES_DIR} ${RABBITMQ_DIR}
+    curl -X GET \
+        --output ${SENZING_VOLUME}/docker-compose.yaml \
+        https://raw.githubusercontent.com/Senzing/docker-compose-demo/issue-283.dockter.2/resources/postgresql/docker-compose-rabbitmq-postgresql.yaml
     curl -X GET \
         --output ${SENZING_VOLUME}/docker-versions-staging.sh \
         https://raw.githubusercontent.com/Senzing/knowledge-base/main/lists/docker-versions-staging.sh
