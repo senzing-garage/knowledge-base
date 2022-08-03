@@ -323,7 +323,7 @@
         --no-cache \
         --tag senzing/entity-search-web-app-console \
         --tag senzing/entity-search-web-app-console:staging \
-        https://github.com/senzing/entity-search-web-app-console.git#issue-64.ron.0
+        https://github.com/senzing/entity-search-web-app-console.git#main
 
     docker push senzing/entity-search-web-app-console:staging
 
