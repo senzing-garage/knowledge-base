@@ -29,7 +29,9 @@
     sudo --preserve-env docker-compose up
     ```
 
-## Old TL;DR
+## :no_entry: Deprecated
+
+### Old TL;DR
 
 1. Perform once per new version on staging:
 
@@ -108,7 +110,7 @@
     sudo --preserve-env docker-compose down
     ```
 
-## Old Docker senzing stack
+### Old Docker senzing stack
 
 These instructions create a Senzing stack with
 stream-producer,
