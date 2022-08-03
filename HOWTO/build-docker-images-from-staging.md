@@ -305,7 +305,7 @@
         --no-cache \
         --tag senzing/senzing-console \
         --tag senzing/senzing-console:staging \
-        https://github.com/senzing/docker-senzing-console.git#main
+        https://github.com/senzing/docker-senzing-console.git#issue-64.ron.0
 
     docker push senzing/senzing-console:staging
 
