@@ -156,7 +156,7 @@
         --no-cache \
         --tag senzing/senzing-console \
         --tag senzing/senzing-console:staging \
-        https://github.com/senzing/docker-senzing-console.git#main
+        https://github.com/senzing/docker-senzing-console.git#issue-64.ron.0
     ```
 
 1. Push to DockerHub.
@@ -179,7 +179,7 @@
         --no-cache \
         --tag senzing/sshd \
         --tag senzing/sshd:staging \
-        https://github.com/senzing/docker-sshd.git#main
+        https://github.com/senzing/docker-sshd.git#issue-76.ron.0
     ```
 
 1. Push to DockerHub.
@@ -314,7 +314,7 @@
         --no-cache \
         --tag senzing/sshd \
         --tag senzing/sshd:staging \
-        https://github.com/senzing/docker-sshd.git#main
+        https://github.com/senzing/docker-sshd.git#issue-76.ron.0
 
     docker push senzing/sshd:staging
 
@@ -323,7 +323,7 @@
         --no-cache \
         --tag senzing/entity-search-web-app-console \
         --tag senzing/entity-search-web-app-console:staging \
-        https://github.com/senzing/entity-search-web-app-console.git#main
+        https://github.com/senzing/entity-search-web-app-console.git#issue-64.ron.0
 
     docker push senzing/entity-search-web-app-console:staging
 
