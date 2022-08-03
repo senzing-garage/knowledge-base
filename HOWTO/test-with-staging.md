@@ -16,7 +16,7 @@
     export PGADMIN_DIR=${SENZING_VAR_DIR}/pgadmin
     export POSTGRES_DIR=${SENZING_VAR_DIR}/postgres
     export RABBITMQ_DIR=${SENZING_VAR_DIR}/rabbitmq
-    sudo mkdir -p ${SENZING_VAR_DIR} ${PGADMIN_DIR} ${POSTGRES_DIR} ${RABBITMQ_DIR}
+    sudo mkdir -p ${PGADMIN_DIR} ${POSTGRES_DIR} ${RABBITMQ_DIR}
     sudo chown $(id -u):$(id -g) -R ${SENZING_VOLUME}
     sudo chmod -R 770 ${SENZING_VOLUME}
     sudo chmod -R 777 ${PGADMIN_DIR} ${POSTGRES_DIR} ${RABBITMQ_DIR}
