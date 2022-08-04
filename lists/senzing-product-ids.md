@@ -36,6 +36,7 @@ Used in log message identifiers in the format `senzing-ppppnnnnt`, where:
 1. **5027** - [G2Engine](https://github.com/Senzing/g2engine)
 1. **5028** - [docker-compose-air-gapper](https://github.com/Senzing/docker-compose-air-gapper)
 1. **5029** - [ready-for-senzing](https://github.com/Senzing/ready-for-senzing)
+1. **5030** - [init-postgresql](https://github.com/Senzing/init-postgresql)
 
 ## Docker apps
 

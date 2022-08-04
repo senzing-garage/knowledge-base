@@ -29,7 +29,7 @@ This is a checklist of what to set when creating a new GitHub Repository.
     1. Click "Publish release" button.
 1. On repository home page, click "Settings" tab.
     1. Click "Branches" tab.
-        1. Click "Add rule" button.
+        1. Click "Add branch protection" button.
         1. Branch name pattern:  "main"
         1. Protect matching branches
             1. :ballot_box_with_check: Require pull request reviews before merging
