@@ -60,7 +60,7 @@ On `https://github.com/{account}/{repository}` page, click the "About" gear icon
 ### GitHub Pages
 
 1. On `https://github.com/{account}/{repository}` > Settings > Pages page,
-   set **Source:**  to `None` and click "Save" button.
+   set **Branch:**  to `None` and click "Save" button.
 
 ### Release
 
