@@ -253,13 +253,11 @@
     docker build \
         --build-arg BASE_IMAGE=senzing/senzingapi-runtime:staging \
         --build-arg SENZING_APT_INSTALL_PACKAGE=senzingapi-tools \
-        --build-arg SENZING_APT_REPOSITORY_NAME=senzingstagingrepo_1.0.1-1_amd64.deb \
-        --build-arg SENZING_APT_REPOSITORY_URL=https://senzing-staging-apt.s3.amazonaws.com \
         --no-cache \
         --tag senzing/senzingapi-tools \
         --tag senzing/senzingapi-tools:staging \
-        https://github.com/senzing/senzingapi-tools.git#main
-
+        https://github.com/senzing/senzingapi-tools.git#issue-5.ron.1
+        
     docker push senzing/senzingapi-tools:staging
 
     docker build \
