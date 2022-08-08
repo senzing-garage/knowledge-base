@@ -223,7 +223,7 @@
         --no-cache \
         --tag senzing/xterm \
         --tag senzing/xterm:staging \
-        https://github.com/senzing/docker-xterm.git#main
+        https://github.com/senzing/docker-xterm.git#issue-83.ron.0
     ```
 
 1. Push to DockerHub.
@@ -328,7 +328,7 @@
         --no-cache \
         --tag senzing/xterm \
         --tag senzing/xterm:staging \
-        https://github.com/senzing/docker-xterm.git#main
+        https://github.com/senzing/docker-xterm.git#issue-83.ron.0
 
     docker push senzing/xterm:staging
     ```
