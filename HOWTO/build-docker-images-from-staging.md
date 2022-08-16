@@ -233,6 +233,29 @@
     docker push senzing/xterm:staging
     ```
 
+### senzing/g2configtool
+
+1. Build `senzing/g2configtool:staging`.
+   Example:
+
+    ```console
+    docker pull senzing/senzingapi-tools:staging
+
+    docker build \
+        --build-arg BASE_IMAGE=senzing/senzingapi-tools:staging \
+        --no-cache \
+        --tag senzing/g2configtool \
+        --tag senzing/g2configtool:staging \
+        https://github.com/senzing/docker-xterm.git#main
+    ```
+
+1. Push to DockerHub.
+   Example:
+
+    ```console
+    docker push senzing/g2configtool:staging
+    ```
+
 ## Build jobs
 
 1. Build all.
@@ -257,7 +280,7 @@
         --tag senzing/senzingapi-tools \
         --tag senzing/senzingapi-tools:staging \
         https://github.com/senzing/senzingapi-tools.git#issue-5.ron.1
-        
+
     docker push senzing/senzingapi-tools:staging
 
     docker build \
@@ -331,4 +354,13 @@
         https://github.com/senzing/docker-xterm.git#issue-83.ron.0
 
     docker push senzing/xterm:staging
+
+    docker build \
+        --build-arg BASE_IMAGE=senzing/senzingapi-tools:staging \
+        --no-cache \
+        --tag senzing/g2configtool \
+        --tag senzing/g2configtool:staging \
+        https://github.com/senzing/docker-xterm.git#main
+
+    docker push senzing/g2configtool:staging
     ```
