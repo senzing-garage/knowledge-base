@@ -246,7 +246,7 @@
         --no-cache \
         --tag senzing/g2configtool \
         --tag senzing/g2configtool:staging \
-        https://github.com/senzing/docker-xterm.git#main
+        https://github.com/senzing/g2configtool.git#main
     ```
 
 1. Push to DockerHub.
@@ -360,7 +360,7 @@
         --no-cache \
         --tag senzing/g2configtool \
         --tag senzing/g2configtool:staging \
-        https://github.com/senzing/docker-xterm.git#main
+        https://github.com/senzing/g2configtool.git#main
 
     docker push senzing/g2configtool:staging
     ```
