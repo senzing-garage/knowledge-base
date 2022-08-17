@@ -73,6 +73,10 @@ Open range: 8250-8265
 
 - [Senzing docker-python-demo](https://github.com/Senzing/docker-python-demo)
 
+### 8257
+
+- [entity-search-web-app-console](https://github.com/Senzing/entity-search-web-app-console)
+
 ### 8260
 
 - Reserved for tools
