@@ -251,7 +251,7 @@
 
 ### senzing/init-postgresql
 
-1. Build `senzing/init-postgresqql:staging`.
+1. Build `senzing/init-postgresql:staging`.
    Example:
 
     ```console
@@ -379,4 +379,13 @@
         https://github.com/senzing/g2configtool.git#main
 
     docker push senzing/g2configtool:staging
+
+    docker build \
+        --build-arg BASE_IMAGE=senzing/senzingapi-runtime:staging \
+        --no-cache \
+        --tag senzing/init-postgresql \
+        --tag senzing/init-postgresql:staging \
+        https://github.com/senzing/init-postgresql.git#main
+
+    docker push senzing/init-postgresql:staging
     ```
