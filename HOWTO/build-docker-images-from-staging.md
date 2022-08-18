@@ -249,11 +249,27 @@
         https://github.com/senzing/g2configtool.git#main
     ```
 
+### senzing/init-postgresql
+
+1. Build `senzing/init-postgresqql:staging`.
+   Example:
+
+    ```console
+    docker pull senzing/senzingapi-runtime:staging
+
+    docker build \
+        --build-arg BASE_IMAGE=senzing/senzingapi-runtime:staging \
+        --no-cache \
+        --tag senzing/init-postgresql \
+        --tag senzing/init-postgresql:staging \
+        https://github.com/senzing/init-postgresql.git#main
+    ```
+
 1. Push to DockerHub.
    Example:
 
     ```console
-    docker push senzing/g2configtool:staging
+    docker push senzing/init-postgresql:staging
     ```
 
 ## Build jobs
