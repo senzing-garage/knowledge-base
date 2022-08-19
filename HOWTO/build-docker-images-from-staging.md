@@ -200,7 +200,7 @@
         --no-cache \
         --tag senzing/entity-search-web-app-console \
         --tag senzing/entity-search-web-app-console:staging \
-        https://github.com/senzing/entity-search-web-app-console.git#main
+        https://github.com/senzing/entity-search-web-app-console.git#issue20.awinters.1
     ```
 
 1. Push to DockerHub.
@@ -358,7 +358,7 @@
         --no-cache \
         --tag senzing/entity-search-web-app-console \
         --tag senzing/entity-search-web-app-console:staging \
-        https://github.com/senzing/entity-search-web-app-console.git#main
+        https://github.com/senzing/entity-search-web-app-console.git#issue20.awinters.1
 
     docker push senzing/entity-search-web-app-console:staging
 
