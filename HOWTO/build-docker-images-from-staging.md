@@ -35,7 +35,7 @@
 
     docker build \
       --build-arg BASE_IMAGE=senzing/senzingapi-runtime:staging \
-      --build-arg SENZING_APT_INSTALL_PACKAGE=senzingapi-tools \
+      --build-arg SENZING_APT_INSTALL_TOOLS_PACKAGE=senzingapi-tools \
       --no-cache \
       --tag senzing/senzingapi-tools \
       --tag senzing/senzingapi-tools:staging \
@@ -291,7 +291,7 @@
 
     docker build \
         --build-arg BASE_IMAGE=senzing/senzingapi-runtime:staging \
-        --build-arg SENZING_APT_INSTALL_PACKAGE=senzingapi-tools \
+        --build-arg SENZING_APT_INSTALL_TOOLS_PACKAGE=senzingapi-tools \
         --no-cache \
         --tag senzing/senzingapi-tools \
         --tag senzing/senzingapi-tools:staging \
