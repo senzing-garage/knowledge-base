@@ -272,6 +272,29 @@
     docker push senzing/init-postgresql:staging
     ```
 
+### senzing/web-app-demo
+
+1. Build `senzing/web-app-demo:staging`.
+   Example:
+
+    ```console
+    docker pull senzing/senzingapi-runtime:staging
+
+    docker build \
+        --build-arg BASE_IMAGE=senzing/senzingapi-runtime:staging \
+        --no-cache \
+        --tag senzing/web-app-demo \
+        --tag senzing/web-app-demo:staging \
+        https://github.com/senzing/docker-web-app-demo.git#main
+    ```
+
+1. Push to DockerHub.
+   Example:
+
+    ```console
+    docker push senzing/web-app-demo:staging
+    ```
+
 ## Build jobs
 
 1. Build all.
@@ -388,4 +411,13 @@
         https://github.com/senzing/init-postgresql.git#main
 
     docker push senzing/init-postgresql:staging
+
+    docker build \
+        --build-arg BASE_IMAGE=senzing/senzingapi-runtime:staging \
+        --no-cache \
+        --tag senzing/web-app-demo \
+        --tag senzing/web-app-demo:staging \
+        https://github.com/senzing/docker-web-app-demo.git#main
+
+    docker push senzing/web-app-demo:staging
     ```
