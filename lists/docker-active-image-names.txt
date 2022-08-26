@@ -27,8 +27,6 @@ senzing/phppgadmin
 senzing/postgresql-client
 senzing/python-demo
 senzing/redoer
-senzing/redoer-with-data
-senzing/redoer-with-data-staging
 senzing/resolver
 senzing/risk-scoring-calculator
 senzing/self-signed-certificate
@@ -45,8 +43,6 @@ senzing/senzingapi-tools
 senzing/sshd
 senzing/store-based-image
 senzing/stream-loader
-senzing/stream-loader-with-data
-senzing/stream-loader-with-data-staging
 senzing/stream-logger
 senzing/stream-producer
 senzing/terraform-aws
