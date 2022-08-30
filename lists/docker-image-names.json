@@ -89,6 +89,12 @@
     "senzing/db2-driver-installer": {
         "environment_variable": "SENZING_DOCKER_IMAGE_VERSION_DB2_DRIVER_INSTALLER"
     },
+    "senzing/docker-compose-air-gapper": {
+        "environment_variable": "SENZING_DOCKER_IMAGE_VERSION_DOCKER_COMPOSE_AIR_GAPPER"
+    },
+    "senzing/dockerhub-util": {
+        "environment_variable": "SENZING_DOCKER_IMAGE_VERSION_DOCKERHUB_UTIL"
+    },
     "senzing/entity-search-web-app": {
         "environment_variable": "SENZING_DOCKER_IMAGE_VERSION_ENTITY_SEARCH_WEB_APP"
     },
@@ -110,6 +116,9 @@
     "senzing/init-container": {
         "environment_variable": "SENZING_DOCKER_IMAGE_VERSION_INIT_CONTAINER"
     },
+    "senzing/init-postgresql": {
+        "environment_variable": "SENZING_DOCKER_IMAGE_VERSION_INIT_POSTGRESQL"
+    },
     "senzing/jupyter": {
         "environment_variable": "SENZING_DOCKER_IMAGE_VERSION_JUPYTER"
     },
@@ -124,9 +133,6 @@
     },
     "senzing/redoer": {
         "environment_variable": "SENZING_DOCKER_IMAGE_VERSION_REDOER"
-    },
-    "senzing/redoer-with-data": {
-        "environment_variable": "SENZING_DOCKER_IMAGE_VERSION_REDOER_WITH_DATA"
     },
     "senzing/resolver": {
         "environment_variable": "SENZING_DOCKER_IMAGE_VERSION_RESOLVER"
@@ -143,23 +149,23 @@
     "senzing/senzing-console": {
         "environment_variable": "SENZING_DOCKER_IMAGE_VERSION_SENZING_CONSOLE"
     },
-    "senzing/senzing-debug": {
-        "environment_variable": "SENZING_DOCKER_IMAGE_VERSION_SENZING_DEBUG"
-    },
     "senzing/senzing-listener": {
         "environment_variable": "SENZING_DOCKER_IMAGE_VERSION_SENZING_LISTENER"
     },
     "senzing/senzing-poc-server": {
         "environment_variable": "SENZING_DOCKER_IMAGE_VERSION_SENZING_POC_SERVER"
     },
+    "senzing/senzingapi-runtime": {
+        "environment_variable": "SENZING_DOCKER_IMAGE_VERSION_SENZINGAPI_RUNTIME"
+    },
+    "senzing/senzingapi-tools": {
+        "environment_variable": "SENZING_DOCKER_IMAGE_VERSION_SENZINGAPI_TOOLS"
+    },
     "senzing/sshd": {
         "environment_variable": "SENZING_DOCKER_IMAGE_VERSION_SSHD"
     },
     "senzing/stream-loader": {
         "environment_variable": "SENZING_DOCKER_IMAGE_VERSION_STREAM_LOADER"
-    },
-    "senzing/stream-loader-with-data": {
-        "environment_variable": "SENZING_DOCKER_IMAGE_VERSION_STREAM_LOADER_WITH_DATA"
     },
     "senzing/stream-logger": {
         "environment_variable": "SENZING_DOCKER_IMAGE_VERSION_STREAM_LOGGER"
