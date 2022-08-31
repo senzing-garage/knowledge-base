@@ -35,6 +35,7 @@ This is a checklist of what to set when creating a new GitHub Repository.
             1. :ballot_box_with_check: Require pull request reviews before merging
                 1. :ballot_box_with_check: Require approvals
                 1. :ballot_box_with_check: Require review from Code Owners
+                1. :ballot_box_with_check: Do not allow bypassing the above settings
         1. Click "Create" button
     1. Click "Collaborators & teams" tab.
         1. Click "Add teams" button.
@@ -94,3 +95,13 @@ This is a checklist of what to set when creating a new GitHub Repository.
     1. Delete `.github/workflows` files that do not apply.
     1. Commit the branch.
     1. Merge `issue-1.[your-name].1` branch into main branch.
+
+
+## Final touches
+
+1. On repository home page, click "Settings" tab.
+    1. Click "Branches" tab.
+        1. Click "Add branch protection" button.
+        1. Edit "main" branch.
+        1. Protect matching branches
+            1. :ballot_box_with_check: Do not allow bypassing the above settings
