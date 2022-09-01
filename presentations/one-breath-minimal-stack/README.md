@@ -28,7 +28,7 @@
 
     ```console
     sudo yum update
-    sudo yum install -y docker python3-pip
+    sudo yum --assumeyes install docker python3-pip
     sudo usermod -a -G docker ec2-user
     id ec2-user
     newgrp docker
