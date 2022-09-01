@@ -7,7 +7,7 @@
 1. *Instance type:*
     1. t2.large
 1. *Configure storage:*
-    1. 20GIB of gp2
+    1. 30GIB of gp2
 1. *Network settings:*
     1. [x] Allow SSH traffic from Anywhere
     1. [x] Allow HTTP traffic from internet
@@ -27,7 +27,7 @@
    Example:
 
     ```console
-    sudo yum update
+    sudo yum --assumeyes update
     sudo yum --assumeyes install docker python3-pip
     sudo usermod -a -G docker ec2-user
     id ec2-user
@@ -69,7 +69,7 @@
 
 
     ```console
-    iptables -A INPUT -i eth0 -p tcp --dport 80 -j ACCEPT
-    iptables -A INPUT -i eth0 -p tcp --dport 8080 -j ACCEPT
-    iptables -A PREROUTING -t nat -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 8080
+    sudo iptables -A INPUT -i eth0 -p tcp --dport 80 -j ACCEPT
+    sudo iptables -A INPUT -i eth0 -p tcp --dport 8251 -j ACCEPT
+    sudo iptables -A PREROUTING -t nat -i eth0 -p tcp --dport 8251 -j REDIRECT --to-port 80
     ```
