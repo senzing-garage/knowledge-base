@@ -65,10 +65,3 @@
     cd ${SENZING_VOLUME}
     docker-compose up
     ```
-
-
-    ```console
-    sudo iptables -A INPUT -i eth0 -p tcp --dport 80 -j ACCEPT
-    sudo iptables -A INPUT -i eth0 -p tcp --dport 8251 -j ACCEPT
-    sudo iptables -A PREROUTING -t nat -i eth0 -p tcp --dport 8251 -j REDIRECT --to-port 80
-    ```
