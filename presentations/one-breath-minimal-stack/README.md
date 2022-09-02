@@ -58,6 +58,8 @@
 
     ```
 
+## Run
+
 1. Run Senzing docker-compose stack
 
     ```console
