@@ -95,7 +95,6 @@ Bring up a [Senzing stack](https://github.com/Senzing/docker-compose-demo#overvi
 
 1. Open web browser to AWS's assigned IP address.
 
-
 ## Caveats
 
 1. This demonstration does not address security concerns.
