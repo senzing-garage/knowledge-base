@@ -17,7 +17,7 @@
 
 ## Log into EC2 instance
 
-1. SSH.
+1. SSH into AWS EC2 instance.
    Example:
 
     ```console
