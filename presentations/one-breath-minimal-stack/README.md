@@ -44,7 +44,7 @@
 
 ## Download
 
-1. Pull
+1. Download
    [docker-compose.yaml](https://github.com/Senzing/knowledge-base/blob/main/presentations/one-breath-minimal-stack/docker-compose.yaml)
    file.
    Example:
