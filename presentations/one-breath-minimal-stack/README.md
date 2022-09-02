@@ -27,7 +27,7 @@
 ## Prerequisites
 
 1. Condensed version of
-   [How to install Docker on Amazon Linux 2](https://www.cyberciti.biz/faq/how-to-install-docker-on-amazon-linux-2/)
+   [How to install Docker on Amazon Linux 2](https://www.cyberciti.biz/faq/how-to-install-docker-on-amazon-linux-2/).
    Example:
 
     ```console
