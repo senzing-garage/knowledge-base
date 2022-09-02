@@ -3,6 +3,7 @@
 ## Non-Senzing
 
 A few preparatory steps are needed before working with Senzing.
+The steps create an AWS EC2 instance, install `docker` and `docker-compose`.
 
 ### AWS EC2
 
