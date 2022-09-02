@@ -44,7 +44,10 @@
 
 ## Download
 
-1. Example:
+1. Pull
+   [docker-compose.yaml](https://github.com/Senzing/knowledge-base/blob/main/presentations/one-breath-minimal-stack/docker-compose.yaml)
+   file.
+   Example:
 
     ```console
     wget "https://raw.githubusercontent.com/Senzing/knowledge-base/main/presentations/one-breath-minimal-stack/docker-compose.yaml"
