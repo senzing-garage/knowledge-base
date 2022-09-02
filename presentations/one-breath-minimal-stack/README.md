@@ -54,7 +54,8 @@
 
     ```
 
-1. Download Docker images
+1. Download Docker images.
+   Example:
 
     ```console
     docker-compose pull
@@ -63,7 +64,8 @@
 
 ## Run
 
-1. Run Senzing docker-compose stack
+1. Run Senzing docker-compose stack.
+   Example:
 
     ```console
     docker-compose up
