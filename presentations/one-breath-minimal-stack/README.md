@@ -32,7 +32,8 @@ but the network speeds may not be as fast for downloading.
 
 ### Prerequisites
 
-Install non-Senzing pre-requisite software.
+Install non-Senzing pre-requisite software,
+`docker` and `docker-compose`.
 *Note:* The instructions would be different for other operating systems.
 
 1. Condensed version of
