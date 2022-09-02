@@ -71,3 +71,7 @@
     docker-compose up
 
     ```
+
+## Use
+
+1. Open web browser to AWS's assigned IP address.
