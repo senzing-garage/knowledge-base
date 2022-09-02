@@ -1,4 +1,4 @@
-# One Breath:   Minimal docker-compose stack
+# One Breath: Minimal docker-compose stack
 
 ## AWS EC2
 
@@ -20,7 +20,7 @@
    Example:
 
     ```console
-    ssh -i "~/.ssh/aws-mjd-sso.pem" ec2-user@ec2-34-201-252-185.compute-1.amazonaws.com
+    ssh -i "~/.ssh/aws-mjd-sso.pem" ec2-user@ec2-nn-nnn-nnn-nnn.compute-1.amazonaws.com
     ```
 
 ## Prerequisites
