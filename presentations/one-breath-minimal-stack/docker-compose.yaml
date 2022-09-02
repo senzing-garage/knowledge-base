@@ -239,6 +239,8 @@ services:
     image: senzing/entity-search-web-app-console:${SENZING_DOCKER_IMAGE_VERSION_ENTITY_SEARCH_WEB_APP_CONSOLE:-latest}
     networks:
       - senzing
+    ports:
+      - 8257:8257
     restart: always
 
 networks:
