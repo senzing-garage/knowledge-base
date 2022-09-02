@@ -5,7 +5,7 @@
 1. **Application and OS Images (Amazon Machine Image):**
     1. Amazon Linux
 1. **Instance type:**
-    1. t2.large
+    1. t2.xlarge
 1. **Network settings:**
     1. (*) Create security group
         1. [x] Allow SSH traffic from Anywhere
