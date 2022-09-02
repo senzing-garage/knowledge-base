@@ -6,19 +6,22 @@
     1. Amazon Linux
 1. **Instance type:**
     1. t2.large
+1. **Network settings:**
+    1. (*) Create security group
+        1. [x] Allow SSH traffic from Anywhere
+        1. [x] Allow HTTP traffic from internet
 1. **Configure storage:**
     1. 20GIB of gp2
-1. **Network settings:**
-    1. [x] Allow SSH traffic from Anywhere
-    1. [x] Allow HTTP traffic from internet
+1. Click "Launch instance"
 
-1. XX
+## Log into EC2 instance
+
+1. SSH.
+   Example:
 
     ```console
     ssh -i "~/.ssh/aws-mjd-sso.pem" ec2-user@ec2-34-201-252-185.compute-1.amazonaws.com
     ```
-
-1, *NOTE:* Open ports
 
 ## Prerequisites
 
@@ -37,8 +40,9 @@
     sudo pip3 install docker-compose
     ```
 
-1. XXX
-   Example:
+## Bring up Senzing
+
+1. Example:
 
     ```console
     export SENZING_VOLUME=~/my-senzing
