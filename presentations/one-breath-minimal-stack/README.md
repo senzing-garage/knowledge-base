@@ -5,14 +5,14 @@
 1. **Application and OS Images (Amazon Machine Image):**
     1. Amazon Linux
 1. **Instance type:**
-    1. t2.xlarge
+    1. t2.2xlarge
 1. **Network settings:**
     1. (*) Create security group
         1. [x] Allow SSH traffic from Anywhere
         1. [ ] Allow HTTPS traffic from internet
         1. [x] Allow HTTP traffic from internet
 1. **Configure storage:**
-    1. 30GIB of gp2
+    1. 40GIB of gp2
 1. Click "Launch instance"
 
 ## Log into EC2 instance
