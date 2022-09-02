@@ -33,10 +33,13 @@ services:
       SENZING_RECORD_MAX: ${SENZING_RECORD_MAX:-5000}
       SENZING_RECORD_MONITOR: 1000
       SENZING_SUBCOMMAND: json-to-rabbitmq
+      SENZING_DEBUG: "true"
+      SENZING_MONITORING_PERIOD_IN_SECONDS: 60
+      SENZING_LOG_LEVEL: debug
     image: senzing/stream-producer:${SENZING_DOCKER_IMAGE_VERSION_STREAM_PRODUCER:-latest}
     networks:
       - senzing
-    read_only: true
+#   read_only: true
     restart: on-failure
 
   postgres:
