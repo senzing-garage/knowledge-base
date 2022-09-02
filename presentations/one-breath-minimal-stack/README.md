@@ -9,7 +9,6 @@
 1. **Network settings:**
     1. (*) Create security group
         1. [x] Allow SSH traffic from Anywhere
-        1. [x] Allow HTTPS traffic from internet
         1. [x] Allow HTTP traffic from internet
 1. **Configure storage:**
     1. 20GIB of gp2
