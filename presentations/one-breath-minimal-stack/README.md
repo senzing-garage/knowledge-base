@@ -7,7 +7,7 @@ Deploy a clean AWS EC2 instance to be used in demonstrating the Senzing docker-c
 The demonstration can be run on a local machine,
 but the network speeds may not be as fast for downloading.
 
-1. On [AWS EC2 console](https://us-east-2.console.aws.amazon.com/ec2/home):
+1. In [AWS EC2 console](https://us-east-2.console.aws.amazon.com/ec2/home):
     1. **Application and OS Images (Amazon Machine Image):**  Amazon Linux
     1. **Instance type:** t2.2xlarge
     1. **Network settings:**
