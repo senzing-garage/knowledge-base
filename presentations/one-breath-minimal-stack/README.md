@@ -7,19 +7,15 @@ Deploy a clean AWS EC2 instance to be used in demonstrating the Senzing docker-c
 The demonstration can be run on a local machine,
 but the network speeds may not be as fast for downloading.
 
-1. **Application and OS Images (Amazon Machine Image):**
-    1. Amazon Linux
-1. **Instance type:**
-    1. t2.2xlarge
+1. **Application and OS Images (Amazon Machine Image):**  Amazon Linux
+1. **Instance type:** t2.2xlarge
 1. **Network settings:**
     1. (*) Create security group
         1. [x] Allow SSH traffic from Anywhere
         1. [ ] Allow HTTPS traffic from internet
         1. [x] Allow HTTP traffic from internet
-1. **Configure storage:**
-    1. 40GIB of gp2
+1. **Configure storage:** 40GIB of gp2
 1. Click "Launch instance"
-
 1. :pencil2: SSH into AWS EC2 instance.
    Example:
 
