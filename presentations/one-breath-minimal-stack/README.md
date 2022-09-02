@@ -69,7 +69,7 @@ Download artifacts.
 
     ```
 
-1. Download Docker images.
+1. :thinking: **Optional:** An optional step to download Docker images quicker.
    Example:
 
     ```console
