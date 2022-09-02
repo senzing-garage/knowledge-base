@@ -10,13 +10,14 @@ but the network speeds may not be as fast for downloading.
 1. In [AWS EC2 console](https://us-east-2.console.aws.amazon.com/ec2/home):
     1. **Application and OS Images (Amazon Machine Image):**  Amazon Linux
     1. **Instance type:** t2.2xlarge
+    1. **Key pair (login):** Choose or create a Key Pair
     1. **Network settings:**
         1. :radio_button: Create security group
             1. [x] Allow SSH traffic from Anywhere
             1. [ ] Allow HTTPS traffic from internet
             1. [x] Allow HTTP traffic from internet
     1. **Configure storage:** 40GIB of gp2
-    1. Click "Launch instance"
+    1. Click "Launch instance" button
 1. :pencil2: SSH into AWS EC2 instance.
    Example:
 
