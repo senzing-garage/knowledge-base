@@ -2,6 +2,8 @@
 
 ## Non-Senzing
 
+A few preparatory steps are needed before working with Senzing.
+
 ### AWS EC2
 
 Deploy a clean AWS EC2 instance to be used in demonstrating the Senzing docker-compose stack.
@@ -49,6 +51,9 @@ Install non-Senzing pre-requisite software.
     ```
 
 ## Senzing
+
+After the preparatory steps are complete,
+Senzing can be downloaded and run.
 
 ### Download
 
