@@ -39,8 +39,11 @@ services:
     image: senzing/stream-producer:${SENZING_DOCKER_IMAGE_VERSION_STREAM_PRODUCER:-latest}
     networks:
       - senzing
-#   read_only: true
+    read_only: true
     restart: on-failure
+    user: 1000:1000
+    volumes:
+      - .:/var/opt/senzing
 
   postgres:
     container_name: senzing-postgres
