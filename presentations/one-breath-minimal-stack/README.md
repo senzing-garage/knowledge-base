@@ -20,7 +20,7 @@
    Example:
 
     ```console
-    ssh -i "~/.ssh/aws-mjd-sso.pem" ec2-user@ec2-nn-nnn-nnn-nnn.compute-1.amazonaws.com
+    ssh -i "/path/to/your.pem" ec2-user@ec2-nn-nnn-nnn-nnn.compute-1.amazonaws.com
     ```
 
 ## Prerequisites
@@ -38,6 +38,31 @@
     sudo systemctl enable docker.service
     sudo systemctl start docker.service
     sudo pip3 install docker-compose
+
+    ```
+
+## Download
+
+1. Example:
+
+    ```console
+    wget "https://raw.githubusercontent.com/Senzing/knowledge-base/main/presentations/one-breath-minimal-stack/docker-compose.yaml"
+
+    ```
+
+1. Docker images
+
+    ```console
+    docker-compose pull
+
+    ```
+
+
+1. Run stack
+
+    ```console
+    docker-compose up
+
     ```
 
 ## Bring up Senzing
