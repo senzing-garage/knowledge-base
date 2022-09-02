@@ -94,6 +94,10 @@ Bring up a [Senzing stack](https://github.com/Senzing/docker-compose-demo#overvi
 ### Use
 
 1. Open web browser to AWS's assigned IP address.
+   Use the `http://` protocol, not the `https://` protocol.
+   Example:
+
+   > http://1.2.3.4
 
 ## Caveats
 
