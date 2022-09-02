@@ -2,6 +2,8 @@
 
 ## AWS EC2
 
+Deploy a clean AWS EC2 instance to be used in demonstrating the Senzing docker-compose stack.
+
 1. **Application and OS Images (Amazon Machine Image):**
     1. Amazon Linux
 1. **Instance type:**
@@ -17,7 +19,7 @@
 
 ## Log into EC2 instance
 
-1. SSH into AWS EC2 instance.
+1. :pencil2: SSH into AWS EC2 instance.
    Example:
 
     ```console
@@ -25,6 +27,8 @@
     ```
 
 ## Prerequisites
+
+Install non-Senzing pre-requisite software.
 
 1. Condensed version of
    [How to install Docker on Amazon Linux 2](https://www.cyberciti.biz/faq/how-to-install-docker-on-amazon-linux-2/).
@@ -43,6 +47,8 @@
     ```
 
 ## Download
+
+Download artifacts.
 
 1. Download
    [docker-compose.yaml](https://github.com/Senzing/knowledge-base/blob/main/presentations/one-breath-minimal-stack/docker-compose.yaml)
@@ -63,6 +69,8 @@
     ```
 
 ## Run
+
+Bring up a [Senzing stack](https://github.com/Senzing/docker-compose-demo#overview).
 
 1. Run Senzing docker-compose stack.
    Example:
