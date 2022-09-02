@@ -3,6 +3,9 @@
 ## AWS EC2
 
 Deploy a clean AWS EC2 instance to be used in demonstrating the Senzing docker-compose stack.
+*Note:* An AWS EC2 instance is not needed.
+The demonstration can be run on a local machine,
+but the network speeds may not be as fast for downloading.
 
 1. **Application and OS Images (Amazon Machine Image):**
     1. Amazon Linux
@@ -17,8 +20,6 @@ Deploy a clean AWS EC2 instance to be used in demonstrating the Senzing docker-c
     1. 40GIB of gp2
 1. Click "Launch instance"
 
-## Log into EC2 instance
-
 1. :pencil2: SSH into AWS EC2 instance.
    Example:
 
@@ -29,6 +30,7 @@ Deploy a clean AWS EC2 instance to be used in demonstrating the Senzing docker-c
 ## Prerequisites
 
 Install non-Senzing pre-requisite software.
+*Note:* The instructions would be different for other operating systems.
 
 1. Condensed version of
    [How to install Docker on Amazon Linux 2](https://www.cyberciti.biz/faq/how-to-install-docker-on-amazon-linux-2/).
