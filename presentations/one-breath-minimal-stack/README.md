@@ -64,33 +64,3 @@
     docker-compose up
 
     ```
-
-## Bring up Senzing
-
-1. Example:
-
-    ```console
-    export SENZING_VOLUME=~/my-senzing
-    export PGADMIN_DIR=${SENZING_VOLUME}/pgadmin
-    export POSTGRES_DIR=${SENZING_VOLUME}/postgres
-    export RABBITMQ_DIR=${SENZING_VOLUME}/rabbitmq
-    export SENZING_VAR_DIR=${SENZING_VOLUME}/var
-    export SENZING_UID=$(id -u)
-    export SENZING_GID=$(id -g)
-    mkdir -p ${PGADMIN_DIR} ${POSTGRES_DIR} ${RABBITMQ_DIR} ${SENZING_VAR_DIR}
-    chmod -R 777 ${SENZING_VOLUME}
-
-    curl -X GET \
-        --output ${SENZING_VOLUME}/docker-versions-stable.sh \
-        https://raw.githubusercontent.com/Senzing/knowledge-base/main/lists/docker-versions-stable.sh
-    source ${SENZING_VOLUME}/docker-versions-stable.sh
-
-    curl -X GET \
-        --output ${SENZING_VOLUME}/docker-compose.yaml \
-        "https://raw.githubusercontent.com/Senzing/knowledge-base/main/presentations/one-breath-minimal-stack/docker-compose.yaml"
-    cd ${SENZING_VOLUME}
-    docker-compose pull
-
-    cd ${SENZING_VOLUME}
-    docker-compose up
-    ```
