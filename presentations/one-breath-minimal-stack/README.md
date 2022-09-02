@@ -11,7 +11,7 @@ but the network speeds may not be as fast for downloading.
     1. **Application and OS Images (Amazon Machine Image):**  Amazon Linux
     1. **Instance type:** t2.2xlarge
     1. **Network settings:**
-        1. (*) Create security group
+        1. :radio_button: Create security group
             1. [x] Allow SSH traffic from Anywhere
             1. [ ] Allow HTTPS traffic from internet
             1. [x] Allow HTTP traffic from internet
