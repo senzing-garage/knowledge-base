@@ -1,6 +1,8 @@
 # One Breath: Minimal docker-compose stack
 
-## AWS EC2
+## Non-Senzing
+
+### AWS EC2
 
 Deploy a clean AWS EC2 instance to be used in demonstrating the Senzing docker-compose stack.
 *Note:* An AWS EC2 instance is not needed.
@@ -25,7 +27,7 @@ but the network speeds may not be as fast for downloading.
     ssh -i "/path/to/your.pem" ec2-user@ec2-nn-nnn-nnn-nnn.compute-1.amazonaws.com
     ```
 
-## Prerequisites
+### Prerequisites
 
 Install non-Senzing pre-requisite software.
 *Note:* The instructions would be different for other operating systems.
@@ -46,7 +48,9 @@ Install non-Senzing pre-requisite software.
 
     ```
 
-## Download
+## Senzing
+
+### Download
 
 Download artifacts.
 
@@ -68,7 +72,7 @@ Download artifacts.
 
     ```
 
-## Run
+### Run
 
 Bring up a [Senzing stack](https://github.com/Senzing/docker-compose-demo#overview).
 
