@@ -91,6 +91,6 @@ Bring up a [Senzing stack](https://github.com/Senzing/docker-compose-demo#overvi
 
     ```
 
-## Use
+### Use
 
 1. Open web browser to AWS's assigned IP address.
