@@ -1,6 +1,6 @@
 # One Breath: Minimal docker-compose stack
 
-## Non-Senzing steps
+## Prepare an instance of AWS EC2 with Docker
 
 A few preparatory steps are needed before working with Senzing.
 The steps create an AWS EC2 instance, install `docker` and `docker-compose`.
