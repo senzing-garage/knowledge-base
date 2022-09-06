@@ -318,7 +318,7 @@
         --no-cache \
         --tag senzing/senzingapi-tools \
         --tag senzing/senzingapi-tools:staging \
-        https://github.com/senzing/senzingapi-tools.git#issue-5.ron.1
+        https://github.com/senzing/senzingapi-tools.git#main
 
     docker push senzing/senzingapi-tools:staging
 
@@ -363,7 +363,7 @@
         --no-cache \
         --tag senzing/senzing-console \
         --tag senzing/senzing-console:staging \
-        https://github.com/senzing/docker-senzing-console.git#issue-64.ron.0
+        https://github.com/senzing/docker-senzing-console.git#main
 
     docker push senzing/senzing-console:staging
 
@@ -372,7 +372,7 @@
         --no-cache \
         --tag senzing/sshd \
         --tag senzing/sshd:staging \
-        https://github.com/senzing/docker-sshd.git#issue-76.ron.0
+        https://github.com/senzing/docker-sshd.git#main
 
     docker push senzing/sshd:staging
 
@@ -381,7 +381,7 @@
         --no-cache \
         --tag senzing/entity-search-web-app-console \
         --tag senzing/entity-search-web-app-console:staging \
-        https://github.com/senzing/entity-search-web-app-console.git#issue20.awinters.1
+        https://github.com/senzing/entity-search-web-app-console.git#main
 
     docker push senzing/entity-search-web-app-console:staging
 
@@ -390,7 +390,7 @@
         --no-cache \
         --tag senzing/xterm \
         --tag senzing/xterm:staging \
-        https://github.com/senzing/docker-xterm.git#issue-83.ron.0
+        https://github.com/senzing/docker-xterm.git#main
 
     docker push senzing/xterm:staging
 
