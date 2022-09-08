@@ -39,6 +39,7 @@ Used in log message identifiers in the format `senzing-ppppnnnnt`, where:
 1. **5030** - [init-postgresql](https://github.com/Senzing/init-postgresql)
 1. **5031** - [init-mysql](https://github.com/Senzing/init-mysql)
 1. **5032** - [keystore-generator](https://github.com/Senzing/keystore-generator)
+1. **5032** - [init-mssql](https://github.com/Senzing/init-mssql)
 
 ## Docker apps
 
