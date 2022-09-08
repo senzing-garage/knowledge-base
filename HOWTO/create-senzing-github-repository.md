@@ -35,7 +35,6 @@ This is a checklist of what to set when creating a new GitHub Repository.
             1. :ballot_box_with_check: Require pull request reviews before merging
                 1. :ballot_box_with_check: Require approvals
                 1. :ballot_box_with_check: Require review from Code Owners
-                1. :ballot_box_with_check: Do not allow bypassing the above settings
         1. Click "Create" button
     1. Click "Collaborators & teams" tab.
         1. Click "Add teams" button.
@@ -92,14 +91,11 @@ This is a checklist of what to set when creating a new GitHub Repository.
        [github.com/Senzing/template-repository](https://github.com/Senzing/template-repository).
     1. Modify `CONTRIBUTING.md`
         1. `export GIT_REPOSITORY=<new-repository-name>`
-    1. Modify `README.md`
-        1. Use contents from `.github/README_TEMPLATE/demonstration/README.md`
-    1. Delete `.github/README_TEMPLATE` directory.
-    1. Delete `.github/workflows/examples` directory.
+    1. Modify `.github/CODEOWNERS`
+    1. Modify `.github/dependabot.yml`
     1. Delete `.github/workflows` files that do not apply.
     1. Commit the branch.
     1. Merge `issue-1.[your-name].1` branch into main branch.
-
 
 ## Final touches
 
