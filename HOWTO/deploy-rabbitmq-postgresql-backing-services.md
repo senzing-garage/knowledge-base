@@ -7,6 +7,7 @@
 
     ```console
     export SENZING_VOLUME=~/my-senzing
+
     ```
 
 1. Create directories.
@@ -20,6 +21,7 @@
     export SENZING_GID=$(id -g)
     mkdir -p ${PGADMIN_DIR} ${POSTGRES_DIR} ${RABBITMQ_DIR}
     chmod -R 777 ${SENZING_VOLUME}
+
     ```
 
 1. Download artifacts.
@@ -29,6 +31,7 @@
     curl -X GET \
       --output ${SENZING_VOLUME}/docker-compose-rabbitmq-postgresql-backing-services-only.yaml \
       https://raw.githubusercontent.com/Senzing/docker-compose-demo/main/resources/postgresql/docker-compose-rabbitmq-postgresql-backing-services-only.yaml
+
     ```
 
 1. :thinking: **Optional:**
@@ -40,6 +43,7 @@
         --output ${SENZING_VOLUME}/docker-versions-stable.sh \
         https://raw.githubusercontent.com/Senzing/knowledge-base/main/lists/docker-versions-stable.sh
     source ${SENZING_VOLUME}/docker-versions-stable.sh
+
     ```
 
 1. Bring up a Docker Compose stack with backing services.
@@ -49,4 +53,5 @@
     docker-compose \
       -f ${SENZING_VOLUME}/docker-compose-rabbitmq-postgresql-backing-services-only.yaml \
       up
+
     ```
