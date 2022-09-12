@@ -27,7 +27,7 @@
 
     ```console
     curl -X GET \
-      --output ${SENZING_VOLUME}/docker-compose-backing-services-only.yaml \
+      --output ${SENZING_VOLUME}/docker-compose-rabbitmq-postgresql-backing-services-only.yaml \
       https://raw.githubusercontent.com/Senzing/docker-compose-demo/main/resources/postgresql/docker-compose-rabbitmq-postgresql-backing-services-only.yaml
     ```
 
@@ -46,5 +46,7 @@
    Example:
 
     ```console
-    docker-compose -f ${SENZING_VOLUME}/docker-compose-backing-services-only.yaml up
+    docker-compose \
+      -f ${SENZING_VOLUME}/docker-compose-rabbitmq-postgresql-backing-services-only.yaml \
+      up
     ```
