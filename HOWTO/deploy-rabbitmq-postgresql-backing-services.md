@@ -1,4 +1,4 @@
-## How to deploy RabbitMQ and PostgreSQL backing services
+# How to deploy RabbitMQ and PostgreSQL backing services
 
 ## Using docker-compose
 
@@ -29,6 +29,17 @@
     curl -X GET \
       --output ${SENZING_VOLUME}/docker-compose-backing-services-only.yaml \
       https://raw.githubusercontent.com/Senzing/docker-compose-demo/main/resources/postgresql/docker-compose-rabbitmq-postgresql-backing-services-only.yaml
+    ```
+
+1. :thinking: **Optional:**
+   Specify versions of Docker images.
+   Example:
+
+    ```console
+    curl -X GET \
+        --output ${SENZING_VOLUME}/docker-versions-stable.sh \
+        https://raw.githubusercontent.com/Senzing/knowledge-base/main/lists/docker-versions-stable.sh
+    source ${SENZING_VOLUME}/docker-versions-stable.sh
     ```
 
 1. Bring up a Docker Compose stack with backing services.
