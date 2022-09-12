@@ -46,6 +46,5 @@
    Example:
 
     ```console
-    docker-compose -f ${SENZING_VOLUME}/docker-compose-backing-services-only.yaml pull
     docker-compose -f ${SENZING_VOLUME}/docker-compose-backing-services-only.yaml up
     ```
