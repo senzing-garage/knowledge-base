@@ -49,7 +49,6 @@ Install non-Senzing pre-requisite software,
     sudo systemctl enable docker.service
     sudo systemctl start docker.service
     sudo pip3 install docker-compose
-    sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 
     ```
 
