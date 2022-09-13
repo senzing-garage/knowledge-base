@@ -28,6 +28,59 @@ services:
     network_mode: "host"
     restart: always
 
+  pocserver:
+    container_name: senzing-poc-server
+    depends_on:
+      - postgres
+    environment:
+      SENZING_API_SERVER_ALLOWED_ORIGINS: '*'
+      SENZING_API_SERVER_BIND_ADDR: 'all'
+      SENZING_API_SERVER_ENABLE_ADMIN: 'true'
+      SENZING_API_SERVER_PORT: '8250'
+      SENZING_API_SERVER_SKIP_ENGINE_PRIMING: 'true'
+      SENZING_API_SERVER_SKIP_STARTUP_PERF: 'true'
+      SENZING_ENGINE_CONFIGURATION_JSON: >-
+        {
+          "PIPELINE": {
+            "CONFIGPATH": "/etc/opt/senzing",
+            "RESOURCEPATH": "/opt/senzing/g2/resources",
+            "SUPPORTPATH": "/opt/senzing/data"
+          },
+          "SQL": {
+            "BACKEND": "SQL",
+            "CONNECTION": "postgresql://postgres:postgres@localhost:5432:G2/"
+          }
+        }
+      SENZING_RABBITMQ_LOAD_EXCHANGE: senzing-rabbitmq-exchange
+      SENZING_RABBITMQ_LOAD_HOST: localhost
+      SENZING_RABBITMQ_LOAD_PASSWORD: bitnami
+      SENZING_RABBITMQ_LOAD_PORT: 5672
+      SENZING_RABBITMQ_LOAD_ROUTING_KEY: senzing.records
+      SENZING_RABBITMQ_LOAD_USERNAME: user
+      SENZING_RABBITMQ_LOAD_VIRTUAL_HOST: "/"
+    image: public.ecr.aws/senzing/senzing-poc-server:3.2.2
+    network_mode: "host"
+    read_only: true
+    restart: always
+    tmpfs:
+      - /tmp
+
+  webapp:
+    container_name: senzing-webapp
+    depends_on:
+      - pocserver
+    environment:
+#     See https://github.com/Senzing/entity-search-web-app#configuration
+      SENZING_API_SERVER_URL: http://localhost:8250
+      SENZING_WEB_SERVER_ADMIN_AUTH_MODE: NONE
+      SENZING_WEB_SERVER_ADMIN_AUTH_PATH: http://localhost:80
+      SENZING_WEB_SERVER_INTERNAL_URL: http://localhost:80
+      SENZING_WEB_SERVER_PORT: 80
+    image: public.ecr.aws/senzing/entity-search-web-app:2.7.1
+    network_mode: "host"
+    read_only: true
+    restart: always
+
   init-postgresql:
     container_name: senzing-init-postgresql
     depends_on:
@@ -147,58 +200,6 @@ services:
     read_only: true
     restart: always
 
-  pocserver:
-    container_name: senzing-poc-server
-    depends_on:
-      - postgres
-    environment:
-      SENZING_API_SERVER_ALLOWED_ORIGINS: '*'
-      SENZING_API_SERVER_BIND_ADDR: 'all'
-      SENZING_API_SERVER_ENABLE_ADMIN: 'true'
-      SENZING_API_SERVER_PORT: '8250'
-      SENZING_API_SERVER_SKIP_ENGINE_PRIMING: 'true'
-      SENZING_API_SERVER_SKIP_STARTUP_PERF: 'true'
-      SENZING_ENGINE_CONFIGURATION_JSON: >-
-        {
-          "PIPELINE": {
-            "CONFIGPATH": "/etc/opt/senzing",
-            "RESOURCEPATH": "/opt/senzing/g2/resources",
-            "SUPPORTPATH": "/opt/senzing/data"
-          },
-          "SQL": {
-            "BACKEND": "SQL",
-            "CONNECTION": "postgresql://postgres:postgres@localhost:5432:G2/"
-          }
-        }
-      SENZING_RABBITMQ_LOAD_EXCHANGE: senzing-rabbitmq-exchange
-      SENZING_RABBITMQ_LOAD_HOST: localhost
-      SENZING_RABBITMQ_LOAD_PASSWORD: bitnami
-      SENZING_RABBITMQ_LOAD_PORT: 5672
-      SENZING_RABBITMQ_LOAD_ROUTING_KEY: senzing.records
-      SENZING_RABBITMQ_LOAD_USERNAME: user
-      SENZING_RABBITMQ_LOAD_VIRTUAL_HOST: "/"
-    image: public.ecr.aws/senzing/senzing-poc-server:3.2.2
-    network_mode: "host"
-    read_only: true
-    restart: always
-    tmpfs:
-      - /tmp
-
-  webapp:
-    container_name: senzing-webapp
-    depends_on:
-      - pocserver
-    environment:
-#     See https://github.com/Senzing/entity-search-web-app#configuration
-      SENZING_API_SERVER_URL: http://localhost:8250
-      SENZING_WEB_SERVER_ADMIN_AUTH_MODE: NONE
-      SENZING_WEB_SERVER_ADMIN_AUTH_PATH: http://localhost:80
-      SENZING_WEB_SERVER_INTERNAL_URL: http://localhost:80
-      SENZING_WEB_SERVER_PORT: 80
-    image: public.ecr.aws/senzing/entity-search-web-app:2.7.1
-    network_mode: "host"
-    read_only: true
-    restart: always
 
   redoer:
     container_name: senzing-redoer
