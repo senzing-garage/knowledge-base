@@ -200,7 +200,6 @@ services:
     read_only: true
     restart: always
 
-
   redoer:
     container_name: senzing-redoer
     depends_on:
