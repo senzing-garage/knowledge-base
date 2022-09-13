@@ -5,34 +5,27 @@ services:
     container_name: senzing-rabbitmq
     environment:
 #     See https://github.com/bitnami/bitnami-docker-rabbitmq#configuration
-      RABBITMQ_PASSWORD: ${RABBITMQ_PASSWORD:-bitnami}
-      RABBITMQ_USERNAME: ${RABBITMQ_USERNAME:-user}
-    image: bitnami/rabbitmq:${SENZING_DOCKER_IMAGE_VERSION_BITNAMI_RABBITMQ:-latest}
-    networks:
-      - senzing
-    ports:
-      - 15672:15672
-      - 5672:5672
+      RABBITMQ_PASSWORD: bitnami
+      RABBITMQ_USERNAME: user
+    image: bitnami/rabbitmq:3.10.7-debian-11-r6
+    network_mode: "host"
     restart: always
 
   postgres:
     container_name: senzing-postgres
     environment:
 #     See https://github.com/bitnami/bitnami-docker-postgresql#configuration
-      POSTGRESQL_DATABASE: ${POSTGRES_DB:-G2}
-      POSTGRESQL_PASSWORD: ${POSTGRES_PASSWORD:-senzing}
-      POSTGRESQL_POSTGRES_PASSWORD: ${POSTGRESQL_POSTGRES_PASSWORD:-postgres}
-      POSTGRESQL_USERNAME: ${POSTGRES_USERNAME:-senzing}
+      POSTGRESQL_DATABASE: G2
+      POSTGRESQL_PASSWORD: senzing
+      POSTGRESQL_POSTGRES_PASSWORD: postgres
+      POSTGRESQL_USERNAME: senzing
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USERNAME:-postgres}"]
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
       interval: 10s
       timeout: 5s
       retries: 5
-    image: bitnami/postgresql:${SENZING_DOCKER_IMAGE_VERSION_BITNAMI_POSTGRESQL:-latest}
-    networks:
-      - senzing
-    ports:
-      - 5432:5432
+    image: bitnami/postgresql:14.5.0-debian-11-r1
+    network_mode: "host"
     restart: always
 
   init-postgresql:
@@ -46,19 +39,17 @@ services:
         {
           "PIPELINE": {
             "CONFIGPATH": "/etc/opt/senzing",
-            "LICENSESTRINGBASE64": "${SENZING_LICENSE_BASE64_ENCODED}",
             "RESOURCEPATH": "/opt/senzing/g2/resources",
             "SUPPORTPATH": "/opt/senzing/data"
           },
           "SQL": {
             "BACKEND": "SQL",
-            "CONNECTION": "postgresql://${POSTGRES_USERNAME:-postgres}:${POSTGRES_PASSWORD:-postgres}@${POSTGRES_HOST:-senzing-postgres}:${POSTGRES_PORT:-5432}:${POSTGRES_DB:-G2}/"
+            "CONNECTION": "postgresql://postgres:postgres@localhost:5432:G2/"
           }
         }
       SENZING_SUBCOMMAND: mandatory
     image: public.ecr.aws/senzing/init-postgresql:1.0.3
-    networks:
-      - senzing
+    network_mode: "host"
     read_only: true
     restart: on-failure
 
@@ -77,13 +68,12 @@ services:
         {
           "PIPELINE": {
             "CONFIGPATH": "/etc/opt/senzing",
-            "LICENSESTRINGBASE64": "${SENZING_LICENSE_BASE64_ENCODED}",
             "RESOURCEPATH": "/opt/senzing/g2/resources",
             "SUPPORTPATH": "/opt/senzing/data"
           },
           "SQL": {
             "BACKEND": "SQL",
-            "CONNECTION": "postgresql://${POSTGRES_USERNAME:-postgres}:${POSTGRES_PASSWORD:-postgres}@${POSTGRES_HOST:-senzing-postgres}:${POSTGRES_PORT:-5432}:${POSTGRES_DB:-G2}/"
+            "CONNECTION": "postgresql://postgres:postgres@localhost:5432:G2/"
           }
         }
       SENZING_G2CONFIG_GTC: |
@@ -92,8 +82,7 @@ services:
         addDataSource WATCHLIST
         save
     image: public.ecr.aws/senzing/senzingapi-tools:3.2.0
-    networks:
-      - senzing
+    network_mode: "host"
     read_only: true
     restart: on-failure
     tmpfs:
@@ -105,21 +94,20 @@ services:
       - rabbitmq
     environment:
 #     See https://github.com/Senzing/stream-producer#configuration
-      SENZING_DEFAULT_DATA_SOURCE: ${SENZING_DEFAULT_DATA_SOURCE:-TEST}
+      SENZING_DEFAULT_DATA_SOURCE: TEST
       SENZING_DELAY_IN_SECONDS: 30
       SENZING_RABBITMQ_EXCHANGE: senzing-rabbitmq-exchange
-      SENZING_RABBITMQ_HOST: senzing-rabbitmq
-      SENZING_RABBITMQ_PASSWORD: ${RABBITMQ_PASSWORD:-bitnami}
+      SENZING_RABBITMQ_HOST: localhost
+      SENZING_RABBITMQ_PASSWORD: bitnami
       SENZING_RABBITMQ_QUEUE: senzing-rabbitmq-queue
       SENZING_RABBITMQ_ROUTING_KEY: senzing.records
-      SENZING_RABBITMQ_USERNAME: ${RABBITMQ_USERNAME:-user}
+      SENZING_RABBITMQ_USERNAME: user
       SENZING_SUBCOMMAND: json-to-rabbitmq
       SENZING_DEBUG: "true"
       SENZING_MONITORING_PERIOD_IN_SECONDS: 60
       SENZING_LOG_LEVEL: debug
     image: senzing/stream-producer:1.8.0
-    networks:
-      - senzing
+    network_mode: "host"
     read_only: true
     restart: on-failure
     user: 1000:1000
@@ -139,25 +127,23 @@ services:
         {
           "PIPELINE": {
             "CONFIGPATH": "/etc/opt/senzing",
-            "LICENSESTRINGBASE64": "${SENZING_LICENSE_BASE64_ENCODED}",
             "RESOURCEPATH": "/opt/senzing/g2/resources",
             "SUPPORTPATH": "/opt/senzing/data"
           },
           "SQL": {
             "BACKEND": "SQL",
-            "CONNECTION": "postgresql://${POSTGRES_USERNAME:-postgres}:${POSTGRES_PASSWORD:-postgres}@${POSTGRES_HOST:-senzing-postgres}:${POSTGRES_PORT:-5432}:${POSTGRES_DB:-G2}/"
+            "CONNECTION": "postgresql://postgres:postgres@localhost:5432:G2/"
           }
         }
-      SENZING_MONITORING_PERIOD_IN_SECONDS: ${SENZING_MONITORING_PERIOD_IN_SECONDS:-60}
-      SENZING_RABBITMQ_HOST: senzing-rabbitmq
-      SENZING_RABBITMQ_PASSWORD: ${RABBITMQ_PASSWORD:-bitnami}
+      SENZING_MONITORING_PERIOD_IN_SECONDS: 60
+      SENZING_RABBITMQ_HOST: localhost
+      SENZING_RABBITMQ_PASSWORD: bitnami
       SENZING_RABBITMQ_QUEUE: senzing-rabbitmq-queue
       SENZING_RABBITMQ_USE_EXISTING_ENTITIES: "False"
-      SENZING_RABBITMQ_USERNAME: ${RABBITMQ_USERNAME:-user}
+      SENZING_RABBITMQ_USERNAME: user
       SENZING_SUBCOMMAND: rabbitmq
     image: public.ecr.aws/senzing/stream-loader:2.1.0
-    networks:
-      - senzing
+    network_mode: "host"
     read_only: true
     restart: always
 
@@ -176,27 +162,23 @@ services:
         {
           "PIPELINE": {
             "CONFIGPATH": "/etc/opt/senzing",
-            "LICENSESTRINGBASE64": "${SENZING_LICENSE_BASE64_ENCODED}",
             "RESOURCEPATH": "/opt/senzing/g2/resources",
             "SUPPORTPATH": "/opt/senzing/data"
           },
           "SQL": {
             "BACKEND": "SQL",
-            "CONNECTION": "postgresql://${POSTGRES_USERNAME:-postgres}:${POSTGRES_PASSWORD:-postgres}@${POSTGRES_HOST:-senzing-postgres}:${POSTGRES_PORT:-5432}:${POSTGRES_DB:-G2}/"
+            "CONNECTION": "postgresql://postgres:postgres@localhost:5432:G2/"
           }
         }
       SENZING_RABBITMQ_LOAD_EXCHANGE: senzing-rabbitmq-exchange
-      SENZING_RABBITMQ_LOAD_HOST: senzing-rabbitmq
-      SENZING_RABBITMQ_LOAD_PASSWORD: ${RABBITMQ_PASSWORD:-bitnami}
+      SENZING_RABBITMQ_LOAD_HOST: localhost
+      SENZING_RABBITMQ_LOAD_PASSWORD: bitnami
       SENZING_RABBITMQ_LOAD_PORT: 5672
       SENZING_RABBITMQ_LOAD_ROUTING_KEY: senzing.records
-      SENZING_RABBITMQ_LOAD_USERNAME: ${RABBITMQ_USERNAME:-user}
+      SENZING_RABBITMQ_LOAD_USERNAME: user
       SENZING_RABBITMQ_LOAD_VIRTUAL_HOST: "/"
     image: public.ecr.aws/senzing/senzing-poc-server:3.2.2
-    networks:
-      - senzing
-    ports:
-      - 8250:8250
+    network_mode: "host"
     read_only: true
     restart: always
     tmpfs:
@@ -208,18 +190,15 @@ services:
       - pocserver
     environment:
 #     See https://github.com/Senzing/entity-search-web-app#configuration
-      SENZING_API_SERVER_URL: http://senzing-poc-server:8250
-      SENZING_CONSOLE_SERVER_URL: ws://senzing-webapp-console:8257
+      SENZING_API_SERVER_URL: http://localhost:8250
+      SENZING_CONSOLE_SERVER_URL: ws://localhost:8257
       SENZING_WEB_SERVER_ADMIN_AUTH_MODE: NONE
-      SENZING_WEB_SERVER_ADMIN_AUTH_PATH: http://senzing-webapp:80
-      SENZING_WEB_SERVER_INTERNAL_URL: http://senzing-webapp:80
+      SENZING_WEB_SERVER_ADMIN_AUTH_PATH: http://localhost:80
+      SENZING_WEB_SERVER_INTERNAL_URL: http://localhost:80
       SENZING_WEB_SERVER_PORT: 80
-      SENZING_WEB_SERVER_STREAM_CLIENT_URL: wss://senzing-poc-server:8250/ws
+      SENZING_WEB_SERVER_STREAM_CLIENT_URL: wss://localhost:8250/ws
     image: public.ecr.aws/senzing/entity-search-web-app:2.7.1
-    networks:
-      - senzing
-    ports:
-      - 80:80
+    network_mode: "host"
     read_only: true
     restart: always
 
@@ -234,24 +213,18 @@ services:
         {
           "PIPELINE": {
             "CONFIGPATH": "/etc/opt/senzing",
-            "LICENSESTRINGBASE64": "${SENZING_LICENSE_BASE64_ENCODED}",
             "RESOURCEPATH": "/opt/senzing/g2/resources",
             "SUPPORTPATH": "/opt/senzing/data"
           },
           "SQL": {
             "BACKEND": "SQL",
-            "CONNECTION": "postgresql://${POSTGRES_USERNAME:-postgres}:${POSTGRES_PASSWORD:-postgres}@${POSTGRES_HOST:-senzing-postgres}:${POSTGRES_PORT:-5432}:${POSTGRES_DB:-G2}/"
+            "CONNECTION": "postgresql://postgres:postgres@localhost:5432:G2/"
           }
         }
-      SENZING_EXIT_ON_THREAD_TERMINATION: ${SENZING_EXIT_ON_THREAD_TERMINATION:-"false"}
-      SENZING_MONITORING_PERIOD_IN_SECONDS: ${SENZING_MONITORING_PERIOD_IN_SECONDS:-60}
+      SENZING_EXIT_ON_THREAD_TERMINATION: "false"
+      SENZING_MONITORING_PERIOD_IN_SECONDS: 60
       SENZING_SUBCOMMAND: redo
     image: public.ecr.aws/senzing/redoer:2.1.0
-    networks:
-      - senzing
+    network_mode: "host"
     read_only: true
     restart: always
-
-networks:
-  senzing:
-    name: ${SENZING_DOCKER_NETWORK:-senzing-network}
