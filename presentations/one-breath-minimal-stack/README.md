@@ -13,7 +13,7 @@ The demonstration can be run on a local machine,
 but the network speeds may not be as fast for downloading.
 
 1. In [AWS EC2 console](https://us-east-2.console.aws.amazon.com/ec2/home):
-    1. **Application and OS Images (Amazon Machine Image):**  Amazon Linux
+    1. **Application and OS Images (Amazon Machine Image):**  Ubuntu
     1. **Instance type:** t2.2xlarge
     1. **Key pair (login):** Choose or create a Key Pair
     1. **Network settings:**
@@ -37,19 +37,16 @@ Install non-Senzing pre-requisite software,
 *Note:* The instructions would be different for other operating systems.
 
 1. Condensed version of
-   [How to install Docker on Amazon Linux 2](https://www.cyberciti.biz/faq/how-to-install-docker-on-amazon-linux-2/).
+   [Install Docker Engine on Ubuntu](https://docs.docker.com/engine/install/ubuntu/).
    Example:
 
     ```console
-    sudo yum --assumeyes update
-    sudo yum --assumeyes install docker python3-pip
-    sudo usermod -a -G docker ec2-user
-    id ec2-user
+    curl -fsSL https://get.docker.com -o get-docker.sh
+    sh ./get-docker.sh
+    sudo apt-get -y install docker-compose
+    sudo usermod -a -G docker ubuntu
+    id ubuntu
     newgrp docker
-    sudo systemctl enable docker.service
-    sudo systemctl start docker.service
-    sudo pip3 install docker-compose
-
     ```
 
 ## Senzing steps
@@ -113,10 +110,6 @@ Bring up a [Senzing stack](https://github.com/Senzing/docker-compose-demo#overvi
     docker-compose up
 
     ```
-
-## References
-
-1. []()
 
 ## Caveats
 
