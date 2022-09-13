@@ -93,7 +93,7 @@ services:
     command:
       - /bin/bash
       - -c
-      - echo "$${SENZING_G2CONFIG_GTC}" >> /tmp/G2Config.gtc; /opt/senzing/g2/python/G2ConfigTool.py -f /tmp/G2Config.gtc; sleep infinity
+      - echo "$${SENZING_G2CONFIG_GTC}" >> /tmp/G2Config.gtc; /opt/senzing/g2/python/G2ConfigTool.py -f /tmp/G2Config.gtc
     container_name: senzing-g2configtools
     depends_on:
       - init-postgresql
