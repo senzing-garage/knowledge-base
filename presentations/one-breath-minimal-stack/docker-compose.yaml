@@ -225,7 +225,7 @@ services:
       SENZING_RABBITMQ_LOAD_ROUTING_KEY: senzing.records
       SENZING_RABBITMQ_LOAD_USERNAME: ${RABBITMQ_USERNAME:-user}
       SENZING_RABBITMQ_LOAD_VIRTUAL_HOST: "/"
-    image: public.ecr.aws.senzing/senzing-poc-server:3.2.2
+    image: public.ecr.aws/senzing/senzing-poc-server:3.2.2
     networks:
       - senzing
     ports:
