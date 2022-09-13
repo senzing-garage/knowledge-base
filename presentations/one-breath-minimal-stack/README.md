@@ -48,7 +48,7 @@ Install non-Senzing pre-requisite software,
     newgrp docker
     sudo systemctl enable docker.service
     sudo systemctl start docker.service
-    sudo curl -L https://raw.githubusercontent.com/docker/compose-cli/main/scripts/install/install_linux.sh | sudo sh
+    sudo pip3 install docker-compose
 
     ```
 
@@ -113,6 +113,10 @@ Bring up a [Senzing stack](https://github.com/Senzing/docker-compose-demo#overvi
     docker-compose up
 
     ```
+
+## References
+
+1. []()
 
 ## Caveats
 
