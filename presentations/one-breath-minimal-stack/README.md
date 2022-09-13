@@ -99,6 +99,21 @@ Bring up a [Senzing stack](https://github.com/Senzing/docker-compose-demo#overvi
 
    > http://1.2.3.4
 
+
+## One-shot
+
+1. The same commands in one copy/paste step.
+   Example:
+
+    ```console
+    wget "https://raw.githubusercontent.com/Senzing/knowledge-base/main/presentations/one-breath-minimal-stack/docker-compose.yaml"
+
+    docker-compose pull
+
+    docker-compose up
+
+    ```
+
 ## Caveats
 
 1. This demonstration does not address security concerns.
