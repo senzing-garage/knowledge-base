@@ -48,7 +48,7 @@ Install non-Senzing pre-requisite software,
     newgrp docker
     sudo systemctl enable docker.service
     sudo systemctl start docker.service
-    sudo pip3 install docker-compose
+    sudo curl -L https://raw.githubusercontent.com/docker/compose-cli/main/scripts/install/install_linux.sh | sudo sh
 
     ```
 
