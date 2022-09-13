@@ -239,7 +239,6 @@ services:
     container_name: senzing-webapp
     depends_on:
       - pocserver
-      - webapp-console
     environment:
 #     See https://github.com/Senzing/entity-search-web-app#configuration
       SENZING_API_SERVER_URL: http://senzing-poc-server:8250
