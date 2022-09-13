@@ -47,6 +47,7 @@ Install non-Senzing pre-requisite software,
     sudo usermod -a -G docker ubuntu
     id ubuntu
     newgrp docker
+
     ```
 
 ## Senzing steps
