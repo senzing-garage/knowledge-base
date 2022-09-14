@@ -2,7 +2,7 @@
 
 ## One-breath
 
-1. Download `docker-compose.yaml` file and bring it up.
+1. Download `docker-compose.yaml` file and bring up docker compose stack.
    Example:
 
     ```console
