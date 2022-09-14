@@ -30,3 +30,6 @@
 1. This demonstration does not address security concerns.
    Do not put private information into demonstration without
    modifying the demonstration to meet your security requirements.
+1. This is an ephemeral demonstration.
+   As soon as as the docker-compose stack is brought down,
+   the data is deleted.
