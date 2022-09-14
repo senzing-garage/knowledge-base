@@ -97,6 +97,33 @@ services:
     tmpfs:
       - /tmp
 
+  producer:
+    container_name: senzing-stream-producer
+    depends_on:
+      - rabbitmq
+    environment:
+#     See https://github.com/Senzing/stream-producer#configuration
+      SENZING_DEFAULT_DATA_SOURCE: TEST
+      SENZING_DELAY_IN_SECONDS: 15
+      SENZING_RABBITMQ_EXCHANGE: senzing-rabbitmq-exchange
+      SENZING_RABBITMQ_HOST: senzing-rabbitmq
+      SENZING_RABBITMQ_PASSWORD: bitnami
+      SENZING_RABBITMQ_QUEUE: senzing-rabbitmq-queue
+      SENZING_RABBITMQ_ROUTING_KEY: senzing.records
+      SENZING_RABBITMQ_USERNAME: user
+      SENZING_SUBCOMMAND: json-to-rabbitmq
+      SENZING_DEBUG: "true"
+      SENZING_MONITORING_PERIOD_IN_SECONDS: 60
+      SENZING_LOG_LEVEL: debug
+    image: senzing/stream-producer:1.8.0
+    networks:
+      - senzing
+    read_only: true
+    restart: on-failure
+    user: 1000:1000
+    volumes:
+      - .:/var/opt/senzing
+
   pocserver:
     container_name: senzing-poc-server
     depends_on:
@@ -157,33 +184,6 @@ services:
       - 80:80
     read_only: true
     restart: always
-
-  producer:
-    container_name: senzing-stream-producer
-    depends_on:
-      - rabbitmq
-    environment:
-#     See https://github.com/Senzing/stream-producer#configuration
-      SENZING_DEFAULT_DATA_SOURCE: TEST
-      SENZING_DELAY_IN_SECONDS: 15
-      SENZING_RABBITMQ_EXCHANGE: senzing-rabbitmq-exchange
-      SENZING_RABBITMQ_HOST: senzing-rabbitmq
-      SENZING_RABBITMQ_PASSWORD: bitnami
-      SENZING_RABBITMQ_QUEUE: senzing-rabbitmq-queue
-      SENZING_RABBITMQ_ROUTING_KEY: senzing.records
-      SENZING_RABBITMQ_USERNAME: user
-      SENZING_SUBCOMMAND: json-to-rabbitmq
-      SENZING_DEBUG: "true"
-      SENZING_MONITORING_PERIOD_IN_SECONDS: 60
-      SENZING_LOG_LEVEL: debug
-    image: senzing/stream-producer:1.8.0
-    networks:
-      - senzing
-    read_only: true
-    restart: on-failure
-    user: 1000:1000
-    volumes:
-      - .:/var/opt/senzing
 
   loader:
     container_name: senzing-stream-loader
