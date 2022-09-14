@@ -95,8 +95,8 @@ Bring up a [Senzing stack](https://github.com/Senzing/docker-compose-demo#overvi
    Use the `http://` protocol, not the `https://` protocol.
    Example:
 
-   > http://1.2.3.4
-
+   - http://1.2.3.4
+   - [http://localhost](http://localhost)
 
 ## One-shot
 
