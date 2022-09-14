@@ -89,28 +89,25 @@ Bring up a [Senzing stack](https://github.com/Senzing/docker-compose-demo#overvi
 
     ```
 
+## One-shot
+
+1. A simplification of the commands used above.
+   Example:
+
+    ```console
+    wget "https://raw.githubusercontent.com/Senzing/knowledge-base/main/presentations/one-breath-minimal-stack/docker-compose.yaml"
+    docker-compose up
+
+    ```
+
 ### Use
 
 1. Open web browser to AWS's assigned IP address.
    Use the `http://` protocol, not the `https://` protocol.
    Example:
 
-   - http://1.2.3.4
    - [http://localhost](http://localhost)
-
-## One-shot
-
-1. The same commands in one copy/paste step.
-   Example:
-
-    ```console
-    wget "https://raw.githubusercontent.com/Senzing/knowledge-base/main/presentations/one-breath-minimal-stack/docker-compose.yaml"
-
-    docker-compose pull
-
-    docker-compose up
-
-    ```
+   - [http://1.2.3.4](http://1.2.3.4)
 
 ## Caveats
 
