@@ -14,7 +14,7 @@
 ### Use
 
 1. What's being created?
-   View [image](https://github.com/Senzing/docker-compose-demo#overview).
+   View [image](https://github.com/Senzing/docker-compose-demo/blob/main/docs/img-architecture/architecture.png).
 
 1. Open web browser to AWS's assigned IP address.
    Use the `http://` protocol, not the `https://` protocol.
