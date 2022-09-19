@@ -2,12 +2,12 @@ version: '3.8'
 services:
 
   rabbitmq:
+#   For more information, visit https://github.com/bitnami/containers/tree/main/bitnami/rabbitmq
     container_name: senzing-rabbitmq
     environment:
-#     See https://github.com/bitnami/bitnami-docker-rabbitmq#configuration
       RABBITMQ_PASSWORD: bitnami
       RABBITMQ_USERNAME: user
-    image: bitnami/rabbitmq:3.10.7-debian-11-r6
+    image: bitnami/rabbitmq:${SENZING_DOCKER_IMAGE_VERSION_BITNAMI_RABBITMQ:-3.10.7-debian-11-r6}
     networks:
       - senzing
     ports:
@@ -16,9 +16,9 @@ services:
     restart: always
 
   postgres:
+#   For more information, visit https://github.com/bitnami/containers/tree/main/bitnami/postgresql
     container_name: senzing-postgres
     environment:
-#     See https://github.com/bitnami/bitnami-docker-postgresql#configuration
       POSTGRESQL_DATABASE: G2
       POSTGRESQL_PASSWORD: senzing
       POSTGRESQL_POSTGRES_PASSWORD: postgres
@@ -28,7 +28,7 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
-    image: bitnami/postgresql:14.5.0-debian-11-r1
+    image: bitnami/postgresql:${SENZING_DOCKER_IMAGE_VERSION_BITNAMI_POSTGRESQL:-14.5.0-debian-11-r1}
     networks:
       - senzing
     ports:
@@ -36,12 +36,16 @@ services:
     restart: always
 
   init-postgresql:
+#   For more information, visit https://github.com/Senzing/init-postgresql
     container_name: senzing-init-postgresql
     depends_on:
       - postgres
     environment:
       LC_CTYPE: en_US.utf8
-#     See https://github.com/Senzing/init-postgresql#configuration
+      SENZING_CONFIGURATION_MODIFICATIONS: |
+        addDataSource CUSTOMERS
+        addDataSource REFERENCE
+        addDataSource WATCHLIST
       SENZING_ENGINE_CONFIGURATION_JSON: >-
         {
           "PIPELINE": {
@@ -55,54 +59,18 @@ services:
           }
         }
       SENZING_SUBCOMMAND: mandatory
-    image: public.ecr.aws/senzing/init-postgresql:1.0.3
+    image: senzing/init-postgresql:${SENZING_DOCKER_IMAGE_VERSION_INIT_POSTGRESQL:-1.1.1}
     networks:
       - senzing
     read_only: true
     restart: on-failure
-
-  g2configtool:
-    command:
-      - /bin/bash
-      - -c
-      - echo "$${SENZING_G2CONFIG_GTC}" >> /tmp/G2Config.gtc; /opt/senzing/g2/python/G2ConfigTool.py -f /tmp/G2Config.gtc
-    container_name: senzing-g2configtools
-    depends_on:
-      - init-postgresql
-    environment:
-      LC_CTYPE: en_US.utf8
-#     See https://github.com/Senzing/g2configtool
-      SENZING_ENGINE_CONFIGURATION_JSON: >-
-        {
-          "PIPELINE": {
-            "CONFIGPATH": "/etc/opt/senzing",
-            "RESOURCEPATH": "/opt/senzing/g2/resources",
-            "SUPPORTPATH": "/opt/senzing/data"
-          },
-          "SQL": {
-            "BACKEND": "SQL",
-            "CONNECTION": "postgresql://postgres:postgres@senzing-postgres:5432:G2/"
-          }
-        }
-      SENZING_G2CONFIG_GTC: |
-        addDataSource CUSTOMERS
-        addDataSource REFERENCE
-        addDataSource WATCHLIST
-        save
-    image: public.ecr.aws/senzing/senzingapi-tools:3.2.0
-    networks:
-      - senzing
-    read_only: true
-    restart: on-failure
-    tmpfs:
-      - /tmp
 
   producer:
+#   For more information, visit https://github.com/Senzing/stream-producer
     container_name: senzing-stream-producer
     depends_on:
       - rabbitmq
     environment:
-#     See https://github.com/Senzing/stream-producer#configuration
       SENZING_DEFAULT_DATA_SOURCE: TEST
       SENZING_DELAY_IN_SECONDS: 15
       SENZING_RABBITMQ_EXCHANGE: senzing-rabbitmq-exchange
@@ -115,7 +83,7 @@ services:
       SENZING_DEBUG: "true"
       SENZING_MONITORING_PERIOD_IN_SECONDS: 60
       SENZING_LOG_LEVEL: debug
-    image: senzing/stream-producer:1.8.0
+    image: senzing/stream-producer:${SENZING_DOCKER_IMAGE_VERSION_STREAM_PRODUCER:-1.8.0}
     networks:
       - senzing
     read_only: true
@@ -125,6 +93,7 @@ services:
       - .:/var/opt/senzing
 
   pocserver:
+#   For more information, visit https://github.com/Senzing/senzing-poc-server
     container_name: senzing-poc-server
     depends_on:
       - postgres
@@ -154,7 +123,7 @@ services:
       SENZING_RABBITMQ_LOAD_ROUTING_KEY: senzing.records
       SENZING_RABBITMQ_LOAD_USERNAME: user
       SENZING_RABBITMQ_LOAD_VIRTUAL_HOST: "/"
-    image: public.ecr.aws/senzing/senzing-poc-server:3.2.2
+    image: senzing/senzing-poc-server:${SENZING_DOCKER_IMAGE_VERSION_SENZING_POC_SERVER:-3.2.2}
     networks:
       - senzing
     ports:
@@ -165,34 +134,33 @@ services:
       - /tmp
 
   webapp:
+#   For more information, visit https://github.com/Senzing/entity-search-web-app
     container_name: senzing-webapp
     depends_on:
       - pocserver
     environment:
-#     See https://github.com/Senzing/entity-search-web-app#configuration
       SENZING_API_SERVER_URL: http://senzing-poc-server:8250
       SENZING_CONSOLE_SERVER_URL: ws://senzing-webapp-console:8257
       SENZING_WEB_SERVER_ADMIN_AUTH_MODE: NONE
-      SENZING_WEB_SERVER_ADMIN_AUTH_PATH: http://senzing-webapp:80
-      SENZING_WEB_SERVER_INTERNAL_URL: http://senzing-webapp:80
-      SENZING_WEB_SERVER_PORT: 80
+      SENZING_WEB_SERVER_ADMIN_AUTH_PATH: http://senzing-webapp:8251
+      SENZING_WEB_SERVER_INTERNAL_URL: http://senzing-webapp:8251
+      SENZING_WEB_SERVER_PORT: 8251
       SENZING_WEB_SERVER_STREAM_CLIENT_URL: wss://senzing-poc-server:8250/ws
-    image: public.ecr.aws/senzing/entity-search-web-app:2.7.1
+    image: senzing/entity-search-web-app:${SENZING_DOCKER_IMAGE_VERSION_ENTITY_SEARCH_WEB_APP:-2.7.1}
     networks:
       - senzing
     ports:
-      - 80:80
+      - 8251:8251
     read_only: true
     restart: always
 
   loader:
+#   For more information, visit https://github.com/Senzing/stream-loader
     container_name: senzing-stream-loader
     depends_on:
       - rabbitmq
-      - g2configtool
     environment:
       LC_CTYPE: en_US.utf8
-#     See https://github.com/Senzing/stream-loader#configuration
       SENZING_DELAY_IN_SECONDS: 30
       SENZING_ENGINE_CONFIGURATION_JSON: >-
         {
@@ -213,18 +181,18 @@ services:
       SENZING_RABBITMQ_USE_EXISTING_ENTITIES: "False"
       SENZING_RABBITMQ_USERNAME: user
       SENZING_SUBCOMMAND: rabbitmq
-    image: public.ecr.aws/senzing/stream-loader:2.1.0
+    image: senzing/stream-loader:${SENZING_DOCKER_IMAGE_VERSION_STREAM_LOADER:-2.1.0}
     networks:
       - senzing
     read_only: true
     restart: always
 
   redoer:
+#   For more information, visit https://github.com/Senzing/redoer
     container_name: senzing-redoer
     depends_on:
       - loader
     environment:
-#     See https://github.com/Senzing/redoer#configuration
       SENZING_DELAY_IN_SECONDS: 60
       SENZING_ENGINE_CONFIGURATION_JSON: >-
         {
@@ -241,7 +209,7 @@ services:
       SENZING_EXIT_ON_THREAD_TERMINATION: "false"
       SENZING_MONITORING_PERIOD_IN_SECONDS: 60
       SENZING_SUBCOMMAND: redo
-    image: public.ecr.aws/senzing/redoer:2.1.0
+    image: senzing/redoer:${SENZING_DOCKER_IMAGE_VERSION_REDOER:-2.1.0}
     networks:
       - senzing
     read_only: true

@@ -20,8 +20,8 @@
    Use the `http://` protocol, not the `https://` protocol.
    Example:
 
-   - [http://localhost](http://localhost)
-   - [http://1.2.3.4](http://1.2.3.4)
+   - [http://localhost:8251](http://localhost:8251)
+   - [http://1.2.3.4:8251](http://1.2.3.4:8251)
 
 1. Search for "Robert Smith"
 
