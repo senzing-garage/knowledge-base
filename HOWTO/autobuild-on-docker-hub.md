@@ -6,7 +6,7 @@
     1. This differs from the [Senzing repository list](https://hub.docker.com/u/senzing) on `hub.docker.com`.
 1. Choose docker repository.
 1. Choose "Build" tab.
-1. Click "Configure Automated Build" link.
+1. Click "Configure Automated Build" link. (If you don't see this link, look for a Manage repo button and then come back to builds.)
 1. Build configurations:
     1. Source repository:
         1. **Select organization:** Senzing
