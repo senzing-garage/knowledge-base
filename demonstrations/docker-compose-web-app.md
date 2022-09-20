@@ -16,6 +16,8 @@ data using the
    or a
    [kubernetes-demo](https://github.com/Senzing/kubernetes-demo).
 
+## Demonstrate
+
 ### Simple search
 
 1. Go to home page by clicking on upper-left "3-dots" and selecting "Home"
