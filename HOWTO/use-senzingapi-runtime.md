@@ -43,6 +43,10 @@ The `senzing/senzingapi-runtime` image can be used as an initial layer.
 
    - **DOCKER_BASE_IMAGE** - The Docker image to build upon.
      It will be used as the Dockerfile's `FROM` value.
+     The image must be a debian-based Linux distribution
+     (e.g. `debian`, `ubuntu`, or
+     [others](https://en.wikipedia.org/wiki/List_of_Linux_distributions#Debian-based))
+     Please note that `ubuntu:22.04` is currently not supported.
    - **DOCKER_IMAGE_SUFFIX** - A suffix to append to the *output* Docker image.
    - **SENZING_DOCKER_IMAGE_VERSION_SENZINGAPI_RUNTIME** - The version of the Senzing Dockerfile to use.
      The latest version can be seen in
