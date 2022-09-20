@@ -11,8 +11,10 @@ data using the
 
 ## Prerequisites
 
-1. Before trying this demonstration, deploy
-   [github.com/senzing/docker-compose-demo](https://github.com/Senzing/docker-compose-demo).
+1. Before trying this demonstration, deploy a Senzing stack based on a
+   [docker-compose-demo](https://github.com/Senzing/docker-compose-demo)
+   or a
+   [kubernetes-demo](https://github.com/Senzing/kubernetes-demo).
 
 ### Simple search
 
