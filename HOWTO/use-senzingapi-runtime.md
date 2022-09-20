@@ -43,6 +43,7 @@ The `senzing/senzingapi-runtime` image can be used as an initial layer.
 
    - **DOCKER_BASE_IMAGE** - The Docker image to build upon.
      It will be used as the Dockerfile's `FROM` value.
+     This may be an image that has been "blessed" by an organization.
      The image must be a debian-based Linux distribution
      (e.g. `debian`, `ubuntu`, and
      [others](https://en.wikipedia.org/wiki/List_of_Linux_distributions#Debian-based))
@@ -60,6 +61,7 @@ The `senzing/senzingapi-runtime` image can be used as an initial layer.
     export DOCKER_BASE_IMAGE=ubuntu:20.04
     export DOCKER_IMAGE_SUFFIX=mycompany
     export SENZING_DOCKER_IMAGE_VERSION_SENZINGAPI_RUNTIME=3.2.0
+
     ```
 
 1. Build new Docker image.
@@ -72,4 +74,5 @@ The `senzing/senzingapi-runtime` image can be used as an initial layer.
       --build-arg BASE_IMAGE=${DOCKER_BASE_IMAGE} \
       --tag senzing/senzingapi-runtime-${DOCKER_IMAGE_SUFFIX}:${SENZING_DOCKER_IMAGE_VERSION_SENZINGAPI_RUNTIME} \
       https://github.com/Senzing/senzingapi-runtime.git#${SENZING_DOCKER_IMAGE_VERSION_SENZINGAPI_RUNTIME}
+
     ```
