@@ -60,8 +60,25 @@ The `senzing/senzingapi-runtime` image can be used as an initial layer.
     ```console
     export DOCKER_BASE_IMAGE=ubuntu:20.04
     export DOCKER_IMAGE_SUFFIX=mycompany
-    export SENZING_DOCKER_IMAGE_VERSION_SENZINGAPI_RUNTIME=3.2.0
 
+    ```
+
+1. Get versions of Docker images.
+   Example:
+
+    ```console
+    curl -X GET \
+        --output /tmp/docker-versions-stable.sh \
+        https://raw.githubusercontent.com/Senzing/knowledge-base/main/lists/docker-versions-stable.sh
+    source /tmp/docker-versions-stable.sh
+
+    ```
+
+1. Synthesize environment variables.
+   Example:
+
+    ```console
+    export DOCKER_IMAGE_TAG=senzing/senzingapi-runtime-${DOCKER_IMAGE_SUFFIX}:${SENZING_DOCKER_IMAGE_VERSION_SENZINGAPI_RUNTIME}
     ```
 
 1. Build new Docker image.
@@ -72,7 +89,50 @@ The `senzing/senzingapi-runtime` image can be used as an initial layer.
 
     docker build \
       --build-arg BASE_IMAGE=${DOCKER_BASE_IMAGE} \
-      --tag senzing/senzingapi-runtime-${DOCKER_IMAGE_SUFFIX}:${SENZING_DOCKER_IMAGE_VERSION_SENZINGAPI_RUNTIME} \
+      --tag ${DOCKER_IMAGE_TAG} \
       https://github.com/Senzing/senzingapi-runtime.git#${SENZING_DOCKER_IMAGE_VERSION_SENZINGAPI_RUNTIME}
+
+    ```
+
+1. List the Docker images and their
+   [corresponding environment variable name](https://github.com/Senzing/knowledge-base/blob/main/lists/docker-versions-stable.sh).
+
+   Format: `GitHub repository`;`DockerHub repository`;`tag`;`user` where `user` defaults to `1001`.
+
+   Example:
+
+    ```console
+    export BASE_IMAGES=( \
+      "entity-search-web-app-console;senzing/entity-search-web-app-console;${SENZING_DOCKER_IMAGE_VERSION_ENTITY_SEARCH_WEB_APP_CONSOLE:-latest}" \
+      "redoer;senzing/redoer;${SENZING_DOCKER_IMAGE_VERSION_REDOER:-latest};1001" \
+      "senzing-api-server;senzing/senzing-api-server;${SENZING_DOCKER_IMAGE_VERSION_SENZING_API_SERVER:-latest}" \
+      "docker-senzing-console;senzing/senzing-console;${SENZING_DOCKER_IMAGE_VERSION_SENZING_CONSOLE:-latest}" \
+      "senzing-poc-server;senzing/senzing-poc-server;${SENZING_DOCKER_IMAGE_VERSION_SENZING_POC_SERVER:-latest}" \
+      "senzingapi-tools;senzing/senzingapi-tools;${SENZING_DOCKER_IMAGE_VERSION_SENZINGAPI_TOOLS:-latest}" \
+      "docker-sshd;senzing/sshd;${SENZING_DOCKER_IMAGE_VERSION_SSHD:-latest};0" \
+      "stream-loader;senzing/stream-loader;${SENZING_DOCKER_IMAGE_VERSION_STREAM_LOADER:-latest}" \
+      "docker-xterm;senzing/xterm;${SENZING_DOCKER_IMAGE_VERSION_XTERM:-latest}" \
+    )
+
+    ```
+
+1. Build each of the MySQL compatible docker images in the list.
+   Example:
+
+    ```console
+    for BASE_IMAGE in ${BASE_IMAGES[@]}; \
+    do \
+        IFS=";" read -r -a BASE_IMAGE_DATA <<< "${BASE_IMAGE}"
+        BASE_IMAGE_REPOSITORY="${BASE_IMAGE_DATA[0]}"
+        BASE_IMAGE_NAME="${BASE_IMAGE_DATA[1]}"
+        BASE_IMAGE_VERSION="${BASE_IMAGE_DATA[2]}"
+        BASE_IMAGE_USER="${BASE_IMAGE_DATA[3]}"
+        docker build \
+            --build-arg BASE_IMAGE={DOCKER_IMAGE_TAG} \
+            --build-arg USER=${BASE_IMAGE_USER:-1001} \
+            --tag ${BASE_IMAGE_NAME}-${DOCKER_IMAGE_SUFFIX}:${BASE_IMAGE_VERSION} \
+            https://github.com/Senzing/${BASE_IMAGE_REPOSITORY}.git#${BASE_IMAGE_VERSION}
+
+    done
 
     ```
