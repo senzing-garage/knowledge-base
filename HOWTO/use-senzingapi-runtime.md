@@ -138,7 +138,6 @@ then builds new "Senzing stock" docker images using the newly wrapped image.
 
     ```
 
-
 1. Needs a-fixin'
    Example:
 
@@ -147,4 +146,3 @@ then builds new "Senzing stock" docker images using the newly wrapped image.
       "entity-search-web-app-console;senzing/entity-search-web-app-console;${SENZING_DOCKER_IMAGE_VERSION_ENTITY_SEARCH_WEB_APP_CONSOLE:-latest}" \
     )
     ```
-
