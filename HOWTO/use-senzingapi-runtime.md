@@ -116,7 +116,7 @@ The `senzing/senzingapi-runtime` image can be used as an initial layer.
 
     ```
 
-1. Build each of the MySQL compatible docker images in the list.
+1. Build each of the Docker images in the list.
    Example:
 
     ```console
@@ -128,7 +128,7 @@ The `senzing/senzingapi-runtime` image can be used as an initial layer.
         BASE_IMAGE_VERSION="${BASE_IMAGE_DATA[2]}"
         BASE_IMAGE_USER="${BASE_IMAGE_DATA[3]}"
         docker build \
-            --build-arg BASE_IMAGE={DOCKER_IMAGE_TAG} \
+            --build-arg BASE_IMAGE=${DOCKER_IMAGE_TAG} \
             --build-arg USER=${BASE_IMAGE_USER:-1001} \
             --tag ${BASE_IMAGE_NAME}-${DOCKER_IMAGE_SUFFIX}:${BASE_IMAGE_VERSION} \
             https://github.com/Senzing/${BASE_IMAGE_REPOSITORY}.git#${BASE_IMAGE_VERSION}
