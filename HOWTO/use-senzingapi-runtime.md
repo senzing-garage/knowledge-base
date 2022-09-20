@@ -39,6 +39,9 @@ The `senzing/senzingapi-runtime` image can be used as an initial layer.
 
 ## Wrapping existing image
 
+The following steps create wraps an existing image with Senzing binaries,
+then builds new "Senzing stock" docker images using the newly wrapped image.
+
 1. :pencil2: Set environment variables.
 
    - **DOCKER_BASE_IMAGE** - The Docker image to build upon.
@@ -49,11 +52,8 @@ The `senzing/senzingapi-runtime` image can be used as an initial layer.
      [others](https://en.wikipedia.org/wiki/List_of_Linux_distributions#Debian-based))
      Please note that `ubuntu:22.04` is currently not supported.
    - **DOCKER_IMAGE_SUFFIX** - A suffix to append to the *output* Docker image.
-     This is meant to differentiate between the "stock" `senzing/senzingapi-runtime`
-     and a customized `senzing/senzingapi-runtime-xyz`.
-   - **SENZING_DOCKER_IMAGE_VERSION_SENZINGAPI_RUNTIME** - The version of the Senzing Dockerfile to use.
-     The latest version can be seen in
-     [docker-versions-latest.sh)](https://github.com/Senzing/knowledge-base/blob/main/lists/docker-versions-latest.sh).
+     This is meant to differentiate between the "stock" `senzing/senzingapi-runtime` Docker image
+     and a customized `senzing/senzingapi-runtime-xyz` Docker image.
 
    Example:
 
@@ -64,6 +64,7 @@ The `senzing/senzingapi-runtime` image can be used as an initial layer.
     ```
 
 1. Get versions of Docker images.
+   This step sets environment variables that will be used when creating Docker images.
    Example:
 
     ```console
@@ -75,6 +76,7 @@ The `senzing/senzingapi-runtime` image can be used as an initial layer.
     ```
 
 1. Synthesize environment variables.
+   This step sets environment variables that simplify following steps.
    Example:
 
     ```console
@@ -94,7 +96,7 @@ The `senzing/senzingapi-runtime` image can be used as an initial layer.
 
     ```
 
-1. List the Docker images and their
+1. List the Github repository, DockerHub repository, version tag, and user for each Docke  images and their
    [corresponding environment variable name](https://github.com/Senzing/knowledge-base/blob/main/lists/docker-versions-stable.sh).
 
    Format: `GitHub repository`;`DockerHub repository`;`tag`;`user` where `user` defaults to `1001`.
@@ -103,7 +105,6 @@ The `senzing/senzingapi-runtime` image can be used as an initial layer.
 
     ```console
     export BASE_IMAGES=( \
-      "entity-search-web-app-console;senzing/entity-search-web-app-console;${SENZING_DOCKER_IMAGE_VERSION_ENTITY_SEARCH_WEB_APP_CONSOLE:-latest}" \
       "redoer;senzing/redoer;${SENZING_DOCKER_IMAGE_VERSION_REDOER:-latest};1001" \
       "senzing-api-server;senzing/senzing-api-server;${SENZING_DOCKER_IMAGE_VERSION_SENZING_API_SERVER:-latest}" \
       "docker-senzing-console;senzing/senzing-console;${SENZING_DOCKER_IMAGE_VERSION_SENZING_CONSOLE:-latest}" \
@@ -136,3 +137,14 @@ The `senzing/senzingapi-runtime` image can be used as an initial layer.
     done
 
     ```
+
+
+1. Needs a-fixin'
+   Example:
+
+    ```console
+    export BASE_IMAGES=( \
+      "entity-search-web-app-console;senzing/entity-search-web-app-console;${SENZING_DOCKER_IMAGE_VERSION_ENTITY_SEARCH_WEB_APP_CONSOLE:-latest}" \
+    )
+    ```
+
