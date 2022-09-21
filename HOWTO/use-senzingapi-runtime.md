@@ -84,6 +84,8 @@ The following steps creates a new Docker image by wrapping an existing image wit
 
     ```console
     export DOCKER_IMAGE_TAG=senzing/senzingapi-runtime-${DOCKER_IMAGE_SUFFIX}:${SENZING_DOCKER_IMAGE_VERSION_SENZINGAPI_RUNTIME}
+    echo ${DOCKER_IMAGE_TAG}
+
     ```
 
 1. Build new Docker image that will become the "base image" for other Docker images.
@@ -114,7 +116,7 @@ The following steps creates a new Docker image by wrapping an existing image wit
       "stream-loader;senzing/stream-loader;${SENZING_DOCKER_IMAGE_VERSION_STREAM_LOADER:-latest}" \
       "docker-xterm;senzing/xterm;${SENZING_DOCKER_IMAGE_VERSION_XTERM:-latest}" \
       "entity-search-web-app-console;senzing/entity-search-web-app-console;${SENZING_DOCKER_IMAGE_VERSION_ENTITY_SEARCH_WEB_APP_CONSOLE:-latest}" \
-
+      "docker-sshd;senzing/sshd;${SENZING_DOCKER_IMAGE_VERSION_SSHD:-latest};0" \
     )
 
     ```
@@ -147,7 +149,6 @@ The following steps creates a new Docker image by wrapping an existing image wit
     export BASE_IMAGES=( \
       "docker-senzing-console;senzing/senzing-console;${SENZING_DOCKER_IMAGE_VERSION_SENZING_CONSOLE:-latest}" \
       "senzing-poc-server;senzing/senzing-poc-server;${SENZING_DOCKER_IMAGE_VERSION_SENZING_POC_SERVER:-latest}" \
-      "docker-sshd;senzing/sshd;${SENZING_DOCKER_IMAGE_VERSION_SSHD:-latest};0" \
 
     )
     ```
