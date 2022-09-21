@@ -11,9 +11,13 @@ can be used in a number of ways to simplify development using the Senzing SDK li
 
 ## Overview
 
-The
+There a few techniques to consider.
+Each choice produces similar result,
+so the choice will depend upon the existing Docker environment.
 
-1. x
+1. [Simple inheritance](#simple-inheritance)
+1. [Wrap existing image](#wrap-existing-image)
+1. [Add Docker instructions to existing Dockerfile](#add-docker-instructions-to-existing-dockerfile)
 
 ## Simple inheritance
 
@@ -37,10 +41,9 @@ The `senzing/senzingapi-runtime` image can be used as an initial layer.
     :
     ```
 
-## Wrapping existing image
+## Wrap existing image
 
-The following steps create wraps an existing image with Senzing binaries,
-then builds new "Senzing stock" docker images using the newly wrapped image.
+The following steps creates a new Docker image by wrapping an existing image with Senzing binaries.
 
 1. :pencil2: Set environment variables.
 
@@ -107,12 +110,10 @@ then builds new "Senzing stock" docker images using the newly wrapped image.
     export BASE_IMAGES=( \
       "redoer;senzing/redoer;${SENZING_DOCKER_IMAGE_VERSION_REDOER:-latest};1001" \
       "senzing-api-server;senzing/senzing-api-server;${SENZING_DOCKER_IMAGE_VERSION_SENZING_API_SERVER:-latest}" \
-      "docker-senzing-console;senzing/senzing-console;${SENZING_DOCKER_IMAGE_VERSION_SENZING_CONSOLE:-latest}" \
-      "senzing-poc-server;senzing/senzing-poc-server;${SENZING_DOCKER_IMAGE_VERSION_SENZING_POC_SERVER:-latest}" \
       "senzingapi-tools;senzing/senzingapi-tools;${SENZING_DOCKER_IMAGE_VERSION_SENZINGAPI_TOOLS:-latest}" \
-      "docker-sshd;senzing/sshd;${SENZING_DOCKER_IMAGE_VERSION_SSHD:-latest};0" \
       "stream-loader;senzing/stream-loader;${SENZING_DOCKER_IMAGE_VERSION_STREAM_LOADER:-latest}" \
       "docker-xterm;senzing/xterm;${SENZING_DOCKER_IMAGE_VERSION_XTERM:-latest}" \
+
     )
 
     ```
@@ -138,11 +139,27 @@ then builds new "Senzing stock" docker images using the newly wrapped image.
 
     ```
 
-1. Needs a-fixin'
+1. Needs a-fixin'.
    Example:
 
     ```console
     export BASE_IMAGES=( \
       "entity-search-web-app-console;senzing/entity-search-web-app-console;${SENZING_DOCKER_IMAGE_VERSION_ENTITY_SEARCH_WEB_APP_CONSOLE:-latest}" \
+      "docker-senzing-console;senzing/senzing-console;${SENZING_DOCKER_IMAGE_VERSION_SENZING_CONSOLE:-latest}" \
+      "senzing-poc-server;senzing/senzing-poc-server;${SENZING_DOCKER_IMAGE_VERSION_SENZING_POC_SERVER:-latest}" \
+      "docker-sshd;senzing/sshd;${SENZING_DOCKER_IMAGE_VERSION_SSHD:-latest};0" \
+
     )
     ```
+
+## Add Docker instructions to existing Dockerfile
+
+This technique is to copy, paste, and modify Docker instructions into the "original"
+Dockerfile to install Senzing.
+
+1. Using the `senzing/senzingapi-runtime`
+   [Dockerfile](https://github.com/Senzing/senzingapi-runtime/blob/main/Dockerfile) as a guide,
+   copy the Docker instructions into your `Dockerfile`
+
+1. The following environment variable are important:
+   - `LD_LIBRARY_PATH`
