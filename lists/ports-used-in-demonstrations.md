@@ -47,7 +47,7 @@ Open range: 8250-8265
 
 ### 8250
 
-- [Senzing API server](https://github.com/Senzing/senzing-api-server)
+- [Senzing API server](https://github.com/Senzing/senzing-api-server) default HTTP Port.
 
 ### 8251
 
@@ -80,6 +80,10 @@ Open range: 8250-8265
 ### 8260
 
 - Reserved for tools
+
+### 8263
+
+- [Senzing API server](https://github.com/Senzing/senzing-api-server) default HTTPS Port.
 
 ## Other
 
