@@ -130,6 +130,7 @@ Dockerfile to install Senzing.
       "entity-search-web-app-console;senzing/entity-search-web-app-console;${SENZING_DOCKER_IMAGE_VERSION_ENTITY_SEARCH_WEB_APP_CONSOLE:-latest}" \
       "redoer;senzing/redoer;${SENZING_DOCKER_IMAGE_VERSION_REDOER:-latest};1001" \
       "senzing-api-server;senzing/senzing-api-server;${SENZING_DOCKER_IMAGE_VERSION_SENZING_API_SERVER:-latest}" \
+      "senzing-poc-server;senzing/senzing-poc-server;${SENZING_DOCKER_IMAGE_VERSION_SENZING_POC_SERVER:-latest}" \
       "senzingapi-tools;senzing/senzingapi-tools;${SENZING_DOCKER_IMAGE_VERSION_SENZINGAPI_TOOLS:-latest}" \
       "stream-loader;senzing/stream-loader;${SENZING_DOCKER_IMAGE_VERSION_STREAM_LOADER:-latest}" \
     )
@@ -155,14 +156,4 @@ Dockerfile to install Senzing.
 
     done
 
-    ```
-
-1. Needs a-fixin'.
-   Example:
-
-    ```console
-    export BASE_IMAGES=( \
-      "senzing-poc-server;senzing/senzing-poc-server;${SENZING_DOCKER_IMAGE_VERSION_SENZING_POC_SERVER:-latest}" \
-
-    )
     ```
