@@ -101,7 +101,21 @@ The following steps creates a new Docker image by wrapping an existing image wit
 
     ```
 
-1. List the Github repository, DockerHub repository, version tag, and user for each Docke  images and their
+## Add Docker instructions to existing Dockerfile
+
+This technique is to copy, paste, and modify Docker instructions into the "original"
+Dockerfile to install Senzing.
+
+1. Using the `senzing/senzingapi-runtime`
+   [Dockerfile](https://github.com/Senzing/senzingapi-runtime/blob/main/Dockerfile) as a guide,
+   copy the Docker instructions into your `Dockerfile`
+
+1. The following environment variable are important:
+   - `LD_LIBRARY_PATH`
+
+## Build Senzing images upon custom base image
+
+1. List the Github repository, DockerHub repository, version tag, and user for each Docker image and their
    [corresponding environment variable name](https://github.com/Senzing/knowledge-base/blob/main/lists/docker-versions-stable.sh).
 
    Format: `GitHub repository`;`DockerHub repository`;`tag`;`user` where `user` defaults to `1001`.
@@ -110,13 +124,14 @@ The following steps creates a new Docker image by wrapping an existing image wit
 
     ```console
     export BASE_IMAGES=( \
+      "docker-senzing-console;senzing/senzing-console;${SENZING_DOCKER_IMAGE_VERSION_SENZING_CONSOLE:-latest}" \
+      "docker-sshd;senzing/sshd;${SENZING_DOCKER_IMAGE_VERSION_SSHD:-latest};0" \
+      "docker-xterm;senzing/xterm;${SENZING_DOCKER_IMAGE_VERSION_XTERM:-latest}" \
+      "entity-search-web-app-console;senzing/entity-search-web-app-console;${SENZING_DOCKER_IMAGE_VERSION_ENTITY_SEARCH_WEB_APP_CONSOLE:-latest}" \
       "redoer;senzing/redoer;${SENZING_DOCKER_IMAGE_VERSION_REDOER:-latest};1001" \
       "senzing-api-server;senzing/senzing-api-server;${SENZING_DOCKER_IMAGE_VERSION_SENZING_API_SERVER:-latest}" \
       "senzingapi-tools;senzing/senzingapi-tools;${SENZING_DOCKER_IMAGE_VERSION_SENZINGAPI_TOOLS:-latest}" \
       "stream-loader;senzing/stream-loader;${SENZING_DOCKER_IMAGE_VERSION_STREAM_LOADER:-latest}" \
-      "docker-xterm;senzing/xterm;${SENZING_DOCKER_IMAGE_VERSION_XTERM:-latest}" \
-      "entity-search-web-app-console;senzing/entity-search-web-app-console;${SENZING_DOCKER_IMAGE_VERSION_ENTITY_SEARCH_WEB_APP_CONSOLE:-latest}" \
-      "docker-sshd;senzing/sshd;${SENZING_DOCKER_IMAGE_VERSION_SSHD:-latest};0" \
     )
 
     ```
@@ -147,20 +162,7 @@ The following steps creates a new Docker image by wrapping an existing image wit
 
     ```console
     export BASE_IMAGES=( \
-      "docker-senzing-console;senzing/senzing-console;${SENZING_DOCKER_IMAGE_VERSION_SENZING_CONSOLE:-latest}" \
       "senzing-poc-server;senzing/senzing-poc-server;${SENZING_DOCKER_IMAGE_VERSION_SENZING_POC_SERVER:-latest}" \
 
     )
     ```
-
-## Add Docker instructions to existing Dockerfile
-
-This technique is to copy, paste, and modify Docker instructions into the "original"
-Dockerfile to install Senzing.
-
-1. Using the `senzing/senzingapi-runtime`
-   [Dockerfile](https://github.com/Senzing/senzingapi-runtime/blob/main/Dockerfile) as a guide,
-   copy the Docker instructions into your `Dockerfile`
-
-1. The following environment variable are important:
-   - `LD_LIBRARY_PATH`
