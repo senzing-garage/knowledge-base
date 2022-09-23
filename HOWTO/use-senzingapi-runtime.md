@@ -41,7 +41,7 @@ The `senzing/senzingapi-runtime` image can be used as an initial layer.
     :
     ```
 
-## Wrap existing image
+## Extend existing image with Senzing binaries.
 
 The following steps creates a new Docker image by wrapping an existing image with Senzing binaries.
 
