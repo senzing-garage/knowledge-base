@@ -11,14 +11,17 @@ can be used in a number of ways to simplify development using the Senzing SDK li
 
 ## Overview
 
-There a few techniques to consider.
+There a few techniques to consider when building a custom "Senzing base image".
 Each choice produces similar result,
 so the choice will depend upon the existing Docker environment.
 
 1. [Simple inheritance](#simple-inheritance)
 1. [Extend existing image with Senzing binaries](#extend-existing-image-with-senzing-binaries)
 1. [Add Docker instructions to existing Dockerfile](#add-docker-instructions-to-existing-dockerfile)
-1. [Build Senzing images upon custom base image](#build-senzing-images-upon-custom-base-image)
+
+Once a Senzing base image has been created it can be used to:
+
+1. [Customize stock Senzing images](#customize-stock-senzing-images)
 
 ## Simple inheritance
 
@@ -114,7 +117,7 @@ Dockerfile to install Senzing.
 1. The following environment variable are important:
    - `LD_LIBRARY_PATH`
 
-## Build Senzing images upon custom base image
+## Customize stock Senzing images
 
 Once a customized base image has been created by one of these methods:
 
