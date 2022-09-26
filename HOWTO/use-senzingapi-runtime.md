@@ -16,8 +16,9 @@ Each choice produces similar result,
 so the choice will depend upon the existing Docker environment.
 
 1. [Simple inheritance](#simple-inheritance)
-1. [Wrap existing image](#wrap-existing-image)
+1. [Extend existing image with Senzing binaries](#extend-existing-image-with-senzing-binaries)
 1. [Add Docker instructions to existing Dockerfile](#add-docker-instructions-to-existing-dockerfile)
+1. [Build Senzing images upon custom base image](#build-senzing-images-upon-custom-base-image)
 
 ## Simple inheritance
 
