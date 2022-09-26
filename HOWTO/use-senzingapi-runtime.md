@@ -15,9 +15,12 @@ There a few techniques to consider when building a custom "Senzing base image".
 Each choice produces similar result,
 so the choice will depend upon the existing Docker environment.
 
-1. [Simple inheritance](#simple-inheritance)
-1. [Extend existing image with Senzing binaries](#extend-existing-image-with-senzing-binaries)
-1. [Add Docker instructions to existing Dockerfile](#add-docker-instructions-to-existing-dockerfile)
+1. [Simple inheritance](#simple-inheritance) -
+   Start with Senzing's stock base image and build upon it
+1. [Extend existing image with Senzing binaries](#extend-existing-image-with-senzing-binaries) -
+   Start with a non-Senzing image and add Senzing binaries to it
+1. [Add Docker instructions to existing Dockerfile](#add-docker-instructions-to-existing-dockerfile) -
+   Manually customize a Docker image
 
 Once a Senzing base image has been created it can be used to:
 
