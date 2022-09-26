@@ -12,7 +12,7 @@
 1. Find updated version of `debian` Docker image.
 1. Update `properties` in
    [update-dockerfiles-step-1-example.json](https://github.com/Senzing/github-util/blob/main/update-dockerfiles-step-1-example.json)
-1. Run
+1. Create Pull Requests by running:
 
     ```console
     export GITHUB_ACCESS_TOKEN=ghp_....................................
@@ -32,7 +32,7 @@
 1. Find updated version of `senzing/senzingapi-runtime` Docker image.
 1. Update `properties` in
    [update-dockerfiles-step-2-example.json](https://github.com/Senzing/github-util/blob/main/update-dockerfiles-step-2-example.json)
-1. Run
+1. Create Pull Requests by running:
 
     ```console
     export GITHUB_ACCESS_TOKEN=ghp_....................................
@@ -61,7 +61,7 @@
     Docker images.
 1. Update `properties` in
    [update-dockerfiles-step-3-example.json](https://github.com/Senzing/github-util/blob/main/update-dockerfiles-step-3-example.json)
-1. Run
+1. Create Pull Requests by running:
 
     ```console
     export GITHUB_ACCESS_TOKEN=ghp_....................................
