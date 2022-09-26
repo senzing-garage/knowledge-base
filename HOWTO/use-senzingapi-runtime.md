@@ -116,6 +116,15 @@ Dockerfile to install Senzing.
 
 ## Build Senzing images upon custom base image
 
+Once a customized base image has been created by one of these methods:
+
+- [Simple inheritance](#simple-inheritance)
+- [Extend existing image with Senzing binaries](#extend-existing-image-with-senzing-binaries)
+- [Add Docker instructions to existing Dockerfile](#add-docker-instructions-to-existing-dockerfile)
+
+or any other method, then the following instructions will create customized versions of "stock"
+Senzing Docker images:
+
 1. List the Github repository, DockerHub repository, version tag, and user for each Docker image and their
    [corresponding environment variable name](https://github.com/Senzing/knowledge-base/blob/main/lists/docker-versions-stable.sh).
 
