@@ -80,6 +80,8 @@
     1. [senzing/docker-sshd](https://github.com/Senzing/docker-sshd)
     1. [senzing/docker-senzing-console](https://github.com/Senzing/docker-senzing-console)
     1. [senzing/entity-search-web-app-console](https://github.com/Senzing/entity-search-web-app-console)
+    1. [senzing/entity-search-web-app](https://github.com/Senzing/entity-search-web-app)
+    1. [senzing/stream-producer](https://github.com/Senzing/stream-producer)
 1. Create versioned releases (including changes to Dockerfile and CHANGELOG.md) of the repositories
    listed in the `repositories` section of
    [update-dockerfiles-step-3-example.json](https://github.com/Senzing/github-util/blob/main/update-dockerfiles-step-3-example.json).
