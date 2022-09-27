@@ -39,6 +39,7 @@
     github-util.py update-dockerfiles --configuration-file update-dockerfiles-step-2-example.json
     ```
 
+1. Review and accept Pull requests generated.
 1. Update `senzingapi-tools` version in `senzing/senzingapi-tools`
    [Dockerfile](https://github.com/Senzing/senzingapi-tools/blob/main/Dockerfile)
 1. Create versioned releases (including changes to Dockerfile and CHANGELOG.md) of
@@ -68,6 +69,7 @@
     github-util.py update-dockerfiles --configuration-file update-dockerfiles-step-3-example.json
     ```
 
+1. Review and accept Pull requests generated.
 1. Create versioned releases (including changes to Dockerfile and CHANGELOG.md) of the repositories
    listed in the `repositories` section of
    [update-dockerfiles-step-3-example.json](https://github.com/Senzing/github-util/blob/main/update-dockerfiles-step-3-example.json).
