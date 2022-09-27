@@ -70,6 +70,30 @@
     ```
 
 1. Review and accept Pull requests generated.
+1. Once `:latest` versions are available on DockerHub,
+   run a small test similar to
+   [docker-compose-rabbitmq-postgresql](https://github.com/Senzing/docker-compose-demo/blob/main/docs/docker-compose-rabbitmq-postgresql/README.md#demonstrate), but with `:latest` versions.
+   Example:
+
+    ```console
+    export SENZING_VOLUME=~/my-senzing
+    export PGADMIN_DIR=${SENZING_VOLUME}/pgadmin
+    export POSTGRES_DIR=${SENZING_VOLUME}/postgres
+    export RABBITMQ_DIR=${SENZING_VOLUME}/rabbitmq
+    export SENZING_VAR_DIR=${SENZING_VOLUME}/var
+    export SENZING_UID=$(id -u)
+    export SENZING_GID=$(id -g)
+    mkdir -p ${PGADMIN_DIR} ${POSTGRES_DIR} ${RABBITMQ_DIR} ${SENZING_VAR_DIR}
+    chmod -R 777 ${SENZING_VOLUME}
+    curl -X GET \
+        --output ${SENZING_VOLUME}/docker-compose.yaml \
+        "https://raw.githubusercontent.com/Senzing/docker-compose-demo/main/resources/postgresql/docker-compose-rabbitmq-postgresql.yaml"
+    cd ${SENZING_VOLUME}
+    sudo --preserve-env docker-compose pull
+    sudo --preserve-env docker-compose up
+
+    ```
+
 1. Create versioned releases (including changes to Dockerfile and CHANGELOG.md) of
     1. [senzing/docker-senzing-console](https://github.com/Senzing/docker-senzing-console)
     1. [senzing/docker-sshd](https://github.com/Senzing/docker-sshd)
