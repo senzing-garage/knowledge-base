@@ -20,12 +20,15 @@
     ```
 
 1. Review and accept Pull requests generated.
-1. Update `senzingapi-runtime` version in `senzing/senzingapi-runtime`
-   [Dockerfile](https://github.com/Senzing/senzingapi-runtime/blob/main/Dockerfile)
-1. Create versioned releases (including changes to Dockerfile and CHANGELOG.md) of
-    1. [senzing/senzingapi-runtime](https://github.com/Senzing/senzingapi-runtime)
-    1. [senzing/docker-senzing-base](https://github.com/Senzing/docker-senzing-base)
-    1. [senzing/docker-base-image-debian](https://github.com/Senzing/docker-base-image-debian)
+1. Create issues for creating versioned releases (i.e. changes to Dockerfile and CHANGELOG.md).
+   Examples:
+    1. [senzingapi-runtime](https://github.com/Senzing/senzingapi-runtime/issues/31)
+        1. Update `senzingapi-runtime` version in
+           [Dockerfile](https://github.com/Senzing/senzingapi-runtime/blob/main/Dockerfile)
+    1. [docker-senzing-base](https://github.com/Senzing/docker-senzing-base/issues/126)
+    1. [docker-base-image-debian](https://github.com/Senzing/docker-base-image-debian/issues/42)
+1. Close issues
+1. Create GitHub releases
 
 ### Update Docker images on Docker Hub - Phase 2
 
@@ -40,10 +43,13 @@
     ```
 
 1. Review and accept Pull requests generated.
-1. Update `senzingapi-tools` version in `senzing/senzingapi-tools`
-   [Dockerfile](https://github.com/Senzing/senzingapi-tools/blob/main/Dockerfile)
-1. Create versioned releases (including changes to Dockerfile and CHANGELOG.md) of
-    1. [senzing/senzingapi-tools](https://github.com/Senzing/senzingapi-tools)
+1. Create issues for creating versioned releases (i.e. changes to Dockerfile and CHANGELOG.md).
+   Examples:
+    1. [senzingapi-tools](https://github.com/Senzing/senzingapi-tools/issues/25)
+        1. Update `senzingapi-tools` version in
+           [Dockerfile](https://github.com/Senzing/senzingapi-tools/blob/main/Dockerfile)
+1. Close issues
+1. Create GitHub releases
 
 ### Update Docker images on Docker Hub - Phase 3
 
