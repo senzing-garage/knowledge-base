@@ -19,9 +19,9 @@
     github-util.py update-dockerfiles --configuration-file update-dockerfiles-step-1-example.json
     ```
 
+1. Review and accept Pull requests generated.
 1. Update `senzingapi-runtime` version in `senzing/senzingapi-runtime`
    [Dockerfile](https://github.com/Senzing/senzingapi-runtime/blob/main/Dockerfile)
-1. Review and accept Pull requests generated.
 1. Create versioned releases (including changes to Dockerfile and CHANGELOG.md) of
     1. [senzing/senzingapi-runtime](https://github.com/Senzing/senzingapi-runtime)
     1. [senzing/docker-senzing-base](https://github.com/Senzing/docker-senzing-base)
