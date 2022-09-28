@@ -103,7 +103,6 @@
 1. Create versioned releases (including changes to Dockerfile and CHANGELOG.md) of
     1. [senzing/docker-senzing-console](https://github.com/Senzing/docker-senzing-console)
     1. [senzing/docker-sshd](https://github.com/Senzing/docker-sshd)
-    1. [senzing/docker-web-app-demo](https://github.com/Senzing/docker-web-app-demo)
     1. [senzing/docker-xterm](https://github.com/Senzing/docker-xterm)
     1. [senzing/entity-search-web-app-console](https://github.com/Senzing/entity-search-web-app-console)
     1. [senzing/entity-search-web-app](https://github.com/Senzing/entity-search-web-app)
@@ -113,6 +112,10 @@
     1. [senzing/senzing-poc-server](https://github.com/Senzing/senzing-poc-server)
     1. [senzing/stream-loader](https://github.com/Senzing/stream-loader)
     1. [senzing/stream-producer](https://github.com/Senzing/stream-producer)
+1. After the new `senzing/senzing-poc-server` and `senzing/entity-search-web-app` are on DockerHub,
+   update the `COPY` Docker instructions in the `Dockerfile`  for
+   [senzing/docker-web-app-demo](https://github.com/Senzing/docker-web-app-demo)
+   and make a new versioned release.
 1. Create versioned releases (including changes to Dockerfile and CHANGELOG.md) of the repositories
    listed in the `repositories` section of
    [update-dockerfiles-step-3-example.json](https://github.com/Senzing/github-util/blob/main/update-dockerfiles-step-3-example.json).
