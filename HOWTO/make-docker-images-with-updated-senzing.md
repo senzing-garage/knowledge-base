@@ -109,9 +109,13 @@
     1. [senzing/init-postgresql](https://github.com/Senzing/init-postgresql)
     1. [senzing/redoer](https://github.com/Senzing/redoer)
     1. [senzing/senzing-api-server](https://github.com/Senzing/senzing-api-server)
-    1. [senzing/senzing-poc-server](https://github.com/Senzing/senzing-poc-server)
     1. [senzing/stream-loader](https://github.com/Senzing/stream-loader)
     1. [senzing/stream-producer](https://github.com/Senzing/stream-producer)
+
+1. After the new `senzing/senzing-api-server` is on DockerHub,
+   update the Git "senzing-api-server" submodule in
+   [senzing/senzing-poc-server](https://github.com/Senzing/senzing-poc-server)
+   and make a new versioned release.
 1. After the new `senzing/senzing-poc-server` and `senzing/entity-search-web-app` are on DockerHub,
    update the `COPY` Docker instructions in the
    [senzing/docker-web-app-demo](https://github.com/Senzing/docker-web-app-demo)
