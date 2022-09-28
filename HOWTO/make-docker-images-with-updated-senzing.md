@@ -113,8 +113,9 @@
     1. [senzing/stream-loader](https://github.com/Senzing/stream-loader)
     1. [senzing/stream-producer](https://github.com/Senzing/stream-producer)
 1. After the new `senzing/senzing-poc-server` and `senzing/entity-search-web-app` are on DockerHub,
-   update the `COPY` Docker instructions in the `Dockerfile`  for
+   update the `COPY` Docker instructions in the
    [senzing/docker-web-app-demo](https://github.com/Senzing/docker-web-app-demo)
+   `Dockerfile`
    and make a new versioned release.
 1. Create versioned releases (including changes to Dockerfile and CHANGELOG.md) of the repositories
    listed in the `repositories` section of
