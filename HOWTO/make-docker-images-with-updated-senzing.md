@@ -109,6 +109,7 @@
     1. [senzing/entity-search-web-app](https://github.com/Senzing/entity-search-web-app)
     1. [senzing/init-postgresql](https://github.com/Senzing/init-postgresql)
     1. [senzing/redoer](https://github.com/Senzing/redoer)
+    1. [senzing/senzing-api-server](https://github.com/Senzing/senzing-api-server)
     1. [senzing/senzing-poc-server](https://github.com/Senzing/senzing-poc-server)
     1. [senzing/stream-loader](https://github.com/Senzing/stream-loader)
     1. [senzing/stream-producer](https://github.com/Senzing/stream-producer)
