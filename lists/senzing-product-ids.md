@@ -41,6 +41,23 @@ Used in log message identifiers in the format `senzing-ppppnnnnt`, where:
 1. **5032** - [keystore-generator](https://github.com/Senzing/keystore-generator)
 1. **5032** - [init-mssql](https://github.com/Senzing/init-mssql)
 
-## Docker apps
+## Go SDK and apps
 
-1. **6001** - [senzing/python-flask-rest-api](https://github.com/Senzing/docker-python-flask-rest-api)
+### SDK
+1. **6001** - github.com/senzing/g2-sdk-go/g2config
+1. **6002** - github.com/senzing/g2-sdk-go/g2configmgr
+1. **6003** - github.com/senzing/g2-sdk-go/g2diagnostic
+1. **6004** - github.com/senzing/g2-sdk-go/g2engine
+1. **6005** - github.com/senzing/g2-sdk-go/g2hasher
+1. **6006** - github.com/senzing/g2-sdk-go/g2product
+1. **6007** - github.com/senzing/g2-sdk-go/g2ssadm
+
+### senzing-tools
+
+1. **6100** - github.com/senzing/senzing-tools/...
+
+### Components for senzing-tools
+
+1. **6201** - github.com/senzing/load/...
+1. **6202** - github.com/senzing/move/...
+1. **6202** - github.com/senzing/validate/...
