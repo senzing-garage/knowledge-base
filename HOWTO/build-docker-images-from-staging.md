@@ -13,7 +13,6 @@
         --build-arg SENZING_APT_REPOSITORY_NAME=senzingstagingrepo_1.0.1-1_amd64.deb \
         --build-arg SENZING_APT_REPOSITORY_URL=https://senzing-staging-apt.s3.amazonaws.com \
         --no-cache \
-        --tag senzing/senzingapi-runtime \
         --tag senzing/senzingapi-runtime:staging \
         https://github.com/senzing/senzingapi-runtime.git#main
     ```
@@ -37,9 +36,8 @@
       --build-arg BASE_IMAGE=senzing/senzingapi-runtime:staging \
       --build-arg SENZING_APT_INSTALL_TOOLS_PACKAGE=senzingapi-tools \
       --no-cache \
-      --tag senzing/senzingapi-tools \
       --tag senzing/senzingapi-tools:staging \
-      https://github.com/senzing/senzingapi-tools.git#issue-5.ron.1
+      https://github.com/senzing/senzingapi-tools.git#main
     ```
 
 1. Push to DockerHub.
@@ -60,7 +58,6 @@
     docker build \
         --build-arg BASE_IMAGE=senzing/senzingapi-runtime:staging \
         --no-cache \
-        --tag senzing/stream-loader \
         --tag senzing/stream-loader:staging \
         https://github.com/senzing/stream-loader.git#main
     ```
@@ -83,7 +80,6 @@
     docker build \
         --build-arg BASE_IMAGE=senzing/senzingapi-runtime:staging \
         --no-cache \
-        --tag senzing/redoer \
         --tag senzing/redoer:staging \
         https://github.com/senzing/redoer.git#main
     ```
@@ -106,7 +102,6 @@
     docker build \
         --build-arg BASE_IMAGE=senzing/senzingapi-runtime:staging \
         --no-cache \
-        --tag senzing/senzing-api-server \
         --tag senzing/senzing-api-server:staging \
         https://github.com/senzing/senzing-api-server.git#main
     ```
@@ -129,7 +124,6 @@
     docker build \
         --build-arg BASE_IMAGE=senzing/senzingapi-runtime:staging \
         --no-cache \
-        --tag senzing/senzing-poc-server \
         --tag senzing/senzing-poc-server:staging \
         https://github.com/senzing/senzing-poc-server.git#main
     ```
@@ -152,9 +146,8 @@
     docker build \
         --build-arg BASE_IMAGE=senzing/senzingapi-tools:staging \
         --no-cache \
-        --tag senzing/senzing-console \
         --tag senzing/senzing-console:staging \
-        https://github.com/senzing/docker-senzing-console.git#issue-64.ron.0
+        https://github.com/senzing/docker-senzing-console.git#main
     ```
 
 1. Push to DockerHub.
@@ -175,9 +168,8 @@
     docker build \
         --build-arg BASE_IMAGE=senzing/senzingapi-tools:staging \
         --no-cache \
-        --tag senzing/sshd \
         --tag senzing/sshd:staging \
-        https://github.com/senzing/docker-sshd.git#issue-76.ron.0
+        https://github.com/senzing/docker-sshd.git#main
     ```
 
 1. Push to DockerHub.
@@ -198,9 +190,8 @@
     docker build \
         --build-arg BASE_IMAGE=senzing/senzingapi-tools:staging \
         --no-cache \
-        --tag senzing/entity-search-web-app-console \
         --tag senzing/entity-search-web-app-console:staging \
-        https://github.com/senzing/entity-search-web-app-console.git#issue20.awinters.1
+        https://github.com/senzing/entity-search-web-app-console.git#main
     ```
 
 1. Push to DockerHub.
@@ -221,9 +212,8 @@
     docker build \
         --build-arg BASE_IMAGE=senzing/senzingapi-tools:staging \
         --no-cache \
-        --tag senzing/xterm \
         --tag senzing/xterm:staging \
-        https://github.com/senzing/docker-xterm.git#issue-83.ron.0
+        https://github.com/senzing/docker-xterm.git#main
     ```
 
 1. Push to DockerHub.
@@ -244,7 +234,6 @@
     docker build \
         --build-arg BASE_IMAGE=senzing/senzingapi-tools:staging \
         --no-cache \
-        --tag senzing/g2configtool \
         --tag senzing/g2configtool:staging \
         https://github.com/senzing/g2configtool.git#main
     ```
@@ -260,7 +249,6 @@
     docker build \
         --build-arg BASE_IMAGE=senzing/senzingapi-runtime:staging \
         --no-cache \
-        --tag senzing/init-postgresql \
         --tag senzing/init-postgresql:staging \
         https://github.com/senzing/init-postgresql.git#main
     ```
@@ -283,7 +271,6 @@
     docker build \
         --build-arg BASE_IMAGE=senzing/senzingapi-runtime:staging \
         --no-cache \
-        --tag senzing/web-app-demo \
         --tag senzing/web-app-demo:staging \
         https://github.com/senzing/docker-web-app-demo.git#main
     ```
@@ -306,7 +293,6 @@
         --build-arg SENZING_APT_REPOSITORY_NAME=senzingstagingrepo_1.0.1-1_amd64.deb \
         --build-arg SENZING_APT_REPOSITORY_URL=https://senzing-staging-apt.s3.amazonaws.com \
         --no-cache \
-        --tag senzing/senzingapi-runtime \
         --tag senzing/senzingapi-runtime:staging \
         https://github.com/senzing/senzingapi-runtime.git#main
 
@@ -316,7 +302,6 @@
         --build-arg BASE_IMAGE=senzing/senzingapi-runtime:staging \
         --build-arg SENZING_APT_INSTALL_TOOLS_PACKAGE=senzingapi-tools \
         --no-cache \
-        --tag senzing/senzingapi-tools \
         --tag senzing/senzingapi-tools:staging \
         https://github.com/senzing/senzingapi-tools.git#main
 
@@ -325,7 +310,6 @@
     docker build \
         --build-arg BASE_IMAGE=senzing/senzingapi-runtime:staging \
         --no-cache \
-        --tag senzing/stream-loader \
         --tag senzing/stream-loader:staging \
         https://github.com/senzing/stream-loader.git#main
 
@@ -334,7 +318,6 @@
     docker build \
         --build-arg BASE_IMAGE=senzing/senzingapi-runtime:staging \
         --no-cache \
-        --tag senzing/redoer \
         --tag senzing/redoer:staging \
         https://github.com/senzing/redoer.git#main
 
@@ -343,7 +326,6 @@
     docker build \
         --build-arg BASE_IMAGE=senzing/senzingapi-runtime:staging \
         --no-cache \
-        --tag senzing/senzing-api-server \
         --tag senzing/senzing-api-server:staging \
         https://github.com/senzing/senzing-api-server.git#main
 
@@ -352,7 +334,6 @@
     docker build \
         --build-arg BASE_IMAGE=senzing/senzingapi-runtime:staging \
         --no-cache \
-        --tag senzing/senzing-poc-server \
         --tag senzing/senzing-poc-server:staging \
         https://github.com/senzing/senzing-poc-server.git#main
 
@@ -361,7 +342,6 @@
     docker build \
         --build-arg BASE_IMAGE=senzing/senzingapi-tools:staging \
         --no-cache \
-        --tag senzing/senzing-console \
         --tag senzing/senzing-console:staging \
         https://github.com/senzing/docker-senzing-console.git#main
 
@@ -370,7 +350,6 @@
     docker build \
         --build-arg BASE_IMAGE=senzing/senzingapi-tools:staging \
         --no-cache \
-        --tag senzing/sshd \
         --tag senzing/sshd:staging \
         https://github.com/senzing/docker-sshd.git#main
 
@@ -379,7 +358,6 @@
     docker build \
         --build-arg BASE_IMAGE=senzing/senzingapi-tools:staging \
         --no-cache \
-        --tag senzing/entity-search-web-app-console \
         --tag senzing/entity-search-web-app-console:staging \
         https://github.com/senzing/entity-search-web-app-console.git#main
 
@@ -388,7 +366,6 @@
     docker build \
         --build-arg BASE_IMAGE=senzing/senzingapi-tools:staging \
         --no-cache \
-        --tag senzing/xterm \
         --tag senzing/xterm:staging \
         https://github.com/senzing/docker-xterm.git#main
 
@@ -397,7 +374,6 @@
     docker build \
         --build-arg BASE_IMAGE=senzing/senzingapi-tools:staging \
         --no-cache \
-        --tag senzing/g2configtool \
         --tag senzing/g2configtool:staging \
         https://github.com/senzing/g2configtool.git#main
 
@@ -406,7 +382,6 @@
     docker build \
         --build-arg BASE_IMAGE=senzing/senzingapi-runtime:staging \
         --no-cache \
-        --tag senzing/init-postgresql \
         --tag senzing/init-postgresql:staging \
         https://github.com/senzing/init-postgresql.git#main
 
@@ -415,7 +390,6 @@
     docker build \
         --build-arg BASE_IMAGE=senzing/senzingapi-runtime:staging \
         --no-cache \
-        --tag senzing/web-app-demo \
         --tag senzing/web-app-demo:staging \
         https://github.com/senzing/docker-web-app-demo.git#main
 
