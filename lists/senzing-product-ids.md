@@ -51,6 +51,7 @@ Used in log message identifiers in the format `senzing-ppppnnnnt`, where:
 1. **6005** - github.com/senzing/g2-sdk-go/g2hasher
 1. **6006** - github.com/senzing/g2-sdk-go/g2product
 1. **6007** - github.com/senzing/g2-sdk-go/g2ssadm
+1. **6008** - github.com/senzing/g2-sdk-go/test
 
 ### senzing-tools
 
