@@ -1,6 +1,6 @@
-# Install senzingapi
+# Install Senzing API
 
-The Senzing API is packaged for installation in RPM and DEB formats.
+The Senzing API is packaged for installation in RPM and DEB file formats.
 
 The following installation techniques will install Senzing in a manner
 consistent with the Senzing Service Level Agreement (SLA).
@@ -42,7 +42,7 @@ on the local system in the `/opt/senzing` directory.
 
 This technique, although rarely used, can be handy if you are using MacOS, Windows, or cross-compiling.
 
-1. Build Senzing installer.
+1. Build Senzing installer Docker image.
 
     ```console
     curl -X GET \
@@ -78,3 +78,9 @@ This technique, although rarely used, can be handy if you are using MacOS, Windo
             senzing/installer:${SENZING_VERSION_SENZINGAPI}
 
     ```
+
+## Next steps
+
+One or more of the following may need to be done:
+
+1. [Configure](./configure) a Senzing API system installation.
