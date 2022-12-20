@@ -13,6 +13,11 @@
 
 ## Go
 
+1. [VSCode-go GitHub repository](https://github.com/golang/vscode-go)
+1. [VSCode-Go Wiki](https://github.com/golang/vscode-go/wiki)
+    1. [Features](https://github.com/golang/vscode-go/wiki/features)
+    1. [Commands](https://github.com/golang/vscode-go/wiki/commands)
+
 ## Python
 
 ### Python formatting
@@ -22,7 +27,3 @@
 ## References
 
 1. [Product page](https://code.visualstudio.com/)
-1. [GitHub repository](https://github.com/golang/vscode-go)
-1. [Wiki](https://github.com/golang/vscode-go/wiki)
-    1. [Features](https://github.com/golang/vscode-go/wiki/features)
-    1. [Commands](https://github.com/golang/vscode-go/wiki/commands)
