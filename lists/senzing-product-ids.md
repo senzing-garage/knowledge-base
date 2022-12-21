@@ -53,6 +53,14 @@ Used in log message identifiers in the format `senzing-ppppnnnnt`, where:
 1. **6007** - github.com/senzing/g2-sdk-go/g2ssadm
 1. **6008** - github.com/senzing/g2-sdk-go/test
 1. **6009** - github.com/senzing/g2-sdk-go/testhelpers
+1. **6011** - github.com/senzing/go-servegrpc/g2configserver
+1. **6012** - github.com/senzing/go-servegrpc/g2configmgrserver
+1. **6013** - github.com/senzing/go-servegrpc/g2diagnosticserver
+1. **6014** - github.com/senzing/go-servegrpc/g2engineserver
+1. **6015** - github.com/senzing/go-servegrpc/g2hasherserver
+1. **6016** - github.com/senzing/go-servegrpc/g2productserver
+1. **6017** - github.com/senzing/go-servegrpc/g2ssadmserver
+
 
 ### senzing-tools
 
