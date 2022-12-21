@@ -77,6 +77,10 @@ Open range: 8250-8265
 
 - [entity-search-web-app-console](https://github.com/Senzing/entity-search-web-app-console)
 
+### 8258
+
+- [servegprc](https://github.com/Senzing/servegprc)
+
 ### 8260
 
 - Reserved for tools
