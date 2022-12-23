@@ -61,13 +61,14 @@ Used in log message identifiers in the format `senzing-ppppnnnnt`, where:
 1. **6016** - github.com/senzing/go-servegrpc/g2productserver
 1. **6017** - github.com/senzing/go-servegrpc/g2ssadmserver
 
-
 ### senzing-tools
 
 1. **6100** - github.com/senzing/senzing-tools/...
 
 ### Components for senzing-tools
 
-1. **6201** - github.com/senzing/load/...
-1. **6202** - github.com/senzing/move/...
-1. **6203** - github.com/senzing/validate/...
+1. **6201** - github.com/senzing/load
+1. **6202** - github.com/senzing/move
+1. **6203** - github.com/senzing/validate
+1. **6204** - github.com/senzing/servegrpc
+
