@@ -1325,7 +1325,7 @@
 ### SENZING_ENGINE_CONFIGURATION_JSON
 
 1. Synopsis:
-    1. A JSON string that is a parameter to the Senzing Engine's `*.initV2()` function.
+    1. A JSON string that is a parameter to the Senzing Engine's `*.init()` function.
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_ENGINE_CONFIGURATION_JSON&type=code)
 
 ### SENZING_ENTITY_TYPE
