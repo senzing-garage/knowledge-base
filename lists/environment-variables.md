@@ -603,19 +603,101 @@
     1. Default: none
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_RPM_DIR&type=code)
 
-### SENZING_API_SERVICE_PORT
+### SENZING_API_SERVER_ALLOWED_ORIGINS
 
 1. Synopsis:
-    1. Port on localhost for Senzing API service.
+    1. Sets the CORS `Access-Control-Allow-Origin` header for all Senzing API Server endpoints.  
+       There is no default value.  If not specified then the Access-Control-Allow-Origin is not 
+       included with responses.
+1. Values:
+    1. Default: **N/A**
+    2. The asterisk `*` can be used to allow all origins as per `Access-Control-Allow-Origin` header specification.
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_ALLOWED_ORIGINS&type=code)
+
+### SENZING_API_SERVER_BASE_PATH
+
+1. Synopsis:
+    1. Sets the URL base path for the Senzing API Server.
+1. Values:
+    1. Default: `/`
+    2. Typically specified as a path beginning with `/` such as `/api`
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_BASE_PATH&type=code)
+
+### SENZING_API_SERVER_BIND_ADDR
+
+1. Synopsis:
+    1. Sets the bind address for Senzing API Server HTTP communication.  The specified value can be an IP Address,
+       the keyword `loopback` for the local loopback address (e.g.: `127.0.0.1` for IPv4) or `all` to bind to all
+       addresses (i.e.: network interfaces).  If not provided the bind address defaults to the loopback address.
+1. Values:
+    1. Default: `loopback` (for the local loopback address)
+    2. An IP-Address for a specific network interface on the host
+    3. The keyword `all` to indicate all network interfaces on the host.
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_BIND_ADDR&type=code)
+
+### SENZING_API_SERVER_CONCURRENCY
+
+1. Synopsis:
+    1. Sets the number of threads available for the Senzing API Server to execute Senzing API functions
+       (i.e.: the number of engine threads).  If not specified, then this defaults to 8.
+1. Values:
+    1. Default: `8`
+    2. If specified, then a non-zero integer should be provided.  Take care not to make this too large.
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_CONCURRENCY&type=code)
+
+### SENZING_API_SERVER_ENABLE_ADMIN
+
+1. Synopsis:
+    1. Controls whether or not to enable Senzing API Server administrative functions.  Administrative functions
+       include those that would modify the active configuration (e.g.: adding data sources).  If **not specified 
+       with a value of `true` then administrative functions will return a 403 Forbidden response.
+    1. See [SENZING_API_SERVER_READ_ONLY](#SENZING_API_SERVER_READ_ONLY)
+1. Values:
+    1. Default: `false`
+    2. Specify `true` to enable administrative functions.
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_ENABLE_ADMIN&type=code)
+
+### SENZING_API_SERVER_HTTP_CONCURRENCY
+
+1. Synopsis:
+    1. Sets the maximum number of threads available for the Senzing API Server's embedded HTTP server.
+       The single parameter to this option should be a positive integer.  If not specified, then this
+       defaults to 200.  If the specified thread count is less than 10 then an error is reported.
+1. Values:
+    1. Default: `200`
+    2. If specified, then an integer greater-than 10 should be provided.  Take care not to make this too large.
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_HTTP_CONCURRENCY&type=code)
+
+### SENZING_API_SERVER_PORT
+
+1. Synopsis:
+    1. Port for Senzing API Server HTTP communication.  If not specified, then the default port (8250) is used.
+       Specify 0 for a arbitrarily selected port number from the available ports.  This option **cannot** be 
+       specified if SSL client authentication is configured for the Senzing API Server.
     1. See [Port 8250](https://github.com/Senzing/knowledge-base/blob/main/lists/ports-used-in-demonstrations.md#8250)
+    2. See [SENZING_API_SERVER_CLIENT_KEY_STORE](#SENZING_API_SERVER_CLIENT_KEY_STORE)
 1. Values:
     1. Default: 8250
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVICE_PORT&type=code)
+    2. A valid non-zero integer for an available port may be specified.
+    3. Specify `0` to have the Senzing API Server select an arbitrary port number from the available ports.
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_PORT&type=code)
+
+### SENZING_API_SERVER_READ_ONLY
+
+1. Synopsis:
+    1. Controls whether or not to disable Senzing API Server functions that would modify the entity repository data. 
+       If specified with a value of `true` then those functions that would modify the repository return a 
+       403 Forbidden response.  **NOTE**: this option will not only disable loading data to the entity repository,
+       but will also disable  modifications to the configuration even if admin functions are enabled.
+    1. See [SENZING_API_SERVER_ENABLE_ADMIN](#SENZING_API_SERVER_ENABLE_ADMIN)
+1. Values:
+    1. Default: `true`
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_READ_ONLY&type=code)
 
 ### SENZING_API_SERVER_URL
 
 1. Synopsis:
-    1. A URL consisting of host:port running Senzing API server.
+    1. A URL consisting of host:port running Senzing API Server.
     1. See [Port 8250](https://github.com/Senzing/knowledge-base/blob/main/lists/ports-used-in-demonstrations.md#8250)
 1. Values:
     1. Format: `http://${hostname}:${SENZING_API_SERVICE_PORT}`
