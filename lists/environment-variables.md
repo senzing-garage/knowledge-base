@@ -614,6 +614,20 @@
     2. The asterisk `*` can be used to allow all origins as per `Access-Control-Allow-Origin` header specification.
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_ALLOWED_ORIGINS&type=code)
 
+### SENZING_API_SERVER_AUTO_REFRESH_PERIOD
+
+1. Synopsis:
+    1. Specifies the number of milliseconds between Senzing API Server background checks to verify that the current
+       active config is the same as the current default config, and if different reinitialize with the current default
+       config (making it the active config).  If zero is specified, then the auto-refresh is disabled and it will only
+       occur when a requested configuration element is not found in the current active config.  **NOTE**: This is option
+       ignored if auto-refresh is disabled because the config was specified via the `G2CONFIGFILE` init option or if
+       `SENZING_API_SERVER_CONFIG_ID` has been specified to lock to a specific configuration.
+1. Values:
+    1. Default: `10000` (milliseconds)
+    2. `0`: only check and auto-refresh if a configuration element is not found.
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_AUTO_REFRESH_PERIOD&type=code)
+
 ### SENZING_API_SERVER_BASE_PATH
 
 1. Synopsis:
@@ -634,6 +648,19 @@
     2. An IP-Address for a specific network interface on the host
     3. The keyword `all` to indicate all network interfaces on the host.
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_BIND_ADDR&type=code)
+
+### SENZING_API_SERVER_CONFIG_ID
+
+1. Synopsis:
+    1. Used to pin the configuration for the Senzing API Server to a specific configuration ID.  If specified, then
+       the Senzing API Server will not attempt to load the default configuration from the database, nor will it update
+       automatically by refreshing the configuration when the default configuration gets updated.  If not specified,
+       the the default configuration configured in the repository is used and the Senzing API Server will automatically
+       refresh the configuration when a change is detected.
+1. Values:
+    1. Default: **N/A**
+    2. If specified, then a valud Senzing configuration ID for the entity repository must be specified.
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_CONFIG_ID&type=code)
 
 ### SENZING_API_SERVER_CONCURRENCY
 
@@ -667,6 +694,73 @@
     1. Default: `200`
     2. If specified, then an integer greater-than 10 should be provided.  Take care not to make this too large.
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_HTTP_CONCURRENCY&type=code)
+
+### SENZING_API_SERVER_INI_FILE
+
+1. Synopsis:
+    1. Specifies the file path to the INI file containing the INI configuration with which to initialize the
+       Senzing API Server.  This is one of five environment variables that can be used to initialize the
+       Senzing API Server.
+    2. See [SENZING_API_SERVER_INIT_FILE](#SENZING_API_SERVER_INIT_FILE)
+    3. See [SENZING_API_SERVER_INIT_JSON](#SENZING_API_SERVER_INIT_JSON)
+    4. See [SENZING_API_SERVER_INIT_ENV_VAR](#SENZING_API_SERVER_INIT_ENV_VAR)
+    5. See [SENZING_ENGINE_CONFIGURATION_JSON](#SENZING_ENGINE_CONFIGURATION_JSON)
+1. Values:
+    1. Default: **N/A**
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_INI_FILE&type=code)
+
+### SENZING_API_SERVER_INIT_ENV_VAR
+
+1. Synopsis:
+    1. Specifies the the name of an alternate environment variable whose value is the JSON configuration
+       with which to initialize the Senzing API Server.  This is one of five environment variables that
+       can be used to initialize the Senzing API Server.
+    2. See [SENZING_API_SERVER_INI_FILE](#SENZING_API_SERVER_INI_FILE)
+    3. See [SENZING_API_SERVER_INIT_FILE](#SENZING_API_SERVER_INIT_FILE)
+    4. See [SENZING_API_SERVER_INIT_JSON](#SENZING_API_SERVER_INIT_JSON)
+    5. See [SENZING_ENGINE_CONFIGURATION_JSON](#SENZING_ENGINE_CONFIGURATION_JSON)
+1. Values:
+    1. Default: **N/A**
+    2. Should be the name of an environment variable that has been set and contians the JSON configuration.
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_INIT_ENV_VAR&type=code)
+
+### SENZING_API_SERVER_INIT_FILE
+
+1. Synopsis:
+    1. Specifies the file path to the JSON file containing the JSON configuration with which to initialize
+       the Senzing API Server.  This is one of five environment variables that can be used to initialize
+       the Senzing API Server.
+    2. See [SENZING_API_SERVER_INI_FILE](#SENZING_API_SERVER_INI_FILE)
+    3. See [SENZING_API_SERVER_INIT_JSON](#SENZING_API_SERVER_INIT_JSON)
+    4. See [SENZING_API_SERVER_INIT_ENV_VAR](#SENZING_API_SERVER_INIT_ENV_VAR)
+    5. See [SENZING_ENGINE_CONFIGURATION_JSON](#SENZING_ENGINE_CONFIGURATION_JSON)
+1. Values:
+    1. Default: **N/A**
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_INIT_FILE&type=code)
+
+### SENZING_API_SERVER_INIT_JSON
+
+1. Synopsis:
+    1. Specifies the JSON configuration text with which to initialize the Senzing API Server.  If not found,
+       the Senzing API Server falls back to using the `SENZING_ENGINE_CONFIGURATION_JSON` environment variable.
+       If both are specified then `SENZING_API_SERVER_INIT_JSON` takes priority for initializing the 
+       Senzing API Server.
+    2. See [SENZING_API_SERVER_INI_FILE](#SENZING_API_SERVER_INI_FILE)
+    3. See [SENZING_API_SERVER_INIT_FILE](#SENZING_API_SERVER_INIT_FILE)
+    4. See [SENZING_API_SERVER_INIT_ENV_VAR](#SENZING_API_SERVER_INIT_ENV_VAR)
+    5. See [SENZING_ENGINE_CONFIGURATION_JSON](#SENZING_ENGINE_CONFIGURATION_JSON)
+1. Values:
+    1. Default: **N/A**
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_INIT_JSON&type=code)
+
+### SENZING_API_SERVER_MODULE_NAME
+
+1. Synopsis:
+    1. Sets the Senzing API Server module name with which to initialize the engine.  If not specified, then
+       the module name defaults to `senzing-api-server`
+1. Values:
+    1. Default: `senzing-api-server`
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_MODULE_NAME&type=code)
 
 ### SENZING_API_SERVER_PORT
 
