@@ -712,6 +712,22 @@
     2. If specified, then an integer greater-than 10 should be provided.  Take care not to make this too large.
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_HTTP_CONCURRENCY&type=code)
 
+### SENZING_API_SERVER_HTTPS_PORT
+
+1. Synopsis:
+    1. Sets the Senzing API Server port for secure HTTPS communication.  While the default HTTPS port is 8263 if
+       not specified, HTTPS is only enabled if the [SENZING_API_SERVER_KEY_STORE](#SENZING_API_SERVER_KEY_STORE)
+       environment variable is set.  Specify zero (0) for an arbitrarily selected available port.
+    2. See [Port 8263](https://github.com/Senzing/knowledge-base/blob/main/lists/ports-used-in-demonstrations.md#8263)
+    3. See [SENZING_API_SERVER_KEY_STORE](#SENZING_API_SERVER_KEY_STORE)
+    4. See [SENZING_API_SERVER_KEY_STORE_PASSWORD](#SENZING_API_SERVER_KEY_STORE_PASSWORD)
+    5. See [SENZING_API_SERVER_KEY_ALIAS](#SENZING_API_SERVER_KEY_ALIAS)
+1. Values:
+    1. Default: 8263
+    2. A valid non-zero integer for an available port may be specified.
+    3. Specify `0` to have the Senzing API Server select an arbitrary port number from the available ports.
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_HTTPS_PORT&type=code)
+
 ### SENZING_API_SERVER_INI_FILE
 
 1. Synopsis:
