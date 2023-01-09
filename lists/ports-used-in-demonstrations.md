@@ -81,6 +81,10 @@ Open range: 8250-8265
 
 - [servegprc](https://github.com/Senzing/servegprc)
 
+### 8259
+
+- [dashboard](https://github.com/Senzing/dashboard)
+
 ### 8260
 
 - Reserved for tools
