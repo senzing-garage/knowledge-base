@@ -649,6 +649,40 @@
     3. The keyword `all` to indicate all network interfaces on the host.
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_BIND_ADDR&type=code)
 
+### SENZING_API_SERVER_CLIENT_KEY_STORE
+
+1. Synopsis:
+    1. Sets the Senzing API Server PKCS12 client key store file that holds the public keys of those clients
+       that are authorized to connect.  If this option is specified then SSL client authentication is required
+       to connect and [SENZING_API_SERVER_PORT](#SENZING_API_SERVER_PORT) option is forbidden.
+    2. See [SENZING_API_SERVER_SECURE_PORT](#SENZING_API_SERVER_SECURE_PORT)
+    3. See [SENZING_API_SERVER_KEY_STORE](#SENZING_API_SERVER_KEY_STORE)
+    4. See [SENZING_API_SERVER_KEY_STORE_PASSWORD](#SENZING_API_SERVER_KEY_STORE_PASSWORD)
+    5. See [SENZING_API_SERVER_KEY_ALIAS](#SENZING_API_SERVER_KEY_ALIAS)
+    6. See [SENZING_API_SERVER_CLIENT_KEY_STORE_PASSWORD](#SENZING_API_SERVER_CLIENT_KEY_STORE_PASSWORD)
+1. Values:
+    1. Default: **N/A**
+    2. Specify a file path to the PKCS12 key store file that contains the public client keys for those 
+       clients that authotrized to connect.
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_CLIENT_KEY_STORE&type=code)
+
+### SENZING_API_SERVER_CLIENT_KEY_STORE_PASSWORD
+
+1. Synopsis:
+    1. Sets the Senzing API Server PKCS12 client key store password to decrypt the
+       [client key store file](#SENZING_API_SERVER_CLIENT_KEY_STORE) that holds the public keys of those clients
+       that are authorized to connect.
+    2. See [SENZING_API_SERVER_SECURE_PORT](#SENZING_API_SERVER_SECURE_PORT)
+    3. See [SENZING_API_SERVER_KEY_STORE](#SENZING_API_SERVER_KEY_STORE)
+    4. See [SENZING_API_SERVER_KEY_STORE_PASSWORD](#SENZING_API_SERVER_KEY_STORE_PASSWORD)
+    5. See [SENZING_API_SERVER_KEY_ALIAS](#SENZING_API_SERVER_KEY_ALIAS)
+    6. See [SENZING_API_SERVER_CLIENT_KEY_STORE](#SENZING_API_SERVER_CLIENT_KEY_STORE)
+1. Values:
+    1. Default: **N/A**
+    2. Specify a password to decrypt the PKCS12 [client key store file](#SENZING_API_SERVER_CLIENT_KEY_STORE) that 
+       holds the public keys of those clients that are authorized to connect.
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_CLIENT_KEY_STORE_PASSWORD&type=code)
+
 ### SENZING_API_SERVER_CONFIG_ID
 
 1. Synopsis:
@@ -712,22 +746,6 @@
     2. If specified, then an integer greater-than 10 should be provided.  Take care not to make this too large.
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_HTTP_CONCURRENCY&type=code)
 
-### SENZING_API_SERVER_HTTPS_PORT
-
-1. Synopsis:
-    1. Sets the Senzing API Server port for secure HTTPS communication.  While the default HTTPS port is 8263 if
-       not specified, HTTPS is only enabled if the [SENZING_API_SERVER_KEY_STORE](#SENZING_API_SERVER_KEY_STORE)
-       environment variable is set.  Specify zero (0) for an arbitrarily selected available port.
-    2. See [Port 8263](https://github.com/Senzing/knowledge-base/blob/main/lists/ports-used-in-demonstrations.md#8263)
-    3. See [SENZING_API_SERVER_KEY_STORE](#SENZING_API_SERVER_KEY_STORE)
-    4. See [SENZING_API_SERVER_KEY_STORE_PASSWORD](#SENZING_API_SERVER_KEY_STORE_PASSWORD)
-    5. See [SENZING_API_SERVER_KEY_ALIAS](#SENZING_API_SERVER_KEY_ALIAS)
-1. Values:
-    1. Default: 8263
-    2. A valid non-zero integer for an available port may be specified.
-    3. Specify `0` to have the Senzing API Server select an arbitrary port number from the available ports.
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_HTTPS_PORT&type=code)
-
 ### SENZING_API_SERVER_INI_FILE
 
 1. Synopsis:
@@ -785,6 +803,52 @@
 1. Values:
     1. Default: **N/A**
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_INIT_JSON&type=code)
+
+### SENZING_API_SERVER_KEY_ALIAS
+
+1. Synopsis:
+    1. Sets the Senzing API Server PKCS12 key store alias to identify the key to use from the
+       [key store file](#SENZING_API_SERVER_KEY_STORE) for the sever to identify itself for secure HTTPS communication
+    2. See [SENZING_API_SERVER_SECURE_PORT](#SENZING_API_SERVER_SECURE_PORT)
+    3. See [SENZING_API_SERVER_KEY_STORE](#SENZING_API_SERVER_KEY_STORE)
+    4. See [SENZING_API_SERVER_KEY_STORE_PASSWORD](#SENZING_API_SERVER_KEY_STORE_PASSWORD)
+    5. See [SENZING_API_SERVER_CLIENT_KEY_STORE](#SENZING_API_SERVER_CLIENT_KEY_STORE)
+    6. See [SENZING_API_SERVER_CLIENT_KEY_STORE_PASSWORD](#SENZING_API_SERVER_CLIENT_KEY_STORE_PASSWORD)
+1. Values:
+    1. Default: **N/A**
+    2. Specify the key alias to choose the key from the PKCS12 [key store file](#SENZING_API_SERVER_KEY_STORE)
+       that the server is using.
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_KEY_ALIAS&type=code)
+
+### SENZING_API_SERVER_KEY_STORE
+
+1. Synopsis:
+    1. Sets the Senzing API Server PKCS12 key store file that holds the private key that the sever uses to
+       identify itself for secure HTTPS communication
+    2. See [SENZING_API_SERVER_SECURE_PORT](#SENZING_API_SERVER_SECURE_PORT)
+    3. See [SENZING_API_SERVER_KEY_STORE_PASSWORD](#SENZING_API_SERVER_KEY_STORE_PASSWORD)
+    4. See [SENZING_API_SERVER_KEY_ALIAS](#SENZING_API_SERVER_KEY_ALIAS)
+    5. See [SENZING_API_SERVER_CLIENT_KEY_STORE](#SENZING_API_SERVER_CLIENT_KEY_STORE)
+    6. See [SENZING_API_SERVER_CLIENT_KEY_STORE_PASSWORD](#SENZING_API_SERVER_CLIENT_KEY_STORE_PASSWORD)
+1. Values:
+    1. Default: **N/A**
+    2. Specify a file path to the PKCS12 key store file for the server to use.
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_KEY_STORE&type=code)
+
+### SENZING_API_SERVER_KEY_STORE_PASSWORD
+
+1. Synopsis:
+    1. Sets the Senzing API Server PKCS12 key store password to decrypt the [key store file](#SENZING_API_SERVER_KEY_STORE)
+       that holds the private key that the sever uses to identify itself for secure HTTPS communication
+    2. See [SENZING_API_SERVER_SECURE_PORT](#SENZING_API_SERVER_SECURE_PORT)
+    3. See [SENZING_API_SERVER_KEY_STORE](#SENZING_API_SERVER_KEY_STORE)
+    4. See [SENZING_API_SERVER_KEY_ALIAS](#SENZING_API_SERVER_KEY_ALIAS)
+    5. See [SENZING_API_SERVER_CLIENT_KEY_STORE](#SENZING_API_SERVER_CLIENT_KEY_STORE)
+    6. See [SENZING_API_SERVER_CLIENT_KEY_STORE_PASSWORD](#SENZING_API_SERVER_CLIENT_KEY_STORE_PASSWORD)
+1. Values:
+    1. Default: **N/A**
+    2. Specify a password to decrypt the PKCS12 [key store file](#SENZING_API_SERVER_KEY_STORE) that the server is using.
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_KEY_STORE_PASSWORD&type=code)
 
 ### SENZING_API_SERVER_MODULE_NAME
 
@@ -849,6 +913,24 @@
     1. Default: `false`
     2. Set to `true` to put the Senzing API Server in read-only mode.
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_READ_ONLY&type=code)
+
+### SENZING_API_SERVER_SECURE_PORT
+
+1. Synopsis:
+    1. Sets the Senzing API Server port for secure HTTPS communication.  While the default HTTPS port is 8263 if
+       not specified, HTTPS is only enabled if the [SENZING_API_SERVER_KEY_STORE](#SENZING_API_SERVER_KEY_STORE)
+       environment variable is set.  Specify zero (0) for an arbitrarily selected available port.
+    2. See [Port 8263](https://github.com/Senzing/knowledge-base/blob/main/lists/ports-used-in-demonstrations.md#8263)
+    3. See [SENZING_API_SERVER_KEY_STORE](#SENZING_API_SERVER_KEY_STORE)
+    4. See [SENZING_API_SERVER_KEY_STORE_PASSWORD](#SENZING_API_SERVER_KEY_STORE_PASSWORD)
+    5. See [SENZING_API_SERVER_KEY_ALIAS](#SENZING_API_SERVER_KEY_ALIAS)
+    5. See [SENZING_API_SERVER_CLIENT_KEY_STORE](#SENZING_API_SERVER_CLIENT_KEY_STORE)
+    6. See [SENZING_API_SERVER_CLIENT_KEY_STORE_PASSWORD](#SENZING_API_SERVER_CLIENT_KEY_STORE_PASSWORD)
+1. Values:
+    1. Default: 8263
+    2. A valid non-zero integer for an available port may be specified.
+    3. Specify `0` to have the Senzing API Server select an arbitrary port number from the available ports.
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_SECURE_PORT&type=code)
 
 ### SENZING_API_SERVER_SKIP_ENGINE_PRIMING
 
