@@ -1769,6 +1769,14 @@
 
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_KAFKA_INFO_CONFIGURATION&type=code)
 
+### SENZING_KAFKA_INFO_GROUP
+
+1. Synopsis:
+    1. Kafka group for the info messages.
+1. Values:
+    1. Default: The value from [SENZING_KAFKA_GROUP](#SENZING_KAFKA_GROUP)
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_KAFKA_INFO_GROUP&type=code)
+
 ### SENZING_KAFKA_INFO_TOPIC
 
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_KAFKA_INFO_TOPIC&type=code)
