@@ -603,19 +603,378 @@
     1. Default: none
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_RPM_DIR&type=code)
 
-### SENZING_API_SERVICE_PORT
+### SENZING_API_SERVER_ALLOWED_ORIGINS
 
 1. Synopsis:
-    1. Port on localhost for Senzing API service.
+    1. Sets the CORS `Access-Control-Allow-Origin` header for all Senzing API Server endpoints.  
+       There is no default value.  If not specified then the Access-Control-Allow-Origin is not 
+       included with responses.
+1. Values:
+    1. Default: **N/A**
+    2. The asterisk `*` can be used to allow all origins as per `Access-Control-Allow-Origin` header specification.
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_ALLOWED_ORIGINS&type=code)
+
+### SENZING_API_SERVER_AUTO_REFRESH_PERIOD
+
+1. Synopsis:
+    1. Specifies the number of milliseconds between Senzing API Server background checks to verify that the current
+       active config is the same as the current default config, and if different reinitialize with the current default
+       config (making it the active config).  If zero is specified, then the auto-refresh is disabled and it will only
+       occur when a requested configuration element is not found in the current active config.  **NOTE**: This is option
+       ignored if auto-refresh is disabled because the config was specified via the `G2CONFIGFILE` init option or if
+       `SENZING_API_SERVER_CONFIG_ID` has been specified to lock to a specific configuration.
+1. Values:
+    1. Default: `10000` (milliseconds)
+    2. `0`: only check and auto-refresh if a configuration element is not found.
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_AUTO_REFRESH_PERIOD&type=code)
+
+### SENZING_API_SERVER_BASE_PATH
+
+1. Synopsis:
+    1. Sets the URL base path for the Senzing API Server.
+1. Values:
+    1. Default: `/`
+    2. Typically specified as a path beginning with `/` such as `/api`
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_BASE_PATH&type=code)
+
+### SENZING_API_SERVER_BIND_ADDR
+
+1. Synopsis:
+    1. Sets the bind address for Senzing API Server HTTP communication.  The specified value can be an IP Address,
+       the keyword `loopback` for the local loopback address (e.g.: `127.0.0.1` for IPv4) or `all` to bind to all
+       addresses (i.e.: network interfaces).  If not provided the bind address defaults to the loopback address.
+1. Values:
+    1. Default: `loopback` (for the local loopback address)
+    2. An IP-Address for a specific network interface on the host
+    3. The keyword `all` to indicate all network interfaces on the host.
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_BIND_ADDR&type=code)
+
+### SENZING_API_SERVER_CLIENT_KEY_STORE
+
+1. Synopsis:
+    1. Sets the Senzing API Server PKCS12 client key store file that holds the public keys of those clients
+       that are authorized to connect.  If this option is specified then SSL client authentication is required
+       to connect and [SENZING_API_SERVER_PORT](#SENZING_API_SERVER_PORT) option is forbidden.
+    2. See [SENZING_API_SERVER_SECURE_PORT](#SENZING_API_SERVER_SECURE_PORT)
+    3. See [SENZING_API_SERVER_KEY_STORE](#SENZING_API_SERVER_KEY_STORE)
+    4. See [SENZING_API_SERVER_KEY_STORE_PASSWORD](#SENZING_API_SERVER_KEY_STORE_PASSWORD)
+    5. See [SENZING_API_SERVER_KEY_ALIAS](#SENZING_API_SERVER_KEY_ALIAS)
+    6. See [SENZING_API_SERVER_CLIENT_KEY_STORE_PASSWORD](#SENZING_API_SERVER_CLIENT_KEY_STORE_PASSWORD)
+1. Values:
+    1. Default: **N/A**
+    2. Specify a file path to the PKCS12 key store file that contains the public client keys for those 
+       clients that authotrized to connect.
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_CLIENT_KEY_STORE&type=code)
+
+### SENZING_API_SERVER_CLIENT_KEY_STORE_PASSWORD
+
+1. Synopsis:
+    1. Sets the Senzing API Server PKCS12 client key store password to decrypt the
+       [client key store file](#SENZING_API_SERVER_CLIENT_KEY_STORE) that holds the public keys of those clients
+       that are authorized to connect.
+    2. See [SENZING_API_SERVER_SECURE_PORT](#SENZING_API_SERVER_SECURE_PORT)
+    3. See [SENZING_API_SERVER_KEY_STORE](#SENZING_API_SERVER_KEY_STORE)
+    4. See [SENZING_API_SERVER_KEY_STORE_PASSWORD](#SENZING_API_SERVER_KEY_STORE_PASSWORD)
+    5. See [SENZING_API_SERVER_KEY_ALIAS](#SENZING_API_SERVER_KEY_ALIAS)
+    6. See [SENZING_API_SERVER_CLIENT_KEY_STORE](#SENZING_API_SERVER_CLIENT_KEY_STORE)
+1. Values:
+    1. Default: **N/A**
+    2. Specify a password to decrypt the PKCS12 [client key store file](#SENZING_API_SERVER_CLIENT_KEY_STORE) that 
+       holds the public keys of those clients that are authorized to connect.
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_CLIENT_KEY_STORE_PASSWORD&type=code)
+
+### SENZING_API_SERVER_CONFIG_ID
+
+1. Synopsis:
+    1. Used to pin the configuration for the Senzing API Server to a specific configuration ID.  If specified, then
+       the Senzing API Server will not attempt to load the default configuration from the database, nor will it update
+       automatically by refreshing the configuration when the default configuration gets updated.  If not specified,
+       the the default configuration configured in the repository is used and the Senzing API Server will automatically
+       refresh the configuration when a change is detected.
+1. Values:
+    1. Default: **N/A**
+    2. If specified, then a valud Senzing configuration ID for the entity repository must be specified.
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_CONFIG_ID&type=code)
+
+### SENZING_API_SERVER_CONCURRENCY
+
+1. Synopsis:
+    1. Sets the number of threads available for the Senzing API Server to execute Senzing API functions
+       (i.e.: the number of engine threads).  If not specified, then this defaults to 8.
+1. Values:
+    1. Default: `8`
+    2. If specified, then a non-zero integer should be provided.  Take care not to make this too large.
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_CONCURRENCY&type=code)
+
+### SENZING_API_SERVER_DEBUG
+
+1. Synopsis:
+    1. Specifies whether or not the Senzing API Server should produce debug log messages on standard output. 
+       If this environment variable is set with no value (e.g.: empty-string) or with a value of `true` then
+       the Senzing API Server will produce debug messages on standard output.  If specified as `false` or if
+       the environment variable is not set then the Senzing API Server will not produce debug messages.
+    2. See [SENZING_API_SERVER_VERBOSE](#SENZING_API_SERVER_VERBOSE)
+    3. See [SENZING_API_SERVER_QUIET](#SENZING_API_SERVER_QUIET)
+1. Values:
+    1. Default: `false`
+    2. Specify `true` or set the environment variable with no value (empty-string) to suppress output.
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_DEBUG&type=code)
+
+### SENZING_API_SERVER_ENABLE_ADMIN
+
+1. Synopsis:
+    1. Controls whether or not to enable Senzing API Server administrative functions.  Administrative functions
+       include those that would modify the active configuration (e.g.: adding data sources).  If the environment
+       variable is set with no value or with a valueof `true` then administrative functions will be enabled.  If
+       the environment variable is not set or set with a value of `false` then administrative functions will
+       return a 403 Forbidden response.  **NOTE**: In order to make any modifications via the Senzing API Server, 
+       you will need to ensure that you are not in [read only mode](#SENZING_API_SERVER_READ_ONLY).
+    1. See [SENZING_API_SERVER_READ_ONLY](#SENZING_API_SERVER_READ_ONLY)
+1. Values:
+    1. Default: `false`
+    2. Specify `true` to enable administrative functions.
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_ENABLE_ADMIN&type=code)
+
+### SENZING_API_SERVER_HTTP_CONCURRENCY
+
+1. Synopsis:
+    1. Sets the maximum number of threads available for the Senzing API Server's embedded HTTP server.
+       The single parameter to this option should be a positive integer.  If not specified, then this
+       defaults to 200.  If the specified thread count is less than 10 then an error is reported.
+1. Values:
+    1. Default: `200`
+    2. If specified, then an integer greater-than 10 should be provided.  Take care not to make this too large.
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_HTTP_CONCURRENCY&type=code)
+
+### SENZING_API_SERVER_INI_FILE
+
+1. Synopsis:
+    1. Specifies the file path to the INI file containing the INI configuration with which to initialize the
+       Senzing API Server.  This is one of five environment variables that can be used to initialize the
+       Senzing API Server.
+    2. See [SENZING_API_SERVER_INIT_FILE](#SENZING_API_SERVER_INIT_FILE)
+    3. See [SENZING_API_SERVER_INIT_JSON](#SENZING_API_SERVER_INIT_JSON)
+    4. See [SENZING_API_SERVER_INIT_ENV_VAR](#SENZING_API_SERVER_INIT_ENV_VAR)
+    5. See [SENZING_ENGINE_CONFIGURATION_JSON](#SENZING_ENGINE_CONFIGURATION_JSON)
+1. Values:
+    1. Default: **N/A**
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_INI_FILE&type=code)
+
+### SENZING_API_SERVER_INIT_ENV_VAR
+
+1. Synopsis:
+    1. Specifies the the name of an alternate environment variable whose value is the JSON configuration
+       with which to initialize the Senzing API Server.  This is one of five environment variables that
+       can be used to initialize the Senzing API Server.
+    2. See [SENZING_API_SERVER_INI_FILE](#SENZING_API_SERVER_INI_FILE)
+    3. See [SENZING_API_SERVER_INIT_FILE](#SENZING_API_SERVER_INIT_FILE)
+    4. See [SENZING_API_SERVER_INIT_JSON](#SENZING_API_SERVER_INIT_JSON)
+    5. See [SENZING_ENGINE_CONFIGURATION_JSON](#SENZING_ENGINE_CONFIGURATION_JSON)
+1. Values:
+    1. Default: **N/A**
+    2. Should be the name of an environment variable that has been set and contians the JSON configuration.
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_INIT_ENV_VAR&type=code)
+
+### SENZING_API_SERVER_INIT_FILE
+
+1. Synopsis:
+    1. Specifies the file path to the JSON file containing the JSON configuration with which to initialize
+       the Senzing API Server.  This is one of five environment variables that can be used to initialize
+       the Senzing API Server.
+    2. See [SENZING_API_SERVER_INI_FILE](#SENZING_API_SERVER_INI_FILE)
+    3. See [SENZING_API_SERVER_INIT_JSON](#SENZING_API_SERVER_INIT_JSON)
+    4. See [SENZING_API_SERVER_INIT_ENV_VAR](#SENZING_API_SERVER_INIT_ENV_VAR)
+    5. See [SENZING_ENGINE_CONFIGURATION_JSON](#SENZING_ENGINE_CONFIGURATION_JSON)
+1. Values:
+    1. Default: **N/A**
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_INIT_FILE&type=code)
+
+### SENZING_API_SERVER_INIT_JSON
+
+1. Synopsis:
+    1. Specifies the JSON configuration text with which to initialize the Senzing API Server.  If not found,
+       the Senzing API Server falls back to using the `SENZING_ENGINE_CONFIGURATION_JSON` environment variable.
+       If both are specified then `SENZING_API_SERVER_INIT_JSON` takes priority for initializing the 
+       Senzing API Server.
+    2. See [SENZING_API_SERVER_INI_FILE](#SENZING_API_SERVER_INI_FILE)
+    3. See [SENZING_API_SERVER_INIT_FILE](#SENZING_API_SERVER_INIT_FILE)
+    4. See [SENZING_API_SERVER_INIT_ENV_VAR](#SENZING_API_SERVER_INIT_ENV_VAR)
+    5. See [SENZING_ENGINE_CONFIGURATION_JSON](#SENZING_ENGINE_CONFIGURATION_JSON)
+1. Values:
+    1. Default: **N/A**
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_INIT_JSON&type=code)
+
+### SENZING_API_SERVER_KEY_ALIAS
+
+1. Synopsis:
+    1. Sets the Senzing API Server PKCS12 key store alias to identify the key to use from the
+       [key store file](#SENZING_API_SERVER_KEY_STORE) for the sever to identify itself for secure HTTPS communication
+    2. See [SENZING_API_SERVER_SECURE_PORT](#SENZING_API_SERVER_SECURE_PORT)
+    3. See [SENZING_API_SERVER_KEY_STORE](#SENZING_API_SERVER_KEY_STORE)
+    4. See [SENZING_API_SERVER_KEY_STORE_PASSWORD](#SENZING_API_SERVER_KEY_STORE_PASSWORD)
+    5. See [SENZING_API_SERVER_CLIENT_KEY_STORE](#SENZING_API_SERVER_CLIENT_KEY_STORE)
+    6. See [SENZING_API_SERVER_CLIENT_KEY_STORE_PASSWORD](#SENZING_API_SERVER_CLIENT_KEY_STORE_PASSWORD)
+1. Values:
+    1. Default: **N/A**
+    2. Specify the key alias to choose the key from the PKCS12 [key store file](#SENZING_API_SERVER_KEY_STORE)
+       that the server is using.
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_KEY_ALIAS&type=code)
+
+### SENZING_API_SERVER_KEY_STORE
+
+1. Synopsis:
+    1. Sets the Senzing API Server PKCS12 key store file that holds the private key that the sever uses to
+       identify itself for secure HTTPS communication
+    2. See [SENZING_API_SERVER_SECURE_PORT](#SENZING_API_SERVER_SECURE_PORT)
+    3. See [SENZING_API_SERVER_KEY_STORE_PASSWORD](#SENZING_API_SERVER_KEY_STORE_PASSWORD)
+    4. See [SENZING_API_SERVER_KEY_ALIAS](#SENZING_API_SERVER_KEY_ALIAS)
+    5. See [SENZING_API_SERVER_CLIENT_KEY_STORE](#SENZING_API_SERVER_CLIENT_KEY_STORE)
+    6. See [SENZING_API_SERVER_CLIENT_KEY_STORE_PASSWORD](#SENZING_API_SERVER_CLIENT_KEY_STORE_PASSWORD)
+1. Values:
+    1. Default: **N/A**
+    2. Specify a file path to the PKCS12 key store file for the server to use.
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_KEY_STORE&type=code)
+
+### SENZING_API_SERVER_KEY_STORE_PASSWORD
+
+1. Synopsis:
+    1. Sets the Senzing API Server PKCS12 key store password to decrypt the [key store file](#SENZING_API_SERVER_KEY_STORE)
+       that holds the private key that the sever uses to identify itself for secure HTTPS communication
+    2. See [SENZING_API_SERVER_SECURE_PORT](#SENZING_API_SERVER_SECURE_PORT)
+    3. See [SENZING_API_SERVER_KEY_STORE](#SENZING_API_SERVER_KEY_STORE)
+    4. See [SENZING_API_SERVER_KEY_ALIAS](#SENZING_API_SERVER_KEY_ALIAS)
+    5. See [SENZING_API_SERVER_CLIENT_KEY_STORE](#SENZING_API_SERVER_CLIENT_KEY_STORE)
+    6. See [SENZING_API_SERVER_CLIENT_KEY_STORE_PASSWORD](#SENZING_API_SERVER_CLIENT_KEY_STORE_PASSWORD)
+1. Values:
+    1. Default: **N/A**
+    2. Specify a password to decrypt the PKCS12 [key store file](#SENZING_API_SERVER_KEY_STORE) that the server is using.
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_KEY_STORE_PASSWORD&type=code)
+
+### SENZING_API_SERVER_MODULE_NAME
+
+1. Synopsis:
+    1. Sets the Senzing API Server module name with which to initialize the engine.  If not specified, then
+       the module name defaults to `senzing-api-server`
+1. Values:
+    1. Default: `senzing-api-server`
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_MODULE_NAME&type=code)
+
+### SENZING_API_SERVER_MONITOR_FILE
+
+1. Synopsis:
+    1. Specifies a file whose timestamp is monitored to determine when the Senzing API Server should shut
+       down.  If not provided, then the monitor file will not be used to control Senzing API Server shutdown.
+1. Values:
+    1. Default: **N/A**
+    2. Value should be a file path that is visible to the Senzing API Server process.
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_MONITOR_FILE&type=code)
+
+### SENZING_API_SERVER_PORT
+
+1. Synopsis:
+    1. Port for Senzing API Server HTTP communication.  If not specified, then the default port (8250) is used.
+       Specify 0 for a arbitrarily selected port number from the available ports.  This option **cannot** be 
+       specified if SSL client authentication is configured for the Senzing API Server.
     1. See [Port 8250](https://github.com/Senzing/knowledge-base/blob/main/lists/ports-used-in-demonstrations.md#8250)
+    2. See [SENZING_API_SERVER_CLIENT_KEY_STORE](#SENZING_API_SERVER_CLIENT_KEY_STORE)
 1. Values:
     1. Default: 8250
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVICE_PORT&type=code)
+    2. A valid non-zero integer for an available port may be specified.
+    3. Specify `0` to have the Senzing API Server select an arbitrary port number from the available ports.
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_PORT&type=code)
+
+### SENZING_API_SERVER_QUIET
+
+1. Synopsis:
+    1. Specifies whether or not the Senzing API Server should reduce the number of messages provided as feedback to 
+       standard output.  This applies only to messages generated by the API Server and not by the underlying API which
+       may still be initialized in [verbose mode](#SENZING_API_SERVER_VERBOSE).  If this environment variable is set
+       with no value (e.g.: empty-string) or with a value of `true` then the Senzing API Server will suppress much of
+       the feedback that is normally sent to standard output.  If specified as `false` or if the environment variable
+       is not set then the Senzing API Server will provide the normal feedback to standard output as it runs.
+    2. See [SENZING_API_SERVER_VERBOSE](#SENZING_API_SERVER_VERBOSE)
+    3. See [SENZING_API_SERVER_DEBUG](#SENZING_API_SERVER_DEBUG)
+1. Values:
+    1. Default: `false`
+    2. Specify `true` or set the environment variable with no value (empty-string) to suppress output.
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_QUIET&type=code)
+
+### SENZING_API_SERVER_READ_ONLY
+
+1. Synopsis:
+    1. Controls whether or not to disable Senzing API Server functions that would modify the entity repository data. 
+       If the environment variable is set with no value or with a value of `true` then those functions that would
+       modify the repository return a 403 Forbidden response.  If the environment variable is unset or set with a 
+       value of `false` then functions that would modify the repository operate normally as documented.  **NOTE**:
+       this option will not only disable loading data to the entity repository, but will also disable modifications
+       to the configuration even if admin functions are enabled.
+    1. See [SENZING_API_SERVER_ENABLE_ADMIN](#SENZING_API_SERVER_ENABLE_ADMIN)
+1. Values:
+    1. Default: `false`
+    2. Set to `true` to put the Senzing API Server in read-only mode.
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_READ_ONLY&type=code)
+
+### SENZING_API_SERVER_SECURE_PORT
+
+1. Synopsis:
+    1. Sets the Senzing API Server port for secure HTTPS communication.  While the default HTTPS port is 8263 if
+       not specified, HTTPS is only enabled if the [SENZING_API_SERVER_KEY_STORE](#SENZING_API_SERVER_KEY_STORE)
+       environment variable is set.  Specify zero (0) for an arbitrarily selected available port.
+    2. See [Port 8263](https://github.com/Senzing/knowledge-base/blob/main/lists/ports-used-in-demonstrations.md#8263)
+    3. See [SENZING_API_SERVER_KEY_STORE](#SENZING_API_SERVER_KEY_STORE)
+    4. See [SENZING_API_SERVER_KEY_STORE_PASSWORD](#SENZING_API_SERVER_KEY_STORE_PASSWORD)
+    5. See [SENZING_API_SERVER_KEY_ALIAS](#SENZING_API_SERVER_KEY_ALIAS)
+    5. See [SENZING_API_SERVER_CLIENT_KEY_STORE](#SENZING_API_SERVER_CLIENT_KEY_STORE)
+    6. See [SENZING_API_SERVER_CLIENT_KEY_STORE_PASSWORD](#SENZING_API_SERVER_CLIENT_KEY_STORE_PASSWORD)
+1. Values:
+    1. Default: 8263
+    2. A valid non-zero integer for an available port may be specified.
+    3. Specify `0` to have the Senzing API Server select an arbitrary port number from the available ports.
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_SECURE_PORT&type=code)
+
+### SENZING_API_SERVER_SKIP_ENGINE_PRIMING
+
+1. Synopsis:
+    1. Specifies whether or not the Senzing API Server will skip priming the Senzing engine at startup.  If the
+       environment variable is set with no value (e.g.: empty-string) or with the value of `true` then the engine
+       priming that is performed by the Senzing API Server at startup will be skipped.  If specified as `false`
+       or if the environment variable is not set then the engine priming will be performed as normal on startup.
+1. Values:
+    1. Default: `false`
+    2. Specify `true` or set the environment variable with no value (empty-string) to skip the priming the engine.
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_SKIP_ENGINE_PRIMING&type=code)
+
+### SENZING_API_SERVER_SKIP_STARTUP_PERF
+
+1. Synopsis:
+    1. Specifies whether or not the Senzing API Server will skip the performance check at startup.  If the environment
+       variable is set with no value (e.g.: empty-string) or with a value of `true` then the performance check normally
+       performed by the Senzing API Server will instead be skipped at startup.  If specified as `false` or if the
+       environment variable is not set then the performance check will be performed as normal on startup.
+    2. See [SENZING_API_SERVER_VERBOSE](#SENZING_API_SERVER_VERBOSE)
+1. Values:
+    1. Default: `false`
+    2. Specify `true` or set the environment variable with no value (empty-string) to skip the performance check.
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_SKIP_STARTUP_PERF&type=code)
+
+### SENZING_API_SERVER_STATS_INTERVAL
+
+1. Synopsis:
+    1. Specifies the number of milliseconds between the Senzing API Server logging statistics.  This is a minimum number
+       of milliseconds because stats logging is suppressed while the Senzing API Server is idle or active but not performing
+       activities pertaining to entity scoring.  In such cases, stats logging is delayed until an activity pertaining to 
+       entity scoring is performed.  By default this is set to the millisecond equivalent of 15 minutes.  If zero (0) is
+       specified then the logging of stats will be suppressed.
+1. Values:
+    1. Default: `900000` (milliseconds -- the equivalent of 15 minutes)
+    2. `0`: suppress logging of statistics 
+    3. Any positive integer will be interpretted as a number of milliseconds.  Negative numbers are not allowed.
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_STATS_INTERVAL&type=code)
 
 ### SENZING_API_SERVER_URL
 
 1. Synopsis:
-    1. A URL consisting of host:port running Senzing API server.
+    1. A URL consisting of host:port running Senzing API Server.
     1. See [Port 8250](https://github.com/Senzing/knowledge-base/blob/main/lists/ports-used-in-demonstrations.md#8250)
 1. Values:
     1. Format: `http://${hostname}:${SENZING_API_SERVICE_PORT}`
@@ -626,6 +985,21 @@
         ```console
         export SENZING_API_SERVER_URL="http://example.com:8250"
         ```
+
+### SENZING_API_SERVER_VERBOSE
+
+1. Synopsis:
+    1. Specifies whether or not the Senzing API Server should initialize the Senzing engine in verbose mode.  If the
+       environment variable is set with no value (e.g.: empty-string) or with a value of `true` then the Senzing API
+       Server will initialize the Senzing engine in verbose mode.  If specified as `false` or if the environment
+       variable is not set then the Senzing API Server will initialize the Senzing engine with verbosity disabled.
+    2. See [SENZING_API_SERVER_QUIET](#SENZING_API_SERVER_QUIET)
+    3. See [SENZING_API_SERVER_DEBUG](#SENZING_API_SERVER_DEBUG)
+1. Values:
+    1. Default: `false`
+    2. Specify `true` or set the environment variable with no value (empty-string) to intialize in verbose mode.
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_VERBOSE&type=code)
+
 
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_URL&type=code)
 
@@ -1149,7 +1523,7 @@
 ### SENZING_ENGINE_CONFIGURATION_JSON
 
 1. Synopsis:
-    1. A JSON string that is a parameter to the Senzing Engine's `*.initV2()` function.
+    1. A JSON string that is a parameter to the Senzing Engine's `*.init()` function.
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_ENGINE_CONFIGURATION_JSON&type=code)
 
 ### SENZING_ENTITY_TYPE
@@ -1394,6 +1768,14 @@
 ### SENZING_KAFKA_INFO_CONFIGURATION
 
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_KAFKA_INFO_CONFIGURATION&type=code)
+
+### SENZING_KAFKA_INFO_GROUP
+
+1. Synopsis:
+    1. Kafka group for the info messages.
+1. Values:
+    1. Default: The value from [SENZING_KAFKA_GROUP](#SENZING_KAFKA_GROUP)
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_KAFKA_INFO_GROUP&type=code)
 
 ### SENZING_KAFKA_INFO_TOPIC
 
