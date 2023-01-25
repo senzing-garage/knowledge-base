@@ -68,6 +68,7 @@ Used in log message identifiers in the format `senzing-ppppnnnnt`, where:
 1. **6026** - github.com/senzing/g2-sdk-go-grpc/g2productclient
 1. **6027** - github.com/senzing/g2-sdk-go-grpc/g2ssadmclient
 1. **6030** - github.com/senzing/go-sdk-abstract-factory/factory
+1. **6040** - github.com/senzing/go-common/record
 
 
 ### senzing-tools
