@@ -1,5 +1,9 @@
 # HOWTO - Install Senzing for Go Development
 
+The following steps show how to install and configure Senzing for Go development.
+
+## Install Senzing
+
 This can be done by installing the Senzing package using `apt`, `yum`,
 or a technique using Docker containers.
 Once complete, the Senzing library will be installed in the `/opt/senzing` directory.
@@ -63,3 +67,27 @@ This is important as the compiling of the Go code expects Senzing to be in `/opt
                 senzing/installer:${SENZING_VERSION_SENZINGAPI}
 
         ```
+
+## Configure Senzing
+
+1. Move the "versioned" Senzing data to the system location.
+   Example:
+
+    ```console
+      sudo mv /opt/senzing/data/3.0.0/* /opt/senzing/data/
+
+    ```
+
+1. Create initial configuration.
+   Example:
+
+    ```console
+      sudo mkdir /etc/opt/senzing
+      sudo cp /opt/senzing/g2/resources/templates/cfgVariant.json     /etc/opt/senzing
+      sudo cp /opt/senzing/g2/resources/templates/customGn.txt        /etc/opt/senzing
+      sudo cp /opt/senzing/g2/resources/templates/customOn.txt        /etc/opt/senzing
+      sudo cp /opt/senzing/g2/resources/templates/customSn.txt        /etc/opt/senzing
+      sudo cp /opt/senzing/g2/resources/templates/defaultGNRCP.config /etc/opt/senzing
+      sudo cp /opt/senzing/g2/resources/templates/stb.config          /etc/opt/senzing
+
+    ```
