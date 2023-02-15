@@ -82,12 +82,21 @@ This is important as the compiling of the Go code expects Senzing to be in `/opt
    Example:
 
     ```console
-      sudo mkdir /etc/opt/senzing
-      sudo cp /opt/senzing/g2/resources/templates/cfgVariant.json     /etc/opt/senzing
-      sudo cp /opt/senzing/g2/resources/templates/customGn.txt        /etc/opt/senzing
-      sudo cp /opt/senzing/g2/resources/templates/customOn.txt        /etc/opt/senzing
-      sudo cp /opt/senzing/g2/resources/templates/customSn.txt        /etc/opt/senzing
-      sudo cp /opt/senzing/g2/resources/templates/defaultGNRCP.config /etc/opt/senzing
-      sudo cp /opt/senzing/g2/resources/templates/stb.config          /etc/opt/senzing
+    export SENZING_ETC_FILES=( \
+        "cfgVariant.json" \
+        "customGn.txt" \
+        "customOn.txt" \
+        "customSn.txt" \
+        "defaultGNRCP.config" \
+        "g2config.json" \
+        "G2Module.ini" \
+        "stb.config" \
+    )
+
+    sudo mkdir /etc/opt/senzing
+    for SENZING_ETC_FILE in ${SENZING_ETC_FILES[@]}; \
+    do \
+        sudo --preserve-env cp /opt/senzing/g2/resources/templates/${SENZING_ETC_FILE} /etc/opt/senzing/${SENZING_ETC_FILE}
+    done
 
     ```
