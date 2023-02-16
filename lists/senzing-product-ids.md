@@ -44,15 +44,15 @@ Used in log message identifiers in the format `senzing-ppppnnnnt`, where:
 ## Go SDK and apps
 
 ### SDK
-1. **6001** - github.com/senzing/g2-sdk-go/g2config
-1. **6002** - github.com/senzing/g2-sdk-go/g2configmgr
-1. **6003** - github.com/senzing/g2-sdk-go/g2diagnostic
-1. **6004** - github.com/senzing/g2-sdk-go/g2engine
-1. **6005** - github.com/senzing/g2-sdk-go/g2hasher
-1. **6006** - github.com/senzing/g2-sdk-go/g2product
-1. **6007** - github.com/senzing/g2-sdk-go/g2ssadm
-1. **6008** - github.com/senzing/g2-sdk-go/test
-1. **6009** - github.com/senzing/g2-sdk-go/testhelpers
+1. **6001** - github.com/senzing/g2-sdk-go-base/g2config
+1. **6002** - github.com/senzing/g2-sdk-go-base/g2configmgr
+1. **6003** - github.com/senzing/g2-sdk-go-base/g2diagnostic
+1. **6004** - github.com/senzing/g2-sdk-go-base/g2engine
+1. **6005** - github.com/senzing/g2-sdk-go-base/g2hasher
+1. **6006** - github.com/senzing/g2-sdk-go-base/g2product
+1. **6007** - github.com/senzing/g2-sdk-go-base/g2ssadm
+1. **6008** - github.com/senzing/g2-sdk-go-base/test
+1. **6009** - github.com/senzing/g2-sdk-go-base/testhelpers
 1. **6011** - github.com/senzing/servegrpc/g2configserver
 1. **6012** - github.com/senzing/servegrpc/g2configmgrserver
 1. **6013** - github.com/senzing/servegrpc/g2diagnosticserver
@@ -67,8 +67,17 @@ Used in log message identifiers in the format `senzing-ppppnnnnt`, where:
 1. **6025** - github.com/senzing/g2-sdk-go-grpc/g2hasherclient
 1. **6026** - github.com/senzing/g2-sdk-go-grpc/g2productclient
 1. **6027** - github.com/senzing/g2-sdk-go-grpc/g2ssadmclient
-1. **6030** - github.com/senzing/go-sdk-abstract-factory/factory
+1. **6031** - github.com/senzing/g2-sdk-go-mock/g2config
+1. **6032** - github.com/senzing/g2-sdk-go-mock/g2configmgr
+1. **6033** - github.com/senzing/g2-sdk-go-mock/g2diagnostic
+1. **6034** - github.com/senzing/g2-sdk-go-mock/g2engine
+1. **6035** - github.com/senzing/g2-sdk-go-mock/g2hasher
+1. **6036** - github.com/senzing/g2-sdk-go-mock/g2product
+1. **6037** - github.com/senzing/g2-sdk-go-mock/g2ssadm
+1. **6038** - github.com/senzing/g2-sdk-go-mock/test
+1. **6039** - github.com/senzing/g2-sdk-go-mock/testhelpers
 1. **6040** - github.com/senzing/go-common/record
+1. **6041** - github.com/senzing/go-sdk-abstract-factory/factory
 
 
 ### senzing-tools
