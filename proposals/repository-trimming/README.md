@@ -3,7 +3,6 @@
 
 | Repository           | Status | Description |
 |----------------------|--------|-------------|
-
 | [awesome](https://github.com/Senzing/awesome) | | Curated list of awesome software and resources for Senzing, The First Real-Time AI for Entity Resolution. |
 | [aws-cloudformation-database-cluster](https://github.com/Senzing/aws-cloudformation-database-cluster) | | AWS Cloudformation with VPC and Senzing database cluster |
 | [aws-cloudformation-dev-rest](https://github.com/Senzing/aws-cloudformation-dev-rest) | | AWS Cloudformation for developers using Senzing HTTP REST API |
