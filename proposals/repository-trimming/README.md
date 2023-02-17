@@ -11,7 +11,7 @@
 | [aws-cloudformation-performance-testing](https://github.com/Senzing/aws-cloudformation-performance-testing) | | None |
 | [aws-cloudformation-webapp-demo](https://github.com/Senzing/aws-cloudformation-webapp-demo) | | None |
 | [aws-lambda-cognito-authorizer](https://github.com/Senzing/aws-lambda-cognito-authorizer) | | Lambda function for authorizing via AWS Cognito |
-| [aws-lambda-self-signed-certificate](https://github.com/Senzing/aws-lambda-self-signed-certificate) | | None |
+| [aws-lambda-self-signed-certificate](https://github.com/Senzing/aws-lambda-self-signed-certificate) | | Creates a self-signed SSL certificate for AWS demonstrations. |
 | [aws-marketplace-evaluation](https://github.com/Senzing/aws-marketplace-evaluation) | | AWS Marketplace offering. |
 | [azure-template-aks-poc-simple](https://github.com/Senzing/azure-template-aks-poc-simple) | | An Azure ARM template for bringing up Senzing on Kubernetes (AKS) |
 | [charts](https://github.com/Senzing/charts) | | Helm Charts for use with Kubernetes, OpenShift, and Rancher. |
@@ -23,7 +23,7 @@
 | [connector-neo4j](https://github.com/Senzing/connector-neo4j) | | Transform Senzing data into Neo4j graph database. |
 | [data-encryption-aes256cbc-sample](https://github.com/Senzing/data-encryption-aes256cbc-sample) | | This is a sample encryption plugin, for use with the G2 engine to encrypt sensitive data in the data repository.  |
 | [data-mart-replicator](https://github.com/Senzing/data-mart-replicator) | | :construction: Data mart |
-| [discussions](https://github.com/Senzing/discussions) | | None |
+| [discussions](https://github.com/Senzing/discussions) | | Repository that supports GitHub Discussions. |
 | [docker-adminer](https://github.com/Senzing/docker-adminer) | | Dockerfile wrapping `adminer`, a database viewer. |
 | [docker-apt](https://github.com/Senzing/docker-apt) | | Dockerfile wrapping `apt-get`, a package manager. |
 | [docker-aptdownloader](https://github.com/Senzing/docker-aptdownloader) | | Dockerfile wrapping `apt-get install --download-only`. |
@@ -58,9 +58,9 @@
 | [evaluate](https://github.com/Senzing/evaluate) | | Information for evaluating Senzing at http://senzing.com/evaluate |
 | [file-loader](https://github.com/Senzing/file-loader) | | None |
 | [g2-python](https://github.com/Senzing/g2-python) | | Tools found at g2/python in the SenzingAPI package. |
-| [g2-sdk-go-base](https://github.com/Senzing/g2-sdk-go-base) | | None |
-| [g2-sdk-go-grpc](https://github.com/Senzing/g2-sdk-go-grpc) | | None |
-| [g2-sdk-go-mock](https://github.com/Senzing/g2-sdk-go-mock) | | None |
+| [g2-sdk-go-base](https://github.com/Senzing/g2-sdk-go-base) | | An SDK for calling the Senzing C library locally. |
+| [g2-sdk-go-grpc](https://github.com/Senzing/g2-sdk-go-grpc) | | An SDK for calling the Senzing C library via gRPC network requests. |
+| [g2-sdk-go-mock](https://github.com/Senzing/g2-sdk-go-mock) | | A mock object for the https://github.com/Senzing/g2-sdk-go interface. |
 | [g2-sdk-go](https://github.com/Senzing/g2-sdk-go) | | Senzing's Go Software Development Kit (SDK) |
 | [g2-sdk-java](https://github.com/Senzing/g2-sdk-java) | | Java SDK hosted on MvnRepository. |
 | [g2-sdk-proto](https://github.com/Senzing/g2-sdk-proto) | | Proto files for the G2 Software Development Kit |
@@ -86,14 +86,14 @@
 | [g2setupconfig](https://github.com/Senzing/g2setupconfig) | | Distributed with Senzing API package |
 | [g2snapshot](https://github.com/Senzing/g2snapshot) | | Distributed with Senzing API package |
 | [g2updateproject](https://github.com/Senzing/g2updateproject) | | Distributed with Senzing API package |
-| [git-action-slack-notification](https://github.com/Senzing/git-action-slack-notification) | | None |
-| [github-action-add-issue-to-project](https://github.com/Senzing/github-action-add-issue-to-project) | | None |
-| [github-action-identify-customer](https://github.com/Senzing/github-action-identify-customer) | | None |
+| [git-action-slack-notification](https://github.com/Senzing/git-action-slack-notification) | | GitHub Action for notifying Slack |
+| [github-action-add-issue-to-project](https://github.com/Senzing/github-action-add-issue-to-project) | | A GitHub Action for adding an issue to projects. |
+| [github-action-identify-customer](https://github.com/Senzing/github-action-identify-customer) | | A GitAction for determining if a customer submitted the issue. |
 | [github-util](https://github.com/Senzing/github-util) | | Works with GitHub metadata. |
-| [go-common](https://github.com/Senzing/go-common) | | None |
-| [go-logging](https://github.com/Senzing/go-logging) | | None |
+| [go-common](https://github.com/Senzing/go-common) | | Reusable, small components. |
+| [go-logging](https://github.com/Senzing/go-logging) | | A reusable logging framework. |
 | [go-observing](https://github.com/Senzing/go-observing) | | Observer software design pattern |
-| [go-sdk-abstract-factory](https://github.com/Senzing/go-sdk-abstract-factory) | | None |
+| [go-sdk-abstract-factory](https://github.com/Senzing/go-sdk-abstract-factory) | | An abstract factory for objects of the https://github.com/Senzing/g2-sdk-go interface. |
 | [governor-postgresql-transaction-id](https://github.com/Senzing/governor-postgresql-transaction-id) | | Governor plugin for PostgreSQL transaction IDs. |
 | [ibm-openshift-guide](https://github.com/Senzing/ibm-openshift-guide) | | Demonstrate Senzing stack using OpenShift and IBM Db2. |
 | [images](https://github.com/Senzing/images) | | Images used across repositories. |
@@ -115,7 +115,7 @@
 | [mapper-ofac](https://github.com/Senzing/mapper-ofac) | | Map OFAC to Senzing format. |
 | [mapper-openc](https://github.com/Senzing/mapper-openc) | | Map Open Corporate into Senzing format. |
 | [mapper-opensanctions](https://github.com/Senzing/mapper-opensanctions) | | Map Open Sanctions into Senzing format. |
-| [mapper-sayari-spark](https://github.com/Senzing/mapper-sayari-spark) | | None |
+| [mapper-sayari-spark](https://github.com/Senzing/mapper-sayari-spark) | | Map Sayari's global corporate data into Senzing format using Spark. |
 | [mapper-sayari](https://github.com/Senzing/mapper-sayari) | | Map Sayari's global corporate data into Senzing format. |
 | [openshift-demo](https://github.com/Senzing/openshift-demo) | | Demonstrate Senzing stack using `minishift`. |
 | [packer-senzing-demo-ubuntu-18.04](https://github.com/Senzing/packer-senzing-demo-ubuntu-18.04) | | :construction: [Under construction] A packer build of a senzing demo. |
@@ -139,23 +139,24 @@
 | [senzing-poc-server](https://github.com/Senzing/senzing-poc-server) | | Senzing API Server plus management APIs. |
 | [senzing-rest-api-specification](https://github.com/Senzing/senzing-rest-api-specification) | | OpenAPI specification of Senzing REST API. |
 | [senzing-sdk-api-specification](https://github.com/Senzing/senzing-sdk-api-specification) | | Software Development Kit documentation. |
-| [senzing-tools](https://github.com/Senzing/senzing-tools) | | None |
+| [senzing-tools](https://github.com/Senzing/senzing-tools) | | An aggregation of Senzing tools |
 | [senzing-tutorial-in-python](https://github.com/Senzing/senzing-tutorial-in-python) | | Work in progress |
 | [senzing-up](https://github.com/Senzing/senzing-up) | | Super easy Senzing demonstration using docker on Linux or Mac. |
 | [senzing.github.io](https://github.com/Senzing/senzing.github.io) | | Organization site at http://hub.senzing.com |
 | [senzingapi-runtime](https://github.com/Senzing/senzingapi-runtime) | | Dockerfile with senzingapi-runtime binaries baked-in |
 | [senzingapi-tools](https://github.com/Senzing/senzingapi-tools) | | Base image using senzingapi-tools DEB file |
 | [senzinggo](https://github.com/Senzing/senzinggo) | | Quickly and easily start the Senzing REST API server, demo web app & Swagger in containers. |
-| [servegrpc](https://github.com/Senzing/servegrpc) | | None |
+| [servegrpc](https://github.com/Senzing/servegrpc) | | A gRPC server of the https://github.com/Senzing/g2-sdk-proto protocol |
 | [stream-loader](https://github.com/Senzing/stream-loader) | | Python tool for loading Senzing Engine from RabbitMQ, Kafka, or AWS SQS. |
 | [stream-logger](https://github.com/Senzing/stream-logger) | | A utility for dumping the contents of a stream to a log. |
 | [stream-producer](https://github.com/Senzing/stream-producer) | | Produce a stream from different input formats. |
 | [subway-map](https://github.com/Senzing/subway-map) | | http://hub.senzing.com/subway-map site |
 | [support](https://github.com/Senzing/support) | | http://hub.senzing.com/support site |
 | [template-docker](https://github.com/Senzing/template-docker) | | Best practices for creating a "docker-*" repository. |
-| [template-go](https://github.com/Senzing/template-go) | | None |
+| [template-go](https://github.com/Senzing/template-go) | | Best practices for creating a "go-" repository. |
 | [template-python](https://github.com/Senzing/template-python) | | Best practices for creating a "python-*" repository. |
-| [template-repository](https://github.com/Senzing/template-repository) | | Example repository with Community artifacts. |
+| [template-repository](https://github.com/Senzing/template-repository) | | Best practices for creating repository. |
 | [test-ground](https://github.com/Senzing/test-ground) | | An area for testing ideas.  May be wiped out at any time. |
 | [truth-sets](https://github.com/Senzing/truth-sets) | | Distributed with Senzing API package |
 | [video](https://github.com/Senzing/video) | | Videos available at http://senzing.com/video |
+
