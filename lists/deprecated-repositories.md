@@ -45,17 +45,17 @@
 | 2022-06-14 |            | docker-opt-senzing                           |
 | 2022-06-14 |            | docker-base-image-centos                     |
 | 2022-06-10 |            | g2report                                     |
+| 2022-06-10 |            | g2product                                    |
+| 2022-06-10 |            | g2hasher                                     |
+| 2022-06-10 |            | g2exception                                  |
 | 2022-06-10 |            | g2engine                                     |
 | 2022-06-10 |            | g2diagnostic                                 |
 | 2022-06-10 |            | g2configmgr                                  |
+| 2022-06-10 |            | g2config                                     |
 | 2022-06-02 |            | docker-g2loader                              |
 | 2022-06-02 |            | docker-g2loader                              |
 | 2022-06-02 |            | docker-g2configtool                          |
 | 2022-06-02 |            | docker-g2command                             |
-| 2021-06-21 |            | g2product                                    |
-| 2021-06-07 |            | g2config                                     |
-| 2021-06-06 |            | g2hasher                                     |
-| 2021-05-31 |            | g2exception                                  |
 | 2019-11-19 |            | docker-python-postgresql-base                |
 | 2019-11-19 |            | docker-python-db2-base                       |
 | 2019-11-19 |            | docker-python-base-complete                  |
@@ -68,10 +68,3 @@
 | 2019-06-05 |            | docker-compose-postgresql-demo               |
 | 2019-06-05 |            | docker-compose-mysql-demo                    |
 | 2019-06-05 |            | docker-compose-db2-demo                      |
-| 202x-mm-dd |            |                                              |
-| 202x-mm-dd |            |                                              |
-| 202x-mm-dd |            |                                              |
-| 202x-mm-dd |            |                                              |
-| 202x-mm-dd |            |                                              |
-| 202x-mm-dd |            |                                              |
-
