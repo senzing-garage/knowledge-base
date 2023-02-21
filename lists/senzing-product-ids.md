@@ -79,7 +79,6 @@ Used in log message identifiers in the format `senzing-ppppnnnnt`, where:
 1. **6040** - github.com/senzing/go-common/record
 1. **6041** - github.com/senzing/go-sdk-abstract-factory/factory
 
-
 ### senzing-tools
 
 1. **6100** - github.com/senzing/senzing-tools/...
@@ -90,5 +89,7 @@ Used in log message identifiers in the format `senzing-ppppnnnnt`, where:
 1. **6202** - github.com/senzing/move
 1. **6203** - github.com/senzing/validate
 1. **6204** - github.com/senzing/servegrpc
-1. **6205** - github.com/senzing/initdatabase
+1. **6205** - github.com/senzing/initdatabase/initializer
+1. **6206** - github.com/senzing/initdatabase/sqlfiler
+1. **6207** - github.com/senzing/initdatabase/senzingconfig
 
