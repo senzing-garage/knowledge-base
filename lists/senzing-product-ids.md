@@ -76,7 +76,6 @@ Used in log message identifiers in the format `senzing-ppppnnnnt`, where:
 1. **6037** - github.com/senzing/g2-sdk-go-mock/g2ssadm
 1. **6038** - github.com/senzing/g2-sdk-go-mock/test
 1. **6039** - github.com/senzing/g2-sdk-go-mock/testhelpers
-1. **6040** - github.com/senzing/go-common/record
 1. **6041** - github.com/senzing/go-sdk-abstract-factory/factory
 
 ### senzing-tools
@@ -89,11 +88,22 @@ Used in log message identifiers in the format `senzing-ppppnnnnt`, where:
 1. **6202** - github.com/senzing/move
 1. **6203** - github.com/senzing/validate
 1. **6204** - github.com/senzing/servegrpc
-1. **6207** - github.com/senzing/go-databasing/sqlexecutor
-1. **6210** - github.com/senzing/initdatabase/initializer
-1. **6211** - github.com/senzing/initdatabase/senzingconfig
-1. **6212** - github.com/senzing/initdatabase/senzingschema
+1. **6205** - github.com/senzing/initdatabase
 
+### Reusable packages
 
-
-
+1. **6401** - github.com/senzing/go-common/engineconfigurationparser
+1. **6402** - github.com/senzing/go-common/g2engineconfigurationjson
+1. **6403** - github.com/senzing/go-common/record
+1. **6404** - github.com/senzing/go-common/truthset
+1. **6421** - github.com/senzing/go-databasing/connector
+1. **6422** - github.com/senzing/go-databasing/sqlexecutor
+1. **6423** - github.com/senzing/go-databasing/postgresql
+1. **6441** - github.com/senzing/go-logging/
+1. **6461** - github.com/senzing/go-observing/notifier
+1. **6462** - github.com/senzing/go-observing/observer
+1. **6463** - github.com/senzing/go-observing/subject
+1. **6481** - github.com/senzing/go-queuing/
+1. **6501** - github.com/senzing/initdatabase/initializer
+1. **6502** - github.com/senzing/initdatabase/senzingconfig
+1. **6503** - github.com/senzing/initdatabase/senzingschema
