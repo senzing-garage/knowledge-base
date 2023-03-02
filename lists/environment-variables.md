@@ -2430,33 +2430,38 @@
 ### SENZING_TOOLS_DATABASE_URL
 
 1. Synopsis:
-    1. A URL specifying a database connection point.
+    1. A string in URL format specifying a database connection point.
 1. Values:
     1. Format: `protocol://username:password/host:port/database/?parameters`
 1. Examples:
-    1. **MsSQL:** `mssql://username:password@host.com:1433/G2`
-    1. **MySQL:** `mysql://username:password@host.com:3306/G2`
-    1. **PostgreSQL:** `postgresql://username:password#host.com:5432/G2/?sslmode=disable`:
-    1. **PostgreSQL:** `postgresql://username:password#host.com:5432/G2`
-    1. **Sqlite3:** `sqlite3://na:na@/tmp/sqlite/G2C.db`
+    1. **MsSQL:** "mssql://username:password@host.com:1433/G2"
+    1. **MySQL:** "mysql://username:password@host.com:3306/G2"
+    1. **PostgreSQL:** "postgresql://username:password@host.com:5432/G2/?sslmode=disable"
+    1. **PostgreSQL:** "postgresql://username:password@host.com:5432/G2"
+    1. **Sqlite3:** "sqlite3://na:na@/tmp/sqlite/G2C.db"
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_DATABASE_URL&type=code)
 
 ### SENZING_TOOLS_DATASOURCES
 
 1. Synopsis:
-    1. A list of one or more space-delimited datasource identifiers.
+    1. A string listing one or more space-delimited datasource identifiers.
 1. Values:
-    1. Format: `datasource1 datasource2 datasource3`
+    1. Format: "datasource1 datasource2 datasource3"
 1. Examples:
-    1. `export SENZING_TOOLS_DATASOURCES="CUSTOMER REFERENCE WATCHLIST"`
+    1. Using `export`:
+
+        ```console
+        export SENZING_TOOLS_DATASOURCES="CUSTOMER REFERENCE WATCHLIST"
+        ```
+
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_DATASOURCES&type=code)
 
 ### SENZING_TOOLS_ENGINE_CONFIGURATION_JSON
 
 1. Synopsis:
-    1. A JSON string containing configuration information sent to the Senzing engine.
-1. Values:
-    1. Format: `datasource1 datasource2 datasource3`
+    1. A string of JSON containing configuration information sent to the Senzing engine.
+    1. `SENZING_TOOLS_ENGINE_CONFIGURATION_JSON` is used as the `iniParams` value of
+       [G2engine.Init()](https://pkg.go.dev/github.com/senzing/g2-sdk-go-base/g2engine#G2engine.Init).
 1. Examples:
     1. Sample JSON:
 
@@ -2500,7 +2505,7 @@
     1. `SENZING_TOOLS_ENGINE_LOG_LEVEL` is used as the `verboseLogging` value of
        [G2engine.Init()](https://pkg.go.dev/github.com/senzing/g2-sdk-go-base/g2engine#G2engine.Init).
 1. Values:
-    1. Default: 0 - no logging
+    1. 0 - no logging
     1. 1 - log
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_ENGINE_LOG_LEVEL&type=code)
 
