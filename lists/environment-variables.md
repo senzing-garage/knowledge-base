@@ -2506,7 +2506,7 @@
        [G2engine.Init()](https://pkg.go.dev/github.com/senzing/g2-sdk-go-base/g2engine#G2engine.Init).
 1. Values:
     1. 0 - no logging
-    1. 1 - log
+    1. 1 - logging
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_ENGINE_LOG_LEVEL&type=code)
 
 ### SENZING_TOOLS_ENGINE_MODULE_NAME
@@ -2522,17 +2522,17 @@
 ### SENZING_TOOLS_LOG_LEVEL
 
 1. Synopsis:
-    1. An string given to the Senzing engine to identify the instance of the Senzing engine.
+    1. An string specifying the amount of logging desired.
     1. `SENZING_TOOLS_ENGINE_MODULE_NAME` is used as the `moduleName` value of
        [G2engine.Init()](https://pkg.go.dev/github.com/senzing/g2-sdk-go-base/g2engine#G2engine.Init).
 1. Values:
-    1. "TRACE" - Entry/Exit tracing
-    1. "DEBUG" - Values see during processing
-    1. "INFO"  - Process steps achieved
-    1. "WARN"  - Unexpected situations, but processing was successful
-    1. "ERROR" - Unexpected situations, processing was not successful
-    1. "FATAL" - The process needs to shutdown
-    1. "PANIC" - The underlying system is at issue
+    1. "TRACE" - Entry/Exit tracing.  Will show sensitive data.
+    1. "DEBUG" - Values see during processing.  May show sensitive data.
+    1. "INFO"  - Process steps achieved.
+    1. "WARN"  - Unexpected situations, but processing was successful.
+    1. "ERROR" - Unexpected situations, processing was not successful.
+    1. "FATAL" - The process needs to shutdown.
+    1. "PANIC" - The underlying system is at issue.
 1. References:
     1. [Log Levels](https://github.com/Senzing/knowledge-base/blob/main/lists/log-levels.md)
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_LOG_LEVEL&type=code)
