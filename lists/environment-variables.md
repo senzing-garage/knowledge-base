@@ -2427,6 +2427,111 @@
     1. Default: 4
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_THREADS_PER_PROCESS&type=code)
 
+### SENZING_TOOLS_DATABASE_URL
+
+1. Synopsis:
+    1. A URL specifying a database connection point.
+1. Values:
+    1. Format: `protocol://username:password/host:port/database/?parameters`
+1. Examples:
+    1. **MsSQL:** `mssql://username:password@host.com:1433/G2`
+    1. **MySQL:** `mysql://username:password@host.com:3306/G2`
+    1. **PostgreSQL:** `postgresql://username:password#host.com:5432/G2/?sslmode=disable`:
+    1. **PostgreSQL:** `postgresql://username:password#host.com:5432/G2`
+    1. **Sqlite3:** `sqlite3://na:na@/tmp/sqlite/G2C.db`
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_DATABASE_URL&type=code)
+
+### SENZING_TOOLS_DATASOURCES
+
+1. Synopsis:
+    1. A list of one or more space-delimited datasource identifiers.
+1. Values:
+    1. Format: `datasource1 datasource2 datasource3`
+1. Examples:
+    1. `export SENZING_TOOLS_DATASOURCES="CUSTOMER REFERENCE WATCHLIST"`
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_DATASOURCES&type=code)
+
+### SENZING_TOOLS_ENGINE_CONFIGURATION_JSON
+
+1. Synopsis:
+    1. A JSON string containing configuration information sent to the Senzing engine.
+1. Values:
+    1. Format: `datasource1 datasource2 datasource3`
+1. Examples:
+    1. Sample JSON:
+
+        ```json
+        {
+            "PIPELINE": {
+                "CONFIGPATH": "/etc/opt/senzing",
+                "RESOURCEPATH": "/opt/senzing/g2/resources",
+                "SUPPORTPATH": "/opt/senzing/data"
+            },
+            "SQL": {
+                "CONNECTION": "postgresql://username:password@host.com:G2/?sslmode=disable"
+            }
+        }
+        ```
+
+    1. Setting a `SENZING_TOOLS_ENGINE_CONFIGURATION_JSON` environment variable:
+
+        ```console
+        export SENZING_TOOLS_ENGINE_CONFIGURATION_JSON='{
+            "PIPELINE": {
+                "CONFIGPATH": "/etc/opt/senzing",
+                "RESOURCEPATH": "/opt/senzing/g2/resources",
+                "SUPPORTPATH": "/opt/senzing/data"
+            },
+            "SQL": {
+                "CONNECTION": "postgresql://username:password@host.com:G2/?sslmode=disable"
+            }
+        }'
+        ```
+
+1. References:
+    1. [G2Engine Configuration and the Senzing API](https://senzing.zendesk.com/hc/en-us/articles/360038774134-G2Engine-Configuration-and-the-Senzing-API)
+    1. [Scaling Out Your Database With Clustering](https://senzing.zendesk.com/hc/en-us/articles/360010599254-Scaling-Out-Your-Database-With-Clustering)
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_ENGINE_CONFIGURATION_JSON&type=code)
+
+### SENZING_TOOLS_ENGINE_LOG_LEVEL
+
+1. Synopsis:
+    1. An integer specifying how much logging is done by the Senzing engine.
+    1. `SENZING_TOOLS_ENGINE_LOG_LEVEL` is used as the `verboseLogging` value of
+       [G2engine.Init()](https://pkg.go.dev/github.com/senzing/g2-sdk-go-base/g2engine#G2engine.Init).
+1. Values:
+    1. Default: 0 - no logging
+    1. 1 - log
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_ENGINE_LOG_LEVEL&type=code)
+
+### SENZING_TOOLS_ENGINE_MODULE_NAME
+
+1. Synopsis:
+    1. An string given to the Senzing engine to identify the instance of the Senzing engine.
+    1. `SENZING_TOOLS_ENGINE_MODULE_NAME` is used as the `moduleName` value of
+       [G2engine.Init()](https://pkg.go.dev/github.com/senzing/g2-sdk-go-base/g2engine#G2engine.Init).
+1. Values:
+    1. Default: none
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_ENGINE_MODULE_NAME&type=code)
+
+### SENZING_TOOLS_LOG_LEVEL
+
+1. Synopsis:
+    1. An string given to the Senzing engine to identify the instance of the Senzing engine.
+    1. `SENZING_TOOLS_ENGINE_MODULE_NAME` is used as the `moduleName` value of
+       [G2engine.Init()](https://pkg.go.dev/github.com/senzing/g2-sdk-go-base/g2engine#G2engine.Init).
+1. Values:
+    1. "TRACE" - Entry/Exit tracing
+    1. "DEBUG" - Values see during processing
+    1. "INFO"  - Process steps achieved
+    1. "WARN"  - Unexpected situations, but processing was successful
+    1. "ERROR" - Unexpected situations, processing was not successful
+    1. "FATAL" - The process needs to shutdown
+    1. "PANIC" - The underlying system is at issue
+1. References:
+    1. [Log Levels](https://github.com/Senzing/knowledge-base/blob/main/lists/log-levels.md)
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_LOG_LEVEL&type=code)
+
 ### SENZING_UID
 
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_UID&type=code)
