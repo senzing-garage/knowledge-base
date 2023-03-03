@@ -222,9 +222,9 @@
    1. A component of [SENZING_DATABASE_URL](#senzing_database_url) and [SENZING_TOOLS_DATABASE_URL](#senzing_tools_database_url).
    1. Parameters passed into specific database engines.
 1. Values:
-   1. [mssql](https://github.com/microsoft/go-mssqldb)
-   1. [mysql](https://github.com/go-sql-driver/mysql#parameters)
-   1. [postgresql](https://pkg.go.dev/github.com/lib/pq#hdr-Connection_String_Parameters)
+   1. See [mssql](https://github.com/microsoft/go-mssqldb)
+   1. See [mysql](https://github.com/go-sql-driver/mysql#parameters)
+   1. See [postgresql](https://pkg.go.dev/github.com/lib/pq#hdr-Connection_String_Parameters)
 1. Examples:
     1. **sslmode:** "postgresql://username:password@host.example.com:5432/G2/?sslmode=disable"
 1. [Where used](https://github.com/search?q=org%3ASenzing+DATABASE_QUERY_PARAMETERS&type=code)
@@ -2546,8 +2546,6 @@
 
 1. Synopsis:
     1. An string specifying the amount of logging desired.
-    1. `SENZING_TOOLS_ENGINE_MODULE_NAME` is used as the `moduleName` value of
-       [G2engine.Init()](https://pkg.go.dev/github.com/senzing/g2-sdk-go-base/g2engine#G2engine.Init).
 1. Values:
     1. "TRACE" - Entry/Exit tracing.  Will show sensitive data.
     1. "DEBUG" - Values see during processing.  May show sensitive data.
