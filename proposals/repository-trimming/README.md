@@ -8,14 +8,14 @@
 | [aws-cloudformation-dev-rest](https://github.com/Senzing/aws-cloudformation-dev-rest) | | AWS Cloudformation for developers using Senzing HTTP REST API |
 | [aws-cloudformation-ecs-senzing-stack-basic](https://github.com/Senzing/aws-cloudformation-ecs-senzing-stack-basic) | | AWS Cloudformation demonstrating a Senzing stack that can be used with aws-cloudformation-database-cluster. |
 | [aws-cloudformation-ecs](https://github.com/Senzing/aws-cloudformation-ecs) | | :no_entry: [DEPRECATED] Contains deprecated AWS Cloudformation templates |
-| [aws-cloudformation-performance-testing](https://github.com/Senzing/aws-cloudformation-performance-testing) | | None |
-| [aws-cloudformation-webapp-demo](https://github.com/Senzing/aws-cloudformation-webapp-demo) | | None |
+| [aws-cloudformation-performance-testing](https://github.com/Senzing/aws-cloudformation-performance-testing) | | Senzing AWS performance testing project. |
+| [aws-cloudformation-webapp-demo](https://github.com/Senzing/aws-cloudformation-webapp-demo) | | Senzing WebApp demo for AWS. |
 | [aws-lambda-cognito-authorizer](https://github.com/Senzing/aws-lambda-cognito-authorizer) | | Lambda function for authorizing via AWS Cognito |
 | [aws-lambda-self-signed-certificate](https://github.com/Senzing/aws-lambda-self-signed-certificate) | | Creates a self-signed SSL certificate for AWS demonstrations. |
 | [aws-marketplace-evaluation](https://github.com/Senzing/aws-marketplace-evaluation) | | AWS Marketplace offering. |
 | [azure-template-aks-poc-simple](https://github.com/Senzing/azure-template-aks-poc-simple) | | An Azure ARM template for bringing up Senzing on Kubernetes (AKS) |
 | [charts](https://github.com/Senzing/charts) | | Helm Charts for use with Kubernetes, OpenShift, and Rancher. |
-| [code-snippets](https://github.com/Senzing/code-snippets) | | None |
+| [code-snippets](https://github.com/Senzing/code-snippets) | | Task based code snippet examples. |
 | [community-map](https://github.com/Senzing/community-map) | | :construction: [Under construction] A visual representation of the Senzing Community. |
 | [community-roadmap](https://github.com/Senzing/community-roadmap) | | A peek into the future of the Senzing Community. |
 | [compressedfile](https://github.com/Senzing/compressedfile) | | Distributed with Senzing API package |
@@ -56,7 +56,7 @@
 | [entity-search-web-app-console](https://github.com/Senzing/entity-search-web-app-console) | | A side-car for the Entity Search Web App |
 | [entity-search-web-app](https://github.com/Senzing/entity-search-web-app) | | A lightweight http server providing a web UI for entity search through the senzing api server. |
 | [evaluate](https://github.com/Senzing/evaluate) | | Information for evaluating Senzing at http://senzing.com/evaluate |
-| [file-loader](https://github.com/Senzing/file-loader) | | None |
+| [file-loader](https://github.com/Senzing/file-loader) | | Utility to load mapped JSON data and process redo records after loading. |
 | [g2-python](https://github.com/Senzing/g2-python) | | Tools found at g2/python in the SenzingAPI package. |
 | [g2-sdk-go-base](https://github.com/Senzing/g2-sdk-go-base) | | An SDK for calling the Senzing C library locally. |
 | [g2-sdk-go-grpc](https://github.com/Senzing/g2-sdk-go-grpc) | | An SDK for calling the Senzing C library via gRPC network requests. |
@@ -64,7 +64,7 @@
 | [g2-sdk-go](https://github.com/Senzing/g2-sdk-go) | | Senzing's Go Software Development Kit (SDK) |
 | [g2-sdk-java](https://github.com/Senzing/g2-sdk-java) | | Java SDK hosted on MvnRepository. |
 | [g2-sdk-proto](https://github.com/Senzing/g2-sdk-proto) | | Proto files for the G2 Software Development Kit |
-| [g2-sdk-python-grpc](https://github.com/Senzing/g2-sdk-python-grpc) | | None |
+| [g2-sdk-python-grpc](https://github.com/Senzing/g2-sdk-python-grpc) | | An SDK for calling the Senzing C library via gRPC network requests. |
 | [g2-sdk-python](https://github.com/Senzing/g2-sdk-python) | | Python SDK hosted on PYPI. |
 | [g2anon](https://github.com/Senzing/g2anon) | | None |
 | [g2audit](https://github.com/Senzing/g2audit) | | Distributed with Senzing API package |
@@ -89,10 +89,13 @@
 | [git-action-slack-notification](https://github.com/Senzing/git-action-slack-notification) | | GitHub Action for notifying Slack |
 | [github-action-add-issue-to-project](https://github.com/Senzing/github-action-add-issue-to-project) | | A GitHub Action for adding an issue to projects. |
 | [github-action-identify-customer](https://github.com/Senzing/github-action-identify-customer) | | A GitAction for determining if a customer submitted the issue. |
+| [github-action-make-go-tag](https://github.com/Senzing/github-action-make-go-tag) | | From the Semantic Version, create a v0.0.0 tag for the Go module version |
 | [github-util](https://github.com/Senzing/github-util) | | Works with GitHub metadata. |
 | [go-common](https://github.com/Senzing/go-common) | | Reusable, small components. |
+| [go-databasing](https://github.com/Senzing/go-databasing) | | Database routines |
 | [go-logging](https://github.com/Senzing/go-logging) | | A reusable logging framework. |
 | [go-observing](https://github.com/Senzing/go-observing) | | Observer software design pattern |
+| [go-queuing](https://github.com/Senzing/go-queuing) | | Queue routines |
 | [go-sdk-abstract-factory](https://github.com/Senzing/go-sdk-abstract-factory) | | An abstract factory for objects of the https://github.com/Senzing/g2-sdk-go interface. |
 | [governor-postgresql-transaction-id](https://github.com/Senzing/governor-postgresql-transaction-id) | | Governor plugin for PostgreSQL transaction IDs. |
 | [ibm-openshift-guide](https://github.com/Senzing/ibm-openshift-guide) | | Demonstrate Senzing stack using OpenShift and IBM Db2. |
@@ -100,10 +103,11 @@
 | [init-mssql](https://github.com/Senzing/init-mssql) | | Initialize an MS SQL database with Senzing schema and configuration |
 | [init-mysql](https://github.com/Senzing/init-mysql) | | Initialize a MySQL database with Senzing schema and configuration |
 | [init-postgresql](https://github.com/Senzing/init-postgresql) | | Initialize a PostgreSQL database with Senzing schema and configuration |
+| [initdatabase](https://github.com/Senzing/initdatabase) | | None |
 | [keystore-generator](https://github.com/Senzing/keystore-generator) | | Generates SSL keys |
 | [knowledge-base](https://github.com/Senzing/knowledge-base) | | HOWTOs, tasks, explanations, and more knowledge. |
 | [kubernetes-demo](https://github.com/Senzing/kubernetes-demo) | | Demonstrate Senzing stack using Kubernetes. |
-| [libpostal-data](https://github.com/Senzing/libpostal-data) | | None |
+| [libpostal-data](https://github.com/Senzing/libpostal-data) | | Information about libpostal work done by Senzing. |
 | [mapper-base](https://github.com/Senzing/mapper-base) | | Base functions used to map a variety of formats to a Senzing-acceptable format. |
 | [mapper-csv](https://github.com/Senzing/mapper-csv) | | Exemplar artifacts (files) that can be used in other Senzing repositories. |
 | [mapper-dnb](https://github.com/Senzing/mapper-dnb) | | Map DNB format to Senzing format. |
@@ -113,6 +117,7 @@
 | [mapper-nomino](https://github.com/Senzing/mapper-nomino) | |  Map Nomino format to Senzing format. |
 | [mapper-npi](https://github.com/Senzing/mapper-npi) | | Map NPPES NPI Registry to Senzing format. |
 | [mapper-ofac](https://github.com/Senzing/mapper-ofac) | | Map OFAC to Senzing format. |
+| [mapper-open-ownership](https://github.com/Senzing/mapper-open-ownership) | | None |
 | [mapper-openc](https://github.com/Senzing/mapper-openc) | | Map Open Corporate into Senzing format. |
 | [mapper-opensanctions](https://github.com/Senzing/mapper-opensanctions) | | Map Open Sanctions into Senzing format. |
 | [mapper-sayari-spark](https://github.com/Senzing/mapper-sayari-spark) | | Map Sayari's global corporate data into Senzing format using Spark. |
@@ -159,4 +164,3 @@
 | [test-ground](https://github.com/Senzing/test-ground) | | An area for testing ideas.  May be wiped out at any time. |
 | [truth-sets](https://github.com/Senzing/truth-sets) | | Distributed with Senzing API package |
 | [video](https://github.com/Senzing/video) | | Videos available at http://senzing.com/video |
-
