@@ -150,6 +150,12 @@
         export DATABASE_HOST=10.1.1.17
         ```
 
+    1. Using a hostname:
+
+        ```console
+        export DATABASE_HOST=host.example.com
+        ```
+
 1. [Where used](https://github.com/search?q=org%3ASenzing+DATABASE_HOST&type=code)
 
 ### DATABASE_PASSWORD
@@ -172,9 +178,10 @@
    1. A component of [SENZING_DATABASE_URL](#senzing_database_url) and [SENZING_TOOLS_DATABASE_URL](#senzing_tools_database_url).
    1. The port on the machine offering the database service.
 1. Values:
-    - 50000 - db2 default
+    - 1433 - mssql default
     - 3306 - mysql default
     - 5432 - postresql default
+    - 50000 - db2 default
     - sqlite3 has no default as it is file-based.
     - Default: none
 1. Examples:
