@@ -124,7 +124,7 @@
 ### DATABASE_DATABASE
 
 1. Synopsis:
-   1. A component of [SENZING_DATABASE_URL](#senzing_database_url).
+   1. A component of [SENZING_DATABASE_URL](#senzing_database_url) and [SENZING_TOOLS_DATABASE_URL](#senzing_tools_database_url).
    1. The name of the database holding the Senzing G2 model.
 1. Values:
     - Default: none
@@ -141,7 +141,7 @@
 ### DATABASE_HOST
 
 1. Synopsis:
-   1. A component of [SENZING_DATABASE_URL](#senzing_database_url).
+   1. A component of [SENZING_DATABASE_URL](#senzing_database_url) and [SENZING_TOOLS_DATABASE_URL](#senzing_tools_database_url).
    1. A hostname, IP address, or symbolic name of the database service.
 1. Examples:
     1. Using an IP address:
@@ -155,7 +155,7 @@
 ### DATABASE_PASSWORD
 
 1. Synopsis:
-   1. A component of [SENZING_DATABASE_URL](#senzing_database_url).
+   1. A component of [SENZING_DATABASE_URL](#senzing_database_url) and [SENZING_TOOLS_DATABASE_URL](#senzing_tools_database_url).
    1. The password for the database user, [DATABASE_USERNAME](#database_username).
 1. Examples:
     1. Using password of "my;password!":
@@ -169,7 +169,7 @@
 ### DATABASE_PORT
 
 1. Synopsis:
-   1. A component of [SENZING_DATABASE_URL](#senzing_database_url).
+   1. A component of [SENZING_DATABASE_URL](#senzing_database_url) and [SENZING_TOOLS_DATABASE_URL](#senzing_tools_database_url).
    1. The port on the machine offering the database service.
 1. Values:
     - 50000 - db2 default
@@ -189,14 +189,16 @@
 ### DATABASE_PROTOCOL
 
 1. Synopsis:
-   1. A component of [SENZING_DATABASE_URL](#senzing_database_url).
+   1. A component of [SENZING_DATABASE_URL](#senzing_database_url) and [SENZING_TOOLS_DATABASE_URL](#senzing_tools_database_url).
    1. Identifies which type of database will be connected.
 1. Values:
     - db2
+    - mssql
     - mysql
     - postgresql
     - sqlite3
     - Default: none
+
 1. Examples:
 
     1. PostgreSQL
@@ -207,10 +209,23 @@
 
 1. [Where used](https://github.com/search?q=org%3ASenzing+DATABASE_PROTOCOL&type=code)
 
+### DATABASE_QUERY_PARAMETERS
+
+1. Synopsis:
+   1. A component of [SENZING_DATABASE_URL](#senzing_database_url) and [SENZING_TOOLS_DATABASE_URL](#senzing_tools_database_url).
+   1. Parameters passed into specific database engines.
+1. Values:
+   1. [mssql](https://github.com/microsoft/go-mssqldb)
+   1. [mysql](https://github.com/go-sql-driver/mysql#parameters)
+   1. [postgresql](https://pkg.go.dev/github.com/lib/pq#hdr-Connection_String_Parameters)
+1. Examples:
+    1. **sslmode:** "postgresql://username:password@host.example.com:5432/G2/?sslmode=disable"
+1. [Where used](https://github.com/search?q=org%3ASenzing+DATABASE_QUERY_PARAMETERS&type=code)
+
 ### DATABASE_USERNAME
 
 1. Synopsis:
-   1. A component of [SENZING_DATABASE_URL](#senzing_database_url).
+   1. A component of [SENZING_DATABASE_URL](#senzing_database_url) and [SENZING_TOOLS_DATABASE_URL](#senzing_tools_database_url).
    1. The name of a user authorized to work with the [DATABASE_DATABASE](#database_database) database.
 1. Examples:
     1. Using user name of "my-user":
@@ -1098,19 +1113,19 @@
     1. MySQL
 
         ```console
-        export SENZING_DATABASE_URL=mysql://user:password@my.example.com:3306/G2
+        export SENZING_DATABASE_URL=mysql://username:password@host.example.com:3306/G2
         ```
 
     1. PostgreSQL
 
         ```console
-        export SENZING_DATABASE_URL=postgresql://user:password@my.example.com:5432/G2
+        export SENZING_DATABASE_URL=postgresql://username:password@host.example.com:5432/G2
         ```
 
     1. Db2:
 
         ```console
-        export SENZING_DATABASE_URL=db2://db2inst1:db2inst1@my.example.com:50000/G2
+        export SENZING_DATABASE_URL=db2://username:password@host.example.com:50000/G2
         ```
 
     1. SQLite
@@ -1602,14 +1617,14 @@
        Example:
 
         ```console
-        export SENZING_GOVERNOR_DATABASE_URLS=postgresql://postgres:postgres@localhost:5432/G2
+        export SENZING_GOVERNOR_DATABASE_URLS=postgresql://username:password@host.example.com:5432/G2
         ```
 
     1. Multiple SENZING_DATABASE_URLs.
        Example:
 
         ```console
-        export SENZING_GOVERNOR_DATABASE_URLS=postgresql://postgres:postgres@localhost:5432/G2,postgresql://postgres:postgres@localhost:5432/G2_RES
+        export SENZING_GOVERNOR_DATABASE_URLS=postgresql://username:password@host.example.com:5432/G2,postgresql://username:password@host.example.com:5432/G2_RES
         ```
 
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_GOVERNOR_DATABASE_URLS&type=code)
@@ -1950,7 +1965,7 @@
     1. Using an IP address:
 
         ```console
-        export SENZING_SQL_CONNECTION=mysql://username:password@hostname:3306/?schema=schemaname
+        export SENZING_SQL_CONNECTION=mysql://username:password@host.example.com:3306/?schema=schemaname
         ```
 
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_SQL_CONNECTION&type=code)
@@ -2432,12 +2447,13 @@
 1. Synopsis:
     1. A string in URL format specifying a database connection point.
 1. Values:
-    1. Format: `protocol://username:password/host:port/database/?parameters`
+    1. Format:
+       [DATABASE_PROTOCOL](#database_protocol)://[DATABASE_USERNAME](#database_username):[DATABASE_PASSWORD](#database_password)@[DATABASE_HOST](#database_host):[DATABASE_PORT](#database_port)/[DATABASE_DATABASE](#database_database)/?[DATABASE_QUERY_PARAMETERS](#database_query_parameters).
 1. Examples:
-    1. **MsSQL:** "mssql://username:password@host.com:1433/G2"
-    1. **MySQL:** "mysql://username:password@host.com:3306/G2"
-    1. **PostgreSQL:** "postgresql://username:password@host.com:5432/G2/?sslmode=disable"
-    1. **PostgreSQL:** "postgresql://username:password@host.com:5432/G2"
+    1. **MsSQL:** "mssql://username:password@host.example.com:1433/G2"
+    1. **MySQL:** "mysql://username:password@host.example.com:3306/G2"
+    1. **PostgreSQL:** "postgresql://username:password@host.example.com:5432/G2/?sslmode=disable"
+    1. **PostgreSQL:** "postgresql://username:password@host.example.com:5432/G2"
     1. **Sqlite3:** "sqlite3://na:na@/tmp/sqlite/G2C.db"
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_DATABASE_URL&type=code)
 
@@ -2473,7 +2489,7 @@
                 "SUPPORTPATH": "/opt/senzing/data"
             },
             "SQL": {
-                "CONNECTION": "postgresql://username:password@host.com:G2/?sslmode=disable"
+                "CONNECTION": "postgresql://username:password@host.example.com:G2/?sslmode=disable"
             }
         }
         ```
@@ -2488,7 +2504,7 @@
                 "SUPPORTPATH": "/opt/senzing/data"
             },
             "SQL": {
-                "CONNECTION": "postgresql://username:password@host.com:G2/?sslmode=disable"
+                "CONNECTION": "postgresql://username:password@host.example.com:G2/?sslmode=disable"
             }
         }'
         ```
