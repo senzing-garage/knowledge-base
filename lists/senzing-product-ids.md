@@ -107,3 +107,4 @@ Used in log message identifiers in the format `senzing-ppppnnnnt`, where:
 1. **6501** - github.com/senzing/initdatabase/initializer
 1. **6502** - github.com/senzing/initdatabase/senzingconfig
 1. **6503** - github.com/senzing/initdatabase/senzingschema
+1. **6601** - github.com/senzing/move/mover
