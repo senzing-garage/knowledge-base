@@ -2449,6 +2449,14 @@
     1. Default: 4
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_THREADS_PER_PROCESS&type=code)
 
+### SENZING_TOOLS_CONFIGURATION
+
+1. Synopsis:
+1. Values:
+1. Examples:
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_CONFIGURATION&type=code)
+   ([envar.Configuration](https://github.com/search?q=org%3ASenzing+envar.Configuration&type=code))
+
 ### SENZING_TOOLS_DATABASE_URL
 
 1. Synopsis:
@@ -2479,6 +2487,47 @@
         ```
 
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_DATASOURCES&type=code)
+   ([envar.Datasources](https://github.com/search?q=org%3ASenzing+envar.Datasources&type=code))
+
+### SENZING_TOOLS_ENABLE_G2CONFIG
+
+1. Synopsis:
+1. Values:
+1. Examples:
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_ENABLE_G2CONFIG&type=code)
+   ([envar.EnableG2config](https://github.com/search?q=org%3ASenzing+envar.EnableG2config&type=code))
+
+### SENZING_TOOLS_ENABLE_G2CONFIGMGR
+
+1. Synopsis:
+1. Values:
+1. Examples:
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_ENABLE_G2CONFIGMGR&type=code)
+   ([envar.EnableG2configmgr](https://github.com/search?q=org%3ASenzing+envar.EnableG2configmgr&type=code))
+
+### SENZING_TOOLS_ENABLE_G2DIAGNOSTIC
+
+1. Synopsis:
+1. Values:
+1. Examples:
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_ENABLE_G2DIAGNOSTIC&type=code)
+   ([envar.EnableG2diagnostic](https://github.com/search?q=org%3ASenzing+envar.EnableG2diagnostic&type=code))
+
+### SENZING_TOOLS_ENABLE_G2ENGINE
+
+1. Synopsis:
+1. Values:
+1. Examples:
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_ENABLE_G2ENGINE&type=code)
+   ([envar.EnableG2engine](https://github.com/search?q=org%3ASenzing+envar.EnableG2engine&type=code))
+
+### SENZING_TOOLS_ENABLE_G2PRODUCT
+
+1. Synopsis:
+1. Values:
+1. Examples:
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_ENABLE_G2PRODUCT&type=code)
+   ([envar.EnableG2product](https://github.com/search?q=org%3ASenzing+envar.EnableG2product&type=code))
 
 ### SENZING_TOOLS_ENGINE_CONFIGURATION_JSON
 
@@ -2521,6 +2570,7 @@
     1. [G2Engine Configuration and the Senzing API](https://senzing.zendesk.com/hc/en-us/articles/360038774134-G2Engine-Configuration-and-the-Senzing-API)
     1. [Scaling Out Your Database With Clustering](https://senzing.zendesk.com/hc/en-us/articles/360010599254-Scaling-Out-Your-Database-With-Clustering)
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_ENGINE_CONFIGURATION_JSON&type=code)
+   ([envar.EngineConfigurationJson](https://github.com/search?q=org%3ASenzing+envar.EngineConfigurationJson&type=code))
 
 ### SENZING_TOOLS_ENGINE_LOG_LEVEL
 
@@ -2532,6 +2582,7 @@
     1. 0 - no logging
     1. 1 - logging
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_ENGINE_LOG_LEVEL&type=code)
+   ([envar.EngineLogLevel](https://github.com/search?q=org%3ASenzing+envar.EngineLogLevel&type=code))
 
 ### SENZING_TOOLS_ENGINE_MODULE_NAME
 
@@ -2542,6 +2593,15 @@
 1. Values:
     1. Default: none
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_ENGINE_MODULE_NAME&type=code)
+   ([envar.EngineModuleName](https://github.com/search?q=org%3ASenzing+envar.EngineModuleName&type=code))
+
+### SENZING_TOOLS_GRPC_PORT
+
+1. Synopsis:
+1. Values:
+1. Examples:
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_GRPC_PORT&type=code)
+   ([envar.GrpcPort](https://github.com/search?q=org%3ASenzing+envar.GrpcPort&type=code))
 
 ### SENZING_TOOLS_LOG_LEVEL
 
