@@ -2618,6 +2618,7 @@
 1. References:
     1. [Log Levels](https://github.com/Senzing/knowledge-base/blob/main/lists/log-levels.md)
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_LOG_LEVEL&type=code)
+   ([envar.LogLevel](https://github.com/search?q=org%3ASenzing+envar.LogLevel&type=code))
 
 ### SENZING_UID
 
