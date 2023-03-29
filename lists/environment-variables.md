@@ -2463,6 +2463,7 @@
     1. **PostgreSQL:** "postgresql://username:password@host.example.com:5432/G2"
     1. **Sqlite3:** "sqlite3://na:na@/tmp/sqlite/G2C.db"
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_DATABASE_URL&type=code)
+   ([envar.DatabaseUrl](https://github.com/search?q=org%3ASenzing+envar.DatabaseUrl&type=code))
 
 ### SENZING_TOOLS_DATASOURCES
 
