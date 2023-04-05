@@ -13,13 +13,13 @@
 | [aws-lambda-cognito-authorizer](https://github.com/Senzing/aws-lambda-cognito-authorizer) | | Lambda function for authorizing via AWS Cognito |
 | [aws-lambda-self-signed-certificate](https://github.com/Senzing/aws-lambda-self-signed-certificate) | | Creates a self-signed SSL certificate for AWS demonstrations. |
 | [aws-marketplace-evaluation](https://github.com/Senzing/aws-marketplace-evaluation) | | AWS Marketplace offering. |
-| [azure-template-aks-poc-simple](https://github.com/Senzing/azure-template-aks-poc-simple) | | An Azure ARM template for bringing up Senzing on Kubernetes (AKS) |
+| [azure-template-aks-poc-simple](https://github.com/Senzing/azure-template-aks-poc-simple) | Candidate | An Azure ARM template for bringing up Senzing on Kubernetes (AKS) |
 | [charts](https://github.com/Senzing/charts) | | Helm Charts for use with Kubernetes, OpenShift, and Rancher. |
 | [code-snippets](https://github.com/Senzing/code-snippets) | | Task based code snippet examples. |
-| [community-map](https://github.com/Senzing/community-map) | | :construction: [Under construction] A visual representation of the Senzing Community. |
+| [community-map](https://github.com/Senzing/community-map) | Candidate | :construction: [Under construction] A visual representation of the Senzing Community. |
 | [community-roadmap](https://github.com/Senzing/community-roadmap) | | A peek into the future of the Senzing Community. |
 | [compressedfile](https://github.com/Senzing/compressedfile) | | Distributed with Senzing API package |
-| [configurator](https://github.com/Senzing/configurator) | | Web service for configuring Senzing. |
+| [configurator](https://github.com/Senzing/configurator) | Cnadidate | Web service for configuring Senzing. |
 | [connector-neo4j](https://github.com/Senzing/connector-neo4j) | | Transform Senzing data into Neo4j graph database. |
 | [data-encryption-aes256cbc-sample](https://github.com/Senzing/data-encryption-aes256cbc-sample) | | This is a sample encryption plugin, for use with the G2 engine to encrypt sensitive data in the data repository.  |
 | [data-mart-replicator](https://github.com/Senzing/data-mart-replicator) | | :construction: Data mart |
@@ -31,7 +31,7 @@
 | [docker-compose-air-gapper](https://github.com/Senzing/docker-compose-air-gapper) | | Create a TGZ bundle for air-gapped environments based on docker-compose.yaml |
 | [docker-compose-demo](https://github.com/Senzing/docker-compose-demo) | | Demonstrate Senzing stack using `docker-compose`. |
 | [docker-db2-driver-installer](https://github.com/Senzing/docker-db2-driver-installer) | | Install DB2 client drivers on mounted volumes. |
-| [docker-hello-world](https://github.com/Senzing/docker-hello-world) | | Dockerfile for testing docker formations. |
+| [docker-hello-world](https://github.com/Senzing/docker-hello-world) | Candidate | Dockerfile for testing docker formations. |
 | [docker-ibm-db2](https://github.com/Senzing/docker-ibm-db2) | | Dockerfile wrapping `ibmcom/db2` docker image. |
 | [docker-init-container](https://github.com/Senzing/docker-init-container) | | Dockerfile used to initialize Senzing artifacts. |
 | [docker-installer](https://github.com/Senzing/docker-installer) | | Dockerfile use to install Senzing in a non-root container. |
@@ -42,13 +42,13 @@
 | [docker-senzing-base](https://github.com/Senzing/docker-senzing-base) | | Dockerfile used in FROM statements. |
 | [docker-senzing-console](https://github.com/Senzing/docker-senzing-console) | | Docker-based console enabled for interacting with Senzing programs. |
 | [docker-sshd](https://github.com/Senzing/docker-sshd) | | Dockerfile wrapping `sshd`. |
-| [docker-terraform-aws](https://github.com/Senzing/docker-terraform-aws) | | :construction: [Under construction]  |
-| [docker-test-layers](https://github.com/Senzing/docker-test-layers) | | A Repository for testing contents of Docker layers |
+| [docker-terraform-aws](https://github.com/Senzing/docker-terraform-aws) | Candidate | :construction: [Under construction]  |
+| [docker-test-layers](https://github.com/Senzing/docker-test-layers) | Can be deleted | A Repository for testing contents of Docker layers |
 | [docker-test](https://github.com/Senzing/docker-test) | | Used in Spikes. Not for production. |
 | [docker-web-app-demo](https://github.com/Senzing/docker-web-app-demo) | | Dockerfile combining Senzing API server and Senzing Entity WebApp. |
 | [docker-wrap-image-with-mysql](https://github.com/Senzing/docker-wrap-image-with-mysql) | | Wrap a Docker image with enablement for MySQL database |
-| [docker-wrap-image-with-senzing-apt](https://github.com/Senzing/docker-wrap-image-with-senzing-apt) | | Wrap an existing docker image with the Senzing package. |
-| [docker-wrap-image-with-senzing-data](https://github.com/Senzing/docker-wrap-image-with-senzing-data) | | Add /opt/senzing/data to a base image. |
+| [docker-wrap-image-with-senzing-apt](https://github.com/Senzing/docker-wrap-image-with-senzing-apt) | Can Delete | Wrap an existing docker image with the Senzing package. |
+| [docker-wrap-image-with-senzing-data](https://github.com/Senzing/docker-wrap-image-with-senzing-data) |Can Delete | Add /opt/senzing/data to a base image. |
 | [docker-xterm](https://github.com/Senzing/docker-xterm) | | Web-based X-terminal. |
 | [docker-yum](https://github.com/Senzing/docker-yum) | | Dockerfile wrapping `yum`, a package manager. |
 | [dockerhub-util](https://github.com/Senzing/dockerhub-util) | | Utilities for working with hub.docker.com registry |
@@ -100,10 +100,10 @@
 | [governor-postgresql-transaction-id](https://github.com/Senzing/governor-postgresql-transaction-id) | | Governor plugin for PostgreSQL transaction IDs. |
 | [ibm-openshift-guide](https://github.com/Senzing/ibm-openshift-guide) | | Demonstrate Senzing stack using OpenShift and IBM Db2. |
 | [images](https://github.com/Senzing/images) | | Images used across repositories. |
-| [init-mssql](https://github.com/Senzing/init-mssql) | | Initialize an MS SQL database with Senzing schema and configuration |
-| [init-mysql](https://github.com/Senzing/init-mysql) | | Initialize a MySQL database with Senzing schema and configuration |
-| [init-postgresql](https://github.com/Senzing/init-postgresql) | | Initialize a PostgreSQL database with Senzing schema and configuration |
-| [initdatabase](https://github.com/Senzing/initdatabase) | | None |
+| [init-mssql](https://github.com/Senzing/init-mssql) | Candidate | Initialize an MS SQL database with Senzing schema and configuration |
+| [init-mysql](https://github.com/Senzing/init-mysql) | Candidate | Initialize a MySQL database with Senzing schema and configuration |
+| [init-postgresql](https://github.com/Senzing/init-postgresql) | Candidate | Initialize a PostgreSQL database with Senzing schema and configuration |
+| [init-database](https://github.com/Senzing/init-database) | | None |
 | [keystore-generator](https://github.com/Senzing/keystore-generator) | | Generates SSL keys |
 | [knowledge-base](https://github.com/Senzing/knowledge-base) | | HOWTOs, tasks, explanations, and more knowledge. |
 | [kubernetes-demo](https://github.com/Senzing/kubernetes-demo) | | Demonstrate Senzing stack using Kubernetes. |
@@ -123,11 +123,11 @@
 | [mapper-sayari-spark](https://github.com/Senzing/mapper-sayari-spark) | | Map Sayari's global corporate data into Senzing format using Spark. |
 | [mapper-sayari](https://github.com/Senzing/mapper-sayari) | | Map Sayari's global corporate data into Senzing format. |
 | [openshift-demo](https://github.com/Senzing/openshift-demo) | | Demonstrate Senzing stack using `minishift`. |
-| [packer-senzing-demo-ubuntu-18.04](https://github.com/Senzing/packer-senzing-demo-ubuntu-18.04) | | :construction: [Under construction] A packer build of a senzing demo. |
-| [postgresql-client](https://github.com/Senzing/postgresql-client) | | A psql client that waits for the database to be ready before uploading SQL file. |
+| [packer-senzing-demo-ubuntu-18.04](https://github.com/Senzing/packer-senzing-demo-ubuntu-18.04) | Candidate | :construction: [Under construction] A packer build of a senzing demo. |
+| [postgresql-client](https://github.com/Senzing/postgresql-client) | ???? | A psql client that waits for the database to be ready before uploading SQL file. |
 | [postgresql-performance](https://github.com/Senzing/postgresql-performance) | | Tweaks to PostgreSQL and the Senzing DDL |
 | [rabbitmq-performance](https://github.com/Senzing/rabbitmq-performance) | | Tweeks to RabbitMQ |
-| [ready-for-senzing](https://github.com/Senzing/ready-for-senzing) | | :construction: [Under construction]  |
+| [ready-for-senzing](https://github.com/Senzing/ready-for-senzing) | Can be Deleted | :construction: [Under construction]  |
 | [redoer](https://github.com/Senzing/redoer) | | Perform Senzing Redo operations. |
 | [resolver](https://github.com/Senzing/resolver) | | Ephemeral Senzing entity-resolution. |
 | [rest-api-client-java](https://github.com/Senzing/rest-api-client-java) | | :construction: [Under construction] - Client built from OpenAPI specification. |
