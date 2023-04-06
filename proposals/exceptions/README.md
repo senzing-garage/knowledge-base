@@ -4,23 +4,23 @@
 
 ```console
 G2Exception
-├── G2BadInputException
+├── G2BadInputException - 7426
 │   ├── G2DBUniqueConstraintViolation
 │   ├── G2IncompleteRecordException
 │   ├── G2InvalidFileTypeContentsException
-│   ├── G2MalformedJsonException
+│   ├── G2MalformedJsonException - 30121, 30122, 30123
 │   ├── G2MissingConfigurationException
 │   ├── G2MissingDataSourceException
-│   ├── G2NotFoundException
-│   ├── G2UnacceptableJsonKeyValueException
+│   ├── G2NotFoundException - 27, 33, 37, 2089, 7344
+│   ├── G2UnacceptableJsonKeyValueException - 23, 24, 25, 26, 32, 51, 30020
 │   ├── G2UnsupportedFileTypeException
 │   └── UnconfiguredDataSourceException
 ├── G2RetryableException
-│   ├── G2ConfigurationException
-│   ├── G2DatabaseConnectionLost
-│   ├── G2MessageBufferException
-│   ├── G2RepositoryPurgedException
-│   └── G2RetryTimeoutExceeded
+│   ├── G2ConfigurationException - 34, 35, 36, 61, 62, 64, 2208, 7221,
+│   ├── G2DatabaseConnectionLost - 1007
+│   ├── G2MessageBufferException - 30110, 30111, 30112
+│   ├── G2RepositoryPurgedException - 54
+│   └── G2RetryTimeoutExceeded - 10
 └── G2UnrecoverableException
     ├── G2DBException
     │   ├── G2DBMNotStarted
@@ -28,15 +28,15 @@ G2Exception
     │   ├── G2DBUnknownException
     │   ├── G2TableNoExist
     │   └── G2UnsupportedDatabaseType
-    ├── G2ModuleEmptyMessage
-    ├── G2UnhandledException
-    ├── G2ModuleGenericException
-    ├── G2ModuleInvalidXML
-    ├── G2DatabaseException
-    ├── G2ModuleLicenseException
+    ├── G2ModuleEmptyMessage - 7,
+    ├── G2UnhandledException - 2,
+    ├── G2ModuleGenericException - 47
+    ├── G2ModuleInvalidXML - 1,
+    ├── G2DatabaseException - 1001
+    ├── G2ModuleLicenseException - 999, 9000
     ├── G2ModuleMySQLNoSchema
-    ├── G2ModuleNotInitialized
-    └── G2ModuleResolveMissingResEnt
+    ├── G2ModuleNotInitialized - 48, 49, 50, 53, 63
+    └── G2ModuleResolveMissingResEnt - 2134
 ```
 
 
