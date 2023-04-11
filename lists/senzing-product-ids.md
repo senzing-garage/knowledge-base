@@ -89,6 +89,7 @@ Used in log message identifiers in the format `senzing-ppppnnnnt`, where:
 1. **6203** - github.com/senzing/validate
 1. **6204** - github.com/senzing/servegrpc
 1. **6205** - github.com/senzing/initdatabase
+1. **6206** - github.com/senzing/shuffle
 
 ### Reusable packages
 
