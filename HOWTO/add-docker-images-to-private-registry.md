@@ -38,7 +38,7 @@
    Example:
 
     ```console
-    export DOCKER_IMAGES=(
+    export DOCKER_IMAGE_NAMES=(
         "arey/mysql-client:${SENZING_DOCKER_IMAGE_VERSION_AREY_MYSQL_CLIENT:-latest}"
         "bitnami/bitnami-shell:${SENZING_DOCKER_IMAGE_VERSION_BITNAMI_SHELL:-latest}"
         "bitnami/kafka:${SENZING_DOCKER_IMAGE_VERSION_BITNAMI_KAFKA:-latest}"
