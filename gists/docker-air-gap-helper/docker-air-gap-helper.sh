@@ -67,6 +67,8 @@ cat <<EOT > ${OUTPUT_LOAD_REPOSITORY_SCRIPT}
 OK=0
 NOT_OK=1
 
+# pip3 install ./parse-1.15.0-py3-none-any.whl
+
 EOT
 chmod +x ${OUTPUT_LOAD_REPOSITORY_SCRIPT}
 
@@ -109,6 +111,17 @@ do
   echo "docker rmi \${DOCKER_REGISTRY_URL}/${DOCKER_IMAGE_NAME}" >> ${OUTPUT_LOAD_REGISTRY_SCRIPT}
 
 done
+
+# Save individual files to output directory.
+
+curl -X GET \
+  --output ${OUTPUT_DIR}/senzing-environment.py \
+  https://raw.githubusercontent.com/Senzing/senzing-environment/main/senzing-environment.py
+chmod +x ${OUTPUT_DIR}/senzing-environment.py
+
+curl -X GET \
+  --output ${OUTPUT_DIR}/parse-1.15.0-py3-none-any.whl \
+  https://raw.githubusercontent.com/Senzing/knowledge-base/main/gists/air-gap-senzing-environment/parse-1.15.0-py3-none-any.whl
 
 # Compress results.
 
