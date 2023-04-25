@@ -72,7 +72,7 @@ Here's [how to install Docker](../../HOWTO/install-docker.md).
 
 #### Visual Studio Code
 
-1. [Visual Studo Code](../../WHAIS/visual-studio-code.md) is the preferred IDE.
+1. [Visual Studio Code](../../WHATIS/visual-studio-code.md) is the preferred IDE.
    But it is not a mandatory IDE.
 
 ### Python
