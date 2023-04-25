@@ -106,6 +106,7 @@ They will not work on an air-gapped system.
         "senzing/xterm:${SENZING_DOCKER_IMAGE_VERSION_XTERM=:-latest}"
         "senzing/yum:${SENZING_DOCKER_IMAGE_VERSION_YUM:-latest}"
     )
+
     ```
 
 1. Pull Docker images to local workstation.
@@ -119,7 +120,7 @@ They will not work on an air-gapped system.
 
     ```
 
-1. XXX
+1. Save Docker images as a `.tar` file.
    Example:
 
     ```console
@@ -127,7 +128,7 @@ They will not work on an air-gapped system.
 
     ```
 
-1. Compress file to make it smaller.
+1. Compress `.tar` file to make it smaller.
    Example:
 
     ```console
