@@ -1,5 +1,9 @@
 # Code Guidelines
 
+## Go
+
+1. Use `gofmt`.
+
 ## JSON
 
 ### JSON Guidelines

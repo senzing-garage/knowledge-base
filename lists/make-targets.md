@@ -2,6 +2,11 @@
 
 ## Targets
 
+### build
+
+1. Synopsis:
+    1. Builds binary packages
+
 ### clean
 
 1. Synopsis:
@@ -26,6 +31,11 @@
 1. Synopsis:
     1. This is necessary when the Dockerfile is in a subdirectory.
     1. Clean up the files that were copied after the docker build process completes.
+
+### dependencies
+
+1. Synopsis:
+    1. Install dependencies for project
 
 ### docker-build
 
@@ -54,6 +64,26 @@
 1. Synopsis:
     1. Prints "help"
     1. Lists makefile targets.
+
+### print-make-variables
+
+1. Synopsis:
+    1. Print the variables and values used by the `Makefile`
+
+### run
+
+1. Synopsis:
+    1. Run the project.
+
+### test
+
+1. Synopsis:
+    1. Run the unit testcases
+
+### update-pkg-cache
+
+1. Synopsis:
+    1. In Go, pull package from pkg.go.dev
 
 ## References
 

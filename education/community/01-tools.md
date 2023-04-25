@@ -19,7 +19,6 @@ This exercise introduces some of the major tooling used by the Senzing Community
     1. [AWS Cloudformation](#aws-cloudformation)
     1. [Jupyter notebooks](#jupyter-notebooks)
     1. [Kubernetes](#kubernetes)
-    1. [OpenShift](#openshift)
     1. [Packer](#packer)
     1. [Terraform](#terraform)
 

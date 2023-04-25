@@ -17,7 +17,7 @@ see how the Senzing RPM is installed on a Linux system.
       --interactive \
       --rm \
       --tty \
-      ubuntu /bin/bash
+      debian /bin/bash
     ```
 
 1. Inside the running container,
@@ -30,16 +30,7 @@ see how the Senzing RPM is installed on a Linux system.
     wget https://senzing-production-apt.s3.amazonaws.com/senzingrepo_1.0.1-1_amd64.deb
     apt install -y ./senzingrepo_1.0.1-1_amd64.deb
     apt update
-    apt install senzingapi
-    ```
-
-1. Inside the running container,
-   install Senzing.
-   Example:
-
-    ```console
-    yum -y install \
-      senzingapi
+    apt install -y senzingapi
     ```
 
    :warning: This step download about 6GB worth of data.
@@ -59,7 +50,7 @@ Everything installed by the RPM is in `/opt/senzing`.
     1. This was actually installed via the `senzingdata-vX` package.
     1. It is almost 2GB of data that doesn't change often.
        That is, it's usually not updated when there is a new release of `senzingapi` package.
-    1. This is a versioned directory.  For instance, there may be `/opt/senzing/1.0.0` and `/opt/senzing/2.0.0` directories.
+    1. This is a versioned directory.  For instance, there may be `/opt/senzing/3.0.0` and `/opt/senzing/4.0.0` directories.
     1. The directories contain static models of data used by Senzing.
 1. `/opt/senzing/g2`
     1. This directory is installed via the `senzingapi` package.
@@ -86,55 +77,3 @@ Everything installed by the RPM is in `/opt/senzing`.
     1. `/opt/senzing/g2/resources/templates` has "template" files.
         1. `G2C.db.template` is an example SQLite database.
         1. Other template files that can be instantiated using `envsubst`.
-
-## Install Senzing files on a local system
-
-1. Download the RPM to your local system.
-    1. See [senzing/docker-yumdownloader](https://github.com/Senzing/docker-yumdownloader)
-
-1. Assuming the RPM is in your `~/Downloads` directory, create a bash script like the following.
-   Modify the `SENZING_API_RPM` and `SENZING_DATA_RPM` variables to match the files downloaded by the "yumdownloader".
-   Then, run the bash script.
-
-    ```bash
-    #!/usr/bin/env bash
-
-    # Verify that sudo and docker are active.
-
-    sudo -p "sudo access is required.  Please enter your password:  " docker info >> /dev/null 2>&1
-
-    # User Variables
-
-    export SENZING_API_RPM=senzingapi-2.5.0-21104.x86_64.rpm
-    export SENZING_DATA_RPM=senzingdata-v2-2.0.0-1.x86_64.rpm
-
-    # Variables
-
-    export SENZING_VOLUME=/opt/my-senzing
-    export SENZING_DATA_DIR=${SENZING_VOLUME}/data
-    export SENZING_DATA_VERSION_DIR=${SENZING_DATA_DIR}/1.0.0
-    export SENZING_ETC_DIR=${SENZING_VOLUME}/etc
-    export SENZING_G2_DIR=${SENZING_VOLUME}/g2
-    export SENZING_VAR_DIR=${SENZING_VOLUME}/var
-    export SENZING_ACCEPT_EULA=I_ACCEPT_THE_SENZING_EULA
-
-    # Remove old directory
-
-    sudo rm -rf ${SENZING_VOLUME}
-
-    # Install via docker senzing/yum
-
-    sudo docker run \
-      --env SENZING_ACCEPT_EULA=${SENZING_ACCEPT_EULA} \
-      --rm \
-      --volume ${SENZING_DATA_DIR}:/opt/senzing/data \
-      --volume ${SENZING_G2_DIR}:/opt/senzing/g2 \
-      --volume ${SENZING_ETC_DIR}:/etc/opt/senzing \
-      --volume ${SENZING_VAR_DIR}:/var/opt/senzing \
-      --volume ~/Downloads:/data \
-      senzing/yum -y localinstall \
-        /data/${SENZING_API_RPM} \
-        /data/${SENZING_DATA_RPM}
-    ```
-
-1. After the bash script has run, the files will be in `/opt/my-senzing`.
