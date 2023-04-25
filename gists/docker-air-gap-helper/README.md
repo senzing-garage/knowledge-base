@@ -1,24 +1,20 @@
 # docker-air-gap-helper
 
 The following instructions show how to prepare a TGZ file containing
-[senzing-enviroment](https://github.com/Senzing/senzing-environment)
-and its dependencies.
-The TGZ file is used in an air-gapped environment
-for adding Docker support to an existing Senzing project.
+Docker images and a file to help loading docker images to a private Docker registry.
 
 The instructions have 3 major steps:
 
 1. On a non-air-gapped system, create a TGZ file.
 1. Transfer the TGZ file from the non-air-gapped system to the air-gapped system.
-1. On the air-gapped system, use the TGZ file to populate an local Docker repository,
-   (optionally) populate a private Docker registry,
-   and run a program to add Docker support to an existing Senzing project.
+1. On the air-gapped system, use the TGZ file to populate an local Docker repository
+   and (optionally) populate a private Docker registry.
 
 ## Contents
 
 1. [On non-air-gapped system](#on-non-air-gapped-system)
     1. [Package docker images](#package-docker-images)
-    1. [Create docker-load.sh file](#create-docker-load-sh-file)
+    1. [Create docker-load.sh file](#create-docker-loadsh-file)
 1. [Transfer](#transfer)
 1. [On air-gapped system](#on-air-gapped-system)
     1. [Identify files](#identify-files)
