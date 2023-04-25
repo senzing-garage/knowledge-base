@@ -83,6 +83,7 @@
         "senzing/yum:${SENZING_DOCKER_IMAGE_VERSION_YUM:-latest}"
         "swaggerapi/swagger-ui:${SENZING_DOCKER_IMAGE_VERSION_SWAGGERAPI_SWAGGER_UI:-latest}"
     )
+
     ```
 
 ## Pull images from DockerHub
