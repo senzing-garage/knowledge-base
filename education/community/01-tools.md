@@ -36,25 +36,35 @@ You'll want to create a "GitHub username" for yourself.
 is useful for quick environments that can be used to test ideas
 as well as deploy Senzing.
 
-For instance if you want to try something on Ubuntu, run
+1. If you want to try something on Debian, run:
 
-```console
-docker run \
-  --interactive \
-  --rm \
-  --tty \
-  ubuntu /bin/bash
-```
+    ```console
+    docker run \
+      --interactive \
+      --rm \
+      --tty \
+      debian /bin/bash
+    ```
 
-If you want to try the same thing on Centos:
+1. If you want to try something on Ubuntu, run:
 
-```console
-docker run \
-  --interactive \
-  --rm \
-  --tty \
-  centos /bin/bash
-```
+    ```console
+    docker run \
+      --interactive \
+      --rm \
+      --tty \
+      ubuntu /bin/bash
+    ```
+
+1. If you want to somethin on Centos, run:
+
+    ```console
+    docker run \
+      --interactive \
+      --rm \
+      --tty \
+      centos /bin/bash
+    ```
 
 Here's [how to install Docker](../../HOWTO/install-docker.md).
 
@@ -62,7 +72,7 @@ Here's [how to install Docker](../../HOWTO/install-docker.md).
 
 #### Visual Studio Code
 
-1. [Visual Studo Code](https://code.visualstudio.com/) is the preferred IDE.
+1. [Visual Studo Code](../../WHAIS/visual-studio-code.md) is the preferred IDE.
    But it is not a mandatory IDE.
 
 ### Python
