@@ -37,10 +37,9 @@ see how the Senzing RPM is installed on a Linux system.
    So it may take a while, depending on your network speed.
 
 1. :eyes: Notice that the instructions are very similar to the `Dockerfile` in the
+   [senzing/docker-apt](https://github.com/Senzing/docker-apt) repository.
+   For a RedHat/Centos install, look at the
    [senzing/docker-yum](https://github.com/Senzing/docker-yum) repository.
-   For a Debian/Ubuntu install, look at the
-   [senzing/docker-apt](https://github.com/Senzing/docker-apt)
-   `Dockerfile`.
 
 ## Viewing Senzing files
 
