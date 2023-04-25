@@ -1,38 +1,51 @@
 #!/usr/bin/env bash
 
-# Enumerate docker images to be processed
+# Get stable docker version numbers.
+
+curl -X GET \
+    --output /tmp/docker-versions-stable.sh \
+    https://raw.githubusercontent.com/Senzing/knowledge-base/main/lists/docker-versions-stable.sh
+source /tmp/docker-versions-stable.sh
+
+# Enumerate docker images to be processed.
 
 DOCKER_IMAGE_NAMES=(
-  "bitnami/kafka:2.8.0"
-  "bitnami/rabbitmq:3.8.17"
-  "bitnami/zookeeper:3.6.3"
-  "coleifer/sqlite-web:latest"
-  "ibmcom/db2:11.5.5.1"
-  "mysql:5.7"
-  "obsidiandynamics/kafdrop:3.27.0"
-  "phpmyadmin/phpmyadmin:5.1.1"
-  "postgres:11.12.0"
-  "senzing/adminer:1.0.0"
-  "senzing/apt:1.0.4"
-  "senzing/db2-driver-installer:1.0.2"
-  "senzing/entity-search-web-app:2.2.3"
-  "senzing/init-container:1.6.9"
-  "senzing/jupyter:1.3.0"
-  "senzing/mysql-init:latest"
-  "senzing/phppgadmin:1.0.0"
-  "senzing/postgresql-client:1.0.0"
-  "senzing/redoer:1.3.7"
-  "senzing/resolver:1.3.2"
-  "senzing/senzing-api-server:2.6.1"
-  "senzing/senzing-console:1.0.1"
-  "senzing/senzing-debug:1.3.5"
-  "senzing/sshd:1.2.0"
-  "senzing/stream-loader:1.7.6"
-  "senzing/stream-logger:1.1.2"
-  "senzing/stream-producer:1.4.1"
-  "senzing/web-app-demo:2.1.1"
-  "senzing/xterm:1.1.0"
-  "senzing/yum:1.1.4"
+    "bitnami/kafka:${SENZING_DOCKER_IMAGE_VERSION_BITNAMI_KAFKA:-latest}"
+    "bitnami/rabbitmq:${SENZING_DOCKER_IMAGE_VERSION_BITNAMI_RABBITMQ:-latest}"
+    "bitnami/zookeeper:${SENZING_DOCKER_IMAGE_VERSION_BITNAMI_ZOOKEEPER:-latest}"
+    "coleifer/sqlite-web:${SENZING_DOCKER_IMAGE_VERSION_SQLITE_WEB:-latest}"
+    "confluentinc/cp-kafka:${SENZING_DOCKER_IMAGE_VERSION_CONFLUENTINC_CP_KAFKA:-latest}"
+    "dpage/pgadmin4:${SENZING_DOCKER_IMAGE_VERSION_DPAGE_PGADMIN4:-latest}"
+    "obsidiandynamics/kafdrop:${SENZING_DOCKER_IMAGE_VERSION_OBSIDIANDYNAMICS_KAFDROP:-latest}"
+    "senzing/adminer:${SENZING_DOCKER_IMAGE_VERSION_ADMINER:-latest}"
+    "senzing/apt:${SENZING_DOCKER_IMAGE_VERSION_APT:-latest}"
+    "senzing/configurator:${SENZING_DOCKER_IMAGE_VERSION_CONFIGURATOR:-latest}"
+    "senzing/data-encryption-aes256cbc-sample:${SENZING_DOCKER_IMAGE_VERSION_DATA_ENCRYPTION_AES256CBC_SAMPLE:-latest}"
+    "senzing/db2-driver-installer:${SENZING_DOCKER_IMAGE_VERSION_DB2_DRIVER_INSTALLER:-latest}"
+    "senzing/entity-search-web-app-console:${SENZING_DOCKER_IMAGE_VERSION_ENTITY_SEARCH_WEB_APP_CONSOLE:-latest}"
+    "senzing/entity-search-web-app:${SENZING_DOCKER_IMAGE_VERSION_ENTITY_SEARCH_WEB_APP:-latest}"
+    "senzing/file-loader:${SENZING_DOCKER_IMAGE_VERSION_FILE_LOADER:-latest}"
+    "senzing/ibm-db2:${SENZING_DOCKER_IMAGE_VERSION_IBM_DB2:-latest}"
+    "senzing/init-container:${SENZING_DOCKER_IMAGE_VERSION_INIT_CONTAINER:-latest}"
+    "senzing/init-postgresql:${SENZING_DOCKER_IMAGE_VERSION_INIT_POSTGRESQL:-latest}"
+    "senzing/postgresql-client:${SENZING_DOCKER_IMAGE_VERSION_POSTGRESQL_CLIENT:-latest}"
+    "senzing/redoer:${SENZING_DOCKER_IMAGE_VERSION_REDOER:-latest}"
+    "senzing/resolver:${SENZING_DOCKER_IMAGE_VERSION_RESOLVER:-latest}"
+    "senzing/senzing-api-server:${SENZING_DOCKER_IMAGE_VERSION_SENZING_API_SERVER:-latest}"
+    "senzing/senzing-base:${SENZING_DOCKER_IMAGE_VERSION_SENZING_BASE:-latest}"
+    "senzing/senzing-console-slim:${SENZING_DOCKER_IMAGE_VERSION_SENZING_CONSOLE_SLIM:-latest}"
+    "senzing/senzing-console:${SENZING_DOCKER_IMAGE_VERSION_SENZING_CONSOLE:-latest}"
+    "senzing/senzing-poc-server:${SENZING_DOCKER_IMAGE_VERSION_SENZING_POC_SERVER:-latest}"
+    "senzing/senzing-tools:${SENZING_DOCKER_IMAGE_VERSION_SENZING_TOOLS:-latest}"
+    "senzing/senzingapi-runtime:${SENZING_DOCKER_IMAGE_VERSION_SENZINGAPI_RUNTIME:-latest}"
+    "senzing/senzingapi-tools:${SENZING_DOCKER_IMAGE_VERSION_SENZINGAPI_TOOLS:-latest}"
+    "senzing/sshd:${SENZING_DOCKER_IMAGE_VERSION_SSHD:-latest}"
+    "senzing/stream-loader:${SENZING_DOCKER_IMAGE_VERSION_STREAM_LOADER:-latest}"
+    "senzing/stream-logger:${SENZING_DOCKER_IMAGE_VERSION_STREAM_LOGGER:-latest}"
+    "senzing/stream-producer:${SENZING_DOCKER_IMAGE_VERSION_STREAM_PRODUCER:-latest}"
+    "senzing/web-app-demo:${SENZING_DOCKER_IMAGE_VERSION_WEB_APP_DEMO:-latest}"
+    "senzing/xterm:${SENZING_DOCKER_IMAGE_VERSION_XTERM=:-latest}"
+    "senzing/yum:${SENZING_DOCKER_IMAGE_VERSION_YUM:-latest}"
 )
 
 # Return codes.
@@ -87,6 +100,10 @@ fi
 
 EOT
 chmod +x ${OUTPUT_LOAD_REGISTRY_SCRIPT}
+
+
+# docker save ${DOCKER_IMAGE_NAMES[@]} --output ${OUTPUT_FILE}
+# exit ${OK}
 
 # Save Docker images and scripts to output directory.
 

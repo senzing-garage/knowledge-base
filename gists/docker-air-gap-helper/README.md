@@ -17,80 +17,152 @@ The instructions have 3 major steps:
 ## Contents
 
 1. [On non-air-gapped system](#on-non-air-gapped-system)
-    1. [Download](#download)
-    1. [Modify](#modify)
-    1. [Run](#run)
+    1. [Package docker images](#package-docker-images)
+    1. [Create docker-load.sh file](#create-docker-load-sh-file)
 1. [Transfer](#transfer)
 1. [On air-gapped system](#on-air-gapped-system)
+    1. [Identify files](#identify-files)
     1. [Extract file](#extract-file)
     1. [Load local Docker repository](#load-local-docker-repository)
     1. [Load private Docker registry](#load-private-docker-registry)
-    1. [Add Docker support to Senzing project](#add-docker-support-to-senzing-project)
 
 ## On non-air-gapped system
 
 The goal of these steps is to produce a compressed file in `tgz` format
-containing Docker images that can be installed on an air-gapped private Docker registry
-and the `senzing-environment.py` program.
+containing Docker images that can be installed on an air-gapped private Docker registry.
 
 The following steps are performed on an internet-connected system.
 They will not work on an air-gapped system.
 
-This method has been tested on Linux and macOS systems.
+### Package docker images
 
-### Download
-
-1. Get a local copy of
-   [docker-air-gap-helper.sh](docker-air-gap-helper.sh).
-   Example:
-
-    1. :pencil2: Specify where to download file.
-       Example:
-
-        ```console
-        export MY_DOCKER_AIR_GAP_HELPER=~/docker-air-gap-helper.sh
-        ```
-
-    1. Download file.
-       Example:
-
-        ```console
-        curl -X GET \
-          --output ${MY_DOCKER_AIR_GAP_HELPER} \
-          https://raw.githubusercontent.com/Senzing/knowledge-base/main/gists/docker-air-gap-helper/docker-air-gap-helper.sh
-        ```
-
-    1. Make file executable.
-       Example:
-
-        ```console
-        chmod +x ${MY_DOCKER_AIR_GAP_HELPER}
-        ```
-
-### Modify
-
-1. Modify the `DOCKER_IMAGE_NAMES` list in the local copy of
-   [docker-air-gap-helper.sh](docker-air-gap-helper.sh)
-   (e.g. `MY_DOCKER_AIR_GAP_HELPER`)
-   to add or delete docker images to be pulled from DockerHub (docker.io)
-   and packaged to be transferred to the private registry.
-
-### Run
-
-1. Run `docker-air-gap-helper.sh`.
+1. :pencil2: Identify a new directory for outputting files.
    Example:
 
     ```console
-    ${MY_DOCKER_AIR_GAP_HELPER}
+    export SENZING_DOCKER_DIR=~/my-senzing-docker
+
     ```
 
-1. This produces the following output:
-    1. A directory in the form `~/docker-air-gap-helper-nnnnnnnnnn` where `nnnnnnnnnn` is the Unix Timestamp of creation.
-    1. A file in the form `~/docker-air-gap-helper-nnnnnnnnnn.tgz` which is a tar-gzipped version of the directory.
+1. Make directories for output.
+   Example:
+
+    ```console
+    mkdir -p ${SENZING_DOCKER_DIR}
+
+    ```
+
+1. Get versions of Docker images.
+   Example:
+
+    ```console
+    curl -X GET \
+        --output ${SENZING_DOCKER_DIR}/docker-versions-stable.sh \
+        https://raw.githubusercontent.com/Senzing/knowledge-base/main/lists/docker-versions-stable.sh
+    source ${SENZING_DOCKER_DIR}/docker-versions-stable.sh
+
+    ```
+
+1. :pencil2: List Docker images to be packages.
+   Add or delete Docker images from the list.
+   Example:
+
+    ```console
+    export DOCKER_IMAGE_NAMES=(
+        "bitnami/kafka:${SENZING_DOCKER_IMAGE_VERSION_BITNAMI_KAFKA:-latest}"
+        "bitnami/rabbitmq:${SENZING_DOCKER_IMAGE_VERSION_BITNAMI_RABBITMQ:-latest}"
+        "bitnami/zookeeper:${SENZING_DOCKER_IMAGE_VERSION_BITNAMI_ZOOKEEPER:-latest}"
+        "coleifer/sqlite-web:${SENZING_DOCKER_IMAGE_VERSION_SQLITE_WEB:-latest}"
+        "confluentinc/cp-kafka:${SENZING_DOCKER_IMAGE_VERSION_CONFLUENTINC_CP_KAFKA:-latest}"
+        "dpage/pgadmin4:${SENZING_DOCKER_IMAGE_VERSION_DPAGE_PGADMIN4:-latest}"
+        "obsidiandynamics/kafdrop:${SENZING_DOCKER_IMAGE_VERSION_OBSIDIANDYNAMICS_KAFDROP:-latest}"
+        "senzing/adminer:${SENZING_DOCKER_IMAGE_VERSION_ADMINER:-latest}"
+        "senzing/apt:${SENZING_DOCKER_IMAGE_VERSION_APT:-latest}"
+        "senzing/configurator:${SENZING_DOCKER_IMAGE_VERSION_CONFIGURATOR:-latest}"
+        "senzing/data-encryption-aes256cbc-sample:${SENZING_DOCKER_IMAGE_VERSION_DATA_ENCRYPTION_AES256CBC_SAMPLE:-latest}"
+        "senzing/db2-driver-installer:${SENZING_DOCKER_IMAGE_VERSION_DB2_DRIVER_INSTALLER:-latest}"
+        "senzing/entity-search-web-app-console:${SENZING_DOCKER_IMAGE_VERSION_ENTITY_SEARCH_WEB_APP_CONSOLE:-latest}"
+        "senzing/entity-search-web-app:${SENZING_DOCKER_IMAGE_VERSION_ENTITY_SEARCH_WEB_APP:-latest}"
+        "senzing/file-loader:${SENZING_DOCKER_IMAGE_VERSION_FILE_LOADER:-latest}"
+        "senzing/ibm-db2:${SENZING_DOCKER_IMAGE_VERSION_IBM_DB2:-latest}"
+        "senzing/init-container:${SENZING_DOCKER_IMAGE_VERSION_INIT_CONTAINER:-latest}"
+        "senzing/init-postgresql:${SENZING_DOCKER_IMAGE_VERSION_INIT_POSTGRESQL:-latest}"
+        "senzing/postgresql-client:${SENZING_DOCKER_IMAGE_VERSION_POSTGRESQL_CLIENT:-latest}"
+        "senzing/redoer:${SENZING_DOCKER_IMAGE_VERSION_REDOER:-latest}"
+        "senzing/resolver:${SENZING_DOCKER_IMAGE_VERSION_RESOLVER:-latest}"
+        "senzing/senzing-api-server:${SENZING_DOCKER_IMAGE_VERSION_SENZING_API_SERVER:-latest}"
+        "senzing/senzing-base:${SENZING_DOCKER_IMAGE_VERSION_SENZING_BASE:-latest}"
+        "senzing/senzing-console-slim:${SENZING_DOCKER_IMAGE_VERSION_SENZING_CONSOLE_SLIM:-latest}"
+        "senzing/senzing-console:${SENZING_DOCKER_IMAGE_VERSION_SENZING_CONSOLE:-latest}"
+        "senzing/senzing-poc-server:${SENZING_DOCKER_IMAGE_VERSION_SENZING_POC_SERVER:-latest}"
+        "senzing/senzing-tools:${SENZING_DOCKER_IMAGE_VERSION_SENZING_TOOLS:-latest}"
+        "senzing/senzingapi-runtime:${SENZING_DOCKER_IMAGE_VERSION_SENZINGAPI_RUNTIME:-latest}"
+        "senzing/senzingapi-tools:${SENZING_DOCKER_IMAGE_VERSION_SENZINGAPI_TOOLS:-latest}"
+        "senzing/sshd:${SENZING_DOCKER_IMAGE_VERSION_SSHD:-latest}"
+        "senzing/stream-loader:${SENZING_DOCKER_IMAGE_VERSION_STREAM_LOADER:-latest}"
+        "senzing/stream-logger:${SENZING_DOCKER_IMAGE_VERSION_STREAM_LOGGER:-latest}"
+        "senzing/stream-producer:${SENZING_DOCKER_IMAGE_VERSION_STREAM_PRODUCER:-latest}"
+        "senzing/web-app-demo:${SENZING_DOCKER_IMAGE_VERSION_WEB_APP_DEMO:-latest}"
+        "senzing/xterm:${SENZING_DOCKER_IMAGE_VERSION_XTERM=:-latest}"
+        "senzing/yum:${SENZING_DOCKER_IMAGE_VERSION_YUM:-latest}"
+    )
+    ```
+
+1. Pull Docker images to local workstation.
+   Example:
+
+    ```console
+    for DOCKER_IMAGE_NAME in ${DOCKER_IMAGE_NAMES[@]};
+    do
+      docker pull ${DOCKER_IMAGE_NAME}
+    done
+
+    ```
+
+1. XXX
+   Example:
+
+    ```console
+    docker save ${DOCKER_IMAGE_NAMES[@]} --output ${SENZING_DOCKER_DIR}/docker-images.tar
+
+    ```
+
+1. Compress file to make it smaller.
+   Example:
+
+    ```console
+    tar -czvf ${SENZING_DOCKER_DIR}/docker-images.tgz ${SENZING_DOCKER_DIR}/docker-images.tar
+
+    ```
+
+### Create docker-load.sh file
+
+1. :pencil2: Identify the URL of the private Docker registry.
+   Example:
+
+    ```console
+    export DOCKER_REGISTRY_URL=my.docker-registry.com:5000
+
+    ```
+
+1. Create `docker-load.sh` shell script to load files on air-gapped system.
+   Example:
+
+    ```console
+    for DOCKER_IMAGE_NAME in ${DOCKER_IMAGE_NAMES[@]};
+    do
+      echo "" >> ${OUTPUT_LOAD_REGISTRY_SCRIPT}
+      echo "docker tag ${DOCKER_IMAGE_NAME} \${DOCKER_REGISTRY_URL}/${DOCKER_IMAGE_NAME}" >> ${SENZING_DOCKER_DIR}/docker-load.sh
+      echo "docker push \${DOCKER_REGISTRY_URL}/${DOCKER_IMAGE_NAME}" >> ${SENZING_DOCKER_DIR}/docker-load.sh
+      echo "docker rmi \${DOCKER_REGISTRY_URL}/${DOCKER_IMAGE_NAME}" >> ${SENZING_DOCKER_DIR}/docker-load.sh
+    done
+    ```
 
 ## Transfer
 
-1. Transfer the `~/docker-air-gap-helper-nnnnnnnnnn.tgz` file to the air-gapped system.
+1. Transfer the following files to the air-gapped system:
+    1. ${SENZING_DOCKER_DIR}/docker-images.tgz
+    1. ${SENZING_DOCKER_DIR}/docker-load.sh
 
 ## On air-gapped system
 
@@ -98,14 +170,18 @@ The following instructions show how to populate a private registry in an air-gap
 
 This method has been tested on Linux systems.
 
-### Extract file
+### Identify files
 
-1. :pencil2: Specify the location of the `docker-air-gap-helper-nnnnnnnnnn.tgz` file.
+1. :pencil2: Specify the location of the `docker-images.tgz` and `docker-load.sh` files.
    Example:
 
     ```console
-    export MY_DOCKER_AIR_GAP_HELPER_TGZ=~/docker-air-gap-helper-nnnnnnnnnn.tgz
+    export MY_DOCKER_IMAGE_TGZ=~/docker-images.tgz
+    export MY_DOCKER_LOAD_SH=~/docker-load.sh
+
     ```
+
+### Extract file
 
 1. :pencil2: Specify the output location for uncompressing the file.
    Example:
@@ -120,7 +196,7 @@ This method has been tested on Linux systems.
    Example:
 
     ```console
-    tar -zxvf ${MY_DOCKER_AIR_GAP_HELPER_TGZ} --directory ${MY_OUTPUT_DIR}
+    tar -zxvf ${MY_DOCKER_IMAGE_TGZ} --directory ${MY_OUTPUT_DIR}
     ```
 
 ### Load local Docker repository
@@ -128,34 +204,11 @@ This method has been tested on Linux systems.
 This step will add the Docker images to the Docker repository on the local workstation.
 The contents of the local Docker repository are seen via the `docker images` command.
 
-1. View Docker images before loading the new images.
+1. Load Docker images onto local workstation.
    Example:
 
     ```console
-    sudo docker images | grep senzing
-    ```
-
-1. :pencil2: Make extracted directory the current working directory.
-   Example:
-
-    ```console
-    cd ${MY_OUTPUT_DIR}/docker-air-gap-helper-nnnnnnnnnn
-    ```
-
-1. Run script to perform multiple
-   [docker load](https://docs.docker.com/engine/reference/commandline/load/)
-   commands.
-   Example:
-
-    ```console
-    sudo ./docker-air-gap-load-repository.sh
-    ```
-
-1. Verify the new Docker images.
-   Example:
-
-    ```console
-    sudo docker images | grep senzing
+    docker load --input ${MY_DOCKER_IMAGE_TGZ}
     ```
 
 ### Load private Docker registry
@@ -164,48 +217,9 @@ The contents of the local Docker repository are seen via the `docker images` com
 need to be added to a private Docker registry.
 If working on a single workstation, this step is not necessary.
 
-1. :pencil2: Make extracted directory the current working directory.
+1. :pencil2: Run `docker-load.sh`
    Example:
 
     ```console
-    cd ${MY_OUTPUT_DIR}/docker-air-gap-helper-nnnnnnnnnn
-    ```
-
-1. :pencil2: Identify the URL of the private Docker registry.
-   Example:
-
-    ```console
-    export DOCKER_REGISTRY_URL=my.docker-registry.com:5000
-    ```
-
-1. Run script to perform multiple
-   [docker push](https://docs.docker.com/engine/reference/commandline/push/)
-   commands.
-   Example:
-
-    ```console
-    sudo --preserve-env ./docker-air-gap-load-registry.sh
-    ```
-
-### Add Docker support to Senzing project
-
-Before installing Docker support on an air-gapped system
-Senzing needs to be installed and a Senzing project needs to be created.
-Instructions for this are at
-[Install - Air Gapped Systems](https://senzing.zendesk.com/hc/en-us/articles/360039787373-Install-Air-Gapped-Systems)
-and
-[Quickstart Guide](https://senzing.zendesk.com/hc/en-us/articles/115002408867-Quickstart-Guide).
-
-1. :pencil2: Specify the location of the Senzing project on the host system.
-   Example:
-
-    ```console
-    export SENZING_PROJECT_DIR=~/senzing-project
-    ```
-
-1. Add Docker support to existing Senzing project.
-   Example:
-
-    ```console
-    ${MY_OUTPUT_DIR}/senzing-environment.py add-docker-support --project-dir ${SENZING_PROJECT_DIR}
+    ${MY_DOCKER_LOAD_SH}
     ```
