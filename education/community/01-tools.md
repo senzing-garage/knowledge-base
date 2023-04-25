@@ -7,12 +7,13 @@ This exercise introduces some of the major tooling used by the Senzing Community
 1. [Introductory tools](#introductory-tools)
     1. [GitHub](#github)
     1. [Docker](#docker)
+    1. [Integrated Development Environments](#integrated-development-environments-ide)
     1. [Python](#python)
+    1. [Go](#go)
     1. [Markdown](#markdown)
     1. [Tools for Thinking](#tools-for-thinking)
 1. [Intermediate tools](#intermediate-tools)
     1. [docker-compose](#docker-compose)
-    1. [Integrated Development Environments](#integrated-developent-enviroments)
     1. [Portainer](#portainer)
 1. [Advanced tools](#advanced-tools)
     1. [AWS Cloudformation](#aws-cloudformation)
@@ -58,6 +59,13 @@ docker run \
 
 Here's [how to install Docker](../../HOWTO/install-docker.md).
 
+### Integrated Development Environments (IDE)
+
+#### Visual Studio Code
+
+1. [Visual Studo Code](https://code.visualstudio.com/) is the preferred IDE.
+   But it is not a mandatory IDE.
+
 ### Python
 
 > "When in Rome, do as the Romans"
@@ -80,6 +88,8 @@ is essential.
 1. [Python Enhancement Proposals (PEP)](https://www.python.org/dev/peps/)
     1. [PEP-8 checker](http://pep8online.com/)
 
+### Go
+
 ### Markdown
 
 [Markdown](../../WHATIS/markdown.md)
@@ -99,10 +109,6 @@ is the style of documentation used in GitHub.
 
 [docker-compose](../../WHATIS/docker-compose.md)
 
-### Integrated Development Environments (IDE)
-
-#### Eclipse
-
 ### Portainer
 
 [Portainer](../../WHATIS/portainer.md) is a web interface for `docker` commands.
@@ -117,13 +123,10 @@ is the style of documentation used in GitHub.
 
 ### Kubernetes
 
-#### minikube
-
-### OpenShift
+1. [minikube](https://minikube.sigs.k8s.io/docs/start/)
 
 ### Packer
 
 [Packer](../../WHATIS/packer.md)
 
 ### Terraform
-

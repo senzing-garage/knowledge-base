@@ -17,7 +17,7 @@ see how the Senzing RPM is installed on a Linux system.
       --interactive \
       --rm \
       --tty \
-      centos /bin/bash
+      ubuntu /bin/bash
     ```
 
 1. Inside the running container,
@@ -25,8 +25,12 @@ see how the Senzing RPM is installed on a Linux system.
    Example:
 
     ```console
-    yum -y install \
-      https://senzing-production-yum.s3.amazonaws.com/senzingrepo-1.0.0-1.x86_64.rpm
+    apt update
+    apt install -y wget
+    wget https://senzing-production-apt.s3.amazonaws.com/senzingrepo_1.0.1-1_amd64.deb
+    apt install -y ./senzingrepo_1.0.1-1_amd64.deb
+    apt update
+    apt install senzingapi
     ```
 
 1. Inside the running container,
