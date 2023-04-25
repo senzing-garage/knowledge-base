@@ -28,9 +28,9 @@
 
     ```console
     curl -X GET \
-        --output ${SENZING_VOLUME}/docker-versions-stable.sh \
+        --output /tmp/docker-versions-stable.sh \
         https://raw.githubusercontent.com/Senzing/knowledge-base/main/lists/docker-versions-stable.sh
-    source ${SENZING_VOLUME}/docker-versions-stable.sh
+    source /tmp/docker-versions-stable.sh
 
     ```
 
