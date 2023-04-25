@@ -148,7 +148,7 @@ They will not work on an air-gapped system.
     ```console
     for DOCKER_IMAGE_NAME in ${DOCKER_IMAGE_NAMES[@]};
     do
-      echo "" >> ${OUTPUT_LOAD_REGISTRY_SCRIPT}
+      echo "" >> ${OUTPUT_LOAD_REGISTRY_SCRIPT}/docker-load.sh
       echo "docker tag ${DOCKER_IMAGE_NAME} \${DOCKER_REGISTRY_URL}/${DOCKER_IMAGE_NAME}" >> ${SENZING_DOCKER_DIR}/docker-load.sh
       echo "docker push \${DOCKER_REGISTRY_URL}/${DOCKER_IMAGE_NAME}" >> ${SENZING_DOCKER_DIR}/docker-load.sh
       echo "docker rmi \${DOCKER_REGISTRY_URL}/${DOCKER_IMAGE_NAME}" >> ${SENZING_DOCKER_DIR}/docker-load.sh
