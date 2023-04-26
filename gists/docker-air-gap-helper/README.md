@@ -162,12 +162,11 @@ This method has been tested on Linux systems.
 
 ### Identify files
 
-1. :pencil2: Specify the location of the `docker-images.tgz` and `docker-tag-and-push.sh` files.
+1. :pencil2: Specify the location of the `docker-images.tgz` file.
    Example:
 
     ```console
     export MY_DOCKER_IMAGE_TGZ=~/docker-images.tgz
-    export MY_DOCKER_LOAD_SH=~/docker-tag-and-push.sh
 
     ```
 
@@ -199,7 +198,8 @@ The contents of the local Docker repository are seen via the `docker images` com
    Example:
 
     ```console
-    docker load --input ${MY_DOCKER_IMAGE_TGZ}
+    docker load --input ${MY_OUTPUT_DIR}/docker-images.tar
+
     ```
 
 ### Load private Docker registry
@@ -207,6 +207,14 @@ The contents of the local Docker repository are seen via the `docker images` com
 :thinking: **Optional:** This step is only needed if the Docker images
 need to be added to a private Docker registry.
 If working on a single workstation, this step is not necessary.
+
+1. :pencil2: Specify the location of the `docker-tag-and-push.sh` file.
+   Example:
+
+    ```console
+    export MY_DOCKER_TAG_AND_PUSH_SH=~/docker-tag-and-push.sh
+
+    ```
 
 1. :pencil2: Identify the URL of the private Docker registry.
    Example:
@@ -220,5 +228,5 @@ If working on a single workstation, this step is not necessary.
    Example:
 
     ```console
-    ${MY_DOCKER_LOAD_SH}
+    ${MY_DOCKER_TAG_AND_PUSH_SH}
     ```
