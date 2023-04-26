@@ -130,8 +130,8 @@ They will not work on an air-gapped system.
     ```console
     tar \
         --create \
-        --directory / \
-        --file ${SENZING_DOCKER_DIR}/docker-images.tgz \
+        --directory=${SENZING_DOCKER_DIR} \
+        --file=${SENZING_DOCKER_DIR}/docker-images.tgz \
         --gzip \
         --verbose \
         ${SENZING_DOCKER_DIR}/docker-images.tar
@@ -192,9 +192,9 @@ This method has been tested on Linux systems.
     ```console
     mkdir --parents ${SENZING_OUTPUT_DIR}
     tar \
-        --directory ${SENZING_OUTPUT_DIR} \
+        --directory=${SENZING_OUTPUT_DIR} \
         --extract \
-        --file ${SENZING_DOCKER_IMAGES_TGZ} \
+        --file=${SENZING_DOCKER_IMAGES_TGZ} \
         --gzip \
         --verbose
 
