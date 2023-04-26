@@ -68,7 +68,7 @@ The following steps create a `docker-images.tar` file containing docker images.
 1. :pencil2: List Docker images to be packaged.
    Add or delete Docker images from the list.
    For extensive list, see
-   [docker-image-names.sh](../../lists/docker-image-names.sh)
+   [docker-image-names.sh](../lists/docker-image-names.sh)
    Example:
 
     ```console
@@ -187,7 +187,7 @@ The contents of the local Docker repository are seen via the `docker images` com
 
     ```
 
-### Load private Docker registry
+### Push images to private Docker registry
 
 :thinking: **Optional:** This step is only needed if the Docker images
 need to be added to a private Docker registry.
