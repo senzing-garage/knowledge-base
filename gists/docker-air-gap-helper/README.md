@@ -134,7 +134,7 @@ They will not work on an air-gapped system.
 
 ### Create docker-tag-and-push.sh file
 
-1. Create `docker-tag-and-push.sh` shell script to load files on air-gapped system.
+1. Create `docker-tag-and-push.sh` that will be used to push images to private Docker registry accessible by air-gapped system.
    Example:
 
     ```console
