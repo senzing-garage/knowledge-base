@@ -28,6 +28,7 @@ Build any Docker images that aren't on a public Docker registry.
     ```console
     docker build --tag senzing/mysql        https://github.com/senzing/docker-mysql.git#main
     docker build --tag senzing/mysql-init   https://github.com/senzing/docker-mysql-init.git#main
+
     ```
 
 ## Identify docker images
@@ -67,6 +68,7 @@ Build any Docker images that aren't on a public Docker registry.
     do \
       docker pull ${DOCKER_IMAGE_NAME}; \
     done
+
     ```
 
 ## Push images to private Docker registry
@@ -88,4 +90,5 @@ Build any Docker images that aren't on a public Docker registry.
       docker push ${DOCKER_REGISTRY_URL}/${DOCKER_IMAGE_NAME};
       docker rmi  ${DOCKER_REGISTRY_URL}/${DOCKER_IMAGE_NAME};
     done
+
     ```
