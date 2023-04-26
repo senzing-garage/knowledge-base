@@ -89,7 +89,7 @@ They will not work on an air-gapped system.
    Example:
 
     ```console
-    docker save ${DOCKER_IMAGE_NAMES[@]} --output ${SENZING_DOCKER_DIR}/docker-images.tar
+    docker save ${DOCKER_IMAGE_NAMES[@]} --output ${SENZING_DOCKER_DIR}/senzing-docker-images.tar
 
     ```
 
@@ -119,17 +119,17 @@ They will not work on an air-gapped system.
     tar \
         --create \
         --directory=${SENZING_DOCKER_DIR} \
-        --file=${SENZING_DOCKER_DIR}/docker-images.tgz \
+        --file=${SENZING_DOCKER_DIR}/senzing-docker-images.tgz \
         --gzip \
         --verbose \
-        docker-images.tar docker-tag-and-push.sh docker-versions-stable.sh
+        docker-tag-and-push.sh docker-versions-stable.sh senzing-docker-images.tar
 
     ```
 
 ## Transfer
 
 1. Transfer the following files to the air-gapped system:
-    1. ${SENZING_DOCKER_DIR}/docker-images.tgz
+    1. ${SENZING_DOCKER_DIR}/senzing-docker-images.tgz
 
 ## On air-gapped system
 
@@ -139,11 +139,11 @@ This method has been tested on Linux systems.
 
 ### Identify file
 
-1. :pencil2: Specify the location of the `docker-images.tgz` file.
+1. :pencil2: Specify the location of the `senzing-docker-images.tgz` file.
    Example:
 
     ```console
-    export SENZING_DOCKER_IMAGES_TGZ=~/docker-images.tgz
+    export SENZING_DOCKER_IMAGES_TGZ=~/senzing-docker-images.tgz
 
     ```
 
@@ -180,7 +180,7 @@ The contents of the local Docker repository are seen via the `docker images` com
    Example:
 
     ```console
-    docker load --input ${SENZING_OUTPUT_DIR}/docker-images.tar
+    docker load --input ${SENZING_OUTPUT_DIR}/senzing-docker-images.tar
 
     ```
 
