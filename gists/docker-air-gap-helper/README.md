@@ -15,9 +15,10 @@ The instructions have 3 major steps:
 1. [On non-air-gapped system](#on-non-air-gapped-system)
     1. [Package docker images](#package-docker-images)
     1. [Create docker-tag-and-push.sh file](#create-docker-tag-and-pushsh-file)
+    1. [Create compressed file](#create-compressed-file)
 1. [Transfer](#transfer)
 1. [On air-gapped system](#on-air-gapped-system)
-    1. [Identify files](#identify-files)
+    1. [Identify file](#identify-file)
     1. [Extract file](#extract-file)
     1. [Load local Docker repository](#load-local-docker-repository)
     1. [Load private Docker registry](#load-private-docker-registry)
@@ -62,7 +63,7 @@ They will not work on an air-gapped system.
 1. :pencil2: List Docker images to be packaged.
    Add or delete Docker images from the list.
    For extensive list, see
-   [docker-image-names.sh](../lists/docker-image-names.sh)
+   [docker-image-names.sh](../../lists/docker-image-names.sh)
    Example:
 
     ```console
@@ -88,20 +89,6 @@ They will not work on an air-gapped system.
 
     ```console
     docker save ${DOCKER_IMAGE_NAMES[@]} --output ${SENZING_DOCKER_DIR}/docker-images.tar
-
-    ```
-
-1. Compress `.tar` file to make it smaller.
-   Example:
-
-    ```console
-    tar \
-        --create \
-        --directory=${SENZING_DOCKER_DIR} \
-        --file=${SENZING_DOCKER_DIR}/docker-images.tgz \
-        --gzip \
-        --verbose \
-        docker-images.tar
 
     ```
 
