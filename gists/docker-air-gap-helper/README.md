@@ -130,7 +130,7 @@ They will not work on an air-gapped system.
     ```console
     tar \
         --create \
-        --directory ${SENZING_DOCKER_DIR} \
+        --directory / \
         --file ${SENZING_DOCKER_DIR}/docker-images.tgz \
         --gzip \
         --verbose \
