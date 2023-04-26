@@ -128,7 +128,13 @@ They will not work on an air-gapped system.
    Example:
 
     ```console
-    tar -czvf ${SENZING_DOCKER_DIR}/docker-images.tgz ${SENZING_DOCKER_DIR}/docker-images.tar
+    tar \
+        --create \
+        --directory ${SENZING_DOCKER_DIR} \
+        --file ${SENZING_DOCKER_DIR}/docker-images.tgz \
+        --gzip \
+        --verbose \
+        ${SENZING_DOCKER_DIR}/docker-images.tar
 
     ```
 
