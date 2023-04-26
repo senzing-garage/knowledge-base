@@ -56,7 +56,8 @@ They will not work on an air-gapped system.
     curl -X GET \
         --output ${SENZING_DOCKER_DIR}/docker-versions-stable.sh \
         https://raw.githubusercontent.com/Senzing/knowledge-base/main/lists/docker-versions-stable.sh
-    source ${SENZING_DOCKER_DIR}/docker-versions-stable.sh
+    chmod +x ${SENZING_DOCKER_DIR}/docker-versions-stable.sh
+    source   ${SENZING_DOCKER_DIR}/docker-versions-stable.sh
 
     ```
 
@@ -105,12 +106,13 @@ They will not work on an air-gapped system.
       echo "docker push \${DOCKER_REGISTRY_URL}/${DOCKER_IMAGE_NAME}"                     >> ${SENZING_DOCKER_DIR}/docker-tag-and-push.sh
       echo "docker rmi \${DOCKER_REGISTRY_URL}/${DOCKER_IMAGE_NAME}"                      >> ${SENZING_DOCKER_DIR}/docker-tag-and-push.sh
     done
+    chmod +x ${SENZING_DOCKER_DIR}/docker-tag-and-push.sh
 
     ```
 
 ### Create compressed file
 
-1. Compress `.tar` file to make it smaller.
+1. Compress `.tar` file to make it a smaller `.tgz` file.
    Example:
 
     ```console
@@ -120,7 +122,7 @@ They will not work on an air-gapped system.
         --file=${SENZING_DOCKER_DIR}/docker-images.tgz \
         --gzip \
         --verbose \
-        docker-images.tar docker-tag-and-push.sh
+        docker-images.tar docker-tag-and-push.sh docker-versions-stable.sh
 
     ```
 
