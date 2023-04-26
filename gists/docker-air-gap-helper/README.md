@@ -160,13 +160,13 @@ The following instructions show how to populate a private registry in an air-gap
 
 This method has been tested on Linux systems.
 
-### Identify files
+### Identify file
 
 1. :pencil2: Specify the location of the `docker-images.tgz` file.
    Example:
 
     ```console
-    export MY_DOCKER_IMAGE_TGZ=~/docker-images.tgz
+    export SENZING_DOCKER_IMAGE_TGZ=~/docker-images.tgz
 
     ```
 
@@ -176,7 +176,7 @@ This method has been tested on Linux systems.
    Example:
 
     ```console
-    export MY_OUTPUT_DIR=~/my-output
+    export SENZING_OUTPUT_DIR=~/my-senzing-output
 
     ```
 
@@ -184,8 +184,8 @@ This method has been tested on Linux systems.
    Example:
 
     ```console
-    mkdir --parents ${MY_OUTPUT_DIR}
-    tar -zxvf ${MY_DOCKER_IMAGE_TGZ} --directory ${MY_OUTPUT_DIR}
+    mkdir --parents ${SENZING_OUTPUT_DIR}
+    tar -zxvf ${SENZING_DOCKER_IMAGE_TGZ} --directory ${SENZING_OUTPUT_DIR}
 
     ```
 
@@ -198,7 +198,7 @@ The contents of the local Docker repository are seen via the `docker images` com
    Example:
 
     ```console
-    docker load --input ${MY_OUTPUT_DIR}/docker-images.tar
+    docker load --input ${SENZING_OUTPUT_DIR}/docker-images.tar
 
     ```
 
@@ -212,7 +212,7 @@ If working on a single workstation, this step is not necessary.
    Example:
 
     ```console
-    export MY_DOCKER_TAG_AND_PUSH_SH=~/docker-tag-and-push.sh
+    export SENZING_DOCKER_TAG_AND_PUSH_SH=~/docker-tag-and-push.sh
 
     ```
 
@@ -228,5 +228,5 @@ If working on a single workstation, this step is not necessary.
    Example:
 
     ```console
-    ${MY_DOCKER_TAG_AND_PUSH_SH}
+    ${SENZING_DOCKER_TAG_AND_PUSH_SH}
     ```
