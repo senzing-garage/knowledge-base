@@ -103,7 +103,7 @@ The following steps create a `docker-images.tar` file containing docker images.
    Example:
 
     ```console
-    echo "#!/usr/bin/env bash" > ${SENZING_DOCKER_DIR}/docker-tag-and-push.sh
+    echo '#!/usr/bin/env bash' > ${SENZING_DOCKER_DIR}/docker-tag-and-push.sh
     for DOCKER_IMAGE_NAME in ${DOCKER_IMAGE_NAMES[@]};
     do
       echo ""                                                                             >> ${SENZING_DOCKER_DIR}/docker-tag-and-push.sh
