@@ -1,7 +1,7 @@
 # How to copy Docker images to air-gapped environment
 
 The following instructions show how to prepare a TGZ file containing
-Docker images and a file to help loading docker images to a private Docker registry.
+Docker images and files to help loading docker images to a private Docker registry.
 
 The instructions have 3 major steps:
 
@@ -26,7 +26,9 @@ The instructions have 3 major steps:
 ## On non-air-gapped system
 
 The goal of these steps is to produce a compressed file in `tgz` format
-containing Docker images that can be installed on an air-gapped private Docker registry.
+(`docker-images.tgz`)
+containing Docker images that can be installed on an air-gapped system
+and files to help wth populating the private Docker registry from that system.
 
 The following steps are performed on an internet-connected system.
 They will not work on an air-gapped system.
@@ -76,7 +78,7 @@ The following steps create a `docker-images.tar` file containing docker images.
 
     ```
 
-1. Pull Docker images to local workstation.
+1. Pull Docker images to local, non-air-gapped workstation.
    Example:
 
     ```console
@@ -97,10 +99,11 @@ The following steps create a `docker-images.tar` file containing docker images.
 
 ### Create docker-tag-and-push.sh file
 
-1. Create `docker-tag-and-push.sh` that will be used to push images to private Docker registry accessible by air-gapped system.
+1. Create `docker-tag-and-push.sh` that will be used to push images to private Docker registry from air-gapped system.
    Example:
 
     ```console
+    echo "#!/usr/bin/env bash" > ${SENZING_DOCKER_DIR}/docker-tag-and-push.sh
     for DOCKER_IMAGE_NAME in ${DOCKER_IMAGE_NAMES[@]};
     do
       echo ""                                                                             >> ${SENZING_DOCKER_DIR}/docker-tag-and-push.sh
@@ -130,14 +133,12 @@ The following steps create a `docker-images.tar` file containing docker images.
 
 ## Transfer
 
-1. Transfer the following files to the air-gapped system:
-    1. ${SENZING_DOCKER_DIR}/docker-images.tgz
+1. Transfer `${SENZING_DOCKER_DIR}/docker-images.tgz` to the air-gapped system.
 
 ## On air-gapped system
 
-The following instructions show how to populate a private registry in an air-gapped environment.
-
-This method has been tested on Linux systems.
+The following instructions show how to load docker images into local Docker repository and
+populate a private registry in an air-gapped environment.
 
 ### Identify file
 
