@@ -14,7 +14,7 @@ The instructions have 3 major steps:
 
 1. [On non-air-gapped system](#on-non-air-gapped-system)
     1. [Package docker images](#package-docker-images)
-    1. [Create docker-load.sh file](#create-docker-loadsh-file)
+    1. [Create docker-tag-and-push.sh file](#create-docker-loadsh-file)
 1. [Transfer](#transfer)
 1. [On air-gapped system](#on-air-gapped-system)
     1. [Identify files](#identify-files)
@@ -132,18 +132,18 @@ They will not work on an air-gapped system.
 
     ```
 
-### Create docker-load.sh file
+### Create docker-tag-and-push.sh file
 
-1. Create `docker-load.sh` shell script to load files on air-gapped system.
+1. Create `docker-tag-and-push.sh` shell script to load files on air-gapped system.
    Example:
 
     ```console
     for DOCKER_IMAGE_NAME in ${DOCKER_IMAGE_NAMES[@]};
     do
-      echo ""                                                                             >> ${SENZING_DOCKER_DIR}/docker-load.sh
-      echo "docker tag ${DOCKER_IMAGE_NAME} \${DOCKER_REGISTRY_URL}/${DOCKER_IMAGE_NAME}" >> ${SENZING_DOCKER_DIR}/docker-load.sh
-      echo "docker push \${DOCKER_REGISTRY_URL}/${DOCKER_IMAGE_NAME}"                     >> ${SENZING_DOCKER_DIR}/docker-load.sh
-      echo "docker rmi \${DOCKER_REGISTRY_URL}/${DOCKER_IMAGE_NAME}"                      >> ${SENZING_DOCKER_DIR}/docker-load.sh
+      echo ""                                                                             >> ${SENZING_DOCKER_DIR}/docker-tag-and-push.sh
+      echo "docker tag ${DOCKER_IMAGE_NAME} \${DOCKER_REGISTRY_URL}/${DOCKER_IMAGE_NAME}" >> ${SENZING_DOCKER_DIR}/docker-tag-and-push.sh
+      echo "docker push \${DOCKER_REGISTRY_URL}/${DOCKER_IMAGE_NAME}"                     >> ${SENZING_DOCKER_DIR}/docker-tag-and-push.sh
+      echo "docker rmi \${DOCKER_REGISTRY_URL}/${DOCKER_IMAGE_NAME}"                      >> ${SENZING_DOCKER_DIR}/docker-tag-and-push.sh
     done
     ```
 
@@ -151,7 +151,7 @@ They will not work on an air-gapped system.
 
 1. Transfer the following files to the air-gapped system:
     1. ${SENZING_DOCKER_DIR}/docker-images.tgz
-    1. ${SENZING_DOCKER_DIR}/docker-load.sh
+    1. ${SENZING_DOCKER_DIR}/docker-tag-and-push.sh
 
 ## On air-gapped system
 
@@ -161,12 +161,12 @@ This method has been tested on Linux systems.
 
 ### Identify files
 
-1. :pencil2: Specify the location of the `docker-images.tgz` and `docker-load.sh` files.
+1. :pencil2: Specify the location of the `docker-images.tgz` and `docker-tag-and-push.sh` files.
    Example:
 
     ```console
     export MY_DOCKER_IMAGE_TGZ=~/docker-images.tgz
-    export MY_DOCKER_LOAD_SH=~/docker-load.sh
+    export MY_DOCKER_LOAD_SH=~/docker-tag-and-push.sh
 
     ```
 
@@ -214,7 +214,7 @@ If working on a single workstation, this step is not necessary.
 
     ```
 
-1. :pencil2: Run `docker-load.sh`
+1. :pencil2: Run `docker-tag-and-push.sh`
    Example:
 
     ```console
