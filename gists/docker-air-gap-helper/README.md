@@ -1,4 +1,4 @@
-# docker-air-gap-helper
+# How to copy Docker images to air-gapped environment
 
 The following instructions show how to prepare a TGZ file containing
 Docker images and a file to help loading docker images to a private Docker registry.
@@ -14,7 +14,7 @@ The instructions have 3 major steps:
 
 1. [On non-air-gapped system](#on-non-air-gapped-system)
     1. [Package docker images](#package-docker-images)
-    1. [Create docker-tag-and-push.sh file](#create-docker-loadsh-file)
+    1. [Create docker-tag-and-push.sh file](#create-docker-tag-and-pushsh-file)
 1. [Transfer](#transfer)
 1. [On air-gapped system](#on-air-gapped-system)
     1. [Identify files](#identify-files)
@@ -145,6 +145,7 @@ They will not work on an air-gapped system.
       echo "docker push \${DOCKER_REGISTRY_URL}/${DOCKER_IMAGE_NAME}"                     >> ${SENZING_DOCKER_DIR}/docker-tag-and-push.sh
       echo "docker rmi \${DOCKER_REGISTRY_URL}/${DOCKER_IMAGE_NAME}"                      >> ${SENZING_DOCKER_DIR}/docker-tag-and-push.sh
     done
+
     ```
 
 ## Transfer
@@ -178,14 +179,15 @@ This method has been tested on Linux systems.
     ```console
     export MY_OUTPUT_DIR=~/my-output
 
-    mkdir --parents ${MY_OUTPUT_DIR}
     ```
 
 1. Uncompress file.
    Example:
 
     ```console
+    mkdir --parents ${MY_OUTPUT_DIR}
     tar -zxvf ${MY_DOCKER_IMAGE_TGZ} --directory ${MY_OUTPUT_DIR}
+
     ```
 
 ### Load local Docker repository
