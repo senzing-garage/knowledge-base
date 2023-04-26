@@ -33,6 +33,8 @@ They will not work on an air-gapped system.
 
 ### Package docker images
 
+The following steps create a `senzing-docker-images.tar` file containing docker images.
+
 1. :pencil2: Identify a new directory for outputting files.
    Example:
 
