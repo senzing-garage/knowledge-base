@@ -191,7 +191,12 @@ This method has been tested on Linux systems.
 
     ```console
     mkdir --parents ${SENZING_OUTPUT_DIR}
-    tar -zxvf ${SENZING_DOCKER_IMAGES_TGZ} --directory ${SENZING_OUTPUT_DIR}
+    tar \
+        --directory ${SENZING_OUTPUT_DIR} \
+        --extract \
+        --file ${SENZING_DOCKER_IMAGES_TGZ} \
+        --gzip \
+        --verbose
 
     ```
 
