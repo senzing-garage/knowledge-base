@@ -59,48 +59,15 @@ They will not work on an air-gapped system.
 
     ```
 
-1. :pencil2: List Docker images to be packages.
+1. :pencil2: List Docker images to be packaged.
    Add or delete Docker images from the list.
+   For extensive list, see
+   [docker-image-names.sh](../lists/docker-image-names.sh)
    Example:
 
     ```console
     export DOCKER_IMAGE_NAMES=(
-        "bitnami/kafka:${SENZING_DOCKER_IMAGE_VERSION_BITNAMI_KAFKA:-latest}"
-        "bitnami/rabbitmq:${SENZING_DOCKER_IMAGE_VERSION_BITNAMI_RABBITMQ:-latest}"
-        "bitnami/zookeeper:${SENZING_DOCKER_IMAGE_VERSION_BITNAMI_ZOOKEEPER:-latest}"
-        "coleifer/sqlite-web:${SENZING_DOCKER_IMAGE_VERSION_SQLITE_WEB:-latest}"
-        "confluentinc/cp-kafka:${SENZING_DOCKER_IMAGE_VERSION_CONFLUENTINC_CP_KAFKA:-latest}"
-        "dpage/pgadmin4:${SENZING_DOCKER_IMAGE_VERSION_DPAGE_PGADMIN4:-latest}"
-        "obsidiandynamics/kafdrop:${SENZING_DOCKER_IMAGE_VERSION_OBSIDIANDYNAMICS_KAFDROP:-latest}"
-        "senzing/adminer:${SENZING_DOCKER_IMAGE_VERSION_ADMINER:-latest}"
-        "senzing/apt:${SENZING_DOCKER_IMAGE_VERSION_APT:-latest}"
-        "senzing/configurator:${SENZING_DOCKER_IMAGE_VERSION_CONFIGURATOR:-latest}"
-        "senzing/data-encryption-aes256cbc-sample:${SENZING_DOCKER_IMAGE_VERSION_DATA_ENCRYPTION_AES256CBC_SAMPLE:-latest}"
-        "senzing/db2-driver-installer:${SENZING_DOCKER_IMAGE_VERSION_DB2_DRIVER_INSTALLER:-latest}"
-        "senzing/entity-search-web-app-console:${SENZING_DOCKER_IMAGE_VERSION_ENTITY_SEARCH_WEB_APP_CONSOLE:-latest}"
-        "senzing/entity-search-web-app:${SENZING_DOCKER_IMAGE_VERSION_ENTITY_SEARCH_WEB_APP:-latest}"
-        "senzing/file-loader:${SENZING_DOCKER_IMAGE_VERSION_FILE_LOADER:-latest}"
-        "senzing/ibm-db2:${SENZING_DOCKER_IMAGE_VERSION_IBM_DB2:-latest}"
-        "senzing/init-container:${SENZING_DOCKER_IMAGE_VERSION_INIT_CONTAINER:-latest}"
-        "senzing/init-postgresql:${SENZING_DOCKER_IMAGE_VERSION_INIT_POSTGRESQL:-latest}"
-        "senzing/postgresql-client:${SENZING_DOCKER_IMAGE_VERSION_POSTGRESQL_CLIENT:-latest}"
-        "senzing/redoer:${SENZING_DOCKER_IMAGE_VERSION_REDOER:-latest}"
-        "senzing/resolver:${SENZING_DOCKER_IMAGE_VERSION_RESOLVER:-latest}"
-        "senzing/senzing-api-server:${SENZING_DOCKER_IMAGE_VERSION_SENZING_API_SERVER:-latest}"
-        "senzing/senzing-base:${SENZING_DOCKER_IMAGE_VERSION_SENZING_BASE:-latest}"
-        "senzing/senzing-console-slim:${SENZING_DOCKER_IMAGE_VERSION_SENZING_CONSOLE_SLIM:-latest}"
-        "senzing/senzing-console:${SENZING_DOCKER_IMAGE_VERSION_SENZING_CONSOLE:-latest}"
-        "senzing/senzing-poc-server:${SENZING_DOCKER_IMAGE_VERSION_SENZING_POC_SERVER:-latest}"
-        "senzing/senzing-tools:${SENZING_DOCKER_IMAGE_VERSION_SENZING_TOOLS:-latest}"
         "senzing/senzingapi-runtime:${SENZING_DOCKER_IMAGE_VERSION_SENZINGAPI_RUNTIME:-latest}"
-        "senzing/senzingapi-tools:${SENZING_DOCKER_IMAGE_VERSION_SENZINGAPI_TOOLS:-latest}"
-        "senzing/sshd:${SENZING_DOCKER_IMAGE_VERSION_SSHD:-latest}"
-        "senzing/stream-loader:${SENZING_DOCKER_IMAGE_VERSION_STREAM_LOADER:-latest}"
-        "senzing/stream-logger:${SENZING_DOCKER_IMAGE_VERSION_STREAM_LOGGER:-latest}"
-        "senzing/stream-producer:${SENZING_DOCKER_IMAGE_VERSION_STREAM_PRODUCER:-latest}"
-        "senzing/web-app-demo:${SENZING_DOCKER_IMAGE_VERSION_WEB_APP_DEMO:-latest}"
-        "senzing/xterm:${SENZING_DOCKER_IMAGE_VERSION_XTERM=:-latest}"
-        "senzing/yum:${SENZING_DOCKER_IMAGE_VERSION_YUM:-latest}"
     )
 
     ```
@@ -154,11 +121,26 @@ They will not work on an air-gapped system.
 
     ```
 
+### Create compressed file
+
+1. Compress `.tar` file to make it smaller.
+   Example:
+
+    ```console
+    tar \
+        --create \
+        --directory=${SENZING_DOCKER_DIR} \
+        --file=${SENZING_DOCKER_DIR}/docker-images.tgz \
+        --gzip \
+        --verbose \
+        docker-images.tar docker-tag-and-push.sh
+
+    ```
+
 ## Transfer
 
 1. Transfer the following files to the air-gapped system:
     1. ${SENZING_DOCKER_DIR}/docker-images.tgz
-    1. ${SENZING_DOCKER_DIR}/docker-tag-and-push.sh
 
 ## On air-gapped system
 
@@ -219,14 +201,6 @@ The contents of the local Docker repository are seen via the `docker images` com
 need to be added to a private Docker registry.
 If working on a single workstation, this step is not necessary.
 
-1. :pencil2: Specify the location of the `docker-tag-and-push.sh` file.
-   Example:
-
-    ```console
-    export SENZING_DOCKER_TAG_AND_PUSH_SH=~/docker-tag-and-push.sh
-
-    ```
-
 1. :pencil2: Identify the URL of the private Docker registry.
    Example:
 
@@ -239,5 +213,6 @@ If working on a single workstation, this step is not necessary.
    Example:
 
     ```console
-    ${SENZING_DOCKER_TAG_AND_PUSH_SH}
+    ${SENZING_OUTPUT_DIR}/docker-tag-and-push.sh
+
     ```
