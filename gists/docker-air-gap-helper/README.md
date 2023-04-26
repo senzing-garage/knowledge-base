@@ -166,7 +166,7 @@ This method has been tested on Linux systems.
    Example:
 
     ```console
-    export SENZING_DOCKER_IMAGE_TGZ=~/docker-images.tgz
+    export SENZING_DOCKER_IMAGES_TGZ=~/docker-images.tgz
 
     ```
 
@@ -185,7 +185,7 @@ This method has been tested on Linux systems.
 
     ```console
     mkdir --parents ${SENZING_OUTPUT_DIR}
-    tar -zxvf ${SENZING_DOCKER_IMAGE_TGZ} --directory ${SENZING_OUTPUT_DIR}
+    tar -zxvf ${SENZING_DOCKER_IMAGES_TGZ} --directory ${SENZING_OUTPUT_DIR}
 
     ```
 
