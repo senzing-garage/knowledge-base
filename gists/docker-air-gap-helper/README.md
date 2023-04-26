@@ -134,24 +134,16 @@ They will not work on an air-gapped system.
 
 ### Create docker-load.sh file
 
-1. :pencil2: Identify the URL of the private Docker registry.
-   Example:
-
-    ```console
-    export DOCKER_REGISTRY_URL=my.docker-registry.com:5000
-
-    ```
-
 1. Create `docker-load.sh` shell script to load files on air-gapped system.
    Example:
 
     ```console
     for DOCKER_IMAGE_NAME in ${DOCKER_IMAGE_NAMES[@]};
     do
-      echo "" >> ${OUTPUT_LOAD_REGISTRY_SCRIPT}/docker-load.sh
+      echo ""                                                                             >> ${SENZING_DOCKER_DIR}/docker-load.sh
       echo "docker tag ${DOCKER_IMAGE_NAME} \${DOCKER_REGISTRY_URL}/${DOCKER_IMAGE_NAME}" >> ${SENZING_DOCKER_DIR}/docker-load.sh
-      echo "docker push \${DOCKER_REGISTRY_URL}/${DOCKER_IMAGE_NAME}" >> ${SENZING_DOCKER_DIR}/docker-load.sh
-      echo "docker rmi \${DOCKER_REGISTRY_URL}/${DOCKER_IMAGE_NAME}" >> ${SENZING_DOCKER_DIR}/docker-load.sh
+      echo "docker push \${DOCKER_REGISTRY_URL}/${DOCKER_IMAGE_NAME}"                     >> ${SENZING_DOCKER_DIR}/docker-load.sh
+      echo "docker rmi \${DOCKER_REGISTRY_URL}/${DOCKER_IMAGE_NAME}"                      >> ${SENZING_DOCKER_DIR}/docker-load.sh
     done
     ```
 
@@ -213,6 +205,14 @@ The contents of the local Docker repository are seen via the `docker images` com
 :thinking: **Optional:** This step is only needed if the Docker images
 need to be added to a private Docker registry.
 If working on a single workstation, this step is not necessary.
+
+1. :pencil2: Identify the URL of the private Docker registry.
+   Example:
+
+    ```console
+    export DOCKER_REGISTRY_URL=my.docker-registry.com:5000
+
+    ```
 
 1. :pencil2: Run `docker-load.sh`
    Example:
