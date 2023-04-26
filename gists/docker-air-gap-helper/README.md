@@ -134,7 +134,7 @@ They will not work on an air-gapped system.
         --file=${SENZING_DOCKER_DIR}/docker-images.tgz \
         --gzip \
         --verbose \
-        ${SENZING_DOCKER_DIR}/docker-images.tar
+        docker-images.tar
 
     ```
 
