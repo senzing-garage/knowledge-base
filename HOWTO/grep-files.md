@@ -9,7 +9,24 @@
 
     ```console
     cat<<EOT > /tmp/grep-deleted-files.txt
-    HOWTO/README.md
+    challenges/senzing-jupyter-notebook.md
+    demonstrations/rest-api-server-on-windows.md
+    demonstrations/senzing-jupyter-on-macos.md
+    docs/senzingapi/configure.md
+    docs/senzingapi/install.md
+    education/community/04-aws-cloudformation.md
+    gists/air-gap-senzing-environment/air-gap-senzing-environment.sh
+    gists/air-gap-senzing-environment/parse-1.15.0-py3-none-any.whl
+    gists/air-gap-senzing-environment/README.md
+    gists/aws-ecs/README.md
+    gists/aws-ecs/task-definitions/sleep360.json
+    gists/aws-ecs/using-autoscaling-groups.md
+    gists/clone-senzing-repositories/clone-senzing-repositories.sh
+    gists/docker-air-gap-helper/docker-air-gap-helper.sh
+    gists/docker-air-gap-helper/README.md
+    gists/tutorial-aws-ecs-cluster-docker/docker-compose.yaml
+    gists/tutorial-aws-ecs-cluster-docker/ecs-params.yaml
+    gists/tutorial-aws-ecs-cluster-docker/README.md
     HOWTO/accept-eula.md
     HOWTO/build-docker-senzing-phppgadmin.md
     HOWTO/certify-docker-images.md
@@ -30,6 +47,7 @@
     HOWTO/migrate-senzing-using-docker.md
     HOWTO/quickstart-linux.md
     HOWTO/quickstart-macos.md
+    HOWTO/README.md
     HOWTO/setup-senzing-rest-api-development-environment-on-linux.md
     HOWTO/setup-senzing-rest-api-development-environment-on-windows.md
     HOWTO/support-docker-network.md
@@ -44,26 +62,8 @@
     HOWTO/update-senzing-package-on-docker-store.md
     HOWTO/update-sql-files.md
     HOWTO/use-docker-with-system-install.md
-    WHATIS/senzing-api-tgz.md
-    challenges/senzing-jupyter-notebook.md
-    demonstrations/rest-api-server-on-windows.md
-    demonstrations/senzing-jupyter-on-macos.md
-    docs/senzingapi/configure.md
-    docs/senzingapi/install.md
-    education/community/04-aws-cloudformation.md
-    gists/air-gap-senzing-environment/README.md
-    gists/air-gap-senzing-environment/air-gap-senzing-environment.sh
-    gists/air-gap-senzing-environment/parse-1.15.0-py3-none-any.whl
-    gists/aws-ecs/README.md
-    gists/aws-ecs/task-definitions/sleep360.json
-    gists/aws-ecs/using-autoscaling-groups.md
-    gists/clone-senzing-repositories/clone-senzing-repositories.sh
-    gists/docker-air-gap-helper/README.md
-    gists/docker-air-gap-helper/docker-air-gap-helper.sh
-    gists/tutorial-aws-ecs-cluster-docker/README.md
-    gists/tutorial-aws-ecs-cluster-docker/docker-compose.yaml
-    gists/tutorial-aws-ecs-cluster-docker/ecs-params.yaml
     lists/terraform-dictionary.md
+    WHATIS/senzing-api-tgz.md
     EOT
 
     ```
