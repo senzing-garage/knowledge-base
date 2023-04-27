@@ -6,8 +6,8 @@
    Example:
 
     ```console
-    sudo docker build --tag senzing/mysql        https://github.com/senzing/docker-mysql.git#main
-    sudo docker build --tag senzing/mysql-init   https://github.com/senzing/docker-mysql-init.git#main
+    docker build --tag senzing/mysql        https://github.com/senzing/docker-mysql.git#main
+    docker build --tag senzing/mysql-init   https://github.com/senzing/docker-mysql-init.git#main
     ```
 
 ## Identify docker images
@@ -32,6 +32,6 @@
     ```console
     for DOCKER_IMAGE_NAME in ${DOCKER_IMAGE_NAMES[@]};\
     do \
-      sudo docker pull ${DOCKER_IMAGE_NAME}; \
+        docker pull ${DOCKER_IMAGE_NAME}; \
     done
     ```
