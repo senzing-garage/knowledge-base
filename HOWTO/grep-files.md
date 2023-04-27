@@ -73,7 +73,7 @@
 
     ```console
     cd ~/senzing.git
-    grep -Ri -f ~/grep-deleted-files.txt
+    grep --recursive --ignore-case --file=~/grep-deleted-files.txt
 
     ```
 
@@ -82,7 +82,7 @@
 
     ```console
     cd ~/senzing.git/<repository-name>
-    grep -Ri -f ~/grep-deleted-files.txt
+    grep --recursive --ignore-case --file=~/grep-deleted-files.txt
 
     ```
 
@@ -126,7 +126,7 @@
 
     ```console
     cd ~/senzing.git
-    grep -Ri -f ~/grep-update-links.txt
+    grep --recursive --ignore-case --file=~/grep-update-links.txt
 
     ```
 
@@ -135,6 +135,6 @@
 
     ```console
     cd ~/senzing.git/<repository-name>
-    grep -Ri -f ~/grep-update-links.txt
+    grep --recursive --ignore-case --file=~/grep-update-links.txt
 
     ```
