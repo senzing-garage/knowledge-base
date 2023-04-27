@@ -17,6 +17,7 @@ References:
     ```console
     export BENCH_LOG_FILE_NAME=debian-11.scan
     export BENCH_TARGET_DOCKER_IMAGE=debian:11
+
     ```
 
 1. Run the docker container.  Example:
@@ -43,6 +44,7 @@ References:
             -b \
             -l /output/${BENCH_LOG_FILE_NAME} \
             -t ${BENCH_TARGET_DOCKER_IMAGE}
+
     ```
 
 1. The `${BENCH_LOG_FILE_NAME}` file will be in the `${PWD}` directory.
