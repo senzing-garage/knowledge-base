@@ -8,6 +8,7 @@
     ```console
     docker build --tag senzing/mysql        https://github.com/senzing/docker-mysql.git#main
     docker build --tag senzing/mysql-init   https://github.com/senzing/docker-mysql-init.git#main
+
     ```
 
 ## Identify docker images
@@ -22,6 +23,7 @@
     export DOCKER_IMAGE_NAMES=(
         "senzing/senzingapi-runtime:${SENZING_DOCKER_IMAGE_VERSION_SENZINGAPI_RUNTIME:-latest}"
     )
+
     ```
 
 ## Pull images from DockerHub
@@ -34,4 +36,5 @@
     do \
         docker pull ${DOCKER_IMAGE_NAME}; \
     done
+
     ```
