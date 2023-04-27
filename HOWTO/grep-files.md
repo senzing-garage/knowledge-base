@@ -4,11 +4,11 @@
 
 ### Remove deleted links
 
-1. Make a file (`~/grep-deleted-files.txt`), listing the strings to look for.
+1. Make a file (`/tmp/grep-deleted-files.txt`), listing the strings to look for.
    Example:
 
     ```console
-    cat<<EOT > ~/grep-deleted-files.txt
+    cat<<EOT > /tmp/grep-deleted-files.txt
     HOWTO/README.md
     HOWTO/accept-eula.md
     HOWTO/build-docker-senzing-phppgadmin.md
@@ -73,7 +73,7 @@
 
     ```console
     cd ~/senzing.git
-    grep --recursive --ignore-case --file=~/grep-deleted-files.txt
+    grep --recursive --ignore-case --file=/tmp/grep-deleted-files.txt
 
     ```
 
@@ -82,17 +82,17 @@
 
     ```console
     cd ~/senzing.git/<repository-name>
-    grep --recursive --ignore-case --file=~/grep-deleted-files.txt
+    grep --recursive --ignore-case --file=/tmp/grep-deleted-files.txt
 
     ```
 
 ### Modify links
 
-1. Make a file (`~/grep-update-links.txt`), listing the strings to look for.
+1. Make a file (`/tmp/grep-update-links.txt`), listing the strings to look for.
    Example:
 
     ```console
-    cat<<EOT > ~/grep-update-links.txt
+    cat<<EOT > /tmp/grep-update-links.txt
     HOWTO/install-aws-cli.md
     HOWTO/install-curl.md
     HOWTO/install-db2-client.md
@@ -126,7 +126,7 @@
 
     ```console
     cd ~/senzing.git
-    grep --recursive --ignore-case --file=~/grep-update-links.txt
+    grep --recursive --ignore-case --file=/tmp/grep-update-links.txt
 
     ```
 
@@ -135,6 +135,6 @@
 
     ```console
     cd ~/senzing.git/<repository-name>
-    grep --recursive --ignore-case --file=~/grep-update-links.txt
+    grep --recursive --ignore-case --file=/tmp/grep-update-links.txt
 
     ```
