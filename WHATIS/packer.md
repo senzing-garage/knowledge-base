@@ -10,3 +10,35 @@
 
 1. [Official site](https://www.packer.io/)
 1. [github.com/hashicorp/packer](https://github.com/hashicorp/packer)
+
+## Install
+
+Instructions for installing [Packer](http://packer.io/).
+
+### CentOS
+
+1. [Precompiled binaries](https://www.packer.io/intro/getting-started/install.html#precompiled-binaries)
+
+### Ubuntu
+
+1. [Precompiled binaries](https://www.packer.io/intro/getting-started/install.html#precompiled-binaries)
+
+### macOS
+
+1. [Homebrew](https://www.packer.io/intro/getting-started/install.html#homebrew)
+
+### Windows
+
+1. [Chocolatey](https://www.packer.io/intro/getting-started/install.html#chocolatey)
+
+## Test
+
+1. Test
+
+    ```console
+    packer version
+    ```
+
+## Troubleshooting
+
+## References

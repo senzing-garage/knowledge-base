@@ -12,3 +12,23 @@
 1. [Official site](https://jupyter.org)
     1. [Documentation](https://jupyter.org/documentation)
 1. [github.com/jupyter](https://github.com/jupyter)
+
+## Install
+
+Instructions for installing [Jupyter](https://jupyter.org/) notebooks.
+
+### CentOS
+
+### Ubuntu
+
+### macOS
+
+1. [Installing Jupyter with pip](https://jupyter.org/install)
+
+### Windows
+
+## Test
+
+## Troubleshooting
+
+## References
