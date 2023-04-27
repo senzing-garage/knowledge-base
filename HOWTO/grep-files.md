@@ -65,6 +65,7 @@
     gists/tutorial-aws-ecs-cluster-docker/ecs-params.yaml
     lists/terraform-dictionary.md
     EOT
+
     ```
 
 1. Search across all repositories.
@@ -73,6 +74,7 @@
     ```console
     cd ~/senzing.git
     grep -Ri -f ~/grep-deleted-files.txt
+
     ```
 
 1. Search a single repository.
@@ -81,6 +83,7 @@
     ```console
     cd ~/senzing.git/<repository-name>
     grep -Ri -f ~/grep-deleted-files.txt
+
     ```
 
 ### Modify links
@@ -115,6 +118,7 @@
     HOWTO/install-vagrant.md
     HOWTO/install-virtualbox.md
     EOT
+
     ```
 
 1. Search across all repositories.
@@ -123,6 +127,7 @@
     ```console
     cd ~/senzing.git
     grep -Ri -f ~/grep-update-links.txt
+
     ```
 
 1. Search a single repository.
@@ -131,4 +136,5 @@
     ```console
     cd ~/senzing.git/<repository-name>
     grep -Ri -f ~/grep-update-links.txt
+
     ```
