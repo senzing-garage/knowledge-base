@@ -15,8 +15,8 @@ References:
 1. :pencil2: Set environment variables.  Example:
 
     ```console
-    export BENCH_LOG_FILE_NAME=debian-9.scan
-    export BENCH_TARGET_DOCKER_IMAGE=debian:9
+    export BENCH_LOG_FILE_NAME=debian-11.scan
+    export BENCH_TARGET_DOCKER_IMAGE=debian:11
     ```
 
 1. Run the docker container.  Example:
