@@ -20,7 +20,7 @@
 
     ```console
     export DOCKER_IMAGE_NAMES=(
-    "senzing/senzingapi-runtime:${SENZING_DOCKER_IMAGE_VERSION_SENZINGAPI_RUNTIME:-latest}"
+        "senzing/senzingapi-runtime:${SENZING_DOCKER_IMAGE_VERSION_SENZINGAPI_RUNTIME:-latest}"
     )
     ```
 
