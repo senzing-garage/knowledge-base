@@ -70,11 +70,11 @@ This is important as the compiling of the Go code expects Senzing to be in `/opt
 
 ## Configure Senzing
 
-1. Move the "versioned" Senzing data to the system location.
+1. :pencil2: Move the "versioned" Senzing data to the system location.
    Example:
 
     ```console
-      sudo mv /opt/senzing/data/3.0.0/* /opt/senzing/data/
+      sudo mv /opt/senzing/data/4.0.0/* /opt/senzing/data/
 
     ```
 
