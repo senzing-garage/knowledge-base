@@ -66,8 +66,6 @@ as well as deploy Senzing.
       centos /bin/bash
     ```
 
-Here's [how to install Docker](../../HOWTO/install-docker.md).
-
 ### Integrated Development Environments (IDE)
 
 #### Visual Studio Code

@@ -1175,21 +1175,6 @@
 
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DELAY_RANDOMIZED&type=code)
 
-### SENZING_DIR
-
-1. **Deprecated**
-1. Synopsis:
-    1. Path on the local system where
-       [Senzing_API.tgz](https://s3.amazonaws.com/public-read-access/SenzingComDownloads/Senzing_API.tgz)
-       has been extracted.
-       See [HOWTO - Create SENZING_DIR](https://github.com/Senzing/knowledge-base/blob/main/HOWTO/create-senzing-dir.md).
-1. Values:
-    1. Default: None
-    1. Usually set to "/opt/senzing".
-1. Forms:
-    1. Helm: senzing.senzingDir
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DIR&type=code)
-
 ### SENZING_DOCKER_HOST_IP_ADDR
 
 1. Synopsis:
