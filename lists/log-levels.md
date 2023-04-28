@@ -3,23 +3,16 @@
 ## Current integer assignments
 
 | Integer value | C          | Go    | Python |
-|---------------|------------|-------|--------|
-| 0             | no logging | TRACE |        |
-| 1             | logging    | DEBUG |        |
-| 2             |            | INFO  |        |
-| 3             |            | WARN  |        |
-| 4             |            | ERROR |        |
-| 5             |            | FATAL |        |
-| 6             |            | PANIC |        |
+|--------------:|------------|-------|--------|
+| -8            | no logging | TRACE |        |
+| -4            |            | DEBUG |        |
+| 0             | no logging | INFO  |        |
+| 1             | logging    |       |        |
+| 4             |            | WARN  |        |
+| 8             |            | ERROR |        |
+| 12            |            | FATAL |        |
+| 16            |            | PANIC |        |
 
 ## Go level explanations
 
-| Level | Use                                                   |
-|-------|-------------------------------------------------------|
-| TRACE | Entry/Exit tracing                                    |
-| DEBUG | Values see during processing                          |
-| INFO  | Process steps achieved                                |
-| WARN  | Unexpected situations, but processing was successful  |
-| ERROR | Unexpected situations, processing was not successful  |
-| FATAL | The process needs to shutdown                         |
-| PANIC | The underlying system is at issue                     |
+1. See [senzing/go-logging](https://github.com/Senzing/go-logging)

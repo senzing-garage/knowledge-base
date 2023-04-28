@@ -54,8 +54,8 @@ from the downloaded RPMs.
    Example:
 
     ```console
-    export SENZING_API_RPM=senzingapi-1.14.3-20059.x86_64.rpm
-    export SENZING_DATA_RPM=senzingdata-v1-1.0.0-19287.x86_64.rpm
+    export SENZING_API_RPM=senzingapi-3.5.1-23104.x86_64.rpm
+    export SENZING_DATA_RPM=senzingdata-v4-4.0.0-23084.x86_64.rpm
     ```
 
 ## Volumes

@@ -44,9 +44,12 @@ The `senzing/senzingapi-runtime` image can be used as an initial layer.
    So in practice, it would look something more like:
 
     ```Dockerfile
-    FROM senzing/senzingapi-runtime:3.2.0
+    FROM senzing/senzingapi-runtime:3.5.0
     :
     ```
+
+    To find the latest versioned release, visit
+    [senzing/senzingapi-runtime tags](https://hub.docker.com/r/senzing/senzingapi-runtime/tags).
 
 ## Extend existing image with Senzing binaries
 

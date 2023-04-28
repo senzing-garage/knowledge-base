@@ -1,82 +1,64 @@
-# How to add docker images to private registry
+# How to add Docker images to private registry
+
+The following instructions show how to pull Docker containers
+from public Docker registries
+and push them to a private Docker registry.
+
+## Contents
+
+1. [Prerequisites](#prerequisites)
+1. [Build docker images](#build-docker-images)
+1. [Identify docker images](#identify-docker-images)
+1. [Pull images from public Docker registries](#pull-images-from-public-docker-registries)
+1. [Push images to private Docker registry](#pull-images-from-public-docker-registries)
 
 ## Prerequisites
 
 1. If you need to create a private docker registry, see
        [HOWTO - Install docker registry server](https://github.com/Senzing/knowledge-base/blob/main/HOWTO/install-docker-registry-server.md).
 
-## Accept End User License Agreement
-
-1. Accept End User License Agreement (EULA) for `store/senzing/senzing-package` docker image.
-    1. Visit [HOWTO - Accept EULA](https://github.com/Senzing/knowledge-base/blob/main/HOWTO/accept-eula.md#storesenzingsenzing-package-docker-image).
-
 ## Build docker images
+
+:thinking: **Optional:**
+Build any Docker images that aren't on a public Docker registry.
 
 1. Build Senzing "helper" Docker images.
    Example:
 
     ```console
-    sudo docker build --tag senzing/mysql        https://github.com/senzing/docker-mysql.git#main
-    sudo docker build --tag senzing/mysql-init   https://github.com/senzing/docker-mysql-init.git#main
+    docker build --tag senzing/mysql        https://github.com/senzing/docker-mysql.git#main
+    docker build --tag senzing/mysql-init   https://github.com/senzing/docker-mysql-init.git#main
+
     ```
 
 ## Identify docker images
 
-1. :pencil2: List docker images in DockerHub in an environment variable.
+1. :thinking: **Optional:**
+   Specify versions of Docker images.
    Example:
 
     ```console
-    export DOCKER_IMAGE_NAMES=( \
-      "arey/mysql-client:latest" \
-      "bitnami/kafka:2.4.0" \
-      "bitnami/phpmyadmin:4.8.5" \
-      "bitnami/postgresql:11.6.0" \
-      "bitnami/rabbitmq:3.8.2" \
-      "bitnami/zookeeper:3.5.6" \
-      "coleifer/sqlite-web:latest" \
-      "confluentinc/cp-kafka:4.0.1-1" \
-      "dockage/phppgadmin:latest" \
-      "ibmcom/db2:11.5.0.0a" \
-      "jbergknoff/postgresql-client:latest" \
-      "kafkamanager/kafka-manager:2.0.0.2" \
-      "mysql:5.7" \
-      "obsidiandynamics/kafdrop:3.23.0" \
-      "phpmyadmin/phpmyadmin:4.9" \
-      "portainer/portainer:latest" \
-      "postgres:11.6" \
-      "senzing/adminer:latest" \
-      "senzing/apt:latest" \
-      "senzing/configurator:latest" \
-      "senzing/db2-driver-installer:latest" \
-      "senzing/entity-search-web-app:latest" \
-      "senzing/g2command:latest" \
-      "senzing/g2configtool:latest" \
-      "senzing/g2loader:latest" \
-      "senzing/ibm-db2:latest" \
-      "senzing/init-container:latest" \
-      "senzing/jupyter:latest" \
-      "senzing/mysql-init:latest" \
-      "senzing/mysql:latest" \
-      "senzing/phppgadmin:latest" \
-      "senzing/python-demo:latest" \
-      "senzing/redoer:latest" \
-      "senzing/resolver:latest" \
-      "senzing/senzing-api-server:latest" \
-      "senzing/senzing-base:latest" \
-      "senzing/senzing-console:latest" \
-      "senzing/senzing-debug:latest" \
-      "senzing/senzing-poc-utility:latest" \
-      "senzing/sshd:latest" \
-      "senzing/stream-loader:latest" \
-      "senzing/stream-logger:latest" \
-      "senzing/stream-producer:latest" \
-      "senzing/xterm:latest" \
-      "senzing/yum:latest" \
-      "swaggerapi/swagger-ui:latest" \
-    )
+    curl -X GET \
+        --output /tmp/docker-versions-stable.sh \
+        https://raw.githubusercontent.com/Senzing/knowledge-base/main/lists/docker-versions-stable.sh
+    source /tmp/docker-versions-stable.sh
+
     ```
 
-## Pull images from DockerHub
+1. :pencil2: List docker images in DockerHub in an environment variable.
+   Add or delete Docker images from the list.
+   For extensive list, see
+   [docker-image-names.sh](../lists/docker-image-names.sh)
+   Example:
+
+    ```console
+    export DOCKER_IMAGE_NAMES=(
+        "senzing/senzingapi-runtime:${SENZING_DOCKER_IMAGE_VERSION_SENZINGAPI_RUNTIME:-latest}"
+    )
+
+    ```
+
+## Pull images from public Docker registries
 
 1. Add docker images to local docker repository.
    Example:
@@ -84,29 +66,29 @@
     ```console
     for DOCKER_IMAGE_NAME in ${DOCKER_IMAGE_NAMES[@]};\
     do \
-      sudo docker pull ${DOCKER_IMAGE_NAME}; \
+      docker pull ${DOCKER_IMAGE_NAME}; \
     done
+
     ```
 
-## Identify private registry
+## Push images to private Docker registry
 
-1. :pencil2: Set environment variable.
+1. :pencil2: Identify the URL of the private Docker registry.
    Example:
 
     ```console
     export DOCKER_REGISTRY_URL=my.docker-registry.com:5000
     ```
 
-## Push images to private registry
-
-1. Add docker images to private docker registry.
+1. Push Docker images to private docker registry.
    Example:
 
     ```console
     for DOCKER_IMAGE_NAME in ${DOCKER_IMAGE_NAMES[@]};\
-    do \
-      sudo docker tag  ${DOCKER_IMAGE_NAME} ${DOCKER_REGISTRY_URL}/${DOCKER_IMAGE_NAME}; \
-      sudo docker push ${DOCKER_REGISTRY_URL}/${DOCKER_IMAGE_NAME}; \
-      sudo docker rmi  ${DOCKER_REGISTRY_URL}/${DOCKER_IMAGE_NAME}; \
+    do
+      docker tag  ${DOCKER_IMAGE_NAME} ${DOCKER_REGISTRY_URL}/${DOCKER_IMAGE_NAME};
+      docker push ${DOCKER_REGISTRY_URL}/${DOCKER_IMAGE_NAME};
+      docker rmi  ${DOCKER_REGISTRY_URL}/${DOCKER_IMAGE_NAME};
     done
+
     ```
