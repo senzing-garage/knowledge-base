@@ -105,7 +105,7 @@
 - template git repositories
 - Recommended IDEs
 - standards (PEP-8, gofmt)
-- GitHub labels to identify repositories to teams
+- GitHub labels to identify repositories to teams (e.g. t-comm)
 - knowledge-base
   - HOWTO vs. WHATIS
   - lists
@@ -114,3 +114,5 @@
 - protected "main" branch
 - git submodules
 - GitHub Flow (then GitFlow)
+- Branch naming conventions (issue-nn.owner.anything)
+- Common stack, many representations:  docker-compose, AWS Cloudformation, Helm
