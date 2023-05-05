@@ -1,6 +1,5 @@
 # Senzing Community GitHub Processes
 
-
 ## Standards used
 
 1. [GitHub flow](https://guides.github.com/introduction/flow/)
@@ -26,12 +25,11 @@
        "Triage" will be added automatically and can be removed if no triage is needed.
     1. **Projects:** Used to track progress of issue in a team Kanban project board.
 1. Examples:
-    1. In https://github.com/Senzing/stream-loader/issues/231
+    1. In <https://github.com/Senzing/stream-loader/issues/231>
         1. "mentions" - See other related issues and whether they are open or closed
         1. "commits" - by clicking on an abbreviated "commit SHA", the change is shown.
         1. "build status" - by clicking on the "x" or "check", you can see the checks that were performed
         1. , "labels", "github-actions", "merges", "comments"
-
 
 ### Create a branch
 
@@ -99,3 +97,20 @@
 ### Semantic versioning
 
 ### Kanban board
+
+### Misc
+
+- depend-a-bots
+- semantic versioning
+- template git repositories
+- Recommended IDEs
+- standards (PEP-8, gofmt)
+- GitHub labels to identify repositories to teams
+- knowledge-base
+  - HOWTO vs. WHATIS
+  - lists
+  - Environment variables dictionary
+- CODEOWNERS
+- protected "main" branch
+- git submodules
+- GitHub Flow (then GitFlow)
