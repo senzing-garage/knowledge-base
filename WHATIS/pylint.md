@@ -5,7 +5,7 @@
 >It checks for errors, enforces a coding standard, looks for code smells, and can make suggestions about how the code could be refactored.
 > -- *[pylint on pypi.org](https://pypi.org/project/pylint/)*
 
-## install
+## Install
 
 1. See [pylint on pypi](https://pypi.org/project/pylint/)
 
@@ -30,3 +30,8 @@
 ### Github workflow
 
 1. See [.github/workflows/pylint.yaml](https://github.com/Senzing/stream-loader/blob/main/.github/workflows/pylint.yaml)
+
+## References
+
+1. [ReadTheDocs](https://pylint.readthedocs.io/en/latest/)
+1. [Linting Python in Visual Studio Code](https://code.visualstudio.com/docs/python/linting)
