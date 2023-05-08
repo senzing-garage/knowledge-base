@@ -1072,16 +1072,6 @@
 
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DATA_DIR&type=code)
 
-### SENZING_DATA_RPM_DIR
-
-1. Filename for the
-   [Senzing Data](../WHATIS/senzing-data.md)
-   RPM file.
-1. Values:
-    1. Format: `senzingdata-M.m.P.x86_64.rpm`
-    1. Default: none
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DATA_RPM_DIR&type=code)
-
 ### SENZING_DATA_SOURCE
 
 1. Synopsis:

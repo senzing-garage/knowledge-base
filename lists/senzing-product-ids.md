@@ -44,6 +44,7 @@ Used in log message identifiers in the format `senzing-ppppnnnnt`, where:
 ## Go SDK and apps
 
 ### SDK
+
 1. **6001** - github.com/senzing/g2-sdk-go-base/g2config
 1. **6002** - github.com/senzing/g2-sdk-go-base/g2configmgr
 1. **6003** - github.com/senzing/g2-sdk-go-base/g2diagnostic
@@ -104,6 +105,7 @@ Used in log message identifiers in the format `senzing-ppppnnnnt`, where:
 1. **6461** - github.com/senzing/go-observing/notifier
 1. **6462** - github.com/senzing/go-observing/observer
 1. **6463** - github.com/senzing/go-observing/subject
+1. **6464** - github.com/senzing/go-observing/grpcsubject
 1. **6481** - github.com/senzing/go-queuing/
 1. **6501** - github.com/senzing/initdatabase/initializer
 1. **6502** - github.com/senzing/initdatabase/senzingconfig
