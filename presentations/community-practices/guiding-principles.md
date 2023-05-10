@@ -1,0 +1,35 @@
+# Guiding principles
+
+## Goals
+
+1. Help Senzing customers deploy Senzing quicker
+1. Create "helpers" that accelerate Senzing deployment
+    1. Code examples
+    1. Programs for helping with common tasks
+    1. Reference architectures
+
+## Approaches
+
+1. Design for customer infrastructures.
+   Examples:
+    1. [The Twelve-factor App](../../WHATIS/twelve-factor-app.md)
+    1. [cattle vs. pets](../../WHATIS/cattle-vs-pets.md)
+    1. Demonstration systems - for customer evaluation
+    1. "Bare-metal" systems  (e.g. Linux/Debian/RedHat, Windows, MacOS, etc.)
+    1. Cloud systems (e.g. Docker, Kubernetes, OpenShift, etc.)
+    1. Air-gapped systems
+    1. Log analysis - (e.g. ELK stacks, Datadog, Splunk, etc)
+1. Use standards.
+   Examples:
+    1. [Semantic versioning](https://semver.org/)
+    1. [Linux Hierarchical File standard](../../WHATIS/linux-filesystem-hierarchy-standard.md)
+    1. [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339) - timestamps
+1. Use current software methodologies.
+   Examples:
+    1. [GitHub Flow](../../WHATIS/github-flow.md)
+    1. [Kanban](../../WHATIS/kanban.md)
+
+## Standard practices
+
+By using standard practices, as Senzing grows, we look for folks familiar with "standard practices"
+so they don't have to learn "one-off" methods.
