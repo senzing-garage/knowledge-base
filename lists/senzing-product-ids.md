@@ -1,5 +1,8 @@
 # Senzing Product IDs
 
+See
+[Senzing component IDs](senzing-component-ids.md)
+
 Used in log message identifiers in the format `senzing-ppppnnnnt`, where:
 
 - "p" is the 4 digit product identifier
