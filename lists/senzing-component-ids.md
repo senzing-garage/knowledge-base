@@ -1,4 +1,4 @@
-# Senzing Product IDs
+# Senzing Component IDs
 
 Used in log message identifiers in the format `senzing-ppppnnnnt`, where:
 
