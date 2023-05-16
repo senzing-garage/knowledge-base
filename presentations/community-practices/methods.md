@@ -12,3 +12,11 @@
 1. [Linux Hierarchical File standard](../../WHATIS/linux-filesystem-hierarchy-standard.md)
 1. [cattle vs. pets](../../WHATIS/cattle-vs-pets.md)
 1. [Software design patterns]()
+
+## Documentation
+
+1. Repository `README.md` files for repository-specific information.
+1. [knowledge-base](https://github.com/Senzing/knowledge-base/) for information
+   common to multiple repositories.
+1. [knowledge-base](https://github.com/Senzing/knowledge-base/) for information
+   independent of repositories.
