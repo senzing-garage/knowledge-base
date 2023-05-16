@@ -75,7 +75,7 @@ They are tailored to the type of project.
        [PEP 8](https://peps.python.org/pep-0008/) standards as well as good Python programming practices.
     1. [go-test.yaml](https://github.com/Senzing/template-go/blob/main/.github/workflows/go-test.yaml)
        runs `go test -v -p 1 ./...` which exectues all Go language Unit Tests.
-1. On push of `M.m.P` (semantic version) tag:
+1. On push of `M.m.P` (semantic version release) tag:
     1. [make-go-github-file.yaml](https://github.com/Senzing/template-go/blob/main/.github/workflows/make-go-github-file.yaml)
        creates a file usually placed in cmd/github.go containing versioning information for "next" version.
        Example: [github.go](https://github.com/Senzing/init-database/blob/main/cmd/github.go).
@@ -84,6 +84,10 @@ They are tailored to the type of project.
         This version style is used by the Go package management system.
         By doing this, we only create sematically versioned releases and let GitHub Actions make modifications
         for specific platforms.
+    1. [make-github-release-assets.yaml](https://github.com/Senzing/senzing-tools/blob/main/.github/workflows/make-github-release-assets.yaml)
+       creates installable DEB/RPM packages for a Go artifact.
+       For example,
+       [senzing-tools releases](https://github.com/Senzing/senzing-tools/releases).
 1. On push of `vM.m.P` (Go version) tag:
     1. [go-proxy-pull.yaml](https://github.com/Senzing/template-go/blob/main/.github/workflows/go-proxy-pull.yaml)
        "primes the pump" for users of the Go package system.
