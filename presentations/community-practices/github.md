@@ -75,7 +75,7 @@ They are tailored to the type of project.
        [PEP 8](https://peps.python.org/pep-0008/) standards as well as good Python programming practices.
     1. [go-test.yaml](https://github.com/Senzing/template-go/blob/main/.github/workflows/go-test.yaml)
        runs `go test -v -p 1 ./...` which exectues all Go language Unit Tests.
-1. On **push** of `M.m.P` (semantic version release) tag:
+1. On **push** of `M.m.P` tag - a semantic version release:
     1. [make-go-github-file.yaml](https://github.com/Senzing/template-go/blob/main/.github/workflows/make-go-github-file.yaml)
        creates a file usually placed in cmd/github.go containing versioning information for "next" version.
        Example: [github.go](https://github.com/Senzing/init-database/blob/main/cmd/github.go).
@@ -88,10 +88,10 @@ They are tailored to the type of project.
        creates installable DEB/RPM packages for a Go artifact.
        For example,
        [senzing-tools releases](https://github.com/Senzing/senzing-tools/releases).
-1. On **push** of `vM.m.P` (Go version) tag:
+1. On **push** of `vM.m.P` tag - a Go version identifier:
     1. [go-proxy-pull.yaml](https://github.com/Senzing/template-go/blob/main/.github/workflows/go-proxy-pull.yaml)
        "primes the pump" for users of the Go package system.
-1. On **pull request** opened or reopened by depend-a-bot:
+1. On **pull request** opened or reopened by Dependabot:
     1. `add-dependabot-request-to-project-*.yaml`, by "team" topic, to add pull request to appropriate team Kanban board.
        Examples:
         1. [add-dependabot-request-to-project-t-ast.yaml](https://github.com/Senzing/template-repository/blob/main/.github/workflows/add-dependabot-request-to-project-t-ast.yaml)
