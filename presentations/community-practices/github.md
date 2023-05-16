@@ -29,7 +29,7 @@ The question becomes, "Where's the repository that shows the current best practi
 To answer this question, a number of "template" repositories have been created to host the best practices
 in GitHub repositories for particular project types:
 
-1. General projects: [template-repository](https://github.com/Senzing/template-python)
+1. General projects: [template-repository](https://github.com/Senzing/template-repository)
 1. Python projects: [template-python](https://github.com/Senzing/template-python)
 1. Docker projects: [template-docker](https://github.com/Senzing/template-docker)
 1. Go projects: [template-go](https://github.com/Senzing/template-go)
@@ -55,7 +55,7 @@ Example use:
 
 ## GitHub Actions
 
-Note: Not all GitHub actions are in each repository.
+Note: Not all GitHub Actions are in each repository.
 They are tailored to the type of project.
 
 1. On issue opened or reopened:
