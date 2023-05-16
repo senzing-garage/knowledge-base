@@ -19,7 +19,8 @@ The following show lists of related Senzing GitHub repositories.
 There are 2 types of Senzing Docker images on DockerHub:
 
 1. `latest` - matches the code at the HEAD of the `main` branch in the GitHub repository.
-1. `M.m.P` - a semantically versioned release of the Docker image corresponding to the semantic version of the Senzing GitHub repository.
+   It is built every time the HEAD of `main` changes.
+1. `M.m.P` - a semantically versioned release of the Docker image corresponding to the semantic version release of the Senzing GitHub repository.
 
 Configuration instructions are at
 [autobuild-on-docker-hub.md](https://github.com/Senzing/knowledge-base/blob/main/HOWTO/autobuild-on-docker-hub.md).
