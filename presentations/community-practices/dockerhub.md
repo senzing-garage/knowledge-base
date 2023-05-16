@@ -2,9 +2,12 @@
 
 ## Lists
 
-The following show the list of Docker images and the Senzing GitHub repositories.
+The following shows the list of Docker images on DockerHub for the Senzing organization.
 
 1. [DockerHub](https://hub.docker.com/u/senzing)
+
+The following show lists of related Senzing GitHub repositories.
+
 1. GitHub "[docker-hub](https://github.com/search?q=org%3ASenzing%20topic%3Adocker-hub&type=repositories)" label
 1. GitHub "[dockerfile](https://github.com/search?q=org%3ASenzing%20topic%3Adockerfile&type=repositories)" label
 1. GitHub search for "[Dockerfile](https://github.com/search?q=org%3ASenzing+path%3ADockerfile&type=code)"
