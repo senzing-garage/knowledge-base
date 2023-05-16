@@ -85,7 +85,7 @@ They are tailored to the type of project.
         By doing this, we only create sematically versioned releases and let GitHub Actions make modifications
         for specific platforms.
 1. On push of `vM.m.P` (Go version) tag:
-    1. [go-proxy-pull.yaml)](https://github.com/Senzing/template-go/blob/main/.github/workflows/go-proxy-pull.yaml)
+    1. [go-proxy-pull.yaml](https://github.com/Senzing/template-go/blob/main/.github/workflows/go-proxy-pull.yaml)
        "primes the pump" for users of the Go package system.
 1. On pull request opened or reopened by depend-a-bot:
     1. `add-dependabot-request-to-project-*.yaml`, by "team" topic, to add pull request to appropriate team Kanban board.
