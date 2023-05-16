@@ -10,3 +10,5 @@ A lighter weight approach is [GitHub Flow](github-flow.md)
 ## Sites
 
 1. Vincent Driessen's [original posting](https://nvie.com/posts/a-successful-git-branching-model/)
+1. [Introducing GitFlow](https://datasift.github.io/gitflow/IntroducingGitFlow.html)
+1. Atlassian [Gitflow Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)

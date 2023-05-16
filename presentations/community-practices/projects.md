@@ -13,3 +13,17 @@
 
 1. [GitHub Projects](https://github.com/orgs/Senzing/projects?type=classic)
 1. [GitHub Teams](https://github.com/orgs/Senzing/teams)
+
+## Senzing core
+
+1. The "core" Senzing API code is not part of the Senzing Community.
+1. This code is delivered in the DEB/RPM in these locations:
+    1. `/opt/senzing/g2/bin`
+    1. `/opt/senzing/g2/lib`
+    1. `/opt/senzing/g2/g2.jar`
+1. (Almost) all repositories are independently versioned.
+    1. The only Senzing Community repository that is in "lock-step" with the
+       SenzingAPI package (DEB/RPM) version is
+       [g2-python](https://github.com/Senzing/g2-python).
+       This is because the contents of the repository are delivered with the
+       SenzingAPI package.

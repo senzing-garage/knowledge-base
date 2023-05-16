@@ -32,7 +32,7 @@
    [docker-versions-staging.sh](https://github.com/Senzing/knowledge-base/blob/main/lists/docker-versions-staging.sh).
 1. Download and run
    [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/main/lists/docker-versions-latest.sh)
-1. Run a
+1. Manually, run a
    [docker-compose-demo](https://github.com/Senzing/docker-compose-demo)
    formation.
 
@@ -45,3 +45,4 @@
 ## Performance testing
 
 1. On AWS, but that's performance testing for the Senzing API, not Senzing Community
+1. Currently a manual stack is brought up
