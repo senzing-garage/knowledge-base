@@ -5,7 +5,7 @@
 The following show the list of Docker images and the Senzing GitHub repositories.
 
 1. [DockerHub](https://hub.docker.com/u/senzing)
-1. GitHub [docker-hub label](https://github.com/search?q=org%3ASenzing%20topic%3Adocker-hub&type=repositories)
+1. GitHub "[docker-hub](https://github.com/search?q=org%3ASenzing%20topic%3Adocker-hub&type=repositories)" label
 
 ## Auto build
 
