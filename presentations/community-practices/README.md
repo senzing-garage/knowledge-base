@@ -4,5 +4,6 @@
 1. [Tools used](tools-used.md)
 1. [Methods](methods.md)
 1. [Projects](projects.md)
+1. [Testing](testing.md)
 1. [GitHub](github.md)
 1. [DockerHub](dockerhub.md)

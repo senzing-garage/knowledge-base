@@ -11,7 +11,7 @@
 1. [The Twelve-factor App](../../WHATIS/twelve-factor-app.md)
 1. [Linux Hierarchical File standard](../../WHATIS/linux-filesystem-hierarchy-standard.md)
 1. [cattle vs. pets](../../WHATIS/cattle-vs-pets.md)
-1. [Software design patterns]()
+1. [Software design patterns](https://en.wikipedia.org/wiki/Software_design_pattern)
 
 ## Documentation
 
