@@ -76,7 +76,7 @@ as well as deploy Senzing.
 
 1. [Visual Studio Code](../../WHATIS/visual-studio-code.md) is the preferred IDE.
    But it is not a mandatory IDE.
-
+1. Others seen in Senzing:  Eclipse, Pycharm
 
 ### Markdown
 
@@ -116,6 +116,13 @@ is essential.
     1. [PEP-8 checker](http://pep8online.com/)
 
 ### Go
+
+1. Standard tool set
+    1. [go](https://go.dev/)
+    1. [gofmt](https://pkg.go.dev/cmd/gofmt) - Formatting
+    1. [godoc](https://pkg.go.dev/golang.org/x/tools/cmd/godoc) - Documentation generator
+1. Additional tools
+    1. [gosec](https://github.com/securego/gosec) - Inspects code for security issues
 
 ### Java
 

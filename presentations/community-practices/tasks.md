@@ -1,9 +1,12 @@
 # Tasks
 
-### Documented
+The following lists are **manual** tasks.
+
+## Documented tasks
 
 1. [knowledge-base/HOWTO](../../HOWTO)
 
-## Undocumented
+## Undocumented tasks
 
-1. Update Docker image dependencies
+1. Build Docker images with latest SenzingAPI
+1. Accept Dependabot pull requests

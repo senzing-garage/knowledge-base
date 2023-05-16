@@ -1,12 +1,15 @@
 # Guiding principles
 
+What is the "North Star" for the Senzing Community?
+
 ## Goals
 
-1. Help Senzing customers deploy Senzing quicker
+1. Help Senzing customers evaluate and deploy Senzing quicker
 1. Create "helpers" that accelerate Senzing deployment
     1. Code examples
     1. Programs for helping with common tasks
     1. Reference architectures
+1. Have software community recognize Senzing as a company that "does it right".
 
 ## Approaches
 
@@ -31,9 +34,11 @@
 
 ## Standard practices
 
-By using standard practices, as Senzing grows, we look for professional familiar with "standard practices"
+By using standard practices, as Senzing grows, we look for professionals familiar with "standard practices"
 so they don't have to learn "one-off" methods.
 So instead of
 > This is how it's done at Senzing.
+
 it should be
+
 > This is how it ought to be done everywhere.
