@@ -39,7 +39,19 @@ When
 or updating an existing repository,
 the appropriate "template" repository should be consulted.
 
-## Depend-a-bot
+## Dependabot
+
+Github's
+[Dependabot](https://docs.github.com/en/code-security/dependabot)
+is used to keep dependencies up-to-date.
+
+Example use:
+
+1. Python: [dependabot.yml](https://github.com/Senzing/template-python/blob/main/.github/dependabot.yml)
+1. Docker: [dependabot.yml](https://github.com/Senzing/template-docker/blob/main/.github/dependabot.yml)
+1. Go: [dependabot.yml](https://github.com/Senzing/template-go/blob/main/.github/dependabot.yml)
+1. Java: [dependabot.yml](https://github.com/Senzing/senzing-api-server/blob/main/.github/dependabot.yml)
+1. Npm:  [dependabot.yml](https://github.com/Senzing/entity-search-web-app/blob/main/.github/dependabot.yml)
 
 ## GitHub Actions
 
@@ -85,4 +97,3 @@ They are tailored to the type of project.
     1. [build-docker-container.yaml](https://github.com/Senzing/template-docker/blob/main/.github/workflows/build-docker-container.yaml)
        will verify that the `Dockerfile` can be successfully built into a Docker image.
        It does not test that the Docker image is correct.
-1. At
