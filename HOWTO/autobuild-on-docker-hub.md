@@ -23,6 +23,9 @@
         | Tag         | /^[0-9.]+$/ | {sourceref} | Dockerfile          | /             | On        | On            |
 
     1. Click "Save and Build".
+1. Choose "Settings" tab.
+1. In "Image insight settings", choose
+    1. :radio_button: Basic Hub vulnerability scanning
 
 ## References
 

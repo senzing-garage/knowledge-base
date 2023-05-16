@@ -72,9 +72,13 @@ On `https://github.com/{account}/{repository}` page, click the "About" gear icon
     ```console
     Final release before archiving.
     ```
+
 1. Click "Publish release" button.
 
 ### Archive
+
+Archiving will stop scheduled GitHub Action workflows. See
+[Archiving a repository](https://docs.github.com/en/repositories/archiving-a-github-repository/archiving-repositories#archiving-a-repository).
 
 1. On `https://github.com/{account}/{repository}` page, click the "Settings" tab.
 1. In "General" pane, in the "Danger Zone", click "Archive this repository"
