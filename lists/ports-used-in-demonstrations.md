@@ -89,6 +89,10 @@ Open range: 8250-8265
 
 - [go-observing](https://github.com/Senzing/go-observing)
 
+### 8261
+
+- [serve-http](https://github.com/Senzing/serve-http)
+
 ### 8263
 
 - [Senzing API server](https://github.com/Senzing/senzing-api-server) default HTTPS Port.
