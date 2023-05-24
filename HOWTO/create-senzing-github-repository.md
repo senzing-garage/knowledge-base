@@ -107,3 +107,4 @@ This is a checklist of what to set when creating a new GitHub Repository.
         1. Click "Add branch protection" button.
         1. Edit "main" branch.
         1. Protect matching branches
+            1. :ballot_box_with_check: Do not allow bypassing the above settings
