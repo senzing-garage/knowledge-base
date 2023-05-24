@@ -6,10 +6,10 @@ In this document are ideas pertaining to the implementation of GitHub Actions.
 
 ### Updating Github Actions YAML files via Dependabot
 
-1. Dependabot can be configured to create Pull Requests to update `.github/workflows/github-actions.yaml files
+1. Dependabot can be configured to create Pull Requests to update `.github/workflows/a-github-action.yaml` files
    with newer versions of the Github Action. Examples:
     1. [Dependabot configuration](https://github.com/Senzing/template-repository/blob/main/.github/dependabot.yml)
-    1. [Dependabot created pull request](https://github.com/Senzing/template-repository/pull/37)
+    1. [Dependabot created pull request](https://github.com/Senzing/template-repository/pull/37/files)
 1. This is triggered by a versioned release of the repository containing the GitHub Action.
 1. If more than one GitHub Action is contained in a repository, it's possible that repositories are notified for
    GitHub Action version updates, when the version of the GitHub Action they are using is not updated.
@@ -24,8 +24,8 @@ sets the standard for crafting GitHub Actions.
 
     1. GitHub's [About publishing actions](https://docs.github.com/en/actions/creating-actions/publishing-actions-in-github-marketplace#about-publishing-actions) has these requirements (and more):
 
->>> - The action must be in a public repository.
->>> - Each repository must contain a single action.
+> - The action must be in a public repository.
+> - Each repository must contain a single action.
 
 ## References
 
