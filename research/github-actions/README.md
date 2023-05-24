@@ -22,7 +22,7 @@ The
 [GitHub Actions Marketplace](https://github.com/marketplace?type=actions)
 sets the standard for crafting GitHub Actions.
 
-    1. GitHub's [About publishing actions](https://docs.github.com/en/actions/creating-actions/publishing-actions-in-github-marketplace#about-publishing-actions) has these requirements (and more):
+1. GitHub's [About publishing actions](https://docs.github.com/en/actions/creating-actions/publishing-actions-in-github-marketplace#about-publishing-actions) has these requirements (and more):
 
 > - The action must be in a public repository.
 > - Each repository must contain a single action.
