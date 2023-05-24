@@ -19,14 +19,14 @@ This is a checklist of what to set when creating a new GitHub Repository.
     1. If appropriate, add .gitignore
     1. For "Add a license", choose "Apache License 2.0"
     1. Click "Create repository" button.
-
-## Configure repository
-
 1. On repository home page, in **Releases** section:
     1. Click "Create a new release" link.
     1. Tag version: 0.0.0
     1. Release title: 0.0.0
     1. Click "Publish release" button.
+
+## Configure repository
+
 1. On repository home page, click "Settings" tab.
     1. Click "Branches" tab.
         1. Click "Add branch protection rule" button.
