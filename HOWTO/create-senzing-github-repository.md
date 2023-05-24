@@ -67,6 +67,7 @@ This is a checklist of what to set when creating a new GitHub Repository.
         1. `t-gdev` for ????
         1. `t-devsecops` for DevOps
         1. `t-unknown` if not known
+    1. Click "Save" button
 1. On repository home page, click "Issues" tab.
     1. Click "New issue" button.
         1. Title:  "Initial content"
