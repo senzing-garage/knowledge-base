@@ -65,6 +65,7 @@ This is a checklist of what to set when creating a new GitHub Repository.
         1. `t-comm` for Community scrum
         1. `t-g2-python` for G2Python projects
         1. `t-gdev` for ????
+        1. `t-devsecops` for DevOps
         1. `t-unknown` if not known
 1. On repository home page, click "Issues" tab.
     1. Click "New issue" button.
