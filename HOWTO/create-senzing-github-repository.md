@@ -2,7 +2,7 @@
 
 This is a checklist of what to set when creating a new GitHub Repository.
 
-## Create repository
+## Owner actions
 
 1. Visit [github.com/Senzing](https://github.com/Senzing)
 1. Log in as an administrator
