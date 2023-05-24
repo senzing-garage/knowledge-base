@@ -32,7 +32,7 @@ This is a checklist of what to set when creating a new GitHub Repository.
             1. Choose a role: "Admin"
             1. Click "Add Senzing/build to ..."
 
-## Configure repository
+## Admin actions
 
 1. On repository home page, click "Settings" tab.
     1. Click "Branches" tab.
