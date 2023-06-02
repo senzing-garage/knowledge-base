@@ -86,6 +86,7 @@ Archiving will stop scheduled GitHub Action workflows. See
 ### Update documentation
 
 1. Update table in [deprecated-repositories.md](https://github.com/Senzing/knowledge-base/blob/main/lists/deprecated-repositories.md).
+   Add entry to top of table.
 
 ## Examples
 
