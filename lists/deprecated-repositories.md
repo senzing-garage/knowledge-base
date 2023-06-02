@@ -4,6 +4,7 @@
 
 | Deprecated | Hidden     | Repository                                   |
 |------------|------------|----------------------------------------------|
+| 2023-06-02 |            | senzing-up                                   |
 | 2023-06-02 |            | view-xterm                                   |
 | 2023-01-30 |            | docker-yumdownloader                         |
 | 2022-11-02 |            | g2service                                    |
