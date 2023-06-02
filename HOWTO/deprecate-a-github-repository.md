@@ -50,6 +50,7 @@ On `https://github.com/{account}/{repository}` page, click the "About" gear icon
 ### Issues
 
 1. On `https://github.com/{account}/{repository}` page, see if there are any issues that need to be closed.
+   Close all issues, even the issue to deprecate the repository.
 
 ### Branches
 
