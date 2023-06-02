@@ -7,10 +7,7 @@
 ### CentOS
 
 1. Install using **yum** (Most Linux distributions already have GnuPG installed)
-
-    ```
-    sudo yum install gnupg
-    ```
+   - `sudo yum install gnupg`
    - [Configure TTY](https://github.com/Senzing/knowledge-base/blob/56-skern/WHATIS/gnupg.md#configure-tty)
 
 ### macOS
@@ -42,10 +39,7 @@
 ## Test
 
 1. Test
-
-   ```
-   gpg --version
-   ```
+   - `gpg --version`
 
  ## Troubleshooting
 
