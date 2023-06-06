@@ -124,11 +124,11 @@ This is a checklist of what to set when creating a new GitHub Repository.
             1. :ballot_box_with_check: `Require branches to be up to date before merging`.
                 1. Search and add *ALL* required status checks for the respective repository.
 
-### Dependabot Automation Configuration
+## Dependabot Automation Configuration
 
 Additional settings and configuration changes required for auto merging dependabot pull requests. 
 
-#### One time CODEOWNER actions: token configuration
+### One time CODEOWNER actions: token configuration
 
 1. Create a fine-grained personal access token (CODEOWNER)
     1. In the upper-right corner of any page, click your profile photo, then click `Settings`.
@@ -156,12 +156,12 @@ Additional settings and configuration changes required for auto merging dependab
     1. Under the `Selected repositories` dropdown, select the respective repositories:
     1. Click `Add secret`.
 
-#### Enable Auto Merge
+### Enable Auto Merge
 
 1. On repository home page, click `Settings` tab.
 2. :ballot_box_with_check: `Allow auto-merge`
 
-#### Allow GitHub Actions to create and approve pull requests.
+### Allow GitHub Actions to create and approve pull requests.
 
 1. On repository home page, click `Settings` tab.
 2. Click `Actions` > `General` in the left side nav.
