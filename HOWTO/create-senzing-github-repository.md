@@ -117,14 +117,14 @@ This is a checklist of what to set when creating a new GitHub Repository.
 ### Branch Protection
 
 1. On repository home page, click `Settings` tab.
-    1. Click `Branches` tab.
-        1. Click `Add branch protection` button.
-        1. Edit `main` branch.
-        1. `Protect matching branches`
-            1. :ballot_box_with_check: `Do not allow bypassing the above settings`
-            1. :ballot_box_with_check: `Require status checks to pass before merging`.
-            1. :ballot_box_with_check: `Require branches to be up to date before merging`.
-                1. Search and add *ALL* required status checks for the respective repository.
+1. Click `Branches` tab.
+1. Click `Add branch protection` button.
+1. Edit `main` branch.
+1. `Protect matching branches`
+    1. :ballot_box_with_check: `Do not allow bypassing the above settings`
+    1. :ballot_box_with_check: `Require status checks to pass before merging`.
+    1. :ballot_box_with_check: `Require branches to be up to date before merging`.
+        1. Search and add *ALL* required status checks for the respective repository.
 
 ### Dependabot Automation Configuration
 
@@ -142,7 +142,7 @@ Additional changes required for auto merging dependabot pull requests.
     1. Under `Expiration`, select an expiration for the token.
     1. Optionally, under `Description`, describe the purpose of the token.
     1. Under `Resource owner`, select a resource owner.
-        - See [docs](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-fine-grained-personal-access-token) for additional details.
+        - See [docs][Token Docs] for additional details.
     1. Under `Repository access`, select: `Only select repositories`
     1. Under the `Selected repositories` dropdown, select the respective repositories
     1. Under `Permissions` > `Repository Permissions` > `Pull requests`
@@ -172,3 +172,5 @@ Additional changes required for auto merging dependabot pull requests.
 1. On repository home page, click `Settings` tab.
 2. Click `Actions` > `General` in the left side nav.
 3. :ballot_box_with_check: `Allow GitHub Actions to create and approve pull requests`
+
+[Token Docs]: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-fine-grained-personal-access-token
