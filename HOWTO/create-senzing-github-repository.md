@@ -71,6 +71,7 @@ This is a checklist of what to set when creating a new GitHub Repository.
             1. Click `Save changes` button
 
 ### Repository About
+
 1. On repository home page, click **About** gear
     1. Add Topics:
         1. `t-ast` for Api Server / Web App scrum
@@ -82,6 +83,7 @@ This is a checklist of what to set when creating a new GitHub Repository.
     1. Click `Save` button
 
 ### Initial content
+
 1. On repository home page, click `Issues` tab.
     1. Click `New issue` button.
         1. `Title`:  `Initial content`
@@ -126,30 +128,34 @@ This is a checklist of what to set when creating a new GitHub Repository.
 
 ### Dependabot Automation Configuration
 
-Additional settings and configuration changes required for auto merging dependabot pull requests. 
+Additional changes required for auto merging dependabot pull requests.
 
 #### One time CODEOWNER actions: token configuration
 
 1. Create a fine-grained personal access token (CODEOWNER)
-    1. In the upper-right corner of any page, click your profile photo, then click `Settings`.
+    1. Click your profile photo, then click `Settings`.
     1. In the left sidebar, click `Developer settings`.
-    1. In the left sidebar, under  `Personal access tokens`, click `Fine-grained tokens`.
+    1. In the left sidebar, under  `Personal access tokens`
+        1. click `Fine-grained tokens`.
     1. Click `Generate new token`.
     1. Under `Token name`, enter a name for the token.
     1. Under `Expiration`, select an expiration for the token.
-    1. Optionally, under `Description`, add a note to describe the purpose of the token.
-    1. Under `Resource owner`, select a resource owner. The token will only be able to access resources owned by the selected resource owner. Organizations that you are a member of will not appear unless the organization opted in to fine-grained personal access tokens. if the resource owner is an organization that requires approval for fine-grained personal access tokens, below the resource owner, in the box, enter a justification for the request.
+    1. Optionally, under `Description`, describe the purpose of the token.
+    1. Under `Resource owner`, select a resource owner.
+        - See [docs](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-fine-grained-personal-access-token) for additional details.
     1. Under `Repository access`, select: `Only select repositories`
     1. Under the `Selected repositories` dropdown, select the respective repositories
-    1. Under `Permissions` > `Repository Permissions` > `Pull requests` select `Access: Read and write` in the dropdown.
+    1. Under `Permissions` > `Repository Permissions` > `Pull requests`
+        1. Select `Access: Read and write` in the dropdown.
     1. Click `Generate token`.
-    1. Copy the new token as it will only be viewable once and we will use it in Step 2 below.
+    1. Copy the new token for use in Step 2.
 
-2. Add the newly generated token in step 1 as an organization secret for Dependabot.       
-    Note: To create secrets at the organization level, you must have admin access.
+2. Add the newly generated token in step 1 as an organization secret for Dependabot.
+    - Note: To create secrets at the organization level, you must have admin access.
     1. On GitHub.com, navigate to the main page of the organization.
-    1. Under your organization name, click  `Settings`. If you cannot see the `Settings` tab, select the dropdown menu, then click `Settings`.
-    1. In the Security section of the sidebar, select `* Secrets and variables`, then click `Dependabot`.
+    1. Under your organization name, click  `Settings`.
+    1. Expand `* Secrets and variables` in the left side nav.
+        1. Select `Dependabot`.
     1. Click `New organization secret`.
     1. In the `Name` input box type: `CODEOWNER_PR_APPROVAL_TOKEN`.
     1. From the `Repository access` dropdown list, choose `Selected repositories`.
@@ -161,7 +167,7 @@ Additional settings and configuration changes required for auto merging dependab
 1. On repository home page, click `Settings` tab.
 2. :ballot_box_with_check: `Allow auto-merge`
 
-#### Allow GitHub Actions to create and approve pull requests.
+#### Allow GitHub Actions to create and approve pull requests
 
 1. On repository home page, click `Settings` tab.
 2. Click `Actions` > `General` in the left side nav.
