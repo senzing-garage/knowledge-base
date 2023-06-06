@@ -93,6 +93,10 @@ Open range: 8250-8265
 
 - [serve-http](https://github.com/Senzing/serve-http)
 
+### 8262
+
+- [serve-chat](https://github.com/Senzing/serve-chat)
+
 ### 8263
 
 - [Senzing API server](https://github.com/Senzing/senzing-api-server) default HTTPS Port.
