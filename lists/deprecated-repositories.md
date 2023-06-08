@@ -25,7 +25,6 @@
 | 2022-06-27 |            | sdk-graph-components                         |
 | 2022-06-27 |            | ibm-icp4d-guide                              |
 | 2022-06-27 |            | g2vcompare                                   |
-| 2022-06-27 |            | elasticsearch                                |
 | 2022-06-23 |            | spike-docker-store-based-images              |
 | 2022-06-23 |            | migrate                                      |
 | 2022-06-23 |            | docker-python-db2-cluster-base               |
