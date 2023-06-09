@@ -132,6 +132,10 @@ networks:
   ```
 </details>
 
+## Warning
+- Markdown is weird and to preserve `yaml` formatting this non-breaking space has to be used ` `, however, yaml does not support this character, so if the example
+was copied and pasted, do a find and replace of the non-breaking space above and replace it with a normal space.
+
 ### Bring up ELK stack
 - Remember that the ELK stack takes a couple of minutes to start up, so ideally do this step before
 bringing up the container you wish to log, the stack is usually fully functional when kibana is viewable;
