@@ -21,8 +21,8 @@ important requirements
 - The 'containers to log' use the same `NETWORK` as the ELK stack
 - `Elasticsearch`, `kibana`, and `logstash`, are not present in any `depends_on` sections
 - Each container to log has the loggin fields (This is also required if the containers are in the same `yaml`). Example:
-```
-logging:
+``` yaml
+  logging:
       driver: gelf
       options:
         gelf-address: "udp://<hostIP>:12201"
@@ -40,73 +40,73 @@ of containers needed for the ELK stack, create a new `yaml` with the following:
 <details>
   <summary>example docker-compose.yaml</summary>
   
-  ```js
-version: '3'
+``` yaml
+version: '3'
 services:
 
-  elasticsearch:
-    container_name: senzing-elasticsearch
-    environment:
-      discovery.type: single-node
-      ES_JAVA_OPTS: "-Xmx256m -Xms256m"
-      xpack.security.enabled: 'false'
-    image: elasticsearch:${SENZING_DOCKER_IMAGE_VERSION_ELASTICSEARCH:-latest}
-    networks:
-      - senzing
-    ports:
-      - 9200:9200
-      - 9300:9300
-    restart: always
- 
-  logstash:
-    command:
-      - --config.string
-      - >-
-        input {
-          gelf {
-            port => 12201
-          }
-        }
-        output {
-          elasticsearch {
-            hosts => ["http://elasticsearch:9200"]
-            index => "logstash-%{+YYYY-MM-dd}"
-          }
-        }
-    container_name: senzing-logstash
-    environment:
-      LS_JAVA_OPTS: "-Xmx256m -Xms256m"
-    image: logstash:${SENZING_DOCKER_IMAGE_VERSION_LOGSTASH:-latest}
-    logging:
-      driver: gelf
-      options:
-        gelf-address: "udp://localhost:12201"
-        tag: "senzing-logstash"
-    networks:
-      - senzing
-    ports:
-      - 9600:9600
-      - 12201:12201/udp
-    restart: always
-    
-  kibana:
-    container_name: senzing-kibana
-    depends_on:
-      - elasticsearch
-      - logstash
-    image: kibana:${SENZING_DOCKER_IMAGE_VERSION_KIBANA:-latest}
-    networks:
-      - senzing
-    ports:
-      - 5601:5601
-    restart: always
-    
+  elasticsearch:
+    container_name: senzing-elasticsearch
+    environment:
+      discovery.type: single-node
+      ES_JAVA_OPTS: "-Xmx256m -Xms256m"
+      xpack.security.enabled: 'false'
+    image: elasticsearch:${SENZING_DOCKER_IMAGE_VERSION_ELASTICSEARCH:-latest}
+    networks:
+      - senzing
+    ports:
+      - 9200:9200
+      - 9300:9300
+    restart: always
+ 
+  logstash:
+    command:
+      - --config.string
+      - >-
+        input {
+          gelf {
+            port => 12201
+          }
+        }
+        output {
+          elasticsearch {
+            hosts => ["http://elasticsearch:9200"]
+            index => "logstash-%{+YYYY-MM-dd}"
+          }
+        }
+    container_name: senzing-logstash
+    environment:
+      LS_JAVA_OPTS: "-Xmx256m -Xms256m"
+    image: logstash:${SENZING_DOCKER_IMAGE_VERSION_LOGSTASH:-latest}
+    logging:
+      driver: gelf
+      options:
+        gelf-address: "udp://localhost:12201"
+        tag: "senzing-logstash"
+    networks:
+      - senzing
+    ports:
+      - 9600:9600
+      - 12201:12201/udp
+    restart: always
+    
+  kibana:
+    container_name: senzing-kibana
+    depends_on:
+      - elasticsearch
+      - logstash
+    image: kibana:${SENZING_DOCKER_IMAGE_VERSION_KIBANA:-latest}
+    networks:
+      - senzing
+    ports:
+      - 5601:5601
+    restart: always
+    
 networks:
-  senzing:
-    name: ${SENZING_DOCKER_NETWORK:-senzing-network}
-  ```
+  senzing:
+    name: ${SENZING_DOCKER_NETWORK:-senzing-network}
+```
   Optionally, a pre-made dashboard can be imported by adding this "container" that runs a script to add it
-  ```js
+``` yaml
     kibana-dashboard:
     container_name: senzing-kibana-dashboard
     command:
@@ -129,11 +129,8 @@ networks:
     networks:
       - senzing
     user: root}
-  ```
+```
 </details>
-
-## Warning
-- Markdown is weird and to preserve `yaml` formatting this non-breaking space has to be used , however, yaml does not support this character, when copying and pasting the above `yaml` examples do a highlight copy instead of the "code" copy
 
 ### Bring up ELK stack
 - Remember that the ELK stack takes a couple of minutes to start up, so ideally do this step before
