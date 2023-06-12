@@ -4,7 +4,7 @@
 
 | Deprecated | Hidden     | Repository                                   |
 |------------|------------|----------------------------------------------|
-| 2023-06-02 |            | docker-poc-notebook                          |
+| 2023-06-12 |            | docker-poc-notebook                          |
 | 2023-06-02 |            | senzing-environment                          |
 | 2023-06-02 |            | senzing-up                                   |
 | 2023-06-02 |            | view-xterm                                   |
