@@ -1,7 +1,7 @@
 # How to bring up an ELK stack
 
 The following gives steps and an outline on how to bring up an ELK stack for docker-compose stacks.
-An existing ELK stack with exists in the [docker-compose-demo](https://github.com/Senzing/docker-compose-demo/blob/main/resources/postgresql/docker-compose-rabbitmq-postgresql-with-ELK.yaml)
+An existing ELK stack exists in the [docker-compose-demo](https://github.com/Senzing/docker-compose-demo/blob/main/resources/postgresql/docker-compose-rabbitmq-postgresql-with-ELK.yaml)
 github repository. This page assumes a working knowledge of docker and docker-compose.
 
 ## Prerequisites
@@ -12,7 +12,7 @@ github repository. This page assumes a working knowledge of docker and docker-co
 
 ### Notes
 This example simply shows the containers for the ELK stack in a docker-compose form to be able to connect
-with other containers. This example is easily expandable and if hte containers to log are brought up with
+with other containers. This example is easily expandable and if the containers to log are brought up with
 docker-compose they can be added to the example `yaml` given below or brought up in a seperate `yaml`.
 
 If the 'containers to log' are brought up seperately from the ELK stack `yaml` then these are the most
@@ -20,7 +20,7 @@ important requirements
 
 - The 'containers to log' use the same `NETWORK` as the ELK stack
 - `Elasticsearch`, `kibana`, and `logstash`, are not present in any `depends_on` sections
-- Each container to log has the loggin fields (This is also required if the containers are in the same `yaml`). Example:
+- Each container to log has a logging field (This is also required if the containers are in the same `yaml`). Example:
 ``` yaml
   logging:
       driver: gelf
@@ -105,7 +105,7 @@ networks:
   senzing:
     name: ${SENZING_DOCKER_NETWORK:-senzing-network}
 ```
-  Optionally, a pre-made dashboard can be imported by adding this "container" that runs a script to add it
+  optionally, a pre-made dashboard for kibana can be imported by adding this "container" that runs a script to add it
 ``` yaml
     kibana-dashboard:
     container_name: senzing-kibana-dashboard
