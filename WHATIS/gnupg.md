@@ -7,19 +7,25 @@
 ### CentOS
 
 1. Install using **yum** (Most Linux distributions already have GnuPG installed)
-   - `sudo yum install gnupg`
+   ```console
+   sudo yum install gnupg
+   ```
    - [Configure TTY](https://github.com/Senzing/knowledge-base/blob/56-skern/WHATIS/gnupg.md#configure-tty)
 
 ### macOS
 
 1. [Install via brew](https://formulae.brew.sh/formula/gnupg)
-	- `brew install gnupg`
+   ```console
+   brew install gnupg
+   ```
    - [Configure TTY](https://github.com/Senzing/knowledge-base/blob/56-skern/WHATIS/gnupg.md#configure-tty)
 
 ### Ubuntu
 
 1. Install via **apt-get**
-   - `sudo apt-get install gnupg`
+   ```console
+   sudo apt-get install gnupg
+   ```
    - [Configure TTY](https://github.com/Senzing/knowledge-base/blob/56-skern/WHATIS/gnupg.md#configure-tty)
    
 ### Windows
@@ -39,7 +45,9 @@
 ## Test
 
 1. Test
-   - `gpg --version`
+   ```console
+   gpg --version
+   ```
 
  ## Troubleshooting
 
