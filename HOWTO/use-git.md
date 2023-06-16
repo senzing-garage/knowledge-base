@@ -180,40 +180,45 @@ git config --global fetch.prune true
 Prerequisite: [Install GnuPG](https://github.com/Senzing/knowledge-base/blob/main/WHATIS/gnupg.md)
 
 NOTE: The following steps have been tested on OSX and Linux.<br />
-If you encounter issues please refer to the respective GitHub documentation linked in the Additional Resources section below. 
+If you encounter issues please refer to the respective GitHub documentation linked in the Additional Resources section below.
 
 1. Generate a new GPG key.
 
    * NOTES
-     - [Your GPG key must be associated with a GitHub verified email that matches your committer identity]
-     - [Supported GPG Key Algorithms]
+     * [Your GPG key must be associated with a GitHub verified email that matches your committer identity]
+     * [Supported GPG Key Algorithms]
 
    1. Open Terminal / Git Bash.
    1. Generate a GPG key pair.
+
       ```console
       gpg --full-generate-key
       ```
-      1. When prompted input the number corresponding to the kind of key and press `Enter`. 
-         - Recommended input: `ECC (sign and encrypt)`.
-         - If using ECC, input the number corresponding to the elliptic curve and press `Enter`.
-           - Recommended input: `Curve 25519`.
-      1. Input the length of time the key should be valid and press `Enter`. 
-         - Recommended input: `1y`.
-      1. Verify your selections are correct. 
+
+      1. When prompted input the number corresponding to the kind of key and press `Enter`.
+         * Recommended input: `ECC (sign and encrypt)`.
+         * If using ECC, input the number corresponding to the elliptic curve and press `Enter`.
+           * Recommended input: `Curve 25519`.
+      1. Input the length of time the key should be valid and press `Enter`.
+         * Recommended input: `1y`.
+      1. Verify your selections are correct.
       1. Input your name and press `Enter`.
       1. Input your email address and press `Enter`.
       1. Optionally input a comment and press `Enter`.
       1. Verify your selections, input `O` and press `Enter`.
       1. Type a secure passphrase.
-         - NOTE: You will be prompted for this passphrase when running `git commit`<br />
+         * NOTE: You will be prompted for this passphrase when running `git commit`<br />
            The default cache for this passphrase is typically 2 hours.<br />
            See links in additional details for changing default caching values.
-    1. List the long form of the GPG keys.
+   1. List the long form of the GPG keys.
+
        ```console
        gpg --list-secret-keys --keyid-format=long
        ```
-    1. From the list of GPG keys, copy the long form of the GPG key ID you'd like to use.<br />
+
+   1. From the list of GPG keys, copy the long form of the GPG key ID you'd like to use.<br />
        In this example, the GPG key ID is `3AA5C34371567BD2`:
+
        ```console
        $ gpg --list-secret-keys --keyid-format=long
        /Users/hubot/.gnupg/secring.gpg
@@ -226,29 +231,36 @@ If you encounter issues please refer to the respective GitHub documentation link
 1. Configure Git to use the key generated in the previous step.
    1. Open Terminal / Git Bash.
    1. Unset any existing git signing key format.
+
       ```console
       git config --global --unset gpg.format
       ```
-    1. Use the long form of the GPG key ID from Step 1.4 above to set your primary GPG signing key in Git.<br />
-       In this example, the GPG key ID is `3AA5C34371567BD2`:
-       ```console
-       git config --global user.signingkey 3AA5C34371567BD2
-       ```
-    1. Configure Git to sign all commits by default.
-       ```console
-       git config --global commit.gpgsign true
-       ```
-       
+
+   1. Use the long form of the GPG key ID from Step 1.4 above to set your primary GPG signing key in Git.<br />
+      In this example, the GPG key ID is `3AA5C34371567BD2`:
+
+      ```console
+      git config --global user.signingkey 3AA5C34371567BD2
+      ```
+
+   1. Configure Git to sign all commits by default.
+
+      ```console
+      git config --global commit.gpgsign true
+      ```
+
 1. Add the GPG key to GitHub.
    1. Open Terminal / Git Bash.
    1. Use the long form of the GPG key ID from Step 1.4 above to export your public GPG key.
-      - Paste the text below, substituting in the GPG key ID you'd like to use.<br />
+      * Paste the text below, substituting in the GPG key ID you'd like to use.<br />
         In this example, the GPG key ID is `13AA5C34371567BD21`:
+
         ```console
          gpg --armor --export 3AA5C34371567BD2
          # Prints the GPG key ID, in ASCII armor format
         ```
-    1. Copy your GPG key, beginning with `-----BEGIN PGP PUBLIC KEY BLOCK-----` and ending with `-----END PGP PUBLIC KEY BLOCK-----`.
+
+   1. Copy your GPG key, beginning with `-----BEGIN PGP PUBLIC KEY BLOCK-----` and ending with `-----END PGP PUBLIC KEY BLOCK-----`.
    1. Login to the GitHub UI.
    1. In the upper-right corner of any page, click your profile photo, then click `Settings`.
    1. In the "Access" section of the sidebar, click `SSH and GPG keys`.
@@ -258,7 +270,7 @@ If you encounter issues please refer to the respective GitHub documentation link
    1. Click `Add GPG key`.
 1. [Checking your commit and tag signature verification status].
 1. Optional: Use gpg-agent flags for configuring default caching for authentication or preset passphrase.
-   - See links in Additional Resources below.
+   * See links in Additional Resources below.
 
 ### Additional Resources
 
@@ -267,8 +279,6 @@ If you encounter issues please refer to the respective GitHub documentation link
 * [Adding a GPG key to GitHub]
 * [Checking your commit and tag signature verification status]
 * [GPG Agent passphrase caching]
-
-
 
 [Change the GitHub settings to keep your email address private]: https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-email-preferences/blocking-command-line-pushes-that-expose-your-personal-email-address
 [Set your email address in Git to the noreply email address generated by GitHub]: https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-email-preferences/setting-your-commit-email-address#setting-your-commit-email-address-in-git
