@@ -236,7 +236,7 @@ If you encounter issues please refer to the respective GitHub documentation link
       git config --global --unset gpg.format
       ```
 
-   1. Use the long form of the GPG key ID from Step 1.4 above to set your primary GPG signing key in Git.<br />
+   1. Use the long form of the GPG key ID from Step 1.iv above to set your primary GPG signing key in Git.<br />
       In this example, the GPG key ID is `3AA5C34371567BD2`:
 
       ```console
@@ -251,7 +251,7 @@ If you encounter issues please refer to the respective GitHub documentation link
 
 1. Add the GPG key to GitHub.
    1. Open Terminal / Git Bash.
-   1. Use the long form of the GPG key ID from Step 1.4 above to export your public GPG key.
+   1. Use the long form of the GPG key ID from Step 1.iv above to export your public GPG key.
       * Paste the text below, substituting in the GPG key ID you'd like to use.<br />
         In this example, the GPG key ID is `13AA5C34371567BD21`:
 
@@ -266,7 +266,7 @@ If you encounter issues please refer to the respective GitHub documentation link
    1. In the "Access" section of the sidebar, click `SSH and GPG keys`.
    1. Next to the "GPG keys" header, click `New GPG key`.
    1. In the `Title` field, type a name for your GPG key.
-   1. In the `Key` field, paste the GPG key you copied in Step 3.3 above.
+   1. In the `Key` field, paste the GPG key you copied in Step 3.iii above.
    1. Click `Add GPG key`.
 1. [Checking your commit and tag signature verification status].
 1. Optional: Use gpg-agent flags for configuring default caching for authentication or preset passphrase.
