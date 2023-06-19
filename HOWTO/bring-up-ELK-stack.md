@@ -1,8 +1,6 @@
 # How to bring up an ELK stack
 
-The following gives steps and an outline on how to bring up an ELK stack for docker-compose stacks.
-An existing ELK stack exists in the [docker-compose-demo](https://github.com/Senzing/docker-compose-demo/blob/main/resources/postgresql/docker-compose-rabbitmq-postgresql-with-ELK.yaml)
-github repository. This page assumes a working knowledge of docker and docker-compose.
+The following gives steps and an outline on how to bring up an ELK stack for docker-compose stacks. This page assumes a working knowledge of docker and docker-compose.
 
 ## Prerequisites
 1. [docker](https://github.com/Senzing/knowledge-base/blob/main/HOWTO/install-docker.md) - minimum version: [20.10.16](https://docs.docker.com/engine/release-notes/#201016)
@@ -28,10 +26,6 @@ important requirements
         gelf-address: "udp://<hostIP>:12201"
         tag: "container-to-log"
 ```
-
-### Portainer
-- A good tool to monitor individual Docker logs is [Portainer](https://github.com/Senzing/knowledge-base/blob/main/WHATIS/portainer.md). When running, portainer is viewable at localhost:9170
-
 
 ### 📘 Instructions
 - Create the `ELK-docker-compose.yaml` that is used to bring up the ELK stack. This is simply the set
