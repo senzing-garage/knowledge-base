@@ -253,7 +253,7 @@ If you encounter issues please refer to the respective GitHub documentation link
    1. Open Terminal / Git Bash.
    1. Use the long form of the GPG key ID from Step 1.iv above to export your public GPG key.
       * Paste the text below, substituting in the GPG key ID you'd like to use.<br />
-        In this example, the GPG key ID is `13AA5C34371567BD21`:
+        In this example, the GPG key ID is `3AA5C34371567BD2`:
 
         ```console
          gpg --armor --export 3AA5C34371567BD2
