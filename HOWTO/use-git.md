@@ -197,8 +197,10 @@ If you encounter issues please refer to the respective GitHub documentation link
 
       1. When prompted input the number corresponding to the kind of key and press `Enter`.
          * Recommended input: `ECC (sign and encrypt)`.
-         * If using ECC, input the number corresponding to the elliptic curve and press `Enter`.
+           * If using ECC, input the number corresponding to the elliptic curve and press `Enter`.
            * Recommended input: `Curve 25519`.
+         * If ECC is unavailable you can use `RSA and RSA`.
+           * Recommended key size: `4096`
       1. Input the length of time the key should be valid and press `Enter`.
          * Recommended input: `1y`.
       1. Verify your selections are correct.
