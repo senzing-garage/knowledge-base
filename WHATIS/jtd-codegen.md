@@ -1,4 +1,4 @@
-# What is jtg-codegen
+# What is jtd-codegen
 
 > jtd-codegen is a CLI tool that generates code bindings
 > in many different programming languages from JSON Typedef schemas.
