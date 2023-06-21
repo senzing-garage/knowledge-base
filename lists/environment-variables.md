@@ -226,7 +226,7 @@
    1. See [mysql](https://github.com/go-sql-driver/mysql#parameters)
    1. See [postgresql](https://pkg.go.dev/github.com/lib/pq#hdr-Connection_String_Parameters)
 1. Examples:
-    1. **sslmode:** "postgresql://username:password@host.example.com:5432/G2/?sslmode=disable"
+    1. **sslmode:** "postgresql://username:<password@host.example.com>:5432/G2/?sslmode=disable"
 1. [Where used](https://github.com/search?q=org%3ASenzing+DATABASE_QUERY_PARAMETERS&type=code)
 
 ### DATABASE_USERNAME
@@ -1526,6 +1526,22 @@
 
 1. Synopsis:
     1. A JSON string that is a parameter to the Senzing Engine's `*.init()` function.
+1. Examples:
+    1. Using system installation paths and PostgreSQL database URL:
+
+        ```console
+        export SENZING_ENGINE_CONFIGURATION_JSON='{
+            "PIPELINE": {
+                "CONFIGPATH": "/etc/opt/senzing",
+                "RESOURCEPATH": "/opt/senzing/g2/resources",
+                "SUPPORTPATH": "/opt/senzing/data"
+            },
+            "SQL": {
+                "CONNECTION": "postgresql://username:password@example.com:5432:g2"
+            }
+        }'
+        ```
+
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_ENGINE_CONFIGURATION_JSON&type=code)
 
 ### SENZING_ENTITY_TYPE
@@ -2440,10 +2456,10 @@
     1. Format:
        [DATABASE_PROTOCOL](#database_protocol)://[DATABASE_USERNAME](#database_username):[DATABASE_PASSWORD](#database_password)@[DATABASE_HOST](#database_host):[DATABASE_PORT](#database_port)/[DATABASE_DATABASE](#database_database)/?[DATABASE_QUERY_PARAMETERS](#database_query_parameters).
 1. Examples:
-    1. **MsSQL:** "mssql://username:password@host.example.com:1433/G2"
-    1. **MySQL:** "mysql://username:password@host.example.com:3306/G2"
-    1. **PostgreSQL:** "postgresql://username:password@host.example.com:5432/G2/?sslmode=disable"
-    1. **PostgreSQL:** "postgresql://username:password@host.example.com:5432/G2"
+    1. **MsSQL:** "mssql://username:<password@host.example.com>:1433/G2"
+    1. **MySQL:** "mysql://username:<password@host.example.com>:3306/G2"
+    1. **PostgreSQL:** "postgresql://username:<password@host.example.com>:5432/G2/?sslmode=disable"
+    1. **PostgreSQL:** "postgresql://username:<password@host.example.com>:5432/G2"
     1. **Sqlite3:** "sqlite3://na:na@/tmp/sqlite/G2C.db"
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_DATABASE_URL&type=code)
    ([envar.DatabaseUrl](https://github.com/search?q=org%3ASenzing+envar.DatabaseUrl&type=code))
