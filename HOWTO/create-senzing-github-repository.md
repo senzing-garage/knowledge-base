@@ -125,6 +125,9 @@ This is a checklist of what to set when creating a new GitHub Repository.
     1. :ballot_box_with_check: `Require status checks to pass before merging`.
     1. :ballot_box_with_check: `Require branches to be up to date before merging`.
         1. Search and add *ALL* required status checks for the respective repository.
+           - Search for the job name of the respective workflow.
+           - Checks to be added must have been run within the past 7 days.
+           - See [GitHub docs] for more details.
 
 ### Dependabot Automation Configuration
 
@@ -138,10 +141,10 @@ Additional changes required for auto merging dependabot pull requests.
     1. In the left sidebar, under  `Personal access tokens`
         1. click `Fine-grained tokens`.
     1. Click `Generate new token`.
-    1. Under `Token name`, enter a name for the token.
+    1. Under `Token name`, enter a name for the token: `SENZING_GITHUB_CODEOWNER_PR_RW_TOKEN`.
     1. Under `Expiration`, select an expiration for the token.
     1. Optionally, under `Description`, describe the purpose of the token.
-    1. Under `Resource owner`, select a resource owner.
+    1. Under `Resource owner`, select a resource owner: `Senzing`.
         - See [docs][Token Docs] for additional details.
     1. Under `Repository access`, select: `Only select repositories`
     1. Under the `Selected repositories` dropdown, select the respective repositories
@@ -157,8 +160,9 @@ Additional changes required for auto merging dependabot pull requests.
     1. Expand `* Secrets and variables` in the left side nav.
         1. Select `Dependabot`.
     1. Click `New organization secret`.
-    1. In the `Name` input box type: `CODEOWNER_PR_APPROVAL_TOKEN`.
+    1. In the `Name` input box type: `SENZING_GITHUB_CODEOWNER_PR_RW_TOKEN`.
     1. From the `Repository access` dropdown list, choose `Selected repositories`.
+    1. Input the token generated in step one into the text box.
     1. Under the `Selected repositories` dropdown, select the respective repositories:
     1. Click `Add secret`.
 
@@ -174,3 +178,4 @@ Additional changes required for auto merging dependabot pull requests.
 3. :ballot_box_with_check: `Allow GitHub Actions to create and approve pull requests`
 
 [Token Docs]: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-fine-grained-personal-access-token
+[GitHub docs]: https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches#require-status-checks-before-merging
