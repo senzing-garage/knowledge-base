@@ -27,3 +27,5 @@
 ## References
 
 1. [Product page](https://code.visualstudio.com/)
+1. Videos
+    1. [NetworkChuck - you NEED to use VS Code RIGHT NOW!!](https://www.youtube.com/watch?v=1ZfO149BJvg)
