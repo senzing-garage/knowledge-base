@@ -274,6 +274,17 @@ If you encounter issues please refer to the respective GitHub documentation link
 1. Optional: Use gpg-agent flags for configuring default caching for authentication or preset passphrase.
    * See links in Additional Resources below.
 
+### Troubleshooting
+
+Error:
+```console
+gpg: signing failed: No such file or directory
+
+fatal: failed to write commit object
+```
+Ensure `GPG_TTY` is configured in the environment.
+See [Configure TTY](https://github.com/Senzing/knowledge-base/blob/main/WHATIS/gnupg.md#configure-tty) for more details. 
+
 ### Additional Resources
 
 * [Generate a new GPG key]
