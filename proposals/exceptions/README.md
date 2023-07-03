@@ -46,9 +46,9 @@ G2Exception
 
 
 1. [x]    1:
-1. [x]    2:     // EAS_ERR_INVALID_XML                                                                    "Invalid XML"
-1. [ ]    5:     // EAS_ERR_EXCEEDED_MAX_RETRIES                                                           "Exceeded the Maximum Number of Retries Allowed"
-1. [x]    7:     // EAS_ERR_EMPTY_XML_MESSAGE                                                              "Empty XML Message"
+1. [x]    2:                                                        // EAS_ERR_INVALID_XML                                                                    "Invalid XML"
+1. [ ]    5:                                                        // EAS_ERR_EXCEEDED_MAX_RETRIES                                                           "Exceeded the Maximum Number of Retries Allowed"
+1. [x]    7:                                                        // EAS_ERR_EMPTY_XML_MESSAGE                                                              "Empty XML Message"
 1. [x]    10:    {G2RetryTimeoutExceeded, G2Retryable},             // EAS_ERR_RETRY_TIMEOUT                                                                  "Retry timeout exceeded"
 1. [ ]    14:    {G2Unrecoverable},                                 // EAS_ERR_INVALID_DATASTORE_CONFIGURATION_TYPE                                           "Invalid Datastore Configuration Type"
 1. [ ]    19:    {G2Unrecoverable},                                 // EAS_ERR_NO_CONFIGURATION_FOUND                                                         "Configuration not found"
@@ -480,7 +480,7 @@ G2Exception
 1. [ ]    9802:  {G2Unrecoverable},                                 // EAS_ERR_INBOUND_OBS_CONFIG_CHECKSUM_MISMATCH                                           "Configuration checksum on inbound observation [{0}] does not match this nodes configuration checksum [{1}]. Cannot process."
 1. [ ]    9803:  {G2Unrecoverable},                                 // EAS_ERR_CALC_CONFIGCHKSUM_AND_PARAMSTORE_CONFIGCHKSUM_DONT_MATCH                       "The calculated configuration checksum [{0}] does not match the CONFIGURATION_CHECKSUM value in the parameter store [{1}]."
 1. [ ]    30011: {G2Unrecoverable},                                 // EAS_ERR_DELETE_WITH_RESOLVE_ONLY                                                       "Cannot delete an entity with type RESOLVE_ONLY"
-1. [ ]    30020:    {},
+1. [ ]    30020: {},
 1. [ ]    30101: {G2Unrecoverable},                                 // EAS_ERR_INVALID_SESSION_HANDLE                                                         "Invalid Session Handle [{0}]"
 1. [ ]    30102: {G2Unrecoverable},                                 // EAS_ERR_INVALID_REPORT_HANDLE                                                          "Invalid Report Handle [{0}]"
 1. [ ]    30103: {G2Unrecoverable},                                 // EAS_ERR_INVALID_EXPORT_HANDLE                                                          "Invalid Export Handle [{0}]"
