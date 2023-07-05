@@ -44,7 +44,6 @@ This is a checklist of what to set when creating a new GitHub Repository.
             1. :ballot_box_with_check: `Require a pull request before merging`
                 1. :ballot_box_with_check: `Require approvals`
                 1. :ballot_box_with_check: `Require review from Code Owners`
-                1. :ballot_box_with_check: `Do not allow bypassing the above settings`
         1. Click `Create` button
 
 ### Collaborators & teams
