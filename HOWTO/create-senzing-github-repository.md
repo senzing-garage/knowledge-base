@@ -132,38 +132,9 @@ This is a checklist of what to set when creating a new GitHub Repository.
 
 Additional changes required for auto merging dependabot pull requests.
 
-#### One time CODEOWNER actions: token configuration
+#### Prerequsites
 
-1. Create a fine-grained personal access token (CODEOWNER)
-    1. Click your profile photo, then click `Settings`.
-    1. In the left sidebar, click `Developer settings`.
-    1. In the left sidebar, under  `Personal access tokens`
-        1. click `Fine-grained tokens`.
-    1. Click `Generate new token`.
-    1. Under `Token name`, enter a name for the token: `SENZING_GITHUB_CODEOWNER_PR_RW_TOKEN`.
-    1. Under `Expiration`, select an expiration for the token.
-    1. Optionally, under `Description`, describe the purpose of the token.
-    1. Under `Resource owner`, select a resource owner: `Senzing`.
-        - See [docs][Token Docs] for additional details.
-    1. Under `Repository access`, select: `Only select repositories`
-    1. Under the `Selected repositories` dropdown, select the respective repositories
-    1. Under `Permissions` > `Repository Permissions` > `Pull requests`
-        1. Select `Access: Read and write` in the dropdown.
-    1. Click `Generate token`.
-    1. Copy the new token for use in Step 2.
-
-2. Add the newly generated token in step 1 as an organization secret for Dependabot.
-    - Note: To create secrets at the organization level, you must have admin access.
-    1. On GitHub.com, navigate to the main page of the organization.
-    1. Under your organization name, click  `Settings`.
-    1. Expand `* Secrets and variables` in the left side nav.
-        1. Select `Dependabot`.
-    1. Click `New organization secret`.
-    1. In the `Name` input box type: `SENZING_GITHUB_CODEOWNER_PR_RW_TOKEN`.
-    1. From the `Repository access` dropdown list, choose `Selected repositories`.
-    1. Input the token generated in step one into the text box.
-    1. Under the `Selected repositories` dropdown, select the respective repositories:
-    1. Click `Add secret`.
+[One time CODEOWNER token configuration].
 
 #### Enable Auto Merge
 
@@ -178,3 +149,4 @@ Additional changes required for auto merging dependabot pull requests.
 
 [Token Docs]: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-fine-grained-personal-access-token
 [GitHub docs]: https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches#require-status-checks-before-merging
+[One time CODEOWNER token configuration]: https://github.com/Senzing/knowledge-base/blob/main/HOWTO/configure-github-organization.md
