@@ -5,7 +5,7 @@
 ### Hide Repository
 
 1. On GitHub.com, navigate to the main page of the repository.
-1. Select the `Settings` tab in the top nivigation bar.
+1. Select the `Settings` tab in the top navigation bar.
 1. In the `Danger Zone` section, to the right of to `Change repository visibility`, click `Change visibility`.
 1. Select a visibility.
 1. To verify that you're changing the correct repository's visibility, type the name of the repository you want to change the visibility of.
