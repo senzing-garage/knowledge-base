@@ -9,7 +9,7 @@
   SENZING_GITHUB_<SECRET_NAME>
   ```
   * We include the `SENZING` Community name prefix for all GitHub secrets due to [GitHub restrictions].
-* The remaining secret name should elude to the purpose of the secret/token and the level of permissions where applicable. Ex.
+* The remaining secret name should allude to the purpose of the secret/token and the level of permissions where applicable. Ex.
   ```console
   SENZING_GITHUB_CODEOWNER_PR_RW_TOKEN
   ```
