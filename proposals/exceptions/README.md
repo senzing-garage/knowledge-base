@@ -7,7 +7,7 @@ G2Exception
 │   ├── G2IncompleteRecordException
 │   ├── G2InvalidFileTypeContentsException
 │   ├── G2MalformedJsonException - 30121, 30122, 30123
-│   ├── G2MissingCon23figurationException
+│   ├── G2MissingConfigurationException - 23
 │   ├── G2MissingDataSourceException
 │   ├── G2NotFoundException - 27, 33, 37, 2089, 7344
 │   ├── G2UnacceptableJsonKeyValueException - 23, 24, 25, 26, 32, 51, 30020
