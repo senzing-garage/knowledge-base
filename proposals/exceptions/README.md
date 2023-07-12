@@ -1,6 +1,4 @@
-
-
-
+# Proposal for exeception hierarchy
 
 ```console
 G2Exception
@@ -39,11 +37,9 @@ G2Exception
     └── G2ModuleResolveMissingResEnt - 2134
 ```
 
-
-```
+```console
     └── G2ModuleException
 ```
-
 
 1. [x]    1:
 1. [x]    2:                                                        // EAS_ERR_INVALID_XML                                                                    "Invalid XML"
@@ -315,7 +311,7 @@ G2Exception
 1. [ ]    7216:  {G2Unrecoverable},                                 // EAS_ERR_DB_BAD_CLUSTER_DEFINITION                                                      "Cluster [{0}] is not properly configured"
 1. [ ]    7217:  {G2Unrecoverable},                                 // EAS_ERR_DB_CONFLICTING_DEFAULT_SHARD_CONFIG                                            "Cannot specify both default backend database and default backend cluster"
 1. [ ]    7218:  {G2Unrecoverable},                                 // EAS_ERR_DB_CLUSTER_DOES_NOT_EXIST                                                      "Cluster [{0}] does not exist"
-1. [ ]    7220:  {G2Unrecoverable},                                 // EAS_ERR_NO_CONFIG_REGISTERED_IN_DATASTORE                                              "No engine configuration registered in datastore (see https://senzing.zendesk.com/hc/en-us/articles/360036587313)."
+1. [ ]    7220:  {G2Unrecoverable},                                 // EAS_ERR_NO_CONFIG_REGISTERED_IN_DATASTORE                                              "No engine configuration registered in datastore (see <https://senzing.zendesk.com/hc/en-us/articles/360036587313>)."
 1. [x]    7221:  {G2Configuration, G2Retryable},                    // EAS_ERR_NO_CONFIG_REGISTERED_FOR_DATA_ID                                               "No engine configuration registered with data ID [{0}]."
 1. [ ]    7222:  {G2Unrecoverable},                                 // EAS_ERR_FAILED_TO_SET_SYS_VAR_IN_DATASTORE                                             "Could not set system variable value in database for Group[{0}],Code[{1}],Value[{2}]."
 1. [ ]    7223:  {G2Unrecoverable},                                 // EAS_ERR_INVALID_SCHEMA_VERSION_IN_DATASTORE                                            "Invalid version number for datastore schema [version '{0}']."
@@ -491,4 +487,3 @@ G2Exception
 1. [x]    30122: {G2MalformedJson, G2BadUserInput},                 // EAS_ERR_JSON_PARSING_FAILURE_MUST_BE_OBJECT_OR_ARRAY                                   "JSON Parsing Failure.  JSON must be object or array."
 1. [x]    30123: {G2MalformedJson, G2BadUserInput},                 // EAS_ERR_JSON_PARSING_FAILURE_OBJECT_HAS_DUPLICATE_KEYS                                 "Json object has duplicate keys."
 1. [ ]    30131: {G2Unrecoverable},                                 // EAS_ERR_UNKNOWN_COLUMN_REQUESTED_FOR_CSV_EXPORT                                        "Invalid column [{0}] requested for CSV export."1. [ ]
-
