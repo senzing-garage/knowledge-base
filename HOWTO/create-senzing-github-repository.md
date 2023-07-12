@@ -125,12 +125,13 @@ This is a checklist of what to set when creating a new GitHub Repository.
     1. :ballot_box_with_check: `Require branches to be up to date before merging`.
         1. Search and add *ALL* required status checks for the respective repository.
            - Search for the job name of the respective workflow.
-           - Checks to be added must have been run within the past 7 days.
+           - Jobs to be added must have been run within the past 7 days against the respective repository.
            - See [GitHub docs] for more details.
 
 ### Dependabot Automation Configuration
 
-Additional changes required for auto merging dependabot pull requests.
+Additional settings changes required for auto merging dependabot pull requests.
+Requires Admin access. 
 
 #### Prerequsites
 
@@ -139,13 +140,31 @@ Additional changes required for auto merging dependabot pull requests.
 #### Enable Auto Merge
 
 1. On repository home page, click `Settings` tab.
-2. :ballot_box_with_check: `Allow auto-merge`
+1. :ballot_box_with_check: `Allow auto-merge`
 
 #### Allow GitHub Actions to create and approve pull requests
 
 1. On repository home page, click `Settings` tab.
-2. Click `Actions` > `General` in the left side nav.
-3. :ballot_box_with_check: `Allow GitHub Actions to create and approve pull requests`
+1. Click `Actions` > `General` in the left side nav.
+1. :ballot_box_with_check: `Allow GitHub Actions to create and approve pull requests`
+
+#### Require Signed Commits
+
+1. On repository home page, click `Settings` tab.
+1. Select `Branches` in the left side nav.
+1. Select `Edit` for the `main` branch protection rule.
+1. :ballot_box_with_check: `Require signed commits`
+1. Click `Save changes` at the bottom of the page.
+
+#### Add Dependabot Required Status Check
+
+1. On repository home page, click `Settings` tab.
+1. Select `Branches` in the left side nav.
+1. Select `Edit` for the `main` branch protection rule.
+1. Search for `dependabot-approve-and-merge / dependabot-approve-and-merge` in the required status checks search box.
+   - NOTE: The job must have been run against the respective repository within the past 7 days before it can be added as a required status check.
+1. Click the matching search result in the drop down.
+1. Click `Save changes` at the bottom of the page.
 
 [Token Docs]: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-fine-grained-personal-access-token
 [GitHub docs]: https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches#require-status-checks-before-merging
