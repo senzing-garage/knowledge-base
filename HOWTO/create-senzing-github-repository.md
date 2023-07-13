@@ -166,6 +166,5 @@ Requires Admin access.
 1. Click the matching search result in the drop down.
 1. Click `Save changes` at the bottom of the page.
 
-[Token Docs]: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-fine-grained-personal-access-token
 [GitHub docs]: https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches#require-status-checks-before-merging
 [One time CODEOWNER token configuration]: https://github.com/Senzing/knowledge-base/blob/main/HOWTO/configure-github-organization.md
