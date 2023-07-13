@@ -28,7 +28,7 @@ Used for automated approvals on dependabot pull requests.
     1. Under `Expiration`, select an expiration for the token.
     1. Optionally, under `Description`, describe the purpose of the token.
     1. Under `Resource owner`, select a resource owner: `Senzing`.
-        - See [docs][Token Docs] for additional details.
+        - See [Token Docs] for additional details.
     1. Under `Repository access`, select: `All repositories`
     1. Under `Permissions` > `Repository Permissions` > `Pull requests`
         1. Select `Access: Read and write` in the dropdown.
@@ -47,5 +47,5 @@ Used for automated approvals on dependabot pull requests.
     1. Input the token generated in step one into the text box.
     1. Click `Add secret`.
 
-
-    [GitHub restrictions]: https://docs.github.com/en/actions/security-guides/encrypted-secrets
+[GitHub restrictions]: https://docs.github.com/en/actions/security-guides/encrypted-secrets
+[Token Docs]: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-fine-grained-personal-access-token
