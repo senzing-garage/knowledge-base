@@ -81,6 +81,19 @@ This is a checklist of what to set when creating a new GitHub Repository.
         1. `t-unknown` if not known
     1. Click `Save` button
 
+### Pages
+
+1. On repository home page, click `Settings` tab.
+    1. Click `Pages` tab.
+        1. In `Build and deployment` section:
+            1. **Source:** `Deploy from a branch`
+            1. Branch
+                1. **Select branch:** `main`
+                1. **Select folder:** `/docs`
+            1. Click `Save` button
+        1. In `Custom domain` section:
+            1. :ballot_box_with_check: Enforce HTTPS
+
 ### Initial content
 
 1. On repository home page, click `Issues` tab.
@@ -131,7 +144,7 @@ This is a checklist of what to set when creating a new GitHub Repository.
 ### Dependabot Automation Configuration
 
 Additional settings changes required for auto merging dependabot pull requests.
-Requires Admin access. 
+Requires Admin access.
 
 #### Prerequsites
 
