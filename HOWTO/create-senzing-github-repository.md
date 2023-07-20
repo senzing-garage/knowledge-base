@@ -72,13 +72,16 @@ This is a checklist of what to set when creating a new GitHub Repository.
 ### Repository About
 
 1. On repository home page, click **About** gear
-    1. Add Topics:
+    1. Add Topic relative to which Scrum manages the repository:
         1. `t-ast` for Api Server / Web App scrum
         1. `t-comm` for Community scrum
         1. `t-g2-python` for G2Python projects
         1. `t-gdev` for ????
         1. `t-devsecops` for DevOps
         1. `t-unknown` if not known
+    1. Add optional Topics relative to code sub-project.
+       Examples:
+        1. `golang` - for "Go" based projects
     1. Click `Save` button
 
 ### Pages
