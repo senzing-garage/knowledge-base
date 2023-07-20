@@ -2440,13 +2440,19 @@
     1. Default: 4
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_THREADS_PER_PROCESS&type=code)
 
+### SENZING_TOOLS_CONFIG_PATH
+
+1. Synopsis:
+1. Values:
+1. Examples:
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_CONFIG_PATH&type=code)
+
 ### SENZING_TOOLS_CONFIGURATION
 
 1. Synopsis:
 1. Values:
 1. Examples:
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_CONFIGURATION&type=code)
-   ([envar.Configuration](https://github.com/search?q=org%3ASenzing+envar.Configuration&type=code))
 
 ### SENZING_TOOLS_DATABASE_URL
 
@@ -2462,7 +2468,6 @@
     1. **PostgreSQL:** "postgresql://username:<password@host.example.com>:5432/G2"
     1. **Sqlite3:** "sqlite3://na:na@/tmp/sqlite/G2C.db"
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_DATABASE_URL&type=code)
-   ([envar.DatabaseUrl](https://github.com/search?q=org%3ASenzing+envar.DatabaseUrl&type=code))
 
 ### SENZING_TOOLS_DATASOURCES
 
@@ -2478,7 +2483,20 @@
         ```
 
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_DATASOURCES&type=code)
-   ([envar.Datasources](https://github.com/search?q=org%3ASenzing+envar.Datasources&type=code))
+
+### SENZING_TOOLS_DELAY_IN_SECONDS
+
+1. Synopsis:
+1. Values:
+1. Examples:
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_DELAY_IN_SECONDS&type=code)
+
+### SENZING_TOOLS_ENABLE_ALL
+
+1. Synopsis:
+1. Values:
+1. Examples:
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_ENABLE_ALL&type=code)
 
 ### SENZING_TOOLS_ENABLE_G2CONFIG
 
@@ -2486,7 +2504,6 @@
 1. Values:
 1. Examples:
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_ENABLE_G2CONFIG&type=code)
-   ([envar.EnableG2config](https://github.com/search?q=org%3ASenzing+envar.EnableG2config&type=code))
 
 ### SENZING_TOOLS_ENABLE_G2CONFIGMGR
 
@@ -2494,7 +2511,6 @@
 1. Values:
 1. Examples:
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_ENABLE_G2CONFIGMGR&type=code)
-   ([envar.EnableG2configmgr](https://github.com/search?q=org%3ASenzing+envar.EnableG2configmgr&type=code))
 
 ### SENZING_TOOLS_ENABLE_G2DIAGNOSTIC
 
@@ -2502,7 +2518,6 @@
 1. Values:
 1. Examples:
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_ENABLE_G2DIAGNOSTIC&type=code)
-   ([envar.EnableG2diagnostic](https://github.com/search?q=org%3ASenzing+envar.EnableG2diagnostic&type=code))
 
 ### SENZING_TOOLS_ENABLE_G2ENGINE
 
@@ -2510,7 +2525,6 @@
 1. Values:
 1. Examples:
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_ENABLE_G2ENGINE&type=code)
-   ([envar.EnableG2engine](https://github.com/search?q=org%3ASenzing+envar.EnableG2engine&type=code))
 
 ### SENZING_TOOLS_ENABLE_G2PRODUCT
 
@@ -2518,7 +2532,41 @@
 1. Values:
 1. Examples:
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_ENABLE_G2PRODUCT&type=code)
-   ([envar.EnableG2product](https://github.com/search?q=org%3ASenzing+envar.EnableG2product&type=code))
+
+### SENZING_TOOLS_ENABLE_SENZING_CHAT_API
+
+1. Synopsis:
+1. Values:
+1. Examples:
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_ENABLE_SENZING_CHAT_API&type=code)
+
+### SENZING_TOOLS_ENABLE_SENZING_REST_API
+
+1. Synopsis:
+1. Values:
+1. Examples:
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_ENABLE_SENZING_REST_API&type=code)
+
+### SENZING_TOOLS_ENABLE_SWAGGER_UI
+
+1. Synopsis:
+1. Values:
+1. Examples:
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_ENABLE_SWAGGER_UI&type=code)
+
+### SENZING_TOOLS_ENABLE_XTERM
+
+1. Synopsis:
+1. Values:
+1. Examples:
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_ENABLE_XTERM&type=code)
+
+### SENZING_TOOLS_ENGINE_CONFIGURATION_FILE
+
+1. Synopsis:
+1. Values:
+1. Examples:
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_ENGINE_CONFIGURATION_FILE&type=code)
 
 ### SENZING_TOOLS_ENGINE_CONFIGURATION_JSON
 
@@ -2561,7 +2609,6 @@
     1. [G2Engine Configuration and the Senzing API](https://senzing.zendesk.com/hc/en-us/articles/360038774134-G2Engine-Configuration-and-the-Senzing-API)
     1. [Scaling Out Your Database With Clustering](https://senzing.zendesk.com/hc/en-us/articles/360010599254-Scaling-Out-Your-Database-With-Clustering)
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_ENGINE_CONFIGURATION_JSON&type=code)
-   ([envar.EngineConfigurationJson](https://github.com/search?q=org%3ASenzing+envar.EngineConfigurationJson&type=code))
 
 ### SENZING_TOOLS_ENGINE_LOG_LEVEL
 
@@ -2573,7 +2620,6 @@
     1. 0 - no logging
     1. 1 - logging
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_ENGINE_LOG_LEVEL&type=code)
-   ([envar.EngineLogLevel](https://github.com/search?q=org%3ASenzing+envar.EngineLogLevel&type=code))
 
 ### SENZING_TOOLS_ENGINE_MODULE_NAME
 
@@ -2584,7 +2630,6 @@
 1. Values:
     1. Default: none
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_ENGINE_MODULE_NAME&type=code)
-   ([envar.EngineModuleName](https://github.com/search?q=org%3ASenzing+envar.EngineModuleName&type=code))
 
 ### SENZING_TOOLS_GRPC_PORT
 
@@ -2592,7 +2637,41 @@
 1. Values:
 1. Examples:
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_GRPC_PORT&type=code)
-   ([envar.GrpcPort](https://github.com/search?q=org%3ASenzing+envar.GrpcPort&type=code))
+
+### SENZING_TOOLS_GRPC_URL
+
+1. Synopsis:
+1. Values:
+1. Examples:
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_GRPC_URL&type=code)
+
+### SENZING_TOOLS_HTTP_PORT
+
+1. Synopsis:
+1. Values:
+1. Examples:
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_HTTP_PORT&type=code)
+
+### SENZING_TOOLS_INPUT_FILE_TYPE
+
+1. Synopsis:
+1. Values:
+1. Examples:
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_INPUT_FILE_TYPE&type=code)
+
+### SENZING_TOOLS_INPUT_URL
+
+1. Synopsis:
+1. Values:
+1. Examples:
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_INPUT_URL&type=code)
+
+### SENZING_TOOLS_LICENSE_STRING_BASE64
+
+1. Synopsis:
+1. Values:
+1. Examples:
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_LICENSE_STRING_BASE64&type=code)
 
 ### SENZING_TOOLS_LOG_LEVEL
 
@@ -2609,7 +2688,146 @@
 1. References:
     1. [Log Levels](https://github.com/Senzing/knowledge-base/blob/main/lists/log-levels.md)
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_LOG_LEVEL&type=code)
-   ([envar.LogLevel](https://github.com/search?q=org%3ASenzing+envar.LogLevel&type=code))
+
+### SENZING_TOOLS_MONITORING_PERIOD_IN_SECONDS
+
+1. Synopsis:
+1. Values:
+1. Examples:
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_MONITORING_PERIOD_IN_SECONDS&type=code)
+
+### SENZING_TOOLS_NUMBER_OF_WORKERS
+
+1. Synopsis:
+1. Values:
+1. Examples:
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_NUMBER_OF_WORKERS&type=code)
+
+### SENZING_TOOLS_OBSERVER_ORIGIN
+
+1. Synopsis:
+1. Values:
+1. Examples:
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_OBSERVER_ORIGIN&type=code)
+
+### SENZING_TOOLS_OBSERVER_URL
+
+1. Synopsis:
+1. Values:
+1. Examples:
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_OBSERVER_URL&type=code)
+
+### SENZING_TOOLS_OUTPUT_URL
+
+1. Synopsis:
+1. Values:
+1. Examples:
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_OUTPUT_URL&type=code)
+
+### SENZING_TOOLS_RECORD_MAX
+
+1. Synopsis:
+1. Values:
+1. Examples:
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_RECORD_MAX&type=code)
+
+### SENZING_TOOLS_RECORD_MIN
+
+1. Synopsis:
+1. Values:
+1. Examples:
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_RECORD_MIN&type=code)
+
+### SENZING_TOOLS_RECORD_MONITOR
+
+1. Synopsis:
+1. Values:
+1. Examples:
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_RECORD_MONITOR&type=code)
+
+### SENZING_TOOLS_RESOURCE_PATH
+
+1. Synopsis:
+1. Values:
+1. Examples:
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_RESOURCE_PATH&type=code)
+
+### SENZING_TOOLS_SENZING_DIRECTORY
+
+1. Synopsis:
+1. Values:
+1. Examples:
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_SENZING_DIRECTORY&type=code)
+
+### SENZING_TOOLS_SERVER_ADDRESS
+
+1. Synopsis:
+1. Values:
+1. Examples:
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_SERVER_ADDRESS&type=code)
+
+### SENZING_TOOLS_SQL_FILE
+
+1. Synopsis:
+1. Values:
+1. Examples:
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_SQL_FILE&type=code)
+
+### SENZING_TOOLS_SUPPORT_PATH
+
+1. Synopsis:
+1. Values:
+1. Examples:
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_SUPPORT_PATH&type=code)
+
+### SENZING_TOOLS_VISIBILITY_PERIOD_IN_SECONDS
+
+1. Synopsis:
+1. Values:
+1. Examples:
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_VISIBILITY_PERIOD_IN_SECONDS&type=code)
+
+### SENZING_TOOLS_XTERM_ALLOWED_HOSTNAMES
+
+1. Synopsis:
+1. Values:
+1. Examples:
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_XTERM_ALLOWED_HOSTNAMES&type=code)
+
+### SENZING_TOOLS_XTERM_ARGUMENTS
+
+1. Synopsis:
+1. Values:
+1. Examples:
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_XTERM_ARGUMENTS&type=code)
+
+### SENZING_TOOLS_XTERM_COMMAND
+
+1. Synopsis:
+1. Values:
+1. Examples:
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_XTERM_COMMAND&type=code)
+
+### SENZING_TOOLS_XTERM_CONNECTION_ERROR_LIMIT
+
+1. Synopsis:
+1. Values:
+1. Examples:
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_XTERM_CONNECTION_ERROR_LIMIT&type=code)
+
+### SENZING_TOOLS_XTERM_KEEPALIVE_PING_TIMEOUT
+
+1. Synopsis:
+1. Values:
+1. Examples:
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_XTERM_KEEPALIVE_PING_TIMEOUT&type=code)
+
+### SENZING_TOOLS_XTERM_MAX_BUFFER_SIZE_BYTES
+
+1. Synopsis:
+1. Values:
+1. Examples:
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_XTERM_MAX_BUFFER_SIZE_BYTES&type=code)
 
 ### SENZING_UID
 
