@@ -161,18 +161,20 @@ Requires Admin access.
 #### Enable Auto Merge
 
 1. On repository home page, click `Settings` tab.
-1. :ballot_box_with_check: `Allow auto-merge`
+1. In `Pull Requests` section
+    1. :ballot_box_with_check: `Allow auto-merge`
 
 #### Allow GitHub Actions to create and approve pull requests
 
 1. On repository home page, click `Settings` tab.
-1. Click `Actions` > `General` in the left side nav.
-1. :ballot_box_with_check: `Allow GitHub Actions to create and approve pull requests`
+1. In left side navigation bar, click `Actions` > `General`.
+    1. :ballot_box_with_check: `Allow GitHub Actions to create and approve pull requests`
+    1. Click `Save` button.
 
 #### Add Dependabot Required Status Check
 
 1. On repository home page, click `Settings` tab.
-1. Select `Branches` in the left side nav.
+1. In left side navigation bar, select `Branches` tab.
 1. Select `Edit` for the `main` branch protection rule.
 1. Search for `dependabot-approve-and-merge / dependabot-approve-and-merge` in the required status checks search box.
    - NOTE: The job must have been run against the respective repository within the past 7 days before it can be added as a required status check.
