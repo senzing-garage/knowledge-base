@@ -13,6 +13,8 @@ This is a checklist of what to set when creating a new GitHub Repository.
         1. When appropriate, use prefixes to help in searching for repositories.
            Examples:
             - `docker-` for docker-based repositories
+            - `go-` for (non-command) go-based repositories
+                - `go-...ing` - for cross-cutting concerns
             - `mapper-` for mapper functions
     1. Choose :radio_button: `Public`
     1. Check :ballot_box_with_check: `Initialize this repository with a README`
@@ -38,9 +40,8 @@ This is a checklist of what to set when creating a new GitHub Repository.
 
 1. On repository home page, click `Settings` tab.
     1. Click `Branches` tab.
-        1. Click `Add branch protection rule` button.
         1. `Branch name pattern:`  `main`
-        1. `Protect matching branches`
+        1. `Protect matching branches` section
             1. :ballot_box_with_check: `Require a pull request before merging`
                 1. :ballot_box_with_check: `Require approvals`
                 1. :ballot_box_with_check: `Require review from Code Owners`
@@ -84,19 +85,6 @@ This is a checklist of what to set when creating a new GitHub Repository.
         1. `golang` - for "Go" based projects
     1. Click `Save` button
 
-### Pages
-
-1. On repository home page, click `Settings` tab.
-    1. Click `Pages` tab.
-        1. In `Build and deployment` section:
-            1. **Source:** `Deploy from a branch`
-            1. Branch
-                1. **Select branch:** `main`
-                1. **Select folder:** `/docs`
-            1. Click `Save` button
-        1. In `Custom domain` section:
-            1. :ballot_box_with_check: Enforce HTTPS
-
 ### Initial content
 
 1. On repository home page, click `Issues` tab.
@@ -133,16 +121,33 @@ This is a checklist of what to set when creating a new GitHub Repository.
 
 1. On repository home page, click `Settings` tab.
 1. Click `Branches` tab.
-1. Click `Add branch protection` button.
 1. Edit `main` branch.
-1. `Protect matching branches`
-    1. :ballot_box_with_check: `Do not allow bypassing the above settings`
+1. `Protect matching branches` section
+    1. :ballot_box_with_check: `Require a pull request before merging`
+        1. :ballot_box_with_check: `Require approvals`
+        1. :ballot_box_with_check: `Require review from Code Owners`
     1. :ballot_box_with_check: `Require status checks to pass before merging`.
-    1. :ballot_box_with_check: `Require branches to be up to date before merging`.
-        1. Search and add *ALL* required status checks for the respective repository.
-           - Search for the job name of the respective workflow.
-           - Jobs to be added must have been run within the past 7 days against the respective repository.
-           - See [GitHub docs] for more details.
+        1. :ballot_box_with_check: `Require branches to be up to date before merging`.
+            1. Search and add *ALL* required status checks for the respective repository.
+            - Search for the job name of the respective workflow.
+            - Jobs to be added must have been run within the past 7 days against the respective repository.
+            - See [GitHub docs] for more details.
+    1. :ballot_box_with_check: `Require signed commits`
+    1. :ballot_box_with_check: `Do not allow bypassing the above settings`
+    1. Click `Save changes` at the bottom of the page.
+
+### Pages
+
+1. On repository home page, click `Settings` tab.
+    1. Click `Pages` tab.
+        1. In `Build and deployment` section:
+            1. **Source:** `Deploy from a branch`
+            1. Branch
+                1. **Select branch:** `main`
+                1. **Select folder:** `/docs`
+            1. Click `Save` button
+        1. In `Custom domain` section:
+            1. :ballot_box_with_check: Enforce HTTPS
 
 ### Dependabot Automation Configuration
 
@@ -163,14 +168,6 @@ Requires Admin access.
 1. On repository home page, click `Settings` tab.
 1. Click `Actions` > `General` in the left side nav.
 1. :ballot_box_with_check: `Allow GitHub Actions to create and approve pull requests`
-
-#### Require Signed Commits
-
-1. On repository home page, click `Settings` tab.
-1. Select `Branches` in the left side nav.
-1. Select `Edit` for the `main` branch protection rule.
-1. :ballot_box_with_check: `Require signed commits`
-1. Click `Save changes` at the bottom of the page.
 
 #### Add Dependabot Required Status Check
 
