@@ -173,13 +173,19 @@ Requires Admin access.
 
 #### Add Dependabot Required Status Check
 
+Perform the following steps after the dependabot actions have been performed.
+There will be no searchable items at the time of repository creation unless
+the status check has been performed within the last 7 day.
+
 1. On repository home page, click `Settings` tab.
 1. In left side navigation bar, select `Branches` tab.
 1. Select `Edit` for the `main` branch protection rule.
-1. Search for `dependabot-approve-and-merge / dependabot-approve-and-merge` in the required status checks search box.
-   - NOTE: The job must have been run against the respective repository within the past 7 days before it can be added as a required status check.
+1. Under `Require branches to be up to date before merging`, search for and select
+    - `dependabot-approve-and-merge / dependabot-approve-and-merge`
 1. Click the matching search result in the drop down.
 1. Click `Save changes` at the bottom of the page.
 
-[GitHub docs]: https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches#require-status-checks-before-merging
-[One time CODEOWNER token configuration]: https://github.com/Senzing/knowledge-base/blob/main/HOWTO/configure-github-organization.md
+#### References
+
+1. [GitHub docs]: https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches#require-status-checks-before-merging
+1. [One time CODEOWNER token configuration]: https://github.com/Senzing/knowledge-base/blob/main/HOWTO/configure-github-organization.md
