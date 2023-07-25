@@ -1574,6 +1574,17 @@
      1. Default: False
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_EXIT_ON_EMPTY_QUEUE&type=code)
 
+### SENZING_EXIT_ON_THREAD_TERMINATION
+
+1. Synopsis:
+    1. Exit program when no more threads are running.
+    1. Used when external queues (RabbitMQ, SQS, Kafka) are specified.
+    1. Facilitates scale-down when using container orchestration systems (e.g. Kubernetes, Openshift, etc.)
+1. Values:
+     1. Datatype: boolean
+     1. Default: False
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_EXIT_ON_THREAD_TERMINATION&type=code)
+
 ### SENZING_EXIT_SLEEP_TIME_IN_SECONDS
 
 1. Synopsis:
