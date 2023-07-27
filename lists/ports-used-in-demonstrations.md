@@ -79,7 +79,7 @@ Open range: 8250-8265
 
 ### 8258
 
-- [servegprc](https://github.com/Senzing/servegprc)
+- [go-observing](https://github.com/Senzing/go-observing)
 
 ### 8259
 
@@ -87,11 +87,11 @@ Open range: 8250-8265
 
 ### 8260
 
-- [go-observing](https://github.com/Senzing/go-observing)
+- [serve-http](https://github.com/Senzing/serve-http)
 
 ### 8261
 
-- [serve-http](https://github.com/Senzing/serve-http)
+- [serve-gprc](https://github.com/Senzing/serve-gprc)
 
 ### 8262
 
