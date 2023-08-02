@@ -181,11 +181,11 @@ the status check has been performed within the last 7 day.
 1. In left side navigation bar, select `Branches` tab.
 1. Select `Edit` for the `main` branch protection rule.
     1. Under `Require branches to be up to date before merging`, search for and select
-        - `Go 1.20`
+        - `build-docker-container`
         - `dependabot-approve-and-merge / dependabot-approve-and-merge`
+        - `Go 1.20`
         - `gofmt / gofmt`
-        - `Build Docker container`
-        - `tests`
+        - `gosec`
     1. Click the matching search result in the drop down.
     1. Click `Save changes` at the bottom of the page.
 
