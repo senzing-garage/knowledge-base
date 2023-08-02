@@ -94,7 +94,7 @@ This is a checklist of what to set when creating a new GitHub Repository.
 1. On repository home page, click `Branch: main` button.
     1. Create new branch.
        Example:
-       `issue-1.[your-name].1`
+       `1.[your-name].1`
 
 ### Populate repository with Community Artifacts
 
@@ -104,7 +104,7 @@ This is a checklist of what to set when creating a new GitHub Repository.
         ```console
         git clone git@github.com:Senzing/xxxx.git
         cd xxxx
-        git checkout issue-1.[your-name].1
+        git checkout 1.[your-name].1
         ```
 
     1. Populate the new repository with the `Community Artifacts` found in
@@ -115,7 +115,7 @@ This is a checklist of what to set when creating a new GitHub Repository.
     1. Modify `.github/dependabot.yml`
     1. Delete `.github/workflows` files that do not apply.
     1. Commit the branch.
-    1. Merge `issue-1.[your-name].1` branch into main branch.
+    1. Merge `1.[your-name].1` branch into main branch.
 
 ### Branch Protection
 
@@ -181,7 +181,11 @@ the status check has been performed within the last 7 day.
 1. In left side navigation bar, select `Branches` tab.
 1. Select `Edit` for the `main` branch protection rule.
     1. Under `Require branches to be up to date before merging`, search for and select
+        - `Go 1.20`
         - `dependabot-approve-and-merge / dependabot-approve-and-merge`
+        - `gofmt / gofmt`
+        - `Build Docker container`
+        - `tests`
     1. Click the matching search result in the drop down.
     1. Click `Save changes` at the bottom of the page.
 
