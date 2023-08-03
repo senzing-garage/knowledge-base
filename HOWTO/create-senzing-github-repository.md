@@ -183,7 +183,9 @@ the status check has been performed within the last 7 day.
     1. Under `Require branches to be up to date before merging`, search for and select
         - `build-docker-container`
         - `dependabot-approve-and-merge / dependabot-approve-and-merge`
-        - `Go 1.20`
+        - `Go 1.20 - darwin`
+        - `Go 1.20 - linux`
+        - `Go 1.20 - windows`
         - `gofmt / gofmt`
         - `gosec`
     1. Click the matching search result in the drop down.
