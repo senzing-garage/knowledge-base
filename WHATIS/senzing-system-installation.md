@@ -1,6 +1,5 @@
 # What is Senzing system installation
 
-
 ## Linux
 
 "Senzing System Installation" as seen in the `senzing/senzingapi-runtime` Docker image.
@@ -93,9 +92,7 @@ C:
 └── Program Files
     └── Senzing
         ├── app
-        │   ├── <future home of the electron-based app>
-        │   ├── ...
-        │   └── g2 <the app-specific version of g2>
+        │   └── <All artifacts needed by the app>
         └── g2
             ├── g2BuildVersion.json
             ├── bin
