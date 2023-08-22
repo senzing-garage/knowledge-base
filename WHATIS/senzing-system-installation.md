@@ -90,43 +90,48 @@
 
 ```console
 C:
-└── senzing
-    └── g2
-        ├── g2BuildVersion.json
-        ├── bin
-        ├── data
-        │   ├── angloOnRegRule.ibm
+└── Program Files
+    └── Senzing
+        ├── app
+        │   ├── <future home of the electron-based app>
         │   ├── ...
-        │   ├── thaiRegRule.ibm
-        │   └── libpostal
-        ├── etc
-        │   ├── cfgVariant.json
-        │   ├── ...
-        │   └── stb.config
-        ├── lib
-        │   ├── libG2.so
-        │   ├── ...
-        │   ├── libsqliteplugin.so
-        │   └── macos
-        │       ├── libcrypto-univ.1.1.dylib
-        │       ├── ...
-        │       └── libssl.dylib
-        ├── resources
-        │   ├── config
-        │   │   └── g2core-configuration-upgrade-X-to-Y.gtc
-        │   ├── schema
-        │   │   ├── g2core-schema-postgresql-create.sql
-        │   │   ├── ...
-        │   │   └── g2core-schema-sqlite-create.sql
-        │   └── templates
-        │       ├── G2C.db
-        │       ├── ...
-        │       └── stb.config
-        ├── sdk
-        │   ├── c
-        │   ├── java
-        │   └── python
-        └── var
-            └── sqldb
-                └── G2C.db
+        │   └── g2 <the app-specific version of g2>
+        └── g2
+            ├── g2BuildVersion.json
+            ├── bin
+            ├── data
+            │   ├── angloOnRegRule.ibm
+            │   ├── ...
+            │   ├── thaiRegRule.ibm
+            │   └── libpostal
+            ├── etc
+            │   ├── cfgVariant.json
+            │   ├── ...
+            │   └── stb.config
+            ├── lib
+            │   ├── libG2.so
+            │   ├── ...
+            │   ├── libsqliteplugin.so
+            │   └── macos
+            │       ├── libcrypto-univ.1.1.dylib
+            │       ├── ...
+            │       └── libssl.dylib
+            ├── resources
+            │   ├── config
+            │   │   └── g2core-configuration-upgrade-X-to-Y.gtc
+            │   ├── schema
+            │   │   ├── g2core-schema-postgresql-create.sql
+            │   │   ├── ...
+            │   │   └── g2core-schema-sqlite-create.sql
+            │   └── templates
+            │       ├── G2C.db
+            │       ├── ...
+            │       └── stb.config
+            ├── sdk
+            │   ├── c
+            │   ├── java
+            │   └── python
+            └── var
+                └── sqldb
+                    └── G2C.db
 ```
