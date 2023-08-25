@@ -6,14 +6,13 @@ The following are examples showing how to develop Go programs for Senzing on Win
 
 ## Overview
 
-## Prepare Windows environment
+## Install Senzing API
 
 1. The following steps require Windows 10 version 1803 or higher.
 
 1. Prerequisite software:
-    1. [7-Zip](../WHATIS/7-zip.md)
-    1. [git](./WHATIS/git.md#windows)
-    1. [curl]()
+    1. [7-Zip](../WHATIS/7-zip.md#windows)
+    1. ?? [curl](../WHATIS/curl.md#windows)
 
 1. Install Senzing API.
    Example:
@@ -28,4 +27,6 @@ The following are examples showing how to develop Go programs for Senzing on Win
 ## Prepare Development environment
 
 1. Prerequisite software
-    1. [VS Code]()
+    1. [git](../WHATIS/git.md#windows)
+    1. [make](../WHATIS/make.md)
+    1. [Visual Studio Code](../WHATIS/visual-studio-code.md#windows)

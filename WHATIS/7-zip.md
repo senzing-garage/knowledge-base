@@ -17,10 +17,13 @@
    1. Example: [7z2301-x64.exe](https://www.7-zip.org/a/7z2301-x64.exe)
 
 1. Run installer
+    1. Option #1 - Run installer from command line
 
     ```console
     %USERPROFILE%\Downloads\7z2301-x64.exe
     ```
+
+    1. Option #2 - Run installer from Desktop
 
 ## Test
 
