@@ -1,0 +1,35 @@
+# What is 7-zip
+
+> 7-Zip is a file archiver with a high compression ratio.
+> -- *[7-Zip site](https://www.7-zip.org/)*
+
+## Install
+
+### CentOS
+
+### Ubuntu
+
+### macOS
+
+### Windows
+
+1. [Download](https://www.7-zip.org/download.html) to `%USERPROFILE%\Downloads`
+   1. Example: [7z2301-x64.exe](https://www.7-zip.org/a/7z2301-x64.exe)
+
+1. Run installer
+
+    ```console
+    %USERPROFILE%\Downloads\7z2301-x64.exe
+    ```
+
+## Test
+
+1. Test
+
+    ```console
+    "%ProgramFiles%\7-Zip\7z.exe"
+    ```
+
+## Troubleshooting
+
+## References
