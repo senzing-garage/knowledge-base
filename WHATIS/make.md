@@ -24,6 +24,17 @@ Instructions for installing [make](https://www.gnu.org/software/make).
 
 ### Windows
 
+1. On Windows 10 or 11
+    1. Install binaries.
+       Example:
+
+        ```console
+        winget install GnuWin32.Make
+        ```
+
+    1. Add `C:\Program Files (x86)\GnuWin32\bin` to `PATH`.
+       See [Add to the PATH on Windows 10 and Windows 11](https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/)
+
 ## Test
 
 1. Test
