@@ -27,7 +27,7 @@ The following are examples showing how to develop Go programs for Senzing on Win
 
 1. Prerequisite software
     1. [git](../WHATIS/git.md#windows)
-    1. [go](../WHATIS/go.md#windows))
+    1. [go](../WHATIS/go.md#install)
     1. [make](../WHATIS/make.md#windows)
     1. [Visual Studio Code](../WHATIS/visual-studio-code.md#windows)
 
