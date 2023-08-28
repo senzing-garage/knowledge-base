@@ -26,7 +26,7 @@ The following are examples showing how to develop Go programs for Senzing on Win
 ## Prepare Development environment
 
 1. Prerequisite software
-    1. [MSYS2](../WHATIS/msys2.md#windows)
+    1. [MSYS2](../WHATIS/msys2.md#windows) - Used to install `gcc`
     1. [gcc](../WHATIS/gcc.md#windows)
     1. [git](../WHATIS/git.md#windows)
     1. [go](../WHATIS/go.md#install)
