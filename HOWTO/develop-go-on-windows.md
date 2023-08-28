@@ -9,7 +9,6 @@ The following are examples showing how to develop Go programs for Senzing on Win
 ## Install Senzing API
 
 1. The following steps require Windows 10 version 20H2 or higher.
-
 1. Install Senzing API.
    In a Command Prompt, "Run as administrator".
    Example:
@@ -26,16 +25,24 @@ The following are examples showing how to develop Go programs for Senzing on Win
 ## Prepare Development environment
 
 1. Prerequisite software
-    1. [MSYS2](../WHATIS/msys2.md#windows) - Used to install `gcc`
     1. [gcc](../WHATIS/gcc.md#windows)
     1. [git](../WHATIS/git.md#windows)
     1. [go](../WHATIS/go.md#install)
     1. [make](../WHATIS/make.md#windows)
     1. [Visual Studio Code](../WHATIS/visual-studio-code.md#windows)
-
+1. Add `C:\Program Files\Senzing\g2\lib` to `Path` system variable.
+   See [Add to the PATH on Windows 10 and Windows 11](https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/)
 1. Create directory for Senzing repositories.
    Example:
 
     ```console
     mkdir %HOMEPATH%\senzing.git
+    ```
+
+1. Clone repository(s).
+   Example:
+
+    ```console
+    cd %HOMEPATH%\senzing.git
+    git clone https://github.com/Senzing/g2-sdk-go.git
     ```
