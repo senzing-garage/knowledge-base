@@ -10,5 +10,3 @@
 ## References
 
 1. [Go Homepage](https://go.dev/)
-
-
