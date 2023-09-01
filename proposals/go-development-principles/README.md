@@ -34,13 +34,14 @@
     1. Format: `g2-sdk-xxxxxx`
     1. This is to match non-Golang repositories like:
         1. [g2-sdk-java](https://github.com/Senzing/g2-sdk-java)
+        1. [g2-sdk-json-type-definition](https://github.com/Senzing/g2-sdk-json-type-definition)
         1. [g2-sdk-proto](https://github.com/Senzing/g2-sdk-proto)
         1. [g2-sdk-python](https://github.com/Senzing/g2-sdk-python)
     1. Examples:
-        1. [g2-sdk-go](https://github.com/Senzing/g2-sdk-go)
         1. [g2-sdk-go-base](https://github.com/Senzing/g2-sdk-go-base)
         1. [g2-sdk-go-grpc](https://github.com/Senzing/g2-sdk-go-grpc)
         1. [g2-sdk-go-mock](https://github.com/Senzing/g2-sdk-go-mock)
+        1. [g2-sdk-go](https://github.com/Senzing/g2-sdk-go)
 1. General
     1. Format: `go-xxxxxx`
     1. Examples:
