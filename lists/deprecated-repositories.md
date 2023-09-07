@@ -2,6 +2,7 @@
 
 | Deprecated | Hidden     | Repository                                   |
 |------------|------------|----------------------------------------------|
+|            | 2023-09-07 | mapper-sayari - Hidden at Will's request     |
 | 2023-08-09 |            | mapper-openc                                 |
 | 2023-06-19 |            | packer-senzing-demo-ubuntu-18.04             |
 | 2023-06-19 |            | ready-for-senzing                            |
