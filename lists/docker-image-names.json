@@ -119,6 +119,9 @@
     "senzing/init-container": {
         "environment_variable": "SENZING_DOCKER_IMAGE_VERSION_INIT_CONTAINER"
     },
+    "senzing/init-database": {
+        "environment_variable": "SENZING_DOCKER_IMAGE_VERSION_INIT_DATABASE"
+    },
     "senzing/init-mysql": {
         "environment_variable": "SENZING_DOCKER_IMAGE_VERSION_INIT_MYSQL"
     },
@@ -172,6 +175,12 @@
     },
     "senzing/senzingapi-tools": {
         "environment_variable": "SENZING_DOCKER_IMAGE_VERSION_SENZINGAPI_TOOLS"
+    },
+    "senzing/serve-chat": {
+        "environment_variable": "SENZING_DOCKER_IMAGE_VERSION_SERVE_CHAT"
+    },
+    "senzing/serve-grpc": {
+        "environment_variable": "SENZING_DOCKER_IMAGE_VERSION_SERVE_GRPC"
     },
     "senzing/sshd": {
         "environment_variable": "SENZING_DOCKER_IMAGE_VERSION_SSHD"
