@@ -46,14 +46,17 @@ senzing/senzing-tools
 senzing/senzing-tutorial-in-python
 senzing/senzingapi-runtime
 senzing/senzingapi-tools
+senzing/serve-chat
 senzing/serve-grpc
 senzing/sshd
 senzing/store-based-image
 senzing/stream-loader
 senzing/stream-logger
 senzing/stream-producer
+senzing/template-go
 senzing/terraform-aws
 senzing/test
+senzing/test-ground
 senzing/test-layers
 senzing/web-app-demo
 senzing/xterm
