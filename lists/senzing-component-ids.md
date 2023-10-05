@@ -103,7 +103,7 @@ Used in log message identifiers in the format `senzing-ppppnnnnt`, where:
 1. **6421** - github.com/senzing/go-databasing/connector
 1. **6422** - github.com/senzing/go-databasing/sqlexecutor
 1. **6423** - github.com/senzing/go-databasing/postgresql
-1. **6424** - github.com/senzing/go-databasing/schemachecker
+1. **6424** - github.com/senzing/go-databasing/checker
 1. **6441** - github.com/senzing/go-logging/
 1. **6461** - github.com/senzing/go-observing/notifier
 1. **6462** - github.com/senzing/go-observing/observer
