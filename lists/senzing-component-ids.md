@@ -33,14 +33,20 @@ Used in log message identifiers in the format `senzing-ppppnnnnt`, where:
 1. **5024** - [docker-xterm](https://github.com/Senzing/docker-xterm)
 1. **5025** - [senzing-api-server](https://github.com/Senzing/senzing-api-server)
 1. **5026** - [senzing-poc-server](https://github.com/Senzing/senzing-poc-server)
-1. **5027** - [G2Engine](https://github.com/Senzing/g2-sdk-python/blob/main/src/senzing/G2Engine.py)
+1. **5027** - G2Engine - migrated to 5043
 1. **5028** - [docker-compose-air-gapper](https://github.com/Senzing/docker-compose-air-gapper)
 1. **5029** - [ready-for-senzing](https://github.com/Senzing/ready-for-senzing)
 1. **5030** - [init-postgresql](https://github.com/Senzing/init-postgresql)
 1. **5031** - [init-mysql](https://github.com/Senzing/init-mysql)
 1. **5032** - [keystore-generator](https://github.com/Senzing/keystore-generator)
 1. **5032** - [init-mssql](https://github.com/Senzing/init-mssql)
-1. **5033** - [G2Exception](https://github.com/Senzing/g2-sdk-python/blob/main/src/senzing/G2Exception.py)
+1. **5040** - [G2Config](https://github.com/Senzing/g2-sdk-python/blob/main/src/senzing/G2Config.py)
+1. **5041** - [G2Configmgr](https://github.com/Senzing/g2-sdk-python/blob/main/src/senzing/G2ConfigMgr.py)
+1. **5042** - [G2Diagnostic](https://github.com/Senzing/g2-sdk-python/blob/main/src/senzing/G2Diagnostic.py)
+1. **5043** - [G2Engine](https://github.com/Senzing/g2-sdk-python/blob/main/src/senzing/G2Engine.py)
+1. **5044** - [G2Exception](https://github.com/Senzing/g2-sdk-python/blob/main/src/senzing/G2Exception.py)
+1. **5045** - [G2Hasher](https://github.com/Senzing/g2-sdk-python/blob/main/src/senzing/G2Hasher.py)
+1. **5046** - [G2Product](https://github.com/Senzing/g2-sdk-python/blob/main/src/senzing/G2Product.py)
 
 ## Go SDK and apps
 
@@ -94,7 +100,6 @@ Used in log message identifiers in the format `senzing-ppppnnnnt`, where:
 1. **6206** - github.com/senzing/shuffle
 1. **6207** - github.com/senzing/observe
 
-
 ### Reusable packages
 
 1. **6401** - github.com/senzing/go-common/engineconfigurationparser
@@ -117,5 +122,3 @@ Used in log message identifiers in the format `senzing-ppppnnnnt`, where:
 1. **6601** - github.com/senzing/load/loader
 1. **6602** - github.com/senzing/move/mover
 1. **6620** - github.com/senzing/serve-chat/senzingchatserver
-
-
