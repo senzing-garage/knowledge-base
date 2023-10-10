@@ -33,13 +33,14 @@ Used in log message identifiers in the format `senzing-ppppnnnnt`, where:
 1. **5024** - [docker-xterm](https://github.com/Senzing/docker-xterm)
 1. **5025** - [senzing-api-server](https://github.com/Senzing/senzing-api-server)
 1. **5026** - [senzing-poc-server](https://github.com/Senzing/senzing-poc-server)
-1. **5027** - [G2Engine](https://github.com/Senzing/g2engine)
+1. **5027** - [G2Engine](https://github.com/Senzing/g2-sdk-python/blob/main/src/senzing/G2Engine.py)
 1. **5028** - [docker-compose-air-gapper](https://github.com/Senzing/docker-compose-air-gapper)
 1. **5029** - [ready-for-senzing](https://github.com/Senzing/ready-for-senzing)
 1. **5030** - [init-postgresql](https://github.com/Senzing/init-postgresql)
 1. **5031** - [init-mysql](https://github.com/Senzing/init-mysql)
 1. **5032** - [keystore-generator](https://github.com/Senzing/keystore-generator)
 1. **5032** - [init-mssql](https://github.com/Senzing/init-mssql)
+1. **5033** - [G2Exception](https://github.com/Senzing/g2-sdk-python/blob/main/src/senzing/G2Exception.py)
 
 ## Go SDK and apps
 
