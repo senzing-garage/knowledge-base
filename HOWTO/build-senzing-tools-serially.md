@@ -10,7 +10,6 @@
     1. [ ] [go-logging](https://github.com/senzing/go-logging)
 1. Requires: go-observing
     1. [ ] [g2-sdk-go](https://github.com/senzing/g2-sdk-go)
-    1. [ ] [observe](https://github.com/senzing/observe)
 1. Requires: go-logging
     1. [ ] [go-common](https://github.com/senzing/go-common)
     1. [ ] [go-databasing](https://github.com/senzing/go-databasing)
@@ -24,6 +23,7 @@
 1. Requires: go-cmdhelping
     1. [ ] [explain](https://github.com/Senzing/explain)
     1. [ ] [move](https://github.com/Senzing/move)
+    1. [ ] [observe](https://github.com/senzing/observe)
     1. [ ] [template-go](https://github.com/Senzing/template-go)
     1. [ ] [validate](https://github.com/Senzing/validate)
 1. Requires: g2-sdk-go-base
