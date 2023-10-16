@@ -1,6 +1,7 @@
 # How to build senzing-tools serially
 
 1. No dependencies
+    1. [ ] [g2-sdk-json-type-definition](https://github.com/Senzing/g2-sdk-json-type-definition)
     1. [ ] [g2-sdk-proto/go](https://github.com/senzing/g2-sdk-proto/go)
     1. [ ] [go-grpcing](https://github.com/senzing/go-grpcing)
     1. [ ] [go-messaging](https://github.com/senzing/go-messaging)
