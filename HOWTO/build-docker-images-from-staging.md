@@ -179,28 +179,6 @@
     docker push senzing/sshd:staging
     ```
 
-### senzing/entity-search-web-app-console
-
-1. Build `senzing/entity-search-web-app-console:staging`.
-   Example:
-
-    ```console
-    docker pull senzing/senzingapi-tools:staging
-
-    docker build \
-        --build-arg BASE_IMAGE=senzing/senzingapi-tools:staging \
-        --no-cache \
-        --tag senzing/entity-search-web-app-console:staging \
-        https://github.com/senzing/entity-search-web-app-console.git#main
-    ```
-
-1. Push to DockerHub.
-   Example:
-
-    ```console
-    docker push senzing/entity-search-web-app-console:staging
-    ```
-
 ### senzing/xterm
 
 1. Build `senzing/xterm:staging`.
