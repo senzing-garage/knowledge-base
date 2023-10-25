@@ -164,13 +164,14 @@ Requires Admin access.
 1. On repository home page, click `Settings` tab.
 1. In `Pull Requests` section
     1. :ballot_box_with_check: `Allow auto-merge`
+    1. :ballot_box_with_check: `Automatically delete head branches`
 
 #### Allow GitHub Actions to create and approve pull requests
 
 1. On repository home page, click `Settings` tab.
 1. In left side navigation bar, click `Actions` > `General`.
     1. :ballot_box_with_check: `Allow GitHub Actions to create and approve pull requests`
-    1. Click `Save` button.
+1. Click `Save` button.
 
 #### Add Dependabot Required Status Check
 
