@@ -2665,17 +2665,26 @@
 
 ### SENZING_TOOLS_INPUT_FILE_TYPE
 
-1. Synopsis:
-1. Values:
-1. Examples:
+1. Synopsis: File type to treat the specificed input file (given by SENZING_TOOLS_INPUT_URL) as.
+1. Example: JSONL
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_INPUT_FILE_TYPE&type=code)
 
 ### SENZING_TOOLS_INPUT_URL
 
-1. Synopsis:
-1. Values:
+1. Synopsis: Input URL used for processing.
+1. Values: valid URL
 1. Examples:
+    1. file:///path/to/json/lines/file.jsonl
+    1. https://public-read-access.s3.amazonaws.com/TestDataSets/SenzingTruthSet/truth-set-3.0.0.jsonl
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_INPUT_URL&type=code)
+
+### SENZING_TOOLS_JSON_OUTPUT
+
+1. Synopsis: Output log messages as JSON.
+1. Values:
+    1. true
+    1. false
+1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_IJSON_OUTPUT&type=code)
 
 ### SENZING_TOOLS_LICENSE_STRING_BASE64
 
