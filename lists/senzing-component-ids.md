@@ -47,6 +47,7 @@ Used in log message identifiers in the format `senzing-ppppnnnnt`, where:
 1. **5044** - [G2Exception](https://github.com/Senzing/g2-sdk-python/blob/main/src/senzing/g23xception.py)
 1. **5045** - [G2Hasher](https://github.com/Senzing/g2-sdk-python/blob/main/src/senzing/g2hasher.py)
 1. **5046** - [G2Product](https://github.com/Senzing/g2-sdk-python/blob/main/src/senzing/g2product.py)
+1. **5047** - [g2version](https://github.com/Senzing/g2-sdk-python/blob/main/src/senzing/g2version.py)
 1. **5050** - [G2ConfigGrpc](https://github.com/Senzing/g2-sdk-python/blob/main/src/senzing/g2config_grpc.py)
 1. **5051** - [G2ConfigmgrGrpc](https://github.com/Senzing/g2-sdk-python/blob/main/src/senzing/g2configmgr_grpc.py)
 1. **5052** - [G2DiagnosticGrpc](https://github.com/Senzing/g2-sdk-python/blob/main/src/senzing/g2diagnostic_grpc.py)
