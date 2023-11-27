@@ -1,3 +1,7 @@
+# Proposal for migrating non-customer repositories to a senzing-xxxx GitHub organization
+
+## Proposed result
+
 | Repository | Senzing | senzing-xxxx | Description | Notes |
 |------------|:-------:|:------------:|-------------|-------|
 | [awesome](https://github.com/Senzing/awesome) | :white_check_mark: | | Curated list of awesome software and resources for Senzing, The First Real-Time AI for Entity Resolution. | Needs to be massively updated|
