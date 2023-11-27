@@ -96,7 +96,7 @@
 | [github-action-docker-buildx-build](https://github.com/Senzing/github-action-docker-buildx-build) || :ballot_box_with_check: | GitHub Action for using Docker buildx command |  Perhaps in [senzing-factory](https://github.com/senzing-factory) |
 | [github-action-identify-customer](https://github.com/Senzing/github-action-identify-customer) || :ballot_box_with_check:  | A GitAction for determining if a customer submitted the issue. |  Perhaps in [senzing-factory](https://github.com/senzing-factory)|
 | [github-action-install-senzing-api](https://github.com/Senzing/github-action-install-senzing-api) | :white_check_mark: | | GitHub Action for installing Senzing API | |
-| [github-action-make-go-github-file](https://github.com/Senzing/github-action-make-go-github-file) | :ballot_box_with_check: | | Make a version.go file |  Perhaps in [senzing-factory](https://github.com/senzing-factory) |
+| [github-action-make-go-github-file](https://github.com/Senzing/github-action-make-go-github-file) || :ballot_box_with_check:  | Make a version.go file |  Perhaps in [senzing-factory](https://github.com/senzing-factory) |
 | [github-action-make-go-tag](https://github.com/Senzing/github-action-make-go-tag) || :ballot_box_with_check: | From the Semantic Version, create a v0.0.0 tag for the Go module version |  Perhaps in [senzing-factory](https://github.com/senzing-factory) |
 | [github-util](https://github.com/Senzing/github-util) || :white_check_mark: | Works with GitHub metadata. | |
 | [go-cmdhelping](https://github.com/Senzing/go-cmdhelping) || :white_check_mark:  | Helpers for using cobra and viper | |
