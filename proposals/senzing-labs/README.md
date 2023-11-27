@@ -70,7 +70,7 @@
 | [g2-sdk-proto](https://github.com/Senzing/g2-sdk-proto) | :white_check_mark: | | Proto files for the G2 Software Development Kit | |
 | [g2-sdk-python-grpc](https://github.com/Senzing/g2-sdk-python-grpc) | :white_check_mark: | | An SDK for calling the Senzing C library via gRPC network requests. | |
 | [g2-sdk-python-next](https://github.com/Senzing/g2-sdk-python-next) | :white_check_mark: | | [Development] Forthcoming major revision of Senzing Python SDK | |
-| [g2-sdk-python](https://github.com/Senzing/g2-sdk-python) | :white_check_mark: | | Python SDK hosted on PYPI. | |
+| [g2-sdk-python](https://github.com/Senzing/g2-sdk-python) | :white_check_mark: | | Senzing Python SDK V3 | |
 | [g2anon](https://github.com/Senzing/g2anon) | :white_check_mark: | | Python SDK for G2Anonymizer | |
 | [g2audit](https://github.com/Senzing/g2audit) | :white_check_mark: | | Distributed with Senzing API package | |
 | [g2command](https://github.com/Senzing/g2command) | :white_check_mark: | | Distributed with Senzing API package | |
