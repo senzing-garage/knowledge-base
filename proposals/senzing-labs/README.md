@@ -9,10 +9,10 @@
 | [aws-cloudformation-webapp-demo](https://github.com/Senzing/aws-cloudformation-webapp-demo) || :white_check_mark: | Senzing WebApp demo for AWS. | |
 | [aws-lambda-cognito-authorizer](https://github.com/Senzing/aws-lambda-cognito-authorizer) || :white_check_mark: | Lambda function for authorizing via AWS Cognito | |
 | [aws-lambda-self-signed-certificate](https://github.com/Senzing/aws-lambda-self-signed-certificate) || :white_check_mark:  | Creates a self-signed SSL certificate for AWS demonstrations. | |
-| [aws-marketplace-evaluation](https://github.com/Senzing/aws-marketplace-evaluation) | :white_check_mark: | | AWS Marketplace offering. | |
+| [aws-marketplace-evaluation](https://github.com/Senzing/aws-marketplace-evaluation) | :question: | | AWS Marketplace offering. | Not sure about this. |
 | [azure-template-aks-poc-simple](https://github.com/Senzing/azure-template-aks-poc-simple) || :white_check_mark:  | An Azure ARM template for bringing up Senzing on Kubernetes (AKS) | |
 | [bizname-research](https://github.com/Senzing/bizname-research) || :white_check_mark:  | [Research] Determine language/country origin of business name | Current research |
-| [build-resources](https://github.com/Senzing/build-resources) || :ballot_box_with_check: | | Collection of utilities to aid with build process | Perhaps in [senzing-factory](https://github.com/senzing-factory)|
+| [build-resources](https://github.com/Senzing/build-resources) || :ballot_box_with_check: | Collection of utilities to aid with build process | Perhaps in [senzing-factory](https://github.com/senzing-factory) |
 | [charts](https://github.com/Senzing/charts) || :white_check_mark:  | Helm Charts for use with Kubernetes, OpenShift, and Rancher. | |
 | [check-self](https://github.com/Senzing/check-self) || :white_check_mark:  | Checks environment | |
 | [code-snippets](https://github.com/Senzing/code-snippets) | :white_check_mark: | | Task based code snippet examples. | |
@@ -38,7 +38,7 @@
 | [docker-installer](https://github.com/Senzing/docker-installer) || :white_check_mark:  | Dockerfile use to install Senzing in a non-root container. | |
 | [docker-mysql-init](https://github.com/Senzing/docker-mysql-init) || :white_check_mark:  | Dockerfile for initializing mysql database with a one-time command. | |
 | [docker-python-demo](https://github.com/Senzing/docker-python-demo) || :white_check_mark:  | Dockerfile demonstrating simple Flask app using Senzing. | |
-| [docker-senzing-base](https://github.com/Senzing/docker-senzing-base) | :white_check_mark: | | Dockerfile used in FROM statements. | |
+| [docker-senzing-base](https://github.com/Senzing/docker-senzing-base) || :white_check_mark:  | Dockerfile used in FROM statements. | |
 | [docker-senzing-console](https://github.com/Senzing/docker-senzing-console) || :white_check_mark:  | Docker-based console enabled for interacting with Senzing programs. | |
 | [docker-sshd](https://github.com/Senzing/docker-sshd) || :white_check_mark:  | Dockerfile wrapping `sshd`. | |
 | [docker-terraform-aws](https://github.com/Senzing/docker-terraform-aws) || :white_check_mark:  | :construction: [Under construction]  | |
