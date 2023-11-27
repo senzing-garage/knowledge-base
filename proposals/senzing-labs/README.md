@@ -1,4 +1,4 @@
-# Proposal for migrating non-customer repositories to a senzing-xxxx GitHub organization
+# Proposal for migrating non-customer-oriented repositories
 
 ## Proposed result
 
