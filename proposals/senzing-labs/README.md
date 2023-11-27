@@ -1,4 +1,4 @@
-| Repository | Senzing | senzing-labs | Description | Notes |
+| Repository | Senzing | senzing-xxxx | Description | Notes |
 |------------|:-------:|:------------:|-------------|-------|
 | [awesome](https://github.com/Senzing/awesome) | :white_check_mark: | | Curated list of awesome software and resources for Senzing, The First Real-Time AI for Entity Resolution. | Needs to be massively updated|
 | [aws-cloudformation-database-cluster](https://github.com/Senzing/aws-cloudformation-database-cluster) || :white_check_mark:  | AWS Cloudformation with VPC and Senzing database cluster | |
@@ -182,3 +182,10 @@
 | [truth-sets](https://github.com/Senzing/truth-sets) | :white_check_mark: | | Distributed with Senzing API package | |
 | [validate](https://github.com/Senzing/validate) || :white_check_mark:  | A CLI tool for validating data | |
 | [video](https://github.com/Senzing/video) || :white_check_mark:  | Videos available at http://senzing.com/video | |
+
+
+## Ramifications
+
+1. Links between repositories need to be updated.
+1. Not sure a Kan-Ban board can span GitHub organizations for scrum.
+1. GitHub Actions may need to be updated.
