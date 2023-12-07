@@ -114,14 +114,14 @@
 | [go-rest-api-service](https://github.com/Senzing/go-rest-api-service) || :white_check_mark:  || [in-progress] Go package implementation of API server | |
 | [go-sdk-abstract-factory](https://github.com/Senzing/go-sdk-abstract-factory) || :white_check_mark:  || An abstract factory for objects of the <https://github.com/Senzing/g2-sdk-go> interface. | |
 | [governor-postgresql-transaction-id](https://github.com/Senzing/governor-postgresql-transaction-id) | :white_check_mark: ||| Governor plugin for PostgreSQL transaction IDs. | |
-| [ibm-openshift-guide](https://github.com/Senzing/ibm-openshift-guide) | :question: | | Demonstrate Senzing stack using OpenShift and IBM Db2. | Not sure about this one |
+| [ibm-openshift-guide](https://github.com/Senzing/ibm-openshift-guide) | :question: ||| Demonstrate Senzing stack using OpenShift and IBM Db2. | Not sure about this one |
 | [images](https://github.com/Senzing/images) | :white_check_mark: ||| Images used across repositories. | |
 | [init-database](https://github.com/Senzing/init-database) || :white_check_mark:  || Initialize database with Senzing schema and configuration | |
 | [init-mssql](https://github.com/Senzing/init-mssql) || :white_check_mark:  || Initialize an MS SQL database with Senzing schema and configuration | |
 | [init-mysql](https://github.com/Senzing/init-mysql) || :white_check_mark:  || Initialize a MySQL database with Senzing schema and configuration | |
 | [init-postgresql](https://github.com/Senzing/init-postgresql) || :white_check_mark:  || Initialize a PostgreSQL database with Senzing schema and configuration | |
 | [keystore-generator](https://github.com/Senzing/keystore-generator) || :white_check_mark:  || Generates SSL keys | |
-| [knowledge-base](https://github.com/Senzing/knowledge-base) | :white_check_mark: | :white_check_mark:  | HOWTOs, tasks, explanations, and more knowledge. | Perhaps have a knowledge base in each Git Organization |
+| [knowledge-base](https://github.com/Senzing/knowledge-base) | :white_check_mark: | :white_check_mark:  || HOWTOs, tasks, explanations, and more knowledge. | Perhaps have a knowledge base in each Git Organization |
 | [kubernetes-demo](https://github.com/Senzing/kubernetes-demo) || :white_check_mark:  || Demonstrate Senzing stack using Kubernetes. | |
 | [libpostal-data](https://github.com/Senzing/libpostal-data) | :white_check_mark: ||| Information about libpostal work done by Senzing. | |
 | [libpostal](https://github.com/Senzing/libpostal) | :white_check_mark: ||| A C library for parsing/normalizing street addresses around the world. Powered by statistical NLP and open geo data. | |
