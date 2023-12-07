@@ -64,7 +64,7 @@
 | [evaluate](https://github.com/Senzing/evaluate) || :white_check_mark: || Information for evaluating Senzing at <http://senzing.com/evaluate> | |
 | [explain](https://github.com/Senzing/explain) || :white_check_mark: || A CLI tool for explaining errors | |
 | [file-loader](https://github.com/Senzing/file-loader) || :white_check_mark: || Utility to load mapped JSON data and process redo records after loading. | |
-| [g2-python](https://github.com/Senzing/g2-python) | :white_check_mark: ||| Tools found at g2/python in the SenzingAPI package. | |
+| [g2-python](https://github.com/Senzing/g2-python) | :white_check_mark: ||| Tools found at g2/python in the SenzingAPI package. | May no longer be needed. |
 | [g2-sdk-go-base](https://github.com/Senzing/g2-sdk-go-base) | :white_check_mark: ||| An SDK for calling the Senzing C library locally. | |
 | [g2-sdk-go-grpc](https://github.com/Senzing/g2-sdk-go-grpc) | :white_check_mark: ||| An SDK for calling the Senzing C library via gRPC network requests. | |
 | [g2-sdk-go-mock](https://github.com/Senzing/g2-sdk-go-mock) | :white_check_mark: ||| A mock object for the <https://github.com/Senzing/g2-sdk-go> interface. | |
@@ -114,7 +114,7 @@
 | [go-rest-api-service](https://github.com/Senzing/go-rest-api-service) || :white_check_mark: || [in-progress] Go package implementation of API server | |
 | [go-sdk-abstract-factory](https://github.com/Senzing/go-sdk-abstract-factory) || :white_check_mark: || An abstract factory for objects of the <https://github.com/Senzing/g2-sdk-go> interface. | |
 | [governor-postgresql-transaction-id](https://github.com/Senzing/governor-postgresql-transaction-id) | :white_check_mark: ||| Governor plugin for PostgreSQL transaction IDs. | |
-| [ibm-openshift-guide](https://github.com/Senzing/ibm-openshift-guide) | :question: ||| Demonstrate Senzing stack using OpenShift and IBM Db2. | Not sure about this one |
+| [ibm-openshift-guide](https://github.com/Senzing/ibm-openshift-guide) || :white_check_mark: || Demonstrate Senzing stack using OpenShift and IBM Db2. | |
 | [images](https://github.com/Senzing/images) | :white_check_mark: ||| Images used across repositories. | |
 | [init-database](https://github.com/Senzing/init-database) || :white_check_mark: || Initialize database with Senzing schema and configuration | |
 | [init-mssql](https://github.com/Senzing/init-mssql) || :white_check_mark: || Initialize an MS SQL database with Senzing schema and configuration | |
