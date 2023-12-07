@@ -95,13 +95,13 @@
 | [g2setupconfig](https://github.com/Senzing/g2setupconfig) | :white_check_mark: ||| Distributed with Senzing API package | |
 | [g2snapshot](https://github.com/Senzing/g2snapshot) | :white_check_mark: ||| Distributed with Senzing API package | |
 | [g2updateproject](https://github.com/Senzing/g2updateproject) | :white_check_mark: ||| Distributed with Senzing API package | |
-| [git-action-slack-notification](https://github.com/Senzing/git-action-slack-notification) ||| :ballot_box_with_check:  | GitHub Action for notifying Slack | Perhaps in [senzing-factory](https://github.com/senzing-factory) |
-| [github-action-add-issue-to-project](https://github.com/Senzing/github-action-add-issue-to-project) ||| :ballot_box_with_check: | A GitHub Action for adding an issue to projects. |  Perhaps in [senzing-factory](https://github.com/senzing-factory) |
-| [github-action-docker-buildx-build](https://github.com/Senzing/github-action-docker-buildx-build) ||| :ballot_box_with_check: | GitHub Action for using Docker buildx command |  Perhaps in [senzing-factory](https://github.com/senzing-factory) |
-| [github-action-identify-customer](https://github.com/Senzing/github-action-identify-customer) ||| :ballot_box_with_check:  | A GitAction for determining if a customer submitted the issue. |  Perhaps in [senzing-factory](https://github.com/senzing-factory)|
+| [git-action-slack-notification](https://github.com/Senzing/git-action-slack-notification) ||| :white_check_mark:  | GitHub Action for notifying Slack | Perhaps in [senzing-factory](https://github.com/senzing-factory) |
+| [github-action-add-issue-to-project](https://github.com/Senzing/github-action-add-issue-to-project) ||| :white_check_mark: | A GitHub Action for adding an issue to projects. |  Perhaps in [senzing-factory](https://github.com/senzing-factory) |
+| [github-action-docker-buildx-build](https://github.com/Senzing/github-action-docker-buildx-build) ||| :white_check_mark: | GitHub Action for using Docker buildx command |  Perhaps in [senzing-factory](https://github.com/senzing-factory) |
+| [github-action-identify-customer](https://github.com/Senzing/github-action-identify-customer) ||| :white_check_mark:  | A GitAction for determining if a customer submitted the issue. |  Perhaps in [senzing-factory](https://github.com/senzing-factory)|
 | [github-action-install-senzing-api](https://github.com/Senzing/github-action-install-senzing-api) | :white_check_mark: ||| GitHub Action for installing Senzing API | |
-| [github-action-make-go-github-file](https://github.com/Senzing/github-action-make-go-github-file) ||| :ballot_box_with_check:  | Make a version.go file |  Perhaps in [senzing-factory](https://github.com/senzing-factory) |
-| [github-action-make-go-tag](https://github.com/Senzing/github-action-make-go-tag) ||| :ballot_box_with_check: | From the Semantic Version, create a v0.0.0 tag for the Go module version |  Perhaps in [senzing-factory](https://github.com/senzing-factory) |
+| [github-action-make-go-github-file](https://github.com/Senzing/github-action-make-go-github-file) ||| :white_check_mark:  | Make a version.go file |  Perhaps in [senzing-factory](https://github.com/senzing-factory) |
+| [github-action-make-go-tag](https://github.com/Senzing/github-action-make-go-tag) ||| :white_check_mark: | From the Semantic Version, create a v0.0.0 tag for the Go module version |  Perhaps in [senzing-factory](https://github.com/senzing-factory) |
 | [github-util](https://github.com/Senzing/github-util) || :white_check_mark: || Works with GitHub metadata. | |
 | [go-cmdhelping](https://github.com/Senzing/go-cmdhelping) || :white_check_mark:  || Helpers for using cobra and viper | |
 | [go-common](https://github.com/Senzing/go-common) || :white_check_mark: || Reusable, small components. | |
