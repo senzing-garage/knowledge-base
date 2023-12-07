@@ -6,12 +6,12 @@
 |------------|:-------:|:----------------:|:---------------:|-------------|-------|
 | [awesome](https://github.com/Senzing/awesome) | :white_check_mark: ||| Curated list of awesome software and resources for Senzing, The First Real-Time AI for Entity Resolution. | Needs to be massively updated|
 | [aws-cloudformation-database-cluster](https://github.com/Senzing/aws-cloudformation-database-cluster) || :white_check_mark:  || AWS Cloudformation with VPC and Senzing database cluster | |
-| [aws-cloudformation-dev-rest](https://github.com/Senzing/aws-cloudformation-dev-rest) || :white_check_mark: | AWS Cloudformation for developers using Senzing HTTP REST API | |
-| [aws-cloudformation-ecs-senzing-stack-basic](https://github.com/Senzing/aws-cloudformation-ecs-senzing-stack-basic) || :white_check_mark: | AWS Cloudformation demonstrating a Senzing stack that can be used with aws-cloudformation-database-cluster. | |
-| [aws-cloudformation-ecs](https://github.com/Senzing/aws-cloudformation-ecs) || :white_check_mark: | :no_entry: [DEPRECATED] Contains deprecated AWS Cloudformation templates | |
-| [aws-cloudformation-performance-testing](https://github.com/Senzing/aws-cloudformation-performance-testing) || :white_check_mark: | Senzing AWS performance testing project. | |
-| [aws-cloudformation-webapp-demo](https://github.com/Senzing/aws-cloudformation-webapp-demo) || :white_check_mark: | Senzing WebApp demo for AWS. | |
-| [aws-lambda-cognito-authorizer](https://github.com/Senzing/aws-lambda-cognito-authorizer) || :white_check_mark: | Lambda function for authorizing via AWS Cognito | |
+| [aws-cloudformation-dev-rest](https://github.com/Senzing/aws-cloudformation-dev-rest) || :white_check_mark: ||| AWS Cloudformation for developers using Senzing HTTP REST API | |
+| [aws-cloudformation-ecs-senzing-stack-basic](https://github.com/Senzing/aws-cloudformation-ecs-senzing-stack-basic) || :white_check_mark: || AWS Cloudformation demonstrating a Senzing stack that can be used with aws-cloudformation-database-cluster. | |
+| [aws-cloudformation-ecs](https://github.com/Senzing/aws-cloudformation-ecs) || :white_check_mark: ||| :no_entry: [DEPRECATED] Contains deprecated AWS Cloudformation templates | |
+| [aws-cloudformation-performance-testing](https://github.com/Senzing/aws-cloudformation-performance-testing) || :white_check_mark: || Senzing AWS performance testing project. | |
+| [aws-cloudformation-webapp-demo](https://github.com/Senzing/aws-cloudformation-webapp-demo) || :white_check_mark: || Senzing WebApp demo for AWS. | |
+| [aws-lambda-cognito-authorizer](https://github.com/Senzing/aws-lambda-cognito-authorizer) || :white_check_mark: || Lambda function for authorizing via AWS Cognito | |
 | [aws-lambda-self-signed-certificate](https://github.com/Senzing/aws-lambda-self-signed-certificate) || :white_check_mark:  || Creates a self-signed SSL certificate for AWS demonstrations. | |
 | [aws-marketplace-evaluation](https://github.com/Senzing/aws-marketplace-evaluation) | :question: | | AWS Marketplace offering. | Not sure about this. |
 | [azure-template-aks-poc-simple](https://github.com/Senzing/azure-template-aks-poc-simple) || :white_check_mark:  || An Azure ARM template for bringing up Senzing on Kubernetes (AKS) | |
@@ -102,9 +102,9 @@
 | [github-action-install-senzing-api](https://github.com/Senzing/github-action-install-senzing-api) | :white_check_mark: ||| GitHub Action for installing Senzing API | |
 | [github-action-make-go-github-file](https://github.com/Senzing/github-action-make-go-github-file) || :ballot_box_with_check:  | Make a version.go file |  Perhaps in [senzing-factory](https://github.com/senzing-factory) |
 | [github-action-make-go-tag](https://github.com/Senzing/github-action-make-go-tag) || :ballot_box_with_check: | From the Semantic Version, create a v0.0.0 tag for the Go module version |  Perhaps in [senzing-factory](https://github.com/senzing-factory) |
-| [github-util](https://github.com/Senzing/github-util) || :white_check_mark: | Works with GitHub metadata. | |
+| [github-util](https://github.com/Senzing/github-util) || :white_check_mark: || Works with GitHub metadata. | |
 | [go-cmdhelping](https://github.com/Senzing/go-cmdhelping) || :white_check_mark:  || Helpers for using cobra and viper | |
-| [go-common](https://github.com/Senzing/go-common) || :white_check_mark: | Reusable, small components. | |
+| [go-common](https://github.com/Senzing/go-common) || :white_check_mark: || Reusable, small components. | |
 | [go-databasing](https://github.com/Senzing/go-databasing) || :white_check_mark:  || Database routines | |
 | [go-grpcing](https://github.com/Senzing/go-grpcing) || :white_check_mark:  || Go package of gRPC helpers | |
 | [go-logging](https://github.com/Senzing/go-logging) || :white_check_mark:  || A reusable logging framework. | |
@@ -175,9 +175,9 @@
 | [serve-http](https://github.com/Senzing/serve-http) || :white_check_mark:  || A CLI tool for serving HTTP | |
 | [stream-loader](https://github.com/Senzing/stream-loader) || :white_check_mark:  || Python tool for loading Senzing Engine from RabbitMQ, Kafka, or AWS SQS. | |
 | [stream-logger](https://github.com/Senzing/stream-logger) || :white_check_mark:  || A utility for dumping the contents of a stream to a log. | |
-| [stream-producer](https://github.com/Senzing/stream-producer) || :white_check_mark: | Produce a stream from different input formats. | |
-| [subway-map](https://github.com/Senzing/subway-map) || :white_check_mark: | <http://hub.senzing.com/subway-map> site | |
-| [support](https://github.com/Senzing/support) || :white_check_mark: | <http://hub.senzing.com/support> site | |
+| [stream-producer](https://github.com/Senzing/stream-producer) || :white_check_mark: || Produce a stream from different input formats. | |
+| [subway-map](https://github.com/Senzing/subway-map) || :white_check_mark: || <http://hub.senzing.com/subway-map> site | |
+| [support](https://github.com/Senzing/support) || :white_check_mark: || <http://hub.senzing.com/support> site | |
 | [template-docker](https://github.com/Senzing/template-docker) || :white_check_mark:  || Best practices for creating a "docker-*" repository. | |
 | [template-go](https://github.com/Senzing/template-go) || :white_check_mark:  || Best practices for creating a "go-" repository. | |
 | [template-python](https://github.com/Senzing/template-python) || :white_check_mark:  || Best practices for creating a "python-*" repository. | |
