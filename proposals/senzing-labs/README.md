@@ -6,9 +6,9 @@
 |------------|:-------:|:----------------:|:---------------:|-------------|-------|
 | [awesome](https://github.com/Senzing/awesome) | :white_check_mark: ||| Curated list of awesome software and resources for Senzing, The First Real-Time AI for Entity Resolution. | Needs to be massively updated|
 | [aws-cloudformation-database-cluster](https://github.com/Senzing/aws-cloudformation-database-cluster) || :white_check_mark: || AWS Cloudformation with VPC and Senzing database cluster | |
-| [aws-cloudformation-dev-rest](https://github.com/Senzing/aws-cloudformation-dev-rest) || :white_check_mark: ||| AWS Cloudformation for developers using Senzing HTTP REST API | |
+| [aws-cloudformation-dev-rest](https://github.com/Senzing/aws-cloudformation-dev-rest) || :white_check_mark: || AWS Cloudformation for developers using Senzing HTTP REST API | |
 | [aws-cloudformation-ecs-senzing-stack-basic](https://github.com/Senzing/aws-cloudformation-ecs-senzing-stack-basic) || :white_check_mark: || AWS Cloudformation demonstrating a Senzing stack that can be used with aws-cloudformation-database-cluster. | |
-| [aws-cloudformation-ecs](https://github.com/Senzing/aws-cloudformation-ecs) || :white_check_mark: ||| :no_entry: [DEPRECATED] Contains deprecated AWS Cloudformation templates | |
+| [aws-cloudformation-ecs](https://github.com/Senzing/aws-cloudformation-ecs) || :white_check_mark: || :no_entry: [DEPRECATED] Contains deprecated AWS Cloudformation templates | |
 | [aws-cloudformation-performance-testing](https://github.com/Senzing/aws-cloudformation-performance-testing) || :white_check_mark: || Senzing AWS performance testing project. | |
 | [aws-cloudformation-webapp-demo](https://github.com/Senzing/aws-cloudformation-webapp-demo) || :white_check_mark: || Senzing WebApp demo for AWS. | |
 | [aws-lambda-cognito-authorizer](https://github.com/Senzing/aws-lambda-cognito-authorizer) || :white_check_mark: || Lambda function for authorizing via AWS Cognito | |
@@ -16,7 +16,7 @@
 | [aws-marketplace-evaluation](https://github.com/Senzing/aws-marketplace-evaluation) | :question: ||| AWS Marketplace offering. | Not sure about this. |
 | [azure-template-aks-poc-simple](https://github.com/Senzing/azure-template-aks-poc-simple) || :white_check_mark: || An Azure ARM template for bringing up Senzing on Kubernetes (AKS) | |
 | [bizname-research](https://github.com/Senzing/bizname-research) || :white_check_mark: || [Research] Determine language/country origin of business name | Current research |
-| [build-resources](https://github.com/Senzing/build-resources) ||| :white_check_mark: | Collection of utilities to aid with build process | Perhaps in [senzing-factory](https://github.com/senzing-factory) |
+| [build-resources](https://github.com/Senzing/build-resources) ||| :white_check_mark: | Collection of utilities to aid with build process | |
 | [charts](https://github.com/Senzing/charts) || :white_check_mark: || Helm Charts for use with Kubernetes, OpenShift, and Rancher. | |
 | [check-self](https://github.com/Senzing/check-self) || :white_check_mark: || Checks environment | |
 | [code-snippets](https://github.com/Senzing/code-snippets) | :white_check_mark: ||| Task based code snippet examples. | |
@@ -25,7 +25,7 @@
 | [compressedfile](https://github.com/Senzing/compressedfile) | :white_check_mark: ||| Distributed with Senzing API package | |
 | [configurator](https://github.com/Senzing/configurator) || :white_check_mark: || Web service for configuring Senzing. | |
 | [connector-neo4j](https://github.com/Senzing/connector-neo4j) | :white_check_mark: ||| Transform Senzing data into Neo4j graph database. | |
-| [data-encryption-aes256cbc-sample](https://github.com/Senzing/data-encryption-aes256cbc-sample) | :white_check_mark: ||| This is a sample encryption plugin, for use with the G2 engine to encrypt sensitive data in the data repository.  | |
+| [data-encryption-aes256cbc-sample](https://github.com/Senzing/data-encryption-aes256cbc-sample) | :white_check_mark: ||| This is a sample encryption plugin, for use with the G2 engine to encrypt sensitive data in the data repository. | |
 | [data-mart-replicator](https://github.com/Senzing/data-mart-replicator) | :white_check_mark: ||| :construction: Data mart | |
 | [demo-entity-search](https://github.com/Senzing/demo-entity-search) || :white_check_mark: || A CLI tool for demonstrating entity searching | |
 | [discussions](https://github.com/Senzing/discussions) | :white_check_mark: ||| Repository that supports GitHub Discussions. | |
@@ -45,7 +45,7 @@
 | [docker-senzing-base](https://github.com/Senzing/docker-senzing-base) || :white_check_mark: || Dockerfile used in FROM statements. | |
 | [docker-senzing-console](https://github.com/Senzing/docker-senzing-console) || :white_check_mark: || Docker-based console enabled for interacting with Senzing programs. | |
 | [docker-sshd](https://github.com/Senzing/docker-sshd) || :white_check_mark: || Dockerfile wrapping `sshd`. | |
-| [docker-terraform-aws](https://github.com/Senzing/docker-terraform-aws) || :white_check_mark: || :construction: [Under construction]  | |
+| [docker-terraform-aws](https://github.com/Senzing/docker-terraform-aws) || :white_check_mark: || :construction: [Under construction] | |
 | [docker-test-layers](https://github.com/Senzing/docker-test-layers) || :white_check_mark: || A Repository for testing contents of Docker layers | |
 | [docker-test](https://github.com/Senzing/docker-test) || :white_check_mark: || Used in Spikes. Not for production. | |
 | [docker-web-app-demo](https://github.com/Senzing/docker-web-app-demo) | :white_check_mark: ||| Dockerfile combining Senzing API server and Senzing Entity WebApp. | |
@@ -95,13 +95,13 @@
 | [g2setupconfig](https://github.com/Senzing/g2setupconfig) | :white_check_mark: ||| Distributed with Senzing API package | |
 | [g2snapshot](https://github.com/Senzing/g2snapshot) | :white_check_mark: ||| Distributed with Senzing API package | |
 | [g2updateproject](https://github.com/Senzing/g2updateproject) | :white_check_mark: ||| Distributed with Senzing API package | |
-| [git-action-slack-notification](https://github.com/Senzing/git-action-slack-notification) ||| :white_check_mark:  | GitHub Action for notifying Slack | Perhaps in [senzing-factory](https://github.com/senzing-factory) |
-| [github-action-add-issue-to-project](https://github.com/Senzing/github-action-add-issue-to-project) ||| :white_check_mark: | A GitHub Action for adding an issue to projects. |  Perhaps in [senzing-factory](https://github.com/senzing-factory) |
-| [github-action-docker-buildx-build](https://github.com/Senzing/github-action-docker-buildx-build) ||| :white_check_mark: | GitHub Action for using Docker buildx command |  Perhaps in [senzing-factory](https://github.com/senzing-factory) |
-| [github-action-identify-customer](https://github.com/Senzing/github-action-identify-customer) ||| :white_check_mark:  | A GitAction for determining if a customer submitted the issue. |  Perhaps in [senzing-factory](https://github.com/senzing-factory)|
+| [git-action-slack-notification](https://github.com/Senzing/git-action-slack-notification) ||| :white_check_mark: | GitHub Action for notifying Slack | |
+| [github-action-add-issue-to-project](https://github.com/Senzing/github-action-add-issue-to-project) ||| :white_check_mark: | A GitHub Action for adding an issue to projects. | |
+| [github-action-docker-buildx-build](https://github.com/Senzing/github-action-docker-buildx-build) ||| :white_check_mark: | GitHub Action for using Docker buildx command | |
+| [github-action-identify-customer](https://github.com/Senzing/github-action-identify-customer) ||| :white_check_mark: | A GitAction for determining if a customer submitted the issue. | |
 | [github-action-install-senzing-api](https://github.com/Senzing/github-action-install-senzing-api) ||| :white_check_mark: | GitHub Action for installing Senzing API | |
-| [github-action-make-go-github-file](https://github.com/Senzing/github-action-make-go-github-file) ||| :white_check_mark: | Make a version.go file |  Perhaps in [senzing-factory](https://github.com/senzing-factory) |
-| [github-action-make-go-tag](https://github.com/Senzing/github-action-make-go-tag) ||| :white_check_mark: | From the Semantic Version, create a v0.0.0 tag for the Go module version |  Perhaps in [senzing-factory](https://github.com/senzing-factory) |
+| [github-action-make-go-github-file](https://github.com/Senzing/github-action-make-go-github-file) ||| :white_check_mark: | Make a version.go file | |
+| [github-action-make-go-tag](https://github.com/Senzing/github-action-make-go-tag) ||| :white_check_mark: | From the Semantic Version, create a v0.0.0 tag for the Go module version | |
 | [github-util](https://github.com/Senzing/github-util) ||| :white_check_mark: | Works with GitHub metadata. | |
 | [go-cmdhelping](https://github.com/Senzing/go-cmdhelping) || :white_check_mark: || Helpers for using cobra and viper | |
 | [go-common](https://github.com/Senzing/go-common) || :white_check_mark: || Reusable, small components. | |
@@ -121,7 +121,7 @@
 | [init-mysql](https://github.com/Senzing/init-mysql) || :white_check_mark: || Initialize a MySQL database with Senzing schema and configuration | |
 | [init-postgresql](https://github.com/Senzing/init-postgresql) || :white_check_mark: || Initialize a PostgreSQL database with Senzing schema and configuration | |
 | [keystore-generator](https://github.com/Senzing/keystore-generator) || :white_check_mark: || Generates SSL keys | |
-| [knowledge-base](https://github.com/Senzing/knowledge-base) || :white_check_mark: || HOWTOs, tasks, explanations, and more knowledge. | Perhaps have a knowledge base in each Git Organization |
+| [knowledge-base](https://github.com/Senzing/knowledge-base) || :white_check_mark: || HOWTOs, tasks, explanations, and more knowledge. | |
 | [kubernetes-demo](https://github.com/Senzing/kubernetes-demo) || :white_check_mark: || Demonstrate Senzing stack using Kubernetes. | |
 | [libpostal-data](https://github.com/Senzing/libpostal-data) | :white_check_mark: ||| Information about libpostal work done by Senzing. | |
 | [libpostal](https://github.com/Senzing/libpostal) | :white_check_mark: ||| A C library for parsing/normalizing street addresses around the world. Powered by statistical NLP and open geo data. | |
@@ -132,12 +132,12 @@
 | [mapper-dowjones](https://github.com/Senzing/mapper-dowjones) | :white_check_mark: ||| Map Dow Jones Watchlist format to Senzing format. | |
 | [mapper-icij](https://github.com/Senzing/mapper-icij) | :white_check_mark: ||| Map ICIJ format to Senzing format. | |
 | [mapper-leie](https://github.com/Senzing/mapper-leie) | :white_check_mark: ||| Map US HHS LEIE to Senzing format. | |
-| [mapper-nomino](https://github.com/Senzing/mapper-nomino) | :white_check_mark: |||  Map Nomino format to Senzing format. | |
+| [mapper-nomino](https://github.com/Senzing/mapper-nomino) | :white_check_mark: ||| Map Nomino format to Senzing format. | |
 | [mapper-npi](https://github.com/Senzing/mapper-npi) | :white_check_mark: ||| Map NPPES NPI Registry to Senzing format. | |
 | [mapper-ofac](https://github.com/Senzing/mapper-ofac) | :white_check_mark: ||| Map OFAC to Senzing format. | |
 | [mapper-open-ownership](https://github.com/Senzing/mapper-open-ownership) | :white_check_mark: ||| Map Open Ownership Register into Senzing format | |
 | [mapper-opensanctions](https://github.com/Senzing/mapper-opensanctions) | :white_check_mark: ||| Map Open Sanctions into Senzing format. | |
-| [mapper-safegraph](https://github.com/Senzing/mapper-safegraph) | :white_check_mark: ||| Map SafeGraph format to Senzing format.  | |
+| [mapper-safegraph](https://github.com/Senzing/mapper-safegraph) | :white_check_mark: ||| Map SafeGraph format to Senzing format. | |
 | [mapper-sayari-spark](https://github.com/Senzing/mapper-sayari-spark) | :white_check_mark: ||| Map Sayari's global corporate data into Senzing format using Spark. | |
 | [mapper-sayari](https://github.com/Senzing/mapper-sayari) | :white_check_mark: ||| Map Sayari's global corporate data into Senzing format. | |
 | [move](https://github.com/Senzing/move) || :white_check_mark: || A CLI tool for moving data | |
