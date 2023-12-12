@@ -6,6 +6,7 @@
 ## Dependencies
 
 1. No dependencies
+    1. [ ] [g2-sdk-json-type-definition](https://github.com/Senzing/g2-sdk-json-type-definition)
     1. [ ] [g2-sdk-proto/go](https://github.com/senzing/g2-sdk-proto/go)
     1. [ ] [go-grpcing](https://github.com/senzing/go-grpcing)
     1. [ ] [go-messaging](https://github.com/senzing/go-messaging)
@@ -30,7 +31,6 @@
     1. [ ] [g2-sdk-go-grpc](https://github.com/senzing/g2-sdk-go-grpc)
     1. [ ] [g2-sdk-go-mock](https://github.com/Senzing/g2-sdk-go-mock)
     1. [ ] [go-queueing](https://github.com/Senzing/go-queueing)
-    1. [ ] [go-rest-api-service](https://github.com/senzing/go-rest-api-service)
 1. Requires: g2-sdk-go-base
     1. [ ] [serve-grpc](https://github.com/Senzing/serve-grpc)
 1. Requires: g2-sdk-go-grpc
@@ -38,6 +38,7 @@
 1. Requires: go-sdk-abstract-factory
     1. [ ] [check-self](https://github.com/Senzing/check-self)
     1. [ ] [serve-chat](https://github.com/Senzing/serve-chat)
+    1. [ ] [go-rest-api-service](https://github.com/senzing/go-rest-api-service)
 1. Requires: go-rest-api-service
     1. [ ] [serve-http](https://github.com/senzing/serve-http)
 1. Requires: go-databasing
