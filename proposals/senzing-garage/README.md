@@ -2,7 +2,7 @@
 
 ## Proposed result
 
-| Repository | [Senzing](https://github.com/senzing) | [senzing-research](https://github.com/senzing-research) | [senzing-factory](https://github.com/senzing-factory) | Description | Notes |
+| Repository | [Senzing](https://github.com/senzing) | [senzing-garage](https://github.com/senzing-garage) | [senzing-factory](https://github.com/senzing-factory) | Description | Notes |
 |------------|:-------:|:----------------:|:---------------:|-------------|-------|
 | [awesome](https://github.com/Senzing/awesome) | :white_check_mark: ||| Curated list of awesome software and resources for Senzing, The First Real-Time AI for Entity Resolution. | Needs to be massively updated|
 | [aws-cloudformation-database-cluster](https://github.com/Senzing/aws-cloudformation-database-cluster) || :white_check_mark: || AWS Cloudformation with VPC and Senzing database cluster | |
