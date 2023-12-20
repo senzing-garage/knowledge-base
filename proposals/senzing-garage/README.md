@@ -178,10 +178,10 @@
 | [stream-producer](https://github.com/Senzing/stream-producer) || :white_check_mark: || Produce a stream from different input formats. | |
 | [subway-map](https://github.com/Senzing/subway-map) || :white_check_mark: || <http://hub.senzing.com/subway-map> site | |
 | [support](https://github.com/Senzing/support) || :white_check_mark: || <http://hub.senzing.com/support> site | |
-| [template-docker](https://github.com/Senzing/template-docker) || :white_check_mark: || Best practices for creating a "docker-*" repository. | |
-| [template-go](https://github.com/Senzing/template-go) || :white_check_mark: || Best practices for creating a "go-" repository. | |
-| [template-python](https://github.com/Senzing/template-python) || :white_check_mark: || Best practices for creating a "python-*" repository. | |
-| [template-repository](https://github.com/Senzing/template-repository) || :white_check_mark: || Best practices for creating repository. | |
+| [template-docker](https://github.com/Senzing/template-docker) ||| :white_check_mark: | Best practices for creating a "docker-*" repository. | |
+| [template-go](https://github.com/Senzing/template-go) ||| :white_check_mark: | Best practices for creating a "go-" repository. | |
+| [template-python](https://github.com/Senzing/template-python) ||| :white_check_mark: | Best practices for creating a "python-*" repository. | |
+| [template-repository](https://github.com/Senzing/template-repository) ||| :white_check_mark: | Best practices for creating repository. | |
 | [test-ground](https://github.com/Senzing/test-ground) || :white_check_mark: || An area for testing ideas.  May be wiped out at any time. | |
 | [truth-sets](https://github.com/Senzing/truth-sets) | :white_check_mark: ||| Distributed with Senzing API package | |
 | [validate](https://github.com/Senzing/validate) || :white_check_mark: || A CLI tool for validating data | |
