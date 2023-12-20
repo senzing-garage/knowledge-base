@@ -1,5 +1,7 @@
 # Renaming parameters
 
+In the hopes that our parameter names are Consistent, Coherent, and Complete...
+
 ## Considerations
 
 - Consider removing "datatype" from variable name.
