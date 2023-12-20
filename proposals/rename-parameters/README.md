@@ -44,7 +44,11 @@ The "Comments" column has rationale.
 | responseBuf           | responseBuffer     | Use full names. |
 | responseBufSize       | responseBufferSize | Use full names. |
 
-## Current C code
+## Research
+
+The following has artifacts used in the research.
+
+### Current C code
 
 The following is a copy of the C code used in this analysis.
 
@@ -55,7 +59,7 @@ The following is a copy of the C code used in this analysis.
 1. [libg2diagnostic.h](./libg2diagnostic.h)
 1. [libg2product.h](./libg2product.h)
 
-## Table of variable use
+### Table of variable use
 
 The following table lists the variables used in the
 [Current C Code](#current-c-code)
@@ -127,11 +131,11 @@ in alphabetical order with the number of occurrances of each variable.
 | secondsToRun            |     1 |
 | verboseLogging          |     7 |
 
-## Lexical analysis
+### Lexical analysis
 
 This is an analysis of the components of variable name composition.
 
-### Nouns used
+#### Nouns used
 
 These are the "things" recognized by the Senzing API.
 
@@ -157,7 +161,7 @@ These are the "things" recognized by the Senzing API.
 | Response     ||
 | Search       ||
 
-### Adjectives used
+#### Adjectives used
 
 These are attributes of the "things" listed above.
 
@@ -184,7 +188,7 @@ These are attributes of the "things" listed above.
 | Type      ||
 | Verbose   ||
 
-### Misc
+#### Misc
 
 These variables are outliers.
 Many do contain a known noun or adjective,
