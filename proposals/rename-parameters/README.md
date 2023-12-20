@@ -186,9 +186,9 @@ These are attributes of the "things" listed above.
 
 ### Misc
 
-These variables are somewhat outliers.
+These variables are outliers.
 Many do contain a known noun or adjective,
-but still are unique in their construction.
+but are unique in their construction.
 
 | Variable                | Comment |
 |-------------------------|---------|
