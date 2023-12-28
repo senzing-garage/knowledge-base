@@ -9,7 +9,7 @@ in and out of the method signataures.
 
 The current design (and implementation) passes JSON strings to and from the Senzing G2 API
 as is seen in
-[senzing/g2-sdk-go-base](https://github.com/Senzing/g2-sdk-go-base).
+[senzing/g2-sdk-go-base](https://github.com/senzing-garage/g2-sdk-go-base).
 
 When implementing applications base on the current design,
 it was discovered that the Go code needed to create and parse JSON
@@ -24,17 +24,17 @@ Then the calling program can simply set and retrieve variables from the
 
 ### XXX
 
-In [senzing/g2-sdk-go/senzing/main.go](https://github.com/Senzing/g2-sdk-go/tree/main/senzing/main.go),
+In [senzing/g2-sdk-go/senzing/main.go](https://github.com/senzing-garage/g2-sdk-go/tree/main/senzing/main.go),
 Define "type - interface" for `config`, `configmgr`, `diagnostic`, `engine`, and `product`.
 using
 
 In packages like
-[senzing/g2-sdk-go/g2engine](https://github.com/Senzing/g2-sdk-go/tree/main/g2engine),
+[senzing/g2-sdk-go/g2engine](https://github.com/senzing-garage/g2-sdk-go/tree/main/g2engine),
 add a `g2engine.go` file that has
 the code for:
 
 1. In `main.go`, define input and output "type -structs".
 1. In `main.go`, define the "type - interface" of the `senzing` package
 1. Receiving "structs" as input
-1. Using [senzing/go-sdk-abstract-factory](https://github.com/Senzing/go-sdk-abstract-factory) to
+1. Using [senzing/go-sdk-abstract-factory](https://github.com/senzing-garage/go-sdk-abstract-factory) to
    get an implementation of the

@@ -44,5 +44,5 @@ The following are examples showing how to develop Go programs for Senzing on Win
 
     ```console
     cd %HOMEPATH%\senzing.git
-    git clone https://github.com/Senzing/g2-sdk-go.git
+    git clone https://github.com/senzing-garage/g2-sdk-go.git
     ```

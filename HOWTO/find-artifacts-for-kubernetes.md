@@ -2,11 +2,11 @@
 
 ## Reference implementation deployments
 
-1. https://github.com/Senzing/kubernetes-demo
+1. https://github.com/senzing-garage/kubernetes-demo
 
 ## Helm Charts
 
-1. https://github.com/Senzing/charts/charts
+1. https://github.com/senzing-garage/charts/charts
 
 ## Docker images
 
@@ -19,9 +19,9 @@
 ## Lists of versions
 
 1. Stable:
-    1. [GitHub repositories and corresponding Docker images](https://github.com/Senzing/knowledge-base/blob/main/lists/docker-versions-stable.sh)
-    1. [Helm charts](https://github.com/Senzing/knowledge-base/blob/main/lists/helm-versions-stable.sh)
+    1. [GitHub repositories and corresponding Docker images](https://github.com/senzing-garage/knowledge-base/blob/main/lists/docker-versions-stable.sh)
+    1. [Helm charts](https://github.com/senzing-garage/knowledge-base/blob/main/lists/helm-versions-stable.sh)
 1. Latest:
-    1. [SenzingAPI](https://github.com/Senzing/knowledge-base/blob/main/lists/senzing-versions-latest.sh)
-    1. [GitHub repositories and corresponding Docker images](https://github.com/Senzing/knowledge-base/blob/main/lists/docker-versions-latest.sh)
-    1. [Helm charts](https://github.com/Senzing/knowledge-base/blob/main/lists/helm-versions-latest.sh)
+    1. [SenzingAPI](https://github.com/senzing-garage/knowledge-base/blob/main/lists/senzing-versions-latest.sh)
+    1. [GitHub repositories and corresponding Docker images](https://github.com/senzing-garage/knowledge-base/blob/main/lists/docker-versions-latest.sh)
+    1. [Helm charts](https://github.com/senzing-garage/knowledge-base/blob/main/lists/helm-versions-latest.sh)

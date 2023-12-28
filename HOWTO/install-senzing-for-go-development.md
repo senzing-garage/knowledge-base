@@ -45,7 +45,7 @@ This is important as the compiling of the Go code expects Senzing to be in `/opt
             --build-arg SENZING_DATA_VERSION=${SENZING_VERSION_SENZINGDATA} \
             --no-cache \
             --tag senzing/installer:${SENZING_VERSION_SENZINGAPI} \
-            https://github.com/senzing/docker-installer.git#main
+            https://github.com/senzing-garage/docker-installer.git#main
 
         ```
 

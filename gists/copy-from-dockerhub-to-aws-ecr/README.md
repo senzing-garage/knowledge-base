@@ -96,8 +96,8 @@
     ```console
     mkdir ~/senzing.git
     cd ~/senzing.git
-    git clone https://github.com/Senzing/aws-cloudformation-ecs-poc-simple.git
-    git clone https://github.com/Senzing/knowledge-base.git
+    git clone https://github.com/senzing-garage/aws-cloudformation-ecs-poc-simple.git
+    git clone https://github.com/senzing-garage/knowledge-base.git
     ```
 
 ### Copy image to public ECR

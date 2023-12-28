@@ -10,7 +10,7 @@ Perform once per new Senzing version:
    This ensures that you make a conscious effort to accept the EULA.
    Example:
 
-    <pre>export SENZING_ACCEPT_EULA="&lt;the value from <a href="https://github.com/Senzing/knowledge-base/blob/main/lists/environment-variables.md#senzing_accept_eula">this link</a>&gt;"</pre>
+    <pre>export SENZING_ACCEPT_EULA="&lt;the value from <a href="https://github.com/senzing-garage/knowledge-base/blob/main/lists/environment-variables.md#senzing_accept_eula">this link</a>&gt;"</pre>
 
 1. Build a Docker image which will be used to install Senzing.
    Example:
@@ -28,7 +28,7 @@ Perform once per new Senzing version:
       --build-arg SENZING_DATA_VERSION=${SENZING_VERSION_SENZINGDATA} \
       --no-cache \
       --tag senzing/installer:${SENZING_VERSION_SENZINGAPI} \
-      https://github.com/senzing/docker-installer.git#main
+      https://github.com/senzing-garage/docker-installer.git#main
     ```
 
 ## Install Senzing using Docker container

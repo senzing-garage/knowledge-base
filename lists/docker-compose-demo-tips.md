@@ -1,7 +1,7 @@
 # docker-compose-demo tips
 
 The following is a list of tips when using
-[docker-compose-demo](https://github.com/Senzing/docker-compose-demo).
+[docker-compose-demo](https://github.com/senzing-garage/docker-compose-demo).
 
 ## Contents
 
@@ -45,7 +45,7 @@ The following is a list of tips when using
 
 ### Jupyter Notebooks references
 
-1. [github.com/Senzing/docker-jupyter](https://github.com/Senzing/docker-jupyter)
+1. [github.com/Senzing/docker-jupyter](https://github.com/senzing-garage/docker-jupyter)
 
 ## Kafka
 
@@ -155,7 +155,7 @@ The following is a list of tips when using
 ## Senzing API server
 
 The Senzing REST API server supports the
-[Senzing REST API](https://github.com/Senzing/senzing-rest-api-specification).
+[Senzing REST API](https://github.com/senzing-garage/senzing-rest-api-specification).
 
 ### Senzing API server via web browser
 
@@ -184,13 +184,13 @@ The Senzing REST API server supports the
 
 ### Senzing API server references
 
-1. [github.com/Senzing/senzing-api-server](https://github.com/Senzing/senzing-api-server)
+1. [github.com/Senzing/senzing-api-server](https://github.com/senzing-garage/senzing-api-server)
 
 ## Senzing Configurator
 
 ### Senzing Configurator references
 
-1. [github.com/Senzing/configurator](https://github.com/Senzing/configurator)
+1. [github.com/Senzing/configurator](https://github.com/senzing-garage/configurator)
 
 ## Senzing Entity Search WebApp
 
@@ -203,19 +203,19 @@ The Senzing REST API server supports the
 
 ### Senzing Entity Search WebApp demo
 
-1. The [demonstration](https://github.com/Senzing/knowledge-base/blob/main/demonstrations/docker-compose-web-app.md)
+1. The [demonstration](https://github.com/senzing-garage/knowledge-base/blob/main/demonstrations/docker-compose-web-app.md)
    instructions will give a tour of the Senzing web app.
 
 ### Senzing Entity Search WebApp references
 
-1. [github.com/Senzing/entity-search-web-app](https://github.com/Senzing/entity-search-web-app)
+1. [github.com/Senzing/entity-search-web-app](https://github.com/senzing-garage/entity-search-web-app)
 
 ## Senzing license
 
 ### Request Senzing license
 
 1. If working with more than 10,000 records,
-   [obtain a Senzing license](https://github.com/Senzing/knowledge-base/blob/main/HOWTO/obtain-senzing-license.md).
+   [obtain a Senzing license](https://github.com/senzing-garage/knowledge-base/blob/main/HOWTO/obtain-senzing-license.md).
 
 ### Install Senzing license
 

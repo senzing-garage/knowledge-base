@@ -10,7 +10,7 @@
    ```console
    sudo yum install gnupg
    ```
-   - [Configure TTY](https://github.com/Senzing/knowledge-base/blob/56-skern/WHATIS/gnupg.md#configure-tty)
+   - [Configure TTY](https://github.com/senzing-garage/knowledge-base/blob/56-skern/WHATIS/gnupg.md#configure-tty)
 
 ### macOS
 
@@ -18,7 +18,7 @@
    ```console
    brew install gnupg
    ```
-   - [Configure TTY](https://github.com/Senzing/knowledge-base/blob/56-skern/WHATIS/gnupg.md#configure-tty)
+   - [Configure TTY](https://github.com/senzing-garage/knowledge-base/blob/56-skern/WHATIS/gnupg.md#configure-tty)
 
 ### Ubuntu
 
@@ -26,7 +26,7 @@
    ```console
    sudo apt-get install gnupg
    ```
-   - [Configure TTY](https://github.com/Senzing/knowledge-base/blob/56-skern/WHATIS/gnupg.md#configure-tty)
+   - [Configure TTY](https://github.com/senzing-garage/knowledge-base/blob/56-skern/WHATIS/gnupg.md#configure-tty)
    
 ### Windows
 

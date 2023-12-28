@@ -5,9 +5,9 @@
 Manual instructions for installing `libmysqlclient21` which is the database driver for MySQL.
 
 This is done automatically by
-[docker-init-container](https://github.com/Senzing/docker-init-container).
+[docker-init-container](https://github.com/senzing-garage/docker-init-container).
 In particular the `database_initialization_mysql(...)` function of
-[init-container.py](https://github.com/Senzing/docker-init-container/blob/main/init-container.py)
+[init-container.py](https://github.com/senzing-garage/docker-init-container/blob/main/init-container.py)
 
 ### CentOS
 

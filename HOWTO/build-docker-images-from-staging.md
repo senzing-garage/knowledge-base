@@ -14,7 +14,7 @@
         --build-arg SENZING_APT_REPOSITORY_URL=https://senzing-staging-apt.s3.amazonaws.com \
         --no-cache \
         --tag senzing/senzingapi-runtime:staging \
-        https://github.com/senzing/senzingapi-runtime.git#main
+        https://github.com/senzing-garage/senzingapi-runtime.git#main
     ```
 
 1. Push to DockerHub.
@@ -37,7 +37,7 @@
       --build-arg SENZING_APT_INSTALL_TOOLS_PACKAGE=senzingapi-tools \
       --no-cache \
       --tag senzing/senzingapi-tools:staging \
-      https://github.com/senzing/senzingapi-tools.git#main
+      https://github.com/senzing-garage/senzingapi-tools.git#main
     ```
 
 1. Push to DockerHub.
@@ -59,7 +59,7 @@
         --build-arg BASE_IMAGE=senzing/senzingapi-runtime:staging \
         --no-cache \
         --tag senzing/stream-loader:staging \
-        https://github.com/senzing/stream-loader.git#main
+        https://github.com/senzing-garage/stream-loader.git#main
     ```
 
 1. Push to DockerHub.
@@ -81,7 +81,7 @@
         --build-arg BASE_IMAGE=senzing/senzingapi-runtime:staging \
         --no-cache \
         --tag senzing/redoer:staging \
-        https://github.com/senzing/redoer.git#main
+        https://github.com/senzing-garage/redoer.git#main
     ```
 
 1. Push to DockerHub.
@@ -103,7 +103,7 @@
         --build-arg BASE_IMAGE=senzing/senzingapi-runtime:staging \
         --no-cache \
         --tag senzing/senzing-api-server:staging \
-        https://github.com/senzing/senzing-api-server.git#main
+        https://github.com/senzing-garage/senzing-api-server.git#main
     ```
 
 1. Push to DockerHub.
@@ -125,7 +125,7 @@
         --build-arg BASE_IMAGE=senzing/senzingapi-runtime:staging \
         --no-cache \
         --tag senzing/senzing-poc-server:staging \
-        https://github.com/senzing/senzing-poc-server.git#main
+        https://github.com/senzing-garage/senzing-poc-server.git#main
     ```
 
 1. Push to DockerHub.
@@ -147,7 +147,7 @@
         --build-arg BASE_IMAGE=senzing/senzingapi-tools:staging \
         --no-cache \
         --tag senzing/senzing-console:staging \
-        https://github.com/senzing/docker-senzing-console.git#main
+        https://github.com/senzing-garage/docker-senzing-console.git#main
     ```
 
 1. Push to DockerHub.
@@ -169,7 +169,7 @@
         --build-arg BASE_IMAGE=senzing/senzingapi-tools:staging \
         --no-cache \
         --tag senzing/sshd:staging \
-        https://github.com/senzing/docker-sshd.git#main
+        https://github.com/senzing-garage/docker-sshd.git#main
     ```
 
 1. Push to DockerHub.
@@ -191,7 +191,7 @@
         --build-arg BASE_IMAGE=senzing/senzingapi-tools:staging \
         --no-cache \
         --tag senzing/xterm:staging \
-        https://github.com/senzing/docker-xterm.git#main
+        https://github.com/senzing-garage/docker-xterm.git#main
     ```
 
 1. Push to DockerHub.
@@ -213,7 +213,7 @@
         --build-arg BASE_IMAGE=senzing/senzingapi-tools:staging \
         --no-cache \
         --tag senzing/g2configtool:staging \
-        https://github.com/senzing/g2configtool.git#main
+        https://github.com/senzing-garage/g2configtool.git#main
     ```
 
 ### senzing/init-postgresql
@@ -228,7 +228,7 @@
         --build-arg BASE_IMAGE=senzing/senzingapi-runtime:staging \
         --no-cache \
         --tag senzing/init-postgresql:staging \
-        https://github.com/senzing/init-postgresql.git#main
+        https://github.com/senzing-garage/init-postgresql.git#main
     ```
 
 1. Push to DockerHub.
@@ -250,7 +250,7 @@
         --build-arg BASE_IMAGE=senzing/senzingapi-runtime:staging \
         --no-cache \
         --tag senzing/web-app-demo:staging \
-        https://github.com/senzing/docker-web-app-demo.git#main
+        https://github.com/senzing-garage/docker-web-app-demo.git#main
     ```
 
 1. Push to DockerHub.
@@ -272,7 +272,7 @@
         --build-arg SENZING_APT_REPOSITORY_URL=https://senzing-staging-apt.s3.amazonaws.com \
         --no-cache \
         --tag senzing/senzingapi-runtime:staging \
-        https://github.com/senzing/senzingapi-runtime.git#main
+        https://github.com/senzing-garage/senzingapi-runtime.git#main
 
     docker push senzing/senzingapi-runtime:staging
 
@@ -281,7 +281,7 @@
         --build-arg SENZING_APT_INSTALL_TOOLS_PACKAGE=senzingapi-tools \
         --no-cache \
         --tag senzing/senzingapi-tools:staging \
-        https://github.com/senzing/senzingapi-tools.git#main
+        https://github.com/senzing-garage/senzingapi-tools.git#main
 
     docker push senzing/senzingapi-tools:staging
 
@@ -289,7 +289,7 @@
         --build-arg BASE_IMAGE=senzing/senzingapi-runtime:staging \
         --no-cache \
         --tag senzing/stream-loader:staging \
-        https://github.com/senzing/stream-loader.git#main
+        https://github.com/senzing-garage/stream-loader.git#main
 
     docker push senzing/stream-loader:staging
 
@@ -297,7 +297,7 @@
         --build-arg BASE_IMAGE=senzing/senzingapi-runtime:staging \
         --no-cache \
         --tag senzing/redoer:staging \
-        https://github.com/senzing/redoer.git#main
+        https://github.com/senzing-garage/redoer.git#main
 
     docker push senzing/redoer:staging
 
@@ -305,7 +305,7 @@
         --build-arg BASE_IMAGE=senzing/senzingapi-runtime:staging \
         --no-cache \
         --tag senzing/senzing-api-server:staging \
-        https://github.com/senzing/senzing-api-server.git#main
+        https://github.com/senzing-garage/senzing-api-server.git#main
 
     docker push senzing/senzing-api-server:staging
 
@@ -313,7 +313,7 @@
         --build-arg BASE_IMAGE=senzing/senzingapi-runtime:staging \
         --no-cache \
         --tag senzing/senzing-poc-server:staging \
-        https://github.com/senzing/senzing-poc-server.git#main
+        https://github.com/senzing-garage/senzing-poc-server.git#main
 
     docker push senzing/senzing-poc-server:staging
 
@@ -321,7 +321,7 @@
         --build-arg BASE_IMAGE=senzing/senzingapi-tools:staging \
         --no-cache \
         --tag senzing/senzing-console:staging \
-        https://github.com/senzing/docker-senzing-console.git#main
+        https://github.com/senzing-garage/docker-senzing-console.git#main
 
     docker push senzing/senzing-console:staging
 
@@ -329,7 +329,7 @@
         --build-arg BASE_IMAGE=senzing/senzingapi-tools:staging \
         --no-cache \
         --tag senzing/sshd:staging \
-        https://github.com/senzing/docker-sshd.git#main
+        https://github.com/senzing-garage/docker-sshd.git#main
 
     docker push senzing/sshd:staging
 
@@ -337,7 +337,7 @@
         --build-arg BASE_IMAGE=senzing/senzingapi-tools:staging \
         --no-cache \
         --tag senzing/entity-search-web-app-console:staging \
-        https://github.com/senzing/entity-search-web-app-console.git#main
+        https://github.com/senzing-garage/entity-search-web-app-console.git#main
 
     docker push senzing/entity-search-web-app-console:staging
 
@@ -345,7 +345,7 @@
         --build-arg BASE_IMAGE=senzing/senzingapi-tools:staging \
         --no-cache \
         --tag senzing/xterm:staging \
-        https://github.com/senzing/docker-xterm.git#main
+        https://github.com/senzing-garage/docker-xterm.git#main
 
     docker push senzing/xterm:staging
 
@@ -353,7 +353,7 @@
         --build-arg BASE_IMAGE=senzing/senzingapi-tools:staging \
         --no-cache \
         --tag senzing/g2configtool:staging \
-        https://github.com/senzing/g2configtool.git#main
+        https://github.com/senzing-garage/g2configtool.git#main
 
     docker push senzing/g2configtool:staging
 
@@ -361,7 +361,7 @@
         --build-arg BASE_IMAGE=senzing/senzingapi-runtime:staging \
         --no-cache \
         --tag senzing/init-postgresql:staging \
-        https://github.com/senzing/init-postgresql.git#main
+        https://github.com/senzing-garage/init-postgresql.git#main
 
     docker push senzing/init-postgresql:staging
 
@@ -369,7 +369,7 @@
         --build-arg BASE_IMAGE=senzing/senzingapi-runtime:staging \
         --no-cache \
         --tag senzing/web-app-demo:staging \
-        https://github.com/senzing/docker-web-app-demo.git#main
+        https://github.com/senzing-garage/docker-web-app-demo.git#main
 
     docker push senzing/web-app-demo:staging
     ```

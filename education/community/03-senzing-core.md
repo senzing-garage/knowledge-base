@@ -37,9 +37,9 @@ see how the Senzing RPM is installed on a Linux system.
    So it may take a while, depending on your network speed.
 
 1. :eyes: Notice that the instructions are very similar to the `Dockerfile` in the
-   [senzing/docker-apt](https://github.com/Senzing/docker-apt) repository.
+   [senzing/docker-apt](https://github.com/senzing-garage/docker-apt) repository.
    For a RedHat/Centos install, look at the
-   [senzing/docker-yum](https://github.com/Senzing/docker-yum) repository.
+   [senzing/docker-yum](https://github.com/senzing-garage/docker-yum) repository.
 
 ## Viewing Senzing files
 
@@ -64,7 +64,7 @@ Everything installed by the RPM is in `/opt/senzing`.
 1. `/opt/senzing/g2/lib`
     1. Linux "shared objects" including Senzing binaries ("libg2*") as well as dependencies.
     1. This directory is usually part of the `LD_LIBRARY_PATH`.
-       Can be seen in [senzing/docker-senzing-base](https://github.com/Senzing/docker-senzing-base) Dockerfile.
+       Can be seen in [senzing/docker-senzing-base](https://github.com/senzing-garage/docker-senzing-base) Dockerfile.
     1. `g2.jar` is a Java wrapper over the C API.
     1. `jre` is for Java plugins.
 1. `/opt/senzing/g2/python`

@@ -104,7 +104,7 @@ Add `SENZING_SUBCOMMAND` so `senzing/init-container` docker container just updat
 
 Deploy the `senzing/senzing-api-server` Helm Chart with an Ingress defined.
 For more options, see `senzing/senzing-api-server`'s
-[ingress:](https://github.com/Senzing/charts/blob/1d0b26c90858498c6e29c39ccf948c0959836f75/charts/senzing-api-server/values.yaml#L413-L510)
+[ingress:](https://github.com/senzing-garage/charts/blob/1d0b26c90858498c6e29c39ccf948c0959836f75/charts/senzing-api-server/values.yaml#L413-L510)
 
 1. `helm-values/senzing-api-server-postgresql.yaml`.
    Replace the `${...}` variables with actual values.
@@ -144,7 +144,7 @@ For more options, see `senzing/senzing-api-server`'s
 
 Deploy the `senzing/entity-search-web-app` Helm Chart with an Ingress defined.
 For more options, see `senzing/entity-search-web-app`'s
-[ingress:](https://github.com/Senzing/charts/blob/1d0b26c90858498c6e29c39ccf948c0959836f75/charts/senzing-entity-search-web-app/values.yaml#L386-L483)
+[ingress:](https://github.com/senzing-garage/charts/blob/1d0b26c90858498c6e29c39ccf948c0959836f75/charts/senzing-entity-search-web-app/values.yaml#L386-L483)
 
 1. `helm-values/senzing-entity-search-web-app.yaml`.
    Replace the `${...}` variables with actual values.

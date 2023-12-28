@@ -2,8 +2,8 @@
 
 ## Configuration
 
-- **[SENZING_VAR_DIR](https://github.com/Senzing/knowledge-base/blob/main/lists/environment-variables.md#senzing_var_dir)**
-- **[SQLITE_DATABASE](https://github.com/Senzing/knowledge-base/blob/main/lists/environment-variables.md#sqlite_database)**
+- **[SENZING_VAR_DIR](https://github.com/senzing-garage/knowledge-base/blob/main/lists/environment-variables.md#senzing_var_dir)**
+- **[SQLITE_DATABASE](https://github.com/senzing-garage/knowledge-base/blob/main/lists/environment-variables.md#sqlite_database)**
 
 ## Using sqlite-web
 

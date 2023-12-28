@@ -36,7 +36,7 @@ services:
     restart: always
 
   init-postgresql:
-#   For more information, visit https://github.com/Senzing/init-postgresql
+#   For more information, visit https://github.com/senzing-garage/init-postgresql
     container_name: senzing-init-postgresql
     depends_on:
       - postgres
@@ -66,7 +66,7 @@ services:
     restart: on-failure
 
   producer:
-#   For more information, visit https://github.com/Senzing/stream-producer
+#   For more information, visit https://github.com/senzing-garage/stream-producer
     container_name: senzing-stream-producer
     depends_on:
       - rabbitmq
@@ -93,7 +93,7 @@ services:
       - .:/var/opt/senzing
 
   pocserver:
-#   For more information, visit https://github.com/Senzing/senzing-poc-server
+#   For more information, visit https://github.com/senzing-garage/senzing-poc-server
     container_name: senzing-poc-server
     depends_on:
       - postgres
@@ -134,7 +134,7 @@ services:
       - /tmp
 
   webapp:
-#   For more information, visit https://github.com/Senzing/entity-search-web-app
+#   For more information, visit https://github.com/senzing-garage/entity-search-web-app
     container_name: senzing-webapp
     depends_on:
       - pocserver
@@ -155,7 +155,7 @@ services:
     restart: always
 
   loader:
-#   For more information, visit https://github.com/Senzing/stream-loader
+#   For more information, visit https://github.com/senzing-garage/stream-loader
     container_name: senzing-stream-loader
     depends_on:
       - rabbitmq
@@ -188,7 +188,7 @@ services:
     restart: always
 
   redoer:
-#   For more information, visit https://github.com/Senzing/redoer
+#   For more information, visit https://github.com/senzing-garage/redoer
     container_name: senzing-redoer
     depends_on:
       - loader

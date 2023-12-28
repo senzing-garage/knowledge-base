@@ -6,8 +6,8 @@
    Example:
 
     ```console
-    docker build --tag senzing/mysql        https://github.com/senzing/docker-mysql.git#main
-    docker build --tag senzing/mysql-init   https://github.com/senzing/docker-mysql-init.git#main
+    docker build --tag senzing/mysql        https://github.com/senzing-garage/docker-mysql.git#main
+    docker build --tag senzing/mysql-init   https://github.com/senzing-garage/docker-mysql-init.git#main
 
     ```
 

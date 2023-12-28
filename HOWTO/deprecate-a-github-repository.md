@@ -86,15 +86,15 @@ Archiving will stop scheduled GitHub Action workflows. See
 
 ### Update documentation
 
-1. Update table in [deprecated-repositories.md](https://github.com/Senzing/knowledge-base/blob/main/lists/deprecated-repositories.md).
+1. Update table in [deprecated-repositories.md](https://github.com/senzing-garage/knowledge-base/blob/main/lists/deprecated-repositories.md).
    Add entry to top of table.
 
 ## Examples
 
 1. [github.com/Senzing?q=docker-compose](https://github.com/Senzing?q=docker-compose)
-    1. [github.com/Senzing/docker-compose-db2-demo](https://github.com/Senzing/docker-compose-db2-demo)
-    1. [github.com/Senzing/docker-compose-mysql-demo](https://github.com/Senzing/docker-compose-mysql-demo)
-    1. [github.com/Senzing/docker-compose-postgresql-demo](https://github.com/Senzing/docker-compose-postgresql-demo)
+    1. [github.com/Senzing/docker-compose-db2-demo](https://github.com/senzing-garage/docker-compose-db2-demo)
+    1. [github.com/Senzing/docker-compose-mysql-demo](https://github.com/senzing-garage/docker-compose-mysql-demo)
+    1. [github.com/Senzing/docker-compose-postgresql-demo](https://github.com/senzing-garage/docker-compose-postgresql-demo)
 
 ## References
 

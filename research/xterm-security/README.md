@@ -3,9 +3,9 @@
 ## XTerm vs. SSHD container
 
 The following chart compares security attributes of
-[XTerm](https://github.com/Senzing/docker-xterm)
+[XTerm](https://github.com/senzing-garage/docker-xterm)
 and
-[sshd](https://github.com/Senzing/docker-sshd).
+[sshd](https://github.com/senzing-garage/docker-sshd).
 
 | Feature             | XTerm      | SSHD       | Notes                                  |
 |---------------------|------------|------------| ---------------------------------------|

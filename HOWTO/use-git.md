@@ -177,7 +177,7 @@ git config --global fetch.prune true
 
 ## Sign commits locally
 
-Prerequisite: [Install GnuPG](https://github.com/Senzing/knowledge-base/blob/main/WHATIS/gnupg.md)
+Prerequisite: [Install GnuPG](https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/gnupg.md)
 
 NOTE: The following steps have been tested on OSX and Linux.<br />
 If you encounter issues please refer to the respective GitHub documentation linked in the Additional Resources section below.
@@ -283,7 +283,7 @@ gpg: signing failed: No such file or directory
 fatal: failed to write commit object
 ```
 Ensure `GPG_TTY` is configured in the environment.
-See [Configure TTY](https://github.com/Senzing/knowledge-base/blob/main/WHATIS/gnupg.md#configure-tty) for more details. 
+See [Configure TTY](https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/gnupg.md#configure-tty) for more details. 
 
 ### Additional Resources
 

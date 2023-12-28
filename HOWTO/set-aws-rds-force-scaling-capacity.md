@@ -17,7 +17,7 @@ However, AWS doesn't seem to be taking the issue seriously.
 
 For reference, Senzing has documented it in their Senzing Cloudformation templates.
 Example:
-[cloudformation.yaml](https://github.com/Senzing/aws-cloudformation-ecs-poc-simple/blob/7061f269d8658b5234e012bb6d8e12f24fc3ab7c/cloudformation.yaml#L1565-L1568)
+[cloudformation.yaml](https://github.com/senzing-garage/aws-cloudformation-ecs-poc-simple/blob/7061f269d8658b5234e012bb6d8e12f24fc3ab7c/cloudformation.yaml#L1565-L1568)
 
 ### The request
 

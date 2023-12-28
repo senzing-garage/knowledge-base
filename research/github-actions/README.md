@@ -8,8 +8,8 @@ In this document are ideas pertaining to the implementation of GitHub Actions.
 
 1. Dependabot can be configured to create Pull Requests to update `.github/workflows/a-github-action.yaml` files
    with newer versions of the Github Action. Examples:
-    1. [Dependabot configuration](https://github.com/Senzing/template-repository/blob/main/.github/dependabot.yml)
-    1. [Dependabot created pull request](https://github.com/Senzing/template-repository/pull/37/files)
+    1. [Dependabot configuration](https://github.com/senzing-garage/template-repository/blob/main/.github/dependabot.yml)
+    1. [Dependabot created pull request](https://github.com/senzing-garage/template-repository/pull/37/files)
 1. This is triggered by a versioned release of the repository containing the GitHub Action.
 1. If more than one GitHub Action is contained in a repository, it's possible that repositories are notified for
    GitHub Action version updates, when the version of the GitHub Action they are using is not updated.
