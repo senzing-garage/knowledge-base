@@ -37,9 +37,9 @@
 ## Documentation
 
 1. Repository `README.md` files for repository-specific information.
-1. [knowledge-base](https://github.com/Senzing/knowledge-base/) for information
+1. [knowledge-base](https://github.com/senzing-garage/knowledge-base/) for information
    common to multiple repositories.
-1. [knowledge-base](https://github.com/Senzing/knowledge-base/) for information
+1. [knowledge-base](https://github.com/senzing-garage/knowledge-base/) for information
    independent of repositories.
 
 ## Independence of repositories

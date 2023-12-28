@@ -3,18 +3,18 @@
 ## Synopsis
 
 Simple steps to demonstrate the
-[truth set](https://github.com/Senzing/truth-sets)
+[truth set](https://github.com/senzing-garage/truth-sets)
 data using the
-[Senzing entity search webapp](https://github.com/Senzing/entity-search-web-app).
+[Senzing entity search webapp](https://github.com/senzing-garage/entity-search-web-app).
 
 ## Overview
 
 ## Prerequisites
 
 1. Before trying this demonstration, deploy a Senzing stack based on a
-   [docker-compose-demo](https://github.com/Senzing/docker-compose-demo)
+   [docker-compose-demo](https://github.com/senzing-garage/docker-compose-demo)
    or a
-   [kubernetes-demo](https://github.com/Senzing/kubernetes-demo).
+   [kubernetes-demo](https://github.com/senzing-garage/kubernetes-demo).
 
 ## Demonstrate
 

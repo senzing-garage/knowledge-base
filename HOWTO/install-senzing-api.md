@@ -50,7 +50,7 @@ Instructions for installing
        This ensures that you make a conscious effort to accept the EULA.
        Example:
 
-        <pre>export SENZING_ACCEPT_EULA="&lt;the value from <a href="https://github.com/Senzing/knowledge-base/blob/main/lists/environment-variables.md#senzing_accept_eula">this link</a>&gt;"</pre>
+        <pre>export SENZING_ACCEPT_EULA="&lt;the value from <a href="https://github.com/senzing-garage/knowledge-base/blob/main/lists/environment-variables.md#senzing_accept_eula">this link</a>&gt;"</pre>
 
 1. Install Senzing API.
    If `SENZING_ACCEPT_EULA` environment variable is not set,
@@ -81,7 +81,7 @@ For installation on Red Hat, CentOS, openSuse and
        This ensures that you make a conscious effort to accept the EULA.
        Example:
 
-        <pre>export SENZING_ACCEPT_EULA="&lt;the value from <a href="https://github.com/Senzing/knowledge-base/blob/main/lists/environment-variables.md#senzing_accept_eula">this link</a>&gt;"</pre>
+        <pre>export SENZING_ACCEPT_EULA="&lt;the value from <a href="https://github.com/senzing-garage/knowledge-base/blob/main/lists/environment-variables.md#senzing_accept_eula">this link</a>&gt;"</pre>
 
 1. Install Senzing API.
    If `SENZING_ACCEPT_EULA` environment variable is not set,
@@ -99,7 +99,7 @@ For installation on Red Hat, CentOS, openSuse and
 
 ### Docker
 
-1. See [senzing/docker-yum](https://github.com/Senzing/docker-yum)
+1. See [senzing/docker-yum](https://github.com/senzing-garage/docker-yum)
    for instructions on using a docker container to install Senzing files.
    **Note:** Although the docker container uses `yum`,
    it can be used on CentOS, Debian, macOS, and Windows systems.

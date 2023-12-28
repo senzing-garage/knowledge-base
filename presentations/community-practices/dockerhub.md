@@ -23,4 +23,4 @@ There are 2 types of Senzing Docker images on DockerHub:
 1. `M.m.P` - a semantically versioned release of the Docker image corresponding to the semantic version release of the Senzing GitHub repository.
 
 Configuration instructions are at
-[autobuild-on-docker-hub.md](https://github.com/Senzing/knowledge-base/blob/main/HOWTO/autobuild-on-docker-hub.md).
+[autobuild-on-docker-hub.md](https://github.com/senzing-garage/knowledge-base/blob/main/HOWTO/autobuild-on-docker-hub.md).

@@ -15,4 +15,4 @@
 
 ## Go level explanations
 
-1. See [senzing/go-logging](https://github.com/Senzing/go-logging)
+1. See [senzing/go-logging](https://github.com/senzing-garage/go-logging)

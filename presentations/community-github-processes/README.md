@@ -25,7 +25,7 @@
        "Triage" will be added automatically and can be removed if no triage is needed.
     1. **Projects:** Used to track progress of issue in a team Kanban project board.
 1. Examples:
-    1. In <https://github.com/Senzing/stream-loader/issues/231>
+    1. In <https://github.com/senzing-garage/stream-loader/issues/231>
         1. "mentions" - See other related issues and whether they are open or closed
         1. "commits" - by clicking on an abbreviated "commit SHA", the change is shown.
         1. "build status" - by clicking on the "x" or "check", you can see the checks that were performed
@@ -82,9 +82,9 @@
     ```text
     Pull requests:
 
-    1. https://github.com/Senzing/xxx/pull/50
-    1. https://github.com/Senzing/xxx/pull/51
-    1. https://github.com/Senzing/xxx/pull/52
+    1. https://github.com/senzing-garage/xxx/pull/50
+    1. https://github.com/senzing-garage/xxx/pull/51
+    1. https://github.com/senzing-garage/xxx/pull/52
     ```
 
    **Why?**

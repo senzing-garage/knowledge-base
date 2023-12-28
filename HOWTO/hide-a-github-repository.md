@@ -15,5 +15,5 @@ See [GitHub documentation](https://docs.github.com/en/repositories/managing-your
 
 ### Update documentation
 
-1. Update table in [deprecated-repositories.md](https://github.com/Senzing/knowledge-base/blob/main/lists/deprecated-repositories.md).
+1. Update table in [deprecated-repositories.md](https://github.com/senzing-garage/knowledge-base/blob/main/lists/deprecated-repositories.md).
    Update `Hidden` column for the respective repository entry in the table.

@@ -6,7 +6,7 @@ The
 [senzing/senzingapi-runtime](https://hub.docker.com/r/senzing/senzingapi-runtime)
 Docker image has the Senzing binaries "baked-in".
 This Docker image and its corresponding
-[senzingapi-runtime GitHub repository](https://github.com/Senzing/senzingapi-runtime)
+[senzingapi-runtime GitHub repository](https://github.com/senzing-garage/senzingapi-runtime)
 can be used in a number of ways to simplify development using the Senzing SDK library.
 
 ## Overview
@@ -107,7 +107,7 @@ The following steps creates a new Docker image by wrapping an existing image wit
     docker build \
       --build-arg BASE_IMAGE=${DOCKER_BASE_IMAGE} \
       --tag ${DOCKER_IMAGE_TAG} \
-      https://github.com/Senzing/senzingapi-runtime.git#${SENZING_DOCKER_IMAGE_VERSION_SENZINGAPI_RUNTIME}
+      https://github.com/senzing-garage/senzingapi-runtime.git#${SENZING_DOCKER_IMAGE_VERSION_SENZINGAPI_RUNTIME}
 
     ```
 
@@ -117,7 +117,7 @@ This technique is to copy, paste, and modify Docker instructions into the "origi
 Dockerfile to install Senzing.
 
 1. Using the `senzing/senzingapi-runtime`
-   [Dockerfile](https://github.com/Senzing/senzingapi-runtime/blob/main/Dockerfile) as a guide,
+   [Dockerfile](https://github.com/senzing-garage/senzingapi-runtime/blob/main/Dockerfile) as a guide,
    copy the Docker instructions into your `Dockerfile`
 
 1. The following environment variable are important:
@@ -135,7 +135,7 @@ or any other method, then the following instructions will create customized vers
 Senzing Docker images:
 
 1. List the Github repository, DockerHub repository, version tag, and user for each Docker image and their
-   [corresponding environment variable name](https://github.com/Senzing/knowledge-base/blob/main/lists/docker-versions-stable.sh).
+   [corresponding environment variable name](https://github.com/senzing-garage/knowledge-base/blob/main/lists/docker-versions-stable.sh).
 
    Format: `GitHub repository`;`DockerHub repository`;`tag`;`user` where `user` defaults to `1001`.
 
@@ -171,7 +171,7 @@ Senzing Docker images:
             --build-arg BASE_IMAGE=${DOCKER_IMAGE_TAG} \
             --build-arg USER=${BASE_IMAGE_USER:-1001} \
             --tag ${BASE_IMAGE_NAME}-${DOCKER_IMAGE_SUFFIX}:${BASE_IMAGE_VERSION} \
-            https://github.com/Senzing/${BASE_IMAGE_REPOSITORY}.git#${BASE_IMAGE_VERSION}
+            https://github.com/senzing-garage/${BASE_IMAGE_REPOSITORY}.git#${BASE_IMAGE_VERSION}
 
     done
 

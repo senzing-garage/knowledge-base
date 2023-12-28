@@ -20,7 +20,7 @@
     1. [markdownlint](https://dlaa.me/markdownlint/) or other Markdown linter
     1. [Semantic Versioning](https://semver.org/spec/v2.0.0.html)
 1. This support GitHub depend-a-bot created Pull Requests
-    1. Example: [Go](https://github.com/Senzing/g2-sdk-go-base/pull/27)
+    1. Example: [Go](https://github.com/senzing-garage/g2-sdk-go-base/pull/27)
 
 ### requirements.txt
 

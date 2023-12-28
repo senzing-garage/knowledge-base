@@ -47,59 +47,59 @@ Open range: 8250-8265
 
 ### 8250
 
-- [Senzing API server](https://github.com/Senzing/senzing-api-server) default HTTP Port.
+- [Senzing API server](https://github.com/senzing-garage/senzing-api-server) default HTTP Port.
 
 ### 8251
 
-- [Senzing Entity Search Web App](https://github.com/Senzing/entity-search-web-app)
+- [Senzing Entity Search Web App](https://github.com/senzing-garage/entity-search-web-app)
 
 ### 8252
 
-- [Senzing Resolver](https://github.com/Senzing/resolver)
+- [Senzing Resolver](https://github.com/senzing-garage/resolver)
 
 ### 8253
 
-- [Senzing Configurator](https://github.com/Senzing/configurator)
+- [Senzing Configurator](https://github.com/senzing-garage/configurator)
 
 ### 8254
 
-- [Senzing X-term](https://github.com/Senzing/docker-xterm)
+- [Senzing X-term](https://github.com/senzing-garage/docker-xterm)
 
 ### 8255
 
-- [stream-producer](https://github.com/Senzing/stream-producer)
+- [stream-producer](https://github.com/senzing-garage/stream-producer)
 
 ### 8256
 
-- [Senzing docker-python-demo](https://github.com/Senzing/docker-python-demo)
+- [Senzing docker-python-demo](https://github.com/senzing-garage/docker-python-demo)
 
 ### 8257
 
-- [entity-search-web-app-console](https://github.com/Senzing/entity-search-web-app-console)
+- [entity-search-web-app-console](https://github.com/senzing-garage/entity-search-web-app-console)
 
 ### 8258
 
-- [go-observing](https://github.com/Senzing/go-observing)
+- [go-observing](https://github.com/senzing-garage/go-observing)
 
 ### 8259
 
-- [dashboard](https://github.com/Senzing/dashboard)
+- [dashboard](https://github.com/senzing-garage/dashboard)
 
 ### 8260
 
-- [serve-http](https://github.com/Senzing/serve-http)
+- [serve-http](https://github.com/senzing-garage/serve-http)
 
 ### 8261
 
-- [serve-gprc](https://github.com/Senzing/serve-gprc)
+- [serve-gprc](https://github.com/senzing-garage/serve-gprc)
 
 ### 8262
 
-- [serve-chat](https://github.com/Senzing/serve-chat)
+- [serve-chat](https://github.com/senzing-garage/serve-chat)
 
 ### 8263
 
-- [Senzing API server](https://github.com/Senzing/senzing-api-server) default HTTPS Port.
+- [Senzing API server](https://github.com/senzing-garage/senzing-api-server) default HTTPS Port.
 
 ## Other
 
@@ -131,15 +131,15 @@ Open range: 9165-9190
 
 ### 9176
 
-- [Jenkins Blue Ocean](https://github.com/Senzing/knowledge-base/blob/main/WHATIS/jenkins-blue-ocean.md)
+- [Jenkins Blue Ocean](https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/jenkins-blue-ocean.md)
 
 ### 9177
 
-- [Adminer](https://github.com/Senzing/docker-adminer)
+- [Adminer](https://github.com/senzing-garage/docker-adminer)
 
 ### 9178
 
-- [Jupyter](https://github.com/Senzing/docker-jupyter)
+- [Jupyter](https://github.com/senzing-garage/docker-jupyter)
 
 ### 9179
 

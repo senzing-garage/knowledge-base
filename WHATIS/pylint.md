@@ -29,7 +29,7 @@
 
 ### Github workflow
 
-1. See [.github/workflows/pylint.yaml](https://github.com/Senzing/stream-loader/blob/main/.github/workflows/pylint.yaml)
+1. See [.github/workflows/pylint.yaml](https://github.com/senzing-garage/stream-loader/blob/main/.github/workflows/pylint.yaml)
 
 ## References
 

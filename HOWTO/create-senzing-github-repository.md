@@ -109,7 +109,7 @@ This is a checklist of what to set when creating a new GitHub Repository.
         ```
 
     1. Populate the new repository with the `Community Artifacts` found in
-       [github.com/Senzing/template-repository](https://github.com/Senzing/template-repository).
+       [github.com/Senzing/template-repository](https://github.com/senzing-garage/template-repository).
     1. Modify `CONTRIBUTING.md`
         1. `export GIT_REPOSITORY=<new-repository-name>`
     1. Modify `.github/CODEOWNERS`
@@ -196,4 +196,4 @@ the status check has been performed within the last 7 day.
 #### References
 
 1. [GitHub docs](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches#require-status-checks-before-merging)
-1. [One time CODEOWNER token configuration](https://github.com/Senzing/knowledge-base/blob/main/HOWTO/configure-github-organization.md)
+1. [One time CODEOWNER token configuration](https://github.com/senzing-garage/knowledge-base/blob/main/HOWTO/configure-github-organization.md)

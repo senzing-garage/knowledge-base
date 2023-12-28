@@ -24,6 +24,6 @@
 1. (Almost) all repositories are independently versioned.
     1. The only Senzing Community repository that is in "lock-step" with the
        SenzingAPI package (DEB/RPM) version is
-       [g2-python](https://github.com/Senzing/g2-python).
+       [g2-python](https://github.com/senzing-garage/g2-python).
        This is because the contents of the repository are delivered with the
        SenzingAPI package.

@@ -25,15 +25,15 @@
 
 ### System testing - docker-compose
 
-1. Update [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/main/lists/docker-versions-latest.sh)
+1. Update [docker-versions-latest.sh](https://github.com/senzing-garage/knowledge-base/blob/main/lists/docker-versions-latest.sh)
    using
-   [dockerhub-util](https://github.com/Senzing/dockerhub-util/blob/main/docs/examples.md#create-reports).
+   [dockerhub-util](https://github.com/senzing-garage/dockerhub-util/blob/main/docs/examples.md#create-reports).
    Or manually make
-   [docker-versions-staging.sh](https://github.com/Senzing/knowledge-base/blob/main/lists/docker-versions-staging.sh).
+   [docker-versions-staging.sh](https://github.com/senzing-garage/knowledge-base/blob/main/lists/docker-versions-staging.sh).
 1. Download and run
-   [docker-versions-latest.sh](https://github.com/Senzing/knowledge-base/blob/main/lists/docker-versions-latest.sh)
+   [docker-versions-latest.sh](https://github.com/senzing-garage/knowledge-base/blob/main/lists/docker-versions-latest.sh)
 1. Manually, run a
-   [docker-compose-demo](https://github.com/Senzing/docker-compose-demo)
+   [docker-compose-demo](https://github.com/senzing-garage/docker-compose-demo)
    formation.
 
 ### System testing - AWS Cloudformation

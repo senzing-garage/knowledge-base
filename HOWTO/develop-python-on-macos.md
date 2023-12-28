@@ -92,7 +92,7 @@ but test the running of the scripts in a Linux Docker container.
    ```
 
 1. To use other databases, see
-   [senzing/docker-senzing-base](https://github.com/Senzing/docker-senzing-base#run-docker-container).
+   [senzing/docker-senzing-base](https://github.com/senzing-garage/docker-senzing-base#run-docker-container).
 
 ### Run python scripts inside container
 
@@ -137,4 +137,4 @@ but test the running of the scripts in a Linux Docker container.
     FROM ${BASE_IMAGE}
     ```
 
-1. An example of this can be found in [senzing/docker-senzing-poc-utility](https://github.com/Senzing/docker-senzing-poc-utility).  View the `Dockerfile`.
+1. An example of this can be found in [senzing/docker-senzing-poc-utility](https://github.com/senzing-garage/docker-senzing-poc-utility).  View the `Dockerfile`.

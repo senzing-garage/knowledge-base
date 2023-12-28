@@ -2,8 +2,8 @@
 
 ## Configuration
 
-- **[SENZING_OPT_IBM_DIR](https://github.com/Senzing/knowledge-base/blob/main/lists/environment-variables.md#senzing_opt_ibm_dir)**
-- **[SENZING_VOLUME](https://github.com/Senzing/knowledge-base/blob/main/lists/environment-variables.md#senzing_volume)**
+- **[SENZING_OPT_IBM_DIR](https://github.com/senzing-garage/knowledge-base/blob/main/lists/environment-variables.md#senzing_opt_ibm_dir)**
+- **[SENZING_VOLUME](https://github.com/senzing-garage/knowledge-base/blob/main/lists/environment-variables.md#senzing_volume)**
 
 ## Specify Db2 driver location
 
@@ -46,4 +46,4 @@
 
 ## References
 
-1. GitHub project for [senzing/db2-driver-installer](https://github.com/Senzing/docker-db2-driver-installer)
+1. GitHub project for [senzing/db2-driver-installer](https://github.com/senzing-garage/docker-db2-driver-installer)

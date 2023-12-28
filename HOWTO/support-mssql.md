@@ -20,8 +20,8 @@
 
 ### Configuration
 
-- **[SENZING_OPT_MICROSOFT_DIR](https://github.com/Senzing/knowledge-base/blob/main/lists/environment-variables.md#senzing_opt_microsoft_dir)**
-- **[SENZING_VOLUME](https://github.com/Senzing/knowledge-base/blob/main/lists/environment-variables.md#senzing_volume)**
+- **[SENZING_OPT_MICROSOFT_DIR](https://github.com/senzing-garage/knowledge-base/blob/main/lists/environment-variables.md#senzing_opt_microsoft_dir)**
+- **[SENZING_VOLUME](https://github.com/senzing-garage/knowledge-base/blob/main/lists/environment-variables.md#senzing_volume)**
 
 ### Specify MS SQL driver location
 
@@ -65,4 +65,4 @@
 
 ## References
 
-1. GitHub project for [senzing/apt](https://github.com/Senzing/docker-apt)
+1. GitHub project for [senzing/apt](https://github.com/senzing-garage/docker-apt)

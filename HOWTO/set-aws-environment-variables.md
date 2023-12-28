@@ -83,7 +83,7 @@ If using `AWS_SESSION_TOKEN`, a session will need to be created and environment 
     ```
 
 1. References:
-    1. [Usage](https://github.com/Senzing/knowledge-base/blob/main/lists/environment-variables.md#aws_access_key_id)
+    1. [Usage](https://github.com/senzing-garage/knowledge-base/blob/main/lists/environment-variables.md#aws_access_key_id)
 
 ### AWS_DEFAULT_REGION
 
@@ -95,7 +95,7 @@ If using `AWS_SESSION_TOKEN`, a session will need to be created and environment 
     ```
 
 1. References:
-    1. [Usage](https://github.com/Senzing/knowledge-base/blob/main/lists/environment-variables.md#aws_default_region)
+    1. [Usage](https://github.com/senzing-garage/knowledge-base/blob/main/lists/environment-variables.md#aws_default_region)
 
 ### AWS_SECRET_ACCESS_KEY
 
@@ -116,7 +116,7 @@ If using `AWS_SESSION_TOKEN`, a session will need to be created and environment 
     ```
 
 1. References:
-    1. [Usage](https://github.com/Senzing/knowledge-base/blob/main/lists/environment-variables.md#aws_secret_access_key)
+    1. [Usage](https://github.com/senzing-garage/knowledge-base/blob/main/lists/environment-variables.md#aws_secret_access_key)
 
 ### AWS_SESSION_TOKEN
 
@@ -130,7 +130,7 @@ If using `AWS_SESSION_TOKEN`, a session will need to be created and environment 
     ```
 
 1. References:
-    1. [Usage](https://github.com/Senzing/knowledge-base/blob/main/lists/environment-variables.md#aws_session_token)
+    1. [Usage](https://github.com/senzing-garage/knowledge-base/blob/main/lists/environment-variables.md#aws_session_token)
 
 ## Non-AWS environment variables
 

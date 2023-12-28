@@ -9,9 +9,9 @@ Improve the customer experience in Exception handling in the Senzing Python SDK.
 ### Proposal 2 Overview
 
 Currently a Python programmer using the
-[Senzing Python SDK](https://github.com/Senzing/g2-sdk-python/tree/main/src/senzing)
+[Senzing Python SDK](https://github.com/senzing-garage/g2-sdk-python/tree/main/src/senzing)
 has a plethora of
-[Exceptions](https://github.com/Senzing/g2-sdk-python/blob/main/src/senzing/G2Exception.py)
+[Exceptions](https://github.com/senzing-garage/g2-sdk-python/blob/main/src/senzing/G2Exception.py)
 that could be thrown by the underlying SDK.
 
 When an Exception is thrown by the Senzing Python SDK,
@@ -62,7 +62,7 @@ The approach facilitates "future-proofing" applications using the Senzing Python
 
 ### Proposal 2 Usage
 
-1. [Before](https://github.com/Senzing/redoer/blob/c3d3aeaf281d091d2ca370da1c5c56f54d736a66/redoer.py#L2061-L2083)
+1. [Before](https://github.com/senzing-garage/redoer/blob/c3d3aeaf281d091d2ca370da1c5c56f54d736a66/redoer.py#L2061-L2083)
 
 1. After (simplified)
    Example:
@@ -129,7 +129,7 @@ The approach facilitates "future-proofing" applications using the Senzing Python
         | Exception               | No        | No       | Yes  |
 
 1. Message numbers have
-   [ranges](https://github.com/Senzing/stream-loader/blob/30c9fe591137793c063152cee04c0478523d7357/stream-loader.py#L892-L908).
+   [ranges](https://github.com/senzing-garage/stream-loader/blob/30c9fe591137793c063152cee04c0478523d7357/stream-loader.py#L892-L908).
 
     - 1xx Informational (i.e. logging.info())
     - 3xx Warning (i.e. logging.warning())
@@ -139,7 +139,7 @@ The approach facilitates "future-proofing" applications using the Senzing Python
 
    Log message identifiers have the format `senzing-ppppnnnnt`, where:
 
-    - "p" is the 4 digit [product identifier](https://github.com/Senzing/knowledge-base/blob/main/lists/senzing-product-ids.md)
+    - "p" is the 4 digit [product identifier](https://github.com/senzing-garage/knowledge-base/blob/main/lists/senzing-product-ids.md)
     - "n" is the 4 digit message identifier within product
     - "t" is the 1 character message type: Info, Warn, Error
 
@@ -190,9 +190,9 @@ Improve the customer experience in Exception handling in the Senzing Python SDK.
 ### Proposal 1 Overview
 
 Currently a Python programmer using the
-[Senzing Python SDK](https://github.com/Senzing/g2-sdk-python/tree/main/src/senzing)
+[Senzing Python SDK](https://github.com/senzing-garage/g2-sdk-python/tree/main/src/senzing)
 has a plethora of
-[Exceptions](https://github.com/Senzing/g2-sdk-python/blob/main/src/senzing/G2Exception.py)
+[Exceptions](https://github.com/senzing-garage/g2-sdk-python/blob/main/src/senzing/G2Exception.py)
 that could be thrown by the underlying SDK.
 
 When an Exception is thrown by the Senzing Python SDK,
@@ -247,7 +247,7 @@ The approach facilitates "future-proofing" applications using the Senzing Python
 
 ### Proposal 1 Usage
 
-1. [Before](https://github.com/Senzing/redoer/blob/c3d3aeaf281d091d2ca370da1c5c56f54d736a66/redoer.py#L2061-L2083)
+1. [Before](https://github.com/senzing-garage/redoer/blob/c3d3aeaf281d091d2ca370da1c5c56f54d736a66/redoer.py#L2061-L2083)
 
 1. After (simplified)
    Example:
@@ -322,7 +322,7 @@ The approach facilitates "future-proofing" applications using the Senzing Python
         | Exception            | ??        | ??       | Yes  |
 
 1. Message numbers have
-   [ranges](https://github.com/Senzing/stream-loader/blob/30c9fe591137793c063152cee04c0478523d7357/stream-loader.py#L892-L908).
+   [ranges](https://github.com/senzing-garage/stream-loader/blob/30c9fe591137793c063152cee04c0478523d7357/stream-loader.py#L892-L908).
 
     - 1xx Informational (i.e. logging.info())
     - 3xx Warning (i.e. logging.warning())
@@ -332,7 +332,7 @@ The approach facilitates "future-proofing" applications using the Senzing Python
 
    Log message identifiers have the format `senzing-ppppnnnnt`, where:
 
-    - "p" is the 4 digit [product identifier](https://github.com/Senzing/knowledge-base/blob/main/lists/senzing-product-ids.md)
+    - "p" is the 4 digit [product identifier](https://github.com/senzing-garage/knowledge-base/blob/main/lists/senzing-product-ids.md)
     - "n" is the 4 digit message identifier within product
     - "t" is the 1 character message type: Info, Warn, Error
 

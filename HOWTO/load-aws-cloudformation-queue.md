@@ -3,7 +3,7 @@
 ## Overview
 
 Instructions for deploying
-[AWS Cloudformation ECS POC simple](https://github.com/Senzing/aws-cloudformation-ecs-poc-simple)
+[AWS Cloudformation ECS POC simple](https://github.com/senzing-garage/aws-cloudformation-ecs-poc-simple)
 and loading the SQS queue from a local workstation.
 
 ### Contents
@@ -137,7 +137,7 @@ and loading the SQS queue from a local workstation.
 
 ### Load SQS from Linux or macOS
 
-1. Install [stream-producer](https://github.com/Senzing/stream-producer).
+1. Install [stream-producer](https://github.com/senzing-garage/stream-producer).
     1. Install prerequisites.
        Example:
 
@@ -162,7 +162,7 @@ and loading the SQS queue from a local workstation.
         ```
 
 1. Load SQS queue using
-   [stream-producer](https://github.com/Senzing/stream-producer).
+   [stream-producer](https://github.com/senzing-garage/stream-producer).
 
     1. :pencil2: Set AWS variables:
        Example:
@@ -197,7 +197,7 @@ and loading the SQS queue from a local workstation.
         ```
 
     1. :pencil2: Set subcommand for
-       [stream-producer.py](https://github.com/Senzing/stream-producer)
+       [stream-producer.py](https://github.com/senzing-garage/stream-producer)
        Example:
 
         ```console
@@ -217,7 +217,7 @@ and loading the SQS queue from a local workstation.
 
 ### Load SQS from Windows
 
-1. Install [stream-producer](https://github.com/Senzing/stream-producer).
+1. Install [stream-producer](https://github.com/senzing-garage/stream-producer).
     1. Install prerequisites.
        Example:
 
@@ -242,7 +242,7 @@ and loading the SQS queue from a local workstation.
         ```
 
 1. Load SQS queue using
-   [stream-producer](https://github.com/Senzing/stream-producer).
+   [stream-producer](https://github.com/senzing-garage/stream-producer).
 
     1. :pencil2: Set AWS variables:
        Example:
@@ -277,7 +277,7 @@ and loading the SQS queue from a local workstation.
         ```
 
     1. :pencil2: Set subcommand for
-       [stream-producer.py](https://github.com/Senzing/stream-producer)
+       [stream-producer.py](https://github.com/senzing-garage/stream-producer)
        Example:
 
         ```console

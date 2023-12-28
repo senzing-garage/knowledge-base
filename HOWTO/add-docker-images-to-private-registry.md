@@ -15,7 +15,7 @@ and push them to a private Docker registry.
 ## Prerequisites
 
 1. If you need to create a private docker registry, see
-       [WHATIS - docker registry server](https://github.com/Senzing/knowledge-base/blob/main/WHATIS/docker-registry-server.md).
+       [WHATIS - docker registry server](https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/docker-registry-server.md).
 
 ## Build docker images
 
@@ -26,8 +26,8 @@ Build any Docker images that aren't on a public Docker registry.
    Example:
 
     ```console
-    docker build --tag senzing/mysql        https://github.com/senzing/docker-mysql.git#main
-    docker build --tag senzing/mysql-init   https://github.com/senzing/docker-mysql-init.git#main
+    docker build --tag senzing/mysql        https://github.com/senzing-garage/docker-mysql.git#main
+    docker build --tag senzing/mysql-init   https://github.com/senzing-garage/docker-mysql-init.git#main
 
     ```
 
