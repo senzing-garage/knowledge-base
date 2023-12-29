@@ -37,9 +37,11 @@
     1. [ ] [go-sdk-abstract-factory](https://github.com/senzing-garage/go-sdk-abstract-factory)
 1. Requires: go-sdk-abstract-factory
     1. [ ] [check-self](https://github.com/senzing-garage/check-self)
-    1. [ ] [serve-chat](https://github.com/senzing-garage/serve-chat)
     1. [ ] [go-rest-api-service](https://github.com/senzing-garage/go-rest-api-service)
+    1. [ ] [load](https://github.com/senzing-garage/load)
+    1. [ ] [serve-chat](https://github.com/senzing-garage/serve-chat)
 1. Requires: go-rest-api-service
+    1. [ ] [demo-entity-search](https://github.com/senzing-garage/demo-entity-search)
     1. [ ] [serve-http](https://github.com/senzing-garage/serve-http)
 1. Requires: go-databasing
     1. [ ] [init-database](https://github.com/senzing-garage/init-database)
@@ -51,4 +53,3 @@
 
 ## Not included
 
-1. [ ] [load](https://github.com/senzing-garage/load)
