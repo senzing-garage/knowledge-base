@@ -22,7 +22,6 @@
     1. [ ] [go-cmdhelping](https://github.com/senzing-garage/go-cmdhelping)
 1. Requires: go-cmdhelping
     1. [ ] [explain](https://github.com/senzing-garage/explain)
-    1. [ ] [move](https://github.com/senzing-garage/move)
     1. [ ] [observe](https://github.com/senzing-garage/observe)
     1. [ ] [template-go](https://github.com/senzing-garage/template-go)
     1. [ ] [validate](https://github.com/senzing-garage/validate)
@@ -31,6 +30,8 @@
     1. [ ] [g2-sdk-go-grpc](https://github.com/senzing-garage/g2-sdk-go-grpc)
     1. [ ] [g2-sdk-go-mock](https://github.com/senzing-garage/g2-sdk-go-mock)
     1. [ ] [go-queueing](https://github.com/senzing-garage/go-queueing)
+1. Requires: go-queueing
+    1. [ ] [move](https://github.com/senzing-garage/move)
 1. Requires: g2-sdk-go-base
     1. [ ] [serve-grpc](https://github.com/senzing-garage/serve-grpc)
 1. Requires: g2-sdk-go-grpc
