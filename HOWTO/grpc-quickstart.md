@@ -29,6 +29,7 @@ and access it using the `senzing_grpc` Python package.
       --publish 8261:8261 \
       --rm \
       senzing/senzing-tools
+
     ```
 
    **Note:** In this example, `SENZING_TOOLS_DATABASE_URL` specifies a file *inside* the container.
@@ -39,6 +40,7 @@ and access it using the `senzing_grpc` Python package.
 
     ```console
     python3
+
     ```
 
 1. To add Truth Set data sources to the Senzing configuration,
@@ -70,7 +72,7 @@ and access it using the `senzing_grpc` Python package.
         config_handle = g2_config.load(OLD_JSON_CONFIG)
         # Add Datasources to existing Senzing configuration.
         for datasource in TRUTHSET_DATASOURCES.values():
-            print(g2_config.add_data_source(config_handle, datasource.get("Json", {})))
+            g2_config.add_data_source(config_handle, datasource.get("Json", {}))
         # Externalize new Senzing configuration.
         NEW_JSON_CONFIG = g2_config.save(config_handle)
         new_config_id = g2_configmgr.add_config(NEW_JSON_CONFIG, "Add TruthSet datasources")
@@ -82,6 +84,7 @@ and access it using the `senzing_grpc` Python package.
         g2_diagnostic.reinit(new_config_id)
     except G2Exception as err:
         print(f"\nError:\n{err}\n")
+
     ```
 
 1. To add Truth Set data to the Senzing database,
@@ -108,6 +111,7 @@ and access it using the `senzing_grpc` Python package.
                 )
     except G2Exception as err:
         print(f"\nError:\n{err}\n")
+
     ```
 
 1. Entity details can be viewed.
@@ -118,6 +122,7 @@ and access it using the `senzing_grpc` Python package.
 
     result = g2_engine.get_entity_by_record_id_v2("CUSTOMERS", "1070", -1)
     print(json.dumps(json.loads(result), indent=2))
+
     ```
 
 1. Entities can be searched.
@@ -130,4 +135,5 @@ and access it using the `senzing_grpc` Python package.
     }
     result = g2_engine.search_by_attributes_v2(search_query)
     print(json.dumps(json.loads(result), indent=2))
+
     ```
