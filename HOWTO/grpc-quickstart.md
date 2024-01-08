@@ -138,3 +138,9 @@ and access it using the `senzing_grpc` Python package.
     print(json.dumps(json.loads(result), indent=2))
 
     ```
+
+1. To end the interactive Python session, run
+
+    ```python
+    quit()
+    ```
