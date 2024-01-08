@@ -67,6 +67,8 @@ and access it using the `senzing_grpc` Python package.
     # Create Senzing objects.
         g2_config = G2ConfigGrpc(grpc_channel=grpc_channel)
         g2_configmgr = G2ConfigMgrGrpc(grpc_channel=grpc_channel)
+        g2_engine = G2EngineGrpc(grpc_channel=grpc_channel)
+        g2_diagnostic = G2DiagnosticGrpc(grpc_channel=grpc_channel)
     # Get existing Senzing configuration.
         old_config_id = g2_configmgr.get_default_config_id()
         OLD_JSON_CONFIG = g2_configmgr.get_config(old_config_id)
@@ -79,9 +81,7 @@ and access it using the `senzing_grpc` Python package.
         new_config_id = g2_configmgr.add_config(NEW_JSON_CONFIG, "Add TruthSet datasources")
         g2_configmgr.replace_default_config_id(old_config_id, new_config_id)
     # Update other Senzing objects.
-        g2_engine = G2EngineGrpc(grpc_channel=grpc_channel)
         g2_engine.reinit(new_config_id)
-        g2_diagnostic = G2DiagnosticGrpc(grpc_channel=grpc_channel)
         g2_diagnostic.reinit(new_config_id)
     except G2Exception as err:
         print(f"\nError:\n{err}\n")
