@@ -115,6 +115,7 @@ and access it using the `senzing_grpc` Python package.
 
     ```python
     import json
+
     result = g2_engine.get_entity_by_record_id_v2("CUSTOMERS", "1070", -1)
     print(json.dumps(json.loads(result), indent=2))
     ```
