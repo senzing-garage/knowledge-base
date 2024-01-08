@@ -88,6 +88,7 @@ and access it using the `senzing_grpc` Python package.
     ```
 
 1. To add Truth Set data to the Senzing database,
+   press the **Enter** key to return to the `>>>` prompt, then
    copy and paste the following block of code into the interactive Python session.
    Example:
 
