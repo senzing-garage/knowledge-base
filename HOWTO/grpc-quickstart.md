@@ -27,6 +27,7 @@ and access it using the `senzing_grpc` Python package.
       --env SENZING_TOOLS_ENABLE_ALL=true \
       --name senzing-tools-serve-grpc \
       --publish 8261:8261 \
+      --pull always \
       --rm \
       senzing/senzing-tools
 
