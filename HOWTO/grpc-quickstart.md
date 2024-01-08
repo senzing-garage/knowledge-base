@@ -122,8 +122,8 @@ and access it using the `senzing_grpc` Python package.
     ```python
     import json
 
-    result = g2_engine.get_entity_by_record_id_v2("CUSTOMERS", "1070", -1)
-    print(json.dumps(json.loads(result), indent=2))
+    customer_1070 = g2_engine.get_entity_by_record_id_v2("CUSTOMERS", "1070", -1)
+    print(json.dumps(json.loads(customer_1070), indent=2))
 
     ```
 
@@ -136,8 +136,24 @@ and access it using the `senzing_grpc` Python package.
         "name_full": "robert smith",
         "date_of_birth": "11/12/1978",
     }
-    result = g2_engine.search_by_attributes_v2(search_query)
-    print(json.dumps(json.loads(result), indent=2))
+    search_result = g2_engine.search_by_attributes_v2(search_query)
+    print(json.dumps(json.loads(search_result), indent=2))
+
+    ```
+
+1. Help is available.
+   Copy/paste each block of code into the interactive Python session
+   and press the **Enter** key.
+
+    ```python
+    general_help = g2_engine.help()
+    print(general_help)
+
+    ```
+
+    ```python
+    specific_help = g2_engine.help("get_entity_by_record_id_v2")
+    print(specific_help)
 
     ```
 
