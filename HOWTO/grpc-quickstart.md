@@ -141,7 +141,9 @@ and access it using the `senzing_grpc` Python package.
 
     ```
 
-1. To end the interactive Python session, run
+1. To end the interactive Python session,
+   copy/paste the following block of code into the interactive Python session
+   and press the **Enter** key.
 
     ```python
     quit()
