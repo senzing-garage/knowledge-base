@@ -42,7 +42,7 @@ and access it using the `senzing_grpc` Python package.
     ```
 
 1. To add Truth Set data sources to the Senzing configuration,
-   paste the following into the interactive Python session.
+   copy and paste the following block of code into the interactive Python session.
    Example:
 
     ```python
@@ -85,7 +85,7 @@ and access it using the `senzing_grpc` Python package.
     ```
 
 1. To add Truth Set data to the Senzing database,
-   paste the following into the interactive Python session.
+   copy and paste the following block of code into the interactive Python session.
    Example:
 
     ```python
