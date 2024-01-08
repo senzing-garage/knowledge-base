@@ -129,5 +129,5 @@ and access it using the `senzing_grpc` Python package.
         "date_of_birth": "11/12/1978",
     }
     result = g2_engine.search_by_attributes_v2(search_query)
-    print(json.dumps(json.loads(result)), indent=2))
+    print(json.dumps(json.loads(result), indent=2))
     ```
