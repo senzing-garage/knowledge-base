@@ -116,7 +116,8 @@ and access it using the `senzing_grpc` Python package.
     ```
 
 1. Entity details can be viewed.
-   Example:
+   Copy/paste the following block of code into the interactive Python session
+   and press the **Enter** key.
 
     ```python
     import json
@@ -127,7 +128,8 @@ and access it using the `senzing_grpc` Python package.
     ```
 
 1. Entities can be searched.
-   Example:
+   Copy/paste the following block of code into the interactive Python session
+   and press the **Enter** key.
 
     ```python
     search_query = {
