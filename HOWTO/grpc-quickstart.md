@@ -41,6 +41,18 @@ and access it using the `senzing_grpc` Python package.
 
     ```
 
+1. For a quick test of calling Senzing's `g2_product.version()`,
+   copy/paste the following block of code into the interactive Python session
+   and press the **Enter** key.
+   Example:
+
+    ```python
+    import grpc
+    from senzing_grpc import G2ProductGrpc
+    g2_product = G2ProductGrpc(grpc_channel=grpc.insecure_channel("localhost:8261"))
+    print(g2_product.version())
+    ```
+
 1. To add Truth Set data sources to the Senzing configuration,
    copy/paste the following block of code into the interactive Python session
    and press the **Enter** key.
