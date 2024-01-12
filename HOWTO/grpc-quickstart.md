@@ -9,7 +9,7 @@ This Python demonstration works on Linux, Windows, and macOS.
 1. `senzing-grpc`.  To install, run
 
     ```console
-    python3 -m pip install --upgrade senzing-grpc
+    python3 -m pip install --upgrade senzing-abstract senzing-grpc
     ```
 
 ## Use
