@@ -22,18 +22,15 @@ and access it using the `senzing_grpc` Python package.
 
     ```console
     docker run \
-      --env SENZING_TOOLS_COMMAND=serve-grpc \
-      --env SENZING_TOOLS_DATABASE_URL=sqlite3://na:na@/tmp/sqlite/G2C.db \
-      --env SENZING_TOOLS_ENABLE_ALL=true \
-      --name senzing-tools-serve-grpc \
+      --publish 8260:8260 \
       --publish 8261:8261 \
       --pull always \
       --rm \
-      senzing/senzing-tools
+      senzing/senzing-tools demo-quickstart
 
     ```
 
-   **Note:** In this example, `SENZING_TOOLS_DATABASE_URL` specifies a file *inside* the container.
+   **Note:** In this example, the database is *inside* the container.
    Thus the database is temporal and will be deleted when the container is killed.
 
 1. In a separate window, start an interactive Python session.
