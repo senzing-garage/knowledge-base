@@ -21,12 +21,7 @@ and access it using the `senzing_grpc` Python package.
    Example:
 
     ```console
-    docker run \
-      --publish 8260:8260 \
-      --publish 8261:8261 \
-      --pull always \
-      --rm \
-      senzing/senzing-tools demo-quickstart
+    docker run -p 8260:8260 -p 8261:8261 --pull always --rm senzing/senzing-tools demo-quickstart
 
     ```
 
