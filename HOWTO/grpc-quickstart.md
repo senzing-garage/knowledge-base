@@ -177,3 +177,5 @@ and access it using the `senzing_grpc` Python package.
 
 1. Bring up a Web Browser and enter the URL
    [http://localhost:8260](http://localhost:8260).
+
+1. Click on the link for [Entity Search demo](http://localhost:8260/entity-search)
