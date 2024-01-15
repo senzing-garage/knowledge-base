@@ -1,6 +1,6 @@
 # Senzing quickstart using gRPC
 
-This Python demonstration works on Linux, Windows, and macOS.
+This Python demonstration of Senzing works on Linux, macOS, and Windows.
 
 ## Prerequisistes
 
