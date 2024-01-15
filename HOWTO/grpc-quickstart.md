@@ -212,7 +212,7 @@ and access it using the `senzing_grpc` Python package.
 
 ## Map and load your own data
 
-1. Create a file of JSON-lines with your data.
+1. On your local workstation, create a file of JSON-lines with your data.
    (*Caveat:* The following example doesn't work on Windows)
    Example:
 
@@ -248,7 +248,7 @@ and access it using the `senzing_grpc` Python package.
    **Note:** In this example, the database is *inside* the container.
    Thus the database is temporal and will be deleted when the container is killed.
 
-1. In a separate window, start an interactive Python session.
+1. In a separate window on your local workstation, start an interactive Python session.
    Example:
 
     ```console
