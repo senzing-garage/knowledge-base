@@ -230,6 +230,8 @@ and access it using the `senzing_grpc` Python package.
 
     ```
 
+    For Windows, the eight JSON-lines can be copied and pasted into a file using an editor like NotePad.
+
 1. To create an empty Senzing database,
    stop any prior Senzing gRPC service
    and start a new Senzing gRPC service using Docker.
@@ -306,6 +308,7 @@ and access it using the `senzing_grpc` Python package.
 
 1. To add your data to the Senzing database,
    in the following example modify the value of `INPUT_FILENAME` to match the path to your file of JSON lines.
+   For Windows, use a format like `C:\TEMP\example-data-for-senzing.json` for `INPUT_FILENAME`.
    Paste the modified block of code into the interactive Python session
    and press the **Enter** key.
 
