@@ -325,5 +325,10 @@ and access it using the `senzing_grpc` Python package.
 
     ```
 
+   Note that this is a simple example of adding records to Senzing.
+   For higher performance techniques, additional Python programming is needed.
+   For examples, see
+   [High performance loading with Python](#).
+
 1. Once records have been inserted you can
    [Explore data using Senzing tools](#explore-data-using-senzing-tools)
