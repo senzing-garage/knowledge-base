@@ -12,7 +12,7 @@ This Python demonstration works on Linux, Windows, and macOS.
     python3 -m pip install --upgrade senzing-abstract senzing-grpc
     ```
 
-## Use
+## Senzing's Hello World
 
 The following example shows how to start a Senzing gRPC server Docker container
 and access it using the `senzing_grpc` Python package.
@@ -48,6 +48,8 @@ and access it using the `senzing_grpc` Python package.
     print(g2_product.version())
     ```
 
+### Using Senzing's Truth Set data
+
 1. To add Truth Set data sources to the Senzing configuration,
    copy/paste the following block of code into the interactive Python session
    and press the **Enter** key.
@@ -81,7 +83,7 @@ and access it using the `senzing_grpc` Python package.
     # Add Datasources to existing Senzing configuration.
         for datasource in TRUTHSET_DATASOURCES.values():
             g2_config.add_data_source(config_handle, datasource.get("Json", {}))
-    # Externalize new Senzing configuration.
+    # Persist new Senzing configuration.
         NEW_JSON_CONFIG = g2_config.save(config_handle)
         new_config_id = g2_configmgr.add_config(NEW_JSON_CONFIG, "Add TruthSet datasources")
         g2_configmgr.replace_default_config_id(old_config_id, new_config_id)
@@ -170,5 +172,101 @@ and access it using the `senzing_grpc` Python package.
     quit()
     ```
 
+1. To end the Senzing gRPC service using Docker,
+   use `ctrl-c` to stop the `docker run ...` program
+
 1. View the Entity Search demonstration at
    [http://localhost:8260/entity-search](http://localhost:8260/entity-search).
+
+## Mapping and Loading Your Own Data
+
+1. FIXME: Setting up data...
+
+1. Run a Senzing gRPC service using Docker.
+   A fresh database Bringing up a new service, br
+   Example:
+
+    ```console
+    docker run -p 8260:8260 -p 8261:8261 --pull always --rm senzing/senzing-tools demo-quickstart
+
+    ```
+
+   **Note:** In this example, the database is *inside* the container.
+   Thus the database is temporal and will be deleted when the container is killed.
+
+1. In a separate window, start an interactive Python session.
+   Example:
+
+    ```console
+    python3
+    ```
+
+1. To add your data sources to the Senzing configuration,
+   in the following example modify the value of `DATASOURCES` to match your data.
+   Paste the modified block of code into the interactive Python session
+   and press the **Enter** key.
+   Example:
+
+    ```python
+    import grpc
+
+    from senzing_grpc import (
+        G2ConfigGrpc,
+        G2ConfigMgrGrpc,
+        G2DiagnosticGrpc,
+        G2EngineGrpc,
+        G2Exception,
+    )
+
+    DATASOURCES = ["MY_DATASOURCE"]
+
+    try:
+    # Create gRPC channel.
+        GRPC_URL = "localhost:8261"
+        grpc_channel = grpc.insecure_channel(GRPC_URL)
+    # Create Senzing objects.
+        g2_config = G2ConfigGrpc(grpc_channel=grpc_channel)
+        g2_configmgr = G2ConfigMgrGrpc(grpc_channel=grpc_channel)
+        g2_engine = G2EngineGrpc(grpc_channel=grpc_channel)
+        g2_diagnostic = G2DiagnosticGrpc(grpc_channel=grpc_channel)
+    # Get existing Senzing configuration.
+        old_config_id = g2_configmgr.get_default_config_id()
+        OLD_JSON_CONFIG = g2_configmgr.get_config(old_config_id)
+        config_handle = g2_config.load(OLD_JSON_CONFIG)
+    # Add Datasources to existing Senzing configuration.
+        for datasource in DATASOURCES:
+            g2_config.add_data_source(config_handle, datasource.get("Json", {}))
+    # Persist new Senzing configuration.
+        NEW_JSON_CONFIG = g2_config.save(config_handle)
+        new_config_id = g2_configmgr.add_config(NEW_JSON_CONFIG, "Add TruthSet datasources")
+        g2_configmgr.replace_default_config_id(old_config_id, new_config_id)
+    # Update other Senzing objects.
+        g2_engine.reinit(new_config_id)
+        g2_diagnostic.reinit(new_config_id)
+    except G2Exception as err:
+        print(f"\nError:\n{err}\n")
+
+    ```
+
+1. To add your data to the Senzing database,
+   copy/paste the following block of code into the interactive Python session
+   and press the **Enter** key.
+
+    ```python
+    INPUT_FILENAME = "/tmp/my-data.json
+
+    try:
+        record_sets = [
+            TRUTHSET_CUSTOMER_RECORDS,
+            TRUTHSET_REFERENCE_RECORDS,
+            TRUTHSET_WATCHLIST_RECORDS,
+        ]
+        for record_set in record_sets:
+            for record in record_set.values():
+                g2_engine.add_record(
+                    record.get("DataSource"), record.get("Id"), record.get("Json")
+                )
+    except G2Exception as err:
+        print(f"\nError:\n{err}\n")
+
+    ```
