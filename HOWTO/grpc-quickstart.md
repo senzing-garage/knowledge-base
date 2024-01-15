@@ -212,9 +212,8 @@ and access it using the `senzing_grpc` Python package.
 
 ## Map and load your own data
 
-**In progress...**
-
 1. Create a file of JSON-lines with your data.
+   (*Caveat:* The following example doesn't work on Windows)
    Example:
 
     ```console
