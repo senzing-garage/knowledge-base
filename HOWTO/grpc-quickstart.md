@@ -182,7 +182,9 @@ and access it using the `senzing_grpc` Python package.
 
 **In progress...**
 
-1. FIXME: Setting up data...
+1. FIXME: Creating a JSON-lines file of data.
+
+1. FIXME: Extracting data source names.
 
 1. Run a Senzing gRPC service using Docker.
    A fresh database Bringing up a new service, br
@@ -258,13 +260,9 @@ and access it using the `senzing_grpc` Python package.
     INPUT_FILENAME = "/tmp/my-data.json
 
     try:
-        record_sets = [
-            TRUTHSET_CUSTOMER_RECORDS,
-            TRUTHSET_REFERENCE_RECORDS,
-            TRUTHSET_WATCHLIST_RECORDS,
-        ]
-        for record_set in record_sets:
-            for record in record_set.values():
+        with xxx as open(INPUT_FILENAME)
+            for line in record_set in record_sets:
+                # TODO:
                 g2_engine.add_record(
                     record.get("DataSource"), record.get("Id"), record.get("Json")
                 )
