@@ -6,6 +6,9 @@ This Python demonstration works on Linux, Windows, and macOS.
 
 1. Python 3
 1. Docker
+    - [Linux](https://docs.docker.com/desktop/install/linux-install/),
+      [Mac](https://docs.docker.com/desktop/install/mac-install/),
+      [Windows](https://docs.docker.com/desktop/install/windows-install/)
 1. `senzing-grpc`.  To install, run
 
     ```console
@@ -172,11 +175,40 @@ and access it using the `senzing_grpc` Python package.
     quit()
     ```
 
-1. To end the Senzing gRPC service using Docker,
-   use `ctrl-c` to stop the `docker run ...` program
+### Exploring data
 
 1. View the Entity Search demonstration at
    [http://localhost:8260/entity-search](http://localhost:8260/entity-search).
+
+1. Using `G2Explorer.py`.
+    1. Visit
+       [http://localhost:8260/entity-search](http://localhost:8260/entity-search).
+    1. Start `G2Explorer.py` by running
+
+        ```console
+        G2Explorer.py
+        ```
+
+    1. In `G2Explorer.py`, enter
+
+        ```console
+        get customers 1070
+        ```
+
+    1. In `G2Explorer.py`, enter
+
+        ```console
+        search {"name_full": "robert smith", "date_of_birth": "11/12/1978"}
+        ```
+
+    1. To exit `G2Explorer.py`, enter
+
+        ```console
+        quit
+        ```
+
+1. To end the Senzing gRPC service using Docker,
+   use `ctrl-c` to stop the `docker run ...` program.
 
 ## :warning: Mapping and Loading Your Own Data
 
@@ -187,6 +219,7 @@ and access it using the `senzing_grpc` Python package.
 1. FIXME: Extracting data source names.
 
 1. Run a Senzing gRPC service using Docker.
+   Quit any prior
    A fresh database Bringing up a new service, br
    Example:
 
