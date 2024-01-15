@@ -290,7 +290,8 @@ and access it using the `senzing_grpc` Python package.
         config_handle = g2_config.load(OLD_JSON_CONFIG)
     # Add Datasources to existing Senzing configuration.
         for datasource in DATASOURCES:
-            g2_config.add_data_source(config_handle, datasource)
+            datasource_json = {"DSRC_CODE": datasource}
+            g2_config.add_data_source(config_handle, datasource_json)
     # Persist new Senzing configuration.
         NEW_JSON_CONFIG = g2_config.save(config_handle)
         new_config_id = g2_configmgr.add_config(NEW_JSON_CONFIG, "Add TruthSet datasources")
