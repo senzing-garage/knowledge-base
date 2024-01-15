@@ -255,8 +255,8 @@ and access it using the `senzing_grpc` Python package.
     python3
     ```
 
-1. To add your data sources to the Senzing configuration.
-   Determine the list of data sources used.
+1. To add your data sources to the Senzing configuration,
+   determine the list of data sources used.
    Then, in the following example modify the value of `DATASOURCES` to match your data.
    Paste the modified block of code into the interactive Python session
    and press the **Enter** key.
@@ -305,7 +305,8 @@ and access it using the `senzing_grpc` Python package.
     ```
 
 1. To add your data to the Senzing database,
-   copy/paste the following block of code into the interactive Python session
+   in the following example modify the value of `INPUT_FILENAME` to match the path to your file of JSON lines.
+   Paste the modified block of code into the interactive Python session
    and press the **Enter** key.
 
     ```python
@@ -331,4 +332,4 @@ and access it using the `senzing_grpc` Python package.
    [High performance loading with Python](#).
 
 1. Once records have been inserted you can
-   [Explore data using Senzing tools](#explore-data-using-senzing-tools)
+   [Explore data using Senzing tools](#explore-data-using-senzing-tools).
