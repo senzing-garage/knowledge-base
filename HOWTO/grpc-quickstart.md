@@ -178,7 +178,9 @@ and access it using the `senzing_grpc` Python package.
 1. View the Entity Search demonstration at
    [http://localhost:8260/entity-search](http://localhost:8260/entity-search).
 
-## Mapping and Loading Your Own Data
+## :warning: Mapping and Loading Your Own Data
+
+**In progress...**
 
 1. FIXME: Setting up data...
 
