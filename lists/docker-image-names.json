@@ -20,9 +20,6 @@
     "bitnami/phpmyadmin": {
         "environment_variable": "SENZING_DOCKER_IMAGE_VERSION_BITNAMI_PHPMYADMIN"
     },
-    "bitnami/phppgadmin": {
-        "environment_variable": "SENZING_DOCKER_IMAGE_VERSION_BITNAMI_PHPPGADMIN"
-    },
     "bitnami/postgresql": {
         "environment_variable": "SENZING_DOCKER_IMAGE_VERSION_BITNAMI_POSTGRESQL"
     },
