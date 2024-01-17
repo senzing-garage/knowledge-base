@@ -51,6 +51,9 @@ and access it using the `senzing_grpc` Python package.
     print(g2_product.version())
     ```
 
+    or download and run
+    [senzing-hello-world.py](https://raw.githubusercontent.com/senzing-garage/knowledge-base/main/proposals/streamline/senzing-hello-world.py).
+
 ### Use Senzing's Truth Set data
 
 In this demonstration, the Senzing Truth Set data will be added to the ephemeral
