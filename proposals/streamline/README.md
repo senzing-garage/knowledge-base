@@ -244,7 +244,7 @@ This time, the data will be persisted into SQL database files residing on your l
 1. On your local workstation, create a file of JSON-lines with your data.
 
    Either download
-   [example-data-for-senzing.txt](example-data-for-senzing.txt)
+   [example-data-for-senzing.txt](https://raw.githubusercontent.com/senzing-garage/knowledge-base/main/proposals/streamline/example-data-for-senzing.txt)
    or use the following Linux/macOS example:
 
     ```console
@@ -303,6 +303,7 @@ This time, the data will be persisted into SQL database files residing on your l
 1. To add your data sources to the Senzing configuration,
    determine the list of data sources used.
    Then, in the following example modify the value of `DATASOURCES` to match your data.
+   Also notice the value of `GRPC_URL` has the user-specified port number.
    Paste the modified block of code into the interactive Python session
    and press the **Enter** key.
    Example:
