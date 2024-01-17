@@ -24,7 +24,7 @@ and access it using the `senzing_grpc` Python package.
    Example:
 
     ```console
-    docker run --name senzing-quickstart -p 8260:8260 -p 8261:8261 --pull always --rm senzing/senzing-tools demo-quickstart
+    docker run --name senzing-streamline -p 8260:8260 -p 8261:8261 --pull always --rm senzing/senzing-tools demo-quickstart
 
     ```
 
@@ -190,8 +190,11 @@ Senzing database inside the running Docker container.
     1. Start `G2Snapshot.py` by running
 
         ```console
-        G2Snapshot.py -o /tmp/demo-snap-v1
+        G2Snapshot.py -o /tmp/demo-snap-v1 -a
         ```
+
+    1. For more information on SnapShots, visit
+       [Exploratory Data Analysis - Taking a snapshot](https://senzing.zendesk.com/hc/en-us/articles/360051874294-Exploratory-Data-Analysis-3-Taking-a-snapshot)
 
 1. Using `G2Explorer.py`.
     1. Visit
@@ -215,20 +218,34 @@ Senzing database inside the running Docker container.
         search {"name_full": "robert smith", "date_of_birth": "11/12/1978"}
         ```
 
+    1. For more examples, see
+       [Exploratory Data Analysis - Basic exploration](https://senzing.zendesk.com/hc/en-us/articles/360051768234-Exploratory-Data-Analysis-2-Basic-exploration)
+
     1. To exit `G2Explorer.py`, enter
 
         ```console
         quit
         ```
 
+1. Using `G2Audit.py`
+
+    1. For more information on auditing, visit
+       [Exploratory Data Analysis - Comparing ER results](https://senzing.zendesk.com/hc/en-us/articles/360050643034-Exploratory-Data-Analysis-4-Comparing-ER-results)
+
 1. To end the Senzing gRPC service using Docker,
    use `ctrl-c` to stop the `docker run ...` program.
+   **Warning:** Once the docker container has been stopped, the data is gone.
 
 ## Map and load your own data
 
+In this demonstration, your data will be added to the Senzing database.
+This time, the data will be persisted into SQL database files residing on your local workstation.
+
 1. On your local workstation, create a file of JSON-lines with your data.
-   (*Caveat:* The following example doesn't work on Windows)
-   Example:
+
+   Either download
+   [example-data-for-senzing.txt](example-data-for-senzing.txt)
+   or use the following Linux/macOS example:
 
     ```console
     cat <<EOT > /tmp/example-data-for-senzing.json
@@ -244,25 +261,37 @@ Senzing database inside the running Docker container.
 
     ```
 
-    For Windows, the eight JSON-lines can be copied and pasted into a file using an editor like NotePad.
+1. Create an empty Sqlite Senzing database on your local workstation.
+   Modify the value of `MY_SENZING_DEMO_1` to specify where you want the database files kept.
 
-1. To create an empty Senzing database,
-   stop any prior Senzing gRPC service
-   and start a new Senzing gRPC service using Docker.
+    ```console
+    export MY_SENZING_DEMO_1="/tmp/my-demo-1"
+    mkdir ${MY_SENZING_DEMO_1}
+    docker run \
+        --env SENZING_TOOLS_DATABASE_URL=sqlite3://na:na@/tmp/sqlite/G2C.db \
+        --rm \
+        --volume ${MY_SENZING_DEMO_1}:/tmp/sqlite \
+        senzing/senzing-tools init-database
+
+    ```
+
+1. Run a Senzing gRPC service using Docker.
+   Notice that the ports published via `--publish` must be unique for your workstation.
+   Inside the container `8260` is the port of the HTTP server, `8261` is the port of the gRPC server.
+   Also notice that the `--volume` must point to the directory of the database files you wish to use.
    Example:
 
     ```console
-    docker kill senzing-quickstart
+    docker run \
+        --name senzing-my-demo-1 \
+        --publish 8262:8260 \
+        --publish 8263:8261 \
+        --pull always \
+        --rm \
+        --volume ${MY_SENZING_DEMO_1}:/tmp/sqlite \
+        senzing/senzing-tools demo-quickstart
 
     ```
-
-    ```console
-    docker run --name senzing-quickstart -p 8260:8260 -p 8261:8261 --pull always --rm senzing/senzing-tools demo-quickstart
-
-    ```
-
-   **Note:** In this example, the database is *inside* the container.
-   Thus the database is temporal and will be deleted when the container is killed.
 
 1. In a separate window on your local workstation, start an interactive Python session.
    Example:
@@ -293,7 +322,7 @@ Senzing database inside the running Docker container.
 
     try:
     # Create gRPC channel.
-        GRPC_URL = "localhost:8261"
+        GRPC_URL = "localhost:8263"
         grpc_channel = grpc.insecure_channel(GRPC_URL)
     # Create Senzing objects.
         g2_config = G2ConfigGrpc(grpc_channel=grpc_channel)
