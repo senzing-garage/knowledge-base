@@ -104,6 +104,9 @@ Senzing database inside the running Docker container.
 
     ```
 
+    or download and run
+    [senzing-truthset-add-datasources.py](https://raw.githubusercontent.com/senzing-garage/knowledge-base/main/proposals/streamline/senzing-truthset-add-datasources.py).
+
 1. To add Truth Set data to the Senzing database,
    copy/paste the following block of code into the interactive Python session
    and press the **Enter** key.
@@ -131,6 +134,9 @@ Senzing database inside the running Docker container.
 
     ```
 
+    or download and run
+    [senzing-truthset-add-records.py](https://raw.githubusercontent.com/senzing-garage/knowledge-base/main/proposals/streamline/senzing-truthset-add-records.py).
+
 1. Entity details can be viewed.
    Copy/paste the following block of code into the interactive Python session
    and press the **Enter** key.
@@ -142,6 +148,9 @@ Senzing database inside the running Docker container.
     print(json.dumps(json.loads(customer_1070_entity), indent=2))
 
     ```
+
+    or download and run
+    [senzing-truthset-get-entity.py](https://raw.githubusercontent.com/senzing-garage/knowledge-base/main/proposals/streamline/senzing-truthset-get-entity.py).
 
 1. Entities can be searched.
    Copy/paste the following block of code into the interactive Python session
@@ -156,6 +165,9 @@ Senzing database inside the running Docker container.
     print(json.dumps(json.loads(search_result), indent=2))
 
     ```
+
+    or download and run
+    [senzing-truthset-search.py](https://raw.githubusercontent.com/senzing-garage/knowledge-base/main/proposals/streamline/senzing-truthset-search.py).
 
 1. Help is available.
    Copy/paste each block of code into the interactive Python session
