@@ -379,4 +379,7 @@ This time, the data will be persisted into SQL database files residing on your l
    [High performance loading with Python](#).
 
 1. Once records have been inserted you can
-   [Explore data using Senzing tools](#explore-data-using-senzing-tools).
+   [Explore data using Senzing tools](#explore-data-using-senzing-tools) using:
+    1. [http://localhost:8262/entity-search](http://localhost:8262/entity-search).
+    1. [http://localhost:8262/xterm](http://localhost:8262/xterm).
+    1. Or whatever port was chosen for the HTTP server.
