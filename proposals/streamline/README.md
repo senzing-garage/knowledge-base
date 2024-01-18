@@ -280,7 +280,7 @@ and custom ports will be used.
 
     ```
 
-1. Create an empty Sqlite Senzing database on your local workstation.
+1. On your local workstation, create an empty Sqlite Senzing database on your local workstation.
    Modify the value of `SENZING_MY_DEMO_1` to specify where you want the database files kept.
 
    Linux/macOS example:
