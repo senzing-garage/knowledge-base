@@ -395,13 +395,13 @@ and custom ports will be used.
 
     ```
 
-   Note that this is a simple example of adding records to Senzing.
+   Note that this is a simple example of adding records to Senzing and is not optimized for performance.
    For higher performance techniques, additional Python programming is needed.
    For examples, see
    [High performance loading with Python](#).
 
 1. Once records have been inserted you can
-   [Explore data using Senzing tools](#explore-data-using-senzing-tools) using:
+   [Explore data using Senzing tools](#explore-data-using-senzing-tools) using
+   the custom port number chosen above.  Examples:
     1. [http://localhost:9140/entity-search](http://localhost:9140/entity-search).
     1. [http://localhost:9140/xterm](http://localhost:9140/xterm).
-    1. Or whatever port was chosen for the HTTP server.
