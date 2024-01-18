@@ -283,37 +283,45 @@ and custom ports will be used.
 1. Create an empty Sqlite Senzing database on your local workstation.
    Modify the value of `SENZING_MY_DEMO_1` to specify where you want the database files kept.
 
-    Linux/macOS example:
+   Linux/macOS example:
 
-    ```console
-    export SENZING_MY_DEMO_1="/tmp/my-demo-1"
-    ```
+    1. Copy/modify/paste the following:
 
-    ```console
-    mkdir ${SENZING_MY_DEMO_1}
-    docker run \
-        --env SENZING_TOOLS_DATABASE_URL=sqlite3://na:na@/tmp/sqlite/G2C.db \
-        --rm \
-        --volume ${SENZING_MY_DEMO_1}:/tmp/sqlite \
-        senzing/senzing-tools init-database
+        ```console
+        export SENZING_MY_DEMO_1="/tmp/my-demo-1"
+        ```
 
-    ```
+    1. Copy/paste the following:
+
+        ```console
+        mkdir ${SENZING_MY_DEMO_1}
+        docker run \
+            --env SENZING_TOOLS_DATABASE_URL=sqlite3://na:na@/tmp/sqlite/G2C.db \
+            --rm \
+            --volume ${SENZING_MY_DEMO_1}:/tmp/sqlite \
+            senzing/senzing-tools init-database
+
+        ```
 
    Windows Command Prompt (not Windows PowerShell) example:
 
-    ```console
-    set SENZING_MY_DEMO_1="C:\\Users\\username\\my-demo-1"
-    ```
+    1. Copy/modify/paste the following:
 
-    ```console
-    mkdir %SENZING_MY_DEMO_1%
-    docker run ^
-        --env SENZING_TOOLS_DATABASE_URL=sqlite3://na:na@/tmp/sqlite/G2C.db ^
-        --rm ^
-        --volume %SENZING_MY_DEMO_1%:/tmp/sqlite ^
-        senzing/senzing-tools init-database
+        ```console
+        set SENZING_MY_DEMO_1="C:\\Users\\username\\my-demo-1"
+        ```
 
-    ```
+    1. Copy/paste the following:
+
+        ```console
+        mkdir %SENZING_MY_DEMO_1%
+        docker run ^
+            --env SENZING_TOOLS_DATABASE_URL=sqlite3://na:na@/tmp/sqlite/G2C.db ^
+            --rm ^
+            --volume %SENZING_MY_DEMO_1%:/tmp/sqlite ^
+            senzing/senzing-tools init-database
+
+        ```
 
 1. Run a Senzing gRPC service using Docker.
    Notice that the ports published via `--publish` must be unique for your workstation.
