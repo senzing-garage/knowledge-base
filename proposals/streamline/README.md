@@ -137,6 +137,8 @@ Senzing database inside the running Docker container.
     or download and run
     [senzing-truthset-add-records.py](https://raw.githubusercontent.com/senzing-garage/knowledge-base/main/proposals/streamline/senzing-truthset-add-records.py).
 
+    If running in the interactive Python session, wait until the `>>>` prompt appears before proceeding.
+
 1. Entity details can be viewed.
    Copy/paste the following block of code into the interactive Python session
    and press the **Enter** key.
