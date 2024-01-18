@@ -317,7 +317,6 @@ and custom ports will be used.
    Optionally, you may change the `--name` value to a custom name.
    For more information on `docker run` parameters,
    visit [docker run](https://docs.docker.com/engine/reference/commandline/run/).
-   Example:
 
    Linux/macOS example:
 
@@ -444,7 +443,6 @@ and custom ports will be used.
 1. To restart the service, re-run the command seen in Step #3.
    Although the port mappings using `--publish` may be changed, the value of `--volume`
    must match the original value so the database files on your workstation will be attached.
-   Example:
 
    Linux/macOS example:
 
