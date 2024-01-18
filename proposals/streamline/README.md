@@ -281,17 +281,17 @@ and custom ports will be used.
     ```
 
 1. Create an empty Sqlite Senzing database on your local workstation.
-   Modify the value of `MY_SENZING_DEMO_1` to specify where you want the database files kept.
+   Modify the value of `SENZING_MY_DEMO_1` to specify where you want the database files kept.
 
     Linux/macOS example:
 
     ```console
-    export MY_SENZING_DEMO_1="/tmp/my-demo-1"
-    mkdir ${MY_SENZING_DEMO_1}
+    export SENZING_MY_DEMO_1="/tmp/my-demo-1"
+    mkdir ${SENZING_MY_DEMO_1}
     docker run \
         --env SENZING_TOOLS_DATABASE_URL=sqlite3://na:na@/tmp/sqlite/G2C.db \
         --rm \
-        --volume ${MY_SENZING_DEMO_1}:/tmp/sqlite \
+        --volume ${SENZING_MY_DEMO_1}:/tmp/sqlite \
         senzing/senzing-tools init-database
 
     ```
@@ -299,12 +299,12 @@ and custom ports will be used.
     Windows example:
 
     ```console
-    set MY_SENZING_DEMO_1="~\\my-demo-1"
-    mkdir %MY_SENZING_DEMO_1%
+    set SENZING_MY_DEMO_1="C:\\Users\\username\\my-demo-1"
+    mkdir %SENZING_MY_DEMO_1%
     docker run \
         --env SENZING_TOOLS_DATABASE_URL=sqlite3://na:na@/tmp/sqlite/G2C.db \
         --rm \
-        --volume %MY_SENZING_DEMO_1%:/tmp/sqlite \
+        --volume %SENZING_MY_DEMO_1%:/tmp/sqlite \
         senzing/senzing-tools init-database
 
     ```
@@ -328,7 +328,7 @@ and custom ports will be used.
         --publish 9141:8261 \
         --pull always \
         --rm \
-        --volume ${MY_SENZING_DEMO_1}:/tmp/sqlite \
+        --volume ${SENZING_MY_DEMO_1}:/tmp/sqlite \
         senzing/senzing-tools demo-quickstart
 
     ```
@@ -342,7 +342,7 @@ and custom ports will be used.
         --publish 9141:8261 \
         --pull always \
         --rm \
-        --volume %MY_SENZING_DEMO_1%:/tmp/sqlite \
+        --volume %SENZING_MY_DEMO_1%:/tmp/sqlite \
         senzing/senzing-tools demo-quickstart
 
     ```
@@ -455,7 +455,7 @@ and custom ports will be used.
         --publish 9141:8261 \
         --pull always \
         --rm \
-        --volume ${MY_SENZING_DEMO_1}:/tmp/sqlite \
+        --volume ${SENZING_MY_DEMO_1}:/tmp/sqlite \
         senzing/senzing-tools demo-quickstart
 
     ```
@@ -469,7 +469,7 @@ and custom ports will be used.
         --publish 9141:8261 \
         --pull always \
         --rm \
-        --volume %MY_SENZING_DEMO_1%:/tmp/sqlite \
+        --volume %SENZING_MY_DEMO_1%:/tmp/sqlite \
         senzing/senzing-tools demo-quickstart
 
     ```
