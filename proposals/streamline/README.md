@@ -405,7 +405,7 @@ and custom ports will be used.
 
 1. To add your data to the Senzing database,
    in the following example modify the value of `INPUT_FILENAME` to match the path to your file of JSON lines.
-   For Windows, use a format like `C:\\TEMP\\example-data-for-senzing.json` for `INPUT_FILENAME`.
+   For Windows, use a format like `C:\\Users\\username\\Downloads\\example-data-for-senzing.json` for `INPUT_FILENAME`.
    Paste the modified block of code into the interactive Python session
    and press the **Enter** key.
 
