@@ -301,10 +301,10 @@ and custom ports will be used.
     ```console
     set SENZING_MY_DEMO_1="C:\\Users\\username\\my-demo-1"
     mkdir %SENZING_MY_DEMO_1%
-    docker run \
-        --env SENZING_TOOLS_DATABASE_URL=sqlite3://na:na@/tmp/sqlite/G2C.db \
-        --rm \
-        --volume %SENZING_MY_DEMO_1%:/tmp/sqlite \
+    docker run ^
+        --env SENZING_TOOLS_DATABASE_URL=sqlite3://na:na@/tmp/sqlite/G2C.db ^
+        --rm ^
+        --volume %SENZING_MY_DEMO_1%:/tmp/sqlite ^
         senzing/senzing-tools init-database
 
     ```
@@ -335,13 +335,13 @@ and custom ports will be used.
    Windows Command Prompt (not Windows PowerShell) example:
 
     ```console
-    docker run \
-        --name senzing-my-demo-1 \
-        --publish 9140:8260 \
-        --publish 9141:8261 \
-        --pull always \
-        --rm \
-        --volume %SENZING_MY_DEMO_1%:/tmp/sqlite \
+    docker run ^
+        --name senzing-my-demo-1 ^
+        --publish 9140:8260 ^
+        --publish 9141:8261 ^
+        --pull always ^
+        --rm ^
+        --volume %SENZING_MY_DEMO_1%:/tmp/sqlite ^
         senzing/senzing-tools demo-quickstart
 
     ```
@@ -461,13 +461,13 @@ and custom ports will be used.
    Windows Command Prompt (not Windows PowerShell) example:
 
     ```console
-    docker run \
-        --name senzing-my-demo-1 \
-        --publish 9140:8260 \
-        --publish 9141:8261 \
-        --pull always \
-        --rm \
-        --volume %SENZING_MY_DEMO_1%:/tmp/sqlite \
+    docker run ^
+        --name senzing-my-demo-1 ^
+        --publish 9140:8260 ^
+        --publish 9141:8261 ^
+        --pull always ^
+        --rm ^
+        --volume %SENZING_MY_DEMO_1%:/tmp/sqlite ^
         senzing/senzing-tools demo-quickstart
 
     ```
