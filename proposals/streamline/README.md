@@ -405,3 +405,27 @@ and custom ports will be used.
    the custom port number chosen above.  Examples:
     1. [http://localhost:9140/entity-search](http://localhost:9140/entity-search).
     1. [http://localhost:9140/xterm](http://localhost:9140/xterm).
+
+1. To end the Senzing gRPC service using Docker,
+   use `ctrl-c` to stop the `docker run ...` program.
+
+1. To restart the service, re-run the command seen in Step #3.
+   Although the port mappings using `--publish` may be changed, the value of `--volume`
+   must match the original value so the database files on your workstation will be attached.
+   Example:
+
+   Linux/macOS example:
+
+    ```console
+    docker run \
+        --name senzing-my-demo-1 \
+        --publish 9140:8260 \
+        --publish 9141:8261 \
+        --pull always \
+        --rm \
+        --volume ${MY_SENZING_DEMO_1}:/tmp/sqlite \
+        senzing/senzing-tools demo-quickstart
+
+    ```
+
+    *Remember* to use the new port values in the interactive Python and web URLs.
