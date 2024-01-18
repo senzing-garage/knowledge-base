@@ -299,7 +299,7 @@ and custom ports will be used.
     Windows example:
 
     ```console
-    set MY_SENZING_DEMO_1="C:\\TEMP\\my-demo-1"
+    set MY_SENZING_DEMO_1="~\\my-demo-1"
     mkdir %MY_SENZING_DEMO_1%
     docker run \
         --env SENZING_TOOLS_DATABASE_URL=sqlite3://na:na@/tmp/sqlite/G2C.db \
