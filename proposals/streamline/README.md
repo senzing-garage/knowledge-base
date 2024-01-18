@@ -296,7 +296,7 @@ and custom ports will be used.
 
     ```
 
-    Windows example:
+   Windows Command Prompt (not Windows PowerShell) example:
 
     ```console
     set SENZING_MY_DEMO_1="C:\\Users\\username\\my-demo-1"
@@ -333,7 +333,7 @@ and custom ports will be used.
 
     ```
 
-   Windows example:
+   Windows Command Prompt (not Windows PowerShell) example:
 
     ```console
     docker run \
@@ -460,7 +460,7 @@ and custom ports will be used.
 
     ```
 
-   Windows example:
+   Windows Command Prompt (not Windows PowerShell) example:
 
     ```console
     docker run \
