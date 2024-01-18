@@ -294,11 +294,27 @@ and custom ports will be used.
 
     ```
 
+    Windows example:
+
+    ```console
+    set MY_SENZING_DEMO_1="C:\\TEMP\\my-demo-1"
+    mkdir %MY_SENZING_DEMO_1%
+    docker run \
+        --env SENZING_TOOLS_DATABASE_URL=sqlite3://na:na@/tmp/sqlite/G2C.db \
+        --rm \
+        --volume %MY_SENZING_DEMO_1%:/tmp/sqlite \
+        senzing/senzing-tools init-database
+
+    ```
+
 1. Run a Senzing gRPC service using Docker.
    Notice that the ports published via `--publish` must be unique for your workstation.
    Inside the container `8260` is the port of the HTTP server, `8261` is the port of the gRPC server.
    In the following example they are mapped to ports `9140` and `9141` on your workstation.
    Also notice that the `--volume` must point to the directory of the database files you wish to use.
+   Optionally, you may change the `--name` value to a custom name.
+   For more information on `docker run` parameters,
+   visit [docker run](https://docs.docker.com/engine/reference/commandline/run/).
    Example:
 
    Linux/macOS example:
@@ -311,6 +327,20 @@ and custom ports will be used.
         --pull always \
         --rm \
         --volume ${MY_SENZING_DEMO_1}:/tmp/sqlite \
+        senzing/senzing-tools demo-quickstart
+
+    ```
+
+   Windows example:
+
+    ```console
+    docker run \
+        --name senzing-my-demo-1 \
+        --publish 9140:8260 \
+        --publish 9141:8261 \
+        --pull always \
+        --rm \
+        --volume %MY_SENZING_DEMO_1%:/tmp/sqlite \
         senzing/senzing-tools demo-quickstart
 
     ```
@@ -424,6 +454,20 @@ and custom ports will be used.
         --pull always \
         --rm \
         --volume ${MY_SENZING_DEMO_1}:/tmp/sqlite \
+        senzing/senzing-tools demo-quickstart
+
+    ```
+
+   Windows example:
+
+    ```console
+    docker run \
+        --name senzing-my-demo-1 \
+        --publish 9140:8260 \
+        --publish 9141:8261 \
+        --pull always \
+        --rm \
+        --volume %MY_SENZING_DEMO_1%:/tmp/sqlite \
         senzing/senzing-tools demo-quickstart
 
     ```
