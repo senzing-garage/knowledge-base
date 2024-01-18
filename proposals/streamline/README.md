@@ -254,11 +254,13 @@ Senzing database inside the running Docker container.
 ## Map and load your own data
 
 In this demonstration, your data will be added to the Senzing database.
-This time, the data will be persisted into SQL database files residing on your local workstation.
+This time the data will be persisted into SQLite database files residing on your local workstation
+and custom ports will be used.
 
-1. On your local workstation, create a file of JSON-lines with your data.
+1. On your local workstation, create a file of JSON-lines with your data to be loaded into Senzing.
 
-   Either download
+   As an example,
+   either download
    [example-data-for-senzing.txt](https://raw.githubusercontent.com/senzing-garage/knowledge-base/main/proposals/streamline/example-data-for-senzing.txt)
    or use the following Linux/macOS example:
 
@@ -279,6 +281,8 @@ This time, the data will be persisted into SQL database files residing on your l
 1. Create an empty Sqlite Senzing database on your local workstation.
    Modify the value of `MY_SENZING_DEMO_1` to specify where you want the database files kept.
 
+    Linux/macOS example:
+
     ```console
     export MY_SENZING_DEMO_1="/tmp/my-demo-1"
     mkdir ${MY_SENZING_DEMO_1}
@@ -293,14 +297,17 @@ This time, the data will be persisted into SQL database files residing on your l
 1. Run a Senzing gRPC service using Docker.
    Notice that the ports published via `--publish` must be unique for your workstation.
    Inside the container `8260` is the port of the HTTP server, `8261` is the port of the gRPC server.
+   In the following example they are mapped to ports `9140` and `9141` on your workstation.
    Also notice that the `--volume` must point to the directory of the database files you wish to use.
    Example:
+
+   Linux/macOS example:
 
     ```console
     docker run \
         --name senzing-my-demo-1 \
-        --publish 8262:8260 \
-        --publish 8263:8261 \
+        --publish 9140:8260 \
+        --publish 9141:8261 \
         --pull always \
         --rm \
         --volume ${MY_SENZING_DEMO_1}:/tmp/sqlite \
@@ -317,8 +324,8 @@ This time, the data will be persisted into SQL database files residing on your l
 
 1. To add your data sources to the Senzing configuration,
    determine the list of data sources used.
-   Then, in the following example modify the value of `DATASOURCES` to match your data.
-   Also notice the value of `GRPC_URL` has the user-specified port number.
+   Then in the following example, modify the value of `DATASOURCES` to match your data.
+   Also modify the value of `GRPC_URL` to use the custom port number specified above.
    Paste the modified block of code into the interactive Python session
    and press the **Enter** key.
    Example:
@@ -338,7 +345,7 @@ This time, the data will be persisted into SQL database files residing on your l
 
     try:
     # Create gRPC channel.
-        GRPC_URL = "localhost:8263"
+        GRPC_URL = "localhost:9141"
         grpc_channel = grpc.insecure_channel(GRPC_URL)
     # Create Senzing objects.
         g2_config = G2ConfigGrpc(grpc_channel=grpc_channel)
@@ -367,7 +374,7 @@ This time, the data will be persisted into SQL database files residing on your l
 
 1. To add your data to the Senzing database,
    in the following example modify the value of `INPUT_FILENAME` to match the path to your file of JSON lines.
-   For Windows, use a format like `C:\TEMP\example-data-for-senzing.json` for `INPUT_FILENAME`.
+   For Windows, use a format like `C:\\TEMP\\example-data-for-senzing.json` for `INPUT_FILENAME`.
    Paste the modified block of code into the interactive Python session
    and press the **Enter** key.
 
@@ -395,6 +402,6 @@ This time, the data will be persisted into SQL database files residing on your l
 
 1. Once records have been inserted you can
    [Explore data using Senzing tools](#explore-data-using-senzing-tools) using:
-    1. [http://localhost:8262/entity-search](http://localhost:8262/entity-search).
-    1. [http://localhost:8262/xterm](http://localhost:8262/xterm).
+    1. [http://localhost:9140/entity-search](http://localhost:9140/entity-search).
+    1. [http://localhost:9140/xterm](http://localhost:9140/xterm).
     1. Or whatever port was chosen for the HTTP server.
