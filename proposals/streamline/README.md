@@ -264,7 +264,7 @@ and custom ports will be used.
    As an example,
    either download
    [example-data-for-senzing.json](https://raw.githubusercontent.com/senzing-garage/knowledge-base/main/proposals/streamline/example-data-for-senzing.json)
-   or use the following Linux/macOS example:
+   or use the following Linux/macOS command on your local workstation:
 
     ```console
     cat <<EOT > /tmp/example-data-for-senzing.json
