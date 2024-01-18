@@ -287,6 +287,9 @@ and custom ports will be used.
 
     ```console
     export SENZING_MY_DEMO_1="/tmp/my-demo-1"
+    ```
+
+    ```console
     mkdir ${SENZING_MY_DEMO_1}
     docker run \
         --env SENZING_TOOLS_DATABASE_URL=sqlite3://na:na@/tmp/sqlite/G2C.db \
@@ -300,6 +303,9 @@ and custom ports will be used.
 
     ```console
     set SENZING_MY_DEMO_1="C:\\Users\\username\\my-demo-1"
+    ```
+
+    ```console
     mkdir %SENZING_MY_DEMO_1%
     docker run ^
         --env SENZING_TOOLS_DATABASE_URL=sqlite3://na:na@/tmp/sqlite/G2C.db ^
