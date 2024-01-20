@@ -5,10 +5,10 @@ This Python demonstration of Senzing works on Linux, macOS, and Windows.
 ## Prerequisistes
 
 1. Python 3
-1. Docker
-    - [Linux](https://docs.docker.com/desktop/install/linux-install/),
-      [Mac](https://docs.docker.com/desktop/install/mac-install/),
-      [Windows](https://docs.docker.com/desktop/install/windows-install/)
+1. Docker -
+   [Linux](https://docs.docker.com/desktop/install/linux-install/),
+   [Mac](https://docs.docker.com/desktop/install/mac-install/),
+   [Windows](https://docs.docker.com/desktop/install/windows-install/)
 1. `senzing-grpc`.  To install, run
 
     ```console
