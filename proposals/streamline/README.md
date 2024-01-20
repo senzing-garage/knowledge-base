@@ -29,7 +29,7 @@ and access it using the `senzing_grpc` Python package.
     ```
 
    **Note:** In this example, the database is *inside* the container.
-   Thus the database is temporal and will be deleted when the container is killed.
+   Thus, the database is temporal and will be deleted when the container is killed.
 
 1. In a separate window, start an interactive Python session.
    Example:
