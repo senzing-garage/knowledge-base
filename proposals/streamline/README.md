@@ -283,7 +283,7 @@ and custom ports will be used.
 1. On your local workstation, create an empty Sqlite Senzing database on your local workstation.
    Modify the value of `SENZING_MY_DEMO_1` to specify where you want the database files kept.
 
-   Linux/macOS example:
+   **Linux/macOS example:**
 
     1. Copy/modify/paste the following:
 
@@ -303,7 +303,7 @@ and custom ports will be used.
 
         ```
 
-   Windows Command Prompt (not Windows PowerShell) example:
+   **Windows Command Prompt (not Windows PowerShell) example:**
 
     1. Copy/modify/paste the following:
 
@@ -332,7 +332,7 @@ and custom ports will be used.
    For more information on `docker run` parameters,
    visit [docker run](https://docs.docker.com/engine/reference/commandline/run/).
 
-   Linux/macOS example:
+   **Linux/macOS example:**
 
     ```console
     docker run \
@@ -346,7 +346,7 @@ and custom ports will be used.
 
     ```
 
-   Windows Command Prompt (not Windows PowerShell) example:
+   **Windows Command Prompt (not Windows PowerShell) example:**
 
     ```console
     docker run ^
@@ -465,7 +465,7 @@ and custom ports will be used.
    Although the port mappings using `--publish` may be changed, the value of `--volume`
    must match the original value so the database files on your workstation will be attached.
 
-   Linux/macOS example:
+   **Linux/macOS example:**
 
     ```console
     docker run \
@@ -479,7 +479,7 @@ and custom ports will be used.
 
     ```
 
-   Windows Command Prompt (not Windows PowerShell) example:
+   **Windows Command Prompt (not Windows PowerShell) example:**
 
     ```console
     docker run ^
