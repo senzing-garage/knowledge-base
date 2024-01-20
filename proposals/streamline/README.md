@@ -368,12 +368,18 @@ and custom ports will be used.
     ```
 
 1. To add your data sources to the Senzing configuration,
-   determine the list of data sources used.
+   determine the list of data sources used in your data.
    Then in the following example, modify the value of `DATASOURCES` to match your data.
    Also modify the value of `GRPC_URL` to use the custom port number specified above.
-   Paste the modified block of code into the interactive Python session
-   and press the **Enter** key.
-   Example:
+
+   Copy/modify/paste the following:
+
+    ```python
+    DATASOURCES = ["MY_DATASOURCE"]
+    GRPC_URL = "localhost:9141"
+    ```
+
+   Copy/paste the following and press the **Enter** key.
 
     ```python
     import grpc
@@ -386,11 +392,8 @@ and custom ports will be used.
         G2Exception,
     )
 
-    DATASOURCES = ["MY_DATASOURCE"]
-
     try:
     # Create gRPC channel.
-        GRPC_URL = "localhost:9141"
         grpc_channel = grpc.insecure_channel(GRPC_URL)
     # Create Senzing objects.
         g2_config = G2ConfigGrpc(grpc_channel=grpc_channel)
@@ -420,13 +423,17 @@ and custom ports will be used.
 1. To add your data to the Senzing database,
    in the following example modify the value of `INPUT_FILENAME` to match the path to your file of JSON lines.
    For Windows, use a format like `C:\\Users\\username\\Downloads\\example-data-for-senzing.json` for `INPUT_FILENAME`.
-   Paste the modified block of code into the interactive Python session
-   and press the **Enter** key.
+
+   Copy/modify/paste the following:
+
+    ```python
+    INPUT_FILENAME = "/tmp/example-data-for-senzing.json"
+    ```
+
+   Copy/paste the following and press the **Enter** key.
 
     ```python
     import json
-
-    INPUT_FILENAME = "/tmp/example-data-for-senzing.json"
 
     try:
         with open(INPUT_FILENAME, "r") as file:
