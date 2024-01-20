@@ -493,4 +493,4 @@ and custom ports will be used.
 
     ```
 
-    *Remember* to use the new port values in the interactive Python and web URLs.
+    *Remember:* Use the new port values in the interactive Python and web URLs.
