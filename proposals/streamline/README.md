@@ -428,7 +428,8 @@ and custom ports will be used.
    in the following example modify the value of `INPUT_FILENAME` to match the path to your file of JSON lines.
    For Windows, use a format like `C:\\Users\\username\\Downloads\\example-data-for-senzing.json` for `INPUT_FILENAME`.
 
-   Copy/modify/paste the following:
+   To identify the file containing your data,
+   copy/modify/paste the following:
 
     ```python
     INPUT_FILENAME = "/tmp/example-data-for-senzing.json"
