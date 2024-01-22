@@ -285,7 +285,7 @@ and custom ports will be used.
 
    **Linux/macOS example:**
 
-    1. To create a new directory to store the new SQLite database files,
+    1. Identify a directory to store the new SQLite database files,
        copy/modify/paste the following:
 
         ```console
@@ -307,7 +307,7 @@ and custom ports will be used.
 
    **Windows Command Prompt (not Windows PowerShell) example:**
 
-    1. To create a new directory to store the new SQLite database files,
+    1. Identify a directory to store the new SQLite database files,
        copy/modify/paste the following:
 
         ```console
