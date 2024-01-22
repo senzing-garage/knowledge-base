@@ -292,7 +292,8 @@ and custom ports will be used.
         export SENZING_MY_DEMO_1="/tmp/my-demo-1"
         ```
 
-    1. Copy/paste the following:
+    1. To create a new database in the directory,
+       copy/paste the following:
 
         ```console
         mkdir ${SENZING_MY_DEMO_1}
@@ -313,7 +314,8 @@ and custom ports will be used.
         set SENZING_MY_DEMO_1="C:\\Users\\username\\my-demo-1"
         ```
 
-    1. Copy/paste the following:
+    1. To create a new database in the directory,
+       copy/paste the following:
 
         ```console
         mkdir %SENZING_MY_DEMO_1%
