@@ -285,7 +285,8 @@ and custom ports will be used.
 
    **Linux/macOS example:**
 
-    1. Copy/modify/paste the following:
+    1. To create a new directory to store the new SQLite database files,
+       copy/modify/paste the following:
 
         ```console
         export SENZING_MY_DEMO_1="/tmp/my-demo-1"
@@ -305,7 +306,8 @@ and custom ports will be used.
 
    **Windows Command Prompt (not Windows PowerShell) example:**
 
-    1. Copy/modify/paste the following:
+    1. To create a new directory to store the new SQLite database files,
+       copy/modify/paste the following:
 
         ```console
         set SENZING_MY_DEMO_1="C:\\Users\\username\\my-demo-1"
