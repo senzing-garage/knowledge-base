@@ -28,7 +28,7 @@ and access it using the `senzing_grpc` Python package.
 
     ```
 
-5. In a separate window, start an interactive Python session.
+1. In a separate window, start an interactive Python session.
    Example:
 
     ```console
@@ -36,7 +36,7 @@ and access it using the `senzing_grpc` Python package.
 
     ```
 
-6. For a quick test of calling Senzing's `g2_product.version()`,
+1. For a quick test of calling Senzing's `g2_product.version()`,
    copy/paste the following block of code into the interactive Python session
    and press the **Enter** key.
    Example:
