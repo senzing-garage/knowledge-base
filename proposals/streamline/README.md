@@ -59,6 +59,14 @@ and access it using the `senzing_grpc` Python package.
 In this demonstration, the Senzing Truth Set data will be added to the ephemeral
 Senzing database inside the running Docker container.
 
+1. To set the URL of the Senzing gRPC service started above,
+   copy/paste the following block of code into the interactive Python session
+   and press the **Enter** key.
+
+    ```python
+    GRPC_URL = "localhost:8261"
+    ```
+
 1. To add Truth Set data sources to the Senzing configuration,
    copy/paste the following block of code into the interactive Python session
    and press the **Enter** key.
@@ -78,7 +86,6 @@ Senzing database inside the running Docker container.
 
     try:
     # Create gRPC channel.
-        GRPC_URL = "localhost:8261"
         grpc_channel = grpc.insecure_channel(GRPC_URL)
     # Create Senzing objects.
         g2_config = G2ConfigGrpc(grpc_channel=grpc_channel)
@@ -499,3 +506,7 @@ and custom ports will be used.
     ```
 
     *Remember:* Use the new port values in the interactive Python and web URLs.
+
+## References
+
+1. [View SQLite database](colifer-sqlite-web.md)
