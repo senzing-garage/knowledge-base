@@ -20,7 +20,7 @@ This Python demonstration of Senzing works on Linux, macOS, and Windows.
 The following example shows how to start a Senzing gRPC server Docker container
 and access it using the `senzing_grpc` Python package.
 
-1. Run a Senzing gRPC service using Docker.
+4. Run a Senzing gRPC service using Docker.
    Example:
 
     ```console
@@ -28,7 +28,7 @@ and access it using the `senzing_grpc` Python package.
 
     ```
 
-1. In a separate window, start an interactive Python session.
+5. In a separate window, start an interactive Python session.
    Example:
 
     ```console
@@ -36,7 +36,7 @@ and access it using the `senzing_grpc` Python package.
 
     ```
 
-1. For a quick test of calling Senzing's `g2_product.version()`,
+6. For a quick test of calling Senzing's `g2_product.version()`,
    copy/paste the following block of code into the interactive Python session
    and press the **Enter** key.
    Example:
