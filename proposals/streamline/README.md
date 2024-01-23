@@ -319,7 +319,7 @@ and custom ports will be used.
    Use these instructions if you are running on a Windows system.
 
     1. To identify a directory to store the new SQLite database files,
-       copy/modify/paste the following:
+       using an editor like Notepad copy/modify/paste the following:
 
         ```console
         set SENZING_MY_DEMO_1="C:\\Users\\username\\my-demo-1"
