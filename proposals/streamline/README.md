@@ -349,7 +349,7 @@ and custom ports will be used.
 
    **Linux/macOS example:**
 
-   Use these instructions if you are running on a Linux or macOS system.
+   Use this command if you are running on a Linux or macOS system.
 
     ```console
     docker run \
@@ -365,7 +365,7 @@ and custom ports will be used.
 
    **Windows Command Prompt (not Windows PowerShell) example:**
 
-   Use these instructions if you are running on a Windows system.
+   Use this command if you are running on a Windows system.
 
     ```console
     docker run ^
@@ -487,7 +487,7 @@ and custom ports will be used.
 
    **Linux/macOS example:**
 
-   Use these instructions if you are running on a Linux or macOS system.
+   Use this command if you are running on a Linux or macOS system.
 
     ```console
     docker run \
@@ -503,7 +503,7 @@ and custom ports will be used.
 
    **Windows Command Prompt (not Windows PowerShell) example:**
 
-   Use these instructions if you are running on a Windows system.
+   Use this command if you are running on a Windows system.
 
     ```console
     docker run ^
