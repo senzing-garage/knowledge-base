@@ -100,9 +100,7 @@ Senzing database inside the running Docker container.
         ]
         for record_set in record_sets:
             for record in record_set.values():
-                g2_engine.add_record(
-                    record.get("DataSource"), record.get("Id"), record.get("Json")
-                )
+                g2_engine.add_record(record.get("DataSource"), record.get("Id"), record.get("Json"))
     except G2Exception as err:
         print(f"\nError:\n{err}\n")
 
