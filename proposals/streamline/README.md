@@ -52,6 +52,15 @@ and access it using the `senzing_grpc` Python package.
     or download and run
     [senzing_hello_world.py](https://raw.githubusercontent.com/senzing-garage/knowledge-base/main/proposals/streamline/senzing_hello_world.py).
 
+1. To end the interactive Python session,
+   copy/paste the following block of code into the interactive Python session
+   and press the **Enter** key.
+
+    ```python
+    quit()
+
+    ```
+
 1. To end the Senzing gRPC service using Docker,
    use `ctrl-c` to stop the `docker run ...` program.
 
