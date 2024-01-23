@@ -261,6 +261,12 @@ and custom ports will be used.
 
     *Remember:* Use the new port values in the interactive Python and web URLs.
 
+## Next steps
+
+1. [Try Senzing's Hello World](README.md)
+1. [Use Senzing's Truth Set data](use-senzings-truth-set-data.md)
+1. Map and load your own data
+
 ## References
 
 1. [View SQLite database](coleifer-sqlite-web.md)
