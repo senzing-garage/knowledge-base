@@ -36,7 +36,7 @@ Senzing database inside the running Docker container.
 
 ## Identify data sources
 
-1. To add Truth Set data sources to the Senzing configuration,
+5. To add Truth Set data sources to the Senzing configuration,
    copy/paste the following block of code into the interactive Python session
    and press the **Enter** key.
    Example:
@@ -85,7 +85,7 @@ Senzing database inside the running Docker container.
 
 ## Add records
 
-1. To add Truth Set data to the Senzing database,
+6. To add Truth Set data to the Senzing database,
    copy/paste the following block of code into the interactive Python session
    and press the **Enter** key.
 
@@ -117,7 +117,7 @@ Senzing database inside the running Docker container.
 
 ## View results
 
-1. Entity details can be viewed.
+7. Entity details can be viewed.
    Copy/paste the following block of code into the interactive Python session
    and press the **Enter** key.
 
@@ -176,7 +176,7 @@ Senzing database inside the running Docker container.
 
 ## Explore data using Senzing tools
 
-1. View the Entity Search demonstration at
+11. View the Entity Search demonstration at
    [http://localhost:8260/entity-search](http://localhost:8260/entity-search).
 
 1. Using `G2Snapshot.py`.
