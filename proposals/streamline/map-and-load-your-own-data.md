@@ -220,6 +220,15 @@ and custom ports will be used.
     1. [http://localhost:9140/entity-search](http://localhost:9140/entity-search).
     1. [http://localhost:9140/xterm](http://localhost:9140/xterm).
 
+1. To end the interactive Python session,
+   copy/paste the following block of code into the interactive Python session
+   and press the **Enter** key.
+
+    ```python
+    quit()
+
+    ```
+
 1. To end the Senzing gRPC service using Docker,
    use `ctrl-c` to stop the `docker run ...` program.
 
