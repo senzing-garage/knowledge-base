@@ -34,6 +34,8 @@ Senzing database inside the running Docker container.
     GRPC_URL = "localhost:8261"
     ```
 
+## Identify data sources
+
 1. To add Truth Set data sources to the Senzing configuration,
    copy/paste the following block of code into the interactive Python session
    and press the **Enter** key.
@@ -81,6 +83,8 @@ Senzing database inside the running Docker container.
     or download and run
     [senzing_truthset_add_datasources.py](https://raw.githubusercontent.com/senzing-garage/knowledge-base/main/proposals/streamline/senzing_truthset_add_datasources.py).
 
+## Add records
+
 1. To add Truth Set data to the Senzing database,
    copy/paste the following block of code into the interactive Python session
    and press the **Enter** key.
@@ -110,6 +114,8 @@ Senzing database inside the running Docker container.
     [senzing_truthset_add_records.py](https://raw.githubusercontent.com/senzing-garage/knowledge-base/main/proposals/streamline/senzing_truthset_add_records.py).
 
     If running in the interactive Python session, wait until the `>>>` prompt appears before proceeding.
+
+## View results
 
 1. Entity details can be viewed.
    Copy/paste the following block of code into the interactive Python session
