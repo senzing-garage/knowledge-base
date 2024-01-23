@@ -292,6 +292,8 @@ and custom ports will be used.
 
    **Linux/macOS example:**
 
+   Use these instructions if you are running on a Linux or macOS system.
+
     1. To identify a directory to store the new SQLite database files,
        copy/modify/paste the following:
 
@@ -313,6 +315,8 @@ and custom ports will be used.
         ```
 
    **Windows Command Prompt (not Windows PowerShell) example:**
+
+   Use these instructions if you are running on a Windows system.
 
     1. To identify a directory to store the new SQLite database files,
        copy/modify/paste the following:
@@ -345,6 +349,8 @@ and custom ports will be used.
 
    **Linux/macOS example:**
 
+   Use these instructions if you are running on a Linux or macOS system.
+
     ```console
     docker run \
         --name senzing-my-demo-1 \
@@ -358,6 +364,8 @@ and custom ports will be used.
     ```
 
    **Windows Command Prompt (not Windows PowerShell) example:**
+
+   Use these instructions if you are running on a Windows system.
 
     ```console
     docker run ^
@@ -479,6 +487,8 @@ and custom ports will be used.
 
    **Linux/macOS example:**
 
+   Use these instructions if you are running on a Linux or macOS system.
+
     ```console
     docker run \
         --name senzing-my-demo-1 \
@@ -492,6 +502,8 @@ and custom ports will be used.
     ```
 
    **Windows Command Prompt (not Windows PowerShell) example:**
+
+   Use these instructions if you are running on a Windows system.
 
     ```console
     docker run ^
