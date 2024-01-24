@@ -3,9 +3,13 @@
 In this demonstration, the Senzing Truth Set data will be added to the ephemeral
 Senzing database inside the running Docker container.
 
+## Prerequisites
+
 1. Make sure the
    [prerequisites](README.md#Prerequisistes)
    are satisfied.
+
+## Create Senzing gRPC service
 
 1. Run a Senzing gRPC service using Docker.
    Example:
