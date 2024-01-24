@@ -4,6 +4,8 @@ In this demonstration, your data will be added to the Senzing database.
 This time the data will be persisted into SQLite database files residing on your local workstation
 and custom ports will be used.
 
+## Prerequisites
+
 1. Make sure the
    [prerequisites](README.md#Prerequisistes)
    are satisfied.
@@ -33,7 +35,7 @@ and custom ports will be used.
 
 ## Create database and Senzing gRPC service
 
-1. On your local workstation, create an empty Sqlite Senzing database on your local workstation.
+2. On your local workstation, create an empty Sqlite Senzing database on your local workstation.
    Modify the value of `SENZING_MY_DEMO_1` to specify where you want the database files kept.
 
     1. To identify a directory to store the new SQLite database files,
@@ -81,7 +83,7 @@ and custom ports will be used.
 
 ## Work with Senzing
 
-1. In a separate terminal window on your local workstation, start an interactive Python session.
+4. In a separate terminal window on your local workstation, start an interactive Python session.
    Example:
 
     ```console
@@ -197,7 +199,7 @@ and custom ports will be used.
 
 ## Restart
 
-1. To restart the service, re-run the command seen in Step #3.
+10. To restart the service, re-run the command seen in Step #3.
    Although the port mappings using `--publish` may be changed, the value of `--volume`
    must match the original value so the database files on your workstation will be attached.
 
