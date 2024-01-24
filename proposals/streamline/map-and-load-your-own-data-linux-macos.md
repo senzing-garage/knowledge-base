@@ -58,6 +58,8 @@ and custom ports will be used.
 
         ```
 
+   The commands created new files in the `${SENZING_MY_DEMO_1}` directory.
+
 1. Run a Senzing gRPC service using Docker.
    Notice that the ports published via `--publish` must be unique for your workstation.
    Inside the container `8260` is the port of the HTTP server, `8261` is the port of the gRPC server.
@@ -81,7 +83,7 @@ and custom ports will be used.
 
     ```
 
-## Work with Senzing
+## Work with Senzing using Python
 
 5. In a separate terminal window on your local workstation, start an interactive Python session.
    Example:
