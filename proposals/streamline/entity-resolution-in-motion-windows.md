@@ -45,7 +45,7 @@ In this demonstration, ...TODO:
 
     ```console
     docker run ^
-        --name senzing-my-demo-1 ^
+        --name senzing-my-demo-2 ^
         --publish 8260:8260 ^
         --publish 8261:8261 ^
         --pull always ^
@@ -134,14 +134,14 @@ You will be oscillating between two applications:
    the following block of code in the web browser based Xterm:
 
    ```console
-   G2Snapshot.py -o /tmp/senzing-my-demo-1-1 -a
+   G2Snapshot.py -o /tmp/senzing-my-demo-2-1 -a
    ```
 
 1. Explore the data by running
    the following block of code in the web browser based Xterm:
 
     ```console
-    G2Explorer.py -s /tmp/senzing-my-demo-1-1.json
+    G2Explorer.py -s /tmp/senzing-my-demo-2-1.json
     ```
 
 1. TODO:
@@ -184,14 +184,14 @@ You will be oscillating between two applications:
    the following block of code in the web browser based Xterm:
 
    ```console
-   G2Snapshot.py -o /tmp/senzing-my-demo-1-2 -a
+   G2Snapshot.py -o /tmp/senzing-my-demo-2-2 -a
    ```
 
 1. Explore the data by running
    the following block of code in the web browser based Xterm:
 
     ```console
-    G2Explorer.py -s /tmp/senzing-my-demo-1-2.json
+    G2Explorer.py -s /tmp/senzing-my-demo-2-2.json
     ```
 
 1. TODO:
@@ -234,14 +234,14 @@ You will be oscillating between two applications:
    the following block of code in the web browser based Xterm:
 
    ```console
-   G2Snapshot.py -o /tmp/senzing-my-demo-1-3 -a
+   G2Snapshot.py -o /tmp/senzing-my-demo-2-3 -a
    ```
 
 1. Explore the data by running
    the following block of code in the web browser based Xterm:
 
     ```console
-    G2Explorer.py -s /tmp/senzing-my-demo-1-3.json
+    G2Explorer.py -s /tmp/senzing-my-demo-2-3.json
     ```
 
 1. TODO:

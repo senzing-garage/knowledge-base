@@ -191,7 +191,8 @@ Senzing database inside the running Docker container.
        the following block of code in the web browser based Xterm:
 
         ```console
-        G2Snapshot.py -o /tmp/demo-snap-v1 -a
+        G2Snapshot.py -o /tmp/senzing-my-demo-1-1 -a
+
         ```
 
     1. For more information on SnapShots, visit
@@ -205,7 +206,7 @@ Senzing database inside the running Docker container.
        the following block of code in the web browser based Xterm:
 
         ```console
-        G2Explorer.py -s /tmp/demo-snap-v1.json
+        G2Explorer.py -s /tmp/senzing-my-demo-1-1
         ```
 
     1. In `G2Explorer.py`, enter

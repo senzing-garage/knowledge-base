@@ -36,6 +36,7 @@ Senzing database inside the running Docker container.
 
     ```python
     GRPC_URL = "localhost:8261"
+
     ```
 
 ## Identify data sources
@@ -191,7 +192,8 @@ Senzing database inside the running Docker container.
        the following block of code in the web browser based Xterm:
 
         ```console
-        G2Snapshot.py -o /tmp/demo-snap-v1 -a
+        G2Snapshot.py -o /tmp/senzing-my-demo-1-1 -a
+
         ```
 
     1. For more information on SnapShots, visit
@@ -205,19 +207,21 @@ Senzing database inside the running Docker container.
        the following block of code in the web browser based Xterm:
 
         ```console
-        G2Explorer.py -s /tmp/demo-snap-v1.json
+        G2Explorer.py -s /tmp/senzing-my-demo-1-1
         ```
 
     1. In `G2Explorer.py`, enter
 
         ```console
         get customers 1070
+
         ```
 
     1. In `G2Explorer.py`, enter
 
         ```console
         search {"name_full": "robert smith", "date_of_birth": "11/12/1978"}
+
         ```
 
     1. For more examples, see
@@ -227,6 +231,7 @@ Senzing database inside the running Docker container.
 
         ```console
         quit
+
         ```
 
 1. Using `G2Audit.py`
