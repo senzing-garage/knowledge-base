@@ -1,8 +1,6 @@
 # Entity resolution in motion
 
-In this demonstration, ...
-
-Pattern:
+In this demonstration, ...TODO:
 
 1. Make sure the
    [prerequisites](README.md#Prerequisistes)
