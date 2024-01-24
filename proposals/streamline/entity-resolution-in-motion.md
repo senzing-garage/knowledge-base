@@ -205,7 +205,7 @@ You will be oscillating between two applications:
 
 ### Iteration number 2
 
-11. To add the second record
+12. To add the second record
    copy/paste the following into the interactive Python session
    and press the **Enter** key.
 
@@ -255,7 +255,7 @@ You will be oscillating between two applications:
 
 ### Iteration number 3
 
-15. To add the second record
+17. To add the second record
    copy/paste the following into the interactive Python session
    and press the **Enter** key.
 
