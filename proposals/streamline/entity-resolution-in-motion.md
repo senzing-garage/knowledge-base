@@ -137,6 +137,7 @@ Pattern:
             record.get("DATA_SOURCE"), record.get("RECORD_ID"), record, flags=-1
         )
         print(json.dumps(json.loads(result), indent=2))
+
     ```
 
 ## Iterate
@@ -178,6 +179,7 @@ You will be oscillating between two applications:
             }
         )
     )
+
     ```
 
 1. Create a snapshot by running
@@ -221,6 +223,7 @@ You will be oscillating between two applications:
             }
         )
     )
+
     ```
 
 1. Create a snapshot by running
@@ -264,6 +267,7 @@ You will be oscillating between two applications:
             }
         )
     )
+
     ```
 
 1. Create a snapshot by running
