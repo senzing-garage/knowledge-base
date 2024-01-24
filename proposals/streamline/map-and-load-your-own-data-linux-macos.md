@@ -95,84 +95,84 @@ and custom ports will be used.
    Then in the following example, modify the value of `DATASOURCES` to match your data.
    Also modify the value of `GRPC_URL` to use the custom port number specified above.
 
-   Copy/modify/paste the following into the interactive Python session
-   and press the **Enter** key.
+    1. Copy/modify/paste the following into the interactive Python session
+       and press the **Enter** key.
 
-    ```python
-    DATASOURCES = ["MY_DATASOURCE"]
-    GRPC_URL = "localhost:9141"
-    ```
+        ```python
+        DATASOURCES = ["MY_DATASOURCE"]
+        GRPC_URL = "localhost:9141"
+        ```
 
-   Copy/paste the following into the interactive Python session
-   and press the **Enter** key.
+    1. Copy/paste the following into the interactive Python session
+       and press the **Enter** key.
 
-    ```python
-    import grpc
+        ```python
+        import grpc
 
-    from senzing_grpc import (
-        G2ConfigGrpc,
-        G2ConfigMgrGrpc,
-        G2DiagnosticGrpc,
-        G2EngineGrpc,
-        G2Exception,
-    )
+        from senzing_grpc import (
+            G2ConfigGrpc,
+            G2ConfigMgrGrpc,
+            G2DiagnosticGrpc,
+            G2EngineGrpc,
+            G2Exception,
+        )
 
-    try:
-    # Create gRPC channel.
-        grpc_channel = grpc.insecure_channel(GRPC_URL)
-    # Create Senzing objects.
-        g2_config = G2ConfigGrpc(grpc_channel=grpc_channel)
-        g2_configmgr = G2ConfigMgrGrpc(grpc_channel=grpc_channel)
-        g2_engine = G2EngineGrpc(grpc_channel=grpc_channel)
-        g2_diagnostic = G2DiagnosticGrpc(grpc_channel=grpc_channel)
-    # Get existing Senzing configuration.
-        old_config_id = g2_configmgr.get_default_config_id()
-        OLD_JSON_CONFIG = g2_configmgr.get_config(old_config_id)
-        config_handle = g2_config.load(OLD_JSON_CONFIG)
-    # Add Datasources to existing Senzing configuration.
-        for datasource in DATASOURCES:
-            datasource_json = {"DSRC_CODE": datasource}
-            g2_config.add_data_source(config_handle, datasource_json)
-    # Persist new Senzing configuration.
-        NEW_JSON_CONFIG = g2_config.save(config_handle)
-        new_config_id = g2_configmgr.add_config(NEW_JSON_CONFIG, "Add TruthSet datasources")
-        g2_configmgr.replace_default_config_id(old_config_id, new_config_id)
-    # Update other Senzing objects.
-        g2_engine.reinit(new_config_id)
-        g2_diagnostic.reinit(new_config_id)
-    except G2Exception as err:
-        print(f"\nError:\n{err}\n")
+        try:
+        # Create gRPC channel.
+            grpc_channel = grpc.insecure_channel(GRPC_URL)
+        # Create Senzing objects.
+            g2_config = G2ConfigGrpc(grpc_channel=grpc_channel)
+            g2_configmgr = G2ConfigMgrGrpc(grpc_channel=grpc_channel)
+            g2_engine = G2EngineGrpc(grpc_channel=grpc_channel)
+            g2_diagnostic = G2DiagnosticGrpc(grpc_channel=grpc_channel)
+        # Get existing Senzing configuration.
+            old_config_id = g2_configmgr.get_default_config_id()
+            OLD_JSON_CONFIG = g2_configmgr.get_config(old_config_id)
+            config_handle = g2_config.load(OLD_JSON_CONFIG)
+        # Add Datasources to existing Senzing configuration.
+            for datasource in DATASOURCES:
+                datasource_json = {"DSRC_CODE": datasource}
+                g2_config.add_data_source(config_handle, datasource_json)
+        # Persist new Senzing configuration.
+            NEW_JSON_CONFIG = g2_config.save(config_handle)
+            new_config_id = g2_configmgr.add_config(NEW_JSON_CONFIG, "Add TruthSet datasources")
+            g2_configmgr.replace_default_config_id(old_config_id, new_config_id)
+        # Update other Senzing objects.
+            g2_engine.reinit(new_config_id)
+            g2_diagnostic.reinit(new_config_id)
+        except G2Exception as err:
+            print(f"\nError:\n{err}\n")
 
-    ```
+        ```
 
 1. To add your data to the Senzing database,
    in the following example modify the value of `INPUT_FILENAME` to match the path to your file of JSON lines.
    For Windows, use a format like `C:\\Users\\username\\Downloads\\example-data-for-senzing.json` for `INPUT_FILENAME`.
 
-   To identify the file containing your data,
-   copy/modify/paste the following into the interactive Python session:
+    1. To identify the file containing your data,
+       copy/modify/paste the following into the interactive Python session:
 
-    ```python
-    INPUT_FILENAME = "/tmp/example-data-for-senzing.json"
-    ```
+        ```python
+        INPUT_FILENAME = "/tmp/example-data-for-senzing.json"
+        ```
 
-   Copy/paste the following into the interactive Python session
-   and press the **Enter** key.
+    1. Copy/paste the following into the interactive Python session
+       and press the **Enter** key.
 
-    ```python
-    import json
+        ```python
+        import json
 
-    try:
-        with open(INPUT_FILENAME, "r") as file:
-            for line in file:
-                line_as_dict = json.loads(line)
-                data_source = line_as_dict.get("DATA_SOURCE")
-                record_id = line_as_dict.get("RECORD_ID")
-                g2_engine.add_record(data_source, record_id, line)
-    except G2Exception as err:
-        print(f"\nError:\n{err}\n")
+        try:
+            with open(INPUT_FILENAME, "r") as file:
+                for line in file:
+                    line_as_dict = json.loads(line)
+                    data_source = line_as_dict.get("DATA_SOURCE")
+                    record_id = line_as_dict.get("RECORD_ID")
+                    g2_engine.add_record(data_source, record_id, line)
+        except G2Exception as err:
+            print(f"\nError:\n{err}\n")
 
-    ```
+        ```
 
    Note that this is a simple example of adding records to Senzing and is not optimized for performance.
    For higher performance techniques, additional Python programming is needed.
