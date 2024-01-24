@@ -290,6 +290,7 @@ and custom ports will be used.
 1. [Try Senzing's Hello World](README.md)
 1. [Use Senzing's Truth Set data](use-senzings-truth-set-data.md)
 1. Map and load your own data
+1. [Entity resolution in motion](entity-resolution-in-motion.md)
 
 ## References
 

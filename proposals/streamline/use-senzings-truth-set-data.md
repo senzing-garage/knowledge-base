@@ -239,6 +239,7 @@ Senzing database inside the running Docker container.
 1. [Try Senzing's Hello World](README.md)
 1. Use Senzing's Truth Set data
 1. [Map and load your own data](map-and-load-your-own-data.md)
+1. [Entity resolution in motion](entity-resolution-in-motion.md)
 
 ## References
 

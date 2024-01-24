@@ -302,3 +302,14 @@ You will be oscillating between two applications:
     ```console
     quit
     ```
+
+## Next steps
+
+1. [Try Senzing's Hello World](README.md)
+1. [Use Senzing's Truth Set data](use-senzings-truth-set-data.md)
+1. [Map and load your own data](map-and-load-your-own-data.md)
+1. Entity resolution in motion
+
+## References
+
+1. [View SQLite database](coleifer-sqlite-web.md)

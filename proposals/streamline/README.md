@@ -69,3 +69,4 @@ and access it using the `senzing_grpc` Python package.
 1. Try Senzing's Hello World
 1. [Use Senzing's Truth Set data](use-senzings-truth-set-data.md)
 1. [Map and load your own data](map-and-load-your-own-data.md)
+1. [Entity resolution in motion](entity-resolution-in-motion.md)
