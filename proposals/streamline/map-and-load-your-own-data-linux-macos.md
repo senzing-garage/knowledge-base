@@ -85,7 +85,7 @@ and custom ports will be used.
 
 ## Identify data sources
 
-5. In a separate terminal window on your local workstation, start an interactive Python session.
+5. In a separate window on your local workstation, start an interactive Python session.
    Example:
 
     ```console
@@ -151,7 +151,6 @@ and custom ports will be used.
 
 7. To add your data to the Senzing database,
    in the following example modify the value of `INPUT_FILENAME` to match the path to your file of JSON lines.
-   For Windows, use a format like `C:\\Users\\username\\Downloads\\example-data-for-senzing.json` for `INPUT_FILENAME`.
 
     1. To identify the file containing your data,
        copy/modify/paste the following into the interactive Python session:
