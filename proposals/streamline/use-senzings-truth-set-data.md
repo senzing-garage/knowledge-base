@@ -184,6 +184,7 @@ Senzing database inside the running Docker container.
        [http://localhost:8260/xterm](http://localhost:8260/xterm).
 
     1. Start `G2Snapshot.py` by running
+       the following block of code in the web browser based Xterm:
 
         ```console
         G2Snapshot.py -o /tmp/demo-snap-v1 -a
@@ -197,6 +198,7 @@ Senzing database inside the running Docker container.
        [http://localhost:8260/xterm](http://localhost:8260/xterm).
 
     1. Start `G2Explorer.py` by running
+       the following block of code in the web browser based Xterm:
 
         ```console
         G2Explorer.py -s /tmp/demo-snap-v1.json

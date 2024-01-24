@@ -37,14 +37,14 @@ and custom ports will be used.
    Use these instructions if you are running on a Linux or macOS system.
 
     1. To identify a directory to store the new SQLite database files,
-       copy/modify/paste the following:
+       copy/modify/paste the following into the terminal window:
 
         ```console
         export SENZING_MY_DEMO_1="/tmp/my-demo-1"
         ```
 
     1. To create a new database in the directory,
-       copy/paste the following:
+       copy/paste the following into the terminal window:
 
         ```console
         mkdir ${SENZING_MY_DEMO_1}
@@ -61,14 +61,15 @@ and custom ports will be used.
    Use these instructions if you are running on a Windows system.
 
     1. To identify a directory to store the new SQLite database files,
-       using an editor like Notepad copy/modify/paste the following:
+       using an editor like Notepad
+       copy/modify/paste the following into the Windows Command Prompt:
 
         ```console
         set SENZING_MY_DEMO_1="C:\\Users\\username\\my-demo-1"
         ```
 
     1. To create a new database in the directory,
-       copy/paste the following:
+       copy/paste the following into the Windows Command Prompt:
 
         ```console
         mkdir %SENZING_MY_DEMO_1%
@@ -91,7 +92,8 @@ and custom ports will be used.
 
    **Linux/macOS example:**
 
-   Use this command if you are running on a Linux or macOS system.
+   If you are running on a Linux or macOS system,
+   copy/paste the following into the terminal window:
 
     ```console
     docker run \
@@ -107,13 +109,14 @@ and custom ports will be used.
 
    **Windows Command Prompt (not Windows PowerShell) example:**
 
-   Use this command if you are running on a Windows system.
+   If you are running on a Windows system,
+   copy/paste the following into the Windows Command Prompt:
 
     ```console
     docker run ^
         --name senzing-my-demo-1 ^
-        --publish 9140:8260 ^
-        --publish 9141:8261 ^
+        --publish 8260:8260 ^
+        --publish 8261:8261 ^
         --pull always ^
         --rm ^
         --volume %SENZING_MY_DEMO_1%:/tmp/sqlite ^
@@ -133,14 +136,16 @@ and custom ports will be used.
    Then in the following example, modify the value of `DATASOURCES` to match your data.
    Also modify the value of `GRPC_URL` to use the custom port number specified above.
 
-   Copy/modify/paste the following:
+   Copy/modify/paste the following into the interactive Python session
+   and press the **Enter** key.
 
     ```python
     DATASOURCES = ["MY_DATASOURCE"]
     GRPC_URL = "localhost:9141"
     ```
 
-   Copy/paste the following and press the **Enter** key.
+   Copy/paste the following into the interactive Python session
+   and press the **Enter** key.
 
     ```python
     import grpc
@@ -186,13 +191,14 @@ and custom ports will be used.
    For Windows, use a format like `C:\\Users\\username\\Downloads\\example-data-for-senzing.json` for `INPUT_FILENAME`.
 
    To identify the file containing your data,
-   copy/modify/paste the following:
+   copy/modify/paste the following into the interactive Python session:
 
     ```python
     INPUT_FILENAME = "/tmp/example-data-for-senzing.json"
     ```
 
-   Copy/paste the following and press the **Enter** key.
+   Copy/paste the following into the interactive Python session
+   and press the **Enter** key.
 
     ```python
     import json
@@ -238,7 +244,15 @@ and custom ports will be used.
 
    **Linux/macOS example:**
 
-   Use this command if you are running on a Linux or macOS system.
+   If you are running on a Linux or macOS system,
+   copy/paste the following into the terminal window:
+
+    1. To identify the directory storing the SQLite database files,
+       copy/modify/paste the following into the terminal window:
+
+        ```console
+        export SENZING_MY_DEMO_1="/tmp/my-demo-1"
+        ```
 
     ```console
     docker run \
@@ -254,7 +268,8 @@ and custom ports will be used.
 
    **Windows Command Prompt (not Windows PowerShell) example:**
 
-   Use this command if you are running on a Windows system.
+   If you are running on a Windows system,
+   copy/paste the following into the Windows Command Prompt:
 
     ```console
     docker run ^
