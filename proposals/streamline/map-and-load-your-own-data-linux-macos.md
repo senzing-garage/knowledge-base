@@ -8,6 +8,8 @@ and custom ports will be used.
    [prerequisites](README.md#Prerequisistes)
    are satisfied.
 
+## Create your input file
+
 1. On your local workstation, create a file of JSON-lines with your data to be loaded into Senzing.
 
    To create an example file of JSON-lines,
@@ -28,6 +30,8 @@ and custom ports will be used.
     ```
 
    The command created a new `/tmp/example-data-for-senzing.json` file on your local workstation.
+
+## Create database and Senzing gRPC service
 
 1. On your local workstation, create an empty Sqlite Senzing database on your local workstation.
    Modify the value of `SENZING_MY_DEMO_1` to specify where you want the database files kept.
@@ -74,6 +78,8 @@ and custom ports will be used.
         senzing/senzing-tools demo-quickstart
 
     ```
+
+## Work with Senzing
 
 1. In a separate terminal window on your local workstation, start an interactive Python session.
    Example:
@@ -188,6 +194,8 @@ and custom ports will be used.
 
 1. To end the Senzing gRPC service using Docker,
    use `ctrl-c` to stop the `docker run ...` program.
+
+## Restart
 
 1. To restart the service, re-run the command seen in Step #3.
    Although the port mappings using `--publish` may be changed, the value of `--volume`
