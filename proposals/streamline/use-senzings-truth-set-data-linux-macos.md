@@ -193,7 +193,6 @@ Senzing database inside the running Docker container.
 
         ```console
         G2Snapshot.py -o /tmp/senzing-my-demo-1-1 -a
-
         ```
 
     1. For more information on SnapShots, visit
