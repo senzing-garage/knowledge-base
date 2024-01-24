@@ -61,6 +61,7 @@ In this demonstration, ...TODO:
 
     ```console
     python3
+
     ```
 
 1. To create a connection to the Senzing gRPC service
@@ -103,9 +104,9 @@ You will be oscillating between two applications:
 
 ### Iteration number 1
 
-7. To add the first record
-   copy/paste the following into the interactive Python session
-   and press the **Enter** key.
+7. In the interactive Python session,
+   to add the first record
+   copy/paste the following and press the **Enter** key.
 
     ```python
     (
@@ -129,15 +130,15 @@ You will be oscillating between two applications:
 
     ```
 
-1. Create a snapshot by running
-   the following block of code in the web browser based Xterm:
+1. In the web browser based Xterm,
+   create a snapshot by running the following block of code:
 
    ```console
    G2Snapshot.py -o /tmp/senzing-my-demo-2-1 -a
    ```
 
-1. Explore the data by running
-   the following block of code in the web browser based Xterm:
+1. In the web browser based Xterm,
+   explore the data by running the following block of code::
 
     ```console
     G2Explorer.py -s /tmp/senzing-my-demo-2-1.json
@@ -154,9 +155,9 @@ You will be oscillating between two applications:
 
 ### Iteration number 2
 
-12. To add the second record
-   copy/paste the following into the interactive Python session
-   and press the **Enter** key.
+12. In the interactive Python session,
+   to add the second record
+   copy/paste the following and press the **Enter** key.
 
     ```python
     (
@@ -179,22 +180,22 @@ You will be oscillating between two applications:
 
     ```
 
-1. Create a snapshot by running
-   the following block of code in the web browser based Xterm:
+1. In the web browser based Xterm,
+   create a snapshot by running the following block of code:
 
    ```console
    G2Snapshot.py -o /tmp/senzing-my-demo-2-2 -a
    ```
 
-1. Explore the data by running
-   the following block of code in the web browser based Xterm:
+1. In the web browser based Xterm,
+   explore the data by running the following block of code:
 
     ```console
     G2Explorer.py -s /tmp/senzing-my-demo-2-2.json
     ```
 
 1. TODO:
-   Explain what to look at.
+   Explain what to look at in G2Explorer.py.
 
 1. To exit `G2Explorer.py`, enter
 
@@ -204,9 +205,9 @@ You will be oscillating between two applications:
 
 ### Iteration number 3
 
-17. To add the second record
-   copy/paste the following into the interactive Python session
-   and press the **Enter** key.
+17. In the interactive Python session,
+   to add the third record
+   copy/paste the following and press the **Enter** key.
 
     ```python
     (
@@ -229,15 +230,15 @@ You will be oscillating between two applications:
 
     ```
 
-1. Create a snapshot by running
-   the following block of code in the web browser based Xterm:
+1. In the web browser based Xterm,
+   create a snapshot by running the following block of code:
 
    ```console
    G2Snapshot.py -o /tmp/senzing-my-demo-2-3 -a
    ```
 
-1. Explore the data by running
-   the following block of code in the web browser based Xterm:
+1. In the web browser based Xterm,
+   explore the data by running the following block of code:
 
     ```console
     G2Explorer.py -s /tmp/senzing-my-demo-2-3.json
