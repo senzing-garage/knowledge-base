@@ -131,14 +131,16 @@ You will be oscillating between two applications:
 
     ```
 
-1. In the web browser based Xterm,
+1. In the
+   [web browser based Xterm](http://localhost:8260/xterm),
    create a snapshot by running the following block of code:
 
    ```console
    G2Snapshot.py -o /tmp/senzing-my-demo-2-1 -a
    ```
 
-1. In the web browser based Xterm,
+1. In the
+   [web browser based Xterm](http://localhost:8260/xterm),
    explore the data by running the following block of code::
 
     ```console
@@ -181,14 +183,16 @@ You will be oscillating between two applications:
 
     ```
 
-1. In the web browser based Xterm,
+1. In the
+   [web browser based Xterm](http://localhost:8260/xterm),
    create a snapshot by running the following block of code:
 
    ```console
    G2Snapshot.py -o /tmp/senzing-my-demo-2-2 -a
    ```
 
-1. In the web browser based Xterm,
+1. In the
+   [web browser based Xterm](http://localhost:8260/xterm),
    explore the data by running the following block of code:
 
     ```console
@@ -231,14 +235,16 @@ You will be oscillating between two applications:
 
     ```
 
-1. In the web browser based Xterm,
+1. In the
+   [web browser based Xterm](http://localhost:8260/xterm),
    create a snapshot by running the following block of code:
 
    ```console
    G2Snapshot.py -o /tmp/senzing-my-demo-2-3 -a
    ```
 
-1. In the web browser based Xterm,
+1. In the
+   [web browser based Xterm](http://localhost:8260/xterm),
    explore the data by running the following block of code:
 
     ```console
