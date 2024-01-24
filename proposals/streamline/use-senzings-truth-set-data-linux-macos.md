@@ -11,7 +11,7 @@ Senzing database inside the running Docker container.
 
 ## Create Senzing gRPC service
 
-1. Run a Senzing gRPC service using Docker.
+2. Run a Senzing gRPC service using Docker.
    Example:
 
     ```console
