@@ -197,7 +197,13 @@ You will be oscillating between two applications:
     ```
 
 1. TODO:
-   Explain what to look at
+   Explain what to look at.
+
+1. To exit `G2Explorer.py`, enter
+
+    ```console
+    quit
+    ```
 
 ### Iteration number 2
 
@@ -241,7 +247,13 @@ You will be oscillating between two applications:
     ```
 
 1. TODO:
-   Explain what to look at
+   Explain what to look at.
+
+1. To exit `G2Explorer.py`, enter
+
+    ```console
+    quit
+    ```
 
 ### Iteration number 3
 
@@ -285,4 +297,10 @@ You will be oscillating between two applications:
     ```
 
 1. TODO:
-   Explain what to look at
+   Explain what to look at.
+
+1. To exit `G2Explorer.py`, enter
+
+    ```console
+    quit
+    ```
