@@ -1,4 +1,4 @@
-# Map and load your own data
+# Map and load your own data  - Linux/macOS
 
 In this demonstration, your data will be added to the Senzing database.
 This time the data will be persisted into SQLite database files residing on your local workstation
@@ -288,9 +288,9 @@ and custom ports will be used.
 ## Next steps
 
 1. [Try Senzing's Hello World](README.md)
-1. [Use Senzing's Truth Set data](use-senzings-truth-set-data.md)
-1. Map and load your own data
-1. [Entity resolution in motion](entity-resolution-in-motion.md)
+1. [Use Senzing's Truth Set data - Linux/macOS](use-senzings-truth-set-data-linux-macos.md)
+1. Map and load your own data - Linux/macOS
+1. [Entity resolution in motion - Linux/macOS](entity-resolution-in-motion-linux-macos.md)
 
 ## References
 

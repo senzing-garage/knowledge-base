@@ -1,4 +1,4 @@
-# Use Senzing's Truth Set data
+# Use Senzing's Truth Set data  - Windows
 
 In this demonstration, the Senzing Truth Set data will be added to the ephemeral
 Senzing database inside the running Docker container.
@@ -237,9 +237,9 @@ Senzing database inside the running Docker container.
 ## Next steps
 
 1. [Try Senzing's Hello World](README.md)
-1. Use Senzing's Truth Set data
-1. [Map and load your own data](map-and-load-your-own-data.md)
-1. [Entity resolution in motion](entity-resolution-in-motion.md)
+1. Use Senzing's Truth Set data - Windows
+1. [Map and load your own data - Windows](map-and-load-your-own-data-windows.md)
+1. [Entity resolution in motion - Windows](entity-resolution-in-motion-windows.md)
 
 ## References
 
