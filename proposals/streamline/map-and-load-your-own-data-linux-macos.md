@@ -83,7 +83,7 @@ and custom ports will be used.
 
     ```
 
-## Work with Senzing using Python
+## Identify data sources
 
 5. In a separate terminal window on your local workstation, start an interactive Python session.
    Example:
@@ -147,7 +147,9 @@ and custom ports will be used.
 
         ```
 
-1. To add your data to the Senzing database,
+## Add records
+
+7. To add your data to the Senzing database,
    in the following example modify the value of `INPUT_FILENAME` to match the path to your file of JSON lines.
    For Windows, use a format like `C:\\Users\\username\\Downloads\\example-data-for-senzing.json` for `INPUT_FILENAME`.
 
@@ -181,12 +183,6 @@ and custom ports will be used.
    For examples, see
    [High performance loading with Python](#).
 
-1. Once records have been inserted you can
-   [Explore data using Senzing tools](README.md#explore-data-using-senzing-tools) using
-   the custom port number chosen above.  Examples:
-    1. [http://localhost:9140/entity-search](http://localhost:9140/entity-search).
-    1. [http://localhost:9140/xterm](http://localhost:9140/xterm).
-
 1. To end the interactive Python session,
    copy/paste the following block of code into the interactive Python session
    and press the **Enter** key.
@@ -195,6 +191,14 @@ and custom ports will be used.
     quit()
 
     ```
+
+## Explore data using Senzing tools
+
+9. Once records have been inserted you can
+   [Explore data using Senzing tools](README.md#explore-data-using-senzing-tools) using
+   the custom port number chosen above.  Examples:
+    1. [http://localhost:9140/entity-search](http://localhost:9140/entity-search).
+    1. [http://localhost:9140/xterm](http://localhost:9140/xterm).
 
 1. To end the Senzing gRPC service using Docker,
    use `ctrl-c` to stop the `docker run ...` program.
