@@ -4,12 +4,6 @@ In this demonstration, ...
 
 Pattern:
 
-1. Record into Python variable
-1. run code to insert the single record
-1. G2Snapshot.py
-1. G2Explorer.py
-1. repeat
-
 1. Make sure the
    [prerequisites](README.md#Prerequisistes)
    are satisfied.
@@ -122,27 +116,169 @@ Pattern:
     python3
     ```
 
-1. To add your data sources to the Senzing configuration,
-   determine the list of data sources used in your data.
-   Also modify the value of `GRPC_URL` to use the custom port number specified above.
-
-   Copy/paste the following into the interactive Python session
+1. To create a connection to the Senzing gRPC service
+   and define a function for adding records,
+   copy/paste the following into the interactive Python session
    and press the **Enter** key.
 
     ```python
-    GRPC_URL = "localhost:8261"
+    import json
 
-    def add_record_to_senzing(record)
+    import grpc
+    from senzing_grpc import G2EngineGrpc
+
+    GRPC_URL = "localhost:8261"
+    grpc_channel = grpc.insecure_channel(GRPC_URL)
+    g2_engine = G2EngineGrpc(grpc_channel=grpc_channel)
+
+
+    def add_record_to_senzing(record):
+        result = g2_engine.add_record_with_info(
+            record.get("DATA_SOURCE"), record.get("RECORD_ID"), record, flags=-1
+        )
+        print(json.dumps(json.loads(result), indent=2))
     ```
 
-1. To add your data sources to the Senzing configuration,
-   determine the list of data sources used in your data.
-   Also modify the value of `GRPC_URL` to use the custom port number specified above.
+## Iterate
 
-   Copy/paste the following into the interactive Python session
+The following iterations have a common pattern:
+
+1. Insert a record into Senzing
+1. Create a snapshot using `G2Snapshot.py`
+1. Explore data using `G2Explorer.py`
+
+You will be oscillating between two applications:
+
+1. The window running `python3` known as the interactive Python session
+1. A web browser based Xterm at
+   [http://localhost:8260/xterm](http://localhost:8260/xterm).
+
+### Iteration number 1
+
+1. To add the first record
+   copy/paste the following into the interactive Python session
    and press the **Enter** key.
 
     ```python
-    INPUT_RECORD = ``
-    GRPC_URL = "localhost:8261"
+    (
+        add_record_to_senzing(
+            {
+                "DATA_SOURCE": "Test",
+                "RECORD_ID": "1",
+                "DRIVERS_LICENSE_NUMBER": "00",
+                "DATE_OF_BIRTH": "20/12/1965",
+                "ADDR_POSTAL_CODE": "47201",
+                "ADDR_CITY": "Columbus",
+                "SSN_NUMBER": "883-24-5259",
+                "NAME_FIRST": "CYNTHIA",
+                "NAME_LAST": "SHORTS",
+                "GENDER": "F",
+                "DSRC_ACTION": "A",
+                "ADDR_LINE1": "696 15th ST",
+            }
+        )
+    )
     ```
+
+1. Create a snapshot by running
+   the following block of code in the web browser based Xterm:
+
+   ```console
+   G2Snapshot.py -o /tmp/senzing-my-demo-1.1 -a
+   ```
+
+1. Explore the data by running
+   the following block of code in the web browser based Xterm:
+
+    ```console
+    G2Explorer.py -s /tmp/senzing-my-demo-1.1.json
+    ```
+
+1. TODO:
+   Explain what to look at
+
+### Iteration number 2
+
+1. To add the second record
+   copy/paste the following into the interactive Python session
+   and press the **Enter** key.
+
+    ```python
+    (
+        add_record_to_senzing(
+            {
+                "DATA_SOURCE": "TEST",
+                "RECORD_ID": "2",
+                "DATE_OF_BIRTH": "21/12/1965",
+                "ADDR_POSTAL_CODE": "47201",
+                "ADDR_CITY": "Columbus",
+                "SSN_NUMBER": "883-24-525x",
+                "NAME_FIRST": "CYN",
+                "NAME_LAST": "SHORT",
+                "GENDER": "F",
+                "DSRC_ACTION": "A",
+                "ADDR_LINE1": "695 15th ST"
+            }
+        )
+    )
+    ```
+
+1. Create a snapshot by running
+   the following block of code in the web browser based Xterm:
+
+   ```console
+   G2Snapshot.py -o /tmp/senzing-my-demo-1.2 -a
+   ```
+
+1. Explore the data by running
+   the following block of code in the web browser based Xterm:
+
+    ```console
+    G2Explorer.py -s /tmp/senzing-my-demo-1.2.json
+    ```
+
+1. TODO:
+   Explain what to look at
+
+### Iteration number 3
+
+1. To add the second record
+   copy/paste the following into the interactive Python session
+   and press the **Enter** key.
+
+    ```python
+    (
+        add_record_to_senzing(
+            {
+                "DATA_SOURCE": "TEST",
+                "RECORD_ID": "3",
+                "DATE_OF_BIRTH": "20/12/1965",
+                "ADDR_POSTAL_CODE": "47201",
+                "ADDR_CITY": "Columbus",
+                "SSN_NUMBER": "883-24-5258",
+                "NAME_FIRST": "CYN",
+                "NAME_LAST": "SHORT",
+                "GENDER": "F",
+                "DSRC_ACTION": "A",
+                "ADDR_LINE1": "696 15th ST"
+            }
+        )
+    )
+    ```
+
+1. Create a snapshot by running
+   the following block of code in the web browser based Xterm:
+
+   ```console
+   G2Snapshot.py -o /tmp/senzing-my-demo-1.3 -a
+   ```
+
+1. Explore the data by running
+   the following block of code in the web browser based Xterm:
+
+    ```console
+    G2Explorer.py -s /tmp/senzing-my-demo-1.3.json
+    ```
+
+1. TODO:
+   Explain what to look at
