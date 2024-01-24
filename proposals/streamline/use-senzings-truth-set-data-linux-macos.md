@@ -207,7 +207,7 @@ Senzing database inside the running Docker container.
        the following block of code in the web browser based Xterm:
 
         ```console
-        G2Explorer.py -s /tmp/senzing-my-demo-1-1
+        G2Explorer.py -s /tmp/senzing-my-demo-1-1.json
         ```
 
     1. In `G2Explorer.py`, enter
