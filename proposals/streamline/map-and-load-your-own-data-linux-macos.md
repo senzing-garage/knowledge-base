@@ -10,10 +10,8 @@ and custom ports will be used.
 
 1. On your local workstation, create a file of JSON-lines with your data to be loaded into Senzing.
 
-   As an example,
-   either download
-   [example-data-for-senzing.json](https://raw.githubusercontent.com/senzing-garage/knowledge-base/main/proposals/streamline/example-data-for-senzing.json)
-   or use the following Linux/macOS command on your local workstation:
+   To create an example file of JSON-lines,
+   copy/paste the following into a terminal window:
 
     ```console
     cat <<EOT > /tmp/example-data-for-senzing.json
@@ -29,12 +27,10 @@ and custom ports will be used.
 
     ```
 
+   The command created a new `/tmp/example-data-for-senzing.json` file on your local workstation.
+
 1. On your local workstation, create an empty Sqlite Senzing database on your local workstation.
    Modify the value of `SENZING_MY_DEMO_1` to specify where you want the database files kept.
-
-   **Linux/macOS example:**
-
-   Use these instructions if you are running on a Linux or macOS system.
 
     1. To identify a directory to store the new SQLite database files,
        copy/modify/paste the following into the terminal window:
@@ -56,31 +52,6 @@ and custom ports will be used.
 
         ```
 
-   **Windows Command Prompt (not Windows PowerShell) example:**
-
-   Use these instructions if you are running on a Windows system.
-
-    1. To identify a directory to store the new SQLite database files,
-       using an editor like Notepad
-       copy/modify/paste the following into the Windows Command Prompt:
-
-        ```console
-        set SENZING_MY_DEMO_1="C:\\Users\\username\\my-demo-1"
-        ```
-
-    1. To create a new database in the directory,
-       copy/paste the following into the Windows Command Prompt:
-
-        ```console
-        mkdir %SENZING_MY_DEMO_1%
-        docker run ^
-            --env SENZING_TOOLS_DATABASE_URL=sqlite3://na:na@/tmp/sqlite/G2C.db ^
-            --rm ^
-            --volume %SENZING_MY_DEMO_1%:/tmp/sqlite ^
-            senzing/senzing-tools init-database
-
-        ```
-
 1. Run a Senzing gRPC service using Docker.
    Notice that the ports published via `--publish` must be unique for your workstation.
    Inside the container `8260` is the port of the HTTP server, `8261` is the port of the gRPC server.
@@ -90,10 +61,7 @@ and custom ports will be used.
    For more information on `docker run` parameters,
    visit [docker run](https://docs.docker.com/engine/reference/commandline/run/).
 
-   **Linux/macOS example:**
-
-   If you are running on a Linux or macOS system,
-   copy/paste the following into the terminal window:
+   Copy/paste the following into the terminal window:
 
     ```console
     docker run \
@@ -107,24 +75,7 @@ and custom ports will be used.
 
     ```
 
-   **Windows Command Prompt (not Windows PowerShell) example:**
-
-   If you are running on a Windows system,
-   copy/paste the following into the Windows Command Prompt:
-
-    ```console
-    docker run ^
-        --name senzing-my-demo-1 ^
-        --publish 8260:8260 ^
-        --publish 8261:8261 ^
-        --pull always ^
-        --rm ^
-        --volume %SENZING_MY_DEMO_1%:/tmp/sqlite ^
-        senzing/senzing-tools demo-quickstart
-
-    ```
-
-1. In a separate window on your local workstation, start an interactive Python session.
+1. In a separate terminal window on your local workstation, start an interactive Python session.
    Example:
 
     ```console
@@ -242,11 +193,6 @@ and custom ports will be used.
    Although the port mappings using `--publish` may be changed, the value of `--volume`
    must match the original value so the database files on your workstation will be attached.
 
-   **Linux/macOS example:**
-
-   If you are running on a Linux or macOS system,
-   copy/paste the following into the terminal window:
-
     1. To identify the directory storing the SQLite database files,
        copy/modify/paste the following into the terminal window:
 
@@ -254,34 +200,20 @@ and custom ports will be used.
         export SENZING_MY_DEMO_1="/tmp/my-demo-1"
         ```
 
-    ```console
-    docker run \
-        --name senzing-my-demo-1 \
-        --publish 9140:8260 \
-        --publish 9141:8261 \
-        --pull always \
-        --rm \
-        --volume ${SENZING_MY_DEMO_1}:/tmp/sqlite \
-        senzing/senzing-tools demo-quickstart
+    1. To re-run the docker container using the existing database files,
+      copy/paste the following into the terminal window:
 
-    ```
+        ```console
+        docker run \
+            --name senzing-my-demo-1 \
+            --publish 9140:8260 \
+            --publish 9141:8261 \
+            --pull always \
+            --rm \
+            --volume ${SENZING_MY_DEMO_1}:/tmp/sqlite \
+            senzing/senzing-tools demo-quickstart
 
-   **Windows Command Prompt (not Windows PowerShell) example:**
-
-   If you are running on a Windows system,
-   copy/paste the following into the Windows Command Prompt:
-
-    ```console
-    docker run ^
-        --name senzing-my-demo-1 ^
-        --publish 9140:8260 ^
-        --publish 9141:8261 ^
-        --pull always ^
-        --rm ^
-        --volume %SENZING_MY_DEMO_1%:/tmp/sqlite ^
-        senzing/senzing-tools demo-quickstart
-
-    ```
+        ```
 
     *Remember:* Use the new port values in the interactive Python and web URLs.
 
