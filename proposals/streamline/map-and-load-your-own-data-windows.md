@@ -21,7 +21,8 @@ and custom ports will be used.
 3. On your local workstation, create an empty Sqlite Senzing database on your local workstation.
    Modify the value of `SENZING_MY_DEMO_1` to specify where you want the database files kept.
 
-    1. To identify a directory to store the new SQLite database files,
+    1. :pencil2:
+       To identify a directory to store the new SQLite database files,
        using an editor like Notepad
        copy/modify/paste the following into the Windows Command Prompt (not Windows PowerShell):
 
@@ -82,7 +83,8 @@ and custom ports will be used.
    Then in the following example, modify the value of `DATASOURCES` to match your data.
    Also modify the value of `GRPC_URL` to use the custom port number specified above.
 
-    1. Copy/modify/paste the following into the interactive Python session
+    1. :pencil2:
+       Copy/modify/paste the following into the interactive Python session
        and press the **Enter** key.
 
         ```python
@@ -137,7 +139,8 @@ and custom ports will be used.
 7. To add your data to the Senzing database,
    in the following example modify the value of `INPUT_FILENAME` to match the path to your file of JSON lines.
 
-    1. To identify the file containing your data,
+    1. :pencil2:
+       To identify the file containing your data,
        copy/modify/paste the following into the interactive Python session:
 
         ```python
@@ -193,7 +196,8 @@ and custom ports will be used.
    Although the port mappings using `--publish` may be changed, the value of `--volume`
    must match the original value so the database files on your workstation will be attached.
 
-    1. To identify the directory storing the SQLite database files,
+    1. :pencil2:
+       To identify the directory storing the SQLite database files,
        copy/modify/paste the following into the terminal window:
 
         ```console
