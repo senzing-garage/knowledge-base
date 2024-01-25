@@ -31,10 +31,9 @@ Senzing database inside the running Docker container.
 
     ```
 
-1. In the interactive Python session,
-   set the URL of the Senzing gRPC service started above by
-   copy/pasting the following block of code
-   and pressing the **Enter** key.
+1. To set the URL of the Senzing gRPC service started above,
+   copy/paste the following block of code into the interactive Python session
+   and press the **Enter** key.
 
     ```python
     GRPC_URL = "localhost:8261"
@@ -43,10 +42,9 @@ Senzing database inside the running Docker container.
 
 ## Identify data sources
 
-5. In the interactive Python session,
-   add Truth Set data sources to the Senzing configuration by
-   copy/pasting the following block of code
-   and pressing the **Enter** key.
+5. To add Truth Set data sources to the Senzing configuration,
+   copy/paste the following block of code into the interactive Python session
+   and press the **Enter** key.
    Example:
 
     ```python
@@ -93,10 +91,9 @@ Senzing database inside the running Docker container.
 
 ## Add records
 
-6. In the interactive Python session,
-   add Truth Set data to the Senzing database by
-   copy/pasting the following block of code
-   and pressing the **Enter** key.
+6. To add Truth Set data to the Senzing database,
+   copy/paste the following block of code into the interactive Python session
+   and press the **Enter** key.
 
     ```python
     from senzing_truthset import (
@@ -126,10 +123,9 @@ Senzing database inside the running Docker container.
 
 ## View results
 
-7. In the interactive Python session,
-   entity details can be viewed by
-   copy/pasting the following block of code
-   and pressing the **Enter** key.
+7. Entity details can be viewed.
+   Copy/paste the following block of code into the interactive Python session
+   and press the **Enter** key.
 
     ```python
     import json
@@ -142,10 +138,9 @@ Senzing database inside the running Docker container.
     or download and run
     [senzing_truthset_get_entity.py](https://raw.githubusercontent.com/senzing-garage/knowledge-base/main/proposals/streamline/senzing_truthset_get_entity.py).
 
-1. In the interactive Python session,
-   entities can be searched by
-   copy/pasting the following block of code
-   and pressing the **Enter** key.
+1. Entities can be searched.
+   Copy/paste the following block of code into the interactive Python session
+   and press the **Enter** key.
 
     ```python
     search_query = {
@@ -160,10 +155,9 @@ Senzing database inside the running Docker container.
     or download and run
     [senzing_truthset_search.py](https://raw.githubusercontent.com/senzing-garage/knowledge-base/main/proposals/streamline/senzing_truthset_search.py).
 
-1. In the interactive Python session,
-   help is available by
-   copy/pasting each block of code
-   and pressing the **Enter** key.
+1. Help is available.
+   Copy/paste each block of code into the interactive Python session
+   and press the **Enter** key.
 
     ```python
     general_help = g2_engine.help()
@@ -177,10 +171,9 @@ Senzing database inside the running Docker container.
 
     ```
 
-1. In the interactive Python session,
-   end the interactive Python session by
-   copy/pasting the following block of code
-   and pressing the **Enter** key.
+1. To end the interactive Python session,
+   copy/paste the following block of code into the interactive Python session
+   and press the **Enter** key.
 
     ```python
     quit()
@@ -196,9 +189,8 @@ Senzing database inside the running Docker container.
     1. Visit
        [http://localhost:8260/xterm](http://localhost:8260/xterm).
 
-    1. In the web browser based Xterm,
-       start `G2Snapshot.py` by running
-       the following block of code:
+    1. Start `G2Snapshot.py` by running
+       the following block of code in the web browser based Xterm:
 
         ```console
         G2Snapshot.py -o /tmp/senzing-my-demo-1-1 -a
@@ -211,9 +203,8 @@ Senzing database inside the running Docker container.
     1. Visit
        [http://localhost:8260/xterm](http://localhost:8260/xterm).
 
-    1. In the web browser based Xterm,
-       start `G2Explorer.py` by running
-       the following block of code:
+    1. Start `G2Explorer.py` by running
+       the following block of code in the web browser based Xterm:
 
         ```console
         G2Explorer.py -s /tmp/senzing-my-demo-1-1.json
