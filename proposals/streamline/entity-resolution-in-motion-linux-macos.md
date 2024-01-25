@@ -82,7 +82,7 @@ In this demonstration, ...TODO:
 
     def add_record_to_senzing(record):
         result = g2_engine.add_record_with_info(
-            record.get("DATA_SOURCE"), record.get("RECORD_ID"), record, flags=-1
+            record.get("DATA_SOURCE"), record.get("RECORD_ID"), record
         )
         print(json.dumps(json.loads(result), indent=2))
 
