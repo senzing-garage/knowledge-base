@@ -196,6 +196,8 @@ Senzing database inside the running Docker container.
         G2Snapshot.py -o /tmp/senzing-my-demo-1-1 -a
         ```
 
+       *Note:* When pasting the command, make sure to remove any extra characters.
+
     1. For more information on SnapShots, visit
        [Exploratory Data Analysis - Taking a snapshot](https://senzing.zendesk.com/hc/en-us/articles/360051874294-Exploratory-Data-Analysis-3-Taking-a-snapshot)
 
@@ -209,6 +211,8 @@ Senzing database inside the running Docker container.
         ```console
         G2Explorer.py -s /tmp/senzing-my-demo-1-1.json
         ```
+
+       *Note:* When pasting the command, make sure to remove any extra characters.
 
     1. In `G2Explorer.py`, enter
 
