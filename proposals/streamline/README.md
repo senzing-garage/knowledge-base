@@ -5,22 +5,22 @@ This Python demonstration of Senzing works on Linux, macOS, and Windows.
 ## Prerequisistes
 
 1. Python 3
-1. Docker -
-   [Linux](https://docs.docker.com/desktop/install/linux-install/),
-   [Mac](https://docs.docker.com/desktop/install/mac-install/),
-   [Windows](https://docs.docker.com/desktop/install/windows-install/)
 1. `senzing-grpc`.  To install, run
 
     ```console
     python3 -m pip install --upgrade senzing-abstract senzing-grpc
     ```
 
+1. Docker -
+   [Linux](https://docs.docker.com/desktop/install/linux-install/),
+   [Mac](https://docs.docker.com/desktop/install/mac-install/),
+   [Windows](https://docs.docker.com/desktop/install/windows-install/)
 1. Make sure Docker is running
 
 ## Try Senzing's Hello World
 
-The following example shows how to start a Senzing gRPC server Docker container
-and access it using the `senzing_grpc` Python package.
+The following example shows how to start a Senzing gRPC service
+and access it with Python.
 
 4. Run a Senzing gRPC service using Docker.
    Example:
@@ -63,7 +63,7 @@ and access it using the `senzing_grpc` Python package.
 
     ```
 
-1. To end the Senzing gRPC service using Docker,
+1. To end the Senzing gRPC service,
    use `ctrl-c` to stop the `docker run ...` program.
 
 ## Next steps
