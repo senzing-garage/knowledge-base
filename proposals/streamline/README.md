@@ -22,7 +22,7 @@ This Python demonstration of Senzing works on Linux, macOS, and Windows.
 The following example shows how to start a Senzing gRPC service
 and access it with Python.
 
-4. Run a Senzing gRPC service using Docker.
+5. Run a Senzing gRPC service using Docker.
    Example:
 
     ```console
