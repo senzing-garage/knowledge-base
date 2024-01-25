@@ -7,7 +7,8 @@ Senzing database inside the running Docker container.
 
 1. Make sure the
    [prerequisites](README.md#Prerequisistes)
-   are satisfied.
+   are installed.
+1. Make sure Docker is running.
 
 ## Create Senzing gRPC service
 

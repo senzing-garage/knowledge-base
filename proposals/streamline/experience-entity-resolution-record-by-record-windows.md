@@ -1,4 +1,4 @@
-# Entity resolution in slow motion  - Linux/macOS
+# Experience Entity Resolution Record-by-Record  - Windows
 
 In this demonstration, ...TODO:
 
@@ -6,31 +6,34 @@ In this demonstration, ...TODO:
 
 1. Make sure the
    [prerequisites](README.md#Prerequisistes)
-   are satisfied.
+   are installed.
+1. Make sure Docker is running.
 
 ## Create database and Senzing gRPC service
 
-2. Specify where the SQLite Senzing database files are kept.
+3. Specify where the SQLite Senzing database files are kept.
 
-    To identify a directory to store the new SQLite database files,
-    copy/modify/paste the following into the terminal window:
+   :pencil2:
+   To identify a directory to store the new SQLite database files,
+   using an editor like Notepad
+   copy/modify/paste the following into the Windows Command Prompt (not Windows PowerShell):
 
     ```console
-    export SENZING_MY_DEMO_2="/tmp/my-demo-2"
+    set SENZING_MY_DEMO_2="C:\\Users\\username\\my-demo-2"
     ```
 
 1. **Optional:** If you don't already have a SQLite Senzing database,
    create new SQLite database files based on the value of `SENZING_MY_DEMO_2`.
 
    To create a new database in the directory,
-   copy/paste the following into the terminal window:
+   copy/paste the following into the Windows Command Prompt (not Windows PowerShell):
 
     ```console
-    mkdir ${SENZING_MY_DEMO_2}
-    docker run \
-        --env SENZING_TOOLS_DATABASE_URL=sqlite3://na:na@/tmp/sqlite/G2C.db \
-        --rm \
-        --volume ${SENZING_MY_DEMO_2}:/tmp/sqlite \
+    mkdir %SENZING_MY_DEMO_2%
+    docker run ^
+        --env SENZING_TOOLS_DATABASE_URL=sqlite3://na:na@/tmp/sqlite/G2C.db ^
+        --rm ^
+        --volume %SENZING_MY_DEMO_2%:/tmp/sqlite ^
         senzing/senzing-tools init-database
 
     ```
@@ -40,23 +43,23 @@ In this demonstration, ...TODO:
    For more information on `docker run` parameters,
    visit [docker run](https://docs.docker.com/engine/reference/commandline/run/).
 
-   Copy/paste the following into the terminal window:
+   Copy/paste the following into the Windows Command Prompt (not Windows PowerShell):
 
     ```console
-    docker run \
-        --name senzing-my-demo-2 \
-        --publish 8260:8260 \
-        --publish 8261:8261 \
-        --pull always \
-        --rm \
-        --volume ${SENZING_MY_DEMO_2}:/tmp/sqlite \
+    docker run ^
+        --name senzing-my-demo-2 ^
+        --publish 8260:8260 ^
+        --publish 8261:8261 ^
+        --pull always ^
+        --rm ^
+        --volume %SENZING_MY_DEMO_2%:/tmp/sqlite ^
         senzing/senzing-tools demo-quickstart
 
     ```
 
 ## Prepare Python environment
 
-1. In a separate window on your local workstation, start an interactive Python session.
+6. In a separate window on your local workstation, start an interactive Python session.
    Example:
 
     ```console
@@ -104,7 +107,7 @@ You will be oscillating between two applications:
 
 ### Iteration number 1
 
-7. In the interactive Python session,
+8. In the interactive Python session,
    to add the first record
    copy/paste the following and press the **Enter** key.
 
@@ -138,6 +141,8 @@ You will be oscillating between two applications:
    G2Snapshot.py -o /tmp/senzing-my-demo-2-1 -a
    ```
 
+   *Note:* When pasting the command, make sure to remove any extra characters.
+
 1. In the
    [web browser based Xterm](http://localhost:8260/xterm),
    explore the data by running the following block of code::
@@ -145,6 +150,8 @@ You will be oscillating between two applications:
     ```console
     G2Explorer.py -s /tmp/senzing-my-demo-2-1.json
     ```
+
+   *Note:* When pasting the command, make sure to remove any extra characters.
 
 1. TODO:
    Explain what to look at.
@@ -157,7 +164,7 @@ You will be oscillating between two applications:
 
 ### Iteration number 2
 
-12. In the interactive Python session,
+13. In the interactive Python session,
    to add the second record
    copy/paste the following and press the **Enter** key.
 
@@ -209,7 +216,7 @@ You will be oscillating between two applications:
 
 ### Iteration number 3
 
-17. In the interactive Python session,
+18. In the interactive Python session,
    to add the third record
    copy/paste the following and press the **Enter** key.
 
@@ -259,12 +266,45 @@ You will be oscillating between two applications:
     quit
     ```
 
+### To stop iterating
+
+23. To end the Senzing gRPC service using Docker,
+   use `ctrl-c` to stop the `docker run ...` program.
+
+## Restart
+
+24. To restart the service, re-run the command seen in Step #3.
+   Although the port mappings using `--publish` may be changed, the value of `--volume`
+   must match the original value so the database files on your workstation will be attached.
+
+    1. :pencil2: To identify the directory storing the SQLite database files,
+       copy/modify/paste the following into the terminal window:
+
+        ```console
+        set SENZING_MY_DEMO_2="C:\\Users\\username\\my-demo-2"
+        ```
+
+    1. To re-run the docker container using the existing database files,
+      copy/paste the following into the terminal window:
+
+        ```console
+        docker run ^
+            --name senzing-my-demo-2 ^
+            --publish 8260:8260 ^
+            --publish 8261:8261 ^
+            --pull always ^
+            --rm ^
+            --volume %SENZING_MY_DEMO_2%:/tmp/sqlite ^
+            senzing/senzing-tools demo-quickstart
+
+        ```
+
 ## Next steps
 
 1. [Try Senzing's Hello World](README.md)
-1. [Use Senzing's Truth Set data - Linux/macOS](use-senzings-truth-set-data-linux-macos.md)
-1. [Map and load your own data - Linux/macOS](map-and-load-your-own-data-linux-macos.md)
-1. Entity resolution in motion - Linux/macOS
+1. [Use Senzing's Truth Set data - Windows](use-senzings-truth-set-data-windows.md)
+1. [Map and load your own data - Windows](map-and-load-your-own-data-windows.md)
+1. Entity resolution in motion - Windows
 
 ## References
 

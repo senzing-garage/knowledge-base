@@ -15,6 +15,8 @@ This Python demonstration of Senzing works on Linux, macOS, and Windows.
     python3 -m pip install --upgrade senzing-abstract senzing-grpc
     ```
 
+1. Make sure Docker is running
+
 ## Try Senzing's Hello World
 
 The following example shows how to start a Senzing gRPC server Docker container
@@ -70,9 +72,9 @@ and access it using the `senzing_grpc` Python package.
     1. Try Senzing's Hello World
     1. [Use Senzing's Truth Set data - Linux/macOS](use-senzings-truth-set-data-linux-macos.md)
     1. [Map and load your own data - Linux/macOS](map-and-load-your-own-data-linux-macos.md)
-    1. [Entity resolution in slow motion - Linux/macOS](entity-resolution-in-motion-linux-macos.md)
+    1. [Experience Entity Resolution Record-by-Record - Linux/macOS](experience-entity-resolution-record-by-record-linux-macos.md)
 1. Windows
     1. Try Senzing's Hello World
     1. [Use Senzing's Truth Set data - Windows](use-senzings-truth-set-data-windows.md)
     1. [Map and load your own data - Windows](map-and-load-your-own-data-windows.md)
-    1. [Entity resolution in slow motion - Windows](entity-resolution-in-motion-windows.md)
+    1. [Experience Entity Resolution Record-by-Record - Windows](experience-entity-resolution-record-by-record-windows.md)

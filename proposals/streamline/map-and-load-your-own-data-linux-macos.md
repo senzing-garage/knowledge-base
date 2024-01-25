@@ -8,7 +8,8 @@ and custom ports will be used.
 
 1. Make sure the
    [prerequisites](README.md#Prerequisistes)
-   are satisfied.
+   are installed.
+1. Make sure Docker is running.
 
 ## Create your input file
 
