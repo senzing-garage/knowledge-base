@@ -1,4 +1,4 @@
-# Entity resolution in motion  - Windows
+# Entity resolution in slow motion  - Windows
 
 In this demonstration, ...TODO:
 

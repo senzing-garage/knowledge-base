@@ -1,4 +1,4 @@
-# Entity resolution in motion  - Linux/macOS
+# Entity resolution in slow motion  - Linux/macOS
 
 In this demonstration, ...TODO:
 

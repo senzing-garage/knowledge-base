@@ -70,9 +70,9 @@ and access it using the `senzing_grpc` Python package.
     1. Try Senzing's Hello World
     1. [Use Senzing's Truth Set data - Linux/macOS](use-senzings-truth-set-data-linux-macos.md)
     1. [Map and load your own data - Linux/macOS](map-and-load-your-own-data-linux-macos.md)
-    1. [Entity resolution in motion - Linux/macOS](entity-resolution-in-motion-linux-macos.md)
+    1. [Entity resolution in slow motion - Linux/macOS](entity-resolution-in-motion-linux-macos.md)
 1. Windows
     1. Try Senzing's Hello World
     1. [Use Senzing's Truth Set data - Windows](use-senzings-truth-set-data-windows.md)
     1. [Map and load your own data - Windows](map-and-load-your-own-data-windows.md)
-    1. [Entity resolution in motion - Windows](entity-resolution-in-motion-windows.md)
+    1. [Entity resolution in slow motion - Windows](entity-resolution-in-motion-windows.md)
