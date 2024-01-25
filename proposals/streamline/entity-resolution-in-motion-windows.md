@@ -10,7 +10,7 @@ In this demonstration, ...TODO:
 
 ## Create database and Senzing gRPC service
 
-1. Specify where the SQLite Senzing database files are kept.
+2. Specify where the SQLite Senzing database files are kept.
 
    To identify a directory to store the new SQLite database files,
    using an editor like Notepad
@@ -57,7 +57,7 @@ In this demonstration, ...TODO:
 
 ## Prepare Python environment
 
-1. In a separate window on your local workstation, start an interactive Python session.
+5. In a separate window on your local workstation, start an interactive Python session.
    Example:
 
     ```console

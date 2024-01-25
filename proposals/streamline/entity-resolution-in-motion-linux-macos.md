@@ -10,7 +10,7 @@ In this demonstration, ...TODO:
 
 ## Create database and Senzing gRPC service
 
-1. Specify where the SQLite Senzing database files are kept.
+2. Specify where the SQLite Senzing database files are kept.
 
     To identify a directory to store the new SQLite database files,
     copy/modify/paste the following into the terminal window:
