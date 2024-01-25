@@ -265,7 +265,7 @@ You will be oscillating between two applications:
     quit
     ```
 
-### To stop iterating
+## Shutdown
 
 23. To end the Senzing gRPC service using Docker,
    use `ctrl-c` to stop the `docker run ...` program.

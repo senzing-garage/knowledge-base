@@ -187,6 +187,8 @@ and custom ports will be used.
     1. [http://localhost:9140/entity-search](http://localhost:9140/entity-search).
     1. [http://localhost:9140/xterm](http://localhost:9140/xterm).
 
+## Shutdown
+
 1. To end the Senzing gRPC service using Docker,
    use `ctrl-c` to stop the `docker run ...` program.
 
