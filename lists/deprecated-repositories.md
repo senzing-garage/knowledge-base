@@ -2,6 +2,7 @@
 
 | Deprecated | Hidden     | Repository                                   |
 |------------|------------|----------------------------------------------|
+| 2024-01-25 |            | aws-cloudformation-dev-rest                  |
 |            | 2023-09-07 | mapper-sayari - Hidden at Will's request     |
 | 2023-08-09 |            | mapper-openc                                 |
 | 2023-06-19 |            | packer-senzing-demo-ubuntu-18.04             |
