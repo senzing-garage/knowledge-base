@@ -305,7 +305,7 @@ You will be oscillating between two applications:
 1. [Try Senzing's Hello World](README.md)
 1. [Use Senzing's Truth Set data - Windows](use-senzings-truth-set-data-windows.md)
 1. [Map and load your own data - Windows](map-and-load-your-own-data-windows.md)
-1. Entity resolution in motion - Windows
+1. Experience Entity Resolution Record-by-Record - Windows
 
 ## References
 
