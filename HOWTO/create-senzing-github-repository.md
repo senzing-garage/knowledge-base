@@ -29,8 +29,8 @@ This is a checklist of what to set when creating a new GitHub Repository.
 1. On repository home page, click `Settings` tab.
     1. Click `Collaborators & teams` tab.
         1. Click `Add teams` button.
-            1. Type `build`
-            1. Choose `Senzing/build`
+            1. Type `admin`
+            1. Choose `senzing-garage/senzing-garage-admin`
             1. Choose a role: `Admin`
             1. Click `Add Senzing/build to ...`
 
@@ -53,12 +53,22 @@ This is a checklist of what to set when creating a new GitHub Repository.
 1. On repository home page, click `Settings` tab.
     1. Click `Collaborators & teams` tab.
         1. Click `Add teams` button.
-            1. Type `Senzing engineering`
-            1. Choose `Senzing/senzing-engineering`
+            1. Type `senzing-automation`
+            1. Choose `senzing-garage/senzing-automation`
             1. Choose a role: `Write`
-            1. Click `Add Senzing/senzingeering to ...`
+            1. Click `Add senzing-garage/senzing-automation to ...`
         1. Click `Add teams` button.
-            1. Type `Senzing`
+            1. Type `senzing-devsecops`
+            1. Choose `senzing-garage/senzing-devsecops`
+            1. Choose a role: `Write`
+            1. Click `Add senzing-garage/senzing-devsecops to ...`
+        1. Click `Add teams` button.
+            1. Type `senzing-engineering`
+            1. Choose `senzing-garage/senzing-engineering`
+            1. Choose a role: `Write`
+            1. Click `Add senzing-engineering to ...`
+        1. Click `Add teams` button.
+            1. Type `senzing`
             1. Choose the team that will be used in `.github/CODEOWNERS`
             1. Choose a role: `Write`
             1. Click `Add ... to this repository`
@@ -84,7 +94,7 @@ This is a checklist of what to set when creating a new GitHub Repository.
     1. Add optional Topics relative to code sub-project.
        Examples:
         1. `golang` - for "Go" based projects
-    1. Click `Save` button
+    1. Click `Save changes` button
 
 ### Initial content
 
@@ -103,13 +113,13 @@ This is a checklist of what to set when creating a new GitHub Repository.
     1. :pencil2: Substituting the new repository name for `xxxx`,
 
         ```console
-        git clone git@github.com:Senzing/xxxx.git
+        git clone git@github.com:senzing-garage/xxxx.git
         cd xxxx
         git checkout 1.[your-name].1
         ```
 
     1. Populate the new repository with the `Community Artifacts` found in
-       [github.com/Senzing/template-repository](https://github.com/senzing-garage/template-repository).
+       [github.com/senzing-garage/template-repository](https://github.com/senzing-garage/template-repository).
     1. Modify `CONTRIBUTING.md`
         1. `export GIT_REPOSITORY=<new-repository-name>`
     1. Modify `.github/CODEOWNERS`
