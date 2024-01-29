@@ -9,6 +9,7 @@ This Python demonstration of Senzing works on Linux, macOS, and Windows.
 
     ```console
     python3 -m pip install --upgrade senzing-abstract senzing-grpc
+
     ```
 
 1. Docker - To install, see
@@ -20,6 +21,7 @@ This Python demonstration of Senzing works on Linux, macOS, and Windows.
 
     ```console
     docker pull senzing/senzing-tools
+
     ```
 
 ## Try Senzing's Hello World
