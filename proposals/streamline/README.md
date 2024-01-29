@@ -11,7 +11,7 @@ This Python demonstration of Senzing works on Linux, macOS, and Windows.
     python3 -m pip install --upgrade senzing-abstract senzing-grpc
     ```
 
-1. Docker - Installation instructions for
+1. Docker - To install, see
    [Linux](https://docs.docker.com/desktop/install/linux-install/),
    [Mac](https://docs.docker.com/desktop/install/mac-install/), or
    [Windows](https://docs.docker.com/desktop/install/windows-install/)
