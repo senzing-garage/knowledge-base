@@ -16,6 +16,11 @@ This Python demonstration of Senzing works on Linux, macOS, and Windows.
    [Mac](https://docs.docker.com/desktop/install/mac-install/),
    [Windows](https://docs.docker.com/desktop/install/windows-install/)
 1. Make sure Docker is running
+1. **Optional:**  Pre-load docker image by running:
+
+    ```console
+    docker pull senzing/senzing-tools
+    ```
 
 ## Try Senzing's Hello World
 
