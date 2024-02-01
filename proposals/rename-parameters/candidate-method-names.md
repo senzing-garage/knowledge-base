@@ -2,8 +2,8 @@
 
 ## Mapping
 
-| Existing name | Canonical Name | Return values |
-|---------------|----------------|---------------|
+| Existing name | Canonical Name | Return values | Smells |
+|---------------|----------------|---------------|--------|
 | G2ConfigMgr_addConfig(configStr, configComments, configID) | addConfig(configStr, configComments) | int64 |
 | G2ConfigMgr_clearLastException() | [not-public] | |
 | G2ConfigMgr_destroy() | | |
@@ -58,12 +58,12 @@
 | G2Product_getLastException(buffer, bufSize) | [not-public] | |
 | G2Product_getLastExceptionCode() | [not-public]| |
 | G2Product_init(moduleName, iniParams, verboseLogging) | | |
-| G2Product_license() | | string |
+| G2Product_license() | | string | F1 |
 | G2Product_validateLicenseFile(licenseFilePath, errorBuf, errorBufSize, resizeFunc) | [not-implemented] | |
 | G2Product_validateLicenseStringBase64(licenseString, errorBuf, errorBufSize, resizeFunc) | [not-implemented] | |
-| G2Product_version() | | string |
+| G2Product_version() | | string | F1 |
 | G2_addRecord(dataSourceCode, recordID, jsonData, loadID) | | |
-| G2_addRecordWithInfo(dataSourceCode, recordID, jsonData, loadID, flags, responseBuf, bufSize, resizeFunc) |  addRecordReturnInfo(dataSourceCode, recordID, jsonData, loadID, flags) | string |
+| G2_addRecordWithInfo(dataSourceCode, recordID, jsonData, loadID, flags, responseBuf, bufSize, resizeFunc) |  addRecordAndReturnInfo(dataSourceCode, recordID, jsonData, loadID, flags) | string |
 | G2_addRecordWithInfoWithReturnedRecordID(dataSourceCode, jsonData, loadID, flags, recordIDBuf, recordIDBufSize, responseBuf, responseBufSize, resizeFunc) | [not-implemented] | |
 | G2_addRecordWithReturnedRecordID(dataSourceCode, jsonData, loadID, recordIDBuf, bufSize) | [not-implemented] | |
 | G2_checkRecord(record, recordQueryList, responseBuf, bufSize, resizeFunc ) | [not-implemented] | |
@@ -71,7 +71,7 @@
 | G2_closeExport(responseHandle) | | |
 | G2_countRedoRecords() | | int64 |
 | G2_deleteRecord(dataSourceCode, recordID, loadID) | | |
-| G2_deleteRecordWithInfo(dataSourceCode, recordID, loadID, flags, responseBuf, bufSize, resizeFunc) | deleteRecordReturnInfo(dataSourceCode, recordID, loadID, flags) | string |
+| G2_deleteRecordWithInfo(dataSourceCode, recordID, loadID, flags, responseBuf, bufSize, resizeFunc) | deleteRecordAndReturnInfo(dataSourceCode, recordID, loadID, flags) | string |
 | G2_destroy() | | |
 | G2_exportCSVEntityReport(csvColumnList, flags, responseHandle) | exportCSVEntityReport(csvColumnList, flags) | responseHandle |
 | G2_exportConfig(responseBuf, bufSize, resizeFunc) | exportConfig() | string |
@@ -109,36 +109,43 @@
 | G2_getRepositoryLastModifiedTime(lastModifiedTime) | getRepositoryLastModifiedTime()  | int64 |
 | G2_getVirtualEntityByRecordID(recordList, responseBuf, bufSize, resizeFunc) | getVirtualEntityByRecordID(recordList, flags) | string |
 | G2_getVirtualEntityByRecordID_V2(recordList, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | |
-| G2_howEntityByEntityID(entityID, responseBuf, bufSize, resizeFunc) | howEntityByEntityID(entityID, flags) | string |
-| G2_howEntityByEntityID_V2(entityID, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | |
+| G2_howEntityByEntityID(entityID, responseBuf, bufSize, resizeFunc) | howEntityByEntityID(entityID, flags) | string | F1 |
+| G2_howEntityByEntityID_V2(entityID, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | F1 |
 | G2_init(moduleName, iniParams, verboseLogging) | | |
 | G2_initWithConfigID(moduleName, iniParams, initConfigID, verboseLogging) | | |
 | G2_primeEngine() | | |
 | G2_process(record) | | |
 | G2_processRedoRecord(responseBuf, bufSize, resizeFunc ) | [not-implemented] | |
 | G2_processRedoRecordWithInfo(flags, responseBuf, bufSize, infoBuf, infoBufSize, resizeFunc) | [not-implemented] | |
-| G2_processWithInfo(record, flags, responseBuf, bufSize, resizeFunc) | processReturnInfo(record, flags)  | string |
+| G2_processWithInfo(record, flags, responseBuf, bufSize, resizeFunc) | processAndReturnInfo(record, flags)  | string |
 | G2_processWithResponse(record, responseBuf, bufSize) | [not-implemented] | |
 | G2_processWithResponseResize(record, responseBuf, bufSize, resizeFunc ) | [not-implemented] | |
 | G2_purgeRepository() | [moved to G2Diagnostic] | |
 | G2_reevaluateEntity(entityID, flags) | | |
-| G2_reevaluateEntityWithInfo(entityID, flags, responseBuf, bufSize, resizeFunc) | reevaluateEntityReturnInfo(entityID, flags) | string |
+| G2_reevaluateEntityWithInfo(entityID, flags, responseBuf, bufSize, resizeFunc) | reevaluateEntityAndReturnInfo(entityID, flags) | string |
 | G2_reevaluateRecord(dataSourceCode, recordID, flags) | | |
-| G2_reevaluateRecordWithInfo(dataSourceCode, recordID, flags, responseBuf, bufSize, resizeFunc) | reevaluateRecordReturnInfo(dataSourceCode, recordID, flags) | string |
+| G2_reevaluateRecordWithInfo(dataSourceCode, recordID, flags, responseBuf, bufSize, resizeFunc) | reevaluateRecordAndReturnInfo(dataSourceCode, recordID, flags) | string |
 | G2_reinit(initConfigID) | | |
 | G2_replaceRecord(dataSourceCode, recordID, jsonData, loadID) | | |
-| G2_replaceRecordWithInfo(dataSourceCode, recordID, jsonData, loadID, flags, responseBuf, bufSize, resizeFunc) | replaceRecordReturnInfo(dataSourceCode, recordID, jsonData, loadID, flags) | string |
+| G2_replaceRecordWithInfo(dataSourceCode, recordID, jsonData, loadID, flags, responseBuf, bufSize, resizeFunc) | replaceRecordAndReturnInfo(dataSourceCode, recordID, jsonData, loadID, flags) | string |
 | G2_searchByAttributes(jsonData, responseBuf, bufSize, resizeFunc) | searchByAttributes(jsonData, searchProfile, flags) | string |
 | G2_searchByAttributes_V2(jsonData, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | |
 | G2_searchByAttributes_V3(jsonData, searchProfile, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | |
-| G2_stats(responseBuf, bufSize, resizeFunc ) | | |
-| G2_whyEntities(entityID1, entityID2, responseBuf, bufSize, resizeFunc) | whyEntities(entityID1, entityID2, flags) | string |
+| G2_stats(responseBuf, bufSize, resizeFunc ) | | string | F1 |
+| G2_whyEntities(entityID1, entityID2, responseBuf, bufSize, resizeFunc) | whyEntities(entityID1, entityID2, flags) | string | F1 |
 | G2_whyEntities_V2(entityID1, entityID2, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | |
-| G2_whyEntityByEntityID(entityID, responseBuf, bufSize, resizeFunc) | whyEntityByEntityID(entityID, flags) | string |
+| G2_whyEntityByEntityID(entityID, responseBuf, bufSize, resizeFunc) | whyEntityByEntityID(entityID, flags) | string | F1 |
 | G2_whyEntityByEntityID_V2(entityID, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | |
-| G2_whyEntityByRecordID(dataSourceCode, recordID, responseBuf, bufSize, resizeFunc) | whyEntityByRecordID(dataSourceCode, recordID, flags) | string |
+| G2_whyEntityByRecordID(dataSourceCode, recordID, responseBuf, bufSize, resizeFunc) | whyEntityByRecordID(dataSourceCode, recordID, flags) | string | F1 |
 | G2_whyEntityByRecordID_V2(dataSourceCode, recordID, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | |
-| G2_whyRecordInEntity(dataSourceCode, recordID, responseBuf, bufSize, resizeFunc) | whyRecordInEntity(dataSourceCode, recordID, flags) | string |
+| G2_whyRecordInEntity(dataSourceCode, recordID, responseBuf, bufSize, resizeFunc) | whyRecordInEntity(dataSourceCode, recordID, flags) | string | F1 |
 | G2_whyRecordInEntity_V2(dataSourceCode, recordID, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | |
-| G2_whyRecords(dataSourceCode1, recordID1, dataSourceCode2, recordID2, responseBuf, bufSize, resizeFunc) | whyRecords(dataSourceCode1, recordID1, dataSourceCode2, recordID2, flags) | string |
+| G2_whyRecords(dataSourceCode1, recordID1, dataSourceCode2, recordID2, responseBuf, bufSize, resizeFunc) | whyRecords(dataSourceCode1, recordID1, dataSourceCode2, recordID2, flags) | string | F1 |
 | G2_whyRecords_V2(dataSourceCode1, recordID1, dataSourceCode2, recordID2, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | |
+
+
+## Smells
+
+1. F1: Function naming.  For consistency, say the phrase "To *method-name".  If it sounds awkward, consider renaming the method.
+   1. Good: "To `getVirtualEntityByRecordID()`", "To `addRecordAndReturnInfo()`"
+   1. Bad: "To `howEntityByEntityID()`", "To `version()`"
