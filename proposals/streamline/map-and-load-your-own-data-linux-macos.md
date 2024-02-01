@@ -56,7 +56,7 @@ and custom ports will be used.
             --env SENZING_TOOLS_DATABASE_URL=sqlite3://na:na@/tmp/sqlite/G2C.db \
             --rm \
             --volume ${SENZING_MY_DEMO_1}:/tmp/sqlite \
-            senzing/senzing-tools init-database
+            senzing/senzing-tools:0.6.3 init-database
 
         ```
 
@@ -81,7 +81,7 @@ and custom ports will be used.
         --pull always \
         --rm \
         --volume ${SENZING_MY_DEMO_1}:/tmp/sqlite \
-        senzing/senzing-tools demo-quickstart
+        senzing/senzing-tools:0.6.3 demo-quickstart
 
     ```
 
@@ -234,7 +234,7 @@ and custom ports will be used.
             --pull always \
             --rm \
             --volume ${SENZING_MY_DEMO_1}:/tmp/sqlite \
-            senzing/senzing-tools demo-quickstart
+            senzing/senzing-tools:0.6.3 demo-quickstart
 
         ```
 

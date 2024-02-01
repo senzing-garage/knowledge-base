@@ -16,7 +16,7 @@ Senzing database inside the running Docker container.
    Example:
 
     ```console
-    docker run --name senzing-streamline -p 8260:8260 -p 8261:8261 --pull always --rm senzing/senzing-tools demo-quickstart
+    docker run --name senzing-streamline -p 8260:8260 -p 8261:8261 --pull always --rm senzing/senzing-tools:0.6.3 demo-quickstart
 
     ```
 

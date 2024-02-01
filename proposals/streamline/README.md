@@ -20,7 +20,7 @@ This Python demonstration of Senzing works on Linux, macOS, and Windows.
 1. **Optional:** To pre-load docker image, run
 
     ```console
-    docker pull senzing/senzing-tools
+    docker pull senzing/senzing-tools:0.6.3
 
     ```
 
@@ -33,7 +33,7 @@ and access it with Python.
    Example:
 
     ```console
-    docker run --name senzing-streamline -p 8260:8260 -p 8261:8261 --pull always --rm senzing/senzing-tools demo-quickstart
+    docker run --name senzing-streamline -p 8260:8260 -p 8261:8261 --pull always --rm senzing/senzing-tools:0.6.3 demo-quickstart
 
     ```
 

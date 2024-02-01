@@ -182,11 +182,11 @@ and access it using the `senzing_grpc` Python package.
 
 1. Using `G2Snapshot.py` create a snapshot file.
    Example:
-   
+
     ```console
     G2Snapshot.py -o /tmp/demo-snap-v1 -a
     ```
-    
+
 1. Using `G2Explorer.py`.
     1. Visit
        [http://localhost:8260/xterm](http://localhost:8260/xterm).
