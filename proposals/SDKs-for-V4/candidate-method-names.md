@@ -2,6 +2,25 @@
 
 ## Mapping
 
+### G2Config
+
+| Existing name | Canonical Name | Return values | Smells |
+|---------------|----------------|---------------|--------|
+| G2Config_addDataSource(configHandle, inputJson, responseBuf, bufSize, resizeFunc) | addDataSource(configHandle, inputJson) | string | SM-2 |
+| G2Config_clearLastException() | [not-public] | | |
+| G2Config_close(configHandle) | | - | |
+| G2Config_create(configHandle) | create() | configHandle | |
+| G2Config_deleteDataSource(configHandle, inputJson) | | - | SM-2 |
+| G2Config_destroy() | | - | |
+| G2Config_getLastException(buffer, bufSize) | [not-public] | | |
+| G2Config_getLastExceptionCode() | [not-public] | | |
+| G2Config_init(moduleName, iniParams, verboseLogging) | | - | |
+| G2Config_listDataSources(configHandle, responseBuf, bufSize, resizeFunc) | listDataSources(configHandle) | string | |
+| G2Config_load(jsonConfig, configHandle) | load(jsonConfig) | configHandle | SM-2 |
+| G2Config_save(configHandle, responseBuf, bufSize, resizeFunc) | save(configHandle)  | string | |
+
+### G2ConfigMgr
+
 | Existing name | Canonical Name | Return values | Smells |
 |---------------|----------------|---------------|--------|
 | G2ConfigMgr_addConfig(configStr, configComments, configID) | addConfig(configStr, configComments) | int64 | SM-2 |
@@ -15,18 +34,11 @@
 | G2ConfigMgr_init(moduleName, iniParams, verboseLogging) | | - | |
 | G2ConfigMgr_replaceDefaultConfigID(oldConfigID, newConfigID) | | - | |
 | G2ConfigMgr_setDefaultConfigID(configID) | | - | |
-| G2Config_addDataSource(configHandle, inputJson, responseBuf, bufSize, resizeFunc) | addDataSource(configHandle, inputJson) | string | SM-2 |
-| G2Config_clearLastException() | [not-public] | | |
-| G2Config_close(configHandle) | | - | |
-| G2Config_create(configHandle) | create() | configHandle | |
-| G2Config_deleteDataSource(configHandle, inputJson) | | - | SM-2 |
-| G2Config_destroy() | | - | |
-| G2Config_getLastException(buffer, bufSize) | [not-public] | | |
-| G2Config_getLastExceptionCode() | [not-public] | | |
-| G2Config_init(moduleName, iniParams, verboseLogging) | | - | |
-| G2Config_listDataSources(configHandle, responseBuf, bufSize, resizeFunc) | listDataSources(configHandle) | string | |
-| G2Config_load(jsonConfig, configHandle) | load(jsonConfig) | configHandle | SM-2 |
-| G2Config_save(configHandle, responseBuf, bufSize, resizeFunc) | save(configHandle)  | string | |
+
+### G2Diagnostic
+
+| Existing name | Canonical Name | Return values | Smells |
+|---------------|----------------|---------------|--------|
 | G2Diagnostic_checkDBPerf(secondsToRun, responseBuf, bufSize, resizeFunc) | checkDBPerf(secondsToRun) | string | |
 | G2Diagnostic_clearLastException() | [not-public] | | |
 | G2Diagnostic_closeEntityListBySize(EntityListBySizeHandle entityListBySizeHandle) | [not-implemented]  | | |
@@ -53,15 +65,11 @@
 | G2Diagnostic_init(moduleName, iniParams, verboseLogging) | | - | |
 | G2Diagnostic_initWithConfigID(moduleName, iniParams, initConfigID, verboseLogging) | | - | |
 | G2Diagnostic_reinit(initConfigID) | | - | |
-| G2Product_clearLastException() | [not-public] | | |
-| G2Product_destroy() | | - | |
-| G2Product_getLastException(buffer, bufSize) | [not-public] | | |
-| G2Product_getLastExceptionCode() | [not-public]| | |
-| G2Product_init(moduleName, iniParams, verboseLogging) | | - | |
-| G2Product_license() | | string | SM-1 |
-| G2Product_validateLicenseFile(licenseFilePath, errorBuf, errorBufSize, resizeFunc) | [not-implemented] | | |
-| G2Product_validateLicenseStringBase64(licenseString, errorBuf, errorBufSize, resizeFunc) | [not-implemented] | | |
-| G2Product_version() | | string | SM-1 |
+
+### G2Engine
+
+| Existing name | Canonical Name | Return values | Smells |
+|---------------|----------------|---------------|--------|
 | G2_addRecord(dataSourceCode, recordID, jsonData, loadID) | | - | SM-2 |
 | G2_addRecordWithInfo(dataSourceCode, recordID, jsonData, loadID, flags, responseBuf, bufSize, resizeFunc) |  addRecordAndReturnInfo(dataSourceCode, recordID, jsonData, loadID, flags) | string | SM-2 |
 | G2_addRecordWithInfoWithReturnedRecordID(dataSourceCode, jsonData, loadID, flags, recordIDBuf, recordIDBufSize, responseBuf, responseBufSize, resizeFunc) | [not-implemented] | | |
@@ -142,6 +150,20 @@
 | G2_whyRecordInEntity_V2(dataSourceCode, recordID, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
 | G2_whyRecords(dataSourceCode1, recordID1, dataSourceCode2, recordID2, responseBuf, bufSize, resizeFunc) | whyRecords(dataSourceCode1, recordID1, dataSourceCode2, recordID2, flags) | string | SM-1 |
 | G2_whyRecords_V2(dataSourceCode1, recordID1, dataSourceCode2, recordID2, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
+
+### G2Product
+
+| Existing name | Canonical Name | Return values | Smells |
+|---------------|----------------|---------------|--------|
+| G2Product_clearLastException() | [not-public] | | |
+| G2Product_destroy() | | - | |
+| G2Product_getLastException(buffer, bufSize) | [not-public] | | |
+| G2Product_getLastExceptionCode() | [not-public]| | |
+| G2Product_init(moduleName, iniParams, verboseLogging) | | - | |
+| G2Product_license() | | string | SM-1 |
+| G2Product_validateLicenseFile(licenseFilePath, errorBuf, errorBufSize, resizeFunc) | [not-implemented] | | |
+| G2Product_validateLicenseStringBase64(licenseString, errorBuf, errorBufSize, resizeFunc) | [not-implemented] | | |
+| G2Product_version() | | string | SM-1 |
 
 ## Smells
 
