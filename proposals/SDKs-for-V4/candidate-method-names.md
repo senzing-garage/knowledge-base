@@ -4,7 +4,7 @@
 
 | Existing name | Canonical Name | Return values | Smells |
 |---------------|----------------|---------------|--------|
-| G2ConfigMgr_addConfig(configStr, configComments, configID) | addConfig(configStr, configComments) | int64 |
+| G2ConfigMgr_addConfig(configStr, configComments, configID) | addConfig(configStr, configComments) | int64 | SM-2 |
 | G2ConfigMgr_clearLastException() | [not-public] | |
 | G2ConfigMgr_destroy() | | |
 | G2ConfigMgr_getConfig(configID, responseBuf, bufSize, resizeFunc) | getConfig(configID) | string |
