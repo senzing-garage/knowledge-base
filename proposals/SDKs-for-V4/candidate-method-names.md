@@ -19,7 +19,7 @@
 | G2Config_clearLastException() | [not-public] | | |
 | G2Config_close(configHandle) | | - | |
 | G2Config_create(configHandle) | create() | configHandle | |
-| G2Config_deleteDataSource(configHandle, inputJson) | | | SM-2 |
+| G2Config_deleteDataSource(configHandle, inputJson) | | - | SM-2 |
 | G2Config_destroy() | | - | |
 | G2Config_getLastException(buffer, bufSize) | [not-public] | | |
 | G2Config_getLastExceptionCode() | [not-public] | | |
