@@ -22,7 +22,7 @@ These labels will be assigned predominantly in the "**Backlog**", "**On deck**",
 | Submitter  | ![customer-submission](customer-submission.png)             |
 | Issue type | ![bug](bug.png) ![documentation](documentation.png) ![enhancement](enhancement.png) ![performance](performance.png) ![refactoring](refactoring.png) |
 | Info       | ![conversation](conversation.png) ![triage](triage.png) ![question](question.png) |
-| Group      | ![G2Tool](G2Tool.png) ![V3](V3.png)|
+| Group      | ![G2Tool](G2Tool.png) ![V3](V3.png) ![V4](V4.png)|
 
 ## Details
 
