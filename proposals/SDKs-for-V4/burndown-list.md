@@ -1,7 +1,7 @@
 # Burndown list
 
-1. [ ] Establish [principles](principles.md) to guide construction of SDKs
-1. [ ] Make canonical method and parameter names
+1. [ ] 1. Establish [principles](principles.md) to guide construction of SDKs
+1. [ ] 1. Make canonical method and parameter names
 1. [ ] Create new repositories for each SDK as a "working title" which will be merged into existing repositories prior to public release
 1. [ ] In each repository, create GitHub Actions for:
     1. Syntax checking
