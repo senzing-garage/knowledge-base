@@ -198,7 +198,8 @@
       > Flag arguments are ugly.
         Passing a boolean into a function is a truly terrible practice.
         It imediately complicates the signature of the method, loudly proclaiming that this function does more than one thing.
-        ("Clean Code", Chapter 3, "Flag Arguments")
+
+      ("Clean Code", Chapter 3, "Flag Arguments")
 
       given the desires for a single method name, multiple return values, and immutable input parameters, it's a reasonable compromise.
    1. Python language specifics:
