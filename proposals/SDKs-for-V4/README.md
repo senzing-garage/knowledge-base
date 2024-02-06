@@ -6,3 +6,4 @@
 1. [Canonical names](canonical-names.md)
 1. [GitHub issue](https://github.com/senzing-garage/garage-roadmap/issues/5)
 1. [Renaming parameter](renaming-parameters.md)
+1. [Logging](logging.md)
