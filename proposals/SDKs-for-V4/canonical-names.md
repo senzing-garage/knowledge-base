@@ -174,7 +174,7 @@
    - G2_reevaluateEntityWithInfo
    - G2_reevaluateRecordWithInfo
    - G2_replaceRecordWithInfo
-1. Approach
+1. Approach:
    1. Function name becomes shortened to match the non-with-info name (e.g. `G2_addRecord()`).
    1. The `xx_withInfo()` function/method signature is not in the SDK.
    1. Function always returns JSON string.
@@ -229,11 +229,11 @@
       1. Use method overloading to factor out the `returnContent` parameter.
       1. Examples of use:
 
-         ```go
+         ```java
          g2Engine.AddRecord(dataSourceCode, recordID, record)
          ```
 
-         ```go
+         ```java
          info = g2Engine.AddRecord(dataSourceCode, recordID, record, xxx.WITH_INFO)
          ```
 
