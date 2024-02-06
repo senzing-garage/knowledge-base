@@ -102,7 +102,7 @@
 | G2_findPathExcludingByRecordID_V2(dataSourceCode1, recordID1, dataSourceCode2, recordID2, maxDegree, excludedRecords, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
 | G2_findPathIncludingSourceByEntityID(entityID1, entityID2, maxDegree, excludedEntities, requiredDsrcs, responseBuf, bufSize, resizeFunc) | findPathIncludingSourceByEntityID(entityID1, entityID2, maxDegree, excludedEntities, requiredDsrcs, flags) | string | |
 | G2_findPathIncludingSourceByEntityID_V2(entityID1, entityID2, maxDegree, excludedEntities, requiredDsrcs, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
-| G2_findPathIncludingSourceByRecordID(dataSourceCode1, recordID1, dataSourceCode2, recordID2, maxDegree, excludedRecords, requiredDsrcs, responseBuf, bufSize, resizeFunc | findPathIncludingSourceByRecordID(dataSourceCode1, recordID1, dataSourceCode2, recordID2, maxDegree, excludedRecords, requiredDsrcs, flags) | string |
+| G2_findPathIncludingSourceByRecordID(dataSourceCode1, recordID1, dataSourceCode2, recordID2, maxDegree, excludedRecords, requiredDsrcs, responseBuf, bufSize, resizeFunc | findPathIncludingSourceByRecordID(dataSourceCode1, recordID1, dataSourceCode2, recordID2, maxDegree, excludedRecords, requiredDsrcs, flags) | string | |
 | G2_findPathIncludingSourceByRecordID_V2(dataSourceCode1, recordID1, dataSourceCode2, recordID2, maxDegree, excludedRecords, requiredDsrcs, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
 | G2_getActiveConfigID(configID) | | int64 | |
 | G2_getEntityByEntityID(entityID, responseBuf, bufSize, resizeFunc) | getEntityByEntityID(entityID, flags) | string | |
@@ -164,6 +164,87 @@
 | G2Product_validateLicenseFile(licenseFilePath, errorBuf, errorBufSize, resizeFunc) | [not-implemented] | | |
 | G2Product_validateLicenseStringBase64(licenseString, errorBuf, errorBufSize, resizeFunc) | [not-implemented] | | |
 | G2Product_version() | | string | SM-1 |
+
+## Handling WithInfo - Proposal 1
+
+1. Functions affected:
+   - G2_addRecordWithInfo
+   - G2_deleteRecordWithInfo
+   - G2_processWithInfo
+   - G2_reevaluateEntityWithInfo
+   - G2_reevaluateRecordWithInfo
+   - G2_replaceRecordWithInfo
+1. Approach
+   1. Function name becomes shortened (e.g. `G2_addRecord()`) and the `xx_withInfo()` function/method signature is not in the SDK.
+   1. Function always returns JSON string.
+   1. A final input parameter, say `returnContent` (int64 used as a bit-mask), indicates the nature of the content returned in the JSON string.
+   1. Example:
+
+    ```python
+    info = g2_engine.add_record(dataSourceCode, recordID, record, returnContent)
+    ```
+
+   1. If `returnContent` is 0 (i.e. no bit flags are on) then the returned value is `{}`, an empty JSON string.
+   1. Beneath the covers, the SDK determines if the `WITH_INFO` bit is **off**, in which case it calls `G2_addRecord`.
+      If the `WITH_INFO` bit is **on**, the SDK calls `G2_addRecordWithInfo`.
+   1. Flag can be OR-ed for future expansion. Example:
+
+       ```python
+      info = g2_engine.add_record(dataSourceCode, recordID, record, WITH_INFO | WITHOUT_SOMETHING_ELSE)
+      ```
+
+   1. Although flag arguments are not best practice,
+      > Flag arguments are ugly.
+        Passing a boolean into a function is a truly terrible practice.
+        It imediately complicates the signature of the method, loudly proclaiming that this function does more than one thing.
+        ("Clean Code", Chapter 3, "Flag Arguments")
+      given the desires for a single method name, multiple return values, and immutable input parameters, it's a reasonable compromise.
+   1. Python language specifics:
+      1. The definition of the python function can be
+
+          ```python
+         def add_record(
+            data_source_code: str,
+            record_id: str,
+            record: str,
+            returnContent: int = 0,
+            **kwargs: Any,
+         ) -> str:
+          ```
+
+      1. Examples of use
+
+         ```python
+         g2_engine.add_record(dataSourceCode, recordID, record)
+         ```
+
+         ```python
+         info = g2_engine.add_record(dataSourceCode, recordID, record, returnContent)
+         ```
+
+   1. Java language specifics:
+      1. Use method overloading to factor out the `returnContent` parameter.
+      1. Examples of use:
+
+      ```go
+      g2Engine.AddRecord(dataSourceCode, recordID, record)
+      ```
+
+      ```go
+      info = g2Engine.AddRecord(dataSourceCode, recordID, record, xxx.WITH_INFO)
+      ```
+
+   1. Go language specifics:
+      1. Go doesn't have optional parameters nor method overloading.
+      1. Examples of use:
+
+      ```go
+      _, err := g2Engine.AddRecord(dataSourceCode, recordID, record, g2api.WITHOUT_INFO)
+      ```
+
+      ```go
+      info, err := g2Engine.AddRecord(dataSourceCode, recordID, record, g2api.WITH_INFO)
+      ```
 
 ## Smells
 
