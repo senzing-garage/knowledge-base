@@ -165,7 +165,7 @@
 | G2Product_validateLicenseStringBase64(licenseString, errorBuf, errorBufSize, resizeFunc) | [not-implemented] | | |
 | G2Product_version() | | string | SM-1 |
 
-## Metho signature proposals
+## Method signature proposals
 
 ### Handling WithInfo - Proposal 1
 
@@ -232,11 +232,11 @@
       1. Examples of use:
 
          ```java
-         g2Engine.AddRecord(dataSourceCode, recordID, record)
+         g2Engine.addRecord(dataSourceCode, recordID, record)
          ```
 
          ```java
-         info = g2Engine.AddRecord(dataSourceCode, recordID, record, xxx.WITH_INFO)
+         info = g2Engine.addRecord(dataSourceCode, recordID, record, WITH_INFO)
          ```
 
    1. Go language specifics:
