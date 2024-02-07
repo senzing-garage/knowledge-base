@@ -1,16 +1,21 @@
 # Guiding Principles
 
 1. Faithful representation of the underlying Senzing API in the style of the target SDK language.
-   1. All behaviors of the C API should be available at the SDK level.
-   1. However, the function/method signatures may not match exactly.
+    1. All behaviors of the C API should be available at the SDK level.
+        1. Any exceptions should be documented for review.
+    1. However, the function/method signatures may not match exactly.
 1. Consistent, Coherent, and Complete functions/methods.
-    1. [Canonical names](canonical-names.md)
+    1. Use [Canonical names](canonical-names.md) as models for core SDK API.
     1. The "to" principle for function/method names.
+    1. "Convenience Methods" may be unique per SDK language.
+        1. Convenience methods are written at the "abstract level" so they can be inherited by all concrete classes.
+        1. In general, convenience methods will call "core" SDK API methods.
 1. SDK APIs are specified by Interface or Abstract class.
     1. This allows customers to write to an interface, not an implementation.
     1. This allows us to create specific implementations, if/when needed.
 1. Consistent JSON-based error messages
     1. JSON helps customers with parsing and logging system.
+    1. See [Error Messages](error-messages.md)
 1. Industry-standard techniques:
     1. [Robustness principle](https://en.wikipedia.org/wiki/Robustness_principle)
     1. Function/method parameters are not mutated.
