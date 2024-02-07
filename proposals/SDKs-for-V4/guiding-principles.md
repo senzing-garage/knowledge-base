@@ -20,6 +20,7 @@
     1. [Robustness principle](https://en.wikipedia.org/wiki/Robustness_principle)
     1. Function/method parameters are not mutated.
     1. Function/method return values have a constant data-type (in addition to `None`, `null`, `nil`)
+    1. For simplicity, SDK "core" functions/methods returns `strings` as a simple data type (or an occasional `int`).
 1. Testing
     1. All function/methods have Unit Tests run by GitHub Actions for every Push
     1. Code coverage analysis is done.
