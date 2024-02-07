@@ -1,20 +1,24 @@
-# Principles
+# Guiding Principles
 
 1. Faithful representation of the underlying Senzing API in the style of the target SDK language.
    1. All behaviors of the C API should be available at the SDK level.
+   1. However, the function/method signatures may not match exactly.
 1. Consistent, Coherent, and Complete functions/methods.
     1. [Canonical names](canonical-names.md)
+    1. The "to" principle for function/method names.
 1. SDK APIs are specified by Interface or Abstract class.
-    1. Customers should write to an interface, not an implementation.
+    1. This allows customers to write to an interface, not an implementation.
+    1. This allows us to create specific implementations, if/when needed.
 1. Consistent JSON-based error messages
-    1. JSON helps customers with parsing and logging system
+    1. JSON helps customers with parsing and logging system.
 1. Industry-standard techniques:
     1. [Robustness principle](https://en.wikipedia.org/wiki/Robustness_principle)
     1. Function/method parameters are not mutated.
-    1. Function/method return values have a constant datatype (in addition to `None`, `null`, `nil`)
+    1. Function/method return values have a constant data-type (in addition to `None`, `null`, `nil`)
 1. Testing
-    1. All Method/Functions have Unit Tests run by GitHub Actions for every Push
+    1. All function/methods have Unit Tests run by GitHub Actions for every Push
     1. Code coverage analysis is done.
+    1. Static analysis for complexity and type-checking (in some languages)
 1. Documentation is in the style of the language.
     1. Java
     1. [Go](https://pkg.go.dev/github.com/senzing/g2-sdk-go)

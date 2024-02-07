@@ -165,7 +165,9 @@
 | G2Product_validateLicenseStringBase64(licenseString, errorBuf, errorBufSize, resizeFunc) | [not-implemented] | | |
 | G2Product_version() | | string | SM-1 |
 
-## Handling WithInfo - Proposal 1
+## Metho signature proposals
+
+### Handling WithInfo - Proposal 1
 
 1. Functions affected:
    - G2_addRecordWithInfo
