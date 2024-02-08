@@ -1,5 +1,12 @@
 # Bad-Guy Hunting
 
+## Prerequisites
+
+1. Make sure the
+   [prerequisites](../README.md#Prerequisistes)
+   are installed.
+1. Make sure Docker is running.
+
 ## Download database and start Senzing gRPC service
 
 1. Download the pre-populated Sqlite database
