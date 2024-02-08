@@ -3,11 +3,11 @@
 ## Download database and start Senzing gRPC service
 
 1. Download the pre-populated Sqlite database
-   [G2C.db](G2C.db).
+   [G2C.db](https://raw.githubusercontent.com/senzing-garage/knowledge-base/main/proposals/streamline/bad-guy-hunting/G2C.db).
 
 1. :pencil2:
    To identify the directory containing the
-   [G2C.db](G2C.db) file,
+   [G2C.db](https://raw.githubusercontent.com/senzing-garage/knowledge-base/main/proposals/streamline/bad-guy-hunting/G2C.db) file,
    copy/modify/paste the following into the terminal window:
 
     ```console
