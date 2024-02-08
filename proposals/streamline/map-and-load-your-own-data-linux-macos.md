@@ -199,7 +199,7 @@ and custom ports will be used.
 ## Explore data using Senzing tools
 
 10. Once records have been inserted you can
-   [Explore data using Senzing tools](README.md#explore-data-using-senzing-tools) using
+   [Explore data using Senzing tools](use-senzings-truth-set-data-linux-macos.md#explore-data-using-senzing-tools) using
    the custom port number chosen above.  Examples:
     1. [http://localhost:9140/entity-search](http://localhost:9140/entity-search).
     1. [http://localhost:9140/xterm](http://localhost:9140/xterm).
