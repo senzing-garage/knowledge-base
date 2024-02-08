@@ -247,6 +247,7 @@ and custom ports will be used.
 1. [Use Senzing's Truth Set data - Linux/macOS](use-senzings-truth-set-data-linux-macos.md)
 1. Map and load your own data - Linux/macOS
 1. [Experience Entity Resolution Record-by-Record - Linux/macOS](experience-entity-resolution-record-by-record-linux-macos.md)
+1. [Bad-Guy Hunting](bad-guy-hunting/bad-guy-hunting-linux-macos.md)
 
 ## References
 

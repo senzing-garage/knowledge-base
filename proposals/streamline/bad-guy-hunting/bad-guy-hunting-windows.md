@@ -41,3 +41,11 @@ TODO: Describe bad-guy hunting using:
 1. [http://localhost:8260/entity-search](http://localhost:8260/entity-search).
 1. [http://localhost:8260/xterm](http://localhost:8260/xterm).
 1. Interactive python (`python3` command)
+
+## Next steps
+
+1. [Try Senzing's Hello World](../README.md)
+1. [Use Senzing's Truth Set data - Windows](../use-senzings-truth-set-data-windows.md)
+1. [Map and load your own data - Windows](../map-and-load-your-own-data-windows.md)
+1. [Experience Entity Resolution Record-by-Record - Windows](../experience-entity-resolution-record-by-record-windows.md)
+1. Bad-Guy Hunting

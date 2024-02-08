@@ -307,6 +307,7 @@ You will be oscillating between two applications:
 1. [Use Senzing's Truth Set data - Windows](use-senzings-truth-set-data-windows.md)
 1. [Map and load your own data - Windows](map-and-load-your-own-data-windows.md)
 1. Experience Entity Resolution Record-by-Record - Windows
+1. [Bad-Guy Hunting](bad-guy-hunting/bad-guy-hunting-windows.md)
 
 ## References
 

@@ -306,6 +306,7 @@ You will be oscillating between two applications:
 1. [Use Senzing's Truth Set data - Linux/macOS](use-senzings-truth-set-data-linux-macos.md)
 1. [Map and load your own data - Linux/macOS](map-and-load-your-own-data-linux-macos.md)
 1. Experience Entity Resolution Record-by-Record - Linux/macOS
+1. [Bad-Guy Hunting](bad-guy-hunting/bad-guy-hunting-linux-macos.md)
 
 ## References
 

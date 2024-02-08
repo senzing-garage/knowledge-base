@@ -230,6 +230,7 @@ and custom ports will be used.
 1. [Use Senzing's Truth Set data - Windows](use-senzings-truth-set-data-windows.md)
 1. Map and load your own data - Windows
 1. [Experience Entity Resolution Record-by-Record - Windows](experience-entity-resolution-record-by-record-windows.md)
+1. [Bad-Guy Hunting](bad-guy-hunting/bad-guy-hunting-windows.md)
 
 ## References
 
