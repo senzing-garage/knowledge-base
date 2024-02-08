@@ -37,9 +37,10 @@ and custom ports will be used.
         mkdir %SENZING_MY_DEMO_1%
         docker run ^
             --env SENZING_TOOLS_DATABASE_URL=sqlite3://na:na@/tmp/sqlite/G2C.db ^
+            --pull always ^
             --rm ^
             --volume %SENZING_MY_DEMO_1%:/tmp/sqlite ^
-            senzing/senzing-tools:0.6.3 init-database
+            senzing/senzing-tools init-database
 
         ```
 
@@ -64,7 +65,7 @@ and custom ports will be used.
         --pull always ^
         --rm ^
         --volume %SENZING_MY_DEMO_1%:/tmp/sqlite ^
-        senzing/senzing-tools:0.6.3 demo-quickstart
+        senzing/demo-quickstart
 
     ```
 
@@ -209,17 +210,17 @@ and custom ports will be used.
     1. To re-run the docker container using the existing database files,
     copy/paste the following into the Windows Command Prompt (not Windows PowerShell):
 
-    ```console
-    docker run ^
-        --name senzing-my-demo-1 ^
-        --publish 9140:8260 ^
-        --publish 9141:8261 ^
-        --pull always ^
-        --rm ^
-        --volume %SENZING_MY_DEMO_1%:/tmp/sqlite ^
-        senzing/senzing-tools:0.6.3 demo-quickstart
+        ```console
+        docker run ^
+            --name senzing-my-demo-1 ^
+            --publish 9140:8260 ^
+            --publish 9141:8261 ^
+            --pull always ^
+            --rm ^
+            --volume %SENZING_MY_DEMO_1%:/tmp/sqlite ^
+            senzing/demo-quickstart
 
-    ```
+        ```
 
     *Remember:* Use the new port values in the interactive Python and web URLs.
 
