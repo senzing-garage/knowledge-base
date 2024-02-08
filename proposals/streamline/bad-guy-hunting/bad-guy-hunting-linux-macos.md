@@ -35,7 +35,8 @@
 
 ## Start bad-guy hunting
 
-TODO:
+TODO: Describe bad-guy hunting using:
 
 1. [http://localhost:8260/entity-search](http://localhost:8260/entity-search).
 1. [http://localhost:8260/xterm](http://localhost:8260/xterm).
+1. Interactive python (`python3` command)
