@@ -17,10 +17,11 @@ This Python demonstration of Senzing works on Linux, macOS, and Windows.
    [Mac](https://docs.docker.com/desktop/install/mac-install/), or
    [Windows](https://docs.docker.com/desktop/install/windows-install/)
 1. Make sure Docker is running.
-1. **Optional:** To pre-load docker image, run
+1. **Optional:** To pre-load docker images, run
 
     ```console
-    docker pull senzing/senzing-tools:0.6.3
+    docker pull senzing/senzing-tools
+    docker pull senzing/demo-quickstart
 
     ```
 
@@ -33,7 +34,7 @@ and access it with Python.
    Example:
 
     ```console
-    docker run --name senzing-streamline -p 8260:8260 -p 8261:8261 --pull always --rm senzing/senzing-tools:0.6.3 demo-quickstart
+    docker run --name senzing-streamline -p 8260:8260 -p 8261:8261 --pull always --rm senzing/demo-quickstart
 
     ```
 

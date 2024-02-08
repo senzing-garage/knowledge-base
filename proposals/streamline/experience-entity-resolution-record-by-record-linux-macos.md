@@ -31,9 +31,10 @@ In this demonstration, ...TODO:
     mkdir ${SENZING_MY_DEMO_2}
     docker run \
         --env SENZING_TOOLS_DATABASE_URL=sqlite3://na:na@/tmp/sqlite/G2C.db \
+        --pull always \
         --rm \
         --volume ${SENZING_MY_DEMO_2}:/tmp/sqlite \
-        senzing/senzing-tools:0.6.3 init-database
+        senzing/senzing-tools init-database
 
     ```
 
@@ -52,7 +53,7 @@ In this demonstration, ...TODO:
         --pull always \
         --rm \
         --volume ${SENZING_MY_DEMO_2}:/tmp/sqlite \
-        senzing/senzing-tools:0.6.3 demo-quickstart
+        senzing/demo-quickstart
 
     ```
 
@@ -295,7 +296,7 @@ You will be oscillating between two applications:
             --pull always \
             --rm \
             --volume ${SENZING_MY_DEMO_2}:/tmp/sqlite \
-            senzing/senzing-tools:0.6.3 demo-quickstart
+            senzing/demo-quickstart
 
         ```
 
