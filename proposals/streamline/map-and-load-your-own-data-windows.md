@@ -18,37 +18,44 @@ and custom ports will be used.
    As an example, download
    [example-data-for-senzing.json](https://raw.githubusercontent.com/senzing-garage/knowledge-base/main/proposals/streamline/example-data-for-senzing.json) into your `Downloads` directory.
 
-4. On your local workstation, create an empty Sqlite Senzing database on your local workstation.
-   Modify the value of `SENZING_MY_DEMO_1` to specify where you want the database files kept.
+## Initialize database
 
-    1. :pencil2:
-       To identify a directory to store the new SQLite database files,
-       using an editor like Notepad
-       copy/modify/paste the following into the Windows Command Prompt (not Windows PowerShell):
+On your local workstation,
+create a new SQLite Senzing database.
 
-        ```console
-        set SENZING_MY_DEMO_1="C:\\Users\\username\\my-demo-1"
-        ```
+4. :pencil2:
+   To identify a directory to store the new SQLite database files,
+   using an editor like Notepad
+   copy/modify/paste the following into the Windows Command Prompt (not Windows PowerShell):
 
-        For Docker Desktop on Windows,
-        [file sharing](https://github.com/senzing-garage/knowledge-base/blob/main/HOWTO/share-directories-with-docker.md#windows)
-        must be enabled for `SENZING_MY_DEMO_1` path.
+    ```console
+    set SENZING_MY_DEMO_1="C:\\Users\\username\\my-demo-1"
+    ```
 
-    1. To create a new database in the directory,
-       copy/paste the following into the Windows Command Prompt (not Windows PowerShell):
+    For Docker Desktop on Windows,
+    [file sharing](https://github.com/senzing-garage/knowledge-base/blob/main/HOWTO/share-directories-with-docker.md#windows)
+    must be enabled for `SENZING_MY_DEMO_1` path.
 
-        ```console
-        mkdir %SENZING_MY_DEMO_1%
-        docker run ^
-            --env SENZING_TOOLS_DATABASE_URL=sqlite3://na:na@/tmp/sqlite/G2C.db ^
-            --pull always ^
-            --rm ^
-            --volume %SENZING_MY_DEMO_1%:/tmp/sqlite ^
-            senzing/senzing-tools init-database
+    Remember the value of `SENZING_MY_DEMO_1` as it may be reused when doing a
+    [restart](#restart).
 
-        ```
+1. To create a new database in the directory,
+   copy/paste the following into the Windows Command Prompt (not Windows PowerShell):
+
+    ```console
+    mkdir %SENZING_MY_DEMO_1%
+    docker run ^
+        --env SENZING_TOOLS_DATABASE_URL=sqlite3://na:na@/tmp/sqlite/G2C.db ^
+        --pull always ^
+        --rm ^
+        --volume %SENZING_MY_DEMO_1%:/tmp/sqlite ^
+        senzing/senzing-tools init-database
+
+    ```
 
    The commands created new files in the `%SENZING_MY_DEMO_1%` directory.
+
+## Run Senzing gRPC service
 
 1. Run a Senzing gRPC service using Docker.
    Notice that the ports published via `--publish` must be unique for your workstation.
@@ -73,7 +80,7 @@ and custom ports will be used.
 
     ```
 
-## Identify data sources
+## Start interactive Python session
 
 6. In a separate window on your local workstation, start an interactive Python session.
    Example:
@@ -83,7 +90,9 @@ and custom ports will be used.
 
     ```
 
-1. To add your data sources to the Senzing configuration,
+## Identify data sources
+
+7. To add your data sources to the Senzing configuration,
    determine the list of data sources used in your data.
    Then in the following example, modify the value of `DATASOURCES` to match your data.
    Also modify the value of `GRPC_URL` to use the custom port number specified above.
@@ -194,7 +203,7 @@ and custom ports will be used.
 
 ## Shutdown
 
-1. To end the Senzing gRPC service using Docker,
+11. To end the Senzing gRPC service using Docker,
    use `ctrl-c` to stop the `docker run ...` program.
 
 ## Restart
@@ -211,11 +220,11 @@ and custom ports will be used.
         set SENZING_MY_DEMO_1="C:\\Users\\username\\my-demo-1"
         ```
 
-        Remember the value of `SENZING_MY_DEMO_1` as it may be reused when doing a
-        [restart](#restart).
+        The value of `SENZING_MY_DEMO_1` must match the value set in
+        [Create database and Senzing gRPC service](#create-database-and-senzing-grpc-service)
 
     1. To re-run the docker container using the existing database files,
-    copy/paste the following into the Windows Command Prompt (not Windows PowerShell):
+       copy/paste the following into the Windows Command Prompt (not Windows PowerShell):
 
         ```console
         docker run ^

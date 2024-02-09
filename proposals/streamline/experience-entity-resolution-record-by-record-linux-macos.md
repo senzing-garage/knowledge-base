@@ -9,11 +9,12 @@ In this demonstration, ...TODO:
    are installed.
 1. Make sure Docker is running.
 
-## Create database and Senzing gRPC service
+## Initialize database
 
-3. Specify where the SQLite Senzing database files are kept.
+On your local workstation,
+either create or reuse a SQLite Senzing database.
 
-   :pencil2:
+3. :pencil2:
    To identify a directory to store the new SQLite database files,
    copy/modify/paste the following into the terminal window:
 
@@ -45,6 +46,10 @@ In this demonstration, ...TODO:
 
     ```
 
+   The commands created new files in the `${SENZING_MY_DEMO_2}` directory.
+
+## Run Senzing gRPC service
+
 1. Run a Senzing gRPC service using Docker.
    Notice that the `--volume` must point to the directory of the database files you wish to use.
    For more information on `docker run` parameters,
@@ -64,7 +69,7 @@ In this demonstration, ...TODO:
 
     ```
 
-## Prepare Python environment
+## Start interactive Python session
 
 6. In a separate window on your local workstation, start an interactive Python session.
    Example:
@@ -74,7 +79,9 @@ In this demonstration, ...TODO:
 
     ```
 
-1. To create a connection to the Senzing gRPC service
+## Initialize python
+
+7. To create a connection to the Senzing gRPC service
    and define a function for adding records,
    copy/paste the following into the interactive Python session
    and press the **Enter** key.
@@ -292,8 +299,11 @@ You will be oscillating between two applications:
         export SENZING_MY_DEMO_2="/tmp/my-demo-2"
         ```
 
+        The value of `SENZING_MY_DEMO_2` must match the value set in
+        [Create database and Senzing gRPC service](#create-database-and-senzing-grpc-service)
+
     1. To re-run the docker container using the existing database files,
-      copy/paste the following into the terminal window:
+       copy/paste the following into the terminal window:
 
         ```console
         docker run \
