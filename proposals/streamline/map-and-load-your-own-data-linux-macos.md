@@ -47,6 +47,9 @@ and custom ports will be used.
         export SENZING_MY_DEMO_1="/tmp/my-demo-1"
         ```
 
+        Remember the value of `SENZING_MY_DEMO_1` as it may be reused when doing a
+        [restart](#restart).
+
     1. To create a new database in the directory,
        copy/paste the following into the terminal window:
 

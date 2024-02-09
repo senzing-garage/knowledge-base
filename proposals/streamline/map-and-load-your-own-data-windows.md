@@ -207,6 +207,9 @@ and custom ports will be used.
         set SENZING_MY_DEMO_1="C:\\Users\\username\\my-demo-1"
         ```
 
+        Remember the value of `SENZING_MY_DEMO_1` as it may be reused when doing a
+        [restart](#restart).
+
     1. To re-run the docker container using the existing database files,
     copy/paste the following into the Windows Command Prompt (not Windows PowerShell):
 

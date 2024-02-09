@@ -22,6 +22,9 @@ In this demonstration, ...TODO:
     set SENZING_MY_DEMO_2="C:\\Users\\username\\my-demo-2"
     ```
 
+    Remember the value of `SENZING_MY_DEMO_2` as it may be reused when doing a
+    [restart](#restart).
+
 1. **Optional:** If you don't already have a SQLite Senzing database,
    create new SQLite database files based on the value of `SENZING_MY_DEMO_2`.
 
