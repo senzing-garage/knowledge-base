@@ -47,6 +47,10 @@ and custom ports will be used.
         export SENZING_MY_DEMO_1="/tmp/my-demo-1"
         ```
 
+        For Docker Desktop on macOS,
+        [file sharing](https://github.com/senzing-garage/knowledge-base/blob/main/HOWTO/share-directories-with-docker.md#macos)
+        must be enabled for `SENZING_MY_DEMO_1` path.
+
         Remember the value of `SENZING_MY_DEMO_1` as it may be reused when doing a
         [restart](#restart).
 

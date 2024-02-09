@@ -22,6 +22,10 @@ In this demonstration, ...TODO:
     set SENZING_MY_DEMO_2="C:\\Users\\username\\my-demo-2"
     ```
 
+    For Docker Desktop on Windows,
+    [file sharing](https://github.com/senzing-garage/knowledge-base/blob/main/HOWTO/share-directories-with-docker.md#windows)
+    must be enabled for `SENZING_MY_DEMO_2` path.
+
     Remember the value of `SENZING_MY_DEMO_2` as it may be reused when doing a
     [restart](#restart).
 

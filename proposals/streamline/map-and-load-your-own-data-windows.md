@@ -30,6 +30,10 @@ and custom ports will be used.
         set SENZING_MY_DEMO_1="C:\\Users\\username\\my-demo-1"
         ```
 
+        For Docker Desktop on Windows,
+        [file sharing](https://github.com/senzing-garage/knowledge-base/blob/main/HOWTO/share-directories-with-docker.md#windows)
+        must be enabled for `SENZING_MY_DEMO_1` path.
+
     1. To create a new database in the directory,
        copy/paste the following into the Windows Command Prompt (not Windows PowerShell):
 

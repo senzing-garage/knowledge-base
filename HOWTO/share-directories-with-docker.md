@@ -14,13 +14,13 @@ file sharing must be enabled to allow docker containers to access files on the h
 
 ### Docker Desktop for Mac
 
-1. See "File Sharing" section of
-   [Preferences](https://docs.docker.com/docker-for-mac/#preferences)
-1. Advanced: [File system sharing (osxfs)](https://docs.docker.com/docker-for-mac/osxfs/)
+1. See [File Sharing](https://docs.docker.com/desktop/settings/mac/#file-sharing)
+1. Docker Desktop > Settings (Gear icon in upper-right) > Resources > File sharing
+   1. Click plus sign ("+") to add a directory
+   1. So see hidden folders, press Command + Shift + . (period)
 
 ## Windows
 
 ### Docker Desktop for Windows
 
-1. See "File Sharing" section of
-   [Docker Settings dialog](https://docs.docker.com/docker-for-windows/#docker-settings-dialog)
+1. See [File Sharing](https://docs.docker.com/desktop/settings/windows/#file-sharing)
