@@ -141,7 +141,8 @@ You will be oscillating between two applications:
                 "DSRC_ACTION": "A"
             }
         )
-
+    )
+    (
         add_record_to_senzing(
             {
                 "DATA_SOURCE": "Test",
