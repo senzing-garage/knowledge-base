@@ -70,16 +70,16 @@
 
 | Existing name | Canonical Name | Return values | Smells |
 |---------------|----------------|---------------|--------|
-| G2_addRecord(dataSourceCode, recordID, jsonData, loadID) | | - | SM-2 |
-| G2_addRecordWithInfo(dataSourceCode, recordID, jsonData, loadID, flags, responseBuf, bufSize, resizeFunc) |  addRecordAndReturnInfo(dataSourceCode, recordID, jsonData, loadID, flags) | string | SM-2 |
+| G2_addRecord(dataSourceCode, recordID, jsonData, loadID) | addRecord(dataSourceCode, recordID, jsonData, resultContent) | string | SM-2 |
+| G2_addRecordWithInfo(dataSourceCode, recordID, jsonData, loadID, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
 | G2_addRecordWithInfoWithReturnedRecordID(dataSourceCode, jsonData, loadID, flags, recordIDBuf, recordIDBufSize, responseBuf, responseBufSize, resizeFunc) | [not-implemented] | | |
 | G2_addRecordWithReturnedRecordID(dataSourceCode, jsonData, loadID, recordIDBuf, bufSize) | [not-implemented] | | |
 | G2_checkRecord(record, recordQueryList, responseBuf, bufSize, resizeFunc ) | [not-implemented] | | |
 | G2_clearLastException() | [not-public] | | |
 | G2_closeExport(responseHandle) | | - | |
 | G2_countRedoRecords() | | int64 | |
-| G2_deleteRecord(dataSourceCode, recordID, loadID) | | - | |
-| G2_deleteRecordWithInfo(dataSourceCode, recordID, loadID, flags, responseBuf, bufSize, resizeFunc) | deleteRecordAndReturnInfo(dataSourceCode, recordID, loadID, flags) | string | |
+| G2_deleteRecord(dataSourceCode, recordID, loadID) | deleteRecord(dataSourceCode, recordID, resultContent) | string | |
+| G2_deleteRecordWithInfo(dataSourceCode, recordID, loadID, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
 | G2_destroy() | | - | |
 | G2_exportCSVEntityReport(csvColumnList, flags, responseHandle) | exportCSVEntityReport(csvColumnList, flags) | responseHandle | |
 | G2_exportConfig(responseBuf, bufSize, resizeFunc) | exportConfig() | string | |
@@ -122,20 +122,20 @@
 | G2_init(moduleName, iniParams, verboseLogging) | | - | |
 | G2_initWithConfigID(moduleName, iniParams, initConfigID, verboseLogging) | | - | |
 | G2_primeEngine() | | - | |
-| G2_process(record) | | - | |
+| G2_process(record) | process(record, returnContent)| string | |
+| G2_processWithInfo(record, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | string | |
 | G2_processRedoRecord(responseBuf, bufSize, resizeFunc ) | [not-implemented] | | |
 | G2_processRedoRecordWithInfo(flags, responseBuf, bufSize, infoBuf, infoBufSize, resizeFunc) | [not-implemented] | | |
-| G2_processWithInfo(record, flags, responseBuf, bufSize, resizeFunc) | processAndReturnInfo(record, flags)  | string | |
 | G2_processWithResponse(record, responseBuf, bufSize) | [not-implemented] | | |
 | G2_processWithResponseResize(record, responseBuf, bufSize, resizeFunc ) | [not-implemented] | | |
 | G2_purgeRepository() | [moved to G2Diagnostic] | | |
-| G2_reevaluateEntity(entityID, flags) | | - | |
-| G2_reevaluateEntityWithInfo(entityID, flags, responseBuf, bufSize, resizeFunc) | reevaluateEntityAndReturnInfo(entityID, flags) | string | |
-| G2_reevaluateRecord(dataSourceCode, recordID, flags) | | - | |
-| G2_reevaluateRecordWithInfo(dataSourceCode, recordID, flags, responseBuf, bufSize, resizeFunc) | reevaluateRecordAndReturnInfo(dataSourceCode, recordID, flags) | string | |
+| G2_reevaluateEntity(entityID, flags) | reevaluateEntity(entityID, flags, returnContent) | string | |
+| G2_reevaluateEntityWithInfo(entityID, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | string | |
+| G2_reevaluateRecord(dataSourceCode, recordID, flags) | reevaluateRecord(dataSourceCode, recordID, flags, returnContent) | string | |
+| G2_reevaluateRecordWithInfo(dataSourceCode, recordID, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
 | G2_reinit(initConfigID) | | - | |
-| G2_replaceRecord(dataSourceCode, recordID, jsonData, loadID) | | - | SM-2 |
-| G2_replaceRecordWithInfo(dataSourceCode, recordID, jsonData, loadID, flags, responseBuf, bufSize, resizeFunc) | replaceRecordAndReturnInfo(dataSourceCode, recordID, jsonData, loadID, flags) | string | SM-2 |
+| G2_replaceRecord(dataSourceCode, recordID, jsonData, loadID) | replaceRecord(dataSourceCode, recordID, jsonData, returnContent) | string | SM-2 |
+| G2_replaceRecordWithInfo(dataSourceCode, recordID, jsonData, loadID, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
 | G2_searchByAttributes(jsonData, responseBuf, bufSize, resizeFunc) | searchByAttributes(jsonData, searchProfile, flags) | string | SM-2 |
 | G2_searchByAttributes_V2(jsonData, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
 | G2_searchByAttributes_V3(jsonData, searchProfile, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
