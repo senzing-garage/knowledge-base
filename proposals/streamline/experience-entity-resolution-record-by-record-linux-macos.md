@@ -214,7 +214,7 @@ You will be oscillating between two applications:
                 "DRIVERS_LICENSE_NUMBER": "12435345",
                 "DATE_OF_BIRTH": "20/12/1965",
                 "SSN_NUMBER": "883-24-5259",
-                "ADDR_FULL":"3465 Wilmington Road, NY, Ohio 47201"
+                "ADDR_FULL":"3465 Wilmington Road, NY, Ohio 47201",
                 "NAME_FULL": "Thea Shorts",
                 "GENDER": "F",
                 "DSRC_ACTION": "A"
