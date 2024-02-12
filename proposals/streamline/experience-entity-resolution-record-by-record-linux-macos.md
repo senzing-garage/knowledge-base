@@ -180,18 +180,24 @@ You will be oscillating between two applications:
    *Note:* When pasting the command, make sure to remove any extra characters.
 
 1. In `G2Explorer.py`,
-   Explain what to look at in G2Explorer.py.
+   copy/paste the following and press the **Enter** key.
 
     ```console
     search {"DRIVERS_LICENSE_NUMBER": "12435345"}
     ```
 
-1. In `G2Explorer.py`,
-   Explain what to look at in G2Explorer.py.
+   Notice two entities, One for "TEST: 1" and a second for "TEST: 6".
+
+1. :pencil2: In `G2Explorer.py`,
+   using the "Entity ID" values from the two entities shown above,
+   run `why`.
+   Example:
 
     ```console
     why 1 2
     ```
+
+   TODO: Explain what is shown.
 
 1. To exit `G2Explorer.py`, enter
 
@@ -240,18 +246,24 @@ You will be oscillating between two applications:
     ```
 
 1. In `G2Explorer.py`,
-   Explain what to look at in G2Explorer.py.
+   copy/paste the following and press the **Enter** key.
 
     ```console
     search {"DRIVERS_LICENSE_NUMBER": "12435345"}
     ```
 
+   Notice three entities, "TEST: 1", "TEST: 6", and "TEST: 4".
+
 1. In `G2Explorer.py`,
-   Explain what to look at in G2Explorer.py.
+   using an "Entity ID" values from the three entities shown above,
+   run `how`.
+   Example:
 
     ```console
-    how 20001
+    how 1
     ```
+
+   TODO: Explain what is shown.
 
 1. To exit `G2Explorer.py`, enter
 
@@ -279,7 +291,7 @@ You will be oscillating between two applications:
         ```
 
         The value of `SENZING_MY_DEMO_2` must match the value set in
-        [Create database and Senzing gRPC service](#create-database-and-senzing-grpc-service)
+        [Initialize database](#initialize-database)
 
     1. To re-run the docker container using the existing database files,
        copy/paste the following into the terminal window:
