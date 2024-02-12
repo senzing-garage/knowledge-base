@@ -109,7 +109,7 @@ either create or reuse a SQLite Senzing database.
 
 The following iterations have a common pattern:
 
-1. Insert a record into Senzing
+1. Insert records into Senzing
 1. Create a snapshot using `G2Snapshot.py`
 1. Explore data using `G2Explorer.py`
 
@@ -122,7 +122,7 @@ You will be oscillating between two applications:
 ### Iteration number 1
 
 8. In the interactive Python session,
-   to add the first record
+   to add the first two records
    copy/paste the following and press the **Enter** key.
 
     ```python
@@ -131,16 +131,27 @@ You will be oscillating between two applications:
             {
                 "DATA_SOURCE": "Test",
                 "RECORD_ID": "1",
-                "DRIVERS_LICENSE_NUMBER": "00",
+                "DRIVERS_LICENSE_NUMBER": "12435345",
                 "DATE_OF_BIRTH": "20/12/1965",
-                "ADDR_POSTAL_CODE": "47201",
-                "ADDR_CITY": "Columbus",
+                "ADDR_FULL":"175 West Clay St, New York, Ohio 47201",
                 "SSN_NUMBER": "883-24-5259",
                 "NAME_FIRST": "CYNTHIA",
                 "NAME_LAST": "SHORTS",
                 "GENDER": "F",
-                "DSRC_ACTION": "A",
-                "ADDR_LINE1": "696 15th ST",
+                "DSRC_ACTION": "A"
+            }
+        )
+
+        add_record_to_senzing(
+            {
+                "DATA_SOURCE": "Test",
+                "RECORD_ID": "6",
+                "DRIVERS_LICENSE_NUMBER": "12435345",
+                "ADDR_FULL":"3465 Wilmington Road, NY, Ohio 47201",
+                "NAME_FIRST": "Syndey",
+                "NAME_LAST": "Shorter",
+                "GENDER": "F",
+                "DSRC_ACTION": "A"
             }
         )
     )
@@ -167,8 +178,19 @@ You will be oscillating between two applications:
 
    *Note:* When pasting the command, make sure to remove any extra characters.
 
-1. TODO:
-   Explain what to look at.
+1. In `G2Explorer.py`,
+   Explain what to look at in G2Explorer.py.
+
+    ```console
+    search {"DRIVERS_LICENSE_NUMBER": "12435345"}
+    ```
+
+1. In `G2Explorer.py`,
+   Explain what to look at in G2Explorer.py.
+
+    ```console
+    why 200001 200002
+    ```
 
 1. To exit `G2Explorer.py`, enter
 
@@ -179,28 +201,25 @@ You will be oscillating between two applications:
 ### Iteration number 2
 
 13. In the interactive Python session,
-   to add the second record
+   to add the third record
    copy/paste the following and press the **Enter** key.
 
     ```python
     (
         add_record_to_senzing(
             {
-                "DATA_SOURCE": "TEST",
-                "RECORD_ID": "2",
-                "DATE_OF_BIRTH": "21/12/1965",
-                "ADDR_POSTAL_CODE": "47201",
-                "ADDR_CITY": "Columbus",
-                "SSN_NUMBER": "883-24-525x",
-                "NAME_FIRST": "CYN",
-                "NAME_LAST": "SHORT",
+                "DATA_SOURCE": "Test",
+                "RECORD_ID": "4",
+                "DRIVERS_LICENSE_NUMBER": "12435345",
+                "DATE_OF_BIRTH": "20/12/1965",
+                "SSN_NUMBER": "883-24-5259",
+                "ADDR_FULL":"3465 Wilmington Road, NY, Ohio 47201"
+                "NAME_FULL": "Thea Shorts",
                 "GENDER": "F",
-                "DSRC_ACTION": "A",
-                "ADDR_LINE1": "695 15th ST"
+                "DSRC_ACTION": "A"
             }
         )
     )
-
     ```
 
 1. In the
@@ -219,60 +238,19 @@ You will be oscillating between two applications:
     G2Explorer.py -s /tmp/senzing-my-demo-2-2.json
     ```
 
-1. TODO:
+1. In `G2Explorer.py`,
    Explain what to look at in G2Explorer.py.
 
-1. To exit `G2Explorer.py`, enter
+    ```console
+    search {"DRIVERS_LICENSE_NUMBER": "12435345"}
+    ```
+
+1. In `G2Explorer.py`,
+   Explain what to look at in G2Explorer.py.
 
     ```console
-    quit
+    how 20001
     ```
-
-### Iteration number 3
-
-18. In the interactive Python session,
-   to add the third record
-   copy/paste the following and press the **Enter** key.
-
-    ```python
-    (
-        add_record_to_senzing(
-            {
-                "DATA_SOURCE": "TEST",
-                "RECORD_ID": "3",
-                "DATE_OF_BIRTH": "20/12/1965",
-                "ADDR_POSTAL_CODE": "47201",
-                "ADDR_CITY": "Columbus",
-                "SSN_NUMBER": "883-24-5258",
-                "NAME_FIRST": "CYN",
-                "NAME_LAST": "SHORT",
-                "GENDER": "F",
-                "DSRC_ACTION": "A",
-                "ADDR_LINE1": "696 15th ST"
-            }
-        )
-    )
-
-    ```
-
-1. In the
-   [web browser based Xterm](http://localhost:8260/xterm),
-   create a snapshot by running the following block of code:
-
-   ```console
-   G2Snapshot.py -o /tmp/senzing-my-demo-2-3 -a
-   ```
-
-1. In the
-   [web browser based Xterm](http://localhost:8260/xterm),
-   explore the data by running the following block of code:
-
-    ```console
-    G2Explorer.py -s /tmp/senzing-my-demo-2-3.json
-    ```
-
-1. TODO:
-   Explain what to look at.
 
 1. To exit `G2Explorer.py`, enter
 
