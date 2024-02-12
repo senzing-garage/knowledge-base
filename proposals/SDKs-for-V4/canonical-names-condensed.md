@@ -80,13 +80,12 @@
 | G2_initWithConfigID(moduleName, iniParams, initConfigID, verboseLogging) | | - | |
 | G2_primeEngine() | | - | |
 | G2_process(record) | process(record, returnContent)| string | |
-| G2_purgeRepository() | [moved to G2Diagnostic] | | |
 | G2_reevaluateEntity(entityID, flags) | reevaluateEntity(entityID, flags, returnContent) | string | |
 | G2_reevaluateRecord(dataSourceCode, recordID, flags) | reevaluateRecord(dataSourceCode, recordID, flags, returnContent) | string | |
 | G2_reinit(initConfigID) | | - | |
 | G2_replaceRecord(dataSourceCode, recordID, jsonData, loadID) | replaceRecord(dataSourceCode, recordID, jsonData, returnContent) | string | SM-2 |
 | G2_searchByAttributes(jsonData, responseBuf, bufSize, resizeFunc) | searchByAttributes(jsonData, searchProfile, flags) | string | SM-2 |
-| G2_stats(responseBuf, bufSize, resizeFunc ) | | string | SM-1 |
+| G2_stats(responseBuf, bufSize, resizeFunc ) | stats() | string | SM-1 |
 | G2_whyEntities(entityID1, entityID2, responseBuf, bufSize, resizeFunc) | whyEntities(entityID1, entityID2, flags) | string | SM-1, SM-3.3 |
 | G2_whyEntityByEntityID(entityID, responseBuf, bufSize, resizeFunc) | whyEntityByEntityID(entityID, flags) | string | SM-1, SM-3.3 |
 | G2_whyEntityByRecordID(dataSourceCode, recordID, responseBuf, bufSize, resizeFunc) | whyEntityByRecordID(dataSourceCode, recordID, flags) | string | SM-1, SM-3.3 |
