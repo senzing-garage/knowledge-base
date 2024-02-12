@@ -254,7 +254,7 @@ You will be oscillating between two applications:
 
    Notice three entities, "TEST: 1", "TEST: 6", and "TEST: 4".
 
-1. In `G2Explorer.py`,
+1. :pencil2: In `G2Explorer.py`,
    using an "Entity ID" values from the three entities shown above,
    run `how`.
    Example:
