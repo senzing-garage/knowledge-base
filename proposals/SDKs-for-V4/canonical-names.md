@@ -70,7 +70,7 @@
 
 | Existing name | Canonical Name | Return values | Smells |
 |---------------|----------------|---------------|--------|
-| G2_addRecord(dataSourceCode, recordID, jsonData, loadID) | addRecord(dataSourceCode, recordID, jsonData, resultContent) | string | SM-2 |
+| G2_addRecord(dataSourceCode, recordID, jsonData, loadID) | addRecord(dataSourceCode, recordID, jsonData, resultFlags) | string | SM-2 |
 | G2_addRecordWithInfo(dataSourceCode, recordID, jsonData, loadID, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
 | G2_addRecordWithInfoWithReturnedRecordID(dataSourceCode, jsonData, loadID, flags, recordIDBuf, recordIDBufSize, responseBuf, responseBufSize, resizeFunc) | [not-implemented] | | |
 | G2_addRecordWithReturnedRecordID(dataSourceCode, jsonData, loadID, recordIDBuf, bufSize) | [not-implemented] | | |
@@ -78,7 +78,7 @@
 | G2_clearLastException() | [not-public] | | |
 | G2_closeExport(responseHandle) | | - | |
 | G2_countRedoRecords() | | int64 | |
-| G2_deleteRecord(dataSourceCode, recordID, loadID) | deleteRecord(dataSourceCode, recordID, resultContent) | string | |
+| G2_deleteRecord(dataSourceCode, recordID, loadID) | deleteRecord(dataSourceCode, recordID, resultFlags) | string | |
 | G2_deleteRecordWithInfo(dataSourceCode, recordID, loadID, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
 | G2_destroy() | | - | |
 | G2_exportCSVEntityReport(csvColumnList, flags, responseHandle) | exportCSVEntityReport(csvColumnList, flags) | responseHandle | |
@@ -122,19 +122,19 @@
 | G2_init(moduleName, iniParams, verboseLogging) | | - | |
 | G2_initWithConfigID(moduleName, iniParams, initConfigID, verboseLogging) | | - | |
 | G2_primeEngine() | | - | |
-| G2_process(record) | process(record, returnContent)| string | |
+| G2_process(record) | process(record, resultFlags)| string | |
 | G2_processWithInfo(record, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | string | |
 | G2_processRedoRecord(responseBuf, bufSize, resizeFunc ) | [not-implemented] | | |
 | G2_processRedoRecordWithInfo(flags, responseBuf, bufSize, infoBuf, infoBufSize, resizeFunc) | [not-implemented] | | |
 | G2_processWithResponse(record, responseBuf, bufSize) | [not-implemented] | | |
 | G2_processWithResponseResize(record, responseBuf, bufSize, resizeFunc ) | [not-implemented] | | |
 | G2_purgeRepository() | [moved to G2Diagnostic] | | |
-| G2_reevaluateEntity(entityID, flags) | reevaluateEntity(entityID, flags, returnContent) | string | |
+| G2_reevaluateEntity(entityID, flags) | reevaluateEntity(entityID, flags, resultFlags) | string | |
 | G2_reevaluateEntityWithInfo(entityID, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | string | |
-| G2_reevaluateRecord(dataSourceCode, recordID, flags) | reevaluateRecord(dataSourceCode, recordID, flags, returnContent) | string | |
+| G2_reevaluateRecord(dataSourceCode, recordID, flags) | reevaluateRecord(dataSourceCode, recordID, flags, resultFlags) | string | |
 | G2_reevaluateRecordWithInfo(dataSourceCode, recordID, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
 | G2_reinit(initConfigID) | | - | |
-| G2_replaceRecord(dataSourceCode, recordID, jsonData, loadID) | replaceRecord(dataSourceCode, recordID, jsonData, returnContent) | string | SM-2 |
+| G2_replaceRecord(dataSourceCode, recordID, jsonData, loadID) | replaceRecord(dataSourceCode, recordID, jsonData, resultFlags) | string | SM-2 |
 | G2_replaceRecordWithInfo(dataSourceCode, recordID, jsonData, loadID, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
 | G2_searchByAttributes(jsonData, responseBuf, bufSize, resizeFunc) | searchByAttributes(jsonData, searchProfile, flags) | string | SM-2 |
 | G2_searchByAttributes_V2(jsonData, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
@@ -180,14 +180,14 @@
    1. Function name becomes shortened to match the non-with-info name (e.g. `G2_addRecord()`).
    1. The `xx_withInfo()` function/method signature is not in the SDK.
    1. Function always returns JSON string.
-   1. A final input parameter, say `returnContent` (int64 used as a bit-mask), indicates the nature of the content returned in the JSON string.
+   1. A final input parameter, say `resultFlags` (int64 used as a bit-mask), indicates the nature of the content returned in the JSON string.
    1. Example:
 
          ```python
-         info = g2_engine.add_record(dataSourceCode, recordID, record, returnContent)
+         info = g2_engine.add_record(dataSourceCode, recordID, record, resultFlags)
          ```
 
-   1. If `returnContent` is 0 (i.e. no bit flags are on) then the returned value is `{}`, an empty JSON string.
+   1. If `resultFlags` is 0 (i.e. no bit flags are on) then the returned value is `{}`, an empty JSON string.
    1. Beneath the covers, the SDK determines if the `WITH_INFO` bit is **off**, in which case it calls `G2_addRecord`.
       If the `WITH_INFO` bit is **on**, the SDK calls `G2_addRecordWithInfo`.
    1. Flag can be OR-ed for future expansion. Example:
@@ -212,7 +212,7 @@
             data_source_code: str,
             record_id: str,
             record: str,
-            returnContent: int = 0,
+            resultFlags: int = 0,
             **kwargs: Any,
          ) -> str:
           ```
@@ -224,11 +224,11 @@
          ```
 
          ```python
-         info = g2_engine.add_record(dataSourceCode, recordID, record, returnContent)
+         info = g2_engine.add_record(dataSourceCode, recordID, record, resultFlags)
          ```
 
    1. Java language specifics:
-      1. Use method overloading to factor out the `returnContent` parameter.
+      1. Use method overloading to factor out the `resultFlags` parameter.
       1. Examples of use:
 
          ```java
