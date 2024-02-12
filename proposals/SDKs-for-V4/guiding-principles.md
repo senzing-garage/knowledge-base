@@ -5,11 +5,11 @@
         1. Any exceptions should be documented for review.
     1. However, the function/method signatures may not match exactly.
 1. Consistent, Coherent, and Complete functions/methods.
-    1. Use [Canonical names](canonical-names.md) as models for core SDK API.
+    1. Use [Canonical names](canonical-names.md) as models for the **core** SDK API.
     1. The "to" principle for function/method names.
     1. "Convenience Methods" may be unique per SDK language.
         1. Convenience methods are written at the "abstract level" so they can be inherited by all concrete classes.
-        1. In general, convenience methods will call "core" SDK API methods.
+        1. In general, convenience methods will call **core** SDK API methods.
 1. SDK APIs are specified by Interface or Abstract class.
     1. This allows customers to write to an interface, not an implementation.
     1. This allows us to create specific implementations, if/when needed.
@@ -19,8 +19,11 @@
 1. Industry-standard techniques:
     1. [Robustness principle](https://en.wikipedia.org/wiki/Robustness_principle)
     1. Function/method parameters are not mutated.
-    1. Function/method return values have a constant data-type (in addition to `None`, `null`, `nil`)
-    1. For simplicity, SDK "core" functions/methods returns `strings` as a simple data type (or an occasional `int`).
+    1. Function/method return values have a constant data-type
+    1. For simplicity, **core** SDK functions/methods return the following data-types:
+        1. `string`, `int`, `int64`, or `handle`
+        1. Also `None`, `null`, `nil`, depending on SDK language
+    1. Convenience functions/methods for specific SDKs may return more exotic data-types
 1. Testing
     1. All function/methods have Unit Tests run by GitHub Actions for every Push
     1. Code coverage analysis is done.
