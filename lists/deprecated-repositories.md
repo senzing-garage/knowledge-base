@@ -3,21 +3,26 @@
 | Deprecated | Hidden     | Repository                                   |
 |------------|------------|----------------------------------------------|
 | 2024-01-25 |            | aws-cloudformation-dev-rest                  |
-|            | 2023-09-07 | mapper-sayari - Hidden at Will's request     |
+| 2024-01-19 |            | packer-senzing-demo-ubuntu-18.04             |
+| 2023-12-14 |            | kubernetes-demo                              |
+| 2023-12-14 |            | charts                                       |
+| 2023-11-15 |            | docker-jupyter                               |
+| 2023-10-30 |            | senzing-sdk-api-specification                |
 | 2023-08-09 |            | mapper-openc                                 |
-| 2023-06-19 |            | packer-senzing-demo-ubuntu-18.04             |
 | 2023-06-19 |            | ready-for-senzing                            |
+| 2023-06-19 |            | packer-senzing-demo-ubuntu-18.04             |
 | 2023-06-12 |            | docker-poc-notebook                          |
-| 2023-06-02 |            | senzing-environment                          |
-| 2023-06-02 |            | senzing-up                                   |
 | 2023-06-02 |            | view-xterm                                   |
-| 2023-01-30 |            | docker-yumdownloader                         |
-| 2022-11-02 |            | g2service                                    |
-| 2022-11-02 |            | accountant-aws-marketplace                   |
-| 2022-09-08 |            | aws-cloudformation-ecs-senzing-stack-choices |
-| 2022-08-04 |            | aws-cloudformation-ecs-poc-simple            |
-| 2022-08-02 |            | java-g2loader                                |
-| 2022-07-25 |            | docker-mysql                                 |
+| 2023-06-02 |            | senzing-up                                   |
+| 2023-06-02 |            | senzing-environment                          |
+|            | 2023-09-07 | mapper-sayari - Hidden at Will's request     |
+| 2023-01-30 | 2024-02-12 | docker-yumdownloader                         |
+| 2022-11-02 | 2024-02-12 | g2service                                    |
+| 2022-11-02 | 2024-02-12 | accountant-aws-marketplace                   |
+| 2022-09-08 | 2024-02-12 | aws-cloudformation-ecs-senzing-stack-choices |
+| 2022-08-04 | 2024-02-12 | aws-cloudformation-ecs-poc-simple            |
+| 2022-08-02 | 2024-02-12 | java-g2loader                                |
+| 2022-07-25 | 2024-02-12 | docker-mysql                                 |
 | 2022-06-30 | 2023-07-10 | template-ansible-role                        |
 | 2022-06-30 | 2023-07-10 | packer-ansible                               |
 | 2022-06-30 | 2023-07-10 | docker-app-demo                              |
