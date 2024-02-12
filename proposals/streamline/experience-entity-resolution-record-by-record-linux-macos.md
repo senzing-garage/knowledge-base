@@ -190,7 +190,7 @@ You will be oscillating between two applications:
    Explain what to look at in G2Explorer.py.
 
     ```console
-    why 200001 200002
+    why 1 2
     ```
 
 1. To exit `G2Explorer.py`, enter
