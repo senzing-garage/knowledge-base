@@ -51,7 +51,7 @@ either create or reuse a SQLite Senzing database.
 
 ## Run Senzing gRPC service
 
-1. Run a Senzing gRPC service using Docker.
+5. Run a Senzing gRPC service using Docker.
    Notice that the `--volume` must point to the directory of the database files you wish to use.
    For more information on `docker run` parameters,
    visit [docker run](https://docs.docker.com/engine/reference/commandline/run/).
@@ -110,7 +110,7 @@ either create or reuse a SQLite Senzing database.
 
 The following iterations have a common pattern:
 
-1. Insert a record into Senzing
+1. Insert records into Senzing
 1. Create a snapshot using `G2Snapshot.py`
 1. Explore data using `G2Explorer.py`
 
@@ -123,7 +123,7 @@ You will be oscillating between two applications:
 ### Iteration number 1
 
 8. In the interactive Python session,
-   to add the first record
+   to add the first two records
    copy/paste the following and press the **Enter** key.
 
     ```python
@@ -132,16 +132,28 @@ You will be oscillating between two applications:
             {
                 "DATA_SOURCE": "Test",
                 "RECORD_ID": "1",
-                "DRIVERS_LICENSE_NUMBER": "00",
+                "DRIVERS_LICENSE_NUMBER": "12435345",
                 "DATE_OF_BIRTH": "20/12/1965",
-                "ADDR_POSTAL_CODE": "47201",
-                "ADDR_CITY": "Columbus",
+                "ADDR_FULL":"175 West Clay St, New York, Ohio 47201",
                 "SSN_NUMBER": "883-24-5259",
                 "NAME_FIRST": "CYNTHIA",
                 "NAME_LAST": "SHORTS",
                 "GENDER": "F",
-                "DSRC_ACTION": "A",
-                "ADDR_LINE1": "696 15th ST",
+                "DSRC_ACTION": "A"
+            }
+        )
+    )
+    (
+        add_record_to_senzing(
+            {
+                "DATA_SOURCE": "Test",
+                "RECORD_ID": "6",
+                "DRIVERS_LICENSE_NUMBER": "12435345",
+                "ADDR_FULL":"3465 Wilmington Road, NY, Ohio 47201",
+                "NAME_FIRST": "Syndey",
+                "NAME_LAST": "Shorter",
+                "GENDER": "F",
+                "DSRC_ACTION": "A"
             }
         )
     )
@@ -168,8 +180,25 @@ You will be oscillating between two applications:
 
    *Note:* When pasting the command, make sure to remove any extra characters.
 
-1. TODO:
-   Explain what to look at.
+1. In `G2Explorer.py`,
+   copy/paste the following and press the **Enter** key.
+
+    ```console
+    search {"DRIVERS_LICENSE_NUMBER": "12435345"}
+    ```
+
+   Notice two entities, One for "TEST: 1" and a second for "TEST: 6".
+
+1. :pencil2: In `G2Explorer.py`,
+   using the "Entity ID" values from the two entities shown above,
+   run `why`.
+   Example:
+
+    ```console
+    why 1 2
+    ```
+
+   TODO: Explain what is shown.
 
 1. To exit `G2Explorer.py`, enter
 
@@ -179,29 +208,26 @@ You will be oscillating between two applications:
 
 ### Iteration number 2
 
-13. In the interactive Python session,
-   to add the second record
+14. In the interactive Python session,
+   to add the third record
    copy/paste the following and press the **Enter** key.
 
     ```python
     (
         add_record_to_senzing(
             {
-                "DATA_SOURCE": "TEST",
-                "RECORD_ID": "2",
-                "DATE_OF_BIRTH": "21/12/1965",
-                "ADDR_POSTAL_CODE": "47201",
-                "ADDR_CITY": "Columbus",
-                "SSN_NUMBER": "883-24-525x",
-                "NAME_FIRST": "CYN",
-                "NAME_LAST": "SHORT",
+                "DATA_SOURCE": "Test",
+                "RECORD_ID": "4",
+                "DRIVERS_LICENSE_NUMBER": "12435345",
+                "DATE_OF_BIRTH": "20/12/1965",
+                "SSN_NUMBER": "883-24-5259",
+                "ADDR_FULL":"3465 Wilmington Road, NY, Ohio 47201",
+                "NAME_FULL": "Thea Shorts",
                 "GENDER": "F",
-                "DSRC_ACTION": "A",
-                "ADDR_LINE1": "695 15th ST"
+                "DSRC_ACTION": "A"
             }
         )
     )
-
     ```
 
 1. In the
@@ -220,60 +246,25 @@ You will be oscillating between two applications:
     G2Explorer.py -s /tmp/senzing-my-demo-2-2.json
     ```
 
-1. TODO:
-   Explain what to look at in G2Explorer.py.
-
-1. To exit `G2Explorer.py`, enter
-
-    ```console
-    quit
-    ```
-
-### Iteration number 3
-
-18. In the interactive Python session,
-   to add the third record
+1. In `G2Explorer.py`,
    copy/paste the following and press the **Enter** key.
 
-    ```python
-    (
-        add_record_to_senzing(
-            {
-                "DATA_SOURCE": "TEST",
-                "RECORD_ID": "3",
-                "DATE_OF_BIRTH": "20/12/1965",
-                "ADDR_POSTAL_CODE": "47201",
-                "ADDR_CITY": "Columbus",
-                "SSN_NUMBER": "883-24-5258",
-                "NAME_FIRST": "CYN",
-                "NAME_LAST": "SHORT",
-                "GENDER": "F",
-                "DSRC_ACTION": "A",
-                "ADDR_LINE1": "696 15th ST"
-            }
-        )
-    )
-
+    ```console
+    search {"DRIVERS_LICENSE_NUMBER": "12435345"}
     ```
 
-1. In the
-   [web browser based Xterm](http://localhost:8260/xterm),
-   create a snapshot by running the following block of code:
+   Notice three entities, "TEST: 1", "TEST: 6", and "TEST: 4".
 
-   ```console
-   G2Snapshot.py -o /tmp/senzing-my-demo-2-3 -a
-   ```
-
-1. In the
-   [web browser based Xterm](http://localhost:8260/xterm),
-   explore the data by running the following block of code:
+1. :pencil2: In `G2Explorer.py`,
+   using an "Entity ID" values from the three entities shown above,
+   run `how`.
+   Example:
 
     ```console
-    G2Explorer.py -s /tmp/senzing-my-demo-2-3.json
+    how 1
     ```
 
-1. TODO:
-   Explain what to look at.
+   TODO: Explain what is shown.
 
 1. To exit `G2Explorer.py`, enter
 
@@ -283,12 +274,12 @@ You will be oscillating between two applications:
 
 ## Shutdown
 
-23. To end the Senzing gRPC service using Docker,
+20. To end the Senzing gRPC service using Docker,
    use `ctrl-c` to stop the `docker run ...` program.
 
 ## Restart
 
-24. To restart the service, re-run the command seen in Step #3.
+21. To restart the service, re-run the command seen in Step #3.
    Although the port mappings using `--publish` may be changed, the value of `--volume`
    must match the original value so the database files on your workstation will be attached.
 
@@ -301,7 +292,7 @@ You will be oscillating between two applications:
         ```
 
         The value of `SENZING_MY_DEMO_2` must match the value set in
-        [Create database and Senzing gRPC service](#create-database-and-senzing-grpc-service)
+        [Initialize database](#initialize-database)
 
     1. To re-run the docker container using the existing database files,
        copy/paste the following into the terminal window:
