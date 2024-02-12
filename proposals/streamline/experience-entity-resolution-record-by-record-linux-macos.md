@@ -50,7 +50,7 @@ either create or reuse a SQLite Senzing database.
 
 ## Run Senzing gRPC service
 
-1. Run a Senzing gRPC service using Docker.
+5. Run a Senzing gRPC service using Docker.
    Notice that the `--volume` must point to the directory of the database files you wish to use.
    For more information on `docker run` parameters,
    visit [docker run](https://docs.docker.com/engine/reference/commandline/run/).
@@ -207,7 +207,7 @@ You will be oscillating between two applications:
 
 ### Iteration number 2
 
-13. In the interactive Python session,
+14. In the interactive Python session,
    to add the third record
    copy/paste the following and press the **Enter** key.
 
@@ -273,12 +273,12 @@ You will be oscillating between two applications:
 
 ## Shutdown
 
-23. To end the Senzing gRPC service using Docker,
+20. To end the Senzing gRPC service using Docker,
    use `ctrl-c` to stop the `docker run ...` program.
 
 ## Restart
 
-24. To restart the service, re-run the command seen in Step #3.
+21. To restart the service, re-run the command seen in Step #3.
    Although the port mappings using `--publish` may be changed, the value of `--volume`
    must match the original value so the database files on your workstation will be attached.
 
