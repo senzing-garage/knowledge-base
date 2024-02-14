@@ -2,7 +2,7 @@
 
 This list give the general "burn-down" for each Senzing API SDK language.
 
-1. [ ] 1. Establish [principles](principles.md) to guide construction of SDKs.
+1. [ ] 1. Establish [principles](guiding-principles.md) to guide construction of SDKs.
 1. [ ] 2. Make [canonical method and parameter names](canonical-names.md).
 1. [ ] 3. Design [error message](error-messages.md) conventions.
 1. [ ] 4. Create GitHub Actions (in each repository) for:

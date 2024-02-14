@@ -1,5 +1,10 @@
 # Candidate method names
 
+This is the full list of Senzing C APIs mapped into Senzing SDK APIs.
+The
+[canonical names condensed](canonical-names-condensed.md)
+list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
+
 ## Mapping
 
 ### G2Config
