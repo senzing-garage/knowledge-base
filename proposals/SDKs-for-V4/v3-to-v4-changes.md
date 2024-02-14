@@ -39,7 +39,7 @@
 | G2_EXPORT_INCLUDE_RESOLVED              | G2_EXPORT_INCLUDE_MULTI_RECORD_ENTITIES    |     0000 0001 |  same          |
 | G2_EXPORT_INCLUDE_SINGLETONS            | G2_EXPORT_INCLUDE_SINGLE_RECORD_ENTITIES   |     0000 0010 |  same          |
 | G2_EXPORT_INCLUDE_ALL_RELATIONSHIPS     | G2_EXPORT_INCLUDE_ALL_HAVING_RELATIONSHIPS |     0000 001E |  same          |
-| G2_ENTITY_INCLUDE_RECORD_FORMATTED_DATA | <deleted>                                  |     0002 0000 |                |
+| G2_ENTITY_INCLUDE_RECORD_FORMATTED_DATA | [deleted]                                  |     0002 0000 |                |
 |                                         | G2_ENTITY_INCLUDE_RECORD_UNMAPPED_DATA     |               | 0000 8000 0000 |
 |                                         | G2_ENTITY_INCLUDE_RELATED_RECORD_TYPES     |               | 0000 2000 0000 |
 |                                         | G2_ENTITY_OPTION_INCLUDE_FEATURE_ELEMENTS  |               | 0001 0000 0000 |
@@ -47,11 +47,11 @@
 |                                         | G2_FIND_PATH_MATCHING_INFO                 |               | 0000 4000 0000 |
 |                                         | G2_FIND_NETWORK_MATCHING_INFO              |               | 0002 0000 0000 |
 |                                         | G2_SEARCH_INCLUDE_MATCH_KEY_DETAILS        |               | G2_ENTITY_OPTION_INCLUDE_MATCH_KEY_DETAILS |
-| G2_SEARCH_INCLUDE_RESOLVED              |                                            |               | <has new value> |
-| G2_EXPORT_DEFAULT_FLAGS                 |                                            |               | <has new value> |
-| G2_FIND_PATH_DEFAULT_FLAGS              |                                            |               | <has new value> |
-| G2_WHY_ENTITY_DEFAULT_FLAGS             | <deleted>                                  |               |                 |
-| G2_HOW_ENTITY_DEFAULT_FLAGS             |                                            |               | <has new value> |
+| G2_SEARCH_INCLUDE_RESOLVED              |                                            |               | [has new value] |
+| G2_EXPORT_DEFAULT_FLAGS                 |                                            |               | [has new value] |
+| G2_FIND_PATH_DEFAULT_FLAGS              |                                            |               | [has new value] |
+| G2_WHY_ENTITY_DEFAULT_FLAGS             | [deleted]                                  |               |                 |
+| G2_HOW_ENTITY_DEFAULT_FLAGS             |                                            |               | [has new value] |
 |                                         |  G2_VIRTUAL_ENTITY_DEFAULT_FLAGS           |               |                 |
 
 ## Python
