@@ -140,7 +140,7 @@ This is a checklist of what to set when creating a new GitHub Repository.
     1. :ballot_box_with_check: `Require status checks to pass before merging`.
         1. :ballot_box_with_check: `Require branches to be up to date before merging`.
             1. Search and add *ALL* required status checks for the respective repository.
-               - Ex. type `lint` in the search bar and select `lint-workflows / Lint Workflows` and `lint-workflows / changes`. Both of these should be selected on ALL of our repositories. It is in the format `<workfow-name>/<job-name>`
+               - Ex. type `lint` in the search bar and select `lint-workflows / Lint Workflows` and `lint-workflows / changes`. Both of these should be selected on ALL of our repositories. It is in the format `<workfow-name>/<job-name>`. Ignore any checks prefixed with `-->`.
                - TIPS:
                  - Search for the job name of the respective workflow.
                  - Jobs to be added must have been run within the past 7 days against the respective repository.
