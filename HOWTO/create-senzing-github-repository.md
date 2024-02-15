@@ -140,9 +140,11 @@ This is a checklist of what to set when creating a new GitHub Repository.
     1. :ballot_box_with_check: `Require status checks to pass before merging`.
         1. :ballot_box_with_check: `Require branches to be up to date before merging`.
             1. Search and add *ALL* required status checks for the respective repository.
-            - Search for the job name of the respective workflow.
-            - Jobs to be added must have been run within the past 7 days against the respective repository.
-            - See [GitHub docs] for more details.
+               - Ex. type `lint` in the search bar and select `lint-workflows / Lint Workflows` and `lint-workflows / changes`. Both of these should be selected on ALL of our repositories. It is in the format `<workfow-name>/<job-name>`
+               - TIPS:
+                 - Search for the job name of the respective workflow.
+                 - Jobs to be added must have been run within the past 7 days against the respective repository.
+                 - See [GitHub docs] for more details.
     1. :ballot_box_with_check: `Require signed commits`
     1. :ballot_box_with_check: `Do not allow bypassing the above settings`
     1. Click `Save changes` at the bottom of the page.
@@ -203,7 +205,6 @@ the status check has been performed within the last 7 day.
     1. Click the matching search result in the drop down.
     1. Click `Save changes` at the bottom of the page.
 
-#### References
 
-1. [GitHub docs](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches#require-status-checks-before-merging)
-1. [One time CODEOWNER token configuration](https://github.com/senzing-garage/knowledge-base/blob/main/HOWTO/configure-github-organization.md)
+[GitHub docs]: https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches#require-status-checks-before-merging
+[One time CODEOWNER token configuration]: https://github.com/senzing-garage/knowledge-base/blob/main/HOWTO/configure-github-organization.md
