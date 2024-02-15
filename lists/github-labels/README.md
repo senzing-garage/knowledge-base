@@ -39,8 +39,11 @@ Labels listed in alphabetical order.
 | enhancement          | ![66FFFF](https://via.placeholder.com/30x30/66FFFF/66FFFF?text=.) | #66FFFF | New feature request                          |
 | fixed                | ![00FF00](https://via.placeholder.com/30x30/00FF00/00FF00?text=.) | #00FF00 | Fixed. Waiting for issue creator to close    |
 | G2Tool               | ![0000FF](https://via.placeholder.com/30x30/0000FF/0000FF?text=.) | #0000FF | Concerns G2Tools package                     |
+| go                   | ![16E2E2](https://via.placeholder.com/30x30/16E2E2/16E2E2?text=.) | #16E2E2 | Go programming language                      |
 | invalid              | ![000000](https://via.placeholder.com/30x30/000000/000000?text=.) | #000000 | This doesn't seem right                      |
+| java                 | ![FFA221](https://via.placeholder.com/30x30/FFA221/FFA221?text=.) | #FFA221 | Java programming language                    |
 | performance          | ![66FFFF](https://via.placeholder.com/30x30/66FFFF/66FFFF?text=.) | #66FFFF | Correct behavior, but slow performance       |
+| python               | ![2B67C6](https://via.placeholder.com/30x30/2B67C6/2B67C6?text=.) | #2B67C6 | Python programming language                  |
 | question             | ![CCCCFF](https://via.placeholder.com/30x30/CCCCFF/CCCCFF?text=.) | #CCCCFF | User-submitted question                      |
 | refactoring          | ![66FFFF](https://via.placeholder.com/30x30/66FFFF/66FFFF?text=.) | #66FFFF | No behavioral change, internal restructuring |
 | triage               | ![CCCCFF](https://via.placeholder.com/30x30/CCCCFF/CCCCFF?text=.) | #CCCCFF | Need to triage                               |
@@ -54,10 +57,13 @@ Labels listed in alphabetical order.
 1. 000000
 1. 0000FF
 1. 00FF00
+1. 16E2E2 - go
+1. 2B67C6 - python
 1. 66FFFF
 1. CCCCFF
 1. FF0000
 1. FF9900
+1. FFA221 - java
 1. FFFF00
 
 ## References
