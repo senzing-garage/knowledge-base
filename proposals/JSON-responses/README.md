@@ -131,7 +131,8 @@
     ```python
     result_json = g2engine.get_entity_by_entity_id(...)
     result = json.loads(result_json)
-    print(result.get("RESOLVED_ENTITY", {}).get("FEATURES", {}).get("ADDRESS", [])[0].get("FEAT_DESC"))
+    for feature in result.get("RESOLVED_ENTITY", {}).get("FEATURES", {}).get("ADDRESS", []):
+        print(feature.get("FEAT_DESC"))
     ```
 
    However in languages like Java and Go, it is not so straight forward.
@@ -145,7 +146,7 @@
    [RFC8927](https://www.rfc-editor.org/rfc/rfc8927.html)
    does not support "dynamic" JSON keys.
 
-## For consideration
+## For consideration - 1
 
 1. Move from a dictionary with dynamic keys to a list of dictionaries containing an `FEATURE_NAME` JSON key.
    Example:
@@ -406,6 +407,17 @@
         },
         "RELATED_ENTITIES": []
     }
+    ```
+
+1. Python example.
+
+    ```python
+    result_json = g2engine.get_entity_by_entity_id(...)
+    result = G2engineGetEntityByEntityIDResponse.from_json_data(result_json)
+    for feature in result.resolved_entity.features:
+        if feature.feature_name == "ADDRESS":
+            for element in feature.feature_elements:
+                print(element.feat_desc)
     ```
 
 ### Areas where Dynamic JSON keys are seen
