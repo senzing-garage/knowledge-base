@@ -1,0 +1,94 @@
+{
+    "RESOLVED_ENTITY": {
+        "ENTITY_ID": 1,
+        "ENTITY_NAME": "blank",
+        "FEATURES": [
+            {
+                "ID": "ADDRESS",
+                "FEAT_DESC": "blank",
+                "LIB_FEAT_ID": 1,
+                "USAGE_TYPE": "blank",
+                "FEAT_DESC_VALUES": [
+                    {
+                        "FEAT_DESC": "blank",
+                        "LIB_FEAT_ID": 1
+                    }
+                ]
+            },
+            {
+                "ID": "DOB",
+                "FEAT_DESC": "blank",
+                "LIB_FEAT_ID": 1,
+                "FEAT_DESC_VALUES": [
+                    {
+                        "FEAT_DESC": "blank",
+                        "LIB_FEAT_ID": 1
+                    },
+                    {
+                        "FEAT_DESC": "blank",
+                        "LIB_FEAT_ID": 1
+                    }
+                ]
+            },
+            {
+                "ID": "EMAIL",
+                "FEAT_DESC": "blank",
+                "LIB_FEAT_ID": 1,
+                "FEAT_DESC_VALUES": [
+                    {
+                        "FEAT_DESC": "blank",
+                        "LIB_FEAT_ID": 1
+                    }
+                ]
+            },
+            {
+                "ID": "CUSTOMER_FIELD",
+                "FEAT_DESC": "blank",
+                "LIB_FEAT_ID": 1,
+                "USAGE_TYPE": "blank",
+                "FEAT_DESC_VALUES": [
+                    {
+                        "FEAT_DESC": "blank",
+                        "LIB_FEAT_ID": 1
+                    }
+                ]
+            },
+            {
+                "ID": "RECORD_TYPE",
+                "FEAT_DESC": "blank",
+                "LIB_FEAT_ID": 1,
+                "FEAT_DESC_VALUES": [
+                    {
+                        "FEAT_DESC": "blank",
+                        "LIB_FEAT_ID": 1
+                    }
+                ]
+            }
+        ],
+        "RECORD_SUMMARY": [
+            {
+                "DATA_SOURCE": "blank",
+                "RECORD_COUNT": 1,
+                "FIRST_SEEN_DT": "blank",
+                "LAST_SEEN_DT": "blank"
+            }
+        ],
+        "LAST_SEEN_DT": "blank",
+        "RECORDS": [
+            {
+                "DATA_SOURCE": "blank",
+                "RECORD_ID": "blank",
+                "ENTITY_TYPE": "blank",
+                "INTERNAL_ID": 1,
+                "ENTITY_KEY": "blank",
+                "ENTITY_DESC": "blank",
+                "MATCH_KEY": "blank",
+                "MATCH_LEVEL": 1,
+                "MATCH_LEVEL_CODE": "blank",
+                "ERRULE_CODE": "blank",
+                "LAST_SEEN_DT": "blank"
+            }
+        ]
+    },
+    "RELATED_ENTITIES": []
+}
