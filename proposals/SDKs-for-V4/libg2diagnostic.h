@@ -5,8 +5,10 @@
  Copyright Office.
 **********************************************************************************/
 
+
 #ifndef LIBG2DIAGNOSTIC_H
 #define LIBG2DIAGNOSTIC_H
+
 
 /* Platform specific function export header */
 #if defined(_WIN32)
@@ -33,8 +35,15 @@ extern "C"
    * @param iniParams A JSON string specifying the configuration parameters
    * @param verboseLogging A flag to enable deeper logging of the G2 processing
    */
-  _DLEXPORT long long G2Diagnostic_init(const char *moduleName, const char *iniParams, const long long verboseLogging);
-  _DLEXPORT long long G2Diagnostic_initWithConfigID(const char *moduleName, const char *iniParams, const long long initConfigID, const long long verboseLogging);
+  _DLEXPORT long long G2Diagnostic_init(
+                            const char *moduleName,
+                            const char *iniParams,
+                            const long long verboseLogging);
+  _DLEXPORT long long G2Diagnostic_initWithConfigID(
+                            const char *moduleName,
+                            const char *iniParams,
+                            const long long initConfigID,
+                            const long long verboseLogging);
 
 
   /**
@@ -53,9 +62,21 @@ extern "C"
 
 
   /**
+   * @brief
+   * This is used to purge all data from an existing repository
+   * @return Returns 0 for success, or an appropriate error code.
+   */
+  _DLEXPORT long long G2Diagnostic_purgeRepository();
+
+
+  /**
    * @brief Check the performance metrics of the datastore
    */
-  _DLEXPORT long long G2Diagnostic_checkDBPerf(const long long secondsToRun, char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize) );
+  _DLEXPORT long long G2Diagnostic_checkDBPerf(
+                            const long long secondsToRun,
+                            char **responseBuf,
+                            size_t *bufSize,
+                            void *(*resizeFunc)(void *ptr, size_t newSize) );
 
   /**
    * @brief
@@ -85,23 +106,77 @@ extern "C"
   _DLEXPORT long long G2Diagnostic_getLogicalCores();
   _DLEXPORT long long G2Diagnostic_getTotalSystemMemory();
   _DLEXPORT long long G2Diagnostic_getAvailableMemory();
-  _DLEXPORT long long G2Diagnostic_getDBInfo(char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize) );
-  _DLEXPORT long long G2Diagnostic_getDataSourceCounts(char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize) );
-  _DLEXPORT long long G2Diagnostic_getMappingStatistics(const long long includeInternalFeatures, char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize) );
-  _DLEXPORT long long G2Diagnostic_getGenericFeatures(const char* featureType, const size_t maximumEstimatedCount, char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize) );
-  _DLEXPORT long long G2Diagnostic_getEntitySizeBreakdown(const size_t minimumEntitySize, const long long includeInternalFeatures, char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize) );
-  _DLEXPORT long long G2Diagnostic_getEntityDetails(const long long entityID, const long long includeInternalFeatures, char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize) );
-  _DLEXPORT long long G2Diagnostic_getResolutionStatistics(char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize) );
-  _DLEXPORT long long G2Diagnostic_getRelationshipDetails(const long long relationshipID, const long long includeInternalFeatures, char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize) );
-  _DLEXPORT long long G2Diagnostic_getEntityResume(const long long entityID, char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize) );
+  _DLEXPORT long long G2Diagnostic_getDBInfo(
+                            char **responseBuf,
+                            size_t *bufSize, 
+                            void *(*resizeFunc)(void *ptr, size_t newSize) );
+  _DLEXPORT long long G2Diagnostic_getDataSourceCounts(
+                            char **responseBuf,
+                            size_t *bufSize,
+                            void *(*resizeFunc)(void *ptr, size_t newSize) );
+  _DLEXPORT long long G2Diagnostic_getMappingStatistics(
+                            const long long includeInternalFeatures,
+                            char **responseBuf,
+                            size_t *bufSize,
+                            void *(*resizeFunc)(void *ptr, size_t newSize) );
+  _DLEXPORT long long G2Diagnostic_getGenericFeatures(
+                            const char* featureType,
+                            const size_t maximumEstimatedCount,
+                            char **responseBuf,
+                            size_t *bufSize,
+                            void *(*resizeFunc)(void *ptr, size_t newSize) );
+  _DLEXPORT long long G2Diagnostic_getEntitySizeBreakdown(
+                            const size_t minimumEntitySize,
+                            const long long includeInternalFeatures,
+                            char **responseBuf,
+                            size_t *bufSize,
+                            void *(*resizeFunc)(void *ptr, size_t newSize) );
+  _DLEXPORT long long G2Diagnostic_getEntityDetails(
+                            const long long entityID,
+                            const long long includeInternalFeatures,
+                            char **responseBuf,
+                            size_t *bufSize,
+                            void *(*resizeFunc)(void *ptr, size_t newSize) );
+  _DLEXPORT long long G2Diagnostic_getResolutionStatistics(
+                            char **responseBuf,
+                            size_t *bufSize,
+                            void *(*resizeFunc)(void *ptr, size_t newSize) );
+  _DLEXPORT long long G2Diagnostic_getRelationshipDetails(
+                            const long long relationshipID,
+                            const long long includeInternalFeatures,
+                            char **responseBuf,
+                            size_t *bufSize,
+                            void *(*resizeFunc)(void *ptr, size_t newSize) );
+  _DLEXPORT long long G2Diagnostic_getEntityResume(
+                            const long long entityID,
+                            char **responseBuf,
+                            size_t *bufSize,
+                            void *(*resizeFunc)(void *ptr, size_t newSize) );
   typedef void* EntityListBySizeHandle;
-  _DLEXPORT long long G2Diagnostic_getEntityListBySize(const size_t entitySize,EntityListBySizeHandle* entityListBySizeHandle);
-  _DLEXPORT long long G2Diagnostic_fetchNextEntityBySize(EntityListBySizeHandle entityListBySizeHandle, char *responseBuf, const size_t bufSize);
-  _DLEXPORT long long G2Diagnostic_closeEntityListBySize(EntityListBySizeHandle entityListBySizeHandle);
-  _DLEXPORT long long G2Diagnostic_findEntitiesByFeatureIDs(const char *features, char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize));
-  _DLEXPORT long long G2Diagnostic_getFeature(const long long libFeatID, char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize));
+  _DLEXPORT long long G2Diagnostic_getEntityListBySize(
+                            const size_t entitySize,
+                            EntityListBySizeHandle* entityListBySizeHandle);
+  _DLEXPORT long long G2Diagnostic_fetchNextEntityBySize(
+                            EntityListBySizeHandle entityListBySizeHandle,
+                            char *responseBuf,
+                            const size_t bufSize);
+  _DLEXPORT long long G2Diagnostic_closeEntityListBySize(
+                            EntityListBySizeHandle entityListBySizeHandle);
+  _DLEXPORT long long G2Diagnostic_findEntitiesByFeatureIDs(
+                            const char *features,
+                            char **responseBuf,
+                            size_t *bufSize,
+                            void *(*resizeFunc)(void *ptr, size_t newSize));
+  _DLEXPORT long long G2Diagnostic_getFeature(
+                            const long long libFeatID,
+                            char **responseBuf,
+                            size_t *bufSize,
+                            void *(*resizeFunc)(void *ptr, size_t newSize));
+
+
 #ifdef __cplusplus
 };
 #endif
+
 
 #endif /* LIBG2DIAGNOSTIC_H */

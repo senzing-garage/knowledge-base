@@ -5,8 +5,10 @@
  Copyright Office.
 **********************************************************************************/
 
+
 #ifndef LIBG2CONFIG_H
 #define LIBG2CONFIG_H
+
 
 /* Platform specific function export header */
 #if defined(_WIN32)
@@ -33,7 +35,10 @@ extern "C"
    * @param iniParams A JSON string containing configuration paramters.
    * @param verboseLogging A flag to enable deeper logging of the G2 processing
    */
-  _DLEXPORT long long G2Config_init(const char *moduleName, const char *iniParams, const long long verboseLogging);
+  _DLEXPORT long long G2Config_init(
+                            const char *moduleName,
+                            const char *iniParams,
+                            const long long verboseLogging);
 
 
   /**
@@ -60,14 +65,20 @@ extern "C"
    * This method initializes the G2 Config object from a JSON string.  Any time you need to edit an existing
    * config from an existing repository you will want to use this method to be able to modify it.
    */
-  _DLEXPORT long long G2Config_load(const char *jsonConfig,ConfigHandle* configHandle);
+  _DLEXPORT long long G2Config_load(
+                            const char *jsonConfig,
+                            ConfigHandle* configHandle);
 
 
   /**
    * @brief
    * This method saves the G2 Config object into a JSON string.
    */
-  _DLEXPORT long long G2Config_save(ConfigHandle configHandle, char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize) );
+  _DLEXPORT long long G2Config_save(
+                            ConfigHandle configHandle,
+                            char **responseBuf,
+                            size_t *bufSize,
+                            void *(*resizeFunc)(void *ptr, size_t newSize) );
 
 
   /**
@@ -78,9 +89,20 @@ extern "C"
 
 
   /* Functions for data source configuration */
-  _DLEXPORT long long G2Config_listDataSources(ConfigHandle configHandle, char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize));
-  _DLEXPORT long long G2Config_addDataSource(ConfigHandle configHandle, const char *inputJson, char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize));
-  _DLEXPORT long long G2Config_deleteDataSource(ConfigHandle configHandle, const char *inputJson);
+  _DLEXPORT long long G2Config_listDataSources(
+                            ConfigHandle configHandle,
+                            char **responseBuf,
+                            size_t *bufSize,
+                            void *(*resizeFunc)(void *ptr, size_t newSize));
+  _DLEXPORT long long G2Config_addDataSource(
+                            ConfigHandle configHandle, 
+                            const char *inputJson,
+                            char **responseBuf,
+                            size_t *bufSize, 
+                            void *(*resizeFunc)(void *ptr, size_t newSize));
+  _DLEXPORT long long G2Config_deleteDataSource(
+                            ConfigHandle configHandle, 
+                            const char *inputJson);
 
 
   /**
@@ -109,6 +131,7 @@ extern "C"
 #ifdef __cplusplus 
 };
 #endif
+
 
 #endif /* LIBG2CONFIG_H */
 

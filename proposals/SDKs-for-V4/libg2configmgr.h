@@ -1,12 +1,14 @@
 /**********************************************************************************
- © Copyright Senzing, Inc. 2019-2021
+ ï¿½ Copyright Senzing, Inc. 2019-2021
  The source code for this program is not published or otherwise divested
  of its trade secrets, irrespective of what has been deposited with the U.S.
  Copyright Office.
 **********************************************************************************/
 
+
 #ifndef LIBG2CONFIGMGR_H
 #define LIBG2CONFIGMGR_H
+
 
 /* Platform specific function export header */
 #if defined(_WIN32)
@@ -33,7 +35,10 @@ extern "C"
    * @param iniParams A JSON string specifying the configuration parameters
    * @param verboseLogging A flag to enable deeper logging of the G2 processing
    */
-  _DLEXPORT long long G2ConfigMgr_init(const char *moduleName, const char *iniParams, const long long verboseLogging);
+  _DLEXPORT long long G2ConfigMgr_init(
+                            const char *moduleName,
+                            const char *iniParams,
+                            const long long verboseLogging);
 
 
   /**
@@ -47,19 +52,29 @@ extern "C"
   /**
    * @brief Registers a configuration handle with the backend data store
    */
-  _DLEXPORT long long G2ConfigMgr_addConfig(const char* configStr, const char* configComments, long long* configID);
+  _DLEXPORT long long G2ConfigMgr_addConfig(
+                            const char* configStr,
+                            const char* configComments,
+                            long long* configID);
 
 
   /**
    * @brief Retrieve configuration information from the backend data store
    */
-  _DLEXPORT long long G2ConfigMgr_getConfig(const long long configID, char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize));
+  _DLEXPORT long long G2ConfigMgr_getConfig(
+                            const long long configID,
+                            char **responseBuf,
+                            size_t *bufSize,
+                            void *(*resizeFunc)(void *ptr, size_t newSize));
 
 
   /**
    * @brief Retrieve a list of configurations from the backend data store
    */
-  _DLEXPORT long long G2ConfigMgr_getConfigList(char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize));
+  _DLEXPORT long long G2ConfigMgr_getConfigList(
+                            char **responseBuf,
+                            size_t *bufSize,
+                            void *(*resizeFunc)(void *ptr, size_t newSize));
 
 
   /**
@@ -77,7 +92,9 @@ extern "C"
   /**
    * @brief Replace the default configuration identifier in the backend data store
    */
-  _DLEXPORT long long G2ConfigMgr_replaceDefaultConfigID(const long long oldConfigID, const long long newConfigID);
+  _DLEXPORT long long G2ConfigMgr_replaceDefaultConfigID(
+                            const long long oldConfigID,
+                            const long long newConfigID);
 
 
   /**
@@ -106,6 +123,7 @@ extern "C"
 #ifdef __cplusplus 
 };
 #endif
+
 
 #endif /* LIBG2CONFIGMGR_H */
 

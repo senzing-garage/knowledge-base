@@ -5,8 +5,10 @@
  Copyright Office.
 **********************************************************************************/
 
+
 #ifndef LIB_G2_PRODUCT_H
 #define LIB_G2_PRODUCT_H
+
 
 /* Platform specific function export header */
 #if defined(_WIN32)
@@ -33,7 +35,10 @@ extern "C"
    * @param iniParams A JSON string specifying the configuration parameters
    * @param verboseLogging A flag to enable deeper logging of the G2 processing
    */
-  _DLEXPORT long long G2Product_init(const char *moduleName, const char *iniParams, const long long verboseLogging);
+  _DLEXPORT long long G2Product_init(
+                            const char *moduleName,
+                            const char *iniParams,
+                            const long long verboseLogging);
 
 
   /**
@@ -66,8 +71,16 @@ extern "C"
    *
    * @return 0 if the file is a valid license.
    */
-  _DLEXPORT long long G2Product_validateLicenseFile(const char* licenseFilePath, char **errorBuf, size_t *errorBufSize, void *(*resizeFunc)(void *ptr,size_t newSize));
-  _DLEXPORT long long G2Product_validateLicenseStringBase64(const char* licenseString, char **errorBuf, size_t *errorBufSize, void *(*resizeFunc)(void *ptr,size_t newSize));
+  _DLEXPORT long long G2Product_validateLicenseFile(
+                            const char* licenseFilePath,
+                            char **errorBuf,
+                            size_t *errorBufSize,
+                            void *(*resizeFunc)(void *ptr,size_t newSize));
+  _DLEXPORT long long G2Product_validateLicenseStringBase64(
+                            const char* licenseString,
+                            char **errorBuf,
+                            size_t *errorBufSize,
+                            void *(*resizeFunc)(void *ptr,size_t newSize));
 
 
   /**
@@ -105,6 +118,7 @@ extern "C"
 #ifdef __cplusplus 
 };
 #endif
+
 
 #endif
 
