@@ -1,6 +1,5 @@
 # V3 to V4 Changes
 
-
 ## Functions removed in V4
 
 1. G2_addRecordWithInfoWithReturnedRecordID
