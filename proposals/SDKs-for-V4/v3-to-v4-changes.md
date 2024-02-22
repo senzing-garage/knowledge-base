@@ -1,5 +1,40 @@
 # V3 to V4 Changes
 
+## Functions removed in V4
+
+1. G2_addRecordWithInfoWithReturnedRecordID
+1. G2_addRecordWithInfoWithReturnedRecordID
+1. G2_addRecordWithReturnedRecordID
+1. G2_addRecordWithReturnedRecordID
+1. G2_checkRecord
+1. G2_process
+1. G2_processWithInfo
+1. G2_processWithResponse
+1. G2_processWithResponseResize
+1. G2_purgeRepository
+1. G2_whyEntityByEntityID
+1. G2_whyEntityByEntityID_V2
+1. G2_whyEntityByRecordID
+1. G2_whyEntityByRecordID_V2
+1. G2Diagnostic_closeEntityListBySize
+1. G2Diagnostic_fetchNextEntityBySize
+1. G2Diagnostic_findEntitiesByFeatureIDs
+1. G2Diagnostic_getAvailableMemory
+1. G2Diagnostic_getDataSourceCounts
+1. G2Diagnostic_getDBInfo
+1. G2Diagnostic_getEntityDetails
+1. G2Diagnostic_getEntityListBySize
+1. G2Diagnostic_getEntityResume
+1. G2Diagnostic_getEntitySizeBreakdown
+1. G2Diagnostic_getFeature
+1. G2Diagnostic_getGenericFeatures
+1. G2Diagnostic_getLogicalCores
+1. G2Diagnostic_getMappingStatistics
+1. G2Diagnostic_getPhysicalCores
+1. G2Diagnostic_getRelationshipDetails
+1. G2Diagnostic_getResolutionStatistics
+1. G2Diagnostic_getTotalSystemMemory
+
 ## General
 
 1. `loadID` parameter is removed from
