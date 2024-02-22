@@ -311,76 +311,9 @@ extern "C"
 
 
   /**
-   * @brief
-   * This method will send a record for processing in g2. It is a synchronous
-   * call, i.e. it will wait until g2 actually processes the record, and then
-   * return any response message.
-   *
-   * @details
-   * This version of the process function will check if a response message
-   * was returned for the processing of the input message. If so, it will store
-   * it in the responseBuf parameter. This method will not throw an exception.
-   *
-   * @param record An input record to be processed.
-   * @param responseBuf After synchronously waiting for the input to
-   *        complete its processing, if there is any associated response message
-   *        generated from the input, it is stored in this response buffer.
-   *        If there was no response message upon successful processing, then
-   *        empty string is stored. If an error occurred, an error response is
-   *        stored here.
-   * @param bufSize The max number of bytes that can be stored in responseBuf.
-   *        The response buffer must be able to hold at least this many bytes,
-   *        or a resize method must be provided that may be used to resize
-   *        the buffer.  This will return the new size.
-   * @param resizeFunc A function pointer that can be used to resize the memory
-   *        buffer specified in the responseBuf argument.  This function will
-   *        be called to allocate more memory if the response buffer is not large
-   *        enough.  This argument may be NULL.  If it is NULL, the function
-   *        will return an error if the result is larger than the buffer.
-   * @return Returns 0 for success. Returns -1 if the response status indicates
-   *         failure or the G2 object is not intitialized. Returns -2 if an 
-   *         exception was thrown and caught. 
-   */
-  _DLEXPORT long long G2_process(
-                            const char *record);
-  _DLEXPORT long long G2_processWithInfo(
-                            const char *record,
-                            const long long flags,
-                            char **responseBuf,
-                            size_t *bufSize,
-                            void *(*resizeFunc)(void *ptr, size_t newSize));
-  _DLEXPORT long long G2_processWithResponse(
-                            const char *record,
-                            char *responseBuf,
-                            const size_t bufSize);
-  _DLEXPORT long long G2_processWithResponseResize(
-                            const char *record,
-                            char **responseBuf,
-                            size_t *bufSize,
-                            void *(*resizeFunc)(void *ptr, size_t newSize) );
-
-
-  /**
-   * @brief
-   * Used for checking specific records.
-   */
-  _DLEXPORT long long G2_checkRecord(
-                            const char *record,
-                            const char* recordQueryList,
-                            char **responseBuf,
-                            size_t *bufSize,
-                            void *(*resizeFunc)(void *ptr, size_t newSize) );
-
-
-  /**
    * @brief Process a record contained in the internal redo-queue
    * 
-   * @param responseBuf A memory buffer for returning the record that was
-   *        processed by this call.
-   * @param bufSize The max number of bytes that can be stored in responseBuf.
-   *        The response buffer must be able to hold at least this many bytes,
-   *        or a resize method must be provided that may be used to resize
-   *        the buffer.  This will return the new size.
+   * @param redoRecord Null terminated UT8-JSON record from G2_getRedoRecord
    * @param infoBuf Same as responseBuf. In a success, returns info about the 
             affected entities
    * @param infoBufSize Same as bufSize but for infoBuf
@@ -390,14 +323,8 @@ extern "C"
    *        enough.  This argument may be NULL.  If it is NULL, the function
    *        will return an error if the result is larger than the buffer.
    */
-  _DLEXPORT long long G2_processRedoRecord(
-                            char **responseBuf,
-                            size_t *bufSize,
-                            void *(*resizeFunc)(void *ptr, size_t newSize) );
-  _DLEXPORT long long G2_processRedoRecordWithInfo(
-                            const long long flags,
-                            char **responseBuf,
-                            size_t *bufSize,
+  _DLEXPORT long long G2_processRedoRecord(const char *redoRecord);
+  _DLEXPORT long long G2_processRedoRecordWithInfo(const char *redoRecord,
                             char **infoBuf,
                             size_t *infoBufSize,
                             void *(*resizeFunc)(void *ptr, size_t newSize));
@@ -533,11 +460,6 @@ extern "C"
                             const char* dataSourceCode,
                             const char* recordID,
                             const char* jsonData);
-  _DLEXPORT long long G2_addRecordWithReturnedRecordID(
-                            const char* dataSourceCode,
-                            const char* jsonData,
-                            char *recordIDBuf,
-                            const size_t bufSize);
   _DLEXPORT long long G2_addRecordWithInfo(
                             const char* dataSourceCode,
                             const char* recordID,
@@ -545,15 +467,6 @@ extern "C"
                             const long long flags,
                             char **responseBuf,
                             size_t *bufSize,
-                            void *(*resizeFunc)(void *ptr, size_t newSize));
-  _DLEXPORT long long G2_addRecordWithInfoWithReturnedRecordID(
-                            const char* dataSourceCode,
-                            const char* jsonData,
-                            const long long flags,
-                            char *recordIDBuf,
-                            const size_t recordIDBufSize,
-                            char **responseBuf,
-                            size_t *responseBufSize,
                             void *(*resizeFunc)(void *ptr, size_t newSize));
   _DLEXPORT long long G2_replaceRecord(
                             const char* dataSourceCode,

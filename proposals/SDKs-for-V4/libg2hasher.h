@@ -5,8 +5,10 @@
  Copyright Office.
 **********************************************************************************/
 
+
 #ifndef LIBG2HASHER_H
 #define LIBG2HASHER_H
+
 
 // Platform specific function export header
 #if defined(_WIN32)
@@ -33,8 +35,15 @@ extern "C"
    * @param iniParams A JSON string specifying the configuration parameters
    * @param verboseLogging A flag to enable deeper logging of the G2 processing
    */
-  _DLEXPORT long long G2Hasher_init(const char *moduleName, const char *iniParams, const long long verboseLogging);
-  _DLEXPORT long long G2Hasher_initWithConfig(const char *moduleName, const char *iniParams, const char *configJson, const long long verboseLogging);
+  _DLEXPORT long long G2Hasher_init(
+                            const char *moduleName,
+                            const char *iniParams,
+                            const long long verboseLogging);
+  _DLEXPORT long long G2Hasher_initWithConfig(
+                            const char *moduleName,
+                            const char *iniParams,
+                            const char *configJson,
+                            const long long verboseLogging);
 
 
   /**
@@ -63,7 +72,11 @@ extern "C"
    *         failure or the G2 object is not intitialized. Returns -2 if an 
    *         exception was thrown and caught. 
    */
-  _DLEXPORT long long G2Hasher_process(const char *record, char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize));
+  _DLEXPORT long long G2Hasher_process(
+                            const char *record,
+                            char **responseBuf,
+                            size_t *bufSize,
+                            void *(*resizeFunc)(void *ptr, size_t newSize));
 
 
   /**
@@ -79,7 +92,10 @@ extern "C"
    *        be called to allocate more memory if the response buffer is not large
    *        enough.
    */
-  _DLEXPORT long long G2Hasher_exportTokenLibrary(char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize));
+  _DLEXPORT long long G2Hasher_exportTokenLibrary(
+                            char **responseBuf,
+                            size_t *bufSize,
+                            void *(*resizeFunc)(void *ptr, size_t newSize));
 
   
   /**
@@ -108,6 +124,7 @@ extern "C"
 #ifdef __cplusplus 
 };
 #endif
+
 
 #endif // LIBG2HASHER_H
 
