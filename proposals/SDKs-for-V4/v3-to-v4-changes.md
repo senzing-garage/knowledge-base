@@ -3,8 +3,6 @@
 ## Functions removed in V4
 
 1. G2_addRecordWithInfoWithReturnedRecordID
-1. G2_addRecordWithInfoWithReturnedRecordID
-1. G2_addRecordWithReturnedRecordID
 1. G2_addRecordWithReturnedRecordID
 1. G2_checkRecord
 1. G2_process
@@ -34,6 +32,10 @@
 1. G2Diagnostic_getRelationshipDetails
 1. G2Diagnostic_getResolutionStatistics
 1. G2Diagnostic_getTotalSystemMemory
+
+## Functions added in V4
+
+1. G2Diagnostic_purgeRepository
 
 ## General
 
