@@ -46,27 +46,9 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
 |---------------|----------------|---------------|--------|
 | G2Diagnostic_checkDBPerf(secondsToRun, responseBuf, bufSize, resizeFunc) | checkDBPerf(secondsToRun) | string | |
 | G2Diagnostic_clearLastException() | [not-public] | | |
-| G2Diagnostic_closeEntityListBySize(EntityListBySizeHandle entityListBySizeHandle) | [not-implemented]  | | |
 | G2Diagnostic_destroy() | | - | |
-| G2Diagnostic_fetchNextEntityBySize(entityListBySizeHandle, responseBuf, bufSize) | [not-implemented] | | |
-| G2Diagnostic_findEntitiesByFeatureIDs(features, responseBuf, bufSize, resizeFunc) | [not-implemented] | | |
-| G2Diagnostic_getAvailableMemory() | | int64 | |
-| G2Diagnostic_getDBInfo(responseBuf, bufSize, resizeFunc) | getDBInfo() | string | |
-| G2Diagnostic_getDataSourceCounts(responseBuf, bufSize, resizeFunc) | [not-implemented] | | |
-| G2Diagnostic_getEntityDetails(entityID, includeInternalFeatures, responseBuf, bufSize, resizeFunc) | [not-implemented] | | |
-| G2Diagnostic_getEntityListBySize(entitySize, entityListBySizeHandle) | [not-implemented] | | |
-| G2Diagnostic_getEntityResume(entityID, responseBuf, bufSize, resizeFunc) | [not-implemented] | | |
-| G2Diagnostic_getEntitySizeBreakdown(minimumEntitySize, includeInternalFeatures, responseBuf, bufSize, resizeFunc) | [not-implemented] | | |
-| G2Diagnostic_getFeature(libFeatID, responseBuf, bufSize, resizeFunc) | [not-implemented] | | |
-| G2Diagnostic_getGenericFeatures(featureType, maximumEstimatedCount, responseBuf, bufSize, resizeFunc) | [not-implemented] | | |
 | G2Diagnostic_getLastException(buffer, bufSize) | [not-public] | | |
 | G2Diagnostic_getLastExceptionCode() | [not-public] | | |
-| G2Diagnostic_getLogicalCores() | | int | |
-| G2Diagnostic_getMappingStatistics(includeInternalFeatures, responseBuf, bufSize, resizeFunc) | [not-implemented] | | |
-| G2Diagnostic_getPhysicalCores() | | int | |
-| G2Diagnostic_getRelationshipDetails(relationshipID, includeInternalFeatures, responseBuf, bufSize, resizeFunc) | [not-implemented] | | |
-| G2Diagnostic_getResolutionStatistics(responseBuf, bufSize, resizeFunc) | [not-implemented] | | |
-| G2Diagnostic_getTotalSystemMemory() | | int64 | |
 | G2Diagnostic_init(moduleName, iniParams, verboseLogging) | | - | |
 | G2Diagnostic_initWithConfigID(moduleName, iniParams, initConfigID, verboseLogging) | | - | |
 | G2Diagnostic_reinit(initConfigID) | | - | |
@@ -77,9 +59,6 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
 |---------------|----------------|---------------|--------|
 | G2_addRecord(dataSourceCode, recordID, jsonData, loadID) | addRecord(dataSourceCode, recordID, jsonData, resultFlags) | string | SM-2 |
 | G2_addRecordWithInfo(dataSourceCode, recordID, jsonData, loadID, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
-| G2_addRecordWithInfoWithReturnedRecordID(dataSourceCode, jsonData, loadID, flags, recordIDBuf, recordIDBufSize, responseBuf, responseBufSize, resizeFunc) | [not-implemented] | | |
-| G2_addRecordWithReturnedRecordID(dataSourceCode, jsonData, loadID, recordIDBuf, bufSize) | [not-implemented] | | |
-| G2_checkRecord(record, recordQueryList, responseBuf, bufSize, resizeFunc ) | [not-implemented] | | |
 | G2_clearLastException() | [not-public] | | |
 | G2_closeExport(responseHandle) | | - | |
 | G2_countRedoRecords() | | int64 | |
@@ -127,13 +106,8 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
 | G2_init(moduleName, iniParams, verboseLogging) | | - | |
 | G2_initWithConfigID(moduleName, iniParams, initConfigID, verboseLogging) | | - | |
 | G2_primeEngine() | | - | |
-| G2_process(record) | process(record, resultFlags)| string | |
-| G2_processWithInfo(record, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | string | |
 | G2_processRedoRecord(responseBuf, bufSize, resizeFunc ) | [not-implemented] | | |
 | G2_processRedoRecordWithInfo(flags, responseBuf, bufSize, infoBuf, infoBufSize, resizeFunc) | [not-implemented] | | |
-| G2_processWithResponse(record, responseBuf, bufSize) | [not-implemented] | | |
-| G2_processWithResponseResize(record, responseBuf, bufSize, resizeFunc ) | [not-implemented] | | |
-| G2_purgeRepository() | [moved to G2Diagnostic] | | |
 | G2_reevaluateEntity(entityID, flags) | reevaluateEntity(entityID, flags, resultFlags) | string | |
 | G2_reevaluateEntityWithInfo(entityID, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | string | |
 | G2_reevaluateRecord(dataSourceCode, recordID, flags) | reevaluateRecord(dataSourceCode, recordID, flags, resultFlags) | string | |
@@ -147,10 +121,6 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
 | G2_stats(responseBuf, bufSize, resizeFunc ) | stats() | string | SM-1 |
 | G2_whyEntities(entityID1, entityID2, responseBuf, bufSize, resizeFunc) | whyEntities(entityID1, entityID2, flags) | string | SM-1, SM-3.3 |
 | G2_whyEntities_V2(entityID1, entityID2, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
-| G2_whyEntityByEntityID(entityID, responseBuf, bufSize, resizeFunc) | whyEntityByEntityID(entityID, flags) | string | SM-1, SM-3.3 |
-| G2_whyEntityByEntityID_V2(entityID, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
-| G2_whyEntityByRecordID(dataSourceCode, recordID, responseBuf, bufSize, resizeFunc) | whyEntityByRecordID(dataSourceCode, recordID, flags) | string | SM-1, SM-3.3 |
-| G2_whyEntityByRecordID_V2(dataSourceCode, recordID, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
 | G2_whyRecordInEntity(dataSourceCode, recordID, responseBuf, bufSize, resizeFunc) | whyRecordInEntity(dataSourceCode, recordID, flags) | string | SM-1, SM-3.3 |
 | G2_whyRecordInEntity_V2(dataSourceCode, recordID, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
 | G2_whyRecords(dataSourceCode1, recordID1, dataSourceCode2, recordID2, responseBuf, bufSize, resizeFunc) | whyRecords(dataSourceCode1, recordID1, dataSourceCode2, recordID2, flags) | string | SM-1, SM-3.3 |
