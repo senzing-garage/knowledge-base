@@ -35,11 +35,6 @@
 |---------------|----------------|---------------|--------|
 | G2Diagnostic_checkDBPerf(secondsToRun, responseBuf, bufSize, resizeFunc) | checkDBPerf(secondsToRun) | string | |
 | G2Diagnostic_destroy() | | - | |
-| G2Diagnostic_getAvailableMemory() | | int64 | |
-| G2Diagnostic_getDBInfo(responseBuf, bufSize, resizeFunc) | getDBInfo() | string | |
-| G2Diagnostic_getLogicalCores() | | int | |
-| G2Diagnostic_getPhysicalCores() | | int | |
-| G2Diagnostic_getTotalSystemMemory() | | int64 | |
 | G2Diagnostic_init(moduleName, iniParams, verboseLogging) | | - | |
 | G2Diagnostic_initWithConfigID(moduleName, iniParams, initConfigID, verboseLogging) | | - | |
 | G2Diagnostic_reinit(initConfigID) | | - | |
@@ -79,7 +74,6 @@
 | G2_init(moduleName, iniParams, verboseLogging) | | - | |
 | G2_initWithConfigID(moduleName, iniParams, initConfigID, verboseLogging) | | - | |
 | G2_primeEngine() | | - | |
-| G2_process(record) | process(record, resultFlags)| string | |
 | G2_reevaluateEntity(entityID, flags) | reevaluateEntity(entityID, flags, resultFlags) | string | |
 | G2_reevaluateRecord(dataSourceCode, recordID, flags) | reevaluateRecord(dataSourceCode, recordID, flags, resultFlags) | string | |
 | G2_reinit(initConfigID) | | - | |
@@ -87,8 +81,6 @@
 | G2_searchByAttributes(jsonData, responseBuf, bufSize, resizeFunc) | searchByAttributes(jsonData, searchProfile, flags) | string | SM-2 |
 | G2_stats(responseBuf, bufSize, resizeFunc ) | stats() | string | SM-1 |
 | G2_whyEntities(entityID1, entityID2, responseBuf, bufSize, resizeFunc) | whyEntities(entityID1, entityID2, flags) | string | SM-1, SM-3.3 |
-| G2_whyEntityByEntityID(entityID, responseBuf, bufSize, resizeFunc) | whyEntityByEntityID(entityID, flags) | string | SM-1, SM-3.3 |
-| G2_whyEntityByRecordID(dataSourceCode, recordID, responseBuf, bufSize, resizeFunc) | whyEntityByRecordID(dataSourceCode, recordID, flags) | string | SM-1, SM-3.3 |
 | G2_whyRecordInEntity(dataSourceCode, recordID, responseBuf, bufSize, resizeFunc) | whyRecordInEntity(dataSourceCode, recordID, flags) | string | SM-1, SM-3.3 |
 | G2_whyRecords(dataSourceCode1, recordID1, dataSourceCode2, recordID2, responseBuf, bufSize, resizeFunc) | whyRecords(dataSourceCode1, recordID1, dataSourceCode2, recordID2, flags) | string | SM-1, SM-3.3 |
 
