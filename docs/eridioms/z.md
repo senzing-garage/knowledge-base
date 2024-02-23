@@ -1,3 +1,5 @@
+# Table 3
+
 | Increased profitability through                                    | Count of Increased profitability through |
 | ------------------------------------------------------------------ | ---------------------------------------- |
 | improved operational efficiency and resource allocation.           | 19                                       |
