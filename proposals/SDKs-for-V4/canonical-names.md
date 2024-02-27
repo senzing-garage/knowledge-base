@@ -135,10 +135,10 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
 | G2Product_getLastException(buffer, bufSize) | [not-public] | | |
 | G2Product_getLastExceptionCode() | [not-public]| | |
 | G2Product_init(moduleName, iniParams, verboseLogging) | | - | |
-| G2Product_license() | | string | SM-1 |
+| G2Product_license() | getLicense() | string | SM-1 |
 | G2Product_validateLicenseFile(licenseFilePath, errorBuf, errorBufSize, resizeFunc) | [not-implemented] | | |
 | G2Product_validateLicenseStringBase64(licenseString, errorBuf, errorBufSize, resizeFunc) | [not-implemented] | | |
-| G2Product_version() | | string | SM-1 |
+| G2Product_version() | getVersion() | string | SM-1 |
 
 ## Method signature proposals
 
