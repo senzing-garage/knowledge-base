@@ -1,5 +1,8 @@
 # Candidate method names - condensed
 
+To see the expanded version, visit
+[canonical names](canonical-names.md).
+
 ## Mapping
 
 ### G2Config
