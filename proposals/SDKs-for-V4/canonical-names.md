@@ -115,7 +115,7 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
 | G2_reinit(initConfigID) | | - | |
 | G2_replaceRecord(dataSourceCode, recordID, jsonData) | replaceRecord(dataSourceCode, recordID, recordDefinition, flags) | string | |
 | G2_replaceRecordWithInfo(dataSourceCode, recordID, jsonData, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
-| G2_searchByAttributes(jsonData, responseBuf, bufSize, resizeFunc) | searchByAttributes(jsonData, searchProfile, flags) | string | SM-2 |
+| G2_searchByAttributes(jsonData, responseBuf, bufSize, resizeFunc) | searchByAttributes(searchCriteria, searchProfile, flags) | string | SM-2 |
 | G2_searchByAttributes_V2(jsonData, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
 | G2_searchByAttributes_V3(jsonData, searchProfile, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
 | G2_stats(responseBuf, bufSize, resizeFunc ) | stats() | string | SM-1 |
