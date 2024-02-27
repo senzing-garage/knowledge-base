@@ -60,7 +60,7 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
 | G2_addRecord(dataSourceCode, recordID, jsonData) | addRecord(dataSourceCode, recordID, recordDefinition, resultFlags) | string | |
 | G2_addRecordWithInfo(dataSourceCode, recordID, jsonData, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
 | G2_clearLastException() | [not-public] | | |
-| G2_closeExport(responseHandle) | | - | |
+| G2_closeExport(responseHandle) | closeExport(exportHandle) | - | |
 | G2_countRedoRecords() | | int64 | |
 | G2_deleteRecord(dataSourceCode, recordID) | deleteRecord(dataSourceCode, recordID, resultFlags) | string | |
 | G2_deleteRecordWithInfo(dataSourceCode, recordID, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
