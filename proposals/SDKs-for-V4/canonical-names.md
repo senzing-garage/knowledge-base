@@ -57,12 +57,12 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
 
 | Existing name | Canonical Name | Return values | Smells |
 |---------------|----------------|---------------|--------|
-| G2_addRecord(dataSourceCode, recordID, jsonData) | addRecord(dataSourceCode, recordID, recordDefinition, resultFlags) | string | |
+| G2_addRecord(dataSourceCode, recordID, jsonData) | addRecord(dataSourceCode, recordID, recordDefinition, flags) | string | |
 | G2_addRecordWithInfo(dataSourceCode, recordID, jsonData, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
 | G2_clearLastException() | [not-public] | | |
 | G2_closeExport(responseHandle) | closeExport(exportHandle) | - | |
 | G2_countRedoRecords() | | int64 | |
-| G2_deleteRecord(dataSourceCode, recordID) | deleteRecord(dataSourceCode, recordID, resultFlags) | string | |
+| G2_deleteRecord(dataSourceCode, recordID) | deleteRecord(dataSourceCode, recordID, flags) | string | |
 | G2_deleteRecordWithInfo(dataSourceCode, recordID, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
 | G2_destroy() | | - | |
 | G2_exportCSVEntityReport(csvColumnList, flags, responseHandle) | exportCSVEntityReport(csvColumnList, flags) | exportHandle | |
@@ -108,12 +108,12 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
 | G2_primeEngine() | | - | |
 | G2_processRedoRecord(responseBuf, bufSize, resizeFunc ) | TBD | | |
 | G2_processRedoRecordWithInfo(flags, responseBuf, bufSize, infoBuf, infoBufSize, resizeFunc) | TBD | | |
-| G2_reevaluateEntity(entityID, flags) | reevaluateEntity(entityID, flags, resultFlags) | string | |
+| G2_reevaluateEntity(entityID, flags) | reevaluateEntity(entityID, flags, resultFlags) | string | SM-6 |
 | G2_reevaluateEntityWithInfo(entityID, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | string | |
-| G2_reevaluateRecord(dataSourceCode, recordID, flags) | reevaluateRecord(dataSourceCode, recordID, flags, resultFlags) | string | |
+| G2_reevaluateRecord(dataSourceCode, recordID, flags) | reevaluateRecord(dataSourceCode, recordID, flags, resultFlags) | string | SM-6 |
 | G2_reevaluateRecordWithInfo(dataSourceCode, recordID, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
 | G2_reinit(initConfigID) | | - | |
-| G2_replaceRecord(dataSourceCode, recordID, jsonData) | replaceRecord(dataSourceCode, recordID, jsonData, resultFlags) | string | SM-2 |
+| G2_replaceRecord(dataSourceCode, recordID, jsonData) | replaceRecord(dataSourceCode, recordID, jsonData, flags) | string | SM-2 |
 | G2_replaceRecordWithInfo(dataSourceCode, recordID, jsonData, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
 | G2_searchByAttributes(jsonData, responseBuf, bufSize, resizeFunc) | searchByAttributes(jsonData, searchProfile, flags) | string | SM-2 |
 | G2_searchByAttributes_V2(jsonData, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
@@ -239,3 +239,4 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
    1. SM-3.3 Non-verb (The "to" principle)
 1. SM-4: Method name does not convey what is happening
 1. SM-5: Multiple returns not supported in Java
+1. SM-6: Can `resultFlags` be the high-order bits of `flags` and cleared out before sending to Senzing C API?
