@@ -100,7 +100,6 @@
 1. Functions affected:
    - G2_addRecordWithInfo
    - G2_deleteRecordWithInfo
-   - G2_processWithInfo
    - G2_reevaluateEntityWithInfo
    - G2_reevaluateRecordWithInfo
    - G2_replaceRecordWithInfo
