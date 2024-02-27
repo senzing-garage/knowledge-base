@@ -57,7 +57,7 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
 
 | Existing name | Canonical Name | Return values | Smells |
 |---------------|----------------|---------------|--------|
-| G2_addRecord(dataSourceCode, recordID, jsonData) | addRecord(dataSourceCode, recordID, jsonData, resultFlags) | string | SM-2 |
+| G2_addRecord(dataSourceCode, recordID, jsonData) | addRecord(dataSourceCode, recordID, recordDefinition, resultFlags) | string | |
 | G2_addRecordWithInfo(dataSourceCode, recordID, jsonData, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
 | G2_clearLastException() | [not-public] | | |
 | G2_closeExport(responseHandle) | | - | |
