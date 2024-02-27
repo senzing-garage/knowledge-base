@@ -22,7 +22,7 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
 | G2Config_init(moduleName, iniParams, verboseLogging) | | - | |
 | G2Config_listDataSources(configHandle, responseBuf, bufSize, resizeFunc) | getDataSources(configHandle) | string | SM-3.2 |
 | G2Config_load(jsonConfig, configHandle) | load(configDefinition) | configHandle | SM-2 |
-| G2Config_save(configHandle, responseBuf, bufSize, resizeFunc) | save(configHandle)  | string | |
+| G2Config_save(configHandle, responseBuf, bufSize, resizeFunc) | save(configHandle)  | string | SM-4 |
 
 ### G2ConfigMgr
 
@@ -237,3 +237,4 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
    1. SM-3.1 `find` instead of standard `get`
    1. SM-3.2 `list` instead of standard `get`
    1. SM-3.3 Non-verb (The "to" principle)
+1. SM-4: Method name does not convey what is happening
