@@ -15,7 +15,7 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
 | G2Config_clearLastException() | [not-public] | | |
 | G2Config_close(configHandle) | | - | |
 | G2Config_create(configHandle) | create() | configHandle | |
-| G2Config_deleteDataSource(configHandle, inputJson) | deleteDataSource(configHandle, ???) | - | |
+| G2Config_deleteDataSource(configHandle, inputJson) | deleteDataSource(configHandle, dataSourceCode) | - | |
 | G2Config_destroy() | | - | |
 | G2Config_getLastException(buffer, bufSize) | [not-public] | | |
 | G2Config_getLastExceptionCode() | [not-public] | | |
