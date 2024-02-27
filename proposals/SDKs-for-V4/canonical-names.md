@@ -106,8 +106,8 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
 | G2_init(moduleName, iniParams, verboseLogging) | | - | |
 | G2_initWithConfigID(moduleName, iniParams, initConfigID, verboseLogging) | | - | |
 | G2_primeEngine() | | - | |
-| G2_processRedoRecord(responseBuf, bufSize, resizeFunc ) | [not-implemented] | | |
-| G2_processRedoRecordWithInfo(flags, responseBuf, bufSize, infoBuf, infoBufSize, resizeFunc) | [not-implemented] | | |
+| G2_processRedoRecord(responseBuf, bufSize, resizeFunc ) | TBD | | |
+| G2_processRedoRecordWithInfo(flags, responseBuf, bufSize, infoBuf, infoBufSize, resizeFunc) | TBD | | |
 | G2_reevaluateEntity(entityID, flags) | reevaluateEntity(entityID, flags, resultFlags) | string | |
 | G2_reevaluateEntityWithInfo(entityID, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | string | |
 | G2_reevaluateRecord(dataSourceCode, recordID, flags) | reevaluateRecord(dataSourceCode, recordID, flags, resultFlags) | string | |
