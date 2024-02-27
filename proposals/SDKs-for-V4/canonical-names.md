@@ -115,10 +115,10 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
 | G2_reinit(initConfigID) | | - | |
 | G2_replaceRecord(dataSourceCode, recordID, jsonData) | replaceRecord(dataSourceCode, recordID, recordDefinition, flags) | string | |
 | G2_replaceRecordWithInfo(dataSourceCode, recordID, jsonData, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
-| G2_searchByAttributes(jsonData, responseBuf, bufSize, resizeFunc) | searchByAttributes(searchCriteria, searchProfile, flags) | string | SM-2 |
+| G2_searchByAttributes(jsonData, responseBuf, bufSize, resizeFunc) | searchByAttributes(searchCriteria, searchProfile, flags) | string | |
 | G2_searchByAttributes_V2(jsonData, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
 | G2_searchByAttributes_V3(jsonData, searchProfile, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
-| G2_stats(responseBuf, bufSize, resizeFunc ) | stats() | string | SM-1 |
+| G2_stats(responseBuf, bufSize, resizeFunc ) | getStats() | string | |
 | G2_whyEntities(entityID1, entityID2, responseBuf, bufSize, resizeFunc) | whyEntities(entityID1, entityID2, flags) | string | SM-1, SM-3.3 |
 | G2_whyEntities_V2(entityID1, entityID2, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
 | G2_whyRecordInEntity(dataSourceCode, recordID, responseBuf, bufSize, resizeFunc) | whyRecordInEntity(dataSourceCode, recordID, flags) | string | SM-1, SM-3.3 |
