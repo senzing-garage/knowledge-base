@@ -19,7 +19,7 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
 | G2Config_destroy() | | - | |
 | G2Config_getLastException(buffer, bufSize) | [not-public] | | |
 | G2Config_getLastExceptionCode() | [not-public] | | |
-| G2Config_init(moduleName, iniParams, verboseLogging) | init(instanceName, iniParams, verboseLogging) | - | |
+| G2Config_init(moduleName, iniParams, verboseLogging) | init(instanceName, settings, verboseLogging) | - | |
 | G2Config_listDataSources(configHandle, responseBuf, bufSize, resizeFunc) | getDataSources(configHandle) | string | |
 | G2Config_load(jsonConfig, configHandle) | load(configDefinition) | configHandle | |
 | G2Config_save(configHandle, responseBuf, bufSize, resizeFunc) | save(configHandle)  | string | SM-4, ?? |
@@ -36,7 +36,7 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
 | G2ConfigMgr_getDefaultConfigID(configID) | getDefaultConfigID() | int64 | |
 | G2ConfigMgr_getLastException(buffer, bufSize) | [not-public] | | |
 | G2ConfigMgr_getLastExceptionCode() | [not-public] | | |
-| G2ConfigMgr_init(moduleName, iniParams, verboseLogging) | init(instanceName, iniParams, verboseLogging) | - | |
+| G2ConfigMgr_init(moduleName, iniParams, verboseLogging) | init(instanceName, settings, verboseLogging) | - | |
 | G2ConfigMgr_replaceDefaultConfigID(oldConfigID, newConfigID) | replaceDefaultConfigID(currentDefaultConfigID, newDefaultConfigID) | - | |
 | G2ConfigMgr_setDefaultConfigID(configID) | | - | |
 
@@ -49,7 +49,7 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
 | G2Diagnostic_destroy() | | - | |
 | G2Diagnostic_getLastException(buffer, bufSize) | [not-public] | | |
 | G2Diagnostic_getLastExceptionCode() | [not-public] | | |
-| G2Diagnostic_init(moduleName, iniParams, verboseLogging) | init(instanceName, iniParams, verboseLogging, initConfigID) | | `initConfigID` can be `nil`, `None`, `null` |
+| G2Diagnostic_init(moduleName, iniParams, verboseLogging) | init(instanceName, settings, verboseLogging, initConfigID) | | `initConfigID` can be `nil`, `None`, `null` |
 | G2Diagnostic_initWithConfigID(moduleName, iniParams, initConfigID, verboseLogging) | [collapsed] | | |
 | G2Diagnostic_purgeRepository(????) | | | |
 | G2Diagnostic_reinit(initConfigID) | reinit(configID) | - | |
@@ -104,7 +104,7 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
 | G2_getVirtualEntityByRecordID_V2(recordList, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
 | G2_howEntityByEntityID(entityID, responseBuf, bufSize, resizeFunc) | howEntityByEntityID(entityID, flags) | string | SM-1, SM-3.3 |
 | G2_howEntityByEntityID_V2(entityID, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
-| G2_init(moduleName, iniParams, verboseLogging) | init(instanceName, iniParams, verboseLogging, initConfigID) | - | `initConfigID` can be `nil`, `None`, `null` |
+| G2_init(moduleName, iniParams, verboseLogging) | init(instanceName, settings, verboseLogging, initConfigID) | - | `initConfigID` can be `nil`, `None`, `null` |
 | G2_initWithConfigID(moduleName, iniParams, initConfigID, verboseLogging) | [collapsed]  | | |
 | G2_primeEngine() | | - | |
 | G2_processRedoRecord(responseBuf, bufSize, resizeFunc ) | TBD | | |
@@ -135,7 +135,7 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
 | G2Product_destroy() | | - | |
 | G2Product_getLastException(buffer, bufSize) | [not-public] | | |
 | G2Product_getLastExceptionCode() | [not-public]| | |
-| G2Product_init(moduleName, iniParams, verboseLogging) | init(instanceName, iniParams, verboseLogging) | - | |
+| G2Product_init(moduleName, iniParams, verboseLogging) | init(instanceName, settings, verboseLogging) | - | |
 | G2Product_license() | getLicense() | string | |
 | G2Product_validateLicenseFile(licenseFilePath, errorBuf, errorBufSize, resizeFunc) | [not-implemented] | | |
 | G2Product_validateLicenseStringBase64(licenseString, errorBuf, errorBufSize, resizeFunc) | [not-implemented] | | |
