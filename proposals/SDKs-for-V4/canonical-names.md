@@ -37,6 +37,7 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
 | G2ConfigMgr_getLastException(buffer, bufSize) | [not-public] | | |
 | G2ConfigMgr_getLastExceptionCode() | [not-public] | | |
 | G2ConfigMgr_init(moduleName, iniParams, verboseLogging) | | - | |
+| G2ConfigMgr_purgeDatabase(????) | | | |
 | G2ConfigMgr_replaceDefaultConfigID(oldConfigID, newConfigID) | replaceDefaultConfigID(currentDefaultConfigID, newDefaultConfigID) | - | |
 | G2ConfigMgr_setDefaultConfigID(configID) | | - | |
 
