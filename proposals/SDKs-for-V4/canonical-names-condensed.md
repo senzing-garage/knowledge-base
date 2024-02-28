@@ -12,12 +12,12 @@ To see the expanded version, visit
 | G2Config_addDataSource(configHandle, inputJson, responseBuf, bufSize, resizeFunc) | addDataSource(configHandle, dataSourceDefinition) | string | |
 | G2Config_close(configHandle) | | - | |
 | G2Config_create(configHandle) | create() | configHandle | |
-| G2Config_deleteDataSource(configHandle, inputJson) | deleteDataSource(configHandle, dataSourceCode) | - | |
+| G2Config_deleteDataSource(configHandle, inputJson) | deleteDataSource(configHandle, dataSourceCode) | - | ?? |
 | G2Config_destroy() | | - | |
 | G2Config_init(moduleName, iniParams, verboseLogging) | | - | |
 | G2Config_listDataSources(configHandle, responseBuf, bufSize, resizeFunc) | getDataSources(configHandle) | string | |
 | G2Config_load(jsonConfig, configHandle) | load(configDefinition) | configHandle | |
-| G2Config_save(configHandle, responseBuf, bufSize, resizeFunc) | save(configHandle)  | string | SM-4 |
+| G2Config_save(configHandle, responseBuf, bufSize, resizeFunc) | save(configHandle)  | string | SM-4, ?? |
 
 ### G2ConfigMgr
 
@@ -29,7 +29,7 @@ To see the expanded version, visit
 | G2ConfigMgr_getConfigList(responseBuf, bufSize, resizeFunc) | getConfigList() | string | |
 | G2ConfigMgr_getDefaultConfigID(configID) | getDefaultConfigID() | int64 | |
 | G2ConfigMgr_init(moduleName, iniParams, verboseLogging) | | - | |
-| G2ConfigMgr_replaceDefaultConfigID(oldConfigID, newConfigID) | | - | |
+| G2ConfigMgr_replaceDefaultConfigID(oldConfigID, newConfigID) | replaceDefaultConfigID(currentDefaultConfigID, newDefaultConfigID) | - | |
 | G2ConfigMgr_setDefaultConfigID(configID) | | - | |
 
 ### G2Diagnostic
@@ -40,7 +40,8 @@ To see the expanded version, visit
 | G2Diagnostic_destroy() | | - | |
 | G2Diagnostic_init(moduleName, iniParams, verboseLogging) | | - | |
 | G2Diagnostic_initWithConfigID(moduleName, iniParams, initConfigID, verboseLogging) | | - | |
-| G2Diagnostic_reinit(initConfigID) | | - | |
+| G2Diagnostic_purgeRepository(????) | | | |
+| G2Diagnostic_reinit(initConfigID) | reinit(configID) | - | |
 
 ### G2Engine
 
@@ -53,15 +54,15 @@ To see the expanded version, visit
 | G2_destroy() | | - | |
 | G2_exportCSVEntityReport(csvColumnList, flags, responseHandle) | exportCSVEntityReport(csvColumnList, flags) | exportHandle | |
 | G2_exportConfig(responseBuf, bufSize, resizeFunc) | getActiveConfig() | string | |
-| G2_exportConfigAndConfigID(responseBuf, bufSize, resizeFunc, configID) | getActiveConfigAndConfigID() | string, int64 | SM-5 |
+| G2_exportConfigAndConfigID(responseBuf, bufSize, resizeFunc, configID) |  [not-implemented] ??? | string, int64 | SM-5 |
 | G2_exportJSONEntityReport(flags, responseHandle) | exportJSONEntityReport(flags) | exportHandle | |
 | G2_fetchNext(responseHandle, responseBuf, bufSize) | fetchNext(exportHandle)  | string | |
 | G2_findInterestingEntitiesByEntityID(entityID, flags, responseBuf, bufSize, resizeFunc) | findInterestingEntitiesByEntityID(entityID, flags) | string | SM-3.1 |
 | G2_findInterestingEntitiesByRecordID(dataSourceCode, recordID, flags, responseBuf, bufSize, resizeFunc) | findInterestingEntitiesByRecordID(dataSourceCode, recordID, flags) | string | SM-3.1 |
 | G2_findNetworkByEntityID(entityList, maxDegree, buildOutDegree, maxEntities, responseBuf, bufSize, resizeFunc) | findNetworkByEntityID(entityList, maxDegrees, buildOutDegree, maxEntities, flags)  | string | SM-3.1 |
 | G2_findNetworkByRecordID(recordList, maxDegree, buildOutDegree, maxEntities, responseBuf, bufSize, resizeFunc) | findNetworkByRecordID(recordList, maxDegrees, buildOutDegree, maxEntities, flags) | string | SM-3.1 |
-| G2_findPathByEntityID(entityID1, entityID2, maxDegree, responseBuf, bufSize, resizeFunc) | findPathByEntityID(entityID1, entityID2, maxDegrees, excludedEntities, requiredDataSources, flags) | string | SM-3.1 |
-| G2_findPathByRecordID(dataSourceCode1, recordID1, dataSourceCode2, recordID2, maxDegree, responseBuf, bufSize, resizeFunc) | findPathByRecordID(dataSourceCode1, recordID1, dataSourceCode2, recordID2, maxDegrees, excludedEntities, requiredDataSources, flags) | string | SM-3.1 |
+| G2_findPathByEntityID(entityID1, entityID2, maxDegree, responseBuf, bufSize, resizeFunc) | findPathByEntityID(entityID1, entityID2, maxDegrees, exclusions, requiredDataSources, flags) | string | SM-3.1 |
+| G2_findPathByRecordID(dataSourceCode1, recordID1, dataSourceCode2, recordID2, maxDegree, responseBuf, bufSize, resizeFunc) | findPathByRecordID(dataSourceCode1, recordID1, dataSourceCode2, recordID2, maxDegrees, exclusions, requiredDataSources, flags) | string | SM-3.1 |
 | G2_getActiveConfigID(configID) | getActiveConfigID() | int64 | |
 | G2_getEntityByEntityID(entityID, responseBuf, bufSize, resizeFunc) | getEntityByEntityID(entityID, flags) | string | |
 | G2_getEntityByRecordID(dataSourceCode, recordID, responseBuf, bufSize, resizeFunc) | getEntityByRecordID(dataSourceCode, recordID, flags) | string | |
