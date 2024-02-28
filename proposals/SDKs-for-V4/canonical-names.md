@@ -137,8 +137,8 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
 | G2Product_getLastExceptionCode() | [not-public]| | |
 | G2Product_init(moduleName, iniParams, verboseLogging) | initialize(instanceName, settings, verboseLogging) | - | |
 | G2Product_license() | getLicense() | string | |
-| G2Product_validateLicenseFile(licenseFilePath, errorBuf, errorBufSize, resizeFunc) | [not-implemented] | | |
-| G2Product_validateLicenseStringBase64(licenseString, errorBuf, errorBufSize, resizeFunc) | [not-implemented] | | |
+| G2Product_validateLicenseFile(licenseFilePath, errorBuf, errorBufSize, resizeFunc) | ??? | | |
+| G2Product_validateLicenseStringBase64(licenseString, errorBuf, errorBufSize, resizeFunc) | ??? | | |
 | G2Product_version() | getVersion() | string | |
 
 ## Method signature proposals
