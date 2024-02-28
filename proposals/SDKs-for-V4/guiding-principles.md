@@ -6,8 +6,8 @@
     1. However, the function/method signatures may not match exactly.
 1. Consistent, Coherent, and Complete functions/methods.
     1. All SDKs (Java, Python, Go) implement the [core methods](canonical-names-condensed.md)
-    1. The "to" principle for function/method names.
-1. SDK APIs are specified by Interface or Abstract class.
+    1. Use the "to principle" for function/method names.
+1. SDK APIs are specified by Interface (or Abstract) class.
     1. This allows customers to write to an interface, not an implementation.
     1. This allows us to create specific implementations, if/when needed.
 1. "Convenience Methods" may be unique per SDK language.
@@ -26,7 +26,7 @@
        parameters must support the following data-types:
         1. `string`, `int`, `int64`, or `<handle>`
         1. `<handle>` will differ in each language
-        1. `flags` are `int64`, but can be different in "convenience methods".
+        1. `flags` are `int64` in [core methods](canonical-names-condensed.md), but can be different in "convenience methods".
     1. For simplicity,
        [core methods](canonical-names-condensed.md)
        return the following data-types:
