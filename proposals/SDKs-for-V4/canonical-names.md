@@ -68,7 +68,7 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
 | G2_destroy() | | - | |
 | G2_exportCSVEntityReport(csvColumnList, flags, responseHandle) | exportCSVEntityReport(csvColumnList, flags) | exportHandle | |
 | G2_exportConfig(responseBuf, bufSize, resizeFunc) | getActiveConfig() | string | |
-| G2_exportConfigAndConfigID(responseBuf, bufSize, resizeFunc, configID) | getActiveConfigAndConfigID() | string, int64 | SM-5 |
+| G2_exportConfigAndConfigID(responseBuf, bufSize, resizeFunc, configID) |  [not-implemented] | string, int64 | SM-5 |
 | G2_exportJSONEntityReport(flags, responseHandle) | exportJSONEntityReport(flags) | exportHandle | |
 | G2_fetchNext(responseHandle, responseBuf, bufSize) | fetchNext(exportHandle)  | string | |
 | G2_findInterestingEntitiesByEntityID(entityID, flags, responseBuf, bufSize, resizeFunc) | findInterestingEntitiesByEntityID(entityID, flags) | string | SM-3.1 |
