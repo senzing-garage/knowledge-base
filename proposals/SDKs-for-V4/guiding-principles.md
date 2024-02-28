@@ -22,6 +22,12 @@
     1. Function/method parameters are not mutated.
     1. Function/method return values have a constant data-type
     1. For simplicity,
+       [core method](canonical-names-condensed.md)
+       parameters must support the following data-types:
+        1. `string`, `int`, `int64`, or `<handle>`
+        1. `<handle>` will differ in each language
+        1. `flags` are `int64`, but can be different in "convenience methods".
+    1. For simplicity,
        [core methods](canonical-names-condensed.md)
        return the following data-types:
         1. `string`, `int`, `int64`, or `handle`
