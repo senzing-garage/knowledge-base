@@ -2,6 +2,7 @@
 
 | Deprecated | Hidden     | Repository                                   |
 |------------|------------|----------------------------------------------|
+| 2024-02-28 |            | risk-score-calculator                        |
 | 2024-01-25 |            | aws-cloudformation-dev-rest                  |
 | 2024-01-19 |            | packer-senzing-demo-ubuntu-18.04             |
 | 2023-12-14 |            | kubernetes-demo                              |
