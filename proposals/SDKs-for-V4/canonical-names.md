@@ -49,7 +49,7 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
 | G2Diagnostic_destroy() | | - | |
 | G2Diagnostic_getLastException(buffer, bufSize) | [not-public] | | |
 | G2Diagnostic_getLastExceptionCode() | [not-public] | | |
-| G2Diagnostic_init(moduleName, iniParams, verboseLogging) | init(instanceName, settings, verboseLogging, initConfigID) | | `initConfigID` can be `nil`, `None`, `null` |
+| G2Diagnostic_init(moduleName, iniParams, verboseLogging) | init(instanceName, settings, verboseLogging, configID) | | `configID` can be `nil`, `None`, `null` |
 | G2Diagnostic_initWithConfigID(moduleName, iniParams, initConfigID, verboseLogging) | [collapsed] | | |
 | G2Diagnostic_purgeRepository(????) | | | |
 | G2Diagnostic_reinit(initConfigID) | reinit(configID) | - | |
@@ -104,7 +104,7 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
 | G2_getVirtualEntityByRecordID_V2(recordList, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
 | G2_howEntityByEntityID(entityID, responseBuf, bufSize, resizeFunc) | howEntityByEntityID(entityID, flags) | string | SM-1, SM-3.3 |
 | G2_howEntityByEntityID_V2(entityID, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
-| G2_init(moduleName, iniParams, verboseLogging) | init(instanceName, settings, verboseLogging, initConfigID) | - | `initConfigID` can be `nil`, `None`, `null` |
+| G2_init(moduleName, iniParams, verboseLogging) | init(instanceName, settings, verboseLogging, configID) | - | `configID` can be `nil`, `None`, `null` |
 | G2_initWithConfigID(moduleName, iniParams, initConfigID, verboseLogging) | [collapsed]  | | |
 | G2_primeEngine() | | - | |
 | G2_processRedoRecord(responseBuf, bufSize, resizeFunc ) | TBD | | |
@@ -113,7 +113,7 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
 | G2_reevaluateEntityWithInfo(entityID, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | string | |
 | G2_reevaluateRecord(dataSourceCode, recordID, flags) | reevaluateRecord(dataSourceCode, recordID, flags, resultFlags) | string | SM-6 |
 | G2_reevaluateRecordWithInfo(dataSourceCode, recordID, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
-| G2_reinit(initConfigID) | | - | |
+| G2_reinit(initConfigID) | reinit(configID) | - | |
 | G2_replaceRecord(dataSourceCode, recordID, jsonData) | replaceRecord(dataSourceCode, recordID, recordDefinition, flags) | string | |
 | G2_replaceRecordWithInfo(dataSourceCode, recordID, jsonData, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
 | G2_searchByAttributes(jsonData, responseBuf, bufSize, resizeFunc) | searchByAttributes(searchCriteria, searchProfile, flags) | string | |
