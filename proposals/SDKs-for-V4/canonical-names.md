@@ -49,8 +49,8 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
 | G2Diagnostic_destroy() | | - | |
 | G2Diagnostic_getLastException(buffer, bufSize) | [not-public] | | |
 | G2Diagnostic_getLastExceptionCode() | [not-public] | | |
-| G2Diagnostic_init(moduleName, iniParams, verboseLogging) | | - | |
-| G2Diagnostic_initWithConfigID(moduleName, iniParams, initConfigID, verboseLogging) | | - | |
+| G2Diagnostic_init(moduleName, iniParams, verboseLogging, initConfigID) | `initConfigID` can be `nil`, `None`, `nil`  | - | |
+| G2Diagnostic_initWithConfigID(moduleName, iniParams, initConfigID, verboseLogging) | [collapsed] | - | |
 | G2Diagnostic_purgeRepository(????) | | | |
 | G2Diagnostic_reinit(initConfigID) | reinit(configID) | - | |
 
@@ -104,8 +104,8 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
 | G2_getVirtualEntityByRecordID_V2(recordList, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
 | G2_howEntityByEntityID(entityID, responseBuf, bufSize, resizeFunc) | howEntityByEntityID(entityID, flags) | string | SM-1, SM-3.3 |
 | G2_howEntityByEntityID_V2(entityID, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
-| G2_init(moduleName, iniParams, verboseLogging) | | - | |
-| G2_initWithConfigID(moduleName, iniParams, initConfigID, verboseLogging) | | - | |
+| G2_init(moduleName, iniParams, verboseLogging) | init(moduleName, iniParams, verboseLogging, initConfigID) | - | `initConfigID` can be `nil`, `None`, `nil` |
+| G2_initWithConfigID(moduleName, iniParams, initConfigID, verboseLogging) | [collapsed]  | | |
 | G2_primeEngine() | | - | |
 | G2_processRedoRecord(responseBuf, bufSize, resizeFunc ) | TBD | | |
 | G2_processRedoRecordWithInfo(flags, responseBuf, bufSize, infoBuf, infoBufSize, resizeFunc) | TBD | | |
