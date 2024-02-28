@@ -52,7 +52,7 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
 | G2Diagnostic_init(moduleName, iniParams, verboseLogging) | | - | |
 | G2Diagnostic_initWithConfigID(moduleName, iniParams, initConfigID, verboseLogging) | | - | |
 | G2Diagnostic_purgeRepository(????) | | | |
-| G2Diagnostic_reinit(initConfigID) | | - | |
+| G2Diagnostic_reinit(configID) | | - | |
 
 ### G2Engine
 
