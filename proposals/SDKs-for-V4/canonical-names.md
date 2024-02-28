@@ -22,7 +22,7 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
 | G2Config_init(moduleName, iniParams, verboseLogging) | | - | |
 | G2Config_listDataSources(configHandle, responseBuf, bufSize, resizeFunc) | getDataSources(configHandle) | string | |
 | G2Config_load(jsonConfig, configHandle) | load(configDefinition) | configHandle | |
-| G2Config_save(configHandle, responseBuf, bufSize, resizeFunc) | save(configHandle)  | string | SM-4 |
+| G2Config_save(configHandle, responseBuf, bufSize, resizeFunc) | save(configHandle)  | string | SM-4, ?? |
 
 ### G2ConfigMgr
 
