@@ -62,7 +62,9 @@ The return from the
 
 Each language may have different convenience methods for their specific customer.
 
-1. Use the following forms:
+### Varying return data-types
+
+1. Use the following forms to vary the return value data type:
     1. `addXxxReturnYyy()`
     1. `checkDatabasePerformanceReturnYyy()`
     1. `deleteXxxReturnYyy()`
@@ -75,8 +77,8 @@ Each language may have different convenience methods for their specific customer
     1. `saveReturnYyy()`
     1. `searchByAttributesReturnYyy()`
     1. `whyXxxAsYyy()`
-
 1. **Net:** Use `...ReturnYyy()` for everthing except `getXxx()`, `howXxx()` and `whyXxx()`
+    1. ??? or maybe it should be everything except `getXxx()`.  (i.e. "how" and "why" would be `...ReturnYyy()`)
 
 ## Under consideration
 
