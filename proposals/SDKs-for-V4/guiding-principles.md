@@ -63,11 +63,20 @@ The return from the
 Each language may have different convenience methods for their specific customer.
 
 1. Use the following forms:
-    1. `getXxxAsYyy()`
+    1. `addXxxReturnYyy()`
+    1. `checkDatabasePerformanceReturnYyy()`
+    1. `deleteXxxReturnYyy()`
     1. `findXxxReturnYyy()`
-    1. `addXxxxReturnYyy()`
-    1. `deleteXxxxReturnYyy()`
+    1. `getXxxAsYyy()`
+    1. `howXxxAsYyy()`
+    1. `reevaluateEntityReturnYyy()`
+    1. `reevaluateRecordReturnYyy()`
+    1. `replaceRecordReturnYyy()`
     1. `saveReturnYyy()`
+    1. `searchByAttributesReturnYyy()`
+    1. `whyXxxAsYyy()`
+
+1. **Net:** Use `...ReturnYyy()` for everthing except `getXxx()`, `howXxx()` and `whyXxx()`
 
 ## Under consideration
 
