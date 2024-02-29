@@ -25,12 +25,12 @@ To see the expanded version, visit
 |---------------|----------------|---------------|--------|
 | G2ConfigMgr_addConfig(configStr, configComments, configID) | addConfig(configDefinition, configComments) | int64 | |
 | G2ConfigMgr_destroy() | | - | |
-| G2ConfigMgr_getConfig(configID, responseBuf, bufSize, resizeFunc) | getConfig(configID) | string | |
+| G2ConfigMgr_getConfig(configID, responseBuf, bufSize, resizeFunc) | getConfig(configId) | string | |
 | G2ConfigMgr_getConfigList(responseBuf, bufSize, resizeFunc) | getConfigList() | string | |
-| G2ConfigMgr_getDefaultConfigID(configID) | getDefaultConfigID() | int64 | |
+| G2ConfigMgr_getDefaultConfigID(configID) | getDefaultConfigId() | int64 | |
 | G2ConfigMgr_init(moduleName, iniParams, verboseLogging) | initialize(instanceName, settings, verboseLogging) | - | |
-| G2ConfigMgr_replaceDefaultConfigID(oldConfigID, newConfigID) | replaceDefaultConfigID(currentDefaultConfigID, newDefaultConfigID) | - | |
-| G2ConfigMgr_setDefaultConfigID(configID) | | - | |
+| G2ConfigMgr_replaceDefaultConfigID(oldConfigID, newConfigID) | replaceDefaultConfigId(currentDefaultConfigId, newDefaultConfigId) | - | |
+| G2ConfigMgr_setDefaultConfigID(configID) | setDefaultConfigId(configId) | - | |
 
 ### G2Diagnostic
 
@@ -38,51 +38,51 @@ To see the expanded version, visit
 |---------------|----------------|---------------|--------|
 | G2Diagnostic_checkDBPerf(secondsToRun, responseBuf, bufSize, resizeFunc) | checkDatabasePerformance(secondsToRun) | string | |
 | G2Diagnostic_destroy() | | - | |
-| G2Diagnostic_init(moduleName, iniParams, verboseLogging) | initialize(instanceName, settings, verboseLogging, configID) | | `configID` can be `nil`, `None`, `null` |
+| G2Diagnostic_init(moduleName, iniParams, verboseLogging) | initialize(instanceName, settings, verboseLogging, configId) | | `configId` can be `nil`, `None`, `null` |
 | G2Diagnostic_purgeRepository(????) | | | |
-| G2Diagnostic_reinit(initConfigID) | reInitialize(configID) | - | |
+| G2Diagnostic_reinit(initConfigID) | reInitialize(configId) | - | |
 
 ### G2Engine
 
 | Existing name | Canonical Name | Return values | Smells |
 |---------------|----------------|---------------|--------|
-| G2_addRecord(dataSourceCode, recordID, jsonData) | addRecord(dataSourceCode, recordID, recordDefinition, flags) | string | |
+| G2_addRecord(dataSourceCode, recordID, jsonData) | addRecord(dataSourceCode, recordId, recordDefinition, flags) | string | |
 | G2_closeExport(responseHandle) | closeExport(exportHandle) | - | |
 | G2_countRedoRecords() | | int64 | |
-| G2_deleteRecord(dataSourceCode, recordID) | deleteRecord(dataSourceCode, recordID, flags) | string | |
+| G2_deleteRecord(dataSourceCode, recordID) | deleteRecord(dataSourceCode, recordId, flags) | string | |
 | G2_destroy() | | - | |
 | G2_exportCSVEntityReport(csvColumnList, flags, responseHandle) | exportCSVEntityReport(csvColumnList, flags) | exportHandle | |
 | G2_exportConfig(responseBuf, bufSize, resizeFunc) | getActiveConfig() | string | |
 | G2_exportConfigAndConfigID(responseBuf, bufSize, resizeFunc, configID) |  [not-implemented] ??? | string, int64 | SM-5 |
 | G2_exportJSONEntityReport(flags, responseHandle) | exportJsonEntityReport(flags) | exportHandle | |
 | G2_fetchNext(responseHandle, responseBuf, bufSize) | fetchNext(exportHandle)  | string | |
-| G2_findInterestingEntitiesByEntityID(entityID, flags, responseBuf, bufSize, resizeFunc) | findInterestingEntitiesByEntityID(entityID, flags) | string | SM-3.1 |
-| G2_findInterestingEntitiesByRecordID(dataSourceCode, recordID, flags, responseBuf, bufSize, resizeFunc) | findInterestingEntitiesByRecordID(dataSourceCode, recordID, flags) | string | SM-3.1 |
-| G2_findNetworkByEntityID(entityList, maxDegree, buildOutDegree, maxEntities, responseBuf, bufSize, resizeFunc) | findNetworkByEntityID(entityList, maxDegrees, buildOutDegree, maxEntities, flags)  | string | SM-3.1 |
-| G2_findNetworkByRecordID(recordList, maxDegree, buildOutDegree, maxEntities, responseBuf, bufSize, resizeFunc) | findNetworkByRecordID(recordList, maxDegrees, buildOutDegree, maxEntities, flags) | string | SM-3.1 |
-| G2_findPathByEntityID(entityID1, entityID2, maxDegree, responseBuf, bufSize, resizeFunc) | findPathByEntityID(startEntityID, endEntityID, maxDegrees, exclusions, requiredDataSources, flags) | string | SM-3.1 |
-| G2_findPathByRecordID(dataSourceCode1, recordID1, dataSourceCode2, recordID2, maxDegree, responseBuf, bufSize, resizeFunc) | findPathByRecordID(startDataSourceCode, startRecordID, endDataSourceCode, endRecordID, maxDegrees, exclusions, requiredDataSources, flags) | string | SM-3.1 |
-| G2_getActiveConfigID(configID) | getActiveConfigID() | int64 | |
-| G2_getEntityByEntityID(entityID, responseBuf, bufSize, resizeFunc) | getEntityByEntityID(entityID, flags) | string | |
-| G2_getEntityByRecordID(dataSourceCode, recordID, responseBuf, bufSize, resizeFunc) | getEntityByRecordID(dataSourceCode, recordID, flags) | string | |
-| G2_getRecord(dataSourceCode, recordID, responseBuf, bufSize, resizeFunc) | getRecord(dataSourceCode, recordID, flags) | string | |
+| G2_findInterestingEntitiesByEntityID(entityID, flags, responseBuf, bufSize, resizeFunc) | findInterestingEntitiesByEntityId(entityId, flags) | string | SM-3.1 |
+| G2_findInterestingEntitiesByRecordID(dataSourceCode, recordID, flags, responseBuf, bufSize, resizeFunc) | findInterestingEntitiesByRecordId(dataSourceCode, recordId, flags) | string | SM-3.1 |
+| G2_findNetworkByEntityID(entityList, maxDegree, buildOutDegree, maxEntities, responseBuf, bufSize, resizeFunc) | findNetworkByEntityId(entityList, maxDegrees, buildOutDegree, maxEntities, flags)  | string | SM-3.1 |
+| G2_findNetworkByRecordID(recordList, maxDegree, buildOutDegree, maxEntities, responseBuf, bufSize, resizeFunc) | findNetworkByRecordId(recordList, maxDegrees, buildOutDegree, maxEntities, flags) | string | SM-3.1 |
+| G2_findPathByEntityID(entityID1, entityID2, maxDegree, responseBuf, bufSize, resizeFunc) | findPathByEntityId(startEntityId, endEntityId, maxDegrees, exclusions, requiredDataSources, flags) | string | SM-3.1 |
+| G2_findPathByRecordID(dataSourceCode1, recordID1, dataSourceCode2, recordID2, maxDegree, responseBuf, bufSize, resizeFunc) | findPathByRecordId(startDataSourceCode, startRecordId, endDataSourceCode, endRecordId, maxDegrees, exclusions, requiredDataSources, flags) | string | SM-3.1 |
+| G2_getActiveConfigID(configID) | getActiveConfigId() | int64 | |
+| G2_getEntityByEntityID(entityID, responseBuf, bufSize, resizeFunc) | getEntityByEntityId(entityId, flags) | string | |
+| G2_getEntityByRecordID(dataSourceCode, recordID, responseBuf, bufSize, resizeFunc) | getEntityByRecordId(dataSourceCode, recordId, flags) | string | |
+| G2_getRecord(dataSourceCode, recordID, responseBuf, bufSize, resizeFunc) | getRecord(dataSourceCode, recordId, flags) | string | |
 | G2_getRedoRecord(responseBuf, bufSize, resizeFunc ) | getRedoRecord() | string | |
 | G2_getRepositoryLastModifiedTime(lastModifiedTime) | getRepositoryLastModifiedTime()  | int64 | |
-| G2_getVirtualEntityByRecordID(recordList, responseBuf, bufSize, resizeFunc) | getVirtualEntityByRecordID(recordList, flags) | string | |
-| G2_howEntityByEntityID(entityID, responseBuf, bufSize, resizeFunc) | howEntityByEntityID(entityID, flags) | string | SM-1, SM-3.3 |
-| G2_init(moduleName, iniParams, verboseLogging) | initialize(instanceName, settings, verboseLogging, configID) | - | `configID` can be `nil`, `None`, `null` |
+| G2_getVirtualEntityByRecordID(recordList, responseBuf, bufSize, resizeFunc) | getVirtualEntityByRecordId(recordList, flags) | string | |
+| G2_howEntityByEntityID(entityID, responseBuf, bufSize, resizeFunc) | howEntityByEntityId(entityId, flags) | string | SM-1, SM-3.3 |
+| G2_init(moduleName, iniParams, verboseLogging) | initialize(instanceName, settings, verboseLogging, configId) | - | `configId` can be `nil`, `None`, `null` |
 | G2_primeEngine() | | - | |
 | G2_processRedoRecord(responseBuf, bufSize, resizeFunc ) | TBD | | |
 | G2_processRedoRecordWithInfo(flags, responseBuf, bufSize, infoBuf, infoBufSize, resizeFunc) | TBD | | |
-| G2_reevaluateEntity(entityID, flags) | reevaluateEntity(entityID, flags) | string | `flags` has `WITH_INFO` bit |
-| G2_reevaluateRecord(dataSourceCode, recordID, flags) | reevaluateRecord(dataSourceCode, recordID, flags) | string | `flags` has `WITH_INFO` bit |
-| G2_reinit(initConfigID) | reInitialize(configID) | - | |
-| G2_replaceRecord(dataSourceCode, recordID, jsonData) | replaceRecord(dataSourceCode, recordID, recordDefinition, flags) | string | |
+| G2_reevaluateEntity(entityID, flags) | reevaluateEntity(entityId, flags) | string | `flags` has `WITH_INFO` bit |
+| G2_reevaluateRecord(dataSourceCode, recordID, flags) | reevaluateRecord(dataSourceCode, recordId, flags) | string | `flags` has `WITH_INFO` bit |
+| G2_reinit(initConfigID) | reInitialize(configId) | - | |
+| G2_replaceRecord(dataSourceCode, recordID, jsonData) | replaceRecord(dataSourceCode, recordId, recordDefinition, flags) | string | |
 | G2_searchByAttributes(jsonData, responseBuf, bufSize, resizeFunc) | searchByAttributes(attributes, searchProfile, flags) | string | |
 | G2_stats(responseBuf, bufSize, resizeFunc ) | getStats() | string | |
-| G2_whyEntities(entityID1, entityID2, responseBuf, bufSize, resizeFunc) | whyEntities(entityID1, entityID2, flags) | string | SM-1, SM-3.3 |
-| G2_whyRecordInEntity(dataSourceCode, recordID, responseBuf, bufSize, resizeFunc) | whyRecordInEntity(dataSourceCode, recordID, flags) | string | SM-1, SM-3.3 |
-| G2_whyRecords(dataSourceCode1, recordID1, dataSourceCode2, recordID2, responseBuf, bufSize, resizeFunc) | whyRecords(dataSourceCode1, recordID1, dataSourceCode2, recordID2, flags) | string | SM-1, SM-3.3 |
+| G2_whyEntities(entityID1, entityID2, responseBuf, bufSize, resizeFunc) | whyEntities(entityId1, entityId2, flags) | string | SM-1, SM-3.3 |
+| G2_whyRecordInEntity(dataSourceCode, recordID, responseBuf, bufSize, resizeFunc) | whyRecordInEntity(dataSourceCode, recordId, flags) | string | SM-1, SM-3.3 |
+| G2_whyRecords(dataSourceCode1, recordID1, dataSourceCode2, recordID2, responseBuf, bufSize, resizeFunc) | whyRecords(dataSourceCode1, recordId1, dataSourceCode2, recordId2, flags) | string | SM-1, SM-3.3 |
 
 ### G2Product
 
@@ -113,7 +113,7 @@ To see the expanded version, visit
    1. Example:
 
          ```python
-         info = g2_engine.add_record(dataSourceCode, recordID, record, resultFlags)
+         info = g2_engine.add_record(dataSourceCode, recordId, record, resultFlags)
          ```
 
    1. If `resultFlags` is 0 (i.e. no bit flags are on) then the returned value is `{}`, an empty JSON string.
@@ -122,7 +122,7 @@ To see the expanded version, visit
    1. Flag can be OR-ed for future expansion. Example:
 
          ```python
-         info = g2_engine.add_record(dataSourceCode, recordID, record, WITH_INFO | WITHOUT_SOMETHING_ELSE)
+         info = g2_engine.add_record(dataSourceCode, recordId, record, WITH_INFO | WITHOUT_SOMETHING_ELSE)
          ```
 
    1. Although flag arguments are not best practice,
@@ -149,11 +149,11 @@ To see the expanded version, visit
       1. Examples of use
 
          ```python
-         g2_engine.add_record(dataSourceCode, recordID, record)
+         g2_engine.add_record(dataSourceCode, recordId, record)
          ```
 
          ```python
-         info = g2_engine.add_record(dataSourceCode, recordID, record, resultFlags)
+         info = g2_engine.add_record(dataSourceCode, recordId, record, resultFlags)
          ```
 
    1. Java language specifics:
@@ -161,11 +161,11 @@ To see the expanded version, visit
       1. Examples of use:
 
          ```java
-         g2Engine.addRecord(dataSourceCode, recordID, record)
+         g2Engine.addRecord(dataSourceCode, recordId, record)
          ```
 
          ```java
-         info = g2Engine.addRecord(dataSourceCode, recordID, record, WITH_INFO)
+         info = g2Engine.addRecord(dataSourceCode, recordId, record, WITH_INFO)
          ```
 
    1. Go language specifics:
@@ -173,18 +173,18 @@ To see the expanded version, visit
       1. Examples of use:
 
          ```go
-         _, err := g2Engine.AddRecord(dataSourceCode, recordID, record, g2api.WITHOUT_INFO)
+         _, err := g2Engine.AddRecord(dataSourceCode, recordId, record, g2api.WITHOUT_INFO)
          ```
 
          ```go
-         info, err := g2Engine.AddRecord(dataSourceCode, recordID, record, g2api.WITH_INFO)
+         info, err := g2Engine.AddRecord(dataSourceCode, recordId, record, g2api.WITH_INFO)
          ```
 
 ## Smells
 
 1. SM-1: Function naming.  For consistency, say the phrase "To *method-name*".  If it sounds awkward, consider renaming the method.
-   1. Good: "To `getVirtualEntityByRecordID()`", "To `addRecordAndReturnInfo()`"
-   1. Bad: "To `howEntityByEntityID()`", "To `version()`"
+   1. Good: "To `getVirtualEntityByRecordId()`", "To `addRecordAndReturnInfo()`"
+   1. Bad: "To `howEntityByEntityId()`", "To `version()`"
 1. SM-2: Parameter naming. For portability across different programming languages, the parameter name shouldn't include a data-type.
    1. Good: `dataSourceSpec`
    1. Bad: `inputJson`
