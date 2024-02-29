@@ -50,6 +50,25 @@
     1. **Development Cycle:** build, setup, test, run
     1. **Docker:** (Optional) docker-build, docker-run
 
+## Convenience methods
+
+"Convenience Methods" are method signatures that make it "convenient" for the customer to call the Senzing functionality.
+Often they allow different variations of input parameters or return different data types than the
+[core methods](canonical-names-condensed.md).
+The implementation of each "convenience method" will normalize input parameters and call a
+[core method](canonical-names-condensed.md).
+The return from the
+[core method](canonical-names-condensed.md) may be altered before returning to the caller.
+
+Each language may have different convenience methods for their specific customer.
+
+1. Use the following forms:
+    1. `getXxxAsYyy()`
+    1. `findXxxReturnYyy()`
+    1. `addXxxxReturnYyy()`
+    1. `deleteXxxxReturnYyy()`
+    1. `saveReturnYyy()`
+
 ## Under consideration
 
 1. SDK design is guided by Functional programming
