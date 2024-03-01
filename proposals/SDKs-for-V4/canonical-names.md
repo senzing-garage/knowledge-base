@@ -67,8 +67,6 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
 | G2_deleteRecordWithInfo(dataSourceCode, recordID, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
 | G2_destroy() | | - | |
 | G2_exportCSVEntityReport(csvColumnList, flags, responseHandle) | exportCsvEntityReport(csvColumnList, flags) | exportHandle | |
-| G2_exportConfig(responseBuf, bufSize, resizeFunc) | getActiveConfig() | string | |
-| G2_exportConfigAndConfigID(responseBuf, bufSize, resizeFunc, configID) |  [not-implemented] ??? | string, int64 | SM-5 |
 | G2_exportJSONEntityReport(flags, responseHandle) | exportJsonEntityReport(flags) | exportHandle | |
 | G2_fetchNext(responseHandle, responseBuf, bufSize) | fetchNext(exportHandle)  | string | |
 | G2_findInterestingEntitiesByEntityID(entityID, flags, responseBuf, bufSize, resizeFunc) | findInterestingEntitiesByEntityId(entityId, flags) | string | SM-3.1 |
@@ -148,6 +146,7 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
 1. Functions affected:
    - G2_addRecordWithInfo
    - G2_deleteRecordWithInfo
+   - G2_processWithInfo
    - G2_reevaluateEntityWithInfo
    - G2_reevaluateRecordWithInfo
    - G2_replaceRecordWithInfo
