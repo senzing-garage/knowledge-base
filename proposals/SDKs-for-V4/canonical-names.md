@@ -66,7 +66,7 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
 | G2_deleteRecord(dataSourceCode, recordID) | deleteRecord(dataSourceCode, recordId, flags) | string | |
 | G2_deleteRecordWithInfo(dataSourceCode, recordID, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
 | G2_destroy() | | - | |
-| G2_exportCSVEntityReport(csvColumnList, flags, responseHandle) | exportCSVEntityReport(csvColumnList, flags) | exportHandle | |
+| G2_exportCSVEntityReport(csvColumnList, flags, responseHandle) | exportCsvEntityReport(csvColumnList, flags) | exportHandle | |
 | G2_exportConfig(responseBuf, bufSize, resizeFunc) | getActiveConfig() | string | |
 | G2_exportConfigAndConfigID(responseBuf, bufSize, resizeFunc, configID) |  [not-implemented] ??? | string, int64 | SM-5 |
 | G2_exportJSONEntityReport(flags, responseHandle) | exportJsonEntityReport(flags) | exportHandle | |
