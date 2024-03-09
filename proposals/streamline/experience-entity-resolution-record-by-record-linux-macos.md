@@ -129,8 +129,7 @@ You will be oscillating between two applications:
     (
         add_record_to_senzing(
             {
-                "DATA_SOURCE": "Test",
-                "RECORD_ID": "1",
+                "DATA_SOURCE": "Test", "RECORD_ID": "1",
                 "DRIVERS_LICENSE_NUMBER": "12435345",
                 "DATE_OF_BIRTH": "20/12/1965",
                 "ADDR_FULL":"175 West Clay St, New York, Ohio 47201",
@@ -142,15 +141,16 @@ You will be oscillating between two applications:
             }
         )
     )
+
     (
         add_record_to_senzing(
             {
-                "DATA_SOURCE": "Test",
-                "RECORD_ID": "6",
+                "DATA_SOURCE": "Test", "RECORD_ID": "4",
                 "DRIVERS_LICENSE_NUMBER": "12435345",
+                "DATE_OF_BIRTH": "20/12/1965",
+                "SSN_NUMBER": "883-24-5259",
                 "ADDR_FULL":"3465 Wilmington Road, NY, Ohio 47201",
-                "NAME_FIRST": "Syndey",
-                "NAME_LAST": "Shorter",
+                "NAME_FULL": "Thea Shorts",
                 "GENDER": "F",
                 "DSRC_ACTION": "A"
             }
@@ -215,18 +215,18 @@ You will be oscillating between two applications:
     (
         add_record_to_senzing(
             {
-                "DATA_SOURCE": "Test",
-                "RECORD_ID": "4",
+                "DATA_SOURCE": "Test", "RECORD_ID": "6",
                 "DRIVERS_LICENSE_NUMBER": "12435345",
                 "DATE_OF_BIRTH": "20/12/1965",
                 "SSN_NUMBER": "883-24-5259",
                 "ADDR_FULL":"3465 Wilmington Road, NY, Ohio 47201",
-                "NAME_FULL": "Thea Shorts",
+                "NAME_FULL": "Cindy Shorter",
                 "GENDER": "F",
                 "DSRC_ACTION": "A"
             }
         )
     )
+
     ```
 
 1. In the
