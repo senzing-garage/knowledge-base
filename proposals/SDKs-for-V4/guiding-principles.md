@@ -5,14 +5,15 @@
         1. Any exceptions should be documented for review.
     1. However, the function/method signatures may not match exactly.
 1. Consistent, Coherent, and Complete functions/methods.
-    1. Use [Canonical names](canonical-names.md) as models for the **core** SDK API.
-    1. The "to" principle for function/method names.
-    1. "Convenience Methods" may be unique per SDK language.
-        1. Convenience methods are written at the "abstract level" so they can be inherited by all concrete classes.
-        1. In general, convenience methods will call **core** SDK API methods.
-1. SDK APIs are specified by Interface or Abstract class.
+    1. All SDKs (Java, Python, Go) implement the [core methods](canonical-names-condensed.md)
+    1. Use the "to principle" for function/method names.
+1. SDK APIs are specified by Interface (or Abstract) class.
     1. This allows customers to write to an interface, not an implementation.
     1. This allows us to create specific implementations, if/when needed.
+1. "Convenience Methods" may be unique per SDK language.
+    1. Convenience methods are written at the "abstract level" so they can be inherited by all concrete classes.
+    1. In general, convenience methods call [core methods](canonical-names-condensed.md)
+       (i.e. it must not independently call the Senzing C API).
 1. Consistent JSON-based error messages
     1. JSON helps customers with parsing and logging system.
     1. See [Error Messages](error-messages.md)
@@ -20,10 +21,17 @@
     1. [Robustness principle](https://en.wikipedia.org/wiki/Robustness_principle)
     1. Function/method parameters are not mutated.
     1. Function/method return values have a constant data-type
-    1. For simplicity, **core** SDK functions/methods return the following data-types:
+    1. For simplicity,
+       [core method](canonical-names-condensed.md)
+       parameters must support the following data-types:
+        1. `string`, `int`, `int64`, or `<handle>`
+        1. `<handle>` will differ in each language
+        1. `flags` are `int64` in [core methods](canonical-names-condensed.md), but can be different in "convenience methods".
+    1. For simplicity,
+       [core methods](canonical-names-condensed.md)
+       return the following data-types:
         1. `string`, `int`, `int64`, or `handle`
         1. Also `None`, `null`, `nil`, depending on SDK language
-    1. Convenience functions/methods for specific SDKs may return more exotic data-types
 1. Testing
     1. All function/methods have Unit Tests run by GitHub Actions for every Push
     1. Code coverage analysis is done.
@@ -41,6 +49,36 @@
     1. **General:** help, clean
     1. **Development Cycle:** build, setup, test, run
     1. **Docker:** (Optional) docker-build, docker-run
+
+## Convenience methods
+
+"Convenience Methods" are method signatures that make it "convenient" for the customer to call the Senzing functionality.
+Often they allow different variations of input parameters or return different data types than the
+[core methods](canonical-names-condensed.md).
+The implementation of each "convenience method" will normalize input parameters and call a
+[core method](canonical-names-condensed.md).
+The return from the
+[core method](canonical-names-condensed.md) may be altered before returning to the caller.
+
+Each language may have different convenience methods for their specific customer.
+
+### Varying return data-types
+
+1. Use the following forms to vary the return value data-type:
+    1. `addXxxReturnYyy()`
+    1. `checkDatabasePerformanceReturnYyy()`
+    1. `deleteXxxReturnYyy()`
+    1. `findXxxReturnYyy()`
+    1. `getXxxAsYyy()`
+    1. `howXxxAsYyy()`
+    1. `reevaluateEntityReturnYyy()`
+    1. `reevaluateRecordReturnYyy()`
+    1. `replaceRecordReturnYyy()`
+    1. `saveReturnYyy()`
+    1. `searchByAttributesReturnYyy()`
+    1. `whyXxxAsYyy()`
+1. **Net:** Use `...ReturnYyy()` for everything except `getXxx()`, `howXxx()` and `whyXxx()`
+    1. ??? or maybe it should be everything except `getXxx()`.  (i.e. "how" and "why" would be `...ReturnYyy()`)
 
 ## Under consideration
 

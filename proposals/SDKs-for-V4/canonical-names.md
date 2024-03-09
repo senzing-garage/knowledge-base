@@ -11,119 +11,120 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
 
 | Existing name | Canonical Name | Return values | Smells |
 |---------------|----------------|---------------|--------|
-| G2Config_addDataSource(configHandle, inputJson, responseBuf, bufSize, resizeFunc) | addDataSource(configHandle, inputJson) | string | SM-2 |
+| G2Config_addDataSource(configHandle, inputJson, responseBuf, bufSize, resizeFunc) | addDataSource(configHandle, dataSourceCode) | | |
 | G2Config_clearLastException() | [not-public] | | |
 | G2Config_close(configHandle) | | - | |
 | G2Config_create(configHandle) | create() | configHandle | |
-| G2Config_deleteDataSource(configHandle, inputJson) | | - | SM-2 |
+| G2Config_deleteDataSource(configHandle, inputJson) | deleteDataSource(configHandle, dataSourceCode) | - | |
 | G2Config_destroy() | | - | |
 | G2Config_getLastException(buffer, bufSize) | [not-public] | | |
 | G2Config_getLastExceptionCode() | [not-public] | | |
-| G2Config_init(moduleName, iniParams, verboseLogging) | | - | |
-| G2Config_listDataSources(configHandle, responseBuf, bufSize, resizeFunc) | listDataSources(configHandle) | string | SM-3.2 |
-| G2Config_load(jsonConfig, configHandle) | load(jsonConfig) | configHandle | SM-2 |
-| G2Config_save(configHandle, responseBuf, bufSize, resizeFunc) | save(configHandle)  | string | |
+| G2Config_init(moduleName, iniParams, verboseLogging) | initialize(instanceName, settings, verboseLogging) | - | Consider single object |
+| G2Config_listDataSources(configHandle, responseBuf, bufSize, resizeFunc) | getDataSources(configHandle) | string | |
+| G2Config_load(jsonConfig, configHandle) | load(configDefinition) | configHandle | |
+| G2Config_save(configHandle, responseBuf, bufSize, resizeFunc) | getJsonString(configHandle)  | string | |
 
 ### G2ConfigMgr
 
 | Existing name | Canonical Name | Return values | Smells |
 |---------------|----------------|---------------|--------|
-| G2ConfigMgr_addConfig(configStr, configComments, configID) | addConfig(configStr, configComments) | int64 | SM-2 |
+| G2ConfigMgr_addConfig(configStr, configComments, configID) | addConfig(configDefinition, configComments) | int64 | |
 | G2ConfigMgr_clearLastException() | [not-public] | | |
 | G2ConfigMgr_destroy() | | - | |
-| G2ConfigMgr_getConfig(configID, responseBuf, bufSize, resizeFunc) | getConfig(configID) | string | |
+| G2ConfigMgr_getConfig(configID, responseBuf, bufSize, resizeFunc) | getConfig(configId) | string | |
 | G2ConfigMgr_getConfigList(responseBuf, bufSize, resizeFunc) | getConfigList() | string | |
-| G2ConfigMgr_getDefaultConfigID(configID) | getDefaultConfigID() | int64 | |
+| G2ConfigMgr_getDefaultConfigID(configID) | getDefaultConfigId() | int64 | |
 | G2ConfigMgr_getLastException(buffer, bufSize) | [not-public] | | |
 | G2ConfigMgr_getLastExceptionCode() | [not-public] | | |
-| G2ConfigMgr_init(moduleName, iniParams, verboseLogging) | | - | |
-| G2ConfigMgr_replaceDefaultConfigID(oldConfigID, newConfigID) | | - | |
-| G2ConfigMgr_setDefaultConfigID(configID) | | - | |
+| G2ConfigMgr_init(moduleName, iniParams, verboseLogging) | initialize(instanceName, settings, verboseLogging) | - | Consider single object |
+| G2ConfigMgr_replaceDefaultConfigID(oldConfigID, newConfigID) | replaceDefaultConfigId(currentDefaultConfigId, newDefaultConfigId) | - | |
+| G2ConfigMgr_setDefaultConfigID(configID) | setDefaultConfigId(configId) | - | |
 
 ### G2Diagnostic
 
 | Existing name | Canonical Name | Return values | Smells |
 |---------------|----------------|---------------|--------|
-| G2Diagnostic_checkDBPerf(secondsToRun, responseBuf, bufSize, resizeFunc) | checkDBPerf(secondsToRun) | string | |
+| G2Diagnostic_checkDBPerf(secondsToRun, responseBuf, bufSize, resizeFunc) | checkDatabasePerformance(secondsToRun) | string | |
 | G2Diagnostic_clearLastException() | [not-public] | | |
 | G2Diagnostic_destroy() | | - | |
 | G2Diagnostic_getLastException(buffer, bufSize) | [not-public] | | |
 | G2Diagnostic_getLastExceptionCode() | [not-public] | | |
-| G2Diagnostic_init(moduleName, iniParams, verboseLogging) | | - | |
-| G2Diagnostic_initWithConfigID(moduleName, iniParams, initConfigID, verboseLogging) | | - | |
-| G2Diagnostic_reinit(initConfigID) | | - | |
+| G2Diagnostic_init(moduleName, iniParams, verboseLogging) | initialize(instanceName, settings, verboseLogging, configId) | | `configId` can be `nil`, `None`, `null`. Consider single object |
+| G2Diagnostic_initWithConfigID(moduleName, iniParams, initConfigID, verboseLogging) | [collapsed] | | |
+| G2Diagnostic_purgeRepository(????) | purgeRepository(????) | | |
+| G2Diagnostic_reinit(initConfigID) | reInitialize(configId) | - | |
 
 ### G2Engine
 
 | Existing name | Canonical Name | Return values | Smells |
 |---------------|----------------|---------------|--------|
-| G2_addRecord(dataSourceCode, recordID, jsonData, loadID) | addRecord(dataSourceCode, recordID, jsonData, resultFlags) | string | SM-2 |
-| G2_addRecordWithInfo(dataSourceCode, recordID, jsonData, loadID, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
+| G2_addRecord(dataSourceCode, recordID, jsonData) | addRecord(dataSourceCode, recordId, recordDefinition, flags) | string | |
+| G2_addRecordWithInfo(dataSourceCode, recordID, jsonData, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
 | G2_clearLastException() | [not-public] | | |
-| G2_closeExport(responseHandle) | | - | |
+| G2_closeExport(responseHandle) | closeExport(exportHandle) | - | |
 | G2_countRedoRecords() | | int64 | |
-| G2_deleteRecord(dataSourceCode, recordID, loadID) | deleteRecord(dataSourceCode, recordID, resultFlags) | string | |
-| G2_deleteRecordWithInfo(dataSourceCode, recordID, loadID, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
+| G2_deleteRecord(dataSourceCode, recordID) | deleteRecord(dataSourceCode, recordId, flags) | string | |
+| G2_deleteRecordWithInfo(dataSourceCode, recordID, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
 | G2_destroy() | | - | |
-| G2_exportCSVEntityReport(csvColumnList, flags, responseHandle) | exportCSVEntityReport(csvColumnList, flags) | responseHandle | |
-| G2_exportConfig(responseBuf, bufSize, resizeFunc) | exportConfig() | string | |
-| G2_exportConfigAndConfigID(responseBuf, bufSize, resizeFunc, configID) | exportConfigAndConfigID() | string, int64 | |
-| G2_exportJSONEntityReport(flags, responseHandle) | exportJSONEntityReport(flags) | responseHandle | |
-| G2_fetchNext(responseHandle, responseBuf, bufSize) | fetchNext(responseHandle)  | string | |
-| G2_findInterestingEntitiesByEntityID(entityID, flags, responseBuf, bufSize, resizeFunc) | findInterestingEntitiesByEntityID(entityID, flags) | string | SM-3.1 |
-| G2_findInterestingEntitiesByRecordID(dataSourceCode, recordID, flags, responseBuf, bufSize, resizeFunc) | findInterestingEntitiesByRecordID(dataSourceCode, recordID, flags) | string | SM-3.1 |
-| G2_findNetworkByEntityID(entityList, maxDegree, buildOutDegree, maxEntities, responseBuf, bufSize, resizeFunc) | findNetworkByEntityID(entityList, maxDegree, buildOutDegree, maxEntities, flags)  | string | SM-3.1 |
+| G2_exportCSVEntityReport(csvColumnList, flags, responseHandle) | exportCsvEntityReport(csvColumnList, flags) | exportHandle | |
+| G2_exportConfig(responseBuf, bufSize, resizeFunc) | [not-implemented] | | |
+| G2_exportConfigAndConfigID(responseBuf, bufSize, resizeFunc, configID) | [not-implemented] | | |
+| G2_exportJSONEntityReport(flags, responseHandle) | exportJsonEntityReport(flags) | exportHandle | |
+| G2_fetchNext(responseHandle, responseBuf, bufSize) | fetchNext(exportHandle)  | string | |
+| G2_findInterestingEntitiesByEntityID(entityID, flags, responseBuf, bufSize, resizeFunc) | [not-implemented] | | |
+| G2_findInterestingEntitiesByRecordID(dataSourceCode, recordID, flags, responseBuf, bufSize, resizeFunc) | [not-implemented] | | |
+| G2_findNetworkByEntityID(entityList, maxDegree, buildOutDegree, maxEntities, responseBuf, bufSize, resizeFunc) | findNetworkByEntityId(entityList, maxDegrees, buildOutDegree, maxEntities, flags)  | string | SM-3.1 |
 | G2_findNetworkByEntityID_V2(entityList, maxDegree, buildOutDegree, maxEntities, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
-| G2_findNetworkByRecordID(recordList, maxDegree, buildOutDegree, maxEntities, responseBuf, bufSize, resizeFunc) | findNetworkByRecordID(recordList, maxDegree, buildOutDegree, maxEntities, flags) | string | SM-3.1 |
+| G2_findNetworkByRecordID(recordList, maxDegree, buildOutDegree, maxEntities, responseBuf, bufSize, resizeFunc) | findNetworkByRecordId(recordList, maxDegrees, buildOutDegree, maxEntities, flags) | string | SM-3.1 |
 | G2_findNetworkByRecordID_V2(recordList, maxDegree, buildOutDegree, maxEntities, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
-| G2_findPathByEntityID(entityID1, entityID2, maxDegree, responseBuf, bufSize, resizeFunc) | findPathByEntityID(entityID1, entityID2, maxDegree, flags) | string | SM-3.1 |
+| G2_findPathByEntityID(entityID1, entityID2, maxDegree, responseBuf, bufSize, resizeFunc) | findPathByEntityId(startEntityId, endEntityId, maxDegrees, exclusions, requiredDataSources, flags) | string | SM-3.1 |
 | G2_findPathByEntityID_V2(entityID1, entityID2, maxDegree, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
-| G2_findPathByRecordID(dataSourceCode1, recordID1, dataSourceCode2, recordID2, maxDegree, responseBuf, bufSize, resizeFunc) | findPathByRecordID(dataSourceCode1, recordID1, dataSourceCode2, recordID2, maxDegree, flags) | string | SM-3.1 |
+| G2_findPathByRecordID(dataSourceCode1, recordID1, dataSourceCode2, recordID2, maxDegree, responseBuf, bufSize, resizeFunc) | findPathByRecordId(startDataSourceCode, startRecordId, endDataSourceCode, endRecordId, maxDegrees, exclusions, requiredDataSources, flags) | string | SM-3.1 |
 | G2_findPathByRecordID_V2(dataSourceCode1, recordID1, dataSourceCode2, recordID2, maxDegree, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
-| G2_findPathExcludingByEntityID(entityID1, entityID2, maxDegree, excludedEntities, responseBuf, bufSize, resizeFunc) | findPathExcludingByEntityID(entityID1, entityID2, maxDegree, excludedEntities, flags) | string | SM-3.1 |
+| G2_findPathExcludingByEntityID(entityID1, entityID2, maxDegree, excludedEntities, responseBuf, bufSize, resizeFunc) |  [collapsed]  | | |
 | G2_findPathExcludingByEntityID_V2(entityID1, entityID2, maxDegree, excludedEntities, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
-| G2_findPathExcludingByRecordID(dataSourceCode1, recordID1, dataSourceCode2, recordID2, maxDegree, excludedRecords, responseBuf, bufSize, resizeFunc) | findPathExcludingByRecordID(dataSourceCode1, recordID1, dataSourceCode2, recordID2, maxDegree, excludedRecords, flags) | string | SM-3.1 |
+| G2_findPathExcludingByRecordID(dataSourceCode1, recordID1, dataSourceCode2, recordID2, maxDegree, excludedRecords, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
 | G2_findPathExcludingByRecordID_V2(dataSourceCode1, recordID1, dataSourceCode2, recordID2, maxDegree, excludedRecords, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
-| G2_findPathIncludingSourceByEntityID(entityID1, entityID2, maxDegree, excludedEntities, requiredDsrcs, responseBuf, bufSize, resizeFunc) | findPathIncludingSourceByEntityID(entityID1, entityID2, maxDegree, excludedEntities, requiredDsrcs, flags) | string | SM-3.1 |
+| G2_findPathIncludingSourceByEntityID(entityID1, entityID2, maxDegree, excludedEntities, requiredDsrcs, responseBuf, bufSize, resizeFunc) |  [collapsed]  | |  |
 | G2_findPathIncludingSourceByEntityID_V2(entityID1, entityID2, maxDegree, excludedEntities, requiredDsrcs, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
-| G2_findPathIncludingSourceByRecordID(dataSourceCode1, recordID1, dataSourceCode2, recordID2, maxDegree, excludedRecords, requiredDsrcs, responseBuf, bufSize, resizeFunc | findPathIncludingSourceByRecordID(dataSourceCode1, recordID1, dataSourceCode2, recordID2, maxDegree, excludedRecords, requiredDsrcs, flags) | string | SM-3.1 |
+| G2_findPathIncludingSourceByRecordID(dataSourceCode1, recordID1, dataSourceCode2, recordID2, maxDegree, excludedRecords, requiredDsrcs, responseBuf, bufSize, resizeFunc |  [collapsed]  | | |
 | G2_findPathIncludingSourceByRecordID_V2(dataSourceCode1, recordID1, dataSourceCode2, recordID2, maxDegree, excludedRecords, requiredDsrcs, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
-| G2_getActiveConfigID(configID) | | int64 | |
-| G2_getEntityByEntityID(entityID, responseBuf, bufSize, resizeFunc) | getEntityByEntityID(entityID, flags) | string | |
+| G2_getActiveConfigID(configID) | getActiveConfigId() | int64 | |
+| G2_getEntityByEntityID(entityID, responseBuf, bufSize, resizeFunc) | getEntityByEntityId(entityId, flags) | string | |
 | G2_getEntityByEntityID_V2(entityID, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
-| G2_getEntityByRecordID(dataSourceCode, recordID, responseBuf, bufSize, resizeFunc) | getEntityByRecordID(dataSourceCode, recordID, flags) | string | |
+| G2_getEntityByRecordID(dataSourceCode, recordID, responseBuf, bufSize, resizeFunc) | getEntityByRecordId(dataSourceCode, recordId, flags) | string | |
 | G2_getEntityByRecordID_V2(dataSourceCode, recordID, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
 | G2_getLastException(buffer, bufSize) | [not-public] | | |
 | G2_getLastExceptionCode() | [not-public] | | |
-| G2_getRecord(dataSourceCode, recordID, responseBuf, bufSize, resizeFunc) | getRecord(dataSourceCode, recordID, flags) | string | |
+| G2_getRecord(dataSourceCode, recordID, responseBuf, bufSize, resizeFunc) | getRecord(dataSourceCode, recordId, flags) | string | |
 | G2_getRecord_V2(dataSourceCode, recordID, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
 | G2_getRedoRecord(responseBuf, bufSize, resizeFunc ) | getRedoRecord() | string | |
 | G2_getRepositoryLastModifiedTime(lastModifiedTime) | getRepositoryLastModifiedTime()  | int64 | |
-| G2_getVirtualEntityByRecordID(recordList, responseBuf, bufSize, resizeFunc) | getVirtualEntityByRecordID(recordList, flags) | string | |
+| G2_getVirtualEntityByRecordID(recordList, responseBuf, bufSize, resizeFunc) | getVirtualEntityByRecordId(recordList, flags) | string | |
 | G2_getVirtualEntityByRecordID_V2(recordList, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
-| G2_howEntityByEntityID(entityID, responseBuf, bufSize, resizeFunc) | howEntityByEntityID(entityID, flags) | string | SM-1, SM-3.3 |
+| G2_howEntityByEntityID(entityID, responseBuf, bufSize, resizeFunc) | howEntityByEntityId(entityId, flags) | string | SM-1, SM-3.3 |
 | G2_howEntityByEntityID_V2(entityID, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
-| G2_init(moduleName, iniParams, verboseLogging) | | - | |
-| G2_initWithConfigID(moduleName, iniParams, initConfigID, verboseLogging) | | - | |
+| G2_init(moduleName, iniParams, verboseLogging) | initialize(instanceName, settings, verboseLogging, configId) | - | `configId` can be `nil`, `None`, `null`. Consider single object |
+| G2_initWithConfigID(moduleName, iniParams, initConfigID, verboseLogging) | [collapsed]  | | |
 | G2_primeEngine() | | - | |
-| G2_processRedoRecord(responseBuf, bufSize, resizeFunc ) | [not-implemented] | | |
-| G2_processRedoRecordWithInfo(flags, responseBuf, bufSize, infoBuf, infoBufSize, resizeFunc) | [not-implemented] | | |
-| G2_reevaluateEntity(entityID, flags) | reevaluateEntity(entityID, flags, resultFlags) | string | |
+| G2_processRedoRecord(responseBuf, bufSize, resizeFunc ) | TBD | | |
+| G2_processRedoRecordWithInfo(flags, responseBuf, bufSize, infoBuf, infoBufSize, resizeFunc) | TBD | | |
+| G2_reevaluateEntity(entityID, flags) | reevaluateEntity(entityId, flags) | string | `flags` has `WITH_INFO` bit |
 | G2_reevaluateEntityWithInfo(entityID, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | string | |
-| G2_reevaluateRecord(dataSourceCode, recordID, flags) | reevaluateRecord(dataSourceCode, recordID, flags, resultFlags) | string | |
+| G2_reevaluateRecord(dataSourceCode, recordID, flags) | reevaluateRecord(dataSourceCode, recordId, flags) | string | `flags` has `WITH_INFO` bit |
 | G2_reevaluateRecordWithInfo(dataSourceCode, recordID, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
-| G2_reinit(initConfigID) | | - | |
-| G2_replaceRecord(dataSourceCode, recordID, jsonData, loadID) | replaceRecord(dataSourceCode, recordID, jsonData, resultFlags) | string | SM-2 |
-| G2_replaceRecordWithInfo(dataSourceCode, recordID, jsonData, loadID, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
-| G2_searchByAttributes(jsonData, responseBuf, bufSize, resizeFunc) | searchByAttributes(jsonData, searchProfile, flags) | string | SM-2 |
+| G2_reinit(initConfigID) | reInitialize(configId) | - | ??? |
+| G2_replaceRecord(dataSourceCode, recordID, jsonData) | replaceRecord(dataSourceCode, recordId, recordDefinition, flags) | string | |
+| G2_replaceRecordWithInfo(dataSourceCode, recordID, jsonData, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
+| G2_searchByAttributes(jsonData, responseBuf, bufSize, resizeFunc) | searchByAttributes(attributes, searchProfile, flags) | string | |
 | G2_searchByAttributes_V2(jsonData, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
 | G2_searchByAttributes_V3(jsonData, searchProfile, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
-| G2_stats(responseBuf, bufSize, resizeFunc ) | stats() | string | SM-1 |
-| G2_whyEntities(entityID1, entityID2, responseBuf, bufSize, resizeFunc) | whyEntities(entityID1, entityID2, flags) | string | SM-1, SM-3.3 |
+| G2_stats(responseBuf, bufSize, resizeFunc ) | getStats() | string | |
+| G2_whyEntities(entityID1, entityID2, responseBuf, bufSize, resizeFunc) | whyEntities(entityId1, entityId2, flags) | string | SM-1, SM-3.3 |
 | G2_whyEntities_V2(entityID1, entityID2, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
-| G2_whyRecordInEntity(dataSourceCode, recordID, responseBuf, bufSize, resizeFunc) | whyRecordInEntity(dataSourceCode, recordID, flags) | string | SM-1, SM-3.3 |
+| G2_whyRecordInEntity(dataSourceCode, recordID, responseBuf, bufSize, resizeFunc) | whyRecordInEntity(dataSourceCode, recordId, flags) | string | SM-1, SM-3.3 |
 | G2_whyRecordInEntity_V2(dataSourceCode, recordID, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
-| G2_whyRecords(dataSourceCode1, recordID1, dataSourceCode2, recordID2, responseBuf, bufSize, resizeFunc) | whyRecords(dataSourceCode1, recordID1, dataSourceCode2, recordID2, flags) | string | SM-1, SM-3.3 |
+| G2_whyRecords(dataSourceCode1, recordID1, dataSourceCode2, recordID2, responseBuf, bufSize, resizeFunc) | whyRecords(dataSourceCode1, recordId1, dataSourceCode2, recordId2, flags) | string | SM-1, SM-3.3 |
 | G2_whyRecords_V2(dataSourceCode1, recordID1, dataSourceCode2, recordID2, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
 
 ### G2Product
@@ -134,11 +135,11 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
 | G2Product_destroy() | | - | |
 | G2Product_getLastException(buffer, bufSize) | [not-public] | | |
 | G2Product_getLastExceptionCode() | [not-public]| | |
-| G2Product_init(moduleName, iniParams, verboseLogging) | | - | |
-| G2Product_license() | | string | SM-1 |
+| G2Product_init(moduleName, iniParams, verboseLogging) | initialize(instanceName, settings, verboseLogging) | - | |
+| G2Product_license() | getLicense() | string | |
 | G2Product_validateLicenseFile(licenseFilePath, errorBuf, errorBufSize, resizeFunc) | [not-implemented] | | |
-| G2Product_validateLicenseStringBase64(licenseString, errorBuf, errorBufSize, resizeFunc) | [not-implemented] | | |
-| G2Product_version() | | string | SM-1 |
+| G2Product_validateLicenseStringBase64(licenseString, errorBuf, errorBufSize, resizeFunc) | ??? | | |
+| G2Product_version() | getVersion() | string | |
 
 ## Method signature proposals
 
@@ -159,7 +160,7 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
    1. Example:
 
          ```python
-         info = g2_engine.add_record(dataSourceCode, recordID, record, resultFlags)
+         info = g2_engine.add_record(dataSourceCode, recordId, record, resultFlags)
          ```
 
    1. If `resultFlags` is 0 (i.e. no bit flags are on) then the returned value is `{}`, an empty JSON string.
@@ -168,7 +169,7 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
    1. Flag can be OR-ed for future expansion. Example:
 
          ```python
-         info = g2_engine.add_record(dataSourceCode, recordID, record, WITH_INFO | WITHOUT_SOMETHING_ELSE)
+         info = g2_engine.add_record(dataSourceCode, recordId, record, WITH_INFO | WITHOUT_SOMETHING_ELSE)
          ```
 
    1. Although flag arguments are not best practice,
@@ -195,11 +196,11 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
       1. Examples of use
 
          ```python
-         g2_engine.add_record(dataSourceCode, recordID, record)
+         g2_engine.add_record(dataSourceCode, recordId, record)
          ```
 
          ```python
-         info = g2_engine.add_record(dataSourceCode, recordID, record, resultFlags)
+         info = g2_engine.add_record(dataSourceCode, recordId, record, resultFlags)
          ```
 
    1. Java language specifics:
@@ -207,11 +208,11 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
       1. Examples of use:
 
          ```java
-         g2Engine.addRecord(dataSourceCode, recordID, record)
+         g2Engine.addRecord(dataSourceCode, recordId, record)
          ```
 
          ```java
-         info = g2Engine.addRecord(dataSourceCode, recordID, record, WITH_INFO)
+         info = g2Engine.addRecord(dataSourceCode, recordId, record, WITH_INFO)
          ```
 
    1. Go language specifics:
@@ -219,18 +220,18 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
       1. Examples of use:
 
          ```go
-         _, err := g2Engine.AddRecord(dataSourceCode, recordID, record, g2api.WITHOUT_INFO)
+         _, err := g2Engine.AddRecord(dataSourceCode, recordId, record, g2api.WITHOUT_INFO)
          ```
 
          ```go
-         info, err := g2Engine.AddRecord(dataSourceCode, recordID, record, g2api.WITH_INFO)
+         info, err := g2Engine.AddRecord(dataSourceCode, recordId, record, g2api.WITH_INFO)
          ```
 
 ## Smells
 
 1. SM-1: Function naming.  For consistency, say the phrase "To *method-name*".  If it sounds awkward, consider renaming the method.
-   1. Good: "To `getVirtualEntityByRecordID()`", "To `addRecordAndReturnInfo()`"
-   1. Bad: "To `howEntityByEntityID()`", "To `version()`"
+   1. Good: "To `getVirtualEntityByRecordId()`", "To `addRecordAndReturnInfo()`"
+   1. Bad: "To `howEntityByEntityId()`", "To `version()`"
 1. SM-2: Parameter naming. For portability across different programming languages, the parameter name shouldn't include a data-type.
    1. Good: `dataSourceSpec`
    1. Bad: `inputJson`
@@ -238,3 +239,6 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
    1. SM-3.1 `find` instead of standard `get`
    1. SM-3.2 `list` instead of standard `get`
    1. SM-3.3 Non-verb (The "to" principle)
+1. SM-4: Method name does not convey what is happening
+1. SM-5: Multiple returns not supported in Java
+1. SM-6: Can `resultFlags` be the high-order bits of `flags` and cleared out before sending to Senzing C API?
