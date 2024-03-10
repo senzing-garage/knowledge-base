@@ -8,7 +8,7 @@ Flags are 63..0 bits.
 
 | Bit | Names |
 |----:|------|
-|  63 | [RETURN_INFO](#return_info) |
+|  63 | [G2_RETURN_INFO](#return_info) |
 |  62 | [reserved-for-sdks] |
 |  61 | [reserved-for-sdks] |
 |  60 | [reserved-for-sdks] |
@@ -127,9 +127,7 @@ Flags are 63..0 bits.
 
 ### G2_INCLUDE_FEATURE_SCORES
 
-### G2_SEARCH_INCLUDE_STATS
-
-### RETURN_INFO
+### G2_RETURN_INFO
 
 Specify if information should be returned from the method call.
 
@@ -143,3 +141,5 @@ Specify if information should be returned from the method call.
     1. reevaluateEntity()
     1. reevaluateRecord()
     1. replaceRecord()
+
+### G2_SEARCH_INCLUDE_STATS
