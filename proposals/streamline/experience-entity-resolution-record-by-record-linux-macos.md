@@ -252,7 +252,20 @@ You will be oscillating between two applications:
     search {"DRIVERS_LICENSE_NUMBER": "12435345"}
     ```
 
-   Notice three entities, "TEST: 1", "TEST: 6", and "TEST: 4".
+   Notice one entity.
+   There are no longer two entities.
+   Senzing has determined that all three records refer to the same entity.
+
+1. :pencil2: In `G2Explorer.py`,
+   using an "Entity ID" values from the three entities shown above,
+   run `why`.
+   Example:
+
+    ```console
+    why 1
+    ```
+
+    TODO:  Explain what is shown
 
 1. :pencil2: In `G2Explorer.py`,
    using an "Entity ID" values from the three entities shown above,
