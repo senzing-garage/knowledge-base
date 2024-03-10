@@ -136,7 +136,7 @@ Specify if information should be returned from the method call.
 1. **Values:**
     - 0: Return empty JSON string.  No information returned in the JSON.
     - 1: Return JSON string with information.
-1. [Where used](https://github.com/search?q=org%3Asenzing-garage+RETURN_INFO&type=code)
+1. [Where used](https://github.com/search?q=org%3Asenzing-garage+RETURN_INFO&type=code):
     1. addRecord()
     1. deleteRecord()
     1. process()
