@@ -129,7 +129,8 @@ You will be oscillating between two applications:
     (
         add_record_to_senzing(
             {
-                "DATA_SOURCE": "Test", "RECORD_ID": "1",
+                "DATA_SOURCE": "Test",
+                "RECORD_ID": "1",
                 "DRIVERS_LICENSE_NUMBER": "12435345",
                 "DATE_OF_BIRTH": "20/12/1965",
                 "ADDR_FULL":"175 West Clay St, New York, Ohio 47201",
@@ -145,7 +146,8 @@ You will be oscillating between two applications:
     (
         add_record_to_senzing(
             {
-                "DATA_SOURCE": "Test", "RECORD_ID": "4",
+                "DATA_SOURCE": "Test",
+                "RECORD_ID": "4",
                 "DRIVERS_LICENSE_NUMBER": "12435345",
                 "DATE_OF_BIRTH": "20/12/1965",
                 "SSN_NUMBER": "883-24-5259",
@@ -186,7 +188,8 @@ You will be oscillating between two applications:
     search {"DRIVERS_LICENSE_NUMBER": "12435345"}
     ```
 
-   Notice two entities, One for "TEST: 1" and a second for "TEST: 6".
+   Notice two entities.
+   One for "TEST: 1" and a second for "TEST: 4" seen in the "Data Sources" column.
 
 1. :pencil2: In `G2Explorer.py`,
    using the "Entity ID" values from the two entities shown above,
@@ -215,7 +218,8 @@ You will be oscillating between two applications:
     (
         add_record_to_senzing(
             {
-                "DATA_SOURCE": "Test", "RECORD_ID": "6",
+                "DATA_SOURCE": "Test",
+                "RECORD_ID": "6",
                 "DRIVERS_LICENSE_NUMBER": "12435345",
                 "DATE_OF_BIRTH": "20/12/1965",
                 "SSN_NUMBER": "883-24-5259",
@@ -253,11 +257,11 @@ You will be oscillating between two applications:
     ```
 
    Notice one entity.
-   There are no longer two entities.
+   There are no longer two entities, nor three.
    Senzing has determined that all three records refer to the same entity.
 
 1. :pencil2: In `G2Explorer.py`,
-   using an "Entity ID" values from the three entities shown above,
+   using the "Entity ID" value from the entity shown above,
    run `why`.
    Example:
 
@@ -265,10 +269,10 @@ You will be oscillating between two applications:
     why 1
     ```
 
-    TODO:  Explain what is shown
+    TODO:  Explain what is shown.
 
 1. :pencil2: In `G2Explorer.py`,
-   using an "Entity ID" values from the three entities shown above,
+   using the "Entity ID" value from the entity shown above,
    run `how`.
    Example:
 
@@ -286,12 +290,12 @@ You will be oscillating between two applications:
 
 ## Shutdown
 
-20. To end the Senzing gRPC service using Docker,
+21. To end the Senzing gRPC service using Docker,
    use `ctrl-c` to stop the `docker run ...` program.
 
 ## Restart
 
-21. To restart the service, re-run the command seen in Step #3.
+22. To restart the service, re-run the command seen in Step #3.
    Although the port mappings using `--publish` may be changed, the value of `--volume`
    must match the original value so the database files on your workstation will be attached.
 
