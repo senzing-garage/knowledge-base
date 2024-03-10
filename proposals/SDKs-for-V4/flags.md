@@ -8,7 +8,7 @@ Flags are 63..0 bits.
 
 | Bit | Names |
 |----:|------|
-|  63 | [G2_RETURN_INFO](#return_info) |
+|  63 | [G2_RETURN_INFO](#g2_return_info) |
 |  62 | [reserved-for-sdks] |
 |  61 | [reserved-for-sdks] |
 |  60 | [reserved-for-sdks] |
