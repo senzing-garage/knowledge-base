@@ -127,6 +127,7 @@ Reference:  [libg2.h](libg2.h)
 1. **Values:**
     - 0:
     - 1:
+        - [Example output](https://docs.senzing.com/flags/index.html#g2_entity_include_all_features)
 1. [Where used](https://github.com/search?q=org%3Asenzing-garage+G2_ENTITY_INCLUDE_ALL_FEATURES&type=code):
     1. xxxXxxxx()
 
@@ -147,6 +148,7 @@ Reference:  [libg2.h](libg2.h)
 1. **Values:**
     - 0:
     - 1:
+        - [Example output](https://docs.senzing.com/flags/index.html#g2_entity_include_disclosed_relations)
 1. [Where used](https://github.com/search?q=org%3Asenzing-garage+G2_ENTITY_INCLUDE_DISCLOSED_RELATIONS&type=code):
     1. xxxXxxxx()
 
@@ -157,6 +159,7 @@ Reference:  [libg2.h](libg2.h)
 1. **Values:**
     - 0:
     - 1:
+        - [Example output](https://docs.senzing.com/flags/index.html#g2_entity_include_entity_name)
 1. [Where used](https://github.com/search?q=org%3Asenzing-garage+G2_ENTITY_INCLUDE_ENTITY_NAME&type=code):
     1. xxxXxxxx()
 
@@ -167,6 +170,7 @@ Reference:  [libg2.h](libg2.h)
 1. **Values:**
     - 0:
     - 1:
+        - [Example output](https://docs.senzing.com/flags/index.html#g2_entity_include_name_only_relations)
 1. [Where used](https://github.com/search?q=org%3Asenzing-garage+G2_ENTITY_INCLUDE_NAME_ONLY_RELATIONS&type=code):
     1. xxxXxxxx()
 
@@ -177,7 +181,7 @@ Reference:  [libg2.h](libg2.h)
 1. **Values:**
     - 0:
     - 1:
-        - [Example output](https://docs.senzing.com/flags/index.html#g2_entity_include_possibly_same_relations)
+        - [Example output](https://docs.senzing.com/flags/index.html#g2_entity_include_possibly_related_relations)
 1. [Where used](https://github.com/search?q=org%3Asenzing-garage+G2_ENTITY_INCLUDE_POSSIBLY_RELATED_RELATIONS&type=code):
     1. xxxXxxxx()
 
@@ -198,6 +202,7 @@ Reference:  [libg2.h](libg2.h)
 1. **Values:**
     - 0:
     - 1:
+        - [Example output](https://docs.senzing.com/flags/index.html#g2_entity_include_record_data)
 1. [Where used](https://github.com/search?q=org%3Asenzing-garage+G2_ENTITY_INCLUDE_RECORD_DATA&type=code):
     1. xxxXxxxx()
 
@@ -208,6 +213,7 @@ Reference:  [libg2.h](libg2.h)
 1. **Values:**
     - 0:
     - 1:
+        - [Example output](https://docs.senzing.com/flags/index.html#g2_entity_include_record_feature_ids)
 1. [Where used](https://github.com/search?q=org%3Asenzing-garage+G2_ENTITY_INCLUDE_RECORD_FEATURE_IDS&type=code):
     1. xxxXxxxx()
 
@@ -219,6 +225,7 @@ Reference:  [libg2.h](libg2.h)
     - 0:
     - 1:
         - [Example output](https://docs.senzing.com/flags/index.html#g2_entity_include_record_json_data)
+        - [Example output](https://docs.senzing.com/flags/index.html#g2_entity_include_record_json_data-1)
 1. [Where used](https://github.com/search?q=org%3Asenzing-garage+G2_ENTITY_INCLUDE_RECORD_JSON_DATA&type=code):
     1. xxxXxxxx()
 
@@ -230,6 +237,7 @@ Reference:  [libg2.h](libg2.h)
     - 0:
     - 1:
         - [Example output](https://docs.senzing.com/flags/index.html#g2_entity_include_record_matching_info)
+        - [Example output](https://docs.senzing.com/flags/index.html#g2_entity_include_record_matching_info-1)
 1. [Where used](https://github.com/search?q=org%3Asenzing-garage+G2_ENTITY_INCLUDE_RECORD_MATCHING_INFO&type=code):
     1. xxxXxxxx()
 
@@ -240,6 +248,7 @@ Reference:  [libg2.h](libg2.h)
 1. **Values:**
     - 0:
     - 1:
+        - [Example output](https://docs.senzing.com/flags/index.html#g2_entity_include_record_summary)
 1. [Where used](https://github.com/search?q=org%3Asenzing-garage+G2_ENTITY_INCLUDE_RECORD_SUMMARY&type=code):
     1. xxxXxxxx()
 
@@ -270,6 +279,7 @@ Reference:  [libg2.h](libg2.h)
 1. **Values:**
     - 0:
     - 1:
+        - [Example output](https://docs.senzing.com/flags/index.html#g2_entity_include_related_entity_name)
 1. [Where used](https://github.com/search?q=org%3Asenzing-garage+G2_ENTITY_INCLUDE_RELATED_ENTITY_NAME&type=code):
     1. xxxXxxxx()
 
@@ -280,6 +290,7 @@ Reference:  [libg2.h](libg2.h)
 1. **Values:**
     - 0:
     - 1:
+        - [Example output](https://docs.senzing.com/flags/index.html#g2_entity_include_related_matching_info)
 1. [Where used](https://github.com/search?q=org%3Asenzing-garage+G2_ENTITY_INCLUDE_RELATED_MATCHING_INFO&type=code):
     1. xxxXxxxx()
 
@@ -290,6 +301,7 @@ Reference:  [libg2.h](libg2.h)
 1. **Values:**
     - 0:
     - 1:
+        - [Example output](https://docs.senzing.com/flags/index.html#g2_entity_include_related_record_data)
 1. [Where used](https://github.com/search?q=org%3Asenzing-garage+G2_ENTITY_INCLUDE_RELATED_RECORD_DATA&type=code):
     1. xxxXxxxx()
 
@@ -300,6 +312,7 @@ Reference:  [libg2.h](libg2.h)
 1. **Values:**
     - 0:
     - 1:
+        - [Example output](https://docs.senzing.com/flags/index.html#g2_entity_include_related_record_summary)
 1. [Where used](https://github.com/search?q=org%3Asenzing-garage+G2_ENTITY_INCLUDE_RELATED_RECORD_SUMMARY&type=code):
     1. xxxXxxxx()
 
@@ -320,6 +333,7 @@ Reference:  [libg2.h](libg2.h)
 1. **Values:**
     - 0:
     - 1:
+        - [Example output](https://docs.senzing.com/flags/index.html#g2_entity_include_representative_features)
 1. [Where used](https://github.com/search?q=org%3Asenzing-garage+G2_ENTITY_INCLUDE_REPRESENTATIVE_FEATURES&type=code):
     1. xxxXxxxx()
 
@@ -340,6 +354,7 @@ Reference:  [libg2.h](libg2.h)
 1. **Values:**
     - 0:
     - 1:
+        - [Example output](https://docs.senzing.com/flags/index.html#g2_entity_option_include_feature_stats)
 1. [Where used](https://github.com/search?q=org%3Asenzing-garage+G2_ENTITY_OPTION_INCLUDE_FEATURE_STATS&type=code):
     1. xxxXxxxx()
 
@@ -350,6 +365,7 @@ Reference:  [libg2.h](libg2.h)
 1. **Values:**
     - 0:
     - 1:
+        - [Example output](https://docs.senzing.com/flags/index.html#g2_entity_option_include_internal_features)
 1. [Where used](https://github.com/search?q=org%3Asenzing-garage+G2_ENTITY_OPTION_INCLUDE_INTERNAL_FEATURES&type=code):
     1. xxxXxxxx()
 
@@ -501,6 +517,7 @@ Reference:  [libg2.h](libg2.h)
 1. **Values:**
     - 0:
     - 1:
+        - [Example output](https://docs.senzing.com/flags/index.html#g2_find_path_prefer_exclude)
 1. [Where used](https://github.com/search?q=org%3Asenzing-garage+G2_FIND_PATH_PREFER_EXCLUDE&type=code):
     1. xxxXxxxx()
 
@@ -556,6 +573,7 @@ Specify if information should be returned from the method call.
 1. **Values:**
     - 0:
     - 1:
+        - [Example output](https://docs.senzing.com/flags/index.html#g2_search_by_attributes_all)
 1. [Where used](https://github.com/search?q=org%3Asenzing-garage+G2_SEARCH_BY_ATTRIBUTES_ALL&type=code):
     1. xxxXxxxx()
 
@@ -576,6 +594,7 @@ Specify if information should be returned from the method call.
 1. **Values:**
     - 0:
     - 1:
+        - [Example output](https://docs.senzing.com/flags/index.html#g2_search_by_attributes_minimal_all)
 1. [Where used](https://github.com/search?q=org%3Asenzing-garage+G2_SEARCH_BY_ATTRIBUTES_MINIMAL_ALL&type=code):
     1. xxxXxxxx()
 
@@ -586,6 +605,7 @@ Specify if information should be returned from the method call.
 1. **Values:**
     - 0:
     - 1:
+        - [Example output](https://docs.senzing.com/flags/index.html#g2_search_by_attributes_minimal_strong)
 1. [Where used](https://github.com/search?q=org%3Asenzing-garage+G2_SEARCH_BY_ATTRIBUTES_MINIMAL_STRONG&type=code):
     1. xxxXxxxx()
 
@@ -596,6 +616,7 @@ Specify if information should be returned from the method call.
 1. **Values:**
     - 0:
     - 1:
+        - [Example output](https://docs.senzing.com/flags/index.html#g2_search_by_attributes_strong)
 1. [Where used](https://github.com/search?q=org%3Asenzing-garage+G2_SEARCH_BY_ATTRIBUTES_STRONG&type=code):
     1. xxxXxxxx()
 
@@ -616,6 +637,7 @@ Specify if information should be returned from the method call.
 1. **Values:**
     - 0:
     - 1:
+        - [Example output](https://docs.senzing.com/flags/index.html#g2_search_include_feature_scores)
 1. [Where used](https://github.com/search?q=org%3Asenzing-garage+G2_SEARCH_INCLUDE_FEATURE_SCORES&type=code):
     1. xxxXxxxx()
 
@@ -676,6 +698,7 @@ Specify if information should be returned from the method call.
 1. **Values:**
     - 0:
     - 1:
+        - [Example output](https://docs.senzing.com/flags/index.html#g2_search_include_stats)
 1. [Where used](https://github.com/search?q=org%3Asenzing-garage+G2_SEARCH_INCLUDE_STATS&type=code):
     1. xxxXxxxx()
 
