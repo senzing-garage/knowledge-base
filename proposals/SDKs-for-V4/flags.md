@@ -6,8 +6,8 @@ Reference:  [libg2.h](libg2.h)
 
 ## Bits
 
-| Bit | Names |
-|----:|------|
+| Bit | Flag variable names |
+|----:|---------------------|
 |  63 | [G2_RETURN_INFO](#g2_return_info) |
 |  62 | [reserved-for-sdks](#reserved-for-sdks) |
 |  61 | [reserved-for-sdks](#reserved-for-sdks) |
@@ -75,10 +75,11 @@ Reference:  [libg2.h](libg2.h)
 
 ## Aggregates
 
+Although the **Bits** column shows 4 4-digit values, it is meant to be read as `0000 0000 05B8 FBC0`, a 64-bit hexadecimal number.
 **Bits** column calculated by [flags.py](flags.py).
 
-| Name | Aggregates | Bits |
-|------|------------|-----:|
+| Flag variable name | Aggregates | Bits |
+|--------------------|------------|-----:|
 | [G2_ENTITY_BRIEF_DEFAULT_FLAGS](#g2_entity_brief_default_flags) | [G2_ENTITY_INCLUDE_ALL_RELATIONS](#g2_entity_include_all_relations), [G2_ENTITY_INCLUDE_RECORD_MATCHING_INFO](#g2_entity_include_record_matching_info), [G2_ENTITY_INCLUDE_RELATED_MATCHING_INFO](#g2_entity_include_related_matching_info), | 0000 0000 0010 83C0 |
 | [G2_ENTITY_DEFAULT_FLAGS](#g2_entity_default_flags) | [G2_ENTITY_INCLUDE_ALL_RELATIONS](#g2_entity_include_all_relations), [G2_ENTITY_INCLUDE_ENTITY_NAME](#g2_entity_include_entity_name), [G2_ENTITY_INCLUDE_RECORD_DATA](#g2_entity_include_record_data), [G2_ENTITY_INCLUDE_RECORD_MATCHING_INFO](#g2_entity_include_record_matching_info), [G2_ENTITY_INCLUDE_RECORD_SUMMARY](#g2_entity_include_record_summary), [G2_ENTITY_INCLUDE_RELATED_ENTITY_NAME](#g2_entity_include_related_entity_name), [G2_ENTITY_INCLUDE_RELATED_MATCHING_INFO](#g2_entity_include_related_matching_info),  [G2_ENTITY_INCLUDE_RELATED_RECORD_SUMMARY](#g2_entity_include_related_record_summary), [G2_ENTITY_INCLUDE_REPRESENTATIVE_FEATURES](#g2_entity_include_representative_features) | 0000 0000 0038 FBC0 |
 | [G2_ENTITY_INCLUDE_ALL_RELATIONS](#g2_entity_include_all_relations) | [G2_ENTITY_INCLUDE_DISCLOSED_RELATIONS](#g2_entity_include_disclosed_relations), [G2_ENTITY_INCLUDE_NAME_ONLY_RELATIONS](#g2_entity_include_name_only_relations), [G2_ENTITY_INCLUDE_POSSIBLY_RELATED_RELATIONS](#g2_entity_include_possibly_related_relations), [G2_ENTITY_INCLUDE_POSSIBLY_SAME_RELATIONS](#g2_entity_include_possibly_same_relations) | 0000 0000 0000 03C0 |
