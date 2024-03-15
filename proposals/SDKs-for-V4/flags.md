@@ -177,6 +177,7 @@ Reference:  [libg2.h](libg2.h)
 1. **Values:**
     - 0:
     - 1:
+        - [Example output](https://docs.senzing.com/flags/index.html#g2_entity_include_possibly_same_relations)
 1. [Where used](https://github.com/search?q=org%3Asenzing-garage+G2_ENTITY_INCLUDE_POSSIBLY_RELATED_RELATIONS&type=code):
     1. xxxXxxxx()
 
@@ -217,6 +218,7 @@ Reference:  [libg2.h](libg2.h)
 1. **Values:**
     - 0:
     - 1:
+        - [Example output](https://docs.senzing.com/flags/index.html#g2_entity_include_record_json_data)
 1. [Where used](https://github.com/search?q=org%3Asenzing-garage+G2_ENTITY_INCLUDE_RECORD_JSON_DATA&type=code):
     1. xxxXxxxx()
 
@@ -227,6 +229,7 @@ Reference:  [libg2.h](libg2.h)
 1. **Values:**
     - 0:
     - 1:
+        - [Example output](https://docs.senzing.com/flags/index.html#g2_entity_include_record_matching_info)
 1. [Where used](https://github.com/search?q=org%3Asenzing-garage+G2_ENTITY_INCLUDE_RECORD_MATCHING_INFO&type=code):
     1. xxxXxxxx()
 
@@ -437,6 +440,7 @@ Reference:  [libg2.h](libg2.h)
 1. **Values:**
     - 0:
     - 1:
+1. **Use:**
 1. [Where used](https://github.com/search?q=org%3Asenzing-garage+G2_EXPORT_INCLUDE_POSSIBLY_SAME&type=code):
     1. xxxXxxxx()
 
