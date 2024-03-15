@@ -75,8 +75,9 @@ Reference:  [libg2.h](libg2.h)
 
 ## Aggregates
 
-Although the **Bits** column shows 4 4-digit values, it is meant to be read as `0000 0000 05B8 FBC0`, a 64-bit hexadecimal number.
-**Bits** column calculated by [flags.py](flags.py).
+Although the **Bits** column shows 4 4-digit values, it is meant to be read as a 64-bit hexadecimal number.
+For instance, the value for `G2_ENTITY_BRIEF_DEFAULT_FLAGS` is `0000 0000 0010 83C0`.
+The **Bits** column calculated by [flags.py](flags.py).
 
 | Flag variable name | Aggregates | Bits |
 |--------------------|------------|-----:|
