@@ -41,7 +41,7 @@ To see the expanded version, visit
 | G2Diagnostic_destroy() | | - | |
 | G2Diagnostic_init(moduleName, iniParams, verboseLogging) | initialize(instanceName, settings, verboseLogging, configId) | | `configId` can be `nil`, `None`, `null`. Consider single object |
 | G2Diagnostic_purgeRepository(????) | purgeRepository(????) | | |
-| G2Diagnostic_reinit(initConfigID) | reInitialize(configId) | - | |
+| G2Diagnostic_reinit(initConfigID) | reinitialize(configId) | - | |
 
 ### G2Engine
 
@@ -73,7 +73,7 @@ To see the expanded version, visit
 | G2_processRedoRecordWithInfo(flags, responseBuf, bufSize, infoBuf, infoBufSize, resizeFunc) | TBD | | |
 | G2_reevaluateEntity(entityID, flags) | reevaluateEntity(entityId, flags) | string | `flags` has `WITH_INFO` bit |
 | G2_reevaluateRecord(dataSourceCode, recordID, flags) | reevaluateRecord(dataSourceCode, recordId, flags) | string | `flags` has `WITH_INFO` bit |
-| G2_reinit(initConfigID) | reInitialize(configId) | - | ??? |
+| G2_reinit(initConfigID) | reinitialize(configId) | - | ??? |
 | G2_replaceRecord(dataSourceCode, recordID, jsonData) | replaceRecord(dataSourceCode, recordId, recordDefinition, flags) | string | |
 | G2_searchByAttributes(jsonData, responseBuf, bufSize, resizeFunc) | searchByAttributes(attributes, searchProfile, flags) | string | |
 | G2_stats(responseBuf, bufSize, resizeFunc ) | getStats() | string | |
