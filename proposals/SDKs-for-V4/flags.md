@@ -100,6 +100,8 @@ Reference:  [libg2.h](libg2.h)
 
 ## Flag names
 
+**Bits** column calculated by [flags.py](flags.py).
+
 ### G2_ENTITY_BRIEF_DEFAULT_FLAGS
 
 [TODO: Write Synopsis]
@@ -456,7 +458,6 @@ Reference:  [libg2.h](libg2.h)
 1. **Values:**
     - 0:
     - 1:
-1. **Use:**
 1. [Where used](https://github.com/search?q=org%3Asenzing-garage+G2_EXPORT_INCLUDE_POSSIBLY_SAME&type=code):
     1. xxxXxxxx()
 
