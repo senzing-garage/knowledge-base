@@ -75,6 +75,8 @@ Reference:  [libg2.h](libg2.h)
 
 ## Aggregates
 
+**Bits** column calculated by [flags.py](flags.py).
+
 | Name | Aggregates | Bits |
 |------|------------|-----:|
 | [G2_ENTITY_BRIEF_DEFAULT_FLAGS](#g2_entity_brief_default_flags) | [G2_ENTITY_INCLUDE_ALL_RELATIONS](#g2_entity_include_all_relations), [G2_ENTITY_INCLUDE_RECORD_MATCHING_INFO](#g2_entity_include_record_matching_info), [G2_ENTITY_INCLUDE_RELATED_MATCHING_INFO](#g2_entity_include_related_matching_info), | 0000 0000 0010 83C0 |
@@ -99,8 +101,6 @@ Reference:  [libg2.h](libg2.h)
 | [G2_WHY_RECORDS_DEFAULT_FLAGS](#g2_why_records_default_flags) | [G2_ENTITY_DEFAULT_FLAGS](#g2_entity_default_flags), [G2_ENTITY_OPTION_INCLUDE_FEATURE_STATS](#g2_entity_option_include_feature_stats), [G2_ENTITY_OPTION_INCLUDE_INTERNAL_FEATURES](#g2_entity_option_include_internal_features), [G2_INCLUDE_FEATURE_SCORES](#g2_include_feature_scores) | 0000 0000 05B8 FBC0 |
 
 ## Flag names
-
-**Bits** column calculated by [flags.py](flags.py).
 
 ### G2_ENTITY_BRIEF_DEFAULT_FLAGS
 
