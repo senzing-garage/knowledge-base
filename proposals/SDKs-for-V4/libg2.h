@@ -1,12 +1,14 @@
 /**********************************************************************************
- © Copyright Senzing, Inc. 2017-2023
+ © Copyright Senzing, Inc. 2017-2024
  The source code for this program is not published or otherwise divested
  of its trade secrets, irrespective of what has been deposited with the U.S.
  Copyright Office.
 **********************************************************************************/
 
+
 #ifndef LIBG2_H
 #define LIBG2_H
+
 
 /* Platform specific function export header */
 #if defined(_WIN32)
@@ -27,7 +29,7 @@ extern "C"
   ******************************************************/
 
   /* we should include entities with "resolved" relationships */
-  #define G2_EXPORT_INCLUDE_RESOLVED static_cast<long long>( 1LL << 0 )
+  #define G2_EXPORT_INCLUDE_MULTI_RECORD_ENTITIES static_cast<long long>( 1LL << 0 )
   /* we should include entities with "possibly same" relationships */
   #define G2_EXPORT_INCLUDE_POSSIBLY_SAME static_cast<long long>( 1LL << 1 )
   /* we should include entities with "possibly related" relationships */
@@ -37,13 +39,13 @@ extern "C"
   /* we should include entities with "disclosed" relationships */
   #define G2_EXPORT_INCLUDE_DISCLOSED static_cast<long long>( 1LL << 4 )
   /* we should include singleton entities */
-  #define G2_EXPORT_INCLUDE_SINGLETONS static_cast<long long>( 1LL << 5 )
+  #define G2_EXPORT_INCLUDE_SINGLE_RECORD_ENTITIES static_cast<long long>( 1LL << 5 )
   /* we should include all entities */
   #define G2_EXPORT_INCLUDE_ALL_ENTITIES        \
-            (G2_EXPORT_INCLUDE_RESOLVED         \
-            | G2_EXPORT_INCLUDE_SINGLETONS)
+            (G2_EXPORT_INCLUDE_MULTI_RECORD_ENTITIES         \
+            | G2_EXPORT_INCLUDE_SINGLE_RECORD_ENTITIES)
   /* we should include all entities with relationships */
-  #define G2_EXPORT_INCLUDE_ALL_RELATIONSHIPS      \
+  #define G2_EXPORT_INCLUDE_ALL_HAVING_RELATIONSHIPS      \
             (G2_EXPORT_INCLUDE_POSSIBLY_SAME       \
             | G2_EXPORT_INCLUDE_POSSIBLY_RELATED   \
             | G2_EXPORT_INCLUDE_NAME_ONLY          \
@@ -85,14 +87,16 @@ extern "C"
   #define G2_ENTITY_INCLUDE_ENTITY_NAME static_cast<long long>( 1LL << 12 )
   /* include the record summary of the entity */
   #define G2_ENTITY_INCLUDE_RECORD_SUMMARY static_cast<long long>( 1LL << 13 )
+  /* include the record types of the entity */
+  #define G2_ENTITY_INCLUDE_RECORD_TYPES static_cast<long long>( 1LL << 28 )
   /* include the basic record data for the entity  */
   #define G2_ENTITY_INCLUDE_RECORD_DATA static_cast<long long>( 1LL << 14 )
   /* include the record matching info for the entity */
   #define G2_ENTITY_INCLUDE_RECORD_MATCHING_INFO static_cast<long long>( 1LL << 15 )
   /* include the record json data for the entity */
   #define G2_ENTITY_INCLUDE_RECORD_JSON_DATA static_cast<long long>( 1LL << 16 )
-  /* include the record formattted data for the entity */
-  #define G2_ENTITY_INCLUDE_RECORD_FORMATTED_DATA static_cast<long long>( 1LL << 17 )
+  /* include the record unmapped data for the entity */
+  #define G2_ENTITY_INCLUDE_RECORD_UNMAPPED_DATA static_cast<long long>( 1LL << 31 )
   /* include the features identifiers for the records */
   #define G2_ENTITY_INCLUDE_RECORD_FEATURE_IDS static_cast<long long>( 1LL << 18 )
   /* include the name of the related entities */
@@ -101,6 +105,8 @@ extern "C"
   #define G2_ENTITY_INCLUDE_RELATED_MATCHING_INFO static_cast<long long>( 1LL << 20 )
   /* include the record summary of the related entities */
   #define G2_ENTITY_INCLUDE_RELATED_RECORD_SUMMARY static_cast<long long>( 1LL << 21 )
+  /* include the record types of the related entities */
+  #define G2_ENTITY_INCLUDE_RELATED_RECORD_TYPES static_cast<long long>( 1LL << 29 )
   /* include the basic record of the related entities */
   #define G2_ENTITY_INCLUDE_RELATED_RECORD_DATA static_cast<long long>( 1LL << 22 )
 
@@ -112,6 +118,15 @@ extern "C"
   #define G2_ENTITY_OPTION_INCLUDE_INTERNAL_FEATURES static_cast<long long>( 1LL << 23 )
   /* include statistics on features */
   #define G2_ENTITY_OPTION_INCLUDE_FEATURE_STATS static_cast<long long>( 1LL << 24 )
+  /* include feature elements */
+  #define G2_ENTITY_OPTION_INCLUDE_FEATURE_ELEMENTS static_cast<long long>( 1LL << 32 )
+
+  /******************************************************
+  ****  Flags for extra matching data
+  ******************************************************/
+
+  /* include internal features  */
+  #define G2_ENTITY_OPTION_INCLUDE_MATCH_KEY_DETAILS static_cast<long long>( 1LL << 34 )
 
   /******************************************************
   ****  Flags for finding entity path data
@@ -119,6 +134,10 @@ extern "C"
 
   /* excluded entities are still allowed, but not preferred */
   #define G2_FIND_PATH_PREFER_EXCLUDE static_cast<long long>( 1LL << 25 )
+  /* include matching info on entity paths */
+  #define G2_FIND_PATH_MATCHING_INFO static_cast<long long>( 1LL << 30 )
+  /* include matching info on entity networks */
+  #define G2_FIND_NETWORK_MATCHING_INFO static_cast<long long>( 1LL << 33 )
 
   /******************************************************
   ****  Flags for including search result feature scores
@@ -130,12 +149,14 @@ extern "C"
   #define G2_SEARCH_INCLUDE_STATS static_cast<long long>( 1LL << 27 )
   /* include feature scores from search results */
   #define G2_SEARCH_INCLUDE_FEATURE_SCORES (G2_INCLUDE_FEATURE_SCORES)
+  /* include detailed match key in search results */
+  #define G2_SEARCH_INCLUDE_MATCH_KEY_DETAILS (G2_ENTITY_OPTION_INCLUDE_MATCH_KEY_DETAILS)
 
   /******************************************************
   ****  Flags for searching for entities
   ******************************************************/
 
-  #define G2_SEARCH_INCLUDE_RESOLVED (G2_EXPORT_INCLUDE_RESOLVED)
+  #define G2_SEARCH_INCLUDE_RESOLVED (G2_EXPORT_INCLUDE_MULTI_RECORD_ENTITIES)
   #define G2_SEARCH_INCLUDE_POSSIBLY_SAME (G2_EXPORT_INCLUDE_POSSIBLY_SAME)
   #define G2_SEARCH_INCLUDE_POSSIBLY_RELATED (G2_EXPORT_INCLUDE_POSSIBLY_RELATED)
   #define G2_SEARCH_INCLUDE_NAME_ONLY (G2_EXPORT_INCLUDE_NAME_ONLY)
@@ -153,6 +174,7 @@ extern "C"
   /* the recommended default flag values for getting records */
   #define G2_RECORD_DEFAULT_FLAGS                 \
             (G2_ENTITY_INCLUDE_RECORD_JSON_DATA)
+
   /* the recommended default flag values for getting entities */
   #define G2_ENTITY_DEFAULT_FLAGS                          \
             (G2_ENTITY_INCLUDE_ALL_RELATIONS               \
@@ -164,41 +186,53 @@ extern "C"
               | G2_ENTITY_INCLUDE_RELATED_ENTITY_NAME      \
               | G2_ENTITY_INCLUDE_RELATED_RECORD_SUMMARY   \
               | G2_ENTITY_INCLUDE_RELATED_MATCHING_INFO)
+
   /* the recommended default flag values for a brief entity result */
   #define G2_ENTITY_BRIEF_DEFAULT_FLAGS                   \
             (G2_ENTITY_INCLUDE_RECORD_MATCHING_INFO       \
               | G2_ENTITY_INCLUDE_ALL_RELATIONS           \
               | G2_ENTITY_INCLUDE_RELATED_MATCHING_INFO)
+
   /* the recommended default flag values for exporting entities */
   #define G2_EXPORT_DEFAULT_FLAGS                          \
             (G2_EXPORT_INCLUDE_ALL_ENTITIES                \
-              | G2_EXPORT_INCLUDE_ALL_RELATIONSHIPS        \
-              | G2_ENTITY_INCLUDE_ALL_RELATIONS            \
-              | G2_ENTITY_INCLUDE_REPRESENTATIVE_FEATURES  \
-              | G2_ENTITY_INCLUDE_ENTITY_NAME              \
-              | G2_ENTITY_INCLUDE_RECORD_DATA              \
-              | G2_ENTITY_INCLUDE_RECORD_MATCHING_INFO     \
-              | G2_ENTITY_INCLUDE_RELATED_MATCHING_INFO)
+              | G2_ENTITY_DEFAULT_FLAGS)
+
   /* the recommended default flag values for finding entity paths */
   #define G2_FIND_PATH_DEFAULT_FLAGS                      \
-            (G2_ENTITY_INCLUDE_ALL_RELATIONS              \
+            (G2_FIND_PATH_MATCHING_INFO                   \
               | G2_ENTITY_INCLUDE_ENTITY_NAME             \
-              | G2_ENTITY_INCLUDE_RECORD_SUMMARY          \
-              | G2_ENTITY_INCLUDE_RELATED_MATCHING_INFO)
+              | G2_ENTITY_INCLUDE_RECORD_SUMMARY)
+  #define G2_FIND_NETWORK_DEFAULT_FLAGS                   \
+            (G2_FIND_NETWORK_MATCHING_INFO                \
+              | G2_ENTITY_INCLUDE_ENTITY_NAME             \
+              | G2_ENTITY_INCLUDE_RECORD_SUMMARY)
+
   /* the recommended default flag values for why-analysis on entities */
-  #define G2_WHY_ENTITY_DEFAULT_FLAGS                        \
+  #define G2_WHY_ENTITIES_DEFAULT_FLAGS                      \
             (G2_ENTITY_DEFAULT_FLAGS                         \
-              | G2_ENTITY_INCLUDE_RECORD_FEATURE_IDS         \
               | G2_ENTITY_OPTION_INCLUDE_INTERNAL_FEATURES   \
               | G2_ENTITY_OPTION_INCLUDE_FEATURE_STATS       \
               | G2_INCLUDE_FEATURE_SCORES) 
-  /* the recommended default flag values for how-analysis on entities */
-  #define G2_HOW_ENTITY_DEFAULT_FLAGS                        \
+  #define G2_WHY_RECORDS_DEFAULT_FLAGS                       \
             (G2_ENTITY_DEFAULT_FLAGS                         \
-              | G2_ENTITY_INCLUDE_RECORD_FEATURE_IDS         \
               | G2_ENTITY_OPTION_INCLUDE_INTERNAL_FEATURES   \
               | G2_ENTITY_OPTION_INCLUDE_FEATURE_STATS       \
-              | G2_INCLUDE_FEATURE_SCORES)
+              | G2_INCLUDE_FEATURE_SCORES) 
+  #define G2_WHY_RECORD_IN_ENTITY_DEFAULT_FLAGS              \
+            (G2_ENTITY_DEFAULT_FLAGS                         \
+              | G2_ENTITY_OPTION_INCLUDE_INTERNAL_FEATURES   \
+              | G2_ENTITY_OPTION_INCLUDE_FEATURE_STATS       \
+              | G2_INCLUDE_FEATURE_SCORES) 
+
+  /* the recommended default flag values for how-analysis on entities */
+  #define G2_HOW_ENTITY_DEFAULT_FLAGS                        \
+            (G2_INCLUDE_FEATURE_SCORES)
+
+  /* the recommended default flag values for virtual-entity-analysis on entities */
+  #define G2_VIRTUAL_ENTITY_DEFAULT_FLAGS                   \
+            (G2_ENTITY_DEFAULT_FLAGS)
+
 
   /******************************************************
   ****  Recommended settings for searching by attributes
@@ -242,8 +276,15 @@ extern "C"
    * @param initConfigID Identifier for the configuration to use in initialization.
    * @param verboseLogging A flag to enable deeper logging of the G2 processing
    */
-  _DLEXPORT long long G2_init(const char *moduleName, const char *iniParams, const long long verboseLogging);
-  _DLEXPORT long long G2_initWithConfigID(const char *moduleName, const char *iniParams, const long long initConfigID, const long long verboseLogging);
+  _DLEXPORT long long G2_init(
+                            const char *moduleName,
+                            const char *iniParams,
+                            const long long verboseLogging);
+  _DLEXPORT long long G2_initWithConfigID(
+                            const char *moduleName,
+                            const char *iniParams,
+                            const long long initConfigID,
+                            const long long verboseLogging);
 
 
   /**
@@ -270,58 +311,9 @@ extern "C"
 
 
   /**
-   * @brief
-   * This method will send a record for processing in g2. It is a synchronous
-   * call, i.e. it will wait until g2 actually processes the record, and then
-   * return any response message.
-   *
-   * @details
-   * This version of the process function will check if a response message
-   * was returned for the processing of the input message. If so, it will store
-   * it in the responseBuf parameter. This method will not throw an exception.
-   *
-   * @param record An input record to be processed.
-   * @param responseBuf After synchronously waiting for the input to
-   *        complete its processing, if there is any associated response message
-   *        generated from the input, it is stored in this response buffer.
-   *        If there was no response message upon successful processing, then
-   *        empty string is stored. If an error occurred, an error response is
-   *        stored here.
-   * @param bufSize The max number of bytes that can be stored in responseBuf.
-   *        The response buffer must be able to hold at least this many bytes,
-   *        or a resize method must be provided that may be used to resize
-   *        the buffer.  This will return the new size.
-   * @param resizeFunc A function pointer that can be used to resize the memory
-   *        buffer specified in the responseBuf argument.  This function will
-   *        be called to allocate more memory if the response buffer is not large
-   *        enough.  This argument may be NULL.  If it is NULL, the function
-   *        will return an error if the result is larger than the buffer.
-   * @return Returns 0 for success. Returns -1 if the response status indicates
-   *         failure or the G2 object is not intitialized. Returns -2 if an 
-   *         exception was thrown and caught. 
-   */
-  _DLEXPORT long long G2_process(const char *record);
-  _DLEXPORT long long G2_processWithInfo(const char *record, const long long flags, char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize));
-  _DLEXPORT long long G2_processWithResponse(const char *record, char *responseBuf, const size_t bufSize);
-  _DLEXPORT long long G2_processWithResponseResize(const char *record, char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize) );
-
-
-  /**
-   * @brief
-   * Used for checking specific records.
-   */
-  _DLEXPORT long long G2_checkRecord(const char *record, const char* recordQueryList, char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize) );
-
-
-  /**
    * @brief Process a record contained in the internal redo-queue
    * 
-   * @param responseBuf A memory buffer for returning the record that was
-   *        processed by this call.
-   * @param bufSize The max number of bytes that can be stored in responseBuf.
-   *        The response buffer must be able to hold at least this many bytes,
-   *        or a resize method must be provided that may be used to resize
-   *        the buffer.  This will return the new size.
+   * @param redoRecord Null terminated UT8-JSON record from G2_getRedoRecord
    * @param infoBuf Same as responseBuf. In a success, returns info about the 
             affected entities
    * @param infoBufSize Same as bufSize but for infoBuf
@@ -331,8 +323,11 @@ extern "C"
    *        enough.  This argument may be NULL.  If it is NULL, the function
    *        will return an error if the result is larger than the buffer.
    */
-  _DLEXPORT long long G2_processRedoRecord(char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize) );
-  _DLEXPORT long long G2_processRedoRecordWithInfo(const long long flags, char **responseBuf, size_t *bufSize, char **infoBuf, size_t *infoBufSize, void *(*resizeFunc)(void *ptr, size_t newSize));
+  _DLEXPORT long long G2_processRedoRecord(const char *redoRecord);
+  _DLEXPORT long long G2_processRedoRecordWithInfo(const char *redoRecord,
+                            char **infoBuf,
+                            size_t *infoBufSize,
+                            void *(*resizeFunc)(void *ptr, size_t newSize));
 
 
   /**
@@ -350,7 +345,10 @@ extern "C"
    *        enough.  This argument may be NULL.  If it is NULL, the function
    *        will return an error if the result is larger than the buffer.
    */
-  _DLEXPORT long long G2_getRedoRecord(char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize) );
+  _DLEXPORT long long G2_getRedoRecord(
+                            char **responseBuf,
+                            size_t *bufSize,
+                            void *(*resizeFunc)(void *ptr, size_t newSize) );
 
 
   /**
@@ -378,29 +376,10 @@ extern "C"
    *        enough.  This argument may be NULL.  If it is NULL, the function
    *        will return an error if the result is larger than the buffer.
    */
-  _DLEXPORT long long G2_stats(char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize) );
-
-
-  /**
-   * @brief
-   * This method returns a JSON document containing the G2 configuration.
-   * 
-   * @param responseBuf A memory buffer for returning the response document.
-   *        If an error occurred, an error response is stored here.
-   * @param bufSize The max number of bytes that can be stored in responseBuf.
-   *        The response buffer must be able to hold at least this many bytes,
-   *        or a resize method must be provided that may be used to resize
-   *        the buffer.  This will return the new size.
-   * @param resizeFunc A function pointer that can be used to resize the memory
-   *        buffer specified in the responseBuf argument.  This function will
-   *        be called to allocate more memory if the response buffer is not large
-   *        enough.  This argument may be NULL.  If it is NULL, the function
-   *        will return an error if the result is larger than the buffer.
-   * @param configID An integer specifying the configID of the config being 
-   *        exported.
-   */
-  _DLEXPORT long long G2_exportConfig(char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize) );
-  _DLEXPORT long long G2_exportConfigAndConfigID(char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize), long long* configID );
+  _DLEXPORT long long G2_stats(
+                            char **responseBuf,
+                            size_t *bufSize,
+                            void *(*resizeFunc)(void *ptr, size_t newSize) );
 
 
   /**
@@ -433,7 +412,6 @@ extern "C"
    * @param recordID The ID for the record
    * @param jsonData A JSON document containing the attribute information
    *        for the observation.
-   * @param loadID The observation load ID for the record, can be NULL and will default to dataSourceCode
    * @param responseBuf A memory buffer for returning the response document.
    *        If an error occurred, an error response is stored here.
    * @param bufSize The max number of bytes that can be stored in responseBuf.
@@ -449,21 +427,55 @@ extern "C"
    *         failure or the module transport is not initialized. Returns -2 if 
    *         an exception was thrown and caught.
    */
-  _DLEXPORT long long G2_addRecord(const char* dataSourceCode, const char* recordID, const char* jsonData, const char *loadID);
-  _DLEXPORT long long G2_addRecordWithReturnedRecordID(const char* dataSourceCode, const char* jsonData, const char *loadID, char *recordIDBuf, const size_t bufSize);
-  _DLEXPORT long long G2_addRecordWithInfo(const char* dataSourceCode, const char* recordID, const char* jsonData, const char *loadID, const long long flags, char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize));
-  _DLEXPORT long long G2_addRecordWithInfoWithReturnedRecordID(const char* dataSourceCode, const char* jsonData, const char *loadID, const long long flags, char *recordIDBuf, const size_t recordIDBufSize, char **responseBuf, size_t *responseBufSize, void *(*resizeFunc)(void *ptr, size_t newSize));
-  _DLEXPORT long long G2_replaceRecord(const char* dataSourceCode, const char* recordID, const char* jsonData, const char *loadID);
-  _DLEXPORT long long G2_replaceRecordWithInfo(const char* dataSourceCode, const char* recordID, const char* jsonData, const char *loadID, const long long flags, char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize));
+  _DLEXPORT long long G2_addRecord(
+                            const char* dataSourceCode,
+                            const char* recordID,
+                            const char* jsonData);
+  _DLEXPORT long long G2_addRecordWithInfo(
+                            const char* dataSourceCode,
+                            const char* recordID,
+                            const char* jsonData,
+                            const long long flags,
+                            char **responseBuf,
+                            size_t *bufSize,
+                            void *(*resizeFunc)(void *ptr, size_t newSize));
+  _DLEXPORT long long G2_replaceRecord(
+                            const char* dataSourceCode,
+                            const char* recordID,
+                            const char* jsonData);
+  _DLEXPORT long long G2_replaceRecordWithInfo(
+                            const char* dataSourceCode,
+                            const char* recordID,
+                            const char* jsonData,
+                            const long long flags,
+                            char **responseBuf,
+                            size_t *bufSize,
+                            void *(*resizeFunc)(void *ptr, size_t newSize));
 
 
   /**
    * @brief Reevaluate an entity in the database.
    */
-  _DLEXPORT long long G2_reevaluateRecord(const char* dataSourceCode, const char* recordID, const long long flags);
-  _DLEXPORT long long G2_reevaluateEntity(const long long entityID, const long long flags);
-  _DLEXPORT long long G2_reevaluateRecordWithInfo(const char* dataSourceCode, const char* recordID, const long long flags, char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize));
-  _DLEXPORT long long G2_reevaluateEntityWithInfo(const long long entityID, const long long flags, char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize));
+  _DLEXPORT long long G2_reevaluateRecord(
+                            const char* dataSourceCode,
+                            const char* recordID,
+                            const long long flags);
+  _DLEXPORT long long G2_reevaluateEntity(
+                            const long long entityID,
+                            const long long flags);
+  _DLEXPORT long long G2_reevaluateRecordWithInfo(
+                            const char* dataSourceCode,
+                            const char* recordID,
+                            const long long flags,
+                            char **responseBuf,
+                            size_t *bufSize,
+                            void *(*resizeFunc)(void *ptr, size_t newSize));
+  _DLEXPORT long long G2_reevaluateEntityWithInfo(
+                            const long long entityID,
+                            const long long flags,
+                            char **responseBuf,
+                            size_t *bufSize,
+                            void *(*resizeFunc)(void *ptr, size_t newSize));
 
 
   /**
@@ -474,7 +486,6 @@ extern "C"
    * 
    * @param dataSourceCode The data source for the observation.
    * @param recordID The ID for the record
-   * @param loadID The observation load ID for the record, can be NULL and will default to dataSourceCode
    * @param responseBuf A buffer that returns a JSON object that summaries the changes cased by adding the
    *        record. Also contains the recordID.
    * @param bufSize The size of the responseBuf buffer
@@ -487,8 +498,16 @@ extern "C"
    *         failure or the G2 module is not initialized. Returns -2 if 
    *         an exception was thrown and caught.
    */
-  _DLEXPORT long long G2_deleteRecord(const char* dataSourceCode, const char* recordID, const char* loadID);
-  _DLEXPORT long long G2_deleteRecordWithInfo(const char* dataSourceCode, const char* recordID, const char* loadID, const long long flags, char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize));
+  _DLEXPORT long long G2_deleteRecord(
+                            const char* dataSourceCode,
+                            const char* recordID);
+  _DLEXPORT long long G2_deleteRecordWithInfo(
+                            const char* dataSourceCode,
+                            const char* recordID,
+                            const long long flags,
+                            char **responseBuf,
+                            size_t *bufSize,
+                            void *(*resizeFunc)(void *ptr, size_t newSize));
 
 
   /**
@@ -513,9 +532,24 @@ extern "C"
    *         failure or the G2 module is not initialized. Returns -2 if 
    *         an exception was thrown and caught.
    */
-  _DLEXPORT long long G2_searchByAttributes(const char* jsonData, char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize));
-  _DLEXPORT long long G2_searchByAttributes_V2(const char* jsonData, const long long flags, char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize));
-  _DLEXPORT long long G2_searchByAttributes_V3(const char* jsonData, const char* searchProfile, const long long flags, char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize));
+  _DLEXPORT long long G2_searchByAttributes(
+                            const char* jsonData,
+                            char **responseBuf,
+                            size_t *bufSize,
+                            void *(*resizeFunc)(void *ptr, size_t newSize));
+  _DLEXPORT long long G2_searchByAttributes_V2(
+                            const char* jsonData,
+                            const long long flags,
+                            char **responseBuf,
+                            size_t *bufSize,
+                            void *(*resizeFunc)(void *ptr, size_t newSize));
+  _DLEXPORT long long G2_searchByAttributes_V3(
+                            const char* jsonData,
+                            const char* searchProfile,
+                            const long long flags,
+                            char **responseBuf,
+                            size_t *bufSize,
+                            void *(*resizeFunc)(void *ptr, size_t newSize));
 
 
   /**
@@ -541,10 +575,30 @@ extern "C"
    *         failure or the G2 module is not initialized. Returns -2 if 
    *         an exception was thrown and caught.
    */
-  _DLEXPORT long long G2_getEntityByEntityID(const long long entityID, char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize));
-  _DLEXPORT long long G2_getEntityByEntityID_V2(const long long entityID, const long long flags, char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize));
-  _DLEXPORT long long G2_getEntityByRecordID(const char* dataSourceCode, const char* recordID, char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize));
-  _DLEXPORT long long G2_getEntityByRecordID_V2(const char* dataSourceCode, const char* recordID, const long long flags, char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize));
+  _DLEXPORT long long G2_getEntityByEntityID(
+                            const long long entityID,
+                            char **responseBuf,
+                            size_t *bufSize,
+                            void *(*resizeFunc)(void *ptr, size_t newSize));
+  _DLEXPORT long long G2_getEntityByEntityID_V2(
+                            const long long entityID,
+                            const long long flags,
+                            char **responseBuf,
+                            size_t *bufSize,
+                            void *(*resizeFunc)(void *ptr, size_t newSize));
+  _DLEXPORT long long G2_getEntityByRecordID(
+                            const char* dataSourceCode,
+                            const char* recordID,
+                            char **responseBuf,
+                            size_t *bufSize,
+                            void *(*resizeFunc)(void *ptr, size_t newSize));
+  _DLEXPORT long long G2_getEntityByRecordID_V2(
+                            const char* dataSourceCode,
+                            const char* recordID,
+                            const long long flags,
+                            char **responseBuf,
+                            size_t *bufSize,
+                            void *(*resizeFunc)(void *ptr, size_t newSize));
 
 
   /**
@@ -568,8 +622,19 @@ extern "C"
    *         failure or the G2 module is not initialized. Returns -2 if 
    *         an exception was thrown and caught.
    */
-  _DLEXPORT long long G2_getRecord(const char* dataSourceCode, const char* recordID, char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize));
-  _DLEXPORT long long G2_getRecord_V2(const char* dataSourceCode, const char* recordID, const long long flags, char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize));
+  _DLEXPORT long long G2_getRecord(
+                            const char* dataSourceCode,
+                            const char* recordID,
+                            char **responseBuf,
+                            size_t *bufSize,
+                            void *(*resizeFunc)(void *ptr, size_t newSize));
+  _DLEXPORT long long G2_getRecord_V2(
+                            const char* dataSourceCode,
+                            const char* recordID,
+                            const long long flags, 
+                            char **responseBuf,
+                            size_t *bufSize,
+                            void *(*resizeFunc)(void *ptr, size_t newSize));
 
 
   /**
@@ -597,10 +662,40 @@ extern "C"
    *         failure or the G2 module is not initialized. Returns -2 if 
    *         an exception was thrown and caught.
    */
-  _DLEXPORT long long G2_findPathByEntityID(const long long entityID1, const long long entityID2, const long long maxDegree, char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize));
-  _DLEXPORT long long G2_findPathByEntityID_V2(const long long entityID1, const long long entityID2, const long long maxDegree, const long long flags, char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize));
-  _DLEXPORT long long G2_findPathByRecordID(const char* dataSourceCode1, const char* recordID1, const char* dataSourceCode2, const char* recordID2, const long long maxDegree, char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize));
-  _DLEXPORT long long G2_findPathByRecordID_V2(const char* dataSourceCode1, const char* recordID1, const char* dataSourceCode2, const char* recordID2, const long long maxDegree, const long long flags, char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize));
+  _DLEXPORT long long G2_findPathByEntityID(
+                            const long long entityID1,
+                            const long long entityID2,
+                            const long long maxDegree,
+                            char **responseBuf,
+                            size_t *bufSize,
+                            void *(*resizeFunc)(void *ptr, size_t newSize));
+  _DLEXPORT long long G2_findPathByEntityID_V2(
+                            const long long entityID1,
+                            const long long entityID2,
+                            const long long maxDegree,
+                            const long long flags,
+                            char **responseBuf,
+                            size_t *bufSize,
+                            void *(*resizeFunc)(void *ptr, size_t newSize));
+  _DLEXPORT long long G2_findPathByRecordID(
+                            const char* dataSourceCode1,
+                            const char* recordID1,
+                            const char* dataSourceCode2,
+                            const char* recordID2,
+                            const long long maxDegree,
+                            char **responseBuf,
+                            size_t *bufSize,
+                            void *(*resizeFunc)(void *ptr, size_t newSize));
+  _DLEXPORT long long G2_findPathByRecordID_V2(
+                            const char* dataSourceCode1,
+                            const char* recordID1,
+                            const char* dataSourceCode2,
+                            const char* recordID2, 
+                            const long long maxDegree,
+                            const long long flags,
+                            char **responseBuf,
+                            size_t *bufSize,
+                            void *(*resizeFunc)(void *ptr, size_t newSize));
 
 
   /**
@@ -638,10 +733,44 @@ extern "C"
    *         failure or the G2 module is not initialized. Returns -2 if 
    *         an exception was thrown and caught.
    */
-  _DLEXPORT long long G2_findPathExcludingByEntityID(const long long entityID1, const long long entityID2, const long long maxDegree, const char* excludedEntities, char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize));
-  _DLEXPORT long long G2_findPathExcludingByEntityID_V2(const long long entityID1, const long long entityID2, const long long maxDegree, const char* excludedEntities, const long long flags, char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize));
-  _DLEXPORT long long G2_findPathExcludingByRecordID(const char* dataSourceCode1, const char* recordID1, const char* dataSourceCode2, const char* recordID2, const long long maxDegree, const char* excludedRecords, char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize));
-  _DLEXPORT long long G2_findPathExcludingByRecordID_V2(const char* dataSourceCode1, const char* recordID1, const char* dataSourceCode2, const char* recordID2, const long long maxDegree, const char* excludedRecords, const long long flags, char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize));
+  _DLEXPORT long long G2_findPathExcludingByEntityID(
+                            const long long entityID1,
+                            const long long entityID2,
+                            const long long maxDegree,
+                            const char* excludedEntities,
+                            char **responseBuf,
+                            size_t *bufSize,
+                            void *(*resizeFunc)(void *ptr, size_t newSize));
+  _DLEXPORT long long G2_findPathExcludingByEntityID_V2(
+                            const long long entityID1,
+                            const long long entityID2,
+                            const long long maxDegree,
+                            const char* excludedEntities,
+                            const long long flags,
+                            char **responseBuf,
+                            size_t *bufSize,
+                            void *(*resizeFunc)(void *ptr, size_t newSize));
+  _DLEXPORT long long G2_findPathExcludingByRecordID(
+                            const char* dataSourceCode1,
+                            const char* recordID1,
+                            const char* dataSourceCode2,
+                            const char* recordID2,
+                            const long long maxDegree, 
+                            const char* excludedRecords,
+                            char **responseBuf,
+                            size_t *bufSize, 
+                            void *(*resizeFunc)(void *ptr, size_t newSize));
+  _DLEXPORT long long G2_findPathExcludingByRecordID_V2(
+                            const char* dataSourceCode1,
+                            const char* recordID1, 
+                            const char* dataSourceCode2, 
+                            const char* recordID2, 
+                            const long long maxDegree,
+                            const char* excludedRecords, 
+                            const long long flags,
+                            char **responseBuf, 
+                            size_t *bufSize,
+                            void *(*resizeFunc)(void *ptr, size_t newSize));
 
 
   /**
@@ -682,10 +811,48 @@ extern "C"
    *         failure or the G2 module is not initialized. Returns -2 if 
    *         an exception was thrown and caught.
    */
-  _DLEXPORT long long G2_findPathIncludingSourceByEntityID(const long long entityID1, const long long entityID2, const long long maxDegree, const char* excludedEntities, const char* requiredDsrcs, char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize));
-  _DLEXPORT long long G2_findPathIncludingSourceByEntityID_V2(const long long entityID1, const long long entityID2, const long long maxDegree, const char* excludedEntities, const char* requiredDsrcs, const long long flags, char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize));
-  _DLEXPORT long long G2_findPathIncludingSourceByRecordID(const char* dataSourceCode1, const char* recordID1, const char* dataSourceCode2, const char* recordID2, const long long maxDegree, const char* excludedRecords, const char* requiredDsrcs, char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize));
-  _DLEXPORT long long G2_findPathIncludingSourceByRecordID_V2(const char* dataSourceCode1, const char* recordID1, const char* dataSourceCode2, const char* recordID2, const long long maxDegree, const char* excludedRecords, const char* requiredDsrcs, const long long flags, char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize));
+  _DLEXPORT long long G2_findPathIncludingSourceByEntityID(
+                            const long long entityID1,
+                            const long long entityID2,
+                            const long long maxDegree,
+                            const char* excludedEntities,
+                            const char* requiredDsrcs,
+                            char **responseBuf,
+                            size_t *bufSize,
+                            void *(*resizeFunc)(void *ptr, size_t newSize));
+  _DLEXPORT long long G2_findPathIncludingSourceByEntityID_V2(
+                            const long long entityID1,
+                            const long long entityID2,
+                            const long long maxDegree,
+                            const char* excludedEntities,
+                            const char* requiredDsrcs,
+                            const long long flags,
+                            char **responseBuf, 
+                            size_t *bufSize,
+                            void *(*resizeFunc)(void *ptr, size_t newSize));
+  _DLEXPORT long long G2_findPathIncludingSourceByRecordID(
+                            const char* dataSourceCode1,
+                            const char* recordID1,
+                            const char* dataSourceCode2,
+                            const char* recordID2,
+                            const long long maxDegree, 
+                            const char* excludedRecords,
+                            const char* requiredDsrcs,
+                            char **responseBuf,
+                            size_t *bufSize,
+                            void *(*resizeFunc)(void *ptr, size_t newSize));
+  _DLEXPORT long long G2_findPathIncludingSourceByRecordID_V2(
+                            const char* dataSourceCode1,
+                            const char* recordID1,
+                            const char* dataSourceCode2, 
+                            const char* recordID2, 
+                            const long long maxDegree,
+                            const char* excludedRecords,
+                            const char* requiredDsrcs, 
+                            const long long flags, 
+                            char **responseBuf,
+                            size_t *bufSize,
+                            void *(*resizeFunc)(void *ptr, size_t newSize));
 
  
   /**
@@ -717,76 +884,154 @@ extern "C"
    *         failure or the G2 module is not initialized. Returns -2 if 
    *         an exception was thrown and caught.
    */
-  _DLEXPORT long long G2_findNetworkByEntityID(const char* entityList, const long long maxDegree, const long long buildOutDegree, const long long maxEntities, char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize));
-  _DLEXPORT long long G2_findNetworkByEntityID_V2(const char* entityList, const long long maxDegree, const long long buildOutDegree, const long long maxEntities, const long long flags, char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize));
-  _DLEXPORT long long G2_findNetworkByRecordID(const char* recordList, const long long maxDegree, const long long buildOutDegree, const long long maxEntities, char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize));
-  _DLEXPORT long long G2_findNetworkByRecordID_V2(const char* recordList, const long long maxDegree, const long long buildOutDegree, const long long maxEntities, const long long flags, char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize));
+  _DLEXPORT long long G2_findNetworkByEntityID(
+                            const char* entityList,
+                            const long long maxDegree,
+                            const long long buildOutDegree,
+                            const long long maxEntities,
+                            char **responseBuf,
+                            size_t *bufSize,
+                            void *(*resizeFunc)(void *ptr, size_t newSize));
+  _DLEXPORT long long G2_findNetworkByEntityID_V2(
+                            const char* entityList,
+                            const long long maxDegree,
+                            const long long buildOutDegree,
+                            const long long maxEntities,
+                            const long long flags,
+                            char **responseBuf,
+                            size_t *bufSize,
+                            void *(*resizeFunc)(void *ptr, size_t newSize));
+  _DLEXPORT long long G2_findNetworkByRecordID(
+                            const char* recordList,
+                            const long long maxDegree,
+                            const long long buildOutDegree,
+                            const long long maxEntities,
+                            char **responseBuf,
+                            size_t *bufSize,
+                            void *(*resizeFunc)(void *ptr, size_t newSize));
+  _DLEXPORT long long G2_findNetworkByRecordID_V2(
+                            const char* recordList,
+                            const long long maxDegree,
+                            const long long buildOutDegree,
+                            const long long maxEntities,
+                            const long long flags,
+                            char **responseBuf,
+                            size_t *bufSize,
+                            void *(*resizeFunc)(void *ptr, size_t newSize));
 
 
   /**
    * @brief
    * This method determines what interesting entities exist around a particular resolved entity
    */
-  _DLEXPORT long long G2_findInterestingEntitiesByEntityID(const long long entityID, const long long flags, char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize));
-  _DLEXPORT long long G2_findInterestingEntitiesByRecordID(const char* dataSourceCode, const char* recordID, const long long flags, char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize));
-
-
-  /**
-   * @brief
-   * This method determines why records are included in the resolved entity they belong to.
-   */
-  _DLEXPORT long long G2_whyEntityByRecordID(const char* dataSourceCode, const char* recordID, char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize));
-  _DLEXPORT long long G2_whyEntityByRecordID_V2(const char* dataSourceCode, const char* recordID, const long long flags, char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize));
-  _DLEXPORT long long G2_whyEntityByEntityID(const long long entityID, char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize));
-  _DLEXPORT long long G2_whyEntityByEntityID_V2(const long long entityID, const long long flags, char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize));
+  _DLEXPORT long long G2_findInterestingEntitiesByEntityID(
+                            const long long entityID,
+                            const long long flags,
+                            char **responseBuf,
+                            size_t *bufSize, 
+                            void *(*resizeFunc)(void *ptr, size_t newSize));
+  _DLEXPORT long long G2_findInterestingEntitiesByRecordID(
+                            const char* dataSourceCode,
+                            const char* recordID,
+                            const long long flags,
+                            char **responseBuf,
+                            size_t *bufSize,
+                            void *(*resizeFunc)(void *ptr, size_t newSize));
 
 
   /**
    * @brief
    * This method determines why a particular record is included in its resolved entity.
    */
-  _DLEXPORT long long G2_whyRecordInEntity(const char* dataSourceCode, const char* recordID, char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize));
-  _DLEXPORT long long G2_whyRecordInEntity_V2(const char* dataSourceCode, const char* recordID, const long long flags, char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize));
+  _DLEXPORT long long G2_whyRecordInEntity(
+                            const char* dataSourceCode,
+                            const char* recordID,
+                            char **responseBuf,
+                            size_t *bufSize,
+                            void *(*resizeFunc)(void *ptr, size_t newSize));
+  _DLEXPORT long long G2_whyRecordInEntity_V2(
+                            const char* dataSourceCode, 
+                            const char* recordID,
+                            const long long flags,
+                            char **responseBuf,
+                            size_t *bufSize,
+                            void *(*resizeFunc)(void *ptr, size_t newSize));
 
 
   /**
    * @brief
    * This method determines how records are related to each other.
    */
-  _DLEXPORT long long G2_whyRecords(const char* dataSourceCode1, const char* recordID1, const char* dataSourceCode2, const char* recordID2, char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize));
-  _DLEXPORT long long G2_whyRecords_V2(const char* dataSourceCode1, const char* recordID1, const char* dataSourceCode2, const char* recordID2, const long long flags, char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize));
+  _DLEXPORT long long G2_whyRecords(
+                            const char* dataSourceCode1,
+                            const char* recordID1,
+                            const char* dataSourceCode2,
+                            const char* recordID2,
+                            char **responseBuf,
+                            size_t *bufSize,
+                            void *(*resizeFunc)(void *ptr, size_t newSize));
+  _DLEXPORT long long G2_whyRecords_V2(
+                            const char* dataSourceCode1,
+                            const char* recordID1,
+                            const char* dataSourceCode2,
+                            const char* recordID2,
+                            const long long flags, 
+                            char **responseBuf,
+                            size_t *bufSize, 
+                            void *(*resizeFunc)(void *ptr, size_t newSize));
   
 
   /**
    * @brief
    * This method determines how entities are related to each other.
    */
-  _DLEXPORT long long G2_whyEntities(const long long entityID1, const long long entityID2, char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize));
-  _DLEXPORT long long G2_whyEntities_V2(const long long entityID1, const long long entityID2, const long long flags, char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize));
+  _DLEXPORT long long G2_whyEntities(
+                            const long long entityID1,
+                            const long long entityID2,
+                            char **responseBuf,
+                            size_t *bufSize,
+                            void *(*resizeFunc)(void *ptr, size_t newSize));
+  _DLEXPORT long long G2_whyEntities_V2(
+                            const long long entityID1,
+                            const long long entityID2, 
+                            const long long flags,
+                            char **responseBuf, 
+                            size_t *bufSize,
+                            void *(*resizeFunc)(void *ptr, size_t newSize));
 
 
   /**
    * @brief
    * This method gives information on how entities were constructed from their base records.
    */
-  _DLEXPORT long long G2_howEntityByEntityID(const long long entityID, char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize));
-  _DLEXPORT long long G2_howEntityByEntityID_V2(const long long entityID, const long long flags, char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize));
+  _DLEXPORT long long G2_howEntityByEntityID(
+                            const long long entityID,
+                            char **responseBuf,
+                            size_t *bufSize, 
+                            void *(*resizeFunc)(void *ptr, size_t newSize));
+  _DLEXPORT long long G2_howEntityByEntityID_V2(
+                            const long long entityID,
+                            const long long flags,
+                            char **responseBuf,
+                            size_t *bufSize,
+                            void *(*resizeFunc)(void *ptr, size_t newSize));
 
 
   /**
    * @brief
    * This method gives information on how an entity composed of a given set of records would look
    */
-  _DLEXPORT long long G2_getVirtualEntityByRecordID(const char* recordList, char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize));
-  _DLEXPORT long long G2_getVirtualEntityByRecordID_V2(const char* recordList, const long long flags, char **responseBuf, size_t *bufSize, void *(*resizeFunc)(void *ptr, size_t newSize));
-
-
-  /**
-   * @brief
-   * This is used to purge all data from an existing repository
-   * @return Returns 0 for success, or an appropriate error code.
-   */
-  _DLEXPORT long long G2_purgeRepository();
+  _DLEXPORT long long G2_getVirtualEntityByRecordID(
+                            const char* recordList,
+                            char **responseBuf,
+                            size_t *bufSize,
+                            void *(*resizeFunc)(void *ptr, size_t newSize));
+  _DLEXPORT long long G2_getVirtualEntityByRecordID_V2(
+                            const char* recordList,
+                            const long long flags,
+                            char **responseBuf,
+                            size_t *bufSize, 
+                            void *(*resizeFunc)(void *ptr, size_t newSize));
 
 
   /* type definitions for exporting data  */
@@ -802,12 +1047,14 @@ extern "C"
    * exported entity data for a single resolved entity.
    *
    * @param flags A bit mask specifying control flags, such as 
-   *        "G2_EXPORT_INCLUDE_SINGLETONS".  The default and recommended
+   *        "G2_EXPORT_INCLUDE_SINGLE_RECORD_ENTITIES".  The default and recommended
    *        value is "G2_EXPORT_DEFAULT_FLAGS".
    *
    * @return Returns an export handle that the entity data can be read from.
    */
-  _DLEXPORT long long G2_exportJSONEntityReport(const long long flags, ExportHandle* responseHandle);
+  _DLEXPORT long long G2_exportJSONEntityReport(
+                            const long long flags,
+                            ExportHandle* responseHandle);
 
 
   /**
@@ -820,12 +1067,15 @@ extern "C"
    * following row contains the exported entity data.
    *
    * @param flags A bit mask specifying other control flags, such as 
-   *        "G2_EXPORT_INCLUDE_SINGLETONS".  The default and recommended
+   *        "G2_EXPORT_INCLUDE_SINGLE_RECORD_ENTITIES".  The default and recommended
    *        value is "G2_EXPORT_DEFAULT_FLAGS".
    *
    * @return Returns an export handle that the entity data can be read from.
    */
-  _DLEXPORT long long G2_exportCSVEntityReport(const char* csvColumnList, const long long flags, ExportHandle* responseHandle);
+  _DLEXPORT long long G2_exportCSVEntityReport(
+                            const char* csvColumnList,
+                            const long long flags,
+                            ExportHandle* responseHandle);
 
 
   /**
@@ -839,7 +1089,10 @@ extern "C"
    *
    * @return Returns a pointer to the buffer if successful, or -1 otherwise
    */
-  _DLEXPORT long long G2_fetchNext(ExportHandle responseHandle, char *responseBuf, const size_t bufSize);
+  _DLEXPORT long long G2_fetchNext(
+                            ExportHandle responseHandle,
+                            char *responseBuf,
+                            const size_t bufSize);
 
 
   /**
@@ -875,6 +1128,7 @@ extern "C"
 #ifdef __cplusplus 
 };
 #endif
+
 
 #endif /* LIBG2_H */
 
