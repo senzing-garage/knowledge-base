@@ -112,127 +112,433 @@ Reference:  [libg2.h](libg2.h)
 
 ### G2_ENTITY_BRIEF_DEFAULT_FLAGS
 
+[TODO: Write Synopsis]
+
+1. **Values:**
+    - 0:
+    - 1:
+1. [Where used](https://github.com/search?q=org%3Asenzing-garage+XXX_XXX&type=code):
+    1. xxxXxxxx()
+
 ### G2_ENTITY_DEFAULT_FLAGS
+
+[TODO: Write Synopsis]
+
+1. **Values:**
+    - 0:
+    - 1:
+1. [Where used](https://github.com/search?q=org%3Asenzing-garage+XXX_XXX&type=code):
+    1. xxxXxxxx()
 
 ### G2_ENTITY_INCLUDE_ALL_FEATURES
 
+[TODO: Write Synopsis]
+
+1. **Values:**
+    - 0:
+    - 1:
+1. [Where used](https://github.com/search?q=org%3Asenzing-garage+XXX_XXX&type=code):
+    1. xxxXxxxx()
+
 ### G2_ENTITY_INCLUDE_ALL_RELATIONS
+
+[TODO: Write Synopsis]
+
+1. **Values:**
+    - 0:
+    - 1:
+1. [Where used](https://github.com/search?q=org%3Asenzing-garage+XXX_XXX&type=code):
+    1. xxxXxxxx()
 
 ### G2_ENTITY_INCLUDE_DISCLOSED_RELATIONS
 
+[TODO: Write Synopsis]
+
+1. **Values:**
+    - 0:
+    - 1:
+1. [Where used](https://github.com/search?q=org%3Asenzing-garage+XXX_XXX&type=code):
+    1. xxxXxxxx()
+
 ### G2_ENTITY_INCLUDE_ENTITY_NAME
+
+[TODO: Write Synopsis]
+
+1. **Values:**
+    - 0:
+    - 1:
+1. [Where used](https://github.com/search?q=org%3Asenzing-garage+XXX_XXX&type=code):
+    1. xxxXxxxx()
 
 ### G2_ENTITY_INCLUDE_NAME_ONLY_RELATIONS
 
+[TODO: Write Synopsis]
+
+1. **Values:**
+    - 0:
+    - 1:
+1. [Where used](https://github.com/search?q=org%3Asenzing-garage+XXX_XXX&type=code):
+    1. xxxXxxxx()
+
 ### G2_ENTITY_INCLUDE_POSSIBLY_RELATED_RELATIONS
+
+[TODO: Write Synopsis]
+
+1. **Values:**
+    - 0:
+    - 1:
+1. [Where used](https://github.com/search?q=org%3Asenzing-garage+XXX_XXX&type=code):
+    1. xxxXxxxx()
 
 ### G2_ENTITY_INCLUDE_POSSIBLY_SAME_RELATIONS
 
+[TODO: Write Synopsis]
+
+1. **Values:**
+    - 0:
+    - 1:
+1. [Where used](https://github.com/search?q=org%3Asenzing-garage+XXX_XXX&type=code):
+    1. xxxXxxxx()
+
 ### G2_ENTITY_INCLUDE_RECORD_DATA
+
+[TODO: Write Synopsis]
+
+1. **Values:**
+    - 0:
+    - 1:
+1. [Where used](https://github.com/search?q=org%3Asenzing-garage+XXX_XXX&type=code):
+    1. xxxXxxxx()
 
 ### G2_ENTITY_INCLUDE_RECORD_FEATURE_IDS
 
+[TODO: Write Synopsis]
+
+1. **Values:**
+    - 0:
+    - 1:
+1. [Where used](https://github.com/search?q=org%3Asenzing-garage+XXX_XXX&type=code):
+    1. xxxXxxxx()
+
 ### G2_ENTITY_INCLUDE_RECORD_JSON_DATA
+
+[TODO: Write Synopsis]
+
+1. **Values:**
+    - 0:
+    - 1:
+1. [Where used](https://github.com/search?q=org%3Asenzing-garage+XXX_XXX&type=code):
+    1. xxxXxxxx()
 
 ### G2_ENTITY_INCLUDE_RECORD_MATCHING_INFO
 
+[TODO: Write Synopsis]
+
+1. **Values:**
+    - 0:
+    - 1:
+1. [Where used](https://github.com/search?q=org%3Asenzing-garage+XXX_XXX&type=code):
+    1. xxxXxxxx()
+
 ### G2_ENTITY_INCLUDE_RECORD_SUMMARY
+
+[TODO: Write Synopsis]
+
+1. **Values:**
+    - 0:
+    - 1:
+1. [Where used](https://github.com/search?q=org%3Asenzing-garage+XXX_XXX&type=code):
+    1. xxxXxxxx()
 
 ### G2_ENTITY_INCLUDE_RECORD_TYPES
 
+[TODO: Write Synopsis]
+
+1. **Values:**
+    - 0:
+    - 1:
+1. [Where used](https://github.com/search?q=org%3Asenzing-garage+XXX_XXX&type=code):
+    1. xxxXxxxx()
+
 ### G2_ENTITY_INCLUDE_RECORD_UNMAPPED_DATA
+
+[TODO: Write Synopsis]
+
+1. **Values:**
+    - 0:
+    - 1:
+1. [Where used](https://github.com/search?q=org%3Asenzing-garage+XXX_XXX&type=code):
+    1. xxxXxxxx()
 
 ### G2_ENTITY_INCLUDE_RELATED_ENTITY_NAME
 
+[TODO: Write Synopsis]
+
+1. **Values:**
+    - 0:
+    - 1:
+1. [Where used](https://github.com/search?q=org%3Asenzing-garage+XXX_XXX&type=code):
+    1. xxxXxxxx()
+
 ### G2_ENTITY_INCLUDE_RELATED_MATCHING_INFO
+
+[TODO: Write Synopsis]
+
+1. **Values:**
+    - 0:
+    - 1:
+1. [Where used](https://github.com/search?q=org%3Asenzing-garage+XXX_XXX&type=code):
+    1. xxxXxxxx()
 
 ### G2_ENTITY_INCLUDE_RELATED_RECORD_DATA
 
+[TODO: Write Synopsis]
+
+1. **Values:**
+    - 0:
+    - 1:
+1. [Where used](https://github.com/search?q=org%3Asenzing-garage+XXX_XXX&type=code):
+    1. xxxXxxxx()
+
 ### G2_ENTITY_INCLUDE_RELATED_RECORD_SUMMARY
+
+[TODO: Write Synopsis]
+
+1. **Values:**
+    - 0:
+    - 1:
+1. [Where used](https://github.com/search?q=org%3Asenzing-garage+XXX_XXX&type=code):
+    1. xxxXxxxx()
 
 ### G2_ENTITY_INCLUDE_RELATED_RECORD_TYPES
 
+[TODO: Write Synopsis]
+
+1. **Values:**
+    - 0:
+    - 1:
+1. [Where used](https://github.com/search?q=org%3Asenzing-garage+XXX_XXX&type=code):
+    1. xxxXxxxx()
+
 ### G2_ENTITY_INCLUDE_REPRESENTATIVE_FEATURES
+
+[TODO: Write Synopsis]
+
+1. **Values:**
+    - 0:
+    - 1:
+1. [Where used](https://github.com/search?q=org%3Asenzing-garage+XXX_XXX&type=code):
+    1. xxxXxxxx()
 
 ### G2_ENTITY_OPTION_INCLUDE_FEATURE_ELEMENTS
 
+[TODO: Write Synopsis]
+
+1. **Values:**
+    - 0:
+    - 1:
+1. [Where used](https://github.com/search?q=org%3Asenzing-garage+XXX_XXX&type=code):
+    1. xxxXxxxx()
+
 ### G2_ENTITY_OPTION_INCLUDE_FEATURE_STATS
+
+[TODO: Write Synopsis]
+
+1. **Values:**
+    - 0:
+    - 1:
+1. [Where used](https://github.com/search?q=org%3Asenzing-garage+XXX_XXX&type=code):
+    1. xxxXxxxx()
 
 ### G2_ENTITY_OPTION_INCLUDE_INTERNAL_FEATURES
 
+[TODO: Write Synopsis]
+
+1. **Values:**
+    - 0:
+    - 1:
+1. [Where used](https://github.com/search?q=org%3Asenzing-garage+XXX_XXX&type=code):
+    1. xxxXxxxx()
+
 ### G2_ENTITY_OPTION_INCLUDE_MATCH_KEY_DETAILS
+
+[TODO: Write Synopsis]
+
+1. **Values:**
+    - 0:
+    - 1:
+1. [Where used](https://github.com/search?q=org%3Asenzing-garage+XXX_XXX&type=code):
+    1. xxxXxxxx()
 
 ### G2_EXPORT_DEFAULT_FLAGS
 
+[TODO: Write Synopsis]
+
+1. **Values:**
+    - 0:
+    - 1:
+1. [Where used](https://github.com/search?q=org%3Asenzing-garage+XXX_XXX&type=code):
+    1. xxxXxxxx()
+
 ### G2_EXPORT_INCLUDE_ALL_ENTITIES
+
+[TODO: Write Synopsis]
+
+1. **Values:**
+    - 0:
+    - 1:
+1. [Where used](https://github.com/search?q=org%3Asenzing-garage+XXX_XXX&type=code):
+    1. xxxXxxxx()
 
 ### G2_EXPORT_INCLUDE_ALL_HAVING_RELATIONSHIPS
 
+[TODO: Write Synopsis]
+
+1. **Values:**
+    - 0:
+    - 1:
+1. [Where used](https://github.com/search?q=org%3Asenzing-garage+XXX_XXX&type=code):
+    1. xxxXxxxx()
+
 ### G2_EXPORT_INCLUDE_DISCLOSED
+
+[TODO: Write Synopsis]
+
+1. **Values:**
+    - 0:
+    - 1:
+1. [Where used](https://github.com/search?q=org%3Asenzing-garage+XXX_XXX&type=code):
+    1. xxxXxxxx()
 
 ### G2_EXPORT_INCLUDE_MULTI_RECORD_ENTITIES
 
+[TODO: Write Synopsis]
+
+1. **Values:**
+    - 0:
+    - 1:
+1. [Where used](https://github.com/search?q=org%3Asenzing-garage+XXX_XXX&type=code):
+    1. xxxXxxxx()
+
 ### G2_EXPORT_INCLUDE_NAME_ONLY
+
+[TODO: Write Synopsis]
+
+1. **Values:**
+    - 0:
+    - 1:
+1. [Where used](https://github.com/search?q=org%3Asenzing-garage+XXX_XXX&type=code):
+    1. xxxXxxxx()
 
 ### G2_EXPORT_INCLUDE_POSSIBLY_RELATED
 
+[TODO: Write Synopsis]
+
+1. **Values:**
+    - 0:
+    - 1:
+1. [Where used](https://github.com/search?q=org%3Asenzing-garage+XXX_XXX&type=code):
+    1. xxxXxxxx()
+
 ### G2_EXPORT_INCLUDE_POSSIBLY_SAME
+
+[TODO: Write Synopsis]
+
+1. **Values:**
+    - 0:
+    - 1:
+1. [Where used](https://github.com/search?q=org%3Asenzing-garage+XXX_XXX&type=code):
+    1. xxxXxxxx()
 
 ### G2_EXPORT_INCLUDE_SINGLE_RECORD_ENTITIES
 
+[TODO: Write Synopsis]
+
+1. **Values:**
+    - 0:
+    - 1:
+1. [Where used](https://github.com/search?q=org%3Asenzing-garage+XXX_XXX&type=code):
+    1. xxxXxxxx()
+
 ### G2_FIND_NETWORK_DEFAULT_FLAGS
+
+[TODO: Write Synopsis]
+
+1. **Values:**
+    - 0:
+    - 1:
+1. [Where used](https://github.com/search?q=org%3Asenzing-garage+XXX_XXX&type=code):
+    1. xxxXxxxx()
 
 ### G2_FIND_NETWORK_MATCHING_INFO
 
+[TODO: Write Synopsis]
+
+1. **Values:**
+    - 0:
+    - 1:
+1. [Where used](https://github.com/search?q=org%3Asenzing-garage+XXX_XXX&type=code):
+    1. xxxXxxxx()
+
 ### G2_FIND_PATH_DEFAULT_FLAGS
+
+[TODO: Write Synopsis]
+
+1. **Values:**
+    - 0:
+    - 1:
+1. [Where used](https://github.com/search?q=org%3Asenzing-garage+XXX_XXX&type=code):
+    1. xxxXxxxx()
 
 ### G2_FIND_PATH_MATCHING_INFO
 
+[TODO: Write Synopsis]
+
+1. **Values:**
+    - 0:
+    - 1:
+1. [Where used](https://github.com/search?q=org%3Asenzing-garage+XXX_XXX&type=code):
+    1. xxxXxxxx()
+
 ### G2_FIND_PATH_PREFER_EXCLUDE
+
+[TODO: Write Synopsis]
+
+1. **Values:**
+    - 0:
+    - 1:
+1. [Where used](https://github.com/search?q=org%3Asenzing-garage+XXX_XXX&type=code):
+    1. xxxXxxxx()
 
 ### G2_HOW_ENTITY_DEFAULT_FLAGS
 
+[TODO: Write Synopsis]
+
+1. **Values:**
+    - 0:
+    - 1:
+1. [Where used](https://github.com/search?q=org%3Asenzing-garage+XXX_XXX&type=code):
+    1. xxxXxxxx()
+
 ### G2_INCLUDE_FEATURE_SCORES
+
+[TODO: Write Synopsis]
+
+1. **Values:**
+    - 0:
+    - 1:
+1. [Where used](https://github.com/search?q=org%3Asenzing-garage+XXX_XXX&type=code):
+    1. xxxXxxxx()
 
 ### G2_RECORD_DEFAULT_FLAGS
 
-### G2_SEARCH_BY_ATTRIBUTES_ALL
+[TODO: Write Synopsis]
 
-### G2_SEARCH_BY_ATTRIBUTES_DEFAULT_FLAGS
-
-### G2_SEARCH_BY_ATTRIBUTES_MINIMAL_ALL
-
-### G2_SEARCH_BY_ATTRIBUTES_MINIMAL_STRONG
-
-### G2_SEARCH_BY_ATTRIBUTES_STRONG
-
-### G2_SEARCH_INCLUDE_ALL_ENTITIES
-
-### G2_SEARCH_INCLUDE_FEATURE_SCORES
-
-### G2_SEARCH_INCLUDE_MATCH_KEY_DETAILS
-
-### G2_SEARCH_INCLUDE_NAME_ONLY
-
-### G2_SEARCH_INCLUDE_POSSIBLY_RELATED
-
-### G2_SEARCH_INCLUDE_POSSIBLY_SAME
-
-### G2_SEARCH_INCLUDE_RESOLVED
-
-### G2_SEARCH_INCLUDE_STATS
-
-### G2_VIRTUAL_ENTITY_DEFAULT_FLAGS
-
-### G2_WHY_ENTITIES_DEFAULT_FLAGS
-
-### G2_WHY_RECORD_IN_ENTITY_DEFAULT_FLAGS
-
-### G2_WHY_RECORDS_DEFAULT_FLAGS
-
-### Reserved for SDKs
-
-### Unused
+1. **Values:**
+    - 0:
+    - 1:
+1. [Where used](https://github.com/search?q=org%3Asenzing-garage+XXX_XXX&type=code):
+    1. xxxXxxxx()
 
 ### G2_RETURN_INFO
 
@@ -248,3 +554,177 @@ Specify if information should be returned from the method call.
     1. reevaluateEntity()
     1. reevaluateRecord()
     1. replaceRecord()
+
+### G2_SEARCH_BY_ATTRIBUTES_ALL
+
+[TODO: Write Synopsis]
+
+1. **Values:**
+    - 0:
+    - 1:
+1. [Where used](https://github.com/search?q=org%3Asenzing-garage+XXX_XXX&type=code):
+    1. xxxXxxxx()
+
+### G2_SEARCH_BY_ATTRIBUTES_DEFAULT_FLAGS
+
+[TODO: Write Synopsis]
+
+1. **Values:**
+    - 0:
+    - 1:
+1. [Where used](https://github.com/search?q=org%3Asenzing-garage+XXX_XXX&type=code):
+    1. xxxXxxxx()
+
+### G2_SEARCH_BY_ATTRIBUTES_MINIMAL_ALL
+
+[TODO: Write Synopsis]
+
+1. **Values:**
+    - 0:
+    - 1:
+1. [Where used](https://github.com/search?q=org%3Asenzing-garage+XXX_XXX&type=code):
+    1. xxxXxxxx()
+
+### G2_SEARCH_BY_ATTRIBUTES_MINIMAL_STRONG
+
+[TODO: Write Synopsis]
+
+1. **Values:**
+    - 0:
+    - 1:
+1. [Where used](https://github.com/search?q=org%3Asenzing-garage+XXX_XXX&type=code):
+    1. xxxXxxxx()
+
+### G2_SEARCH_BY_ATTRIBUTES_STRONG
+
+[TODO: Write Synopsis]
+
+1. **Values:**
+    - 0:
+    - 1:
+1. [Where used](https://github.com/search?q=org%3Asenzing-garage+XXX_XXX&type=code):
+    1. xxxXxxxx()
+
+### G2_SEARCH_INCLUDE_ALL_ENTITIES
+
+[TODO: Write Synopsis]
+
+1. **Values:**
+    - 0:
+    - 1:
+1. [Where used](https://github.com/search?q=org%3Asenzing-garage+XXX_XXX&type=code):
+    1. xxxXxxxx()
+
+### G2_SEARCH_INCLUDE_FEATURE_SCORES
+
+[TODO: Write Synopsis]
+
+1. **Values:**
+    - 0:
+    - 1:
+1. [Where used](https://github.com/search?q=org%3Asenzing-garage+XXX_XXX&type=code):
+    1. xxxXxxxx()
+
+### G2_SEARCH_INCLUDE_MATCH_KEY_DETAILS
+
+[TODO: Write Synopsis]
+
+1. **Values:**
+    - 0:
+    - 1:
+1. [Where used](https://github.com/search?q=org%3Asenzing-garage+XXX_XXX&type=code):
+    1. xxxXxxxx()
+
+### G2_SEARCH_INCLUDE_NAME_ONLY
+
+[TODO: Write Synopsis]
+
+1. **Values:**
+    - 0:
+    - 1:
+1. [Where used](https://github.com/search?q=org%3Asenzing-garage+XXX_XXX&type=code):
+    1. xxxXxxxx()
+
+### G2_SEARCH_INCLUDE_POSSIBLY_RELATED
+
+[TODO: Write Synopsis]
+
+1. **Values:**
+    - 0:
+    - 1:
+1. [Where used](https://github.com/search?q=org%3Asenzing-garage+XXX_XXX&type=code):
+    1. xxxXxxxx()
+
+### G2_SEARCH_INCLUDE_POSSIBLY_SAME
+
+[TODO: Write Synopsis]
+
+1. **Values:**
+    - 0:
+    - 1:
+1. [Where used](https://github.com/search?q=org%3Asenzing-garage+XXX_XXX&type=code):
+    1. xxxXxxxx()
+
+### G2_SEARCH_INCLUDE_RESOLVED
+
+[TODO: Write Synopsis]
+
+1. **Values:**
+    - 0:
+    - 1:
+1. [Where used](https://github.com/search?q=org%3Asenzing-garage+XXX_XXX&type=code):
+    1. xxxXxxxx()
+
+### G2_SEARCH_INCLUDE_STATS
+
+[TODO: Write Synopsis]
+
+1. **Values:**
+    - 0:
+    - 1:
+1. [Where used](https://github.com/search?q=org%3Asenzing-garage+XXX_XXX&type=code):
+    1. xxxXxxxx()
+
+### G2_VIRTUAL_ENTITY_DEFAULT_FLAGS
+
+[TODO: Write Synopsis]
+
+1. **Values:**
+    - 0:
+    - 1:
+1. [Where used](https://github.com/search?q=org%3Asenzing-garage+XXX_XXX&type=code):
+    1. xxxXxxxx()
+
+### G2_WHY_ENTITIES_DEFAULT_FLAGS
+
+[TODO: Write Synopsis]
+
+1. **Values:**
+    - 0:
+    - 1:
+1. [Where used](https://github.com/search?q=org%3Asenzing-garage+XXX_XXX&type=code):
+    1. xxxXxxxx()
+
+### G2_WHY_RECORD_IN_ENTITY_DEFAULT_FLAGS
+
+[TODO: Write Synopsis]
+
+1. **Values:**
+    - 0:
+    - 1:
+1. [Where used](https://github.com/search?q=org%3Asenzing-garage+XXX_XXX&type=code):
+    1. xxxXxxxx()
+
+### G2_WHY_RECORDS_DEFAULT_FLAGS
+
+[TODO: Write Synopsis]
+
+1. **Values:**
+    - 0:
+    - 1:
+1. [Where used](https://github.com/search?q=org%3Asenzing-garage+XXX_XXX&type=code):
+    1. xxxXxxxx()
+
+### Reserved for SDKs
+
+### Unused
