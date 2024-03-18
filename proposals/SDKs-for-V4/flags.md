@@ -8,8 +8,8 @@ Reference:  [libg2.h](libg2.h)
 
 | Bit | Flag variable names |
 |----:|---------------------|
-|  63 | [G2_RETURN_INFO](#g2_return_info) |
-|  62 | [reserved-for-sdks](#reserved-for-sdks) |
+|  63 | [sign bit for int64](#sign-bit-for-int64) |
+|  62 | [G2_RETURN_INFO](#g2_return_info) |
 |  61 | [reserved-for-sdks](#reserved-for-sdks) |
 |  60 | [reserved-for-sdks](#reserved-for-sdks) |
 |  59 | [reserved-for-sdks](#reserved-for-sdks) |
@@ -746,5 +746,9 @@ Specify if information should be returned from the method call.
     1. xxxXxxxx()
 
 ### Reserved for SDKs
+
+### Sign bit for int64
+
+To put all bits in an `int64` (not a `uint64`) the sign bit must remain unused.
 
 ### Unused
