@@ -107,7 +107,7 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
 | G2_init(moduleName, iniParams, verboseLogging) | initialize(instanceName, settings, verboseLogging, configId) | - | `configId` can be `nil`, `None`, `null`. Consider single object |
 | G2_initWithConfigID(moduleName, iniParams, initConfigID, verboseLogging) | [collapsed]  | | |
 | G2_primeEngine() | | - | |
-| G2_processRedoRecord(responseBuf, bufSize, resizeFunc ) | processRedoRecord(redoRecord, flags) | | |
+| G2_processRedoRecord(responseBuf, bufSize, resizeFunc ) | processRedoRecord(redoRecord, flags) | string | |
 | G2_processRedoRecordWithInfo(flags, responseBuf, bufSize, infoBuf, infoBufSize, resizeFunc) | [collapsed] | | |
 | G2_reevaluateEntity(entityID, flags) | reevaluateEntity(entityId, flags) | string | `flags` has `WITH_INFO` bit |
 | G2_reevaluateEntityWithInfo(entityID, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | string | |
