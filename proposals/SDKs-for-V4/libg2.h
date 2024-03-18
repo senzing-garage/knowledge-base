@@ -380,38 +380,6 @@ extern "C"
                             char **responseBuf,
                             size_t *bufSize,
                             void *(*resizeFunc)(void *ptr, size_t newSize) );
-<<<<<<< HEAD
-
-
-  /**
-   * @brief
-   * This method returns a JSON document containing the G2 configuration.
-   * 
-   * @param responseBuf A memory buffer for returning the response document.
-   *        If an error occurred, an error response is stored here.
-   * @param bufSize The max number of bytes that can be stored in responseBuf.
-   *        The response buffer must be able to hold at least this many bytes,
-   *        or a resize method must be provided that may be used to resize
-   *        the buffer.  This will return the new size.
-   * @param resizeFunc A function pointer that can be used to resize the memory
-   *        buffer specified in the responseBuf argument.  This function will
-   *        be called to allocate more memory if the response buffer is not large
-   *        enough.  This argument may be NULL.  If it is NULL, the function
-   *        will return an error if the result is larger than the buffer.
-   * @param configID An integer specifying the configID of the config being 
-   *        exported.
-   */
-  _DLEXPORT long long G2_exportConfig(
-                            char **responseBuf,
-                            size_t *bufSize, 
-                            void *(*resizeFunc)(void *ptr, size_t newSize) );
-  _DLEXPORT long long G2_exportConfigAndConfigID(
-                            char **responseBuf,
-                            size_t *bufSize,
-                            void *(*resizeFunc)(void *ptr, size_t newSize),
-                            long long* configID );
-=======
->>>>>>> origin/main
 
 
   /**
