@@ -52,7 +52,7 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
 | G2Diagnostic_init(moduleName, iniParams, verboseLogging) | initialize(instanceName, settings, verboseLogging, configId) | | `configId` can be `nil`, `None`, `null`. Consider single object |
 | G2Diagnostic_initWithConfigID(moduleName, iniParams, initConfigID, verboseLogging) | [collapsed] | | |
 | G2Diagnostic_purgeRepository(????) | purgeRepository(????) | | |
-| G2Diagnostic_reinit(initConfigID) | reInitialize(configId) | - | |
+| G2Diagnostic_reinit(initConfigID) | reinitialize(configId) | - | |
 
 ### G2Engine
 
@@ -113,7 +113,7 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
 | G2_reevaluateEntityWithInfo(entityID, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | string | |
 | G2_reevaluateRecord(dataSourceCode, recordID, flags) | reevaluateRecord(dataSourceCode, recordId, flags) | string | `flags` has `WITH_INFO` bit |
 | G2_reevaluateRecordWithInfo(dataSourceCode, recordID, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
-| G2_reinit(initConfigID) | reInitialize(configId) | - | ??? |
+| G2_reinit(initConfigID) | reinitialize(configId) | - | ??? |
 | G2_replaceRecord(dataSourceCode, recordID, jsonData) | replaceRecord(dataSourceCode, recordId, recordDefinition, flags) | string | |
 | G2_replaceRecordWithInfo(dataSourceCode, recordID, jsonData, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
 | G2_searchByAttributes(jsonData, responseBuf, bufSize, resizeFunc) | searchByAttributes(attributes, searchProfile, flags) | string | |

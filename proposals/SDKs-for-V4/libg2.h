@@ -380,6 +380,7 @@ extern "C"
                             char **responseBuf,
                             size_t *bufSize,
                             void *(*resizeFunc)(void *ptr, size_t newSize) );
+<<<<<<< HEAD
 
 
   /**
@@ -409,6 +410,8 @@ extern "C"
                             size_t *bufSize,
                             void *(*resizeFunc)(void *ptr, size_t newSize),
                             long long* configID );
+=======
+>>>>>>> origin/main
 
 
   /**
