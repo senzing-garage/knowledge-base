@@ -69,8 +69,7 @@ To see the expanded version, visit
 | G2_howEntityByEntityID(entityID, responseBuf, bufSize, resizeFunc) | howEntityByEntityId(entityId, flags) | string | SM-1, SM-3.3 |
 | G2_init(moduleName, iniParams, verboseLogging) | initialize(instanceName, settings, verboseLogging, configId) | - | `configId` can be `nil`, `None`, `null`. Consider single object |
 | G2_primeEngine() | | - | |
-| G2_processRedoRecord(responseBuf, bufSize, resizeFunc ) | TBD | | |
-| G2_processRedoRecordWithInfo(flags, responseBuf, bufSize, infoBuf, infoBufSize, resizeFunc) | TBD | | |
+| G2_processRedoRecord(responseBuf, bufSize, resizeFunc ) | processRedoRecord(redoRecord, flags) | | |
 | G2_reevaluateEntity(entityID, flags) | reevaluateEntity(entityId, flags) | string | `flags` has `WITH_INFO` bit |
 | G2_reevaluateRecord(dataSourceCode, recordID, flags) | reevaluateRecord(dataSourceCode, recordId, flags) | string | `flags` has `WITH_INFO` bit |
 | G2_reinit(initConfigID) | reinitialize(configId) | - | ??? |
