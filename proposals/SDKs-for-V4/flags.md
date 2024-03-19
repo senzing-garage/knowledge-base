@@ -1,6 +1,6 @@
 # Flags
 
-Flags are 63..0 bits.
+Flags are 64..1 bits.
 
 Reference:  [libg2.h](libg2.h)
 
@@ -8,14 +8,15 @@ Reference:  [libg2.h](libg2.h)
 
 | Bit | Flag variable names |
 |----:|---------------------|
-|  63 | [sign bit for int64](#sign-bit-for-int64) |
-|  62 | [G2_RETURN_INFO](#g2_return_info) |
+|  64 | [sign bit for int64](#sign-bit-for-int64) |
+|  63 | [G2_RETURN_INFO](#g2_return_info) |
+|  62 | [reserved-for-sdks](#reserved-for-sdks) |
 |  61 | [reserved-for-sdks](#reserved-for-sdks) |
 |  60 | [reserved-for-sdks](#reserved-for-sdks) |
 |  59 | [reserved-for-sdks](#reserved-for-sdks) |
 |  58 | [reserved-for-sdks](#reserved-for-sdks) |
 |  57 | [reserved-for-sdks](#reserved-for-sdks) |
-|  56 | [reserved-for-sdks](#reserved-for-sdks) |
+|  56 | [](#unused) |
 |  55 | [](#unused) |
 |  54 | [](#unused) |
 |  53 | [](#unused) |
@@ -36,42 +37,41 @@ Reference:  [libg2.h](libg2.h)
 |  38 | [](#unused) |
 |  37 | [](#unused) |
 |  36 | [](#unused) |
-|  35 | [](#unused) |
-|  34 | [G2_ENTITY_OPTION_INCLUDE_MATCH_KEY_DETAILS](#g2_entity_option_include_match_key_details), [G2_SEARCH_INCLUDE_MATCH_KEY_DETAILS](#g2_search_include_match_key_details) |
-|  33 | [G2_FIND_NETWORK_MATCHING_INFO](#g2_find_network_matching_info) |
-|  32 | [G2_ENTITY_OPTION_INCLUDE_FEATURE_ELEMENTS](#g2_entity_option_include_feature_elements) |
-|  31 | [G2_ENTITY_INCLUDE_RECORD_UNMAPPED_DATA](#g2_entity_include_record_unmapped_data) |
-|  30 | [G2_FIND_PATH_MATCHING_INFO](#g2_find_path_matching_info) |
-|  29 | [G2_ENTITY_INCLUDE_RELATED_RECORD_TYPES](#g2_entity_include_related_record_types) |
-|  28 | [G2_ENTITY_INCLUDE_RECORD_TYPES](#g2_entity_include_record_types) |
-|  27 | [G2_SEARCH_INCLUDE_STATS](#g2_search_include_stats) |
-|  26 | [G2_INCLUDE_FEATURE_SCORES](#g2_include_feature_scores), [G2_SEARCH_INCLUDE_FEATURE_SCORES](#g2_search_include_feature_scores) |
-|  25 | [G2_FIND_PATH_PREFER_EXCLUDE](#g2_find_path_prefer_exclude) |
-|  24 | [G2_ENTITY_OPTION_INCLUDE_FEATURE_STATS](#g2_entity_option_include_feature_stats) |
-|  23 | [G2_ENTITY_OPTION_INCLUDE_INTERNAL_FEATURES](#g2_entity_option_include_internal_features) |
-|  22 | [G2_ENTITY_INCLUDE_RELATED_RECORD_DATA](#g2_entity_include_related_record_data) |
-|  21 | [G2_ENTITY_INCLUDE_RELATED_RECORD_SUMMARY](#g2_entity_include_related_record_summary) |
-|  20 | [G2_ENTITY_INCLUDE_RELATED_MATCHING_INFO](#g2_entity_include_related_matching_info) |
-|  19 | [G2_ENTITY_INCLUDE_RELATED_ENTITY_NAME](#g2_entity_include_related_entity_name) |
-|  18 | [G2_ENTITY_INCLUDE_RECORD_FEATURE_IDS](#g2_entity_include_record_feature_ids) |
-|  17 | [](#unused) |
-|  16 | [G2_ENTITY_INCLUDE_RECORD_JSON_DATA](#g2_entity_include_record_json_data) |
-|  15 | [G2_ENTITY_INCLUDE_RECORD_MATCHING_INFO](#g2_entity_include_record_matching_info) |
-|  14 | [G2_ENTITY_INCLUDE_RECORD_DATA](#g2_entity_include_record_data) |
-|  13 | [G2_ENTITY_INCLUDE_RECORD_SUMMARY](#g2_entity_include_record_summary) |
-|  12 | [G2_ENTITY_INCLUDE_ENTITY_NAME](#g2_entity_include_entity_name) |
-|  11 | [G2_ENTITY_INCLUDE_REPRESENTATIVE_FEATURES](#g2_entity_include_representative_features) |
-|  10 | [G2_ENTITY_INCLUDE_ALL_FEATURES](#g2_entity_include_all_features) |
-|   9 | [G2_ENTITY_INCLUDE_DISCLOSED_RELATIONS](#g2_entity_include_disclosed_relations) |
-|   8 | [G2_ENTITY_INCLUDE_NAME_ONLY_RELATIONS](#g2_entity_include_name_only_relations) |
-|   7 | [G2_ENTITY_INCLUDE_POSSIBLY_RELATED_RELATIONS](#g2_entity_include_possibly_related_relations) |
-|   6 | [G2_ENTITY_INCLUDE_POSSIBLY_SAME_RELATIONS](#g2_entity_include_possibly_same_relations) |
-|   5 | [G2_EXPORT_INCLUDE_SINGLE_RECORD_ENTITIES](#g2_export_include_single_record_entities) |
-|   4 | [G2_EXPORT_INCLUDE_DISCLOSED](#g2_export_include_disclosed) |
-|   3 | [G2_EXPORT_INCLUDE_NAME_ONLY](#g2_export_include_name_only), [G2_SEARCH_INCLUDE_NAME_ONLY](#g2_search_include_name_only) |
-|   2 | [G2_EXPORT_INCLUDE_POSSIBLY_RELATED](#g2_export_include_possibly_related), [G2_SEARCH_INCLUDE_POSSIBLY_RELATED](#g2_search_include_possibly_related) |
-|   1 | [G2_EXPORT_INCLUDE_POSSIBLY_SAME](#g2_export_include_possibly_same), [G2_SEARCH_INCLUDE_POSSIBLY_SAME](#g2_search_include_possibly_same) |
-|   0 | [G2_EXPORT_INCLUDE_MULTI_RECORD_ENTITIES](#g2_export_include_multi_record_entities), [G2_SEARCH_INCLUDE_RESOLVED](#g2_search_include_resolved) |
+|  35 | [G2_ENTITY_OPTION_INCLUDE_MATCH_KEY_DETAILS](#g2_entity_option_include_match_key_details), [G2_SEARCH_INCLUDE_MATCH_KEY_DETAILS](#g2_search_include_match_key_details) |
+|  34 | [G2_FIND_NETWORK_MATCHING_INFO](#g2_find_network_matching_info) |
+|  33 | [G2_ENTITY_OPTION_INCLUDE_FEATURE_ELEMENTS](#g2_entity_option_include_feature_elements) |
+|  32 | [G2_ENTITY_INCLUDE_RECORD_UNMAPPED_DATA](#g2_entity_include_record_unmapped_data) |
+|  31 | [G2_FIND_PATH_MATCHING_INFO](#g2_find_path_matching_info) |
+|  30 | [G2_ENTITY_INCLUDE_RELATED_RECORD_TYPES](#g2_entity_include_related_record_types) |
+|  29 | [G2_ENTITY_INCLUDE_RECORD_TYPES](#g2_entity_include_record_types) |
+|  28 | [G2_SEARCH_INCLUDE_STATS](#g2_search_include_stats) |
+|  27 | [G2_INCLUDE_FEATURE_SCORES](#g2_include_feature_scores), [G2_SEARCH_INCLUDE_FEATURE_SCORES](#g2_search_include_feature_scores) |
+|  26 | [G2_FIND_PATH_PREFER_EXCLUDE](#g2_find_path_prefer_exclude) |
+|  25 | [G2_ENTITY_OPTION_INCLUDE_FEATURE_STATS](#g2_entity_option_include_feature_stats) |
+|  24 | [G2_ENTITY_OPTION_INCLUDE_INTERNAL_FEATURES](#g2_entity_option_include_internal_features) |
+|  23 | [G2_ENTITY_INCLUDE_RELATED_RECORD_DATA](#g2_entity_include_related_record_data) |
+|  22 | [G2_ENTITY_INCLUDE_RELATED_RECORD_SUMMARY](#g2_entity_include_related_record_summary) |
+|  21 | [G2_ENTITY_INCLUDE_RELATED_MATCHING_INFO](#g2_entity_include_related_matching_info) |
+|  20 | [G2_ENTITY_INCLUDE_RELATED_ENTITY_NAME](#g2_entity_include_related_entity_name) |
+|  19 | [G2_ENTITY_INCLUDE_RECORD_FEATURE_IDS](#g2_entity_include_record_feature_ids) |
+|  18 | [](#unused) |
+|  17 | [G2_ENTITY_INCLUDE_RECORD_JSON_DATA](#g2_entity_include_record_json_data) |
+|  16 | [G2_ENTITY_INCLUDE_RECORD_MATCHING_INFO](#g2_entity_include_record_matching_info) |
+|  15 | [G2_ENTITY_INCLUDE_RECORD_DATA](#g2_entity_include_record_data) |
+|  14 | [G2_ENTITY_INCLUDE_RECORD_SUMMARY](#g2_entity_include_record_summary) |
+|  13 | [G2_ENTITY_INCLUDE_ENTITY_NAME](#g2_entity_include_entity_name) |
+|  12 | [G2_ENTITY_INCLUDE_REPRESENTATIVE_FEATURES](#g2_entity_include_representative_features) |
+|  11 | [G2_ENTITY_INCLUDE_ALL_FEATURES](#g2_entity_include_all_features) |
+|  10 | [G2_ENTITY_INCLUDE_DISCLOSED_RELATIONS](#g2_entity_include_disclosed_relations) |
+|   9 | [G2_ENTITY_INCLUDE_NAME_ONLY_RELATIONS](#g2_entity_include_name_only_relations) |
+|   8 | [G2_ENTITY_INCLUDE_POSSIBLY_RELATED_RELATIONS](#g2_entity_include_possibly_related_relations) |
+|   7 | [G2_ENTITY_INCLUDE_POSSIBLY_SAME_RELATIONS](#g2_entity_include_possibly_same_relations) |
+|   6 | [G2_EXPORT_INCLUDE_SINGLE_RECORD_ENTITIES](#g2_export_include_single_record_entities) |
+|   5 | [G2_EXPORT_INCLUDE_DISCLOSED](#g2_export_include_disclosed) |
+|   4 | [G2_EXPORT_INCLUDE_NAME_ONLY](#g2_export_include_name_only), [G2_SEARCH_INCLUDE_NAME_ONLY](#g2_search_include_name_only) |
+|   3 | [G2_EXPORT_INCLUDE_POSSIBLY_RELATED](#g2_export_include_possibly_related), [G2_SEARCH_INCLUDE_POSSIBLY_RELATED](#g2_search_include_possibly_related) |
+|   2 | [G2_EXPORT_INCLUDE_POSSIBLY_SAME](#g2_export_include_possibly_same), [G2_SEARCH_INCLUDE_POSSIBLY_SAME](#g2_search_include_possibly_same) |
+|   1 | [G2_EXPORT_INCLUDE_MULTI_RECORD_ENTITIES](#g2_export_include_multi_record_entities), [G2_SEARCH_INCLUDE_RESOLVED](#g2_search_include_resolved) |
 
 ## Aggregates
 
