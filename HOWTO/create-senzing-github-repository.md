@@ -175,6 +175,10 @@ Requires Admin access.
 
 1. On repository home page, click `Settings` tab.
 1. In `Pull Requests` section
+    1. :black_square_button: `Allow merge commits`
+    1. :ballot_box_with_check: `Allow squash merging`
+    1. :ballot_box_with_check: `Allow rebase merging`
+    1. :ballot_box_with_check: `Always suggest updating pull request branches`
     1. :ballot_box_with_check: `Allow auto-merge`
     1. :ballot_box_with_check: `Automatically delete head branches`
 
@@ -204,7 +208,6 @@ the status check has been performed within the last 7 day.
         - `gosec`
     1. Click the matching search result in the drop down.
     1. Click `Save changes` at the bottom of the page.
-
 
 [GitHub docs]: https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches#require-status-checks-before-merging
 [One time CODEOWNER token configuration]: https://github.com/senzing-garage/knowledge-base/blob/main/HOWTO/configure-github-organization.md
