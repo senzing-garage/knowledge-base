@@ -82,3 +82,27 @@
 | **ERROR** | Unexpected situations, processing was not successful  |                             |
 | **FATAL** | The process needs to shutdown                         |                             |
 | **PANIC** | The underlying system is at issue                     |                             |
+
+## Error class hierarchy
+
+**Note:** The suffix `Error` is used, not `Exception`.
+
+```console
+G2Error
+├── G2BadInputError
+│   ├── G2NotFoundError
+│   └── G2UnknownDatasourceError
+├── G2ConfigurationError
+├── G2RetryableError
+│   ├── G2DatabaseConnectionLostError
+│   └── G2RetryTimeoutExceededError
+└── G2UnrecoverableError
+    ├── G2DatabaseError
+    ├── G2LicenseError
+    ├── G2NotInitializedError
+    └── G2UnhandledError
+```
+
+- Class hierarchy implementations:
+  - [Go](https://github.com/senzing-garage/g2-sdk-go/blob/126.dockter.1/g2error/main.go)
+  - [Python](https://github.com/senzing-garage/g2-sdk-python-next/blob/main/src/senzing/g2exception.py)
