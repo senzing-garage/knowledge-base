@@ -9,7 +9,7 @@ Reference:  [libg2.h](libg2.h)
 | Bit | Flag variable names |
 |----:|---------------------|
 |  64 | [sign bit for int64](#sign-bit-for-int64) |
-|  63 | [G2_RETURN_INFO](#g2_return_info) |
+|  63 | [G2_WITH_INFO](#g2_with_info) |
 |  62 | [reserved-for-sdks](#reserved-for-sdks) |
 |  61 | [reserved-for-sdks](#reserved-for-sdks) |
 |  60 | [reserved-for-sdks](#reserved-for-sdks) |
@@ -554,21 +554,6 @@ The **Bits** column calculated by [flags.py](flags.py).
 1. [Where used](https://github.com/search?q=org%3Asenzing-garage+G2_RECORD_DEFAULT_FLAGS&type=code):
     1. xxxXxxxx()
 
-### G2_RETURN_INFO
-
-Specify if information should be returned from the method call.
-
-1. **Values:**
-    - 0: Return empty JSON string.  No information returned in the JSON.
-    - 1: Return JSON string with information.
-1. [Where used](https://github.com/search?q=org%3Asenzing-garage+RETURN_INFO&type=code):
-    1. addRecord()
-    1. deleteRecord()
-    1. process()
-    1. reevaluateEntity()
-    1. reevaluateRecord()
-    1. replaceRecord()
-
 ### G2_SEARCH_BY_ATTRIBUTES_ALL
 
 [TODO: Write Synopsis]
@@ -744,6 +729,21 @@ Specify if information should be returned from the method call.
     - 1:
 1. [Where used](https://github.com/search?q=org%3Asenzing-garage+G2_WHY_RECORDS_DEFAULT_FLAGS&type=code):
     1. xxxXxxxx()
+
+### G2_WITH_INFO
+
+Specify if information should be returned from the method call.
+
+1. **Values:**
+    - 0: Return empty JSON string.  No information returned in the JSON.
+    - 1: Return JSON string with information.
+1. [Where used](https://github.com/search?q=org%3Asenzing-garage+RETURN_INFO&type=code):
+    1. addRecord()
+    1. deleteRecord()
+    1. process()
+    1. reevaluateEntity()
+    1. reevaluateRecord()
+    1. replaceRecord()
 
 ### Reserved for SDKs
 
