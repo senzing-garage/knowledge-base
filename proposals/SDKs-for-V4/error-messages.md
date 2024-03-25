@@ -88,19 +88,19 @@
 **Note:** The suffix `Error` is used, not `Exception`.
 
 ```console
-G2Error
-├── G2BadInputError
-│   ├── G2NotFoundError
-│   └── G2UnknownDatasourceError
-├── G2ConfigurationError
-├── G2RetryableError
-│   ├── G2DatabaseConnectionLostError
-│   └── G2RetryTimeoutExceededError
-└── G2UnrecoverableError
-    ├── G2DatabaseError
-    ├── G2LicenseError
-    ├── G2NotInitializedError
-    └── G2UnhandledError
+SzError
+├── SZBadInputError
+│   ├── SZNotFoundError
+│   └── SZUnknownDatasourceError
+├── SZConfigurationError
+├── SZRetryableError
+│   ├── SZDatabaseConnectionLostError
+│   └── SZRetryTimeoutExceededError
+└── SZUnrecoverableError
+    ├── SZDatabaseError
+    ├── SZLicenseError
+    ├── SZNotInitializedError
+    └── SZUnhandledError
 ```
 
 - Class hierarchy implementations:
