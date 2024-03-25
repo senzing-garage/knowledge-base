@@ -145,6 +145,7 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
 
 | Existing name | Canonical Name | Return value | Smells |
 |---------------|----------------|--------------|--------|
+|| close()      |||
 || createConfig()     | [object conforming to SzConfig interface]     ||
 || createConfigMgr()  | [object conforming to SzConfigMgr interface]  ||
 || createDiagnostic() | [object conforming to SzDiagnostic interface] ||
