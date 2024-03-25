@@ -90,6 +90,16 @@ To see the expanded version, visit
 | G2Product_validateLicenseStringBase64(licenseString, errorBuf, errorBufSize, resizeFunc) | ??? | | |
 | G2Product_version() | getVersion() | string | |
 
+### G2Factory
+
+| Existing name | Canonical Name | Return value | Smells |
+|---------------|----------------|--------------|--------|
+|| getConfig()     | [object conforming to G2Config interface]     ||
+|| getConfigMgr()  | [object conforming to G2ConfigMgr interface]  ||
+|| getDiagnostic() | [object conforming to G2Diagnostic interface] ||
+|| getEngine()     | [object conforming to G2Engine interface]     ||
+|| getProduct()    | [object conforming to G2Product interface]    ||
+
 ## Method signature proposals
 
 ### Handling WithInfo - Proposal 1
