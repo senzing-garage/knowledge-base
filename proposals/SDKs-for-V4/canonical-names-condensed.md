@@ -5,10 +5,10 @@ To see the expanded version, visit
 
 ## Mapping
 
-### G2Config
+### Sz2Config
 
-| Existing name | Canonical Name | Return values | Smells |
-|---------------|----------------|---------------|--------|
+| Existing name | Canonical Name | Return value | Smells |
+|---------------|----------------|--------------|--------|
 | G2Config_addDataSource(configHandle, inputJson, responseBuf, bufSize, resizeFunc) | addDataSource(configHandle, dataSourceDefinition) | | |
 | G2Config_clearLastException() | [not-public] | | |
 | G2Config_close(configHandle) | | - | |
@@ -20,10 +20,10 @@ To see the expanded version, visit
 | G2Config_load(jsonConfig, configHandle) | load(configDefinition) | configHandle | |
 | G2Config_save(configHandle, responseBuf, bufSize, resizeFunc) | getJsonString(configHandle)  | string | |
 
-### G2ConfigMgr
+### Sz2ConfigMgr
 
-| Existing name | Canonical Name | Return values | Smells |
-|---------------|----------------|---------------|--------|
+| Existing name | Canonical Name | Return value | Smells |
+|---------------|----------------|--------------|--------|
 | G2ConfigMgr_addConfig(configStr, configComments, configID) | addConfig(configDefinition, configComments) | int64 | |
 | G2ConfigMgr_destroy() | | - | |
 | G2ConfigMgr_getConfig(configID, responseBuf, bufSize, resizeFunc) | getConfig(configId) | string | |
@@ -33,20 +33,20 @@ To see the expanded version, visit
 | G2ConfigMgr_replaceDefaultConfigID(oldConfigID, newConfigID) | replaceDefaultConfigId(currentDefaultConfigId, newDefaultConfigId) | - | |
 | G2ConfigMgr_setDefaultConfigID(configID) | setDefaultConfigId(configId) | - | |
 
-### G2Diagnostic
+### SzDiagnostic
 
-| Existing name | Canonical Name | Return values | Smells |
-|---------------|----------------|---------------|--------|
+| Existing name | Canonical Name | Return value | Smells |
+|---------------|----------------|--------------|--------|
 | G2Diagnostic_checkDBPerf(secondsToRun, responseBuf, bufSize, resizeFunc) | checkDatabasePerformance(secondsToRun) | string | |
 | G2Diagnostic_destroy() | | - | |
 | G2Diagnostic_init(moduleName, iniParams, verboseLogging) | initialize(instanceName, settings, verboseLogging, configId) | | `configId` can be `nil`, `None`, `null`. Consider single object |
 | G2Diagnostic_purgeRepository(????) | purgeRepository(????) | | |
 | G2Diagnostic_reinit(initConfigID) | reinitialize(configId) | - | |
 
-### G2Engine
+### SzEngine
 
-| Existing name | Canonical Name | Return values | Smells |
-|---------------|----------------|---------------|--------|
+| Existing name | Canonical Name | Return value | Smells |
+|---------------|----------------|--------------|--------|
 | G2_addRecord(dataSourceCode, recordID, jsonData) | addRecord(dataSourceCode, recordId, recordDefinition, flags) | string | |
 | G2_closeExport(responseHandle) | closeExport(exportHandle) | - | |
 | G2_countRedoRecords() | | int64 | |
@@ -80,25 +80,25 @@ To see the expanded version, visit
 | G2_whyRecordInEntity(dataSourceCode, recordID, responseBuf, bufSize, resizeFunc) | whyRecordInEntity(dataSourceCode, recordId, flags) | string | SM-1, SM-3.3 |
 | G2_whyRecords(dataSourceCode1, recordID1, dataSourceCode2, recordID2, responseBuf, bufSize, resizeFunc) | whyRecords(dataSourceCode1, recordId1, dataSourceCode2, recordId2, flags) | string | SM-1, SM-3.3 |
 
-### G2Product
+### SzProduct
 
-| Existing name | Canonical Name | Return values | Smells |
-|---------------|----------------|---------------|--------|
+| Existing name | Canonical Name | Return value | Smells |
+|---------------|----------------|--------------|--------|
 | G2Product_destroy() | | - | |
 | G2Product_init(moduleName, iniParams, verboseLogging) | initialize(instanceName, settings, verboseLogging) | - | |
 | G2Product_license() | getLicense() | string | |
 | G2Product_validateLicenseStringBase64(licenseString, errorBuf, errorBufSize, resizeFunc) | ??? | | |
 | G2Product_version() | getVersion() | string | |
 
-### G2Factory
+### SzFactory
 
 | Existing name | Canonical Name | Return value | Smells |
 |---------------|----------------|--------------|--------|
-|| createConfig()     | [object conforming to G2Config interface]     ||
-|| createConfigMgr()  | [object conforming to G2ConfigMgr interface]  ||
-|| createDiagnostic() | [object conforming to G2Diagnostic interface] ||
-|| createEngine()     | [object conforming to G2Engine interface]     ||
-|| createProduct()    | [object conforming to G2Product interface]    ||
+|| createConfig()     | [object conforming to SzConfig interface]     ||
+|| createConfigMgr()  | [object conforming to SzConfigMgr interface]  ||
+|| createDiagnostic() | [object conforming to SzDiagnostic interface] ||
+|| createEngine()     | [object conforming to SzEngine interface]     ||
+|| createProduct()    | [object conforming to SzProduct interface]    ||
 
 ## Method signature proposals
 
@@ -119,7 +119,7 @@ To see the expanded version, visit
    1. Example:
 
          ```python
-         info = g2_engine.add_record(dataSourceCode, recordId, record, resultFlags)
+         info = engine.add_record(dataSourceCode, recordId, record, resultFlags)
          ```
 
    1. If `resultFlags` is 0 (i.e. no bit flags are on) then the returned value is `{}`, an empty JSON string.
@@ -128,7 +128,7 @@ To see the expanded version, visit
    1. Flag can be OR-ed for future expansion. Example:
 
          ```python
-         info = g2_engine.add_record(dataSourceCode, recordId, record, WITH_INFO | WITHOUT_SOMETHING_ELSE)
+         info = engine.add_record(dataSourceCode, recordId, record, WITH_INFO | WITHOUT_SOMETHING_ELSE)
          ```
 
    1. Although flag arguments are not best practice,
@@ -155,11 +155,11 @@ To see the expanded version, visit
       1. Examples of use
 
          ```python
-         g2_engine.add_record(dataSourceCode, recordId, record)
+         engine.add_record(dataSourceCode, recordId, record)
          ```
 
          ```python
-         info = g2_engine.add_record(dataSourceCode, recordId, record, resultFlags)
+         info = engine.add_record(dataSourceCode, recordId, record, resultFlags)
          ```
 
    1. Java language specifics:
@@ -167,11 +167,11 @@ To see the expanded version, visit
       1. Examples of use:
 
          ```java
-         g2Engine.addRecord(dataSourceCode, recordId, record)
+         engine.addRecord(dataSourceCode, recordId, record)
          ```
 
          ```java
-         info = g2Engine.addRecord(dataSourceCode, recordId, record, WITH_INFO)
+         info = engine.addRecord(dataSourceCode, recordId, record, WITH_INFO)
          ```
 
    1. Go language specifics:
@@ -179,11 +179,11 @@ To see the expanded version, visit
       1. Examples of use:
 
          ```go
-         _, err := g2Engine.AddRecord(dataSourceCode, recordId, record, g2api.WITHOUT_INFO)
+         _, err := engine.AddRecord(dataSourceCode, recordId, record, szapi.WITHOUT_INFO)
          ```
 
          ```go
-         info, err := g2Engine.AddRecord(dataSourceCode, recordId, record, g2api.WITH_INFO)
+         info, err := engine.AddRecord(dataSourceCode, recordId, record, szapi.WITH_INFO)
          ```
 
 ## Smells

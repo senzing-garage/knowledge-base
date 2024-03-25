@@ -7,7 +7,7 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
 
 ## Mapping
 
-### G2Config
+### Sz2Config
 
 | Existing name | Canonical Name | Return value | Smells |
 |---------------|----------------|--------------|--------|
@@ -24,7 +24,7 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
 | G2Config_load(jsonConfig, configHandle) | load(configDefinition) | configHandle | |
 | G2Config_save(configHandle, responseBuf, bufSize, resizeFunc) | getJsonString(configHandle)  | string | |
 
-### G2ConfigMgr
+### Sz2ConfigMgr
 
 | Existing name | Canonical Name | Return value | Smells |
 |---------------|----------------|--------------|--------|
@@ -40,7 +40,7 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
 | G2ConfigMgr_replaceDefaultConfigID(oldConfigID, newConfigID) | replaceDefaultConfigId(currentDefaultConfigId, newDefaultConfigId) | - | |
 | G2ConfigMgr_setDefaultConfigID(configID) | setDefaultConfigId(configId) | - | |
 
-### G2Diagnostic
+### SzDiagnostic
 
 | Existing name | Canonical Name | Return value | Smells |
 |---------------|----------------|--------------|--------|
@@ -54,7 +54,7 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
 | G2Diagnostic_purgeRepository(????) | purgeRepository(????) | | |
 | G2Diagnostic_reinit(initConfigID) | reinitialize(configId) | - | |
 
-### G2Engine
+### SzEngine
 
 | Existing name | Canonical Name | Return value | Smells |
 |---------------|----------------|--------------|--------|
@@ -127,7 +127,7 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
 | G2_whyRecords(dataSourceCode1, recordID1, dataSourceCode2, recordID2, responseBuf, bufSize, resizeFunc) | whyRecords(dataSourceCode1, recordId1, dataSourceCode2, recordId2, flags) | string | SM-1, SM-3.3 |
 | G2_whyRecords_V2(dataSourceCode1, recordID1, dataSourceCode2, recordID2, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
 
-### G2Product
+### SzProduct
 
 | Existing name | Canonical Name | Return value | Smells |
 |---------------|----------------|--------------|--------|
@@ -141,15 +141,15 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
 | G2Product_validateLicenseStringBase64(licenseString, errorBuf, errorBufSize, resizeFunc) | ??? | | |
 | G2Product_version() | getVersion() | string | |
 
-### G2Factory
+### SzFactory
 
 | Existing name | Canonical Name | Return value | Smells |
 |---------------|----------------|--------------|--------|
-|| createConfig()     | [object conforming to G2Config interface]     ||
-|| createConfigMgr()  | [object conforming to G2ConfigMgr interface]  ||
-|| createDiagnostic() | [object conforming to G2Diagnostic interface] ||
-|| createEngine()     | [object conforming to G2Engine interface]     ||
-|| createProduct()    | [object conforming to G2Product interface]    ||
+|| createConfig()     | [object conforming to SzConfig interface]     ||
+|| createConfigMgr()  | [object conforming to SzConfigMgr interface]  ||
+|| createDiagnostic() | [object conforming to SzDiagnostic interface] ||
+|| createEngine()     | [object conforming to SzEngine interface]     ||
+|| createProduct()    | [object conforming to SzProduct interface]    ||
 
 ## Method signature proposals
 
@@ -170,7 +170,7 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
    1. Example:
 
          ```python
-         info = g2_engine.add_record(dataSourceCode, recordId, record, resultFlags)
+         info = engine.add_record(dataSourceCode, recordId, record, resultFlags)
          ```
 
    1. If `resultFlags` is 0 (i.e. no bit flags are on) then the returned value is `{}`, an empty JSON string.
@@ -179,7 +179,7 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
    1. Flag can be OR-ed for future expansion. Example:
 
          ```python
-         info = g2_engine.add_record(dataSourceCode, recordId, record, WITH_INFO | WITHOUT_SOMETHING_ELSE)
+         info = engine.add_record(dataSourceCode, recordId, record, WITH_INFO | WITHOUT_SOMETHING_ELSE)
          ```
 
    1. Although flag arguments are not best practice,
@@ -206,11 +206,11 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
       1. Examples of use
 
          ```python
-         g2_engine.add_record(dataSourceCode, recordId, record)
+         engine.add_record(dataSourceCode, recordId, record)
          ```
 
          ```python
-         info = g2_engine.add_record(dataSourceCode, recordId, record, resultFlags)
+         info = engine.add_record(dataSourceCode, recordId, record, resultFlags)
          ```
 
    1. Java language specifics:
@@ -218,11 +218,11 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
       1. Examples of use:
 
          ```java
-         g2Engine.addRecord(dataSourceCode, recordId, record)
+         engine.addRecord(dataSourceCode, recordId, record)
          ```
 
          ```java
-         info = g2Engine.addRecord(dataSourceCode, recordId, record, WITH_INFO)
+         info = engine.addRecord(dataSourceCode, recordId, record, WITH_INFO)
          ```
 
    1. Go language specifics:
@@ -230,11 +230,11 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
       1. Examples of use:
 
          ```go
-         _, err := g2Engine.AddRecord(dataSourceCode, recordId, record, g2api.WITHOUT_INFO)
+         _, err := engine.AddRecord(dataSourceCode, recordId, record, szapi.WITHOUT_INFO)
          ```
 
          ```go
-         info, err := g2Engine.AddRecord(dataSourceCode, recordId, record, g2api.WITH_INFO)
+         info, err := engine.AddRecord(dataSourceCode, recordId, record, szapi.WITH_INFO)
          ```
 
 ## Smells
