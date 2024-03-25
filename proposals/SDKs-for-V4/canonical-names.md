@@ -9,8 +9,8 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
 
 ### G2Config
 
-| Existing name | Canonical Name | Return values | Smells |
-|---------------|----------------|---------------|--------|
+| Existing name | Canonical Name | Return value | Smells |
+|---------------|----------------|--------------|--------|
 | G2Config_addDataSource(configHandle, inputJson, responseBuf, bufSize, resizeFunc) | addDataSource(configHandle, dataSourceCode) | | |
 | G2Config_clearLastException() | [not-public] | | |
 | G2Config_close(configHandle) | | - | |
@@ -26,8 +26,8 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
 
 ### G2ConfigMgr
 
-| Existing name | Canonical Name | Return values | Smells |
-|---------------|----------------|---------------|--------|
+| Existing name | Canonical Name | Return value | Smells |
+|---------------|----------------|--------------|--------|
 | G2ConfigMgr_addConfig(configStr, configComments, configID) | addConfig(configDefinition, configComments) | int64 | |
 | G2ConfigMgr_clearLastException() | [not-public] | | |
 | G2ConfigMgr_destroy() | | - | |
@@ -42,8 +42,8 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
 
 ### G2Diagnostic
 
-| Existing name | Canonical Name | Return values | Smells |
-|---------------|----------------|---------------|--------|
+| Existing name | Canonical Name | Return value | Smells |
+|---------------|----------------|--------------|--------|
 | G2Diagnostic_checkDBPerf(secondsToRun, responseBuf, bufSize, resizeFunc) | checkDatabasePerformance(secondsToRun) | string | |
 | G2Diagnostic_clearLastException() | [not-public] | | |
 | G2Diagnostic_destroy() | | - | |
@@ -56,8 +56,8 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
 
 ### G2Engine
 
-| Existing name | Canonical Name | Return values | Smells |
-|---------------|----------------|---------------|--------|
+| Existing name | Canonical Name | Return value | Smells |
+|---------------|----------------|--------------|--------|
 | G2_addRecord(dataSourceCode, recordID, jsonData) | addRecord(dataSourceCode, recordId, recordDefinition, flags) | string | |
 | G2_addRecordWithInfo(dataSourceCode, recordID, jsonData, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
 | G2_clearLastException() | [not-public] | | |
@@ -129,8 +129,8 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
 
 ### G2Product
 
-| Existing name | Canonical Name | Return values | Smells |
-|---------------|----------------|---------------|--------|
+| Existing name | Canonical Name | Return value | Smells |
+|---------------|----------------|--------------|--------|
 | G2Product_clearLastException() | [not-public] | | |
 | G2Product_destroy() | | - | |
 | G2Product_getLastException(buffer, bufSize) | [not-public] | | |
@@ -143,8 +143,8 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
 
 ### G2Factory
 
-| Existing name | Canonical Name | Return values | Smells |
-|---------------|----------------|---------------|--------|
+| Existing name | Canonical Name | Return value | Smells |
+|---------------|----------------|--------------|--------|
 || getConfig()     | [object conforming to G2Config interface]     ||
 || getConfigMgr()  | [object conforming to G2ConfigMgr interface]  ||
 || getDiagnostic() | [object conforming to G2Diagnostic interface] ||
