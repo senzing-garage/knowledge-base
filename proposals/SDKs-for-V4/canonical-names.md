@@ -145,11 +145,11 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
 
 | Existing name | Canonical Name | Return value | Smells |
 |---------------|----------------|--------------|--------|
-|| getConfig()     | [object conforming to G2Config interface]     ||
-|| getConfigMgr()  | [object conforming to G2ConfigMgr interface]  ||
-|| getDiagnostic() | [object conforming to G2Diagnostic interface] ||
-|| getEngine()     | [object conforming to G2Engine interface]     ||
-|| getProduct()    | [object conforming to G2Product interface]    ||
+|| createConfig()     | [object conforming to G2Config interface]     ||
+|| createConfigMgr()  | [object conforming to G2ConfigMgr interface]  ||
+|| createDiagnostic() | [object conforming to G2Diagnostic interface] ||
+|| createEngine()     | [object conforming to G2Engine interface]     ||
+|| createProduct()    | [object conforming to G2Product interface]    ||
 
 ## Method signature proposals
 
