@@ -9,7 +9,7 @@ To see the expanded version, visit
 
 | Existing name | Canonical Name | Return values | Smells |
 |---------------|----------------|---------------|--------|
-| G2Config_addDataSource(configHandle, inputJson, responseBuf, bufSize, resizeFunc) | addDataSource(configHandle, dataSourceCode) | | |
+| G2Config_addDataSource(configHandle, inputJson, responseBuf, bufSize, resizeFunc) | addDataSource(configHandle, dataSourceDefinition) | | |
 | G2Config_clearLastException() | [not-public] | | |
 | G2Config_close(configHandle) | | - | |
 | G2Config_create(configHandle) | create() | configHandle | |
