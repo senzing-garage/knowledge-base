@@ -199,7 +199,7 @@ the status check has been performed within the last 7 day.
 1. On repository home page, click `Settings` tab.
 1. In left side navigation bar, select `Branches` tab.
 1. Select `Edit` for the `main` branch protection rule.
-    1. Under `Require branches to be up to date before merging`, search for and select
+    1. Under `Require branches to be up to date before merging`, search for and select the required checks. Ex:
         - `build-docker-container`
         - `dependabot-approve-and-merge / dependabot-approve-and-merge`
         - `Go 1.20 - darwin`
