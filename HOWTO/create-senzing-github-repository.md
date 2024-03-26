@@ -88,6 +88,7 @@ This is a checklist of what to set when creating a new GitHub Repository.
         1. `senzing-app-server` for Api Server / Web App scrum
         1. `senzing-community` for Community scrum
         1. `senzing-g2-python` for G2Python projects
+        1. `senzing-garage` for Garage projects
         1. `senzing-gdev` for ????
         1. `senzing-devsecops` for DevOps
         1. `senzing-unknown` if not known
