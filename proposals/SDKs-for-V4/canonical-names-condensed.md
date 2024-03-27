@@ -5,7 +5,7 @@ To see the expanded version, visit
 
 ## Mapping
 
-### Sz2Config
+### SzConfig
 
 | Existing name | Canonical Name | Return value | Smells |
 |---------------|----------------|--------------|--------|

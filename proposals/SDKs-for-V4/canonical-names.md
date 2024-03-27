@@ -7,7 +7,7 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
 
 ## Mapping
 
-### Sz2Config
+### SzConfig
 
 | Existing name | Canonical Name | Return value | Smells |
 |---------------|----------------|--------------|--------|
