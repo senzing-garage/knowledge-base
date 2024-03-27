@@ -85,12 +85,13 @@ This is a checklist of what to set when creating a new GitHub Repository.
 
 1. On repository home page, click **About** gear
     1. Add Topic relative to which Scrum manages the repository:
-        1. `t-ast` for Api Server / Web App scrum
-        1. `t-comm` for Community scrum
-        1. `t-g2-python` for G2Python projects
-        1. `t-gdev` for ????
-        1. `t-devsecops` for DevOps
-        1. `t-unknown` if not known
+        1. `senzing-app-server` for Api Server / Web App scrum
+        1. `senzing-community` for Community scrum
+        1. `senzing-g2-python` for G2Python projects
+        1. `senzing-garage` for Garage projects
+        1. `senzing-gdev` for ????
+        1. `senzing-devsecops` for DevOps
+        1. `senzing-unknown` if not known
     1. Add optional Topics relative to code sub-project.
        Examples:
         1. `golang` - for "Go" based projects
@@ -198,7 +199,7 @@ the status check has been performed within the last 7 day.
 1. On repository home page, click `Settings` tab.
 1. In left side navigation bar, select `Branches` tab.
 1. Select `Edit` for the `main` branch protection rule.
-    1. Under `Require branches to be up to date before merging`, search for and select
+    1. Under `Require branches to be up to date before merging`, search for and select the required checks. Ex:
         - `build-docker-container`
         - `dependabot-approve-and-merge / dependabot-approve-and-merge`
         - `Go 1.20 - darwin`
