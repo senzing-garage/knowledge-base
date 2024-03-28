@@ -2,6 +2,7 @@
 
 | Deprecated | Hidden     | Repository                                   |
 |------------|------------|----------------------------------------------|
+| 2024-03-20 |            | mapper-leie                                  |
 | 2024-02-28 |            | risk-score-calculator                        |
 | 2024-01-25 |            | aws-cloudformation-dev-rest                  |
 | 2024-01-19 |            | packer-senzing-demo-ubuntu-18.04             |
