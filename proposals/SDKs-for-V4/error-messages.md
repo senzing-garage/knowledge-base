@@ -115,9 +115,9 @@ An idea...
 
 Let's say that the customer doesn't want to see the entire JSON or maybe not any JSON at all.
 In the Abstract Factory Pattern, we introduce a SzLogFormatter interface (requiring a `format(input_message)` method).
-The method is passed into the factory constructor and used by the engine, config, configmgr, etc. when creating a message.
+The class or function is passed into the factory constructor and used by the engine, config, configmgr, etc. when creating a message.
 
-The user's python code would look something like:
+A python user's code would look something like:
 
 ```python
 class LogFormatter:
