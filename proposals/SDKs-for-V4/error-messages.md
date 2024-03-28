@@ -128,7 +128,7 @@ class LogFormatter:
 
 if __name__ == "__main__":
     :
-    factory = SzAbstractFactory.getBaseFactory(instance_name, settings, LogFormatter)
+    factory = SzAbstractFactory.createBaseFactory(instance_name, settings, LogFormatter)
     engine = factory.createEngine()
     :
     try:
