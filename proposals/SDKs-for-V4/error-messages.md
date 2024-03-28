@@ -30,9 +30,9 @@
         "time": "2024-02-06T17:02:34.076962445Z",
         "level": "ERROR",
         "id": "senzing-60044037",
-        "text": "g2engine.G2_getEntityByRecordID_V2(DoesntExist, 1070, -1) failed. Return code: -2",
+        "text": "g2engine.GetEntityByRecordID(DoesntExist, 1070, -1) failed. Reason: DataSource not found",
         "duration": 199045,
-        "location": "In GetEntityByRecordID_V2() at g2engine.go:2129",
+        "location": "In MySampleGetEntityFunction() at mysample.go:2129",
         "errors": [
             "0027E|Unknown DATA_SOURCE value 'DOESNTEXIST'"
         ],
