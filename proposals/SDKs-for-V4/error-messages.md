@@ -17,6 +17,7 @@
       It includes information on where it was called, not just what the error was.
     - **duration:** (Optional) The time taken, in nanoseconds, by the call to the SDK function/method.
     - **location:** The caller's location, not the location in the SDK
+    - **type:** The Senzing error class returned
     - **errors:** Zero or more errors from the error "stack".
       Includes the Senzing engine error.
     - **details:** Ad hoc variables that are helpful in error reporting or debugging
@@ -33,6 +34,7 @@
         "description": "g2engine.GetEntityByRecordId(DoesntExist, 1070, -1) failed. Reason: DataSource not found",
         "duration": 199045,
         "location": "In MySampleGetEntityFunction() at mysample.go:2129",
+        "type": "SzNotFoundError",
         "errors": [
             "0027E|Unknown DATA_SOURCE value 'DOESNTEXIST'"
         ],
@@ -89,18 +91,18 @@
 
 ```console
 SzError
-├── SZBadInputError
-│   ├── SZNotFoundError
-│   └── SZUnknownDatasourceError
-├── SZConfigurationError
-├── SZRetryableError
-│   ├── SZDatabaseConnectionLostError
-│   └── SZRetryTimeoutExceededError
-└── SZUnrecoverableError
-    ├── SZDatabaseError
-    ├── SZLicenseError
-    ├── SZNotInitializedError
-    └── SZUnhandledError
+├── SzBadInputError
+│   ├── SzNotFoundError
+│   └── SzUnknownDatasourceError
+├── SzConfigurationError
+├── SzRetryableError
+│   ├── SzDatabaseConnectionLostError
+│   └── SzRetryTimeoutExceededError
+└── SzUnrecoverableError
+    ├── SzDatabaseError
+    ├── SzLicenseError
+    ├── SzNotInitializedError
+    └── SzUnhandledError
 ```
 
 - Class hierarchy implementations:
