@@ -30,7 +30,7 @@
         "time": "2024-02-06T17:02:34.076962445Z",
         "level": "ERROR",
         "id": "senzing-60044037",
-        "text": "g2engine.GetEntityByRecordID(DoesntExist, 1070, -1) failed. Reason: DataSource not found",
+        "text": "g2engine.GetEntityByRecordId(DoesntExist, 1070, -1) failed. Reason: DataSource not found",
         "duration": 199045,
         "location": "In MySampleGetEntityFunction() at mysample.go:2129",
         "errors": [
