@@ -108,3 +108,39 @@ SzError
 - Class hierarchy implementations:
   - [Go](https://github.com/senzing-garage/g2-sdk-go/blob/126.dockter.1/g2error/main.go)
   - [Python](https://github.com/senzing-garage/g2-sdk-python-next/blob/main/src/senzing/g2exception.py)
+
+## Log formatter
+
+An idea...
+
+Let's say that the customer doesn't want to see the entire JSON or maybe not any JSON at all.
+In the Abstract Factory Pattern, we introduce a SzLogFormatter interface (requiring a `format(input_message)` method).
+The method is passed into the factory constructor and used by the engine, config, configmgr, etc. when creating a message.
+
+The user's python code would look something like:
+
+```python
+class LogFormatter:
+    def format(input_message):
+        message_dict = json.loads(input_message)
+        return message_dict.get("description")
+
+
+if __name__ == "__main__":
+    :
+    factory = SzAbstractFactory.getBaseFactory(instance_name, settings, LogFormatter)
+    engine = factory.createEngine()
+    :
+    try:
+        engine.add_record(data_source_code, record_id, record_definition)
+    except SzError as err:
+        print(err)  # Simply prints the non-JSON value of "description"
+```
+
+The default LogFormatter would be:
+
+```python
+class LogFormatter:
+    def format(input_message):
+        return input_message
+```
