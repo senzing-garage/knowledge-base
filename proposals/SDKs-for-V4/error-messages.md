@@ -22,7 +22,7 @@
       Includes the Senzing engine error.
     - **details:** Ad hoc variables that are helpful in error reporting or debugging
 
-## Example log message
+## Example message
 
 1. Example
 
@@ -109,18 +109,18 @@ SzError
   - [Go](https://github.com/senzing-garage/g2-sdk-go/blob/126.dockter.1/g2error/main.go)
   - [Python](https://github.com/senzing-garage/g2-sdk-python-next/blob/main/src/senzing/g2exception.py)
 
-## Log formatter
+## Message formatter
 
 An idea...
 
 Let's say that the customer doesn't want to see the entire JSON or maybe not any JSON at all.
-In the Abstract Factory Pattern, we introduce a SzLogFormatter interface (requiring a `format(input_message)` method).
+In the Abstract Factory Pattern, we introduce a SzMessageFormatter interface (requiring a `format(input_message)` method).
 The class or function is passed into the factory constructor and used by the engine, config, configmgr, etc. when creating a message.
 
 A python user's code would look something like:
 
 ```python
-class LogFormatter:
+class MessageFormatter:
     def format(input_message):
         message_dict = json.loads(input_message)
         return message_dict.get("description")
@@ -128,7 +128,7 @@ class LogFormatter:
 
 if __name__ == "__main__":
     :
-    factory = SzAbstractFactory.createBaseFactory(instance_name, settings, LogFormatter)
+    factory = SzAbstractFactory.createCoreFactory(instance_name, settings, MessageFormatter)
     engine = factory.createEngine()
     :
     try:
@@ -137,10 +137,10 @@ if __name__ == "__main__":
         print(err)  # Simply prints the non-JSON value of "description"
 ```
 
-The default LogFormatter would be:
+The default MessageFormatter would be:
 
 ```python
-class LogFormatter:
+class MessageFormatter:
     def format(input_message):
         return input_message
 ```
