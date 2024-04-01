@@ -3,7 +3,7 @@
 ## Conventions
 
 1. Error messages are returned in JSON (i.e. a string in JSON format)
-1. The JSON will be specified by
+1. The JSON is specified by
    [RFC8927](https://github.com/senzing-garage/go-messaging/blob/main/message-RFC8927.json)
     1. JSON keys are "fixed" (no "dynamic" JSON keys)
     1. Code can be generated to parse error messages in csharp, go, java, python, ruby, rust, typescript.
