@@ -128,7 +128,7 @@ class MessageFormatter:
 
 if __name__ == "__main__":
     :
-    factory = SzAbstractFactory.createCoreFactory(instance_name, settings, MessageFormatter)
+    factory = SzFactoryCreator.createCoreFactory(instance_name, settings, MessageFormatter)
     engine = factory.createEngine()
     :
     try:
