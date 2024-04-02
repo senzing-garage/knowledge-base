@@ -24,7 +24,7 @@ To see the expanded version, visit
 
 | Existing name | Canonical Name | Return value | Smells |
 |---------------|----------------|--------------|--------|
-| G2ConfigMgr_addConfig(configStr, configComments, configID) | addConfig(configDefinition, configComments) | int64 | |
+| G2ConfigMgr_addConfig(configStr, configComment, configID) | addConfig(configDefinition, configComment) | int64 | |
 | G2ConfigMgr_destroy() | | - | |
 | G2ConfigMgr_getConfig(configID, responseBuf, bufSize, resizeFunc) | getConfig(configId) | string | |
 | G2ConfigMgr_getConfigList(responseBuf, bufSize, resizeFunc) | getConfigList() | string | |
