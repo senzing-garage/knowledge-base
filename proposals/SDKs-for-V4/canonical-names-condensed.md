@@ -95,11 +95,11 @@ To see the expanded version, visit
 | Existing name | Canonical Name | Return value | Smells |
 |---------------|----------------|--------------|--------|
 || close()      |||
-|| createConfig()     | [object conforming to SzConfig interface]     ||
-|| createConfigMgr()  | [object conforming to SzConfigMgr interface]  ||
-|| createDiagnostic() | [object conforming to SzDiagnostic interface] ||
-|| createEngine()     | [object conforming to SzEngine interface]     ||
-|| createProduct()    | [object conforming to SzProduct interface]    ||
+|| createConfig()     | [object conforming to SzConfig interface]         ||
+|| createConfigMgr()  | [object conforming to SzConfigManager interface]  ||
+|| createDiagnostic() | [object conforming to SzDiagnostic interface]     ||
+|| createEngine()     | [object conforming to SzEngine interface]         ||
+|| createProduct()    | [object conforming to SzProduct interface]        ||
 
 ## Method signature proposals
 
