@@ -13,16 +13,16 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
 |---------------|----------------|--------------|--------|
 | G2Config_addDataSource(configHandle, inputJson, responseBuf, bufSize, resizeFunc) | addDataSource(configHandle, dataSourceCode) | | |
 | G2Config_clearLastException() | [not-public] | | |
-| G2Config_close(configHandle) | | - | |
-| G2Config_create(configHandle) | create() | configHandle | |
+| G2Config_close(configHandle) | closeConfig(configHandle) | - | |
+| G2Config_create(configHandle) | createConfig() | configHandle | |
 | G2Config_deleteDataSource(configHandle, inputJson) | deleteDataSource(configHandle, dataSourceCode) | - | |
 | G2Config_destroy() | | - | |
 | G2Config_getLastException(buffer, bufSize) | [not-public] | | |
 | G2Config_getLastExceptionCode() | [not-public] | | |
 | G2Config_init(moduleName, iniParams, verboseLogging) | initialize(instanceName, settings, verboseLogging) | - | Consider single object |
 | G2Config_listDataSources(configHandle, responseBuf, bufSize, resizeFunc) | getDataSources(configHandle) | string | |
-| G2Config_load(jsonConfig, configHandle) | load(configDefinition) | configHandle | |
-| G2Config_save(configHandle, responseBuf, bufSize, resizeFunc) | getJsonString(configHandle)  | string | |
+| G2Config_load(jsonConfig, configHandle) | importConfig(configDefinition) | configHandle | |
+| G2Config_save(configHandle, responseBuf, bufSize, resizeFunc) | exportConfig(configHandle)  | string | |
 
 ### SzConfigManager
 
@@ -145,12 +145,11 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
 
 | Existing name | Canonical Name | Return value | Smells |
 |---------------|----------------|--------------|--------|
-|| close()      |||
-|| createConfig()     | [object conforming to SzConfig interface]         ||
-|| createConfigMgr()  | [object conforming to SzConfigManager interface]  ||
-|| createDiagnostic() | [object conforming to SzDiagnostic interface]     ||
-|| createEngine()     | [object conforming to SzEngine interface]         ||
-|| createProduct()    | [object conforming to SzProduct interface]        ||
+|| createConfig()         | [object conforming to SzConfig interface]         ||
+|| createConfigManager()  | [object conforming to SzConfigManager interface]  ||
+|| createDiagnostic()     | [object conforming to SzDiagnostic interface]     ||
+|| createEngine()         | [object conforming to SzEngine interface]         ||
+|| createProduct()        | [object conforming to SzProduct interface]        ||
 
 ## Method signature proposals
 
