@@ -88,6 +88,7 @@
 ## Error class hierarchy
 
 **Note:** The suffix `Error` is used, not `Exception`.
+In Java, the `Exception` will be used instead of `Error`.
 
 ```console
 SzError
@@ -97,6 +98,7 @@ SzError
 ├── SzConfigurationError
 ├── SzRetryableError
 │   ├── SzDatabaseConnectionLostError
+│   ├── SzDefaultConfigReplaceError // Needs to be vetted.
 │   └── SzRetryTimeoutExceededError
 └── SzUnrecoverableError
     ├── SzDatabaseError
