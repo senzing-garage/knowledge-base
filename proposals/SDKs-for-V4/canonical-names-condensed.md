@@ -39,6 +39,7 @@ To see the expanded version, visit
 |---------------|----------------|--------------|--------|
 | G2Diagnostic_checkDBPerf(secondsToRun, responseBuf, bufSize, resizeFunc) | checkDatabasePerformance(secondsToRun) | string | |
 | G2Diagnostic_destroy() | | - | |
+| G2Diagnostic_getFeature(libFeatID, responseBuf, bufSize, resizeFunc) | getFeature(featureId) | string | ** Not approved yet |
 | G2Diagnostic_init(moduleName, iniParams, verboseLogging) | initialize(instanceName, settings, verboseLogging, configId) | | `configId` can be `nil`, `None`, `null`. Consider single object |
 | G2Diagnostic_purgeRepository(????) | purgeRepository(????) | | |
 | G2Diagnostic_reinit(initConfigID) | reinitialize(configId) | - | |
