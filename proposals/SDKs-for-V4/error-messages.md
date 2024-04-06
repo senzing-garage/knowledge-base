@@ -96,9 +96,9 @@ SzError
 │   ├── SzNotFoundError
 │   └── SzUnknownDatasourceError
 ├── SzConfigurationError
+├── SzReplaceConflictError  // Needs to be vetted.
 ├── SzRetryableError
 │   ├── SzDatabaseConnectionLostError
-│   ├── SzDefaultConfigReplaceError // Needs to be vetted.
 │   └── SzRetryTimeoutExceededError
 └── SzUnrecoverableError
     ├── SzDatabaseError
