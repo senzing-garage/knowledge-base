@@ -91,16 +91,17 @@ To see the expanded version, visit
 | G2Product_validateLicenseStringBase64(licenseString, errorBuf, errorBufSize, resizeFunc) | ??? | | |
 | G2Product_version() | getVersion() | string | |
 
-### SzFactory
+## Abstract Factory
+
+### SzAbstractFactory
 
 | Existing name | Canonical Name | Return value | Smells |
 |---------------|----------------|--------------|--------|
-|| close()      |||
-|| createConfig()     | [object conforming to SzConfig interface]         ||
-|| createConfigMgr()  | [object conforming to SzConfigManager interface]  ||
-|| createDiagnostic() | [object conforming to SzDiagnostic interface]     ||
-|| createEngine()     | [object conforming to SzEngine interface]         ||
-|| createProduct()    | [object conforming to SzProduct interface]        ||
+|| createConfig()         | [object conforming to SzConfig interface]         ||
+|| createConfigManager()  | [object conforming to SzConfigManager interface]  ||
+|| createDiagnostic()     | [object conforming to SzDiagnostic interface]     ||
+|| createEngine()         | [object conforming to SzEngine interface]         ||
+|| createProduct()        | [object conforming to SzProduct interface]        ||
 
 ## Method signature proposals
 

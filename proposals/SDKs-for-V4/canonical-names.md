@@ -142,7 +142,9 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
 | G2Product_validateLicenseStringBase64(licenseString, errorBuf, errorBufSize, resizeFunc) | ??? | | |
 | G2Product_version() | getVersion() | string | |
 
-### SzFactory
+## Abstract Factory
+
+### SzAbstractFactory
 
 | Existing name | Canonical Name | Return value | Smells |
 |---------------|----------------|--------------|--------|
