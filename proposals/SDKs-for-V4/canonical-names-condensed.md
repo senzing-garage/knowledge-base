@@ -11,14 +11,14 @@ To see the expanded version, visit
 |---------------|----------------|--------------|--------|
 | G2Config_addDataSource(configHandle, inputJson, responseBuf, bufSize, resizeFunc) | addDataSource(configHandle, dataSourceCode) | | |
 | G2Config_clearLastException() | [not-public] | | |
-| G2Config_close(configHandle) | | - | |
-| G2Config_create(configHandle) | create() | configHandle | |
+| G2Config_close(configHandle) | closeConfig(configHandle) | - | |
+| G2Config_create(configHandle) | createConfig() | configHandle | |
 | G2Config_deleteDataSource(configHandle, inputJson) | deleteDataSource(configHandle, dataSourceCode) | - | |
 | G2Config_destroy() | | - | |
 | G2Config_init(moduleName, iniParams, verboseLogging) | initialize(instanceName, settings, verboseLogging) | - | Consider single object |
 | G2Config_listDataSources(configHandle, responseBuf, bufSize, resizeFunc) | getDataSources(configHandle) | string | |
-| G2Config_load(jsonConfig, configHandle) | load(configDefinition) | configHandle | |
-| G2Config_save(configHandle, responseBuf, bufSize, resizeFunc) | getJsonString(configHandle)  | string | |
+| G2Config_load(jsonConfig, configHandle) | importConfig(configDefinition) | configHandle | |
+| G2Config_save(configHandle, responseBuf, bufSize, resizeFunc) | exportConfig(configHandle)  | string | |
 
 ### SzConfigManager
 
