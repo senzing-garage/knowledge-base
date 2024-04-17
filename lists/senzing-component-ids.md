@@ -95,7 +95,7 @@ Used in log message identifiers in the format `senzing-ppppnnnnt`, where:
 1. **6037** - github.com/senzing-garage/sz-sdk-go-mock/szssadm
 1. **6038** - github.com/senzing-garage/sz-sdk-go-mock/test
 1. **6039** - github.com/senzing-garage/sz-sdk-go-mock/testhelpers
-1. **6041** - github.com/senzing-garage/go-sdk-abstract-factory/factory
+1. **6041** - github.com/senzing-garage/go-sdk-abstract-factory/szfactorycreator
 
 ### senzing-tools
 
