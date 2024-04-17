@@ -40,7 +40,7 @@ To see the expanded version, visit
 | G2Diagnostic_checkDBPerf(secondsToRun, responseBuf, bufSize, resizeFunc) | checkDatabasePerformance(secondsToRun) | string | |
 | G2Diagnostic_destroy() | | - | |
 | G2Diagnostic_getFeature(libFeatID, responseBuf, bufSize, resizeFunc) | getFeature(featureId) | string | ** Not approved yet |
-| G2Diagnostic_init(moduleName, iniParams, verboseLogging) | initialize(instanceName, settings, verboseLogging, configId) | | `configId` can be `nil`, `None`, `null`. Consider single object |
+| G2Diagnostic_init(moduleName, iniParams, verboseLogging) | initialize(instanceName, settings, configId, verboseLogging) | | `configId` can be `nil`, `None`, `null`. Consider single object |
 | G2Diagnostic_purgeRepository(????) | purgeRepository(????) | | |
 | G2Diagnostic_reinit(initConfigID) | reinitialize(configId) | - | |
 
@@ -68,7 +68,7 @@ To see the expanded version, visit
 | G2_getRepositoryLastModifiedTime(lastModifiedTime) | getRepositoryLastModifiedTime()  | int64 | |
 | G2_getVirtualEntityByRecordID(recordList, responseBuf, bufSize, resizeFunc) | getVirtualEntityByRecordId(recordList, flags) | string | |
 | G2_howEntityByEntityID(entityID, responseBuf, bufSize, resizeFunc) | howEntityByEntityId(entityId, flags) | string | SM-1, SM-3.3 |
-| G2_init(moduleName, iniParams, verboseLogging) | initialize(instanceName, settings, verboseLogging, configId) | - | `configId` can be `nil`, `None`, `null`. Consider single object |
+| G2_init(moduleName, iniParams, verboseLogging) | initialize(instanceName, settings, configId, verboseLogging) | - | `configId` can be `nil`, `None`, `null`. Consider single object |
 | G2_primeEngine() | | - | |
 | G2_processRedoRecord(responseBuf, bufSize, resizeFunc ) | processRedoRecord(redoRecord, flags) | string | |
 | G2_reevaluateEntity(entityID, flags) | reevaluateEntity(entityId, flags) | string | `flags` has `WITH_INFO` bit |
