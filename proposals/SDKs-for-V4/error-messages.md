@@ -94,7 +94,7 @@ In Java, the `Exception` will be used instead of `Error`.
 SzError
 ├── SzBadInputError
 │   ├── SzNotFoundError
-│   └── SzUnknownDatasourceError
+│   └── SzUnknownDataSourceError
 ├── SzConfigurationError
 ├── SzReplaceConflictError  // Needs to be vetted.
 ├── SzRetryableError

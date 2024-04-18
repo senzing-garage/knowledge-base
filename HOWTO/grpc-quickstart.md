@@ -83,7 +83,7 @@ and access it using the `senzing_grpc` Python package.
         old_config_id = g2_configmgr.get_default_config_id()
         OLD_JSON_CONFIG = g2_configmgr.get_config(old_config_id)
         config_handle = g2_config.load(OLD_JSON_CONFIG)
-    # Add Datasources to existing Senzing configuration.
+    # Add DataSources to existing Senzing configuration.
         for datasource in TRUTHSET_DATASOURCES.values():
             g2_config.add_data_source(config_handle, datasource.get("Json", {}))
     # Persist new Senzing configuration.
@@ -297,7 +297,7 @@ and access it using the `senzing_grpc` Python package.
         old_config_id = g2_configmgr.get_default_config_id()
         OLD_JSON_CONFIG = g2_configmgr.get_config(old_config_id)
         config_handle = g2_config.load(OLD_JSON_CONFIG)
-    # Add Datasources to existing Senzing configuration.
+    # Add DataSources to existing Senzing configuration.
         for datasource in DATASOURCES:
             datasource_json = {"DSRC_CODE": datasource}
             g2_config.add_data_source(config_handle, datasource_json)

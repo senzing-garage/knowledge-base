@@ -1,7 +1,7 @@
 #! /usr/bin/env python3
 
-import random
 import logging
+import random
 import sys
 
 # -----------------------------------------------------------------------------
@@ -10,10 +10,11 @@ import sys
 
 
 class G2Exception(Exception):
-    '''Base exception for G2 related python code'''
+    """Base exception for G2 related python code"""
 
     def __init__(self, *args, **kwargs):
         Exception.__init__(self, *args, **kwargs)
+
 
 # -----------------------------------------------------------------------------
 # Exception categories.
@@ -43,13 +44,14 @@ class G2ExceptionInfo(G2Exception):
     def __init__(self, *args, **kwargs):
         G2Exception.__init__(self, *args, **kwargs)
 
+
 # -----------------------------------------------------------------------------
 # Example Critical exceptions
 # -----------------------------------------------------------------------------
 
 
 class G2DBExceptionCritical(G2ExceptionCritical):
-    '''Base exception for G2 DB related python code'''
+    """Base exception for G2 DB related python code"""
 
     def __init__(self, *args, **kwargs):
         G2ExceptionCritical.__init__(self, *args, **kwargs)
@@ -90,13 +92,14 @@ class G2ModuleMySQLNoSchema(G2ExceptionCritical):
     def __init__(self, *args, **kwargs):
         G2ExceptionCritical.__init__(self, *args, **kwargs)
 
+
 # -----------------------------------------------------------------------------
 # Example Error exceptions
 # -----------------------------------------------------------------------------
 
 
 class G2DBExceptionError(G2ExceptionError):
-    '''Base exception for G2 DB related python code'''
+    """Base exception for G2 DB related python code"""
 
     def __init__(self, *args, **kwargs):
         G2ExceptionError.__init__(self, *args, **kwargs)
@@ -107,13 +110,14 @@ class G2ModuleInvalidXML(G2ExceptionError):
     def __init__(self, *args, **kwargs):
         G2ExceptionError.__init__(self, *args, **kwargs)
 
+
 # -----------------------------------------------------------------------------
 # Example Warning exceptions
 # -----------------------------------------------------------------------------
 
 
 class G2DBExceptionWarning(G2ExceptionWarning):
-    '''Base exception for G2 DB related python code'''
+    """Base exception for G2 DB related python code"""
 
     def __init__(self, *args, **kwargs):
         G2ExceptionWarning.__init__(self, *args, **kwargs)
@@ -130,13 +134,14 @@ class G2ModuleEmptyMessage(G2ExceptionWarning):
     def __init__(self, *args, **kwargs):
         G2ExceptionWarning.__init__(self, *args, **kwargs)
 
+
 # -----------------------------------------------------------------------------
 # Example Info exceptions
 # -----------------------------------------------------------------------------
 
 
 class G2DBExceptionWarning(G2ExceptionInfo):
-    '''Base exception for G2 DB related python code'''
+    """Base exception for G2 DB related python code"""
 
     def __init__(self, *args, **kwargs):
         G2ExceptionInfo.__init__(self, *args, **kwargs)
@@ -163,25 +168,31 @@ class G2InvalidFileTypeContentsException(G2ExceptionInfo):
 class UnconfiguredDataSourceException(G2ExceptionInfo):
 
     def __init__(self, DataSourceName):
-        G2ExceptionInfo.__init__(self, ("Datasource %s not configured. See https://senzing.zendesk.com/hc/en-us/articles/360010784333 on how to configure datasources in the config file." % DataSourceName))
+        G2ExceptionInfo.__init__(
+            self,
+            (
+                "DataSource %s not configured. See https://senzing.zendesk.com/hc/en-us/articles/360010784333 on how to configure datasources in the config file."
+                % DataSourceName
+            ),
+        )
 
 
 class G2ModuleException(G2ExceptionInfo):
-    '''Base exception for G2 Module related python code'''
+    """Base exception for G2 Module related python code"""
 
     def __init__(self, *args, **kwargs):
         G2ExceptionInfo.__init__(self, *args, **kwargs)
 
 
 class G2ModuleNotInitialized(G2ExceptionInfo):
-    '''G2 Module called but has not been initialized '''
+    """G2 Module called but has not been initialized"""
 
     def __init__(self, *args, **kwargs):
         G2ExceptionInfo.__init__(self, *args, **kwargs)
 
 
 class G2ModuleGenericException(G2ExceptionInfo):
-    '''Generic exception for non-subclassed G2 Module exception '''
+    """Generic exception for non-subclassed G2 Module exception"""
 
     def __init__(self, *args, **kwargs):
         G2ExceptionInfo.__init__(self, *args, **kwargs)
@@ -191,6 +202,7 @@ class G2ModuleLicenseException(G2ExceptionInfo):
 
     def __init__(self, *args, **kwargs):
         G2ExceptionInfo.__init__(self, *args, **kwargs)
+
 
 # -----------------------------------------------------------------------------
 # Determine database type
@@ -223,9 +235,12 @@ exceptions_map = {
 
 
 def translate_g2_module_exception(exception_message):
-    senzing_error_code = exception_message.split('|', 1)[0].strip()
-    senzing_error_class = exceptions_map.get(senzing_error_code, G2ModuleGenericException)
+    senzing_error_code = exception_message.split("|", 1)[0].strip()
+    senzing_error_class = exceptions_map.get(
+        senzing_error_code, G2ModuleGenericException
+    )
     return senzing_error_class(exception_message)
+
 
 # -----------------------------------------------------------------------------
 # Simulation code
@@ -241,6 +256,7 @@ def example_senzing_call():
     simulated_senzing_message = get_tls_var_buf_value()
     raise translate_g2_module_exception(simulated_senzing_message)
 
+
 # -----------------------------------------------------------------------------
 # Main (Just for testing)
 # -----------------------------------------------------------------------------
@@ -248,7 +264,7 @@ def example_senzing_call():
 
 if __name__ == "__main__":
 
-    logging.basicConfig(format='%(asctime)s %(message)s', level=logging.INFO)
+    logging.basicConfig(format="%(asctime)s %(message)s", level=logging.INFO)
 
     # Example call to Senzing and exception catching.
 
