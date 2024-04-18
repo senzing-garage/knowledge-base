@@ -1,13 +1,13 @@
 # How to bring up an ELK stack
 
 The following gives steps and an outline on how to bring up an ELK stack for docker-compose stacks.
-An existing ELK stack exists in the [docker-compose-demo](https://github.com/senzing-garage/docker-compose-demo/blob/main/resources/postgresql/docker-compose-rabbitmq-postgresql-with-ELK.yaml)
+An existing ELK stack exists in the [docker-compose-demo]
 github repository. This page assumes a working knowledge of docker and docker-compose.
 
 ## Prerequisites
-1. [docker](https://github.com/senzing-garage/knowledge-base/blob/main/HOWTO/install-docker.md) - minimum version: [20.10.16](https://docs.docker.com/engine/release-notes/#201016)
-2. [docker-compose](https://github.com/senzing-garage/knowledge-base/blob/main/HOWTO/install-docker-compose.md) - minimum version: [1.29.0](https://docs.docker.com/compose/release-notes/#1290)
-3. [elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html) - minimum version: [8.5.3](https://www.elastic.co/guide/en/elasticsearch/reference/current/release-highlights.html)
+1. [docker] - minimum version: [20.10.16]
+2. [docker-compose] - minimum version: [1.29.0]
+3. [elasticsearch] - minimum version: [8.5.3]
 
 
 ### Notes
@@ -30,7 +30,7 @@ important requirements
 ```
 
 ### Portainer
-- A good tool to monitor individual Docker logs is [Portainer](https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/portainer.md). When running, portainer is viewable at localhost:9170
+- A good tool to monitor individual Docker logs is [Portainer]. When running, portainer is viewable at localhost:9170
 
 
 ### 📘 Instructions
@@ -88,3 +88,12 @@ during its startup, there will almost always be error logs.
 ## View logs
 - Give the ELK stack a few minutes to start and then logs are viewable in kibana at localhost:5601.
 Navigate to "Analytics" -> "Discover" to see logs
+
+[1.29.0]: https://docs.docker.com/compose/release-notes/#1290
+[8.5.3]: https://www.elastic.co/guide/en/elasticsearch/reference/current/release-highlights.html
+[20.10.16]: https://docs.docker.com/engine/release-notes/#201016
+[docker]: https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/docker.md
+[docker-compose]: https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/docker-compose.md
+[docker-compose-demo]: https://github.com/senzing-garage/docker-compose-demo/blob/main/resources/postgresql/docker-compose-rabbitmq-postgresql-with-ELK.yaml
+[elasticsearch]: https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html
+[Portainer]: https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/portainer.md
