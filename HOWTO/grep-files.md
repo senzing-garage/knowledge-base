@@ -93,30 +93,30 @@
 
     ```console
     cat<<EOT > /tmp/grep-update-links.txt
-    HOWTO/install-aws-cli.md
-    HOWTO/install-curl.md
-    HOWTO/install-db2-client.md
-    HOWTO/install-docker-compose.md
-    HOWTO/install-docker-registry-server.md
-    HOWTO/install-docker.md
-    HOWTO/install-git.md
-    HOWTO/install-helm.md
-    HOWTO/install-java.md
-    HOWTO/install-jq.md
-    HOWTO/install-jupyter-notebooks.md
-    HOWTO/install-kubectl.md
-    HOWTO/install-libmysqlclient21.md
-    HOWTO/install-make.md
-    HOWTO/install-minikube.md
-    HOWTO/install-minishift.md
-    HOWTO/install-nodejs.md
-    HOWTO/install-npm.md
-    HOWTO/install-packer.md
-    HOWTO/install-pip3.md
-    HOWTO/install-python-3.md
-    HOWTO/install-rancher.md
-    HOWTO/install-vagrant.md
-    HOWTO/install-virtualbox.md
+    WHATIS/aws-cli.md
+    WHATIS/curl.md
+    WHATIS/db2-client.md
+    WHATIS/docker-compose.md
+    WHATIS/docker-registry-server.md
+    WHATIS/docker.md
+    WHATIS/git.md
+    WHATIS/helm.md
+    WHATIS/java.md
+    WHATIS/jq.md
+    WHATIS/jupyter-notebooks.md
+    WHATIS/kubectl.md
+    WHATIS/libmysqlclient21.md
+    WHATIS/make.md
+    WHATIS/minikube.md
+    WHATIS/minishift.md
+    WHATIS/nodejs.md
+    WHATIS/npm.md
+    WHATIS/packer.md
+    WHATIS/pip3.md
+    WHATIS/python.md
+    WHATIS/rancher.md
+    WHATIS/vagrant.md
+    WHATIS/virtualbox.md
     EOT
 
     ```
