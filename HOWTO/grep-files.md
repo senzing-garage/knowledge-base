@@ -93,30 +93,30 @@
 
     ```console
     cat<<EOT > /tmp/grep-update-links.txt
-    HOWTO/install-aws-cli.md
-    HOWTO/install-curl.md
-    HOWTO/install-db2-client.md
-    HOWTO/install-docker-compose.md
-    HOWTO/install-docker-registry-server.md
-    HOWTO/install-docker.md
-    HOWTO/install-git.md
-    HOWTO/install-helm.md
-    HOWTO/install-java.md
-    HOWTO/install-jq.md
-    HOWTO/install-jupyter-notebooks.md
-    HOWTO/install-kubectl.md
-    HOWTO/install-libmysqlclient21.md
-    HOWTO/install-make.md
-    HOWTO/install-minikube.md
-    HOWTO/install-minishift.md
-    HOWTO/install-nodejs.md
-    HOWTO/install-npm.md
-    HOWTO/install-packer.md
-    HOWTO/install-pip3.md
-    HOWTO/install-python-3.md
-    HOWTO/install-rancher.md
-    HOWTO/install-vagrant.md
-    HOWTO/install-virtualbox.md
+    WHATIS/install-aws-cli.md
+    WHATIS/install-curl.md
+    WHATIS/install-db2-client.md
+    WHATIS/install-docker-compose.md
+    WHATIS/install-docker-registry-server.md
+    WHATIS/install-docker.md
+    WHATIS/install-git.md
+    WHATIS/install-helm.md
+    WHATIS/install-java.md
+    WHATIS/install-jq.md
+    WHATIS/install-jupyter-notebooks.md
+    WHATIS/install-kubectl.md
+    WHATIS/install-libmysqlclient21.md
+    WHATIS/install-make.md
+    WHATIS/install-minikube.md
+    WHATIS/install-minishift.md
+    WHATIS/install-nodejs.md
+    WHATIS/install-npm.md
+    WHATIS/install-packer.md
+    WHATIS/install-pip3.md
+    WHATIS/install-python-3.md
+    WHATIS/install-rancher.md
+    WHATIS/install-vagrant.md
+    WHATIS/install-virtualbox.md
     EOT
 
     ```
