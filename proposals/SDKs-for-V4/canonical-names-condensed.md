@@ -37,7 +37,7 @@ To see the expanded version, visit
 
 | Existing name | Canonical Name | Return value | Smells |
 |---------------|----------------|--------------|--------|
-| G2Diagnostic_checkDBPerf(secondsToRun, responseBuf, bufSize, resizeFunc) | checkDatabasePerformance(secondsToRun) | string | |
+| G2Diagnostic_checkDBPerf(secondsToRun, responseBuf, bufSize, resizeFunc) | checkDatastorePerformance(secondsToRun) | string | |
 | G2Diagnostic_destroy() | | - | |
 | G2Diagnostic_getDatastoreInfo(responseBuf, bufSize, resizeFunc) | getDataStoreInfo() | string | |
 | G2Diagnostic_getFeature(libFeatID, responseBuf, bufSize, resizeFunc) | getFeature(featureId) | string | ** Not approved yet |

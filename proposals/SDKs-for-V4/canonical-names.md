@@ -44,7 +44,7 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
 
 | Existing name | Canonical Name | Return value | Smells |
 |---------------|----------------|--------------|--------|
-| G2Diagnostic_checkDBPerf(secondsToRun, responseBuf, bufSize, resizeFunc) | checkDatabasePerformance(secondsToRun) | string | |
+| G2Diagnostic_checkDBPerf(secondsToRun, responseBuf, bufSize, resizeFunc) | checkDatastorePerformance(secondsToRun) | string | |
 | G2Diagnostic_clearLastException() | [not-public] | | |
 | G2Diagnostic_destroy() | | - | |
 | G2Diagnostic_getDatastoreInfo(responseBuf, bufSize, resizeFunc) | getDataStoreInfo() | string | |
