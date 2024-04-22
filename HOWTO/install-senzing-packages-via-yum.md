@@ -70,7 +70,7 @@ sudo yum install <SENZING_PACKAGE>-<MAJOR>.<MINOR>.<PATCH>*
 ```
 
 NOTE: This will install the latest version of a particular `MAJOR`.`MINOR`.`PATCH` version.
-Apt will use the latest build version
+Yum will use the latest build version
 Ex. 
 If there are two senzingapi-runtime versions available:
 
@@ -82,7 +82,7 @@ senzingapi-runtime.x86_64                                          3.9.0-24071
 The following command would install the higher version: `3.9.0-24071`
 
 ```console
-sudo apt install senzingapi-runtime-3.9.0*
+sudo yum install senzingapi-runtime-3.9.0*
 ```
 
 #### Installing a specific MAJOR.MINOR.PATCH-BUILD_NUMBER version
