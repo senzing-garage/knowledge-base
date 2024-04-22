@@ -1,5 +1,8 @@
 # HOWTO - Install Senzing Packages via Yum
 
+These instructions are only intended as a cheatsheet for developers.
+There are alternate ways to do many of these actions that may or may not be documented 
+
 ## Installing the repo package
 
 ### Senzing version 3.9.X and below
