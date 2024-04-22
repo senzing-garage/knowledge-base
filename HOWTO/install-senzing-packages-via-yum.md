@@ -1,0 +1,105 @@
+# HOWTO - Install Senzing Packages via Yum
+
+## Installing the repo package
+
+### Senzing version 3.9.X and below
+
+```console
+sudo yum install https://senzing-staging-yum.s3.amazonaws.com/senzingstagingrepo-1.0.0-1.noarch.rpm
+```
+
+### Senzing version 3.10.X and above
+
+```console
+sudo yum install https://senzing-staging-yum.s3.amazonaws.com/senzingstagingrepo-2.0.0-1.noarch.rpm
+```
+
+### Validating the repo package install
+
+1. Use yum to verify the repo package is installed
+```console
+sudo yum list installed | grep senzing
+```
+
+## Listing Senzing packages
+
+### List all available Senzing packages
+
+```console
+sudo yum list available | grep senzing
+```
+
+### List all available versions of a specific package
+
+```console
+sudo yum list --showduplicates <SENZING_PACKAGE>
+```
+
+```console
+sudo yum list --showduplicates senzingapi-runtime
+```
+
+### List installed Senzing packages
+
+```console
+sudo yum list installed | grep senzing
+```
+
+## Installing Senzing packages
+
+### Installing the latest version of a package
+
+```console
+sudo yum install <SENZING_PACKAGE>
+```
+
+Ex. 
+```console
+sudo yum install senzingapi-runtime
+```
+
+### Installing a specific Senzing package version 
+
+#### Installing a specific MAJOR.MINOR.PATCH version
+
+```console
+sudo yum install <SENZING_PACKAGE>-<MAJOR>.<MINOR>.<PATCH>*
+```
+
+NOTE: This will install the latest version of a particular `MAJOR`.`MINOR`.`PATCH` version.
+Apt will use the latest build version
+Ex. 
+If there are two senzingapi-runtime versions available:
+
+```console
+senzingapi-runtime.x86_64                                          3.9.0-24068
+senzingapi-runtime.x86_64                                          3.9.0-24071
+```
+
+The following command would install the higher version: `3.9.0-24071`
+
+```console
+sudo apt install senzingapi-runtime-3.9.0*
+```
+
+#### Installing a specific MAJOR.MINOR.PATCH-BUILD_NUMBER version
+
+```console
+sudo yum install <SENZING_PACKAGE>-<MAJOR>.<MINOR>.<PATCH>-<BUILD_NUMBER>
+```
+
+Ex.
+```console
+sudo yum install senzingapi-runtime-3.9.0-24068
+```
+
+## Listing package dependencies
+
+```console
+sudo yum deplist <SENZING_PACKAGE>
+```
+
+Ex. 
+```console
+sudo yum deplist senzingapi-runtime
+```
