@@ -56,7 +56,7 @@ sudo yum list installed | grep senzing
 sudo yum install <SENZING_PACKAGE>
 ```
 
-Ex. 
+Example: 
 ```console
 sudo yum install senzingapi-runtime
 ```
@@ -71,7 +71,7 @@ sudo yum install <SENZING_PACKAGE>-<MAJOR>.<MINOR>.<PATCH>*
 
 NOTE: This will install the latest version of a particular `MAJOR`.`MINOR`.`PATCH` version.
 Yum will use the latest build version
-Ex. 
+Example: 
 If there are two senzingapi-runtime versions available:
 
 ```console
@@ -91,7 +91,7 @@ sudo yum install senzingapi-runtime-3.9.0*
 sudo yum install <SENZING_PACKAGE>-<MAJOR>.<MINOR>.<PATCH>-<BUILD_NUMBER>
 ```
 
-Ex.
+Example:
 ```console
 sudo yum install senzingapi-runtime-3.9.0-24068
 ```
@@ -102,7 +102,18 @@ sudo yum install senzingapi-runtime-3.9.0-24068
 sudo yum deplist <SENZING_PACKAGE>
 ```
 
-Ex. 
+Example: 
 ```console
 sudo yum deplist senzingapi-runtime
+```
+
+## Removing Senzing packages
+
+```console
+sudo yum remove <SENZING_PACKAGE>
+```
+
+Example:
+```console
+sudo yum remove senzingapi-runtime
 ```

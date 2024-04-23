@@ -42,7 +42,7 @@ sudo apt list | grep senzing
 sudo apt list -a <SENZING_PACKAGE>
 ```
 
-Ex.
+Example:
 ```console
 sudo apt list -a senzingapi-runtime
 ```
@@ -61,7 +61,7 @@ sudo apt list --installed | grep senzing
 sudo apt install <SENZING_PACKAGE>
 ```
 
-Ex. 
+Example:
 ```console
 sudo apt install senzingapi-runtime
 ```
@@ -76,7 +76,7 @@ sudo apt install <SENZING_PACKAGE>=<MAJOR>.<MINOR>.<PATCH>*
 
 NOTE: This will install the latest version of a particular `MAJOR`.`MINOR`.`PATCH` version.
 Apt will use the latest build version
-Ex. 
+Example: 
 If there are two senzingapi-runtime versions available:
 
 ```console
@@ -96,7 +96,7 @@ sudo apt install senzingapi-runtime=3.9.0*
 sudo apt install <SENZING_PACKAGE>=<MAJOR>.<MINOR>.<PATCH>-<BUILD_NUMBER>
 ```
 
-Ex.
+Example:
 ```console
 sudo apt install senzingapi-runtime=3.9.0-24068
 ```
@@ -107,13 +107,13 @@ sudo apt install senzingapi-runtime=3.9.0-24068
    ``` console
    touch /etc/apt/preferences.d/<SENZING_PACKAGE>
    ```
-   Ex.
+   Example:
    ``` console
    touch /etc/apt/preferences.d/senzingapi-runtime
    ```
 1. Update the file to indicate which versions should be pinned.
 
-   Ex. restrict the highest major version:
+   Example: restrict the highest major version:
 
    ```console
    Package: <SENZING_PACKAGE>
@@ -121,7 +121,7 @@ sudo apt install senzingapi-runtime=3.9.0-24068
    Pin-Priority: 999
    ```
 
-   Ex. restrict the highest major and minor version:
+   Example: restrict the highest major and minor version:
 
    ```console
    Package: <SENZING_PACKAGE>
@@ -129,7 +129,7 @@ sudo apt install senzingapi-runtime=3.9.0-24068
    Pin-Priority: 999
    ```
 
-   Ex. restrict `senzingapi-runtime` to major version 3.
+   Example: restrict `senzingapi-runtime` to major version 3.
    This will prevent apt from installing any major version greater than 3.
    ```console
    Package: senzingapi-runtime
@@ -145,9 +145,20 @@ See [Ubuntu documentation] or [Stack Exchange] for more details.
 sudo apt show <SENZING_PACKAGE>
 ```
 
-Ex. 
+Example: 
 ```console
 sudo apt show senzingapi-runtime
+```
+
+## Removing Senzing packages
+
+```console
+sudo apt remove <SENZING_PACKAGE>
+```
+
+Example:
+```console
+sudo apt remove senzingapi-runtime
 ```
 
 [Stack Exchange]: https://askubuntu.com/questions/547550/apt-mark-holding-a-package-to-a-major-version-not-a-specific-minor
