@@ -63,10 +63,10 @@ This is a checklist of what to set when creating a new GitHub Repository.
             1. Choose a role: `Write`
             1. Click `Add senzing-garage/senzing-devsecops to ...`
         1. Click `Add teams` button.
-            1. Type `senzing-engineering`
-            1. Choose `senzing-garage/senzing-engineering`
-            1. Choose a role: `Write`
-            1. Click `Add senzing-engineering to ...`
+            1. Type `senzing-project-managers`
+            1. Choose `senzing-garage/senzing-project-managers`
+            1. Choose a role: `Maintain`
+            1. Click `Add senzing-project-managers to ...`
         1. Click `Add teams` button.
             1. Type `senzing`
             1. Choose the team that will be used in `.github/CODEOWNERS`
@@ -78,7 +78,7 @@ This is a checklist of what to set when creating a new GitHub Repository.
 1. On repository home page, click `Settings` tab.
     1. Click `Code security and analysis` tab.
         1. In `Access to alerts`:
-            1. Search for `Senzing/senzing-engineering` and select.
+            1. Search for the team that will be used in `.github/CODEOWNERS` and select.
             1. Click `Save changes` button
 
 ### Repository About
