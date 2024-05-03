@@ -101,7 +101,7 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
 | G2_getRecord(dataSourceCode, recordID, responseBuf, bufSize, resizeFunc) | getRecord(dataSourceCode, recordId, flags) | string | |
 | G2_getRecord_V2(dataSourceCode, recordID, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
 | G2_getRedoRecord(responseBuf, bufSize, resizeFunc ) | getRedoRecord() | string | |
-| G2_getRepositoryLastModifiedTime(lastModifiedTime) | getRepositoryLastModifiedTime()  | int64 | |
+| G2_getRepositoryLastModifiedTime(lastModifiedTime) |  [not-implemented] | | |
 | G2_getVirtualEntityByRecordID(recordList, responseBuf, bufSize, resizeFunc) | getVirtualEntityByRecordId(recordList, flags) | string | |
 | G2_getVirtualEntityByRecordID_V2(recordList, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
 | G2_howEntityByEntityID(entityID, responseBuf, bufSize, resizeFunc) | howEntityByEntityId(entityId, flags) | string | SM-1, SM-3.3 |
