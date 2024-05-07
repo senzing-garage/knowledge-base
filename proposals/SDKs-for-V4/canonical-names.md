@@ -73,8 +73,8 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
 | G2_exportConfigAndConfigID(responseBuf, bufSize, resizeFunc, configID) | [not-implemented] | | |
 | G2_exportJSONEntityReport(flags, responseHandle) | exportJsonEntityReport(flags) | exportHandle | |
 | G2_fetchNext(responseHandle, responseBuf, bufSize) | fetchNext(exportHandle)  | string | |
-| G2_findInterestingEntitiesByEntityID(entityID, flags, responseBuf, bufSize, resizeFunc) | [not-implemented] | | |
-| G2_findInterestingEntitiesByRecordID(dataSourceCode, recordID, flags, responseBuf, bufSize, resizeFunc) | [not-implemented] | | |
+| G2_findInterestingEntitiesByEntityID(entityID, flags, responseBuf, bufSize, resizeFunc) | findInterestingEntitiesByEntityId(entityId, flags)  | string |  |
+| G2_findInterestingEntitiesByRecordID(dataSourceCode, recordID, flags, responseBuf, bufSize, resizeFunc) | findInterestingEntitiesByRecordId(dataSourceCode, recordId, flags)  | string |  |
 | G2_findNetworkByEntityID(entityList, maxDegree, buildOutDegree, maxEntities, responseBuf, bufSize, resizeFunc) | findNetworkByEntityId(entityList, maxDegrees, buildOutDegree, maxEntities, flags)  | string | SM-3.1 |
 | G2_findNetworkByEntityID_V2(entityList, maxDegree, buildOutDegree, maxEntities, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
 | G2_findNetworkByRecordID(recordList, maxDegree, buildOutDegree, maxEntities, responseBuf, bufSize, resizeFunc) | findNetworkByRecordId(recordList, maxDegrees, buildOutDegree, maxEntities, flags) | string | SM-3.1 |
