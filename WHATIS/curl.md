@@ -24,7 +24,7 @@
 
 ### Windows
 
-1. [Download](https://curl.se/windows/) to `%USERPROFILE%\Downloads`
+1. [Download] to `%USERPROFILE%\Downloads`
 1. Extract file
    1. If [7-Zip](./7-zip.md) is installed:
 
@@ -52,3 +52,5 @@
 ## Troubleshooting
 
 ## References
+
+[Download]: https://curl.se/windows/

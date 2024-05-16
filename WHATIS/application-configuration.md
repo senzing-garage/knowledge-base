@@ -2,4 +2,6 @@
 
 ## Sites
 
-1. [Viper](https://github.com/spf13/viper) - A Golang model of configuration principles
+1. [Viper] - A Golang model of configuration principles
+
+[Viper]: https://github.com/spf13/viper

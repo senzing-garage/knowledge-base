@@ -9,19 +9,19 @@
 > Containers are created from images that specify their precise contents.
 > Images are often created by combining and modifying standard
 > images downloaded from public repositories.
-> -- *[Wikipedia](https://en.wikipedia.org/wiki/Docker_(software))*
+> -- *[Wikipedia]*
 
 ## Sites
 
-1. [Official site](https://www.docker.com/)
-    1. [Documentation](https://docs.docker.com)
-    1. [What is a Container?](https://www.docker.com/resources/what-container)
-1. [github.com/docker](https://github.com/docker)
+1. [Official Docker site]
+    1. [Documentation]
+    1. [What is a Container?]
+1. [github.com/docker]
 
 ## Install
 
-Instructions for installing [Docker](https://www.docker.com/).
-For detailed installation, see [Docker docs](https://docs.docker.com/install/).
+Instructions for installing can be found at the [Official Docker site].
+For detailed installation, see [Docker docs].
 
 ### CentOS
 
@@ -64,7 +64,7 @@ There are a few methods to install `docker` on Ubuntu.
     sudo yum remove docker docker-common docker-selinux docker-engine
     ```
 
-1. [CentOS](https://docs.docker.com/install/linux/docker-ce/centos/)
+1. [CentOS]
 
     ```console
     sudo yum -y install yum-utils device-mapper-persistent-data lvm2
@@ -123,7 +123,7 @@ There a a few methods to install `docker` on Ubuntu.
 
 :warning: This may be an out-dated method.
 
-1. [Ubuntu](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
+1. [Ubuntu]
 
     ```console
     sudo apt-get update
@@ -165,7 +165,7 @@ There a a few methods to install `docker` on Ubuntu.
 
 ### macOS
 
-1. [Install Docker Desktop for Mac](https://docs.docker.com/docker-for-mac/install/)
+1. [Install Docker Desktop for Mac]
     1. Open Docker.dmg
     1. Drag Docker to Applications
 
@@ -187,7 +187,7 @@ There a a few methods to install `docker` on Ubuntu.
 ### Windows
 
 1. **Caveat:** Requires Windows Pro.
-1. [Install Docker Desktop for Windows](https://docs.docker.com/docker-for-windows/install/)
+1. [Install Docker Desktop for Windows]
     1. Run `Docker%20for%20%Windows%20Installer.exe`
 1. Proceed to [Test](#test)
 
@@ -203,3 +203,14 @@ There a a few methods to install `docker` on Ubuntu.
 ## Troubleshooting
 
 ## References
+
+[CentOS]: https://docs.docker.com/install/linux/docker-ce/centos/
+[Docker docs]: https://docs.docker.com/install/
+[Documentation]: https://docs.docker.com
+[github.com/docker]: https://github.com/docker
+[Install Docker Desktop for Mac]: https://docs.docker.com/docker-for-mac/install/
+[Install Docker Desktop for Windows]: https://docs.docker.com/docker-for-windows/install/
+[Official Docker site]: https://www.docker.com/
+[Ubuntu]: https://docs.docker.com/install/linux/docker-ce/ubuntu/
+[What is a Container?]: https://www.docker.com/resources/what-container
+[Wikipedia]: https://en.wikipedia.org/wiki/Docker_(software)

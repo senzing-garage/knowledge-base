@@ -15,7 +15,7 @@ and push them to a private Docker registry.
 ## Prerequisites
 
 1. If you need to create a private docker registry, see
-       [WHATIS - docker registry server](https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/docker-registry-server.md).
+       [WHATIS - docker registry server].
 
 ## Build docker images
 
@@ -92,3 +92,5 @@ Build any Docker images that aren't on a public Docker registry.
     done
 
     ```
+
+[WHATIS - docker registry server]: https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/docker-registry-server.md

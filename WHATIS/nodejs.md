@@ -2,7 +2,7 @@
 
 ## Install
 
-Instructions for installing [NodeJS](https://nodejs.org).
+Instructions for installing [NodeJS].
 
 ### CentOS
 
@@ -18,4 +18,7 @@ Instructions for installing [NodeJS](https://nodejs.org).
 
 ## References
 
-1. [Install via the cmdline video](https://www.youtube.com/watch?v=C9gehlXhS6U)
+1. [Install via the cmdline video]
+
+[Install via the cmdline video]: https://www.youtube.com/watch?v=C9gehlXhS6U
+[NodeJS]: https://nodejs.org

@@ -5,9 +5,9 @@
 Manual instructions for installing `libmysqlclient21` which is the database driver for MySQL.
 
 This is done automatically by
-[docker-init-container](https://github.com/senzing-garage/docker-init-container).
+[docker-init-container].
 In particular the `database_initialization_mysql(...)` function of
-[init-container.py](https://github.com/senzing-garage/docker-init-container/blob/main/init-container.py)
+[init-container.py]
 
 ### CentOS
 
@@ -63,7 +63,7 @@ In particular the `database_initialization_mysql(...)` function of
 1. ${TMP_DIR} can now be safely removed.
 
 1. References:
-    1. [Libmysqlclient.so.21 Download for Linux](https://pkgs.org/download/libmysqlclient.so.21)
+    1. [Libmysqlclient.so.21 Download for Linux]
 
 ### Ubuntu
 
@@ -114,3 +114,7 @@ In particular the `database_initialization_mysql(...)` function of
 ## Troubleshooting
 
 ## References
+
+[docker-init-container]: https://github.com/senzing-garage/docker-init-container
+[init-container.py]: https://github.com/senzing-garage/docker-init-container/blob/main/init-container.py
+[Libmysqlclient.so.21 Download for Linux]: https://pkgs.org/download/libmysqlclient.so.21

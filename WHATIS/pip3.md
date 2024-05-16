@@ -2,7 +2,7 @@
 
 ## Install
 
-Instructions for installing [Packer](http://packer.io/).
+Instructions for installing [Packer].
 
 ### CentOS
 
@@ -37,3 +37,5 @@ Instructions for installing [Packer](http://packer.io/).
 ## Troubleshooting
 
 ## References
+
+[Packer]: http://packer.io/

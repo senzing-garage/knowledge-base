@@ -2,16 +2,16 @@
 
 ## Install
 
-Instructions for installing [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/).
-For detailed installation, see [Kubernetes documentation](https://kubernetes.io/docs/tasks/tools/install-kubectl/).
+Instructions for installing [kubectl].
+For detailed installation, see [Kubernetes documentation].
 
-- [Latest version](https://storage.googleapis.com/kubernetes-release/release/stable.txt)
+- [Latest version]
 
 ### CentOS
 
 ### Ubuntu
 
-1. See [Install and Set Up kubectl on Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/)
+1. See [Install and Set Up kubectl on Linux]
 
 ### macOS
 
@@ -20,9 +20,9 @@ For detailed installation, see [Kubernetes documentation](https://kubernetes.io/
 ### Azure
 
 1. If
-   [Azure Command Line Interface (CLI)](https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/azure-cli.md)
+   [Azure Command Line Interface (CLI)]
    is installed, `kubectl` can be installed using
-   [az aks install-cli](https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest#az_aks_install_cli)
+   [az aks install-cli]
    Example:
 
     ```console
@@ -35,5 +35,14 @@ For detailed installation, see [Kubernetes documentation](https://kubernetes.io/
 
 ## References
 
-1. [Install and Set Up kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
-1. [Install the Kubernetes CLI](https://docs.docker.com/ee/ucp/user-access/kubectl/)
+1. [Install and Set Up kubectl]
+1. [Install the Kubernetes CLI]
+
+[az aks install-cli]: https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest#az_aks_install_cli
+[Azure Command Line Interface (CLI)]: https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/azure-cli.md
+[Install the Kubernetes CLI]: https://docs.docker.com/ee/ucp/user-access/kubectl/
+[Install and Set Up kubectl]: https://kubernetes.io/docs/tasks/tools/install-kubectl/
+[Install and Set Up kubectl on Linux]: https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/
+[kubectl]: https://kubernetes.io/docs/reference/kubectl/overview/
+[Kubernetes documentation]: https://kubernetes.io/docs/tasks/tools/install-kubectl/
+[Latest version]: https://storage.googleapis.com/kubernetes-release/release/stable.txt

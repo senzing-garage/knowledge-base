@@ -2,24 +2,24 @@
 
 ## Install
 
-Instructions for installing [Git](https://git-scm.com/).
-Git [downloads](https://git-scm.com/downloads).
+Instructions for installing [Git].
+Git [downloads].
 
 ### CentOS
 
-1. [Download](https://git-scm.com/download/linux)
+1. [Download Linux]
 
 ### Ubuntu
 
-1. [Download](https://git-scm.com/download/linux)
+1. [Download Linux]
 
 ### macOS
 
-1. [Download](https://git-scm.com/download/mac)
+1. [Download Mac](https://git-scm.com/download/mac)
 
 ### Windows
 
-1. [Download](https://git-scm.com/download/win)
+1. [Download Windows](https://git-scm.com/download/win)
     1. Run `Git-M.m.P-64-bit.exe`
 
 ## Test
@@ -33,3 +33,9 @@ Git [downloads](https://git-scm.com/downloads).
 ## Troubleshooting
 
 ## References
+
+[downloads]: https://git-scm.com/downloads
+[Download Linux]: https://git-scm.com/download/linux
+[Download Mac]: https://git-scm.com/download/mac
+[Download Windows]: https://git-scm.com/download/win
+[Git]: https://git-scm.com/

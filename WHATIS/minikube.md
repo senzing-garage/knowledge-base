@@ -2,17 +2,17 @@
 
 ## Install
 
-Instructions for installing [minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/).
+Instructions for installing [minikube].
 
-1. [github.com/kubernetes/minikube](https://github.com/kubernetes/minikube)
-    1. [Releases](https://github.com/kubernetes/minikube/releases)
+1. [github.com/kubernetes/minikube]
+    1. [Releases]
 
 ### CentOS
 
 ### Ubuntu
 
-1. [minikube start](https://minikube.sigs.k8s.io/docs/start/) has installation instructions for multiple platforms.
-1. [Ubuntu](https://kubernetes.io/docs/tasks/tools/install-minikube/#linux)
+1. [minikube start] has installation instructions for multiple platforms.
+1. [Ubuntu]
 
     ```console
     curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
@@ -26,15 +26,15 @@ Instructions for installing [minikube](https://kubernetes.io/docs/tasks/tools/in
     sudo install minikube-linux-amd64 /usr/local/bin/minikube
     ```
 
-1. For more information, visit [minikube start](https://minikube.sigs.k8s.io/docs/start/)
+1. For more information, visit [minikube start]
 
 ### macOS
 
-1. Visit [minikube start](https://minikube.sigs.k8s.io/docs/start/)
+1. Visit [minikube start]
 
 ### Windows
 
-1. Visit [minikube start](https://minikube.sigs.k8s.io/docs/start/)
+1. Visit [minikube start]
 
 ## Test
 
@@ -55,3 +55,9 @@ Instructions for installing [minikube](https://kubernetes.io/docs/tasks/tools/in
 1. Drivers
     1. [Driver plugin installation](https://github.com/kubernetes/minikube/blob/master/docs/drivers.md)
     1. [Switching from Minikube with VirtualBox to KVM](https://medium.com/@nieldw/switching-from-minikube-with-virtualbox-to-kvm-2f742db704c9)
+
+[github.com/kubernetes/minikube]: https://github.com/kubernetes/minikube
+[minikube]: https://kubernetes.io/docs/tasks/tools/install-minikube/
+[minikube start]: https://minikube.sigs.k8s.io/docs/start/
+[Releases]: https://github.com/kubernetes/minikube/releases
+[Ubuntu]: https://kubernetes.io/docs/tasks/tools/install-minikube/#linux

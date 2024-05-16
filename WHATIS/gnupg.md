@@ -10,15 +10,15 @@
    ```console
    sudo yum install gnupg
    ```
-   - [Configure TTY](https://github.com/senzing-garage/knowledge-base/blob/56-skern/WHATIS/gnupg.md#configure-tty)
+   - [Configure TTY]
 
 ### macOS
 
-1. [Install via brew](https://formulae.brew.sh/formula/gnupg)
+1. [Install via brew]
    ```console
    brew install gnupg
    ```
-   - [Configure TTY](https://github.com/senzing-garage/knowledge-base/blob/56-skern/WHATIS/gnupg.md#configure-tty)
+   - [Configure TTY]
 
 ### Ubuntu
 
@@ -26,15 +26,15 @@
    ```console
    sudo apt-get install gnupg
    ```
-   - [Configure TTY](https://github.com/senzing-garage/knowledge-base/blob/56-skern/WHATIS/gnupg.md#configure-tty)
+   - [Configure TTY]
    
 ### Windows
 
-1. Download and install the windows binary from [gnupg.org](https://gnupg.org/download/)
+1. Download and install the windows binary from [gnupg.org]
 
 ### Configure TTY
 
-[It is important that this environment variable always reflects the output of the tty command. For W32 systems this option is not required.](https://www.gnupg.org/documentation/manuals/gnupg/Invoking-GPG_002dAGENT.html)
+[It is important that this environment variable always reflects the output of the tty command. For W32 systems this option is not required.]
 
 1. Set the following environment variable in whichever initialization file is used for shell invocations
    ```
@@ -52,3 +52,8 @@
  ## Troubleshooting
 
 ## References
+
+[Configure TTY]: https://github.com/senzing-garage/knowledge-base/blob/56-skern/WHATIS/gnupg.md#configure-tty
+[gnupg.org]: https://gnupg.org/download/
+[It is important that this environment variable always reflects the output of the tty command. For W32 systems this option is not required.]: https://www.gnupg.org/documentation/manuals/gnupg/Invoking-GPG_002dAGENT.html
+[Install via brew]: https://formulae.brew.sh/formula/gnupg

@@ -8,8 +8,10 @@
 > * Infuse – operationalize AI with trust & transparency
 >
 > Customize to your unique data landscape with an open and endlessly extensible architecture, on any cloud.
-> -- *[IBM site](https://www.ibm.com/analytics/cloud-pak-for-data)*
+> -- *[IBM site]*
 
 ## Sites
 
-1. [Official site](https://www.ibm.com/analytics/cloud-pak-for-data)
+1. [IBM site]
+
+[IBM site]: https://www.ibm.com/analytics/cloud-pak-for-data

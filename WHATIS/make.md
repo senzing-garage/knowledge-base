@@ -2,7 +2,7 @@
 
 ## Install
 
-Instructions for installing [make](https://www.gnu.org/software/make).
+Instructions for installing [make].
 
 ### CentOS
 
@@ -33,7 +33,7 @@ Instructions for installing [make](https://www.gnu.org/software/make).
         ```
 
     1. Add `C:\Program Files (x86)\GnuWin32\bin` to `Path` system variable.
-       See [Add to the PATH on Windows 10 and Windows 11](https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/)
+       See [Add to the PATH on Windows 10 and Windows 11]
 
 ## Test
 
@@ -46,3 +46,6 @@ Instructions for installing [make](https://www.gnu.org/software/make).
 ## Troubleshooting
 
 ## References
+
+[Add to the PATH on Windows 10 and Windows 11]: https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/
+[make]: https://www.gnu.org/software/make

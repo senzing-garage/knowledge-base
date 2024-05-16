@@ -4,7 +4,7 @@ Also known as "npm".
 
 ## Install
 
-Instructions for installing [npm](https://www.npmjs.com).
+Instructions for installing [npm].
 
 ### CentOS
 
@@ -19,3 +19,5 @@ Instructions for installing [npm](https://www.npmjs.com).
 ## Troubleshooting
 
 ## References
+
+[npm]: https://www.npmjs.com

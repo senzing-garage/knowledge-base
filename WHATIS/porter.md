@@ -2,9 +2,12 @@
 
 > Package your application artifact, client tools, configuration and deployment logic together
 > as a versioned bundle that you can distribute, and then install with a single command.
-> -- *[Porter site](https://porter.sh/)*
+> -- *[Porter site]*
 
 ## Sites
 
-1. [Website](https://porter.sh/)
-    1. [Install](https://porter.sh/install/)
+1. [Porter site]
+    1. [Install]
+
+[Install]: https://porter.sh/install/
+[Porter site]: https://porter.sh/

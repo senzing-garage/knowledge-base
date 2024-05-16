@@ -2,23 +2,23 @@
 
 > Compose is a tool for defining and running multi-container
 > [Docker](docker.md) applications.
-> -- *[Docker Compose](https://docs.docker.com/compose/)*
+> -- *[Docker Compose]*
 
 ## Sites
 
-1. [Docker Compose](https://docs.docker.com/compose/)
-    1. [Overview](https://docs.docker.com/compose/overview/)
-1. [github.com/docker/compose](https://github.com/docker/compose)
+1. [Docker Compose]
+    1. [Overview]
+1. [github.com/docker/compose]
 
 ## Install
 
 ### CentOS
 
-1. [Install Docker Compose](https://docs.docker.com/compose/install/)
+1. [Install Docker Compose]
 
 ### Ubuntu
 
-1. [Install Docker Compose](https://docs.docker.com/compose/install/)
+1. [Install Docker Compose]
 1. Using `pip`.  Example:
 
     ```console
@@ -27,11 +27,11 @@
 
 ### macOS
 
-1. [Install Docker Compose](https://docs.docker.com/compose/install/)
+1. [Install Docker Compose]
 
 ### Windows
 
-1. [Install Docker Compose](https://docs.docker.com/compose/install/)
+1. [Install Docker Compose]
 
 ## Test
 
@@ -44,3 +44,8 @@
 ## Troubleshooting
 
 ## References
+
+[Docker Compose]: https://docs.docker.com/compose/
+[github.com/docker/compose]: https://github.com/docker/compose
+[Install Docker Compose]: https://docs.docker.com/compose/install/
+[Overview]: https://docs.docker.com/compose/overview/

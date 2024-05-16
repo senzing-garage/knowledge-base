@@ -2,11 +2,11 @@
 
 ## Install
 
-1. [Download](https://www.virtualbox.org/)
+1. [Download]
 
 ### CentOS
 
-1. [Download VirtualBox for Linux Hosts](https://www.virtualbox.org/wiki/Linux_Downloads)
+1. [Download VirtualBox for Linux Hosts]
 1. VirtualBox Guest Additions.
 
     ```console
@@ -15,7 +15,7 @@
 
 ### Ubuntu
 
-1. [Download VirtualBox for Linux Hosts](https://www.virtualbox.org/wiki/Linux_Downloads)
+1. [Download VirtualBox for Linux Hosts]
 1. Example:  virtualbox 6.0 on Ubuntu 18.04
 
     ```console
@@ -54,6 +54,11 @@
 
 ## References
 
-1. [How to Install VirtualBox 6.0 on Ubuntu 18.04 LTS / 18.10 / CentOS 7](https://www.linuxtechi.com/install-virtualbox6-ubuntu-18-04-centos-7/)
-1. [How to Install VirtualBox 5.2 on Ubuntu 16.04 LTS](https://tecadmin.net/install-oracle-virtualbox-on-ubuntu/)
-1. [Download VirtualBox for Linux Hosts](https://www.virtualbox.org/wiki/Linux_Downloads)
+1. [How to Install VirtualBox 6.0 on Ubuntu 18.04 LTS / 18.10 / CentOS 7]
+1. [How to Install VirtualBox 5.2 on Ubuntu 16.04 LTS]
+1. [Download VirtualBox for Linux Hosts]
+
+[Download]: https://www.virtualbox.org/
+[Download VirtualBox for Linux Hosts]: https://www.virtualbox.org/wiki/Linux_Downloads
+[How to Install VirtualBox 5.2 on Ubuntu 16.04 LTS]:https://tecadmin.net/install-oracle-virtualbox-on-ubuntu/
+[How to Install VirtualBox 6.0 on Ubuntu 18.04 LTS / 18.10 / CentOS 7]: https://www.linuxtechi.com/install-virtualbox6-ubuntu-18-04-centos-7/
