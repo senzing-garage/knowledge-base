@@ -2,7 +2,7 @@
 
 ## Install
 
-Instructions for installing [jq](https://stedolan.github.io/jq/).
+Instructions for installing [jq].
 
 ### CentOS
 
@@ -30,3 +30,5 @@ Instructions for installing [jq](https://stedolan.github.io/jq/).
 ## Troubleshooting
 
 ## References
+
+[jq]: https://stedolan.github.io/jq/

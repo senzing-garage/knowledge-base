@@ -2,7 +2,7 @@
 
 > Blue Ocean puts Continuous Delivery in reach of any team
 > without sacrificing the power and sophistication of Jenkins.
-> -- *[Jenkins Blue Ocean site](https://jenkins.io/projects/blueocean/)*
+> -- *[Jenkins Blue Ocean site]*
 
 ## Examples
 
@@ -22,11 +22,16 @@
       jenkinsci/blueocean
     ```
 
-1. Can be viewed at [localhost:9176](http://localhost:9176), since 9176 was the published port.
+1. Can be viewed at [localhost:9176], since 9176 was the published port.
 
 ## Sites
 
-1. [Website](https://jenkins.io/projects/blueocean/)
-1. [Documentation](https://jenkins.io/doc/book/blueocean/)
-    1. [Getting Started](https://jenkins.io/doc/book/blueocean/getting-started/)
+1. [Jenkins Blue Ocean site]
+1. [Documentation]
+    1. [Getting Started]
 1. [Ports used in Demonstrations](../lists/ports-used-in-demonstrations.md#9176)
+
+[Documentation]: https://jenkins.io/doc/book/blueocean/
+[Getting Started]: https://jenkins.io/doc/book/blueocean/getting-started/
+[Jenkins Blue Ocean site]: https://jenkins.io/projects/blueocean/
+[localhost:9176]: http://localhost:9176

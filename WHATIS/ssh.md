@@ -9,4 +9,6 @@
 > versions, referred to as SSH-1 and SSH-2. The standard TCP port for SSH is 22. SSH 
 >is generally used to access Unix-like operating systems, but it can also be used 
 > on Microsoft Windows. Windows 10 uses OpenSSH as its default SSH client and SSH server.[3]
-> -- *[Wikipedia](https://en.wikipedia.org/wiki/Secure_Shell)
+> -- *[Wikipedia]
+
+[Wikipedia]: https://en.wikipedia.org/wiki/Secure_Shell

@@ -6,7 +6,12 @@
 
 ## Sites
 
-1. [Official site](https://kubernetes.io)
-    1. [What is Kubernetes?](https://kubernetes.io/docs/concepts/overview/what-is-kubernetes)
-    1. [Documentation](https://kubernetes.io/docs/home)
-1. [github.com/kubernetes](https://github.com/kubernetes)
+1. [Kubernetes site]
+    1. [What is Kubernetes?]
+    1. [Documentation]
+1. [github.com/kubernetes]
+
+[Documentation]: https://kubernetes.io/docs/home
+[github.com/kubernetes]: https://github.com/kubernetes
+[Kubernetes site]: https://kubernetes.io/
+[What is Kubernetes?]: https://kubernetes.io/docs/concepts/overview/what-is-kubernetes

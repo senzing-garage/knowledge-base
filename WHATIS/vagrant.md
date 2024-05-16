@@ -2,7 +2,7 @@
 
 ## Install
 
-1. [Installing Vagrant](https://www.vagrantup.com/docs/installation/)
+1. [Installing Vagrant]
 
 ### CentOS
 
@@ -23,3 +23,5 @@
 ## Troubleshooting
 
 ## References
+
+[Installing Vagrant]: https://www.vagrantup.com/docs/installation/

@@ -1,21 +1,21 @@
 # What is Rancher
 
 > Rancher is open-source software for delivering [Kubernetes](kubernetes.md)-as-a-Service.
-> -- *[Rancher site](https://rancher.com/)*
+> -- *[Rancher site]*
 
 ## Sites
 
-1. [Official site](https://rancher.com)
-    1. [Overview](https://rancher.com/what-is-rancher/overview/)
-    1. [Documentation](https://rancher.com/docs/)
-1. [github.com/rancher](https://github.com/rancher)
+1. [Rancher site]
+    1. [Overview]
+    1. [Documentation]
+1. [github.com/rancher]
 
 ## Install
 
-Instructions for installing [Rancher](https://rancher.com/).
+Instructions for installing: [Rancher site].
 
-1. Option #1 [Full installation](https://rancher.com/docs/rancher/v2.x/en/installation/)
-1. Option #2 [Manual Quick Start](https://rancher.com/docs/rancher/v2.x/en/quick-start-guide/deployment/quickstart-manual-setup/)
+1. Option #1 [Full installation]
+1. Option #2 [Manual Quick Start]
 1. Simple example for Quick Start:
 
     ```console
@@ -39,3 +39,10 @@ Instructions for installing [Rancher](https://rancher.com/).
 ## Troubleshooting
 
 ## References
+
+[Documentation]: https://rancher.com/docs/
+[Full installation]: https://rancher.com/docs/rancher/v2.x/en/installation/
+[github.com/rancher]: https://github.com/rancher
+[Manual Quick Start]: https://rancher.com/docs/rancher/v2.x/en/quick-start-guide/deployment/quickstart-manual-setup/
+[Overview]: https://rancher.com/what-is-rancher/overview/
+[Rancher site]: https://rancher.com/

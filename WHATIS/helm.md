@@ -4,19 +4,19 @@
 > Helm helps you manage Kubernetes applications —
 > Helm Charts help you define, install, and upgrade
 > even the most complex Kubernetes application.
-> -- *[Helm site](https://helm.sh)*
+> -- *[Helm]*
 
 ## Sites
 
-1. [Official site](https://helm.sh)
-    1. [Documentation](https://helm.sh/docs)
-1. [github.com/helm](https://github.com/helm)
+1. [Helm]
+    1. [Documentation]
+1. [github.com/helm]
 
 ## Install
 
-Instructions for installing [Helm](https://helm.sh).
+Instructions for installing [Helm].
 
-1. [Installing Helm](https://helm.sh/docs/intro/install/)
+1. [Installing Helm]
 
 ### CentOS
 
@@ -48,5 +48,12 @@ Instructions for installing [Helm](https://helm.sh).
 
 ## References
 
-1. [How to Create Your First Helm Chart](https://docs.bitnami.com/kubernetes/how-to/create-your-first-helm-chart/)
-1. [Helm installation instructions](https://helm.sh/docs/intro/install/)
+1. [How to Create Your First Helm Chart]
+1. [Helm installation instructions]
+
+[Documentation]: https://helm.sh/docs
+[github.com/helm]: https://github.com/helm
+[Helm]: https://helm.sh
+[Helm installation instructions]: https://helm.sh/docs/intro/install/
+[How to Create Your First Helm Chart]: https://docs.bitnami.com/kubernetes/how-to/create-your-first-helm-chart/
+[Installing Helm]: https://helm.sh/docs/intro/install/

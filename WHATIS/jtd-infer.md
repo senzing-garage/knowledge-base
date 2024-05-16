@@ -5,8 +5,11 @@
 
 ## Install
 
-1. Visit [Installation](https://github.com/jsontypedef/json-typedef-infer#installation)
+1. Visit [Installation]
 
 ## References
 
-- [GitHub](https://github.com/jsontypedef/json-typedef-infer)
+- [GitHub]
+
+[GitHub]: https://github.com/jsontypedef/json-typedef-infer
+[Installation]: https://github.com/jsontypedef/json-typedef-infer#installation

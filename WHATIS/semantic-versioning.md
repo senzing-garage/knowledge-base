@@ -5,9 +5,12 @@
 > -   MAJOR version when you make incompatible API changes,
 > -   MINOR version when you add functionality in a backwards compatible manner, and
 > -   PATCH version when you make backwards compatible bug fixes.
-> -- *[SemVer site](https://semver.org/)*
+> -- *[SemVer site]*
 
 ## Sites
 
-1. [Official site](https://semver.org/)
-1. [NPM SemVer calculator](https://semver.npmjs.com/)
+1. [SemVer site]
+1. [NPM SemVer calculator]
+
+[NPM SemVer calculator]: https://semver.npmjs.com/
+[SemVer site]: https://semver.org/
