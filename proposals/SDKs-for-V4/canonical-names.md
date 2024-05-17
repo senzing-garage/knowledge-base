@@ -32,7 +32,7 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
 | G2ConfigMgr_clearLastException() | [not-public] | | |
 | G2ConfigMgr_destroy() | | - | |
 | G2ConfigMgr_getConfig(configID, responseBuf, bufSize, resizeFunc) | getConfig(configId) | string | |
-| G2ConfigMgr_getConfigList(responseBuf, bufSize, resizeFunc) | getConfigList() | string | |
+| G2ConfigMgr_getConfigList(responseBuf, bufSize, resizeFunc) | getConfigs() | string | |
 | G2ConfigMgr_getDefaultConfigID(configID) | getDefaultConfigId() | int64 | |
 | G2ConfigMgr_getLastException(buffer, bufSize) | [not-public] | | |
 | G2ConfigMgr_getLastExceptionCode() | [not-public] | | |
@@ -75,9 +75,9 @@ list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
 | G2_fetchNext(responseHandle, responseBuf, bufSize) | fetchNext(exportHandle)  | string | |
 | G2_findInterestingEntitiesByEntityID(entityID, flags, responseBuf, bufSize, resizeFunc) | findInterestingEntitiesByEntityId(entityId, flags)  | string |  |
 | G2_findInterestingEntitiesByRecordID(dataSourceCode, recordID, flags, responseBuf, bufSize, resizeFunc) | findInterestingEntitiesByRecordId(dataSourceCode, recordId, flags)  | string |  |
-| G2_findNetworkByEntityID(entityList, maxDegree, buildOutDegree, maxEntities, responseBuf, bufSize, resizeFunc) | findNetworkByEntityId(entityList, maxDegrees, buildOutDegree, maxEntities, flags)  | string | SM-3.1 |
+| G2_findNetworkByEntityID(entityList, maxDegree, buildOutDegree, maxEntities, responseBuf, bufSize, resizeFunc) | findNetworkByEntityId(entityIds, maxDegrees, buildOutDegree, buildOutMaxEntities, flags)  | string | SM-3.1 |
 | G2_findNetworkByEntityID_V2(entityList, maxDegree, buildOutDegree, maxEntities, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
-| G2_findNetworkByRecordID(recordList, maxDegree, buildOutDegree, maxEntities, responseBuf, bufSize, resizeFunc) | findNetworkByRecordId(recordList, maxDegrees, buildOutDegree, maxEntities, flags) | string | SM-3.1 |
+| G2_findNetworkByRecordID(recordList, maxDegree, buildOutDegree, maxEntities, responseBuf, bufSize, resizeFunc) | findNetworkByRecordId(recordKeys, maxDegrees, buildOutDegree, buildOutMaxEntities, flags) | string | SM-3.1 |
 | G2_findNetworkByRecordID_V2(recordList, maxDegree, buildOutDegree, maxEntities, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
 | G2_findPathByEntityID(entityID1, entityID2, maxDegree, responseBuf, bufSize, resizeFunc) | findPathByEntityId(startEntityId, endEntityId, maxDegrees, exclusions, requiredDataSources, flags) | string | SM-3.1 |
 | G2_findPathByEntityID_V2(entityID1, entityID2, maxDegree, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
