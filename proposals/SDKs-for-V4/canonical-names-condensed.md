@@ -68,7 +68,7 @@ To see the expanded version, visit
 | G2_getEntityByRecordID(dataSourceCode, recordID, responseBuf, bufSize, resizeFunc) | getEntityByRecordId(dataSourceCode, recordId, flags) | string | |
 | G2_getRecord(dataSourceCode, recordID, responseBuf, bufSize, resizeFunc) | getRecord(dataSourceCode, recordId, flags) | string | |
 | G2_getRedoRecord(responseBuf, bufSize, resizeFunc ) | getRedoRecord() | string | |
-| G2_getVirtualEntityByRecordID(recordList, responseBuf, bufSize, resizeFunc) | getVirtualEntityByRecordId(recordList, flags) | string | |
+| G2_getVirtualEntityByRecordID(recordList, responseBuf, bufSize, resizeFunc) | getVirtualEntityByRecordId(recordKeys, flags) | string | |
 | G2_howEntityByEntityID(entityID, responseBuf, bufSize, resizeFunc) | howEntityByEntityId(entityId, flags) | string | SM-1, SM-3.3 |
 | G2_init(moduleName, iniParams, verboseLogging) | initialize(instanceName, settings, configId, verboseLogging) | - | `configId` can be `nil`, `None`, `null`. Consider single object |
 | G2_primeEngine() | | - | |
