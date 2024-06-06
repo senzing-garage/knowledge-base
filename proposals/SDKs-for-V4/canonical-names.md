@@ -5,6 +5,9 @@ The
 [canonical names condensed](canonical-names-condensed.md)
 list factors out `not-public`, `not-implemented`,  and `collapsed` entries.
 
+The following list should reflect modifications documented in
+[Senzing 4.0 Breaking Changes](https://senzing.atlassian.net/wiki/spaces/~794719871/pages/2754641921/Senzing+4.0+Breaking+Changes).
+
 ## Mapping
 
 ### SzConfig
