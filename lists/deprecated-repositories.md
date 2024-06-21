@@ -2,6 +2,7 @@
 
 | Deprecated | Hidden     | Repository                                   |
 |------------|------------|----------------------------------------------|
+| 2024-06-21 |            | docker-terraform-aws                         |
 | 2024-04-02 |            | packer-debian-postgres                       |
 | 2024-03-20 |            | mapper-leie                                  |
 | 2024-02-28 |            | risk-score-calculator                        |
@@ -12,12 +13,12 @@
 | 2023-11-15 |            | docker-jupyter                               |
 | 2023-10-30 |            | senzing-sdk-api-specification                |
 | 2023-08-09 |            | mapper-openc                                 |
-| 2023-06-19 |            | ready-for-senzing                            |
-| 2023-06-19 |            | packer-senzing-demo-ubuntu-18.04             |
-| 2023-06-12 |            | docker-poc-notebook                          |
-| 2023-06-02 |            | view-xterm                                   |
-| 2023-06-02 |            | senzing-up                                   |
-| 2023-06-02 |            | senzing-environment                          |
+| 2023-06-19 | 2024-06-21 | ready-for-senzing                            |
+| 2023-06-19 | 2024-06-21 | packer-senzing-demo-ubuntu-18.04             |
+| 2023-06-12 | 2024-06-21 | docker-poc-notebook                          |
+| 2023-06-02 | 2024-06-21 | view-xterm                                   |
+| 2023-06-02 | 2024-06-21 | senzing-up                                   |
+| 2023-06-02 | 2024-06-21 | senzing-environment                          |
 |            | 2023-09-07 | mapper-sayari - Hidden at Will's request     |
 | 2023-01-30 | 2024-02-12 | docker-yumdownloader                         |
 | 2022-11-02 | 2024-02-12 | g2service                                    |
