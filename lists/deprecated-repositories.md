@@ -2,6 +2,7 @@
 
 | Deprecated | Hidden     | Repository                                   |
 |------------|------------|----------------------------------------------|
+| 2024-07-02 |            | aws-cloudformation-ecs                       |
 | 2024-07-02 |            | azure-template-aks-poc-simple                |
 | 2024-06-21 |            | docker-terraform-aws                         |
 | 2024-04-02 |            | packer-debian-postgres                       |
