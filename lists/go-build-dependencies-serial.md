@@ -44,12 +44,17 @@
 1. Requires: go-rest-api-service
     1. [ ] [demo-entity-search](https://github.com/senzing-garage/demo-entity-search)
     1. [ ] [serve-http](https://github.com/senzing-garage/serve-http)
+1. Requires: demo-entity-search
+    1. [ ] [demo-quickstart](https://github.com/senzing-garage/demo-quickstart)
 1. Requires: go-databasing
     1. [ ] [init-database](https://github.com/senzing-garage/init-database)
 1. Requires: init-database
 1. Requires: observe
 1. Requires: serve-grpc
 1. Requires: serve-http
+1. Requires: demo-quickstart
     1. [ ] [senzing-tools](https://github.com/senzing-garage/senzing-tools)
 
 ## Not included
+
+1 [ ] [senzing-with-chatgpt-notebook](https://github.com/senzing-garage/senzing-with-chatgpt-notebook)
