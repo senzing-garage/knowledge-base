@@ -6,6 +6,17 @@ Refer to the [Documentation] for more details.
 
 ## Install
 
+See the official [Installing Sphinx] page.
+
+### macOS
+
+1. A tip from [StackOverflow]:
+
+    ```console
+    brew install sphinx-doc
+    brew link sphinx-doc --force
+    ```
+
 ### Install via pip
 
 1. ```console
@@ -37,3 +48,5 @@ Refer to the [Documentation] for more details.
 
 [Documentation]: https://www.sphinx-doc.org
 [Installation Documentation]: https://www.sphinx-doc.org/en/master/usage/installation.html
+[Installing Sphinx]: https://www.sphinx-doc.org/en/master/usage/installation.html
+[StackOverflow]: https://stackoverflow.com/questions/36137496/os-x-install-of-sphinx-the-sphinx-build-and-sphinx-quickstart-not-found
