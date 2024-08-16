@@ -7,6 +7,15 @@ The following shows the contents of the
 `senzingapi-tools`
 packages.
 
+## Dependency tree
+
+```console
+└── senzingapi-runtime
+    └── senzingapi-tools
+        └── senzingapi-setup
+            └── senzingapi-poc
+```
+
 ## Directory structures
 
 ### senzingapi-poc
