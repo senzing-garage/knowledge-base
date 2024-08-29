@@ -3,7 +3,7 @@
 ## Synopsis
 
 Simple steps to demonstrate the
-[truth set](https://github.com/senzing-garage/truth-sets)
+[truth set]
 data using the
 [Senzing entity search webapp](https://github.com/senzing-garage/entity-search-web-app).
 
@@ -23,3 +23,5 @@ data using the
 1. Go to home page by clicking on upper-left "3-dots" and selecting "Home"
 1. In **Name** field, type "Robert Smith"
 1. Click "Search" button.
+
+[truth set]: https://github.com/senzing-garage/truth-sets
