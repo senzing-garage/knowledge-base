@@ -4,9 +4,15 @@ This is a checklist of what to set when creating a new GitHub Repository.
 
 ## Owner actions
 
-1. Visit [github.com/Senzing](https://github.com/Senzing)
-1. Log in as an administrator
-1. On [github.com/Senzing](https://github.com/Senzing), click the `New` button
+1. Identify the GitHub Organization the repository will belong to.     
+   - One of < `Senzing` | `senzing-factory`| `senzing-garage` >.
+   - Will be henceforth referred to as `<ORG>` and should be substituted with a value from above.
+   - ***NOTE***: There are slight differences between organization selections in this document.       
+     Where applicable options will be listed for each organization. Please be sure to select the 
+     options for the respective organization. 
+1. Visit `github.com/<ORG>`
+1. Log in as an administrator.
+1. On `github.com/<ORG>`, click the `New` button under the `Repositories` header.
     1. Enter `Respository Name`
         1. Use only lower-case letters, numbers, and hyphens.
         1. Avoid use of underscore.
@@ -16,10 +22,10 @@ This is a checklist of what to set when creating a new GitHub Repository.
             - `go-` for (non-command) go-based repositories
                 - `go-...ing` - for cross-cutting concerns
             - `mapper-` for mapper functions
-    1. Choose :radio_button: `Public`
-    1. Check :ballot_box_with_check: `Initialize this repository with a README`
+    1. Choose :radio_button: `Public` unless otherwise advised.
+    1. Check :ballot_box_with_check: `Initialize this repository with: Add a README file`
     1. If appropriate, add `.gitignore`
-    1. For `Add a license`, choose `Apache License 2.0`
+    1. For `Choose a license`, choose `Apache License 2.0`
     1. Click `Create repository` button.
 1. On repository home page, in **Releases** section:
     1. Click `Create a new release` link.
@@ -29,10 +35,12 @@ This is a checklist of what to set when creating a new GitHub Repository.
 1. On repository home page, click `Settings` tab.
     1. Click `Collaborators & teams` tab.
         1. Click `Add teams` button.
-            1. Type `admin`
-            1. Choose `senzing-garage/senzing-garage-admin`
+            1. Type one of the following for the respective organization into the test box and click to select:
+               1. Senzing: `Senzing/build`
+               1. senzing-factory: `senzing-factory/senzing-factory-admin`
+               1. senzing-garage: `senzing-garage/senzing-garage-admin`
             1. Choose a role: `Admin`
-            1. Click `Add Senzing/build to ...`
+            1. Click `Add <ORG>/<Team selection from above>`
 
 ## Admin actions
 
@@ -40,6 +48,7 @@ This is a checklist of what to set when creating a new GitHub Repository.
 
 1. On repository home page, click `Settings` tab.
     1. Click `Branches` tab.
+    1. Click `Add classic branch protection rule`
         1. `Branch name pattern:`  `main`
         1. `Protect matching branches` section
             1. :ballot_box_with_check: `Require a pull request before merging`
@@ -52,26 +61,34 @@ This is a checklist of what to set when creating a new GitHub Repository.
 
 1. On repository home page, click `Settings` tab.
     1. Click `Collaborators & teams` tab.
-        1. Click `Add teams` button.
-            1. Type `senzing-automation`
-            1. Choose `senzing-garage/senzing-automation`
-            1. Choose a role: `Write`
-            1. Click `Add senzing-garage/senzing-automation to ...`
-        1. Click `Add teams` button.
-            1. Type `senzing-devsecops`
-            1. Choose `senzing-garage/senzing-devsecops`
-            1. Choose a role: `Write`
-            1. Click `Add senzing-garage/senzing-devsecops to ...`
-        1. Click `Add teams` button.
-            1. Type `senzing-project-managers`
-            1. Choose `senzing-garage/senzing-project-managers`
-            1. Choose a role: `Maintain`
-            1. Click `Add senzing-project-managers to ...`
-        1. Click `Add teams` button.
-            1. Type `senzing`
-            1. Choose the team that will be used in `.github/CODEOWNERS`
-            1. Choose a role: `Write`
-            1. Click `Add ... to this repository`
+        1. For ***ALL*** organizations:
+            1. Click `Add teams` button.
+                1. Type `senzing-automation`
+                1. Choose `<ORG>/senzing-automation`
+                1. Choose a role: `Write`
+                1. Click `Add <ORG>/senzing-automation`
+            1. Click `Add teams` button.
+                1. Type `senzing-devsecops`
+                1. Choose `<ORG>/senzing-devsecops`
+                1. Choose a role: `Write`
+                1. Click `Add <ORG>/senzing-devsecops`
+            1. Click `Add teams` button.
+                1. Type `senzing-project-managers`
+                1. Choose `<ORG>/senzing-project-managers`
+                1. Choose a role: `Maintain`
+                1. Click `Add senzing-project-managers`
+        1. For Organization `Senzing`:
+            1. Click `Add teams` button.
+                1. Using the appropriate development team based on the list: https://github.com/orgs/Senzing/teams
+                1. Choose the team that will be used in `.github/CODEOWNERS`
+                1. Choose a role: `Write`
+                1. Click `Add ... to this repository`
+        1. For Organizations `senzing-factory`| `senzing-garage`:
+            1. Click `Add teams` button.
+                1. Type `senzing`
+                1. Choose the team that will be used in `.github/CODEOWNERS`
+                1. Choose a role: `Write`
+                1. Click `Add ... to this repository`
 
 ### Code and security analysis
 
@@ -81,16 +98,28 @@ This is a checklist of what to set when creating a new GitHub Repository.
             1. Search for the team that will be used in `.github/CODEOWNERS` and select.
             1. Click `Save changes` button
 
+### Link the project board
+
+1. On the repository home page, click `Projects` tab.
+    1. Click `Link a project`
+    1. Select the respective project board for the repository.
+        1. `Senzing` organization: `Senzing Github Organization Project`
+        1. `senzing-factory` organization: `Factory`
+        1. `senzing-garage` organization, one of:
+            1. `App Server`
+            1. `G2 Python`
+            1. `Garage`
+            1. `Garage Roadmap`
+
 ### Repository About
 
 1. On repository home page, click **About** gear
-    1. Add Topic relative to which Scrum manages the repository:
-        1. `senzing-app-server` for Api Server / Web App scrum
-        1. `senzing-community` for Community scrum
+    1. Add Topic relative to which project board will be linked to the repository:
+        1. `senzing-app-server` for Api Server / Web App
+        1. `senzing-github-organization-project` for all Senzing organization repositories
         1. `senzing-g2-python` for G2Python projects
         1. `senzing-garage` for Garage projects
-        1. `senzing-gdev` for ????
-        1. `senzing-devsecops` for DevOps
+        1. `senzing-devsecops` for all senzing-factory organization projects
         1. `senzing-unknown` if not known
     1. Add optional Topics relative to code sub-project.
        Examples:
@@ -101,33 +130,47 @@ This is a checklist of what to set when creating a new GitHub Repository.
 
 1. On repository home page, click `Issues` tab.
     1. Click `New issue` button.
+    1. Select any type of issue and select `Get started`
         1. `Title`:  `Initial content`
-        1. Click `Submit new issue` button
+        1. `Add a description`: delete any default content in this text box.
+        1. In the right side navigation select `assign yourself`.
+        1. In the right side navigation select the respective project board.
+        1. Click `Submit new issue` button.
 1. On repository home page, click `Branch: main` button.
     1. Create new branch.
        Example:
-       `1.[your-name].1`
+       `1-[your-name]-1`
+       ***NOTE***: Branch names should start with the respective issue number.
 
 ### Populate repository with Community Artifacts
 
 1. On your workstation,
-    1. :pencil2: Substituting the new repository name for `xxxx`,
+    1. :pencil2: Substituting the organization for `<ORG>` and the new repository name for `<REPO>`,
 
         ```console
-        git clone git@github.com:senzing-garage/xxxx.git
-        cd xxxx
-        git checkout 1.[your-name].1
+        git clone git@github.com:<ORG>/<REPO>.git
+        cd <REPO>
+        git checkout 1-[your-name]-1
         ```
 
     1. Populate the new repository with the `Community Artifacts` found in
        [github.com/senzing-garage/template-repository](https://github.com/senzing-garage/template-repository).
     1. Modify `CONTRIBUTING.md`
+        1. `export GIT_ACCOUNT=<ORG>`
         1. `export GIT_REPOSITORY=<new-repository-name>`
     1. Modify `.github/CODEOWNERS`
     1. Modify `.github/dependabot.yml`
+    1. Modify `.project`
+    1. Modify `./docs/README.md`
     1. Delete `.github/workflows` files that do not apply.
+    1. Rename `add-to-project-garage-dependabot.yaml` and `add-to-project-garage.yaml` 
+       with the appropriate project name. 
+    1. Update the project variable and name of the workflow for the following:
+        1. `add-to-project-<project>-dependabot.yaml`
+        1. `add-to-project-<project>.yaml`
+        1. `move-pr-to-done-dependabot.yaml`
     1. Commit the branch.
-    1. Merge `1.[your-name].1` branch into main branch.
+    1. Merge `1-[your-name]-1` branch into main branch.
 
 ### Branch Protection
 
