@@ -58,8 +58,10 @@ The following is based on [Installing ODPI-C].
 ## References
 
 - [Install Ubuntu Oracle Instant Client on Ubuntu]
+- [Oracle Database Free Get Started]
 
 [Downloads]: https://www.oracle.com/database/technologies/instant-client/downloads.html
 [Install Ubuntu Oracle Instant Client on Ubuntu]: https://help.ubuntu.com/community/Oracle%20Instant%20Client
 [Installing ODPI-C]: https://odpi-c.readthedocs.io/en/latest/user_guide/installation.html#linux
+[Oracle Database Free Get Started]: https://www.oracle.com/database/free/get-started/
 [Oracle Instant Client site]: https://www.oracle.com/database/technologies/instant-client.html
