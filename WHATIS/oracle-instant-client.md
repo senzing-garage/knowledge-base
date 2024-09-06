@@ -35,7 +35,7 @@ The following is based on [Installing ODPI-C].
    Example:
 
     ```console
-    unzip -d /opt/oracle /tmp/instantclient-basic-linux.zip
+    sudo unzip -d /opt/oracle /tmp/instantclient-basic-linux.zip
 
     ```
 
