@@ -9,8 +9,8 @@
 
 ## Install
 
-- [Ubuntu Oracle Instant Client site]
+- [Install Ubuntu Oracle Instant Client on Ubuntu]
 
 [Oracle Instant Client site]: https://www.oracle.com/database/technologies/instant-client.html
-[Ubuntu Oracle Instant Client site]: https://help.ubuntu.com/community/Oracle%20Instant%20Client
+[Install Ubuntu Oracle Instant Client on Ubuntu]: https://help.ubuntu.com/community/Oracle%20Instant%20Client
 [Download]: https://www.oracle.com/database/technologies/instant-client/downloads.html
