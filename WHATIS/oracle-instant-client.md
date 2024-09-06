@@ -39,7 +39,7 @@ The following is based on [Installing ODPI-C].
 
     ```
 
-1. Make sure `libaio1 is installed.
+1. Make sure `libaio1` is installed.
    Example:
 
     ```console
