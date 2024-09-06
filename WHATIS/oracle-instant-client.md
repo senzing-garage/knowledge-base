@@ -20,6 +20,7 @@ The following is based on [Installing ODPI-C].
     curl -X GET \
         --output /tmp/instantclient-basic-linux.zip \
         https://download.oracle.com/otn_software/linux/instantclient/2350000/instantclient-basic-linux.x64-23.5.0.24.07.zip
+
     ```
 
 1. Make directories.
@@ -27,6 +28,7 @@ The following is based on [Installing ODPI-C].
 
     ```console
     sudo mkdir -p /opt/oracle
+
     ```
 
 1. Extract Zip file.
@@ -34,6 +36,7 @@ The following is based on [Installing ODPI-C].
 
     ```console
     unzip -d /opt/oracle /tmp/instantclient-basic-linux.zip
+
     ```
 
 1. Make sure `libaio1 is installed.
@@ -41,6 +44,7 @@ The following is based on [Installing ODPI-C].
 
     ```console
     sudo apt-get install libaio1
+
     ```
 
 1. :thinking: Update `LD_LIBRARY_PATH` to include the Oracle shared objects.
@@ -48,6 +52,7 @@ The following is based on [Installing ODPI-C].
 
     ```console
     export LD_LIBRARY_PATH=/opt/oracle/instantclient_21_5:$LD_LIBRARY_PATH
+
     ```
 
 ## References
