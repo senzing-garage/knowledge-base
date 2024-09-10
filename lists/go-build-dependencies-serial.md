@@ -27,13 +27,14 @@
     1. [ ] [validate](https://github.com/senzing-garage/validate)
 1. Requires: sz-sdk-go
     1. [ ] [sz-sdk-go-core](https://github.com/senzing-garage/sz-sdk-go-core)
-    1. [ ] [sz-sdk-go-grpc](https://github.com/senzing-garage/sz-sdk-go-grpc)
     1. [ ] [sz-sdk-go-mock](https://github.com/senzing-garage/sz-sdk-go-mock)
     1. [ ] [go-queueing](https://github.com/senzing-garage/go-queueing)
-1. Requires: go-queueing
-    1. [ ] [move](https://github.com/senzing-garage/move)
 1. Requires: sz-sdk-go-core
     1. [ ] [serve-grpc](https://github.com/senzing-garage/serve-grpc)
+1. Requires: serve-grpc (for testing)
+    1. [ ] [sz-sdk-go-grpc](https://github.com/senzing-garage/sz-sdk-go-grpc)
+1. Requires: go-queueing
+    1. [ ] [move](https://github.com/senzing-garage/move)
 1. Requires: sz-sdk-go-grpc
     1. [ ] [go-sdk-abstract-factory](https://github.com/senzing-garage/go-sdk-abstract-factory)
 1. Requires: go-sdk-abstract-factory
