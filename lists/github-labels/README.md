@@ -48,6 +48,7 @@ Labels listed in alphabetical order.
 | refactoring          | ![66FFFF](https://via.placeholder.com/30x30/66FFFF/66FFFF?text=.) | #66FFFF | No behavioral change, internal restructuring |
 | triage               | ![CCCCFF](https://via.placeholder.com/30x30/CCCCFF/CCCCFF?text=.) | #CCCCFF | Need to triage                               |
 | V3                   | ![0000FF](https://via.placeholder.com/30x30/0000FF/0000FF?text=.) | #0000FF | Needed for Senzing V3                        |
+| V4                   | ![0000FF](https://via.placeholder.com/30x30/0000FF/0000FF?text=.) | #0000FF | To be delivered in V4                        |
 | waiting-for-customer | ![FF9900](https://via.placeholder.com/30x30/FF9900/FF9900?text=.) | #FF9900 | Customer needs to verify fix or close issue  |
 | waiting-to-merge     | ![FF9900](https://via.placeholder.com/30x30/FF9900/FF9900?text=.) | #FF9900 | Code complete, cannot merge yet              |
 | wontfix              | ![000000](https://via.placeholder.com/30x30/000000/000000?text=.) | #000000 | This will not be worked on                   |
