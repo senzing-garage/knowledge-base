@@ -2,6 +2,7 @@
 
 | Deprecated | Hidden     | Repository                                   |
 |------------|------------|----------------------------------------------|
+| 2024-09-18 |            | connector-neo4j                              |
 | 2024-07-02 |            | aws-cloudformation-ecs                       |
 | 2024-07-02 |            | azure-template-aks-poc-simple                |
 | 2024-06-21 |            | docker-terraform-aws                         |
@@ -14,7 +15,7 @@
 | 2023-12-14 |            | charts                                       |
 | 2023-11-15 |            | docker-jupyter                               |
 | 2023-10-30 |            | senzing-sdk-api-specification                |
-| 2023-08-09 |            | mapper-openc                                 |
+| 2023-08-09 | 2024-09-18 | mapper-openc                                 |
 | 2023-06-19 | 2024-06-21 | ready-for-senzing                            |
 | 2023-06-19 | 2024-06-21 | packer-senzing-demo-ubuntu-18.04             |
 | 2023-06-12 | 2024-06-21 | docker-poc-notebook                          |
