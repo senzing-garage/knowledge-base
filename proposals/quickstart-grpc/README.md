@@ -1,42 +1,37 @@
 # quickstart-grpc
 
-This Python demonstration of Senzing works on Linux, macOS, and Windows.
+The Senzing QuickStart using Python over gRPC works on Linux, macOS, and Windows.
 
 ## Prerequisistes
 
-1. Python 3
-1. Docker - To install, see
-   [Linux](https://docs.docker.com/desktop/install/linux/),
-   [Mac](https://docs.docker.com/desktop/install/mac-install/), or
-   [Windows](https://docs.docker.com/desktop/install/windows-install/).
-    1. Make sure Docker is running.
-    1. **Optional:** To pre-load docker images, run
+The Senzing QuickStart using Python over gRPC requires the following prerequisites:
 
-        ```console
-        docker pull senzing/demo-quickstart
-
-        ```
-
-1. `senzing-grpc` - To install, run
+1. [Python 3]
+1. [Docker]
+1. [senzing-grpc] Python package
+   To install, run:
 
     ```console
     python3 -m pip install --upgrade senzing-grpc
 
     ```
 
-## Try Senzing's Hello World
+## Run Docker container
 
-The following example shows how to start a Senzing gRPC service
-and access it with Python.
-
-5. Run a Senzing gRPC service using Docker.
+5. After installing [prerequisites], run the Docker container.
    Example:
 
     ```console
     docker run --name senzing-demo-quickstart -p 8260:8260 -p 8261:8261 --pull always --rm senzing/demo-quickstart
     ```
 
-1. In a separate window, start an interactive Python session.
+## Try Senzing's Hello World
+
+The following example shows how to start
+the Senzing QuickStart using Python over gRPC
+and access it with Python.
+
+6. In a separate window, start an interactive Python session.
    Example:
 
     ```console
@@ -44,7 +39,7 @@ and access it with Python.
 
     ```
 
-1. For a quick test of calling Senzing's `sz_product.version()`,
+1. For a quick test of calling Senzing's `sz_product.get_version()`,
    copy/paste the following block of code into the interactive Python session
    and press the **Enter** key.
    Example:
@@ -70,10 +65,13 @@ and access it with Python.
 
     ```
 
-1. To end the Senzing gRPC service,
+1. To stop the Docker container,
    use `ctrl-c` to stop the `docker run ...` program.
 
 ## Next steps
+
+Now that an environment is setup,
+feel free to explore Senzing.
 
 - Linux / macOs
     1. Try Senzing's Hello World
@@ -87,3 +85,8 @@ and access it with Python.
     1. [Map and load your own data - Windows](map-and-load-your-own-data-windows.md)
     1. [Experience Entity Resolution Record-by-Record - Windows](experience-entity-resolution-record-by-record-windows.md)
     1. [Bad-Guy Hunting](bad-guy-hunting/bad-guy-hunting-windows.md)
+
+[senzing-grpc]: https://github.com/senzing-garage/sz-sdk-python-grpc
+[prerequisites]: #prerequisistes
+[Python 3]: https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/python3.md
+[Docker]: https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/docker.md
