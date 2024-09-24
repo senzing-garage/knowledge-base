@@ -8,7 +8,7 @@ The Senzing QuickStart using Python over gRPC requires the following prerequisit
 
 1. [Python 3]
 1. [Docker]
-1. [senzing-grpc] Python package
+1. [senzing-grpc] Python package.
    To install, run:
 
     ```console
