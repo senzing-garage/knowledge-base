@@ -147,15 +147,11 @@ and custom ports will be used.
 1. [Try Senzing's Hello World]
 1. [Use Senzing's Truth Set data - Linux/macOS]
 1. Map and load your own data - Linux/macOS
-1. [Experience Entity Resolution Record-by-Record - Linux/macOS]
-1. [Bad-Guy Hunting - Linux/macOS]
 
 ## References
 
 1. [View SQLite database]
 
-[Bad-Guy Hunting - Linux/macOS]: bad-guy-hunting/bad-guy-hunting-linux-macos.md
-[Experience Entity Resolution Record-by-Record - Linux/macOS]: experience-entity-resolution-record-by-record-linux-macos.md
 [Run Docker container]: README.md#run-docker-container
 [Try Senzing's Hello World]: README.md
 [Use Senzing's Truth Set data - Linux/macOS]: use-senzings-truth-set-data-linux-macos.md
