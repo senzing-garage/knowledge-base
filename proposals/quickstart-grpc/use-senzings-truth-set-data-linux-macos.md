@@ -143,14 +143,12 @@ Senzing database inside the running Docker container.
    and press the **Enter** key.
 
     ```python
-    general_help = sz_engine.help()
-    print(general_help)
+    print(sz_engine.help())
 
     ```
 
     ```python
-    specific_help = sz_engine.help("get_entity_by_record_id")
-    print(specific_help)
+    print(sz_engine.help("get_entity_by_record_id"))
 
     ```
 
