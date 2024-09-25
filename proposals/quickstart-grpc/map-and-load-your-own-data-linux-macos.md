@@ -119,7 +119,7 @@ and custom ports will be used.
                     record_id = line_as_dict.get("RECORD_ID")
                     info = sz_engine.add_record(data_source, record_id, line, SzEngineFlags.SZ_WITH_INFO)
                     print(info)
-        except G2Exception as err:
+        except SzError as err:
             print(f"\nError:\n{err}\n")
 
         ```
