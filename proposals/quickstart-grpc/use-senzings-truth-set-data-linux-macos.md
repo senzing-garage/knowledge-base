@@ -149,7 +149,7 @@ Senzing database inside the running Docker container.
     ```
 
     ```python
-    specific_help = sz_engine.help("get_entity_by_record_id_v2")
+    specific_help = sz_engine.help("get_entity_by_record_id")
     print(specific_help)
 
     ```
