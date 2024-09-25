@@ -114,6 +114,7 @@ Senzing database inside the running Docker container.
         print(json.dumps(json.loads(customer_1070_entity), indent=2))
     except SzError as err:
         print(f"\nError:\n{err}\n")
+
     ```
 
     or download and run [senzing_truthset_get_entity.py].
@@ -132,6 +133,7 @@ Senzing database inside the running Docker container.
         print(json.dumps(json.loads(search_result), indent=2))
     except SzError as err:
         print(f"\nError:\n{err}\n")
+
     ```
 
     or download and run [senzing_truthset_search.py].
