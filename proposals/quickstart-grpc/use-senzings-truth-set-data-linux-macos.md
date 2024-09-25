@@ -85,7 +85,10 @@ Senzing database inside the running Docker container.
         for record_set in record_sets:
             for record in record_set.values():
                 info = sz_engine.add_record(
-                    record.get("DataSource"), record.get("Id"), record.get("Json")
+                    record.get("DataSource"),
+                    record.get("Id"),
+                    record.get("Json"),
+                    SzEngineFlags.SZ_WITH_INFO,
                 )
                 print(info)
     except SzError as err:
