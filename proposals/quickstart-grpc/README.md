@@ -75,18 +75,26 @@ feel free to explore Senzing.
 
 - Linux / macOs
     1. Try Senzing's Hello World
-    1. [Use Senzing's Truth Set data - Linux/macOS](use-senzings-truth-set-data-linux-macos.md)
-    1. [Map and load your own data - Linux/macOS](map-and-load-your-own-data-linux-macos.md)
-    1. [Experience Entity Resolution Record-by-Record - Linux/macOS](experience-entity-resolution-record-by-record-linux-macos.md)
-    1. [Bad-Guy Hunting](bad-guy-hunting/bad-guy-hunting-linux-macos.md)
+    1. [Use Senzing's Truth Set data - Linux/macOS]
+    1. [Map and load your own data - Linux/macOS]
+    1. [Experience Entity Resolution Record-by-Record - Linux/macOS]
+    1. [Bad-Guy Hunting - Linux/macOS]
 - Windows
     1. Try Senzing's Hello World
-    1. [Use Senzing's Truth Set data - Windows](use-senzings-truth-set-data-windows.md)
-    1. [Map and load your own data - Windows](map-and-load-your-own-data-windows.md)
-    1. [Experience Entity Resolution Record-by-Record - Windows](experience-entity-resolution-record-by-record-windows.md)
-    1. [Bad-Guy Hunting](bad-guy-hunting/bad-guy-hunting-windows.md)
+    1. [Use Senzing's Truth Set data - Windows]
+    1. [Map and load your own data - Windows]
+    1. [Experience Entity Resolution Record-by-Record - Windows]
+    1. [Bad-Guy Hunting - Windows]
 
-[senzing-grpc]: https://github.com/senzing-garage/sz-sdk-python-grpc
+[Bad-Guy Hunting - Linux/macOS]: bad-guy-hunting/bad-guy-hunting-linux-macos.md
+[Bad-Guy Hunting - Windows]: bad-guy-hunting/bad-guy-hunting-windows.md
+[Docker]: https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/docker.md
+[Experience Entity Resolution Record-by-Record - Linux/macOS]: experience-entity-resolution-record-by-record-linux-macos.md
+[Experience Entity Resolution Record-by-Record - Windows]: experience-entity-resolution-record-by-record-windows.md
+[Map and load your own data - Linux/macOS]: map-and-load-your-own-data-linux-macos.md
+[Map and load your own data - Windows]: map-and-load-your-own-data-windows.md
 [prerequisites]: #prerequisistes
 [Python 3]: https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/python3.md
-[Docker]: https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/docker.md
+[senzing-grpc]: https://github.com/senzing-garage/sz-sdk-python-grpc
+[Use Senzing's Truth Set data - Linux/macOS]: use-senzings-truth-set-data-linux-macos.md
+[Use Senzing's Truth Set data - Windows]: use-senzings-truth-set-data-windows.md

@@ -3,18 +3,21 @@
 import json
 
 import grpc
-from senzing_grpc import G2EngineGrpc
+from senzing_grpc import SzAbstractFactory, SzError
 
-# Create gRPC channel.
+try:
 
-GRPC_URL = "localhost:8261"
-grpc_channel = grpc.insecure_channel(GRPC_URL)
+    # Create Senzing objects.
 
-# Create Senzing objects.
+    sz_abstract_factory = SzAbstractFactory(
+        grpc_channel=grpc.insecure_channel("localhost:8261")
+    )
+    sz_engine = sz_abstract_factory.create_sz_engine()
 
-g2_engine = G2EngineGrpc(grpc_channel=grpc_channel)
+    # Perform Senzing get entity.
 
-# Perform Senzing get entity.
+    customer_1070_entity = sz_engine.get_entity_by_record_id("CUSTOMERS", "1070")
+    print(json.dumps(json.loads(customer_1070_entity), indent=2))
 
-customer_1070_entity = g2_engine.get_entity_by_record_id_v2("CUSTOMERS", "1070", -1)
-print(json.dumps(json.loads(customer_1070_entity), indent=2))
+except SzError as err:
+    print(f"\nError:\n{err}\n")

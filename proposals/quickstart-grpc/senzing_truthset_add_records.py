@@ -1,7 +1,7 @@
 #! /usr/bin/env python3
 
 import grpc
-from senzing_grpc import G2EngineGrpc, G2Exception
+from senzing_grpc import SzAbstractFactory, SzError
 from senzing_truthset import (
     TRUTHSET_CUSTOMER_RECORDS,
     TRUTHSET_REFERENCE_RECORDS,
@@ -9,14 +9,13 @@ from senzing_truthset import (
 )
 
 try:
-    # Create gRPC channel.
-
-    GRPC_URL = "localhost:8261"
-    grpc_channel = grpc.insecure_channel(GRPC_URL)
 
     # Create Senzing objects.
 
-    g2_engine = G2EngineGrpc(grpc_channel=grpc_channel)
+    sz_abstract_factory = SzAbstractFactory(
+        grpc_channel=grpc.insecure_channel("localhost:8261")
+    )
+    sz_engine = sz_abstract_factory.create_sz_engine()
 
     # Identify records.
 
@@ -30,8 +29,9 @@ try:
 
     for record_set in record_sets:
         for record in record_set.values():
-            g2_engine.add_record(
+            sz_engine.add_record(
                 record.get("DataSource"), record.get("Id"), record.get("Json")
             )
-except G2Exception as err:
+
+except SzError as err:
     print(f"\nError:\n{err}\n")

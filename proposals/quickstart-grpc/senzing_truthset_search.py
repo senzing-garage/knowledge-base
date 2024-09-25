@@ -3,22 +3,25 @@
 import json
 
 import grpc
-from senzing_grpc import G2EngineGrpc
+from senzing_grpc import SzAbstractFactory, SzError
 
-# Create gRPC channel.
+try:
 
-GRPC_URL = "localhost:8261"
-grpc_channel = grpc.insecure_channel(GRPC_URL)
+    # Create Senzing objects.
 
-# Create Senzing objects.
+    sz_abstract_factory = SzAbstractFactory(
+        grpc_channel=grpc.insecure_channel("localhost:8261")
+    )
+    sz_engine = sz_abstract_factory.create_sz_engine()
 
-g2_engine = G2EngineGrpc(grpc_channel=grpc_channel)
+    # Perform Senzing search.
 
-# Perform Senzing search.
+    search_query = {
+        "name_full": "robert smith",
+        "date_of_birth": "11/12/1978",
+    }
+    search_result = sz_engine.search_by_attributes(json.dumps(search_query))
+    print(json.dumps(json.loads(search_result), indent=2))
 
-search_query = {
-    "name_full": "robert smith",
-    "date_of_birth": "11/12/1978",
-}
-search_result = g2_engine.search_by_attributes_v2(search_query)
-print(json.dumps(json.loads(search_result), indent=2))
+except SzError as err:
+    print(f"\nError:\n{err}\n")
