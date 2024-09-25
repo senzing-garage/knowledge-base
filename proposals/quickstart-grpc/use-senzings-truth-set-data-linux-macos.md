@@ -68,6 +68,12 @@ Senzing database inside the running Docker container.
    and press the **Enter** key.
 
     ```python
+    from senzing_truthset import (
+        TRUTHSET_CUSTOMER_RECORDS,
+        TRUTHSET_REFERENCE_RECORDS,
+        TRUTHSET_WATCHLIST_RECORDS,
+    )
+
     try:
     # Identify records.
         record_sets = [
