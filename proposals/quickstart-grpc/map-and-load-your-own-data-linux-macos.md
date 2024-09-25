@@ -6,7 +6,7 @@ and custom ports will be used.
 
 ## Prerequisites
 
-1. [Run Docker container]
+1. [Run Docker container].
 
 ## Create your input file
 
@@ -156,7 +156,8 @@ and custom ports will be used.
 
 [Bad-Guy Hunting - Linux/macOS]: bad-guy-hunting/bad-guy-hunting-linux-macos.md
 [Experience Entity Resolution Record-by-Record - Linux/macOS]: experience-entity-resolution-record-by-record-linux-macos.md
-[High performance loading with Python](#)
 [Run Docker container]: README.md#run-docker-container
 [Try Senzing's Hello World]: README.md
+[Use Senzing's Truth Set data - Linux/macOS]: use-senzings-truth-set-data-linux-macos.md
 [View SQLite database]: coleifer-sqlite-web.md
+[High performance loading with Python]: #
