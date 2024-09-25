@@ -75,12 +75,12 @@ and custom ports will be used.
         # Get existing Senzing configuration.
             old_config_id = sz_configmanager.get_default_config_id()
             OLD_JSON_CONFIG = sz_configmanager.get_config(old_config_id)
-            config_handle = sz_config.load(OLD_JSON_CONFIG)
+            config_handle = sz_config.import_config(OLD_JSON_CONFIG)
         # Add DataSources to existing Senzing configuration.
             for datasource in DATASOURCES:
                 sz_config.add_data_source(config_handle, datasource)
         # Persist new Senzing configuration.
-            NEW_JSON_CONFIG = sz_config.save(config_handle)
+            NEW_JSON_CONFIG = sz_config.export_config(config_handle)
             new_config_id = sz_configmanager.add_config(NEW_JSON_CONFIG, "Add My datasources")
             sz_configmanager.replace_default_config_id(old_config_id, new_config_id)
         # Update other Senzing objects.
