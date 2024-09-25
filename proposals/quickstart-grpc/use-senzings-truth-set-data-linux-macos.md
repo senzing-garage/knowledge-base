@@ -143,13 +143,13 @@ Senzing database inside the running Docker container.
    and press the **Enter** key.
 
     ```python
-    general_help = g2_engine.help()
+    general_help = sz_engine.help()
     print(general_help)
 
     ```
 
     ```python
-    specific_help = g2_engine.help("get_entity_by_record_id_v2")
+    specific_help = sz_engine.help("get_entity_by_record_id_v2")
     print(specific_help)
 
     ```
