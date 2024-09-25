@@ -26,7 +26,7 @@ Senzing database inside the running Docker container.
 
     ```python
     import grpc
-    from senzing_grpc import SzAbstractFactory, SzError
+    from senzing_grpc import SzAbstractFactory, SzEngineFlags, SzError
     from senzing_truthset import TRUTHSET_DATASOURCES
 
     try:
@@ -84,9 +84,10 @@ Senzing database inside the running Docker container.
     # Call Senzing to add record.
         for record_set in record_sets:
             for record in record_set.values():
-                sz_engine.add_record(
+                info = sz_engine.add_record(
                     record.get("DataSource"), record.get("Id"), record.get("Json")
                 )
+                print(info)
     except SzError as err:
         print(f"\nError:\n{err}\n")
 

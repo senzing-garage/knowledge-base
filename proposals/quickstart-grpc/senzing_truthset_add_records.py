@@ -1,7 +1,7 @@
 #! /usr/bin/env python3
 
 import grpc
-from senzing_grpc import SzAbstractFactory, SzError
+from senzing_grpc import SzAbstractFactory, SzEngineFlags, SzError
 from senzing_truthset import (
     TRUTHSET_CUSTOMER_RECORDS,
     TRUTHSET_REFERENCE_RECORDS,
@@ -29,9 +29,13 @@ try:
 
     for record_set in record_sets:
         for record in record_set.values():
-            sz_engine.add_record(
-                record.get("DataSource"), record.get("Id"), record.get("Json")
+            info = sz_engine.add_record(
+                record.get("DataSource"),
+                record.get("Id"),
+                record.get("Json"),
+                SzEngineFlags.SZ_WITH_INFO,
             )
+            print(info)
 
 except SzError as err:
     print(f"\nError:\n{err}\n")
