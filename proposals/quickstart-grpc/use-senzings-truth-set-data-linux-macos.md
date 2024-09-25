@@ -7,9 +7,9 @@ Senzing database inside the running Docker container.
 
 1. [Run Docker container]
 
-## Start Python
+## Start interactive Python session
 
-1. Start an interactive Python session.
+2. Start an interactive Python session.
    Example:
 
     ```console

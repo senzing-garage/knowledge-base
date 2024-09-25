@@ -18,7 +18,7 @@ The Senzing QuickStart using Python over gRPC requires the following prerequisit
 
 ## Run Docker container
 
-5. After installing [prerequisites], run the Docker container.
+4. After installing [prerequisites], run the Docker container.
    Example:
 
     ```console
@@ -31,7 +31,7 @@ The following example shows how to start
 the Senzing QuickStart using Python over gRPC
 and access it with Python.
 
-6. In a separate window, start an interactive Python session.
+5. In a separate window, start an interactive Python session.
    Example:
 
     ```console
