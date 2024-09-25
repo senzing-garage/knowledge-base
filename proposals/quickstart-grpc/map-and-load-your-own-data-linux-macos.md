@@ -86,7 +86,7 @@ and custom ports will be used.
         # Update other Senzing objects.
             sz_engine.reinitialize(new_config_id)
             sz_diagnostic.reinitialize(new_config_id)
-        except G2Exception as err:
+        except SzError as err:
             print(f"\nError:\n{err}\n")
 
         ```
