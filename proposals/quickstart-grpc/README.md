@@ -23,15 +23,15 @@ The Senzing QuickStart using Python over gRPC requires the following prerequisit
 
     ```console
     docker run \
-    --name senzing-demo-quickstart \
-    --net=host \
-    --user 0 \
-    -p 8260:8260 \
-    -p 8261:8261 \
-    -p 8888:8888 \
-    --pull always \
-    --rm \
-    senzing/demo-quickstart
+      --name senzing-demo-quickstart \
+      --net=host \
+      --user 0 \
+      -p 8260:8260 \
+      -p 8261:8261 \
+      -p 8888:8888 \
+      --pull always \
+      --rm \
+      senzing/demo-quickstart
     ```
 
 ## Try Senzing's Hello World
