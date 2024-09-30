@@ -29,6 +29,7 @@ The Senzing QuickStart using Python over gRPC requires the following prerequisit
     -p 8260:8260 \
     -p 8261:8261 \
     -p 8888:8888 \
+    --pull always \
     --rm \
     senzing/demo-quickstart
     ```
