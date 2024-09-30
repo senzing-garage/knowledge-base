@@ -14,137 +14,138 @@ The following list should reflect modifications documented in
 
 | Existing name | Canonical Name | Return value | Smells |
 |---------------|----------------|--------------|--------|
-| G2Config_addDataSource(configHandle, inputJson, responseBuf, bufSize, resizeFunc) | addDataSource(configHandle, dataSourceCode) | string | |
-| G2Config_clearLastException() | [not-public] | | |
-| G2Config_close(configHandle) | closeConfig(configHandle) | - | |
-| G2Config_create(configHandle) | createConfig() | configHandle | |
-| G2Config_deleteDataSource(configHandle, inputJson) | deleteDataSource(configHandle, dataSourceCode) | - | |
-| G2Config_destroy() | | - | |
-| G2Config_getLastException(buffer, bufSize) | [not-public] | | |
-| G2Config_getLastExceptionCode() | [not-public] | | |
-| G2Config_init(moduleName, iniParams, verboseLogging) | initialize(instanceName, settings, verboseLogging) | - | Consider single object |
-| G2Config_listDataSources(configHandle, responseBuf, bufSize, resizeFunc) | getDataSources(configHandle) | string | |
-| G2Config_load(jsonConfig, configHandle) | importConfig(configDefinition) | configHandle | |
-| G2Config_save(configHandle, responseBuf, bufSize, resizeFunc) | exportConfig(configHandle)  | string | |
+| SzConfig_addDataSource(configHandle, inputJson, responseBuf, bufSize, resizeFunc) | addDataSource(configHandle, dataSourceCode) | string | |
+| SzConfig_clearLastException() | [not-public] | | |
+| SzConfig_close(configHandle) | closeConfig(configHandle) | - | |
+| SzConfig_create(configHandle) | createConfig() | configHandle | |
+| SzConfig_deleteDataSource(configHandle, inputJson) | deleteDataSource(configHandle, dataSourceCode) | - | |
+| SzConfig_destroy() | | - | |
+| SzConfig_getLastException(buffer, bufSize) | [not-public] | | |
+| SzConfig_getLastExceptionCode() | [not-public] | | |
+| SzConfig_init(moduleName, iniParams, verboseLogging) | initialize(instanceName, settings, verboseLogging) | - | Consider single object |
+| SzConfig_listDataSources(configHandle, responseBuf, bufSize, resizeFunc) | getDataSources(configHandle) | string | |
+| SzConfig_load(jsonConfig, configHandle) | importConfig(configDefinition) | configHandle | |
+| SzConfig_save(configHandle, responseBuf, bufSize, resizeFunc) | exportConfig(configHandle)  | string | |
 
 ### SzConfigManager
 
 | Existing name | Canonical Name | Return value | Smells |
 |---------------|----------------|--------------|--------|
-| G2ConfigMgr_addConfig(configStr, configComment, configID) | addConfig(configDefinition, configComment) | int64 | |
-| G2ConfigMgr_clearLastException() | [not-public] | | |
-| G2ConfigMgr_destroy() | | - | |
-| G2ConfigMgr_getConfig(configID, responseBuf, bufSize, resizeFunc) | getConfig(configId) | string | |
-| G2ConfigMgr_getConfigList(responseBuf, bufSize, resizeFunc) | getConfigs() | string | |
-| G2ConfigMgr_getDefaultConfigID(configID) | getDefaultConfigId() | int64 | |
-| G2ConfigMgr_getLastException(buffer, bufSize) | [not-public] | | |
-| G2ConfigMgr_getLastExceptionCode() | [not-public] | | |
-| G2ConfigMgr_init(moduleName, iniParams, verboseLogging) | initialize(instanceName, settings, verboseLogging) | - | Consider single object |
-| G2ConfigMgr_replaceDefaultConfigID(oldConfigID, newConfigID) | replaceDefaultConfigId(currentDefaultConfigId, newDefaultConfigId) | - | |
-| G2ConfigMgr_setDefaultConfigID(configID) | setDefaultConfigId(configId) | - | |
+| SzConfigMgr_addConfig(configStr, configComment, configID) | addConfig(configDefinition, configComment) | int64 | |
+| SzConfigMgr_clearLastException() | [not-public] | | |
+| SzConfigMgr_destroy() | | - | |
+| SzConfigMgr_getConfig(configID, responseBuf, bufSize, resizeFunc) | getConfig(configId) | string | |
+| SzConfigMgr_getConfigList(responseBuf, bufSize, resizeFunc) | getConfigs() | string | |
+| SzConfigMgr_getDefaultConfigID(configID) | getDefaultConfigId() | int64 | |
+| SzConfigMgr_getLastException(buffer, bufSize) | [not-public] | | |
+| SzConfigMgr_getLastExceptionCode() | [not-public] | | |
+| SzConfigMgr_init(moduleName, iniParams, verboseLogging) | initialize(instanceName, settings, verboseLogging) | - | Consider single object |
+| SzConfigMgr_replaceDefaultConfigID(oldConfigID, newConfigID) | replaceDefaultConfigId(currentDefaultConfigId, newDefaultConfigId) | - | |
+| SzConfigMgr_setDefaultConfigID(configID) | setDefaultConfigId(configId) | - | |
 
 ### SzDiagnostic
 
 | Existing name | Canonical Name | Return value | Smells |
 |---------------|----------------|--------------|--------|
-| G2Diagnostic_checkDBPerf(secondsToRun, responseBuf, bufSize, resizeFunc) | checkDatastorePerformance(secondsToRun) | string | |
-| G2Diagnostic_clearLastException() | [not-public] | | |
-| G2Diagnostic_destroy() | | - | |
-| G2Diagnostic_getDatastoreInfo(responseBuf, bufSize, resizeFunc) | getDatastoreInfo() | string | |
-| G2Diagnostic_getFeature(libFeatID, responseBuf, bufSize, resizeFunc) | getFeature(featureId) | string | ** Not approved yet |
-| G2Diagnostic_getLastException(buffer, bufSize) | [not-public] | | |
-| G2Diagnostic_getLastExceptionCode() | [not-public] | | |
-| G2Diagnostic_init(moduleName, iniParams, verboseLogging) | initialize(instanceName, settings, configId, verboseLogging) | | `configId` can be `nil`, `None`, `null`. Consider single object |
-| G2Diagnostic_initWithConfigID(moduleName, iniParams, initConfigID, verboseLogging) | [collapsed] | | |
-| G2Diagnostic_purgeRepository(????) | purgeRepository(????) | | |
-| G2Diagnostic_reinit(initConfigID) | reinitialize(configId) | - | |
+| SzDiagnostic_checkDBPerf(secondsToRun, responseBuf, bufSize, resizeFunc) | checkDatastorePerformance(secondsToRun) | string | |
+| SzDiagnostic_clearLastException() | [not-public] | | |
+| SzDiagnostic_destroy() | | - | |
+| SzDiagnostic_getDatastoreInfo(responseBuf, bufSize, resizeFunc) | getDatastoreInfo() | string | |
+| SzDiagnostic_getFeature(libFeatID, responseBuf, bufSize, resizeFunc) | getFeature(featureId) | string | ** Not approved yet |
+| SzDiagnostic_getLastException(buffer, bufSize) | [not-public] | | |
+| SzDiagnostic_getLastExceptionCode() | [not-public] | | |
+| SzDiagnostic_init(moduleName, iniParams, verboseLogging) | initialize(instanceName, settings, configId, verboseLogging) | | `configId` can be `nil`, `None`, `null`. Consider single object |
+| SzDiagnostic_initWithConfigID(moduleName, iniParams, initConfigID, verboseLogging) | [collapsed] | | |
+| SzDiagnostic_purgeRepository(????) | purgeRepository(????) | | |
+| SzDiagnostic_reinit(initConfigID) | reinitialize(configId) | - | |
 
 ### SzEngine
 
 | Existing name | Canonical Name | Return value | Smells |
 |---------------|----------------|--------------|--------|
-| G2_addRecord(dataSourceCode, recordID, jsonData) | addRecord(dataSourceCode, recordId, recordDefinition, flags) | string | |
-| G2_addRecordWithInfo(dataSourceCode, recordID, jsonData, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
-| G2_clearLastException() | [not-public] | | |
-| G2_closeExport(responseHandle) | closeExport(exportHandle) | - | |
-| G2_countRedoRecords() | | int64 | |
-| G2_deleteRecord(dataSourceCode, recordID) | deleteRecord(dataSourceCode, recordId, flags) | string | |
-| G2_deleteRecordWithInfo(dataSourceCode, recordID, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
-| G2_destroy() | | - | |
-| G2_exportCSVEntityReport(csvColumnList, flags, responseHandle) | exportCsvEntityReport(csvColumnList, flags) | exportHandle | |
-| G2_exportConfig(responseBuf, bufSize, resizeFunc) | [not-implemented] | | |
-| G2_exportConfigAndConfigID(responseBuf, bufSize, resizeFunc, configID) | [not-implemented] | | |
-| G2_exportJSONEntityReport(flags, responseHandle) | exportJsonEntityReport(flags) | exportHandle | |
-| G2_fetchNext(responseHandle, responseBuf, bufSize) | fetchNext(exportHandle)  | string | |
-| G2_findInterestingEntitiesByEntityID(entityID, flags, responseBuf, bufSize, resizeFunc) | findInterestingEntitiesByEntityId(entityId, flags)  | string |  |
-| G2_findInterestingEntitiesByRecordID(dataSourceCode, recordID, flags, responseBuf, bufSize, resizeFunc) | findInterestingEntitiesByRecordId(dataSourceCode, recordId, flags)  | string |  |
-| G2_findNetworkByEntityID(entityList, maxDegree, buildOutDegree, maxEntities, responseBuf, bufSize, resizeFunc) | findNetworkByEntityId(entityIds, maxDegrees, buildOutDegrees, buildOutMaxEntities, flags)  | string | SM-3.1 |
-| G2_findNetworkByEntityID_V2(entityList, maxDegree, buildOutDegree, maxEntities, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
-| G2_findNetworkByRecordID(recordList, maxDegree, buildOutDegree, maxEntities, responseBuf, bufSize, resizeFunc) | findNetworkByRecordId(recordKeys, maxDegrees, buildOutDegrees, buildOutMaxEntities, flags) | string | SM-3.1 |
-| G2_findNetworkByRecordID_V2(recordList, maxDegree, buildOutDegree, maxEntities, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
-| G2_findPathByEntityID(entityID1, entityID2, maxDegree, responseBuf, bufSize, resizeFunc) | findPathByEntityId(startEntityId, endEntityId, maxDegrees, avoidEntityIds, requiredDataSources, flags) | string | SM-3.1 |
-| G2_findPathByEntityID_V2(entityID1, entityID2, maxDegree, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
-| G2_findPathByRecordID(dataSourceCode1, recordID1, dataSourceCode2, recordID2, maxDegree, responseBuf, bufSize, resizeFunc) | findPathByRecordId(startDataSourceCode, startRecordId, endDataSourceCode, endRecordId, maxDegrees, avoidRecordKeys, requiredDataSources, flags) | string | SM-3.1 |
-| G2_findPathByRecordID_V2(dataSourceCode1, recordID1, dataSourceCode2, recordID2, maxDegree, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
-| G2_findPathExcludingByEntityID(entityID1, entityID2, maxDegree, excludedEntities, responseBuf, bufSize, resizeFunc) |  [collapsed]  | | |
-| G2_findPathExcludingByEntityID_V2(entityID1, entityID2, maxDegree, excludedEntities, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
-| G2_findPathExcludingByRecordID(dataSourceCode1, recordID1, dataSourceCode2, recordID2, maxDegree, excludedRecords, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
-| G2_findPathExcludingByRecordID_V2(dataSourceCode1, recordID1, dataSourceCode2, recordID2, maxDegree, excludedRecords, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
-| G2_findPathIncludingSourceByEntityID(entityID1, entityID2, maxDegree, excludedEntities, requiredDsrcs, responseBuf, bufSize, resizeFunc) |  [collapsed]  | |  |
-| G2_findPathIncludingSourceByEntityID_V2(entityID1, entityID2, maxDegree, excludedEntities, requiredDsrcs, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
-| G2_findPathIncludingSourceByRecordID(dataSourceCode1, recordID1, dataSourceCode2, recordID2, maxDegree, excludedRecords, requiredDsrcs, responseBuf, bufSize, resizeFunc |  [collapsed]  | | |
-| G2_findPathIncludingSourceByRecordID_V2(dataSourceCode1, recordID1, dataSourceCode2, recordID2, maxDegree, excludedRecords, requiredDsrcs, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
-| G2_getActiveConfigID(configID) | getActiveConfigId() | int64 | |
-| G2_getEntityByEntityID(entityID, responseBuf, bufSize, resizeFunc) | getEntityByEntityId(entityId, flags) | string | |
-| G2_getEntityByEntityID_V2(entityID, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
-| G2_getEntityByRecordID(dataSourceCode, recordID, responseBuf, bufSize, resizeFunc) | getEntityByRecordId(dataSourceCode, recordId, flags) | string | |
-| G2_getEntityByRecordID_V2(dataSourceCode, recordID, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
-| G2_getLastException(buffer, bufSize) | [not-public] | | |
-| G2_getLastExceptionCode() | [not-public] | | |
-| G2_getRecord(dataSourceCode, recordID, responseBuf, bufSize, resizeFunc) | getRecord(dataSourceCode, recordId, flags) | string | |
-| G2_getRecord_V2(dataSourceCode, recordID, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
-| G2_getRedoRecord(responseBuf, bufSize, resizeFunc ) | getRedoRecord() | string | |
-| G2_getRepositoryLastModifiedTime(lastModifiedTime) |  [not-implemented] | | |
-| G2_getVirtualEntityByRecordID(recordList, responseBuf, bufSize, resizeFunc) | getVirtualEntityByRecordId(recordKeys, flags) | string | |
-| G2_getVirtualEntityByRecordID_V2(recordList, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
-| G2_howEntityByEntityID(entityID, responseBuf, bufSize, resizeFunc) | howEntityByEntityId(entityId, flags) | string | SM-1, SM-3.3 |
-| G2_howEntityByEntityID_V2(entityID, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
-| G2_init(moduleName, iniParams, verboseLogging) | initialize(instanceName, settings, configId, verboseLogging) | - | `configId` can be `nil`, `None`, `null`. Consider single object |
-| G2_initWithConfigID(moduleName, iniParams, initConfigID, verboseLogging) | [collapsed]  | | |
-| G2_primeEngine() | | - | |
-| G2_processRedoRecord(responseBuf, bufSize, resizeFunc ) | processRedoRecord(redoRecord, flags) | string | |
-| G2_processRedoRecordWithInfo(flags, responseBuf, bufSize, infoBuf, infoBufSize, resizeFunc) | [collapsed] | | |
-| G2_reevaluateEntity(entityID, flags) | reevaluateEntity(entityId, flags) | string | `flags` has `WITH_INFO` bit |
-| G2_reevaluateEntityWithInfo(entityID, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | string | |
-| G2_reevaluateRecord(dataSourceCode, recordID, flags) | reevaluateRecord(dataSourceCode, recordId, flags) | string | `flags` has `WITH_INFO` bit |
-| G2_reevaluateRecordWithInfo(dataSourceCode, recordID, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
-| G2_reinit(initConfigID) | reinitialize(configId) | - | ??? |
-| G2_replaceRecord(dataSourceCode, recordID, jsonData) | [not-implemented] | string | |
-| G2_replaceRecordWithInfo(dataSourceCode, recordID, jsonData, flags, responseBuf, bufSize, resizeFunc) | [not-implemented]  | | |
-| G2_searchByAttributes(jsonData, responseBuf, bufSize, resizeFunc) | searchByAttributes(attributes, searchProfile, flags) | string | |
-| G2_searchByAttributes_V2(jsonData, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
-| G2_searchByAttributes_V3(jsonData, searchProfile, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
-| G2_stats(responseBuf, bufSize, resizeFunc ) | getStats() | string | |
-| G2_whyEntities(entityID1, entityID2, responseBuf, bufSize, resizeFunc) | whyEntities(entityId1, entityId2, flags) | string | SM-1, SM-3.3 |
-| G2_whyEntities_V2(entityID1, entityID2, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
-| G2_whyRecordInEntity(dataSourceCode, recordID, responseBuf, bufSize, resizeFunc) | whyRecordInEntity(dataSourceCode, recordId, flags) | string | SM-1, SM-3.3 |
-| G2_whyRecordInEntity_V2(dataSourceCode, recordID, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
-| G2_whyRecords(dataSourceCode1, recordID1, dataSourceCode2, recordID2, responseBuf, bufSize, resizeFunc) | whyRecords(dataSourceCode1, recordId1, dataSourceCode2, recordId2, flags) | string | SM-1, SM-3.3 |
-| G2_whyRecords_V2(dataSourceCode1, recordID1, dataSourceCode2, recordID2, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
+| Sz_addRecord(dataSourceCode, recordID, jsonData) | addRecord(dataSourceCode, recordId, recordDefinition, flags) | string | |
+| Sz_addRecordWithInfo(dataSourceCode, recordID, jsonData, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
+| Sz_clearLastException() | [not-public] | | |
+| Sz_closeExport(responseHandle) | closeExport(exportHandle) | - | |
+| Sz_countRedoRecords() | | int64 | |
+| Sz_deleteRecord(dataSourceCode, recordID) | deleteRecord(dataSourceCode, recordId, flags) | string | |
+| Sz_deleteRecordWithInfo(dataSourceCode, recordID, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
+| Sz_destroy() | | - | |
+| Sz_exportCSVEntityReport(csvColumnList, flags, responseHandle) | exportCsvEntityReport(csvColumnList, flags) | exportHandle | |
+| Sz_exportConfig(responseBuf, bufSize, resizeFunc) | [not-implemented] | | |
+| Sz_exportConfigAndConfigID(responseBuf, bufSize, resizeFunc, configID) | [not-implemented] | | |
+| Sz_exportJSONEntityReport(flags, responseHandle) | exportJsonEntityReport(flags) | exportHandle | |
+| Sz_fetchNext(responseHandle, responseBuf, bufSize) | fetchNext(exportHandle)  | string | |
+| Sz_findInterestingEntitiesByEntityID(entityID, flags, responseBuf, bufSize, resizeFunc) | findInterestingEntitiesByEntityId(entityId, flags)  | string |  |
+| Sz_findInterestingEntitiesByRecordID(dataSourceCode, recordID, flags, responseBuf, bufSize, resizeFunc) | findInterestingEntitiesByRecordId(dataSourceCode, recordId, flags)  | string |  |
+| Sz_findNetworkByEntityID(entityList, maxDegree, buildOutDegree, maxEntities, responseBuf, bufSize, resizeFunc) | findNetworkByEntityId(entityIds, maxDegrees, buildOutDegrees, buildOutMaxEntities, flags)  | string | SM-3.1 |
+| Sz_findNetworkByEntityID_V2(entityList, maxDegree, buildOutDegree, maxEntities, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
+| Sz_findNetworkByRecordID(recordList, maxDegree, buildOutDegree, maxEntities, responseBuf, bufSize, resizeFunc) | findNetworkByRecordId(recordKeys, maxDegrees, buildOutDegrees, buildOutMaxEntities, flags) | string | SM-3.1 |
+| Sz_findNetworkByRecordID_V2(recordList, maxDegree, buildOutDegree, maxEntities, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
+| Sz_findPathByEntityID(entityID1, entityID2, maxDegree, responseBuf, bufSize, resizeFunc) | findPathByEntityId(startEntityId, endEntityId, maxDegrees, avoidEntityIds, requiredDataSources, flags) | string | SM-3.1 |
+| Sz_findPathByEntityID_V2(entityID1, entityID2, maxDegree, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
+| Sz_findPathByRecordID(dataSourceCode1, recordID1, dataSourceCode2, recordID2, maxDegree, responseBuf, bufSize, resizeFunc) | findPathByRecordId(startDataSourceCode, startRecordId, endDataSourceCode, endRecordId, maxDegrees, avoidRecordKeys, requiredDataSources, flags) | string | SM-3.1 |
+| Sz_findPathByRecordID_V2(dataSourceCode1, recordID1, dataSourceCode2, recordID2, maxDegree, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
+| Sz_findPathExcludingByEntityID(entityID1, entityID2, maxDegree, excludedEntities, responseBuf, bufSize, resizeFunc) |  [collapsed]  | | |
+| Sz_findPathExcludingByEntityID_V2(entityID1, entityID2, maxDegree, excludedEntities, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
+| Sz_findPathExcludingByRecordID(dataSourceCode1, recordID1, dataSourceCode2, recordID2, maxDegree, excludedRecords, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
+| Sz_findPathExcludingByRecordID_V2(dataSourceCode1, recordID1, dataSourceCode2, recordID2, maxDegree, excludedRecords, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
+| Sz_findPathIncludingSourceByEntityID(entityID1, entityID2, maxDegree, excludedEntities, requiredDsrcs, responseBuf, bufSize, resizeFunc) |  [collapsed]  | |  |
+| Sz_findPathIncludingSourceByEntityID_V2(entityID1, entityID2, maxDegree, excludedEntities, requiredDsrcs, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
+| Sz_findPathIncludingSourceByRecordID(dataSourceCode1, recordID1, dataSourceCode2, recordID2, maxDegree, excludedRecords, requiredDsrcs, responseBuf, bufSize, resizeFunc |  [collapsed]  | | |
+| Sz_findPathIncludingSourceByRecordID_V2(dataSourceCode1, recordID1, dataSourceCode2, recordID2, maxDegree, excludedRecords, requiredDsrcs, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
+| Sz_getActiveConfigID(configID) | getActiveConfigId() | int64 | |
+| Sz_getEntityByEntityID(entityID, responseBuf, bufSize, resizeFunc) | getEntityByEntityId(entityId, flags) | string | |
+| Sz_getEntityByEntityID_V2(entityID, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
+| Sz_getEntityByRecordID(dataSourceCode, recordID, responseBuf, bufSize, resizeFunc) | getEntityByRecordId(dataSourceCode, recordId, flags) | string | |
+| Sz_getEntityByRecordID_V2(dataSourceCode, recordID, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
+| Sz_getLastException(buffer, bufSize) | [not-public] | | |
+| Sz_getLastExceptionCode() | [not-public] | | |
+| Sz_getRecord(dataSourceCode, recordID, responseBuf, bufSize, resizeFunc) | getRecord(dataSourceCode, recordId, flags) | string | |
+| Sz_getRecord_V2(dataSourceCode, recordID, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
+| Sz_getRedoRecord(responseBuf, bufSize, resizeFunc ) | getRedoRecord() | string | |
+| Sz_getRepositoryLastModifiedTime(lastModifiedTime) |  [not-implemented] | | |
+| Sz_getVirtualEntityByRecordID(recordList, responseBuf, bufSize, resizeFunc) | getVirtualEntityByRecordId(recordKeys, flags) | string | |
+| Sz_getVirtualEntityByRecordID_V2(recordList, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
+| Sz_howEntityByEntityID(entityID, responseBuf, bufSize, resizeFunc) | howEntityByEntityId(entityId, flags) | string | SM-1, SM-3.3 |
+| Sz_howEntityByEntityID_V2(entityID, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
+| Sz_init(moduleName, iniParams, verboseLogging) | initialize(instanceName, settings, configId, verboseLogging) | - | `configId` can be `nil`, `None`, `null`. Consider single object |
+| Sz_initWithConfigID(moduleName, iniParams, initConfigID, verboseLogging) | [collapsed]  | | |
+| Sz_preprocessRecord(jsonData, flags, responseBuf, bufSize, resizeFunc ) | preprocessRecord(record, flags) | string | |
+| Sz_primeEngine() | | - | |
+| Sz_processRedoRecord(responseBuf, bufSize, resizeFunc ) | processRedoRecord(redoRecord, flags) | string | |
+| Sz_processRedoRecordWithInfo(flags, responseBuf, bufSize, infoBuf, infoBufSize, resizeFunc) | [collapsed] | | |
+| Sz_reevaluateEntity(entityID, flags) | reevaluateEntity(entityId, flags) | string | `flags` has `WITH_INFO` bit |
+| Sz_reevaluateEntityWithInfo(entityID, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | string | |
+| Sz_reevaluateRecord(dataSourceCode, recordID, flags) | reevaluateRecord(dataSourceCode, recordId, flags) | string | `flags` has `WITH_INFO` bit |
+| Sz_reevaluateRecordWithInfo(dataSourceCode, recordID, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
+| Sz_reinit(initConfigID) | reinitialize(configId) | - | ??? |
+| Sz_replaceRecord(dataSourceCode, recordID, jsonData) | [not-implemented] | string | |
+| Sz_replaceRecordWithInfo(dataSourceCode, recordID, jsonData, flags, responseBuf, bufSize, resizeFunc) | [not-implemented]  | | |
+| Sz_searchByAttributes(jsonData, responseBuf, bufSize, resizeFunc) | searchByAttributes(attributes, searchProfile, flags) | string | |
+| Sz_searchByAttributes_V2(jsonData, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
+| Sz_searchByAttributes_V3(jsonData, searchProfile, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
+| Sz_stats(responseBuf, bufSize, resizeFunc ) | getStats() | string | |
+| Sz_whyEntities(entityID1, entityID2, responseBuf, bufSize, resizeFunc) | whyEntities(entityId1, entityId2, flags) | string | SM-1, SM-3.3 |
+| Sz_whyEntities_V2(entityID1, entityID2, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
+| Sz_whyRecordInEntity(dataSourceCode, recordID, responseBuf, bufSize, resizeFunc) | whyRecordInEntity(dataSourceCode, recordId, flags) | string | SM-1, SM-3.3 |
+| Sz_whyRecordInEntity_V2(dataSourceCode, recordID, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
+| Sz_whyRecords(dataSourceCode1, recordID1, dataSourceCode2, recordID2, responseBuf, bufSize, resizeFunc) | whyRecords(dataSourceCode1, recordId1, dataSourceCode2, recordId2, flags) | string | SM-1, SM-3.3 |
+| Sz_whyRecords_V2(dataSourceCode1, recordID1, dataSourceCode2, recordID2, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
 
 ### SzProduct
 
 | Existing name | Canonical Name | Return value | Smells |
 |---------------|----------------|--------------|--------|
-| G2Product_clearLastException() | [not-public] | | |
-| G2Product_destroy() | | - | |
-| G2Product_getLastException(buffer, bufSize) | [not-public] | | |
-| G2Product_getLastExceptionCode() | [not-public]| | |
-| G2Product_init(moduleName, iniParams, verboseLogging) | initialize(instanceName, settings, verboseLogging) | - | |
-| G2Product_license() | getLicense() | string | |
-| G2Product_validateLicenseFile(licenseFilePath, errorBuf, errorBufSize, resizeFunc) | [not-implemented] | | |
-| G2Product_validateLicenseStringBase64(licenseString, errorBuf, errorBufSize, resizeFunc) | ??? | | |
-| G2Product_version() | getVersion() | string | |
+| SzProduct_clearLastException() | [not-public] | | |
+| SzProduct_destroy() | | - | |
+| SzProduct_getLastException(buffer, bufSize) | [not-public] | | |
+| SzProduct_getLastExceptionCode() | [not-public]| | |
+| SzProduct_init(moduleName, iniParams, verboseLogging) | initialize(instanceName, settings, verboseLogging) | - | |
+| SzProduct_license() | getLicense() | string | |
+| SzProduct_validateLicenseFile(licenseFilePath, errorBuf, errorBufSize, resizeFunc) | [not-implemented] | | |
+| SzProduct_validateLicenseStringBase64(licenseString, errorBuf, errorBufSize, resizeFunc) | ??? | | |
+| SzProduct_version() | getVersion() | string | |
 
 ## Abstract Factory
 
@@ -163,14 +164,14 @@ The following list should reflect modifications documented in
 ### Handling WithInfo - Proposal 1
 
 1. Functions affected:
-   - G2_addRecordWithInfo
-   - G2_deleteRecordWithInfo
-   - G2_processWithInfo
-   - G2_reevaluateEntityWithInfo
-   - G2_reevaluateRecordWithInfo
-   - G2_replaceRecordWithInfo
+   - Sz_addRecordWithInfo
+   - Sz_deleteRecordWithInfo
+   - Sz_processWithInfo
+   - Sz_reevaluateEntityWithInfo
+   - Sz_reevaluateRecordWithInfo
+   - Sz_replaceRecordWithInfo
 1. Approach:
-   1. Function name becomes shortened to match the non-with-info name (e.g. `G2_addRecord()`).
+   1. Function name becomes shortened to match the non-with-info name (e.g. `Sz_addRecord()`).
    1. The `xx_withInfo()` function/method signature is not in the SDK.
    1. Function always returns JSON string.
    1. A final input parameter, say `resultFlags` (int64 used as a bit-mask), indicates the nature of the content returned in the JSON string.
@@ -181,8 +182,8 @@ The following list should reflect modifications documented in
          ```
 
    1. If `resultFlags` is 0 (i.e. no bit flags are on) then the returned value is `{}`, an empty JSON string.
-   1. Beneath the covers, the SDK determines if the `WITH_INFO` bit is **off**, in which case it calls `G2_addRecord`.
-      If the `WITH_INFO` bit is **on**, the SDK calls `G2_addRecordWithInfo`.
+   1. Beneath the covers, the SDK determines if the `WITH_INFO` bit is **off**, in which case it calls `Sz_addRecord`.
+      If the `WITH_INFO` bit is **on**, the SDK calls `Sz_addRecordWithInfo`.
    1. Flag can be OR-ed for future expansion. Example:
 
          ```python
