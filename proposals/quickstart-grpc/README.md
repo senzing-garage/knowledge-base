@@ -8,6 +8,7 @@ The Senzing QuickStart using Python over gRPC requires the following prerequisit
 
 1. [Python 3]
 1. [Docker]
+    1. :warning: If using Docker Desktop, be sure [host networking is enabled].
 1. [senzing-grpc] Python package.
    To install, run:
 
@@ -92,6 +93,7 @@ feel free to explore Senzing.
     1. [Map and load your own data - Windows]
 
 [Docker]: https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/docker.md
+[host networking is enabled]: https://docs.docker.com/engine/network/drivers/host/#docker-desktop
 [Map and load your own data - Linux/macOS]: map-and-load-your-own-data-linux-macos.md
 [Map and load your own data - Windows]: map-and-load-your-own-data-windows.md
 [prerequisites]: #prerequisistes
