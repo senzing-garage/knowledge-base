@@ -111,7 +111,7 @@ The following list should reflect modifications documented in
 | Sz_howEntityByEntityID_V2(entityID, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
 | Sz_init(moduleName, iniParams, verboseLogging) | initialize(instanceName, settings, configId, verboseLogging) | - | `configId` can be `nil`, `None`, `null`. Consider single object |
 | Sz_initWithConfigID(moduleName, iniParams, initConfigID, verboseLogging) | [collapsed]  | | |
-| Sz_preprocessRecord(jsonData, flags, responseBuf, bufSize, resizeFunc ) | preprocessRecord(record, flags) | string | |
+| Sz_preprocessRecord(jsonData, flags, responseBuf, bufSize, resizeFunc ) | preprocessRecord(recordDefinition, flags) | string | |
 | Sz_primeEngine() | | - | |
 | Sz_processRedoRecord(responseBuf, bufSize, resizeFunc ) | processRedoRecord(redoRecord, flags) | string | |
 | Sz_processRedoRecordWithInfo(flags, responseBuf, bufSize, infoBuf, infoBufSize, resizeFunc) | [collapsed] | | |

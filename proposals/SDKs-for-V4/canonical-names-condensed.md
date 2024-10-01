@@ -74,7 +74,7 @@ The following list should reflect modifications documented in
 | Sz_getVirtualEntityByRecordID(recordList, responseBuf, bufSize, resizeFunc) | getVirtualEntityByRecordId(recordKeys, flags) | string | |
 | Sz_howEntityByEntityID(entityID, responseBuf, bufSize, resizeFunc) | howEntityByEntityId(entityId, flags) | string | SM-1, SM-3.3 |
 | Sz_init(moduleName, iniParams, verboseLogging) | initialize(instanceName, settings, configId, verboseLogging) | - | `configId` can be `nil`, `None`, `null`. Consider single object |
-| Sz_preprocessRecord(jsonData, flags, responseBuf, bufSize, resizeFunc ) | preprocessRecord(record, flags) | string | |
+| Sz_preprocessRecord(jsonData, flags, responseBuf, bufSize, resizeFunc ) | preprocessRecord(recordDefinition, flags) | string | |
 | Sz_primeEngine() | | - | |
 | Sz_processRedoRecord(responseBuf, bufSize, resizeFunc ) | processRedoRecord(redoRecord, flags) | string | |
 | Sz_reevaluateEntity(entityID, flags) | reevaluateEntity(entityId, flags) | string | `flags` has `WITH_INFO` bit |
