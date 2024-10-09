@@ -153,6 +153,7 @@ and custom ports will be used.
 
 1. [View SQLite database]
 
+[example-data-for-senzing.json]: https://raw.githubusercontent.com/senzing-garage/knowledge-base/main/proposals/streamline/example-data-for-senzing.json
 [High performance loading with Python]: #
 [Overview]: README.md
 [Python 3]: https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/python3.md
@@ -161,4 +162,3 @@ and custom ports will be used.
 [Try Senzing's Hello World - Linux/macOS]: hello-world-linux-macos.md
 [Use Senzing's Truth Set data - Linux/macOS]: use-senzings-truth-set-data-linux-macos.md
 [View SQLite database]: coleifer-sqlite-web.md
-[example-data-for-senzing.json]: https://raw.githubusercontent.com/senzing-garage/knowledge-base/main/proposals/streamline/example-data-for-senzing.json

@@ -108,6 +108,10 @@ Senzing database inside the running Docker container.
 
     If running in the interactive Python session, wait until the `>>>` prompt appears before proceeding.
 
+   Note that this is a simple example of adding records to Senzing and is not optimized for performance.
+   For higher performance techniques, additional Python programming is needed.
+   For examples, see [High performance loading with Python].
+
 ## View results
 
 7. Entity details can be viewed.
@@ -180,6 +184,7 @@ Senzing database inside the running Docker container.
 
 1. [View SQLite database](coleifer-sqlite-web.md)
 
+[High performance loading with Python]: #
 [Map and load your own data]: map-and-load-your-own-data.md
 [Overview]: README.md
 [Python 3]: https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/python3.md
