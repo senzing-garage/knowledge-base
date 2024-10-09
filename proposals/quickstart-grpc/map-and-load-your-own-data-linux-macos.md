@@ -6,7 +6,7 @@ and custom ports will be used.
 
 ## Prerequisites
 
-1. [Run Docker container].
+1. [Run senzing/demo-quickstart Docker container].
 
 ## Create your input file
 
@@ -139,12 +139,13 @@ and custom ports will be used.
 
 ## Shutdown
 
-6. To end the Senzing gRPC service using Docker,
+7. To end the Senzing gRPC service using Docker,
    use `ctrl-c` to stop the `docker run ...` program.
 
 ## Next steps
 
-1. [Try Senzing's Hello World]
+8. [Overview]
+1. [Try Senzing's Hello World - Linux/macOS]
 1. [Use Senzing's Truth Set data - Linux/macOS]
 1. Map and load your own data - Linux/macOS
 
@@ -152,8 +153,9 @@ and custom ports will be used.
 
 1. [View SQLite database]
 
-[Run Docker container]: README.md#run-docker-container
-[Try Senzing's Hello World]: README.md
+[High performance loading with Python]: #
+[Overview]: README.md
+[Run senzing/demo-quickstart Docker container]: README.md#run-docker-container
+[Try Senzing's Hello World - Linux/macOS]: hello-world-linux-macos.md
 [Use Senzing's Truth Set data - Linux/macOS]: use-senzings-truth-set-data-linux-macos.md
 [View SQLite database]: coleifer-sqlite-web.md
-[High performance loading with Python]: #

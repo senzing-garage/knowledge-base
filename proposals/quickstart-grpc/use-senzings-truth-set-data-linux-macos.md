@@ -5,7 +5,7 @@ Senzing database inside the running Docker container.
 
 ## Prerequisites
 
-1. [Run Docker container]
+1. [Run senzing/demo-quickstart Docker container].
 
 ## Start interactive Python session
 
@@ -163,7 +163,8 @@ Senzing database inside the running Docker container.
 
 ## Next steps
 
-1. [Try Senzing's Hello World]
+9. [Overview]
+1. [Try Senzing's Hello World - Linux/macOS]
 1. Use Senzing's Truth Set data - Linux/macOS
 1. [Map and load your own data - Linux/macOS]
 
@@ -172,9 +173,10 @@ Senzing database inside the running Docker container.
 1. [View SQLite database](coleifer-sqlite-web.md)
 
 [Map and load your own data - Linux/macOS]: map-and-load-your-own-data-linux-macos.md
-[Run Docker container]: README.md#run-docker-container
-[Try Senzing's Hello World]: README.md
+[Overview]: README.md
+[Run senzing/demo-quickstart Docker container]: README.md#run-docker-container
 [senzing_truthset_add_datasources.py]: https://raw.githubusercontent.com/senzing-garage/knowledge-base/main/proposals/streamline/senzing_truthset_add_datasources.py
 [senzing_truthset_add_records.py]: https://raw.githubusercontent.com/senzing-garage/knowledge-base/main/proposals/streamline/senzing_truthset_add_records.py
 [senzing_truthset_get_entity.py]: https://raw.githubusercontent.com/senzing-garage/knowledge-base/main/proposals/streamline/senzing_truthset_get_entity.py
 [senzing_truthset_search.py]: https://raw.githubusercontent.com/senzing-garage/knowledge-base/main/proposals/streamline/senzing_truthset_search.py
+[Try Senzing's Hello World - Linux/macOS]: hello-world-linux-macos.md
