@@ -1,4 +1,4 @@
-# Map and load your own data  - Linux/macOS
+# Map and load your own data
 
 In this demonstration, your data will be added to the Senzing database.
 This time the data will be persisted into SQLite database files residing on your local workstation

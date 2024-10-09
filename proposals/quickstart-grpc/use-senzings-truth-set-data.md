@@ -1,4 +1,4 @@
-# Use Senzing's Truth Set data - Linux/macOS
+# Use Senzing's Truth Set data
 
 In this demonstration, the Senzing Truth Set data will be added to the ephemeral
 Senzing database inside the running Docker container.
