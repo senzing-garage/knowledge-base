@@ -13,7 +13,6 @@ and custom ports will be used.
 
     ```console
     python3 -m pip install --upgrade senzing-grpc
-
     ```
 
 ## Create your input file
@@ -34,7 +33,6 @@ and custom ports will be used.
     {"DATA_SOURCE": "MY_DATASOURCE", "RECORD_ID": "513789670", "SOCIAL_HANDLE": "tainsz", "ADDR_STATE": "OK", "ADDR_POSTAL_CODE": "34133", "SSN_NUMBER": "758-42-2397", "NAME_FIRST": "JAFMES", "GENDER": "M", "DSRC_ACTION": "A", "ADDR_CITY": "TAlsa", "DRIVERS_LICENSE_STATE": "NY", "PHONE_NUMBER": "580-558-8123", "NAME_LAST": "HENDERSON", "ADDR_LINE1": "6738 112thEast AVE"}
     {"DATA_SOURCE": "MY_DATASOURCE", "RECORD_ID": "212442489", "SOCIAL_HANDLE": "debrides7", "ADDR_STATE": "CO", "ADDR_POSTAL_CODE": "80501", "NAME_FIRST": "S", "GENDER": "M", "CC_ACCOUNT_NUMBER": "676396021499009121", "DSRC_ACTION": "A", "DRIVERS_LICENSE_STATE": "NE", "ADDR_CITY": "Longmont", "NAME_LAST": "JONES", "ADDR_LINE1": "948 10th AVE"}
     EOT
-
     ```
 
    The command created a new `/tmp/example-data-for-senzing.json` file on your local workstation.
@@ -46,7 +44,6 @@ and custom ports will be used.
 
     ```console
     python3
-
     ```
 
 ## Identify data sources
@@ -61,7 +58,6 @@ and custom ports will be used.
 
         ```python
         DATASOURCES = ["MY_DATASOURCE"]
-
         ```
 
     1. Copy/paste the following into the interactive Python session
@@ -96,7 +92,6 @@ and custom ports will be used.
             sz_diagnostic.reinitialize(new_config_id)
         except SzError as err:
             print(f"\nError:\n{err}\n")
-
         ```
 
 ## Add records
@@ -110,7 +105,6 @@ and custom ports will be used.
 
         ```python
         INPUT_FILENAME = "/tmp/example-data-for-senzing.json"
-
         ```
 
     1. Copy/paste the following into the interactive Python session
@@ -129,7 +123,6 @@ and custom ports will be used.
                     print(info)
         except SzError as err:
             print(f"\nError:\n{err}\n")
-
         ```
 
    Note that this is a simple example of adding records to Senzing and is not optimized for performance.
@@ -142,7 +135,6 @@ and custom ports will be used.
 
     ```python
     quit()
-
     ```
 
 ## Shutdown

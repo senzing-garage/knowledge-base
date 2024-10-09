@@ -1,7 +1,5 @@
 # Try Senzing's Hello World
 
-The Senzing QuickStart using Python over gRPC works on Linux, macOS, and Windows.
-
 ## Prerequisistes
 
 The Senzing QuickStart using Python over gRPC requires the following prerequisites:
@@ -13,7 +11,6 @@ The Senzing QuickStart using Python over gRPC requires the following prerequisit
 
     ```console
     python3 -m pip install --upgrade senzing-grpc
-
     ```
 
 ## View Senzing version
@@ -27,7 +24,6 @@ and access it with Python.
 
     ```console
     python3
-
     ```
 
 1. For a quick test of calling Senzing's `sz_product.get_version()`,
@@ -41,11 +37,9 @@ and access it with Python.
     sz_abstract_factory = SzAbstractFactory(grpc_channel=grpc.insecure_channel("localhost:8261"))
     sz_product = sz_abstract_factory.create_sz_product()
     print(sz_product.get_version())
-
     ```
 
-    or download and run
-    [senzing_hello_world.py](https://raw.githubusercontent.com/senzing-garage/knowledge-base/main/proposals/quickstart-grpc/senzing_hello_world.py).
+    or download and run [senzing_hello_world.py].
 
 1. To end the interactive Python session,
    copy/paste the following block of code into the interactive Python session
@@ -53,7 +47,6 @@ and access it with Python.
 
     ```python
     quit()
-
     ```
 
 1. To stop the Docker container,
@@ -61,24 +54,15 @@ and access it with Python.
 
 ## Next steps
 
-Now that an environment is setup,
-feel free to explore Senzing.
+8. [Overview]
+1. Try Senzing's Hello World - Windows
+1. [Use Senzing's Truth Set data - Windows]
+1. [Map and load your own data - Windows]
 
-- [Overview]
-- Linux / macOs
-    1. Try Senzing's Hello World
-    1. [Use Senzing's Truth Set data - Linux/macOS]
-    1. [Map and load your own data - Linux/macOS]
-- Windows
-    1. Try Senzing's Hello World
-    1. [Use Senzing's Truth Set data - Windows]
-    1. [Map and load your own data - Windows]
-
-[Map and load your own data - Linux/macOS]: map-and-load-your-own-data-linux-macos.md
 [Map and load your own data - Windows]: map-and-load-your-own-data-windows.md
 [Overview]: README.md
 [Python 3]: https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/python3.md
 [Run senzing/demo-quickstart Docker container]: README.md#run-docker-container
+[senzing_hello_world.py]: https://raw.githubusercontent.com/senzing-garage/knowledge-base/main/proposals/quickstart-grpc/senzing_hello_world.py
 [senzing-grpc]: https://github.com/senzing-garage/sz-sdk-python-grpc
-[Use Senzing's Truth Set data - Linux/macOS]: use-senzings-truth-set-data-linux-macos.md
 [Use Senzing's Truth Set data - Windows]: use-senzings-truth-set-data-windows.md
