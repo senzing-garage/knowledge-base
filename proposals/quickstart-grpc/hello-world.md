@@ -14,6 +14,15 @@ The Senzing QuickStart using Python over gRPC requires the following prerequisit
 
     ```
 
+    1. If using Python virtual enviroment, example:
+
+        ```console
+        python3 -m venv ~/my-venv
+        source ~/my-venv/bin/activate
+        python3 -m pip install --upgrade senzing-grpc
+
+        ```
+
 ## View Senzing version
 
 The following example shows how to start
