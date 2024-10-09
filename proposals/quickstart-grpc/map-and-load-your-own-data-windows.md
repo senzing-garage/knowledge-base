@@ -17,7 +17,7 @@ and custom ports will be used.
 
 ## Create your input file
 
-3. On your local workstation, create a file of JSON-lines with your data to be loaded into Senzing.
+4. On your local workstation, create a file of JSON-lines with your data to be loaded into Senzing.
 
    As an example, download
    [example-data-for-senzing.json](https://raw.githubusercontent.com/senzing-garage/knowledge-base/main/proposals/streamline/example-data-for-senzing.json) into your `Downloads` directory.
