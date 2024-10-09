@@ -6,11 +6,19 @@ and custom ports will be used.
 
 ## Prerequisites
 
-1. [Run senzing/demo-quickstart Docker container].
+1. [Run senzing/demo-quickstart Docker container]
+1. [Python 3]
+1. [senzing-grpc] Python package.
+   To install, run:
+
+    ```console
+    python3 -m pip install --upgrade senzing-grpc
+
+    ```
 
 ## Create your input file
 
-2. On your local workstation, create a file of JSON-lines with your data to be loaded into Senzing.
+4. On your local workstation, create a file of JSON-lines with your data to be loaded into Senzing.
 
    To create an example file of JSON-lines,
    copy/paste the following into a terminal window:
@@ -33,7 +41,7 @@ and custom ports will be used.
 
 ## Start interactive Python session
 
-3. Start an interactive Python session.
+5. Start an interactive Python session.
    Example:
 
     ```console
@@ -43,7 +51,7 @@ and custom ports will be used.
 
 ## Identify data sources
 
-4. To add your data sources to the Senzing configuration,
+6. To add your data sources to the Senzing configuration,
    determine the list of data sources used in your data.
    Then in the following example, modify the value of `DATASOURCES` to match your data.
 
@@ -93,7 +101,7 @@ and custom ports will be used.
 
 ## Add records
 
-5. To add your data to the Senzing database,
+7. To add your data to the Senzing database,
    in the following example modify the value of `INPUT_FILENAME` to match the path to your file of JSON lines.
 
     1. :pencil2:
@@ -139,12 +147,12 @@ and custom ports will be used.
 
 ## Shutdown
 
-7. To end the Senzing gRPC service using Docker,
+9. To end the Senzing gRPC service using Docker,
    use `ctrl-c` to stop the `docker run ...` program.
 
 ## Next steps
 
-8. [Overview]
+10. [Overview]
 1. [Try Senzing's Hello World - Linux/macOS]
 1. [Use Senzing's Truth Set data - Linux/macOS]
 1. Map and load your own data - Linux/macOS
@@ -155,7 +163,9 @@ and custom ports will be used.
 
 [High performance loading with Python]: #
 [Overview]: README.md
+[Python 3]: https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/python3.md
 [Run senzing/demo-quickstart Docker container]: README.md#run-docker-container
+[senzing-grpc]: https://github.com/senzing-garage/sz-sdk-python-grpc
 [Try Senzing's Hello World - Linux/macOS]: hello-world-linux-macos.md
 [Use Senzing's Truth Set data - Linux/macOS]: use-senzings-truth-set-data-linux-macos.md
 [View SQLite database]: coleifer-sqlite-web.md

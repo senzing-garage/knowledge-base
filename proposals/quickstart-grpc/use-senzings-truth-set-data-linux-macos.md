@@ -5,11 +5,19 @@ Senzing database inside the running Docker container.
 
 ## Prerequisites
 
-1. [Run senzing/demo-quickstart Docker container].
+1. [Run senzing/demo-quickstart Docker container]
+1. [Python 3]
+1. [senzing-grpc] Python package.
+   To install, run:
+
+    ```console
+    python3 -m pip install --upgrade senzing-grpc
+
+    ```
 
 ## Start interactive Python session
 
-2. Start an interactive Python session.
+4. Start an interactive Python session.
    Example:
 
     ```console
@@ -19,7 +27,7 @@ Senzing database inside the running Docker container.
 
 ## Identify data sources
 
-3. To add Truth Set data sources to the Senzing configuration,
+5. To add Truth Set data sources to the Senzing configuration,
    copy/paste the following block of code into the interactive Python session
    and press the **Enter** key.
    Example:
@@ -63,7 +71,7 @@ Senzing database inside the running Docker container.
 
 ## Add records
 
-4. To add Truth Set data to the Senzing database,
+6. To add Truth Set data to the Senzing database,
    copy/paste the following block of code into the interactive Python session
    and press the **Enter** key.
 
@@ -102,7 +110,7 @@ Senzing database inside the running Docker container.
 
 ## View results
 
-5. Entity details can be viewed.
+7. Entity details can be viewed.
    Copy/paste the following block of code into the interactive Python session
    and press the **Enter** key.
 
@@ -163,7 +171,7 @@ Senzing database inside the running Docker container.
 
 ## Next steps
 
-9. [Overview]
+11. [Overview]
 1. [Try Senzing's Hello World - Linux/macOS]
 1. Use Senzing's Truth Set data - Linux/macOS
 1. [Map and load your own data - Linux/macOS]
@@ -174,9 +182,11 @@ Senzing database inside the running Docker container.
 
 [Map and load your own data - Linux/macOS]: map-and-load-your-own-data-linux-macos.md
 [Overview]: README.md
+[Python 3]: https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/python3.md
 [Run senzing/demo-quickstart Docker container]: README.md#run-docker-container
 [senzing_truthset_add_datasources.py]: https://raw.githubusercontent.com/senzing-garage/knowledge-base/main/proposals/streamline/senzing_truthset_add_datasources.py
 [senzing_truthset_add_records.py]: https://raw.githubusercontent.com/senzing-garage/knowledge-base/main/proposals/streamline/senzing_truthset_add_records.py
 [senzing_truthset_get_entity.py]: https://raw.githubusercontent.com/senzing-garage/knowledge-base/main/proposals/streamline/senzing_truthset_get_entity.py
 [senzing_truthset_search.py]: https://raw.githubusercontent.com/senzing-garage/knowledge-base/main/proposals/streamline/senzing_truthset_search.py
+[senzing-grpc]: https://github.com/senzing-garage/sz-sdk-python-grpc
 [Try Senzing's Hello World - Linux/macOS]: hello-world-linux-macos.md

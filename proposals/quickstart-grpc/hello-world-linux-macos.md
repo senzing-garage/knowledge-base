@@ -6,7 +6,7 @@ The Senzing QuickStart using Python over gRPC works on Linux, macOS, and Windows
 
 The Senzing QuickStart using Python over gRPC requires the following prerequisites:
 
-1. [Run senzing/demo-quickstart Docker container].
+1. [Run senzing/demo-quickstart Docker container]
 1. [Python 3]
 1. [senzing-grpc] Python package.
    To install, run:
@@ -44,8 +44,7 @@ and access it with Python.
 
     ```
 
-    or download and run
-    [senzing_hello_world.py](https://raw.githubusercontent.com/senzing-garage/knowledge-base/main/proposals/quickstart-grpc/senzing_hello_world.py).
+    or download and run [senzing_hello_world.py].
 
 1. To end the interactive Python session,
    copy/paste the following block of code into the interactive Python session
@@ -70,5 +69,6 @@ and access it with Python.
 [Overview]: README.md
 [Python 3]: https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/python3.md
 [Run senzing/demo-quickstart Docker container]: README.md#run-docker-container
+[senzing_hello_world.py]: https://raw.githubusercontent.com/senzing-garage/knowledge-base/main/proposals/quickstart-grpc/senzing_hello_world.py
 [senzing-grpc]: https://github.com/senzing-garage/sz-sdk-python-grpc
 [Use Senzing's Truth Set data - Linux/macOS]: use-senzings-truth-set-data-linux-macos.md
