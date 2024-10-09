@@ -55,14 +55,14 @@ and access it with Python.
 ## Next steps
 
 8. [Overview]
-1. Try Senzing's Hello World - Linux/macOS
-1. [Use Senzing's Truth Set data - Linux/macOS]
-1. [Map and load your own data - Linux/macOS]
+1. Try Senzing's Hello World
+1. [Use Senzing's Truth Set data]
+1. [Map and load your own data]
 
-[Map and load your own data - Linux/macOS]: map-and-load-your-own-data-linux-macos.md
+[Map and load your own data]: map-and-load-your-own-datas.md
 [Overview]: README.md
 [Python 3]: https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/python3.md
 [Run senzing/demo-quickstart Docker container]: README.md#run-docker-container
 [senzing_hello_world.py]: https://raw.githubusercontent.com/senzing-garage/knowledge-base/main/proposals/quickstart-grpc/senzing_hello_world.py
 [senzing-grpc]: https://github.com/senzing-garage/sz-sdk-python-grpc
-[Use Senzing's Truth Set data - Linux/macOS]: use-senzings-truth-set-data-linux-macos.md
+[Use Senzing's Truth Set data]: use-senzings-truth-set-data.md

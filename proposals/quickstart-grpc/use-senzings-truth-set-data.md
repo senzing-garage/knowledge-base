@@ -163,15 +163,15 @@ Senzing database inside the running Docker container.
 ## Next steps
 
 11. [Overview]
-1. [Try Senzing's Hello World - Linux/macOS]
-1. Use Senzing's Truth Set data - Linux/macOS
-1. [Map and load your own data - Linux/macOS]
+1. [Try Senzing's Hello World]
+1. Use Senzing's Truth Set data
+1. [Map and load your own data]
 
 ## References
 
 1. [View SQLite database](coleifer-sqlite-web.md)
 
-[Map and load your own data - Linux/macOS]: map-and-load-your-own-data-linux-macos.md
+[Map and load your own data]: map-and-load-your-own-data.md
 [Overview]: README.md
 [Python 3]: https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/python3.md
 [Run senzing/demo-quickstart Docker container]: README.md#run-docker-container
@@ -180,4 +180,4 @@ Senzing database inside the running Docker container.
 [senzing_truthset_get_entity.py]: https://raw.githubusercontent.com/senzing-garage/knowledge-base/main/proposals/streamline/senzing_truthset_get_entity.py
 [senzing_truthset_search.py]: https://raw.githubusercontent.com/senzing-garage/knowledge-base/main/proposals/streamline/senzing_truthset_search.py
 [senzing-grpc]: https://github.com/senzing-garage/sz-sdk-python-grpc
-[Try Senzing's Hello World - Linux/macOS]: hello-world-linux-macos.md
+[Try Senzing's Hello World]: hello-world.md
