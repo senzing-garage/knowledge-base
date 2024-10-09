@@ -160,6 +160,4 @@ and custom ports will be used.
 [Python 3]: https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/python3.md
 [Run senzing/demo-quickstart Docker container]: README.md#run-docker-container
 [senzing-grpc]: https://github.com/senzing-garage/sz-sdk-python-grpc
-[Try Senzing's Hello World - Linux/macOS]: hello-world-linux-macos.md
-[Use Senzing's Truth Set data - Linux/macOS]: use-senzings-truth-set-data-linux-macos.md
 [View SQLite database]: coleifer-sqlite-web.md
