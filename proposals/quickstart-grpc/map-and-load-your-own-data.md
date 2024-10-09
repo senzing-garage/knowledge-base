@@ -110,9 +110,10 @@ and custom ports will be used.
 
         ```python
         import json
+        import os
 
         try:
-            with open(INPUT_FILENAME, "r") as file:
+            with open(os.path.expanduser(INPUT_FILENAME), "r") as file:
                 for line in file:
                     line_as_dict = json.loads(line)
                     data_source = line_as_dict.get("DATA_SOURCE")
