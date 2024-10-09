@@ -94,7 +94,7 @@ and custom ports will be used.
        1. Linux/macOS example:
 
         ```python
-        INPUT_FILENAME = "/tmp/example-data-for-senzing.json"
+        INPUT_FILENAME = "~/Downloads/example-data-for-senzing.json"
 
         ```
 
