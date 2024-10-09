@@ -150,10 +150,6 @@ and custom ports will be used.
 1. [Use Senzing's Truth Set data]
 1. Map and load your own data
 
-## References
-
-1. [View SQLite database]
-
 [example-data-for-senzing.json]: https://raw.githubusercontent.com/senzing-garage/knowledge-base/main/proposals/streamline/example-data-for-senzing.json
 [High performance loading with Python]: #
 [Overview]: README.md
@@ -162,4 +158,3 @@ and custom ports will be used.
 [senzing-grpc]: https://github.com/senzing-garage/sz-sdk-python-grpc
 [Try Senzing's Hello World]: hello-world.md
 [Use Senzing's Truth Set data]: use-senzings-truth-set-data.md
-[View SQLite database]: coleifer-sqlite-web.md
