@@ -146,9 +146,9 @@ and custom ports will be used.
 ## Next steps
 
 10. [Overview]
-1. [Try Senzing's Hello World - Linux/macOS]
-1. [Use Senzing's Truth Set data - Linux/macOS]
-1. Map and load your own data - Linux/macOS
+1. [Try Senzing's Hello World]
+1. [Use Senzing's Truth Set data]
+1. Map and load your own data
 
 ## References
 
@@ -160,4 +160,6 @@ and custom ports will be used.
 [Python 3]: https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/python3.md
 [Run senzing/demo-quickstart Docker container]: README.md#run-docker-container
 [senzing-grpc]: https://github.com/senzing-garage/sz-sdk-python-grpc
+[Try Senzing's Hello World]: hello-world.md
+[Use Senzing's Truth Set data]: use-senzings-truth-set-data.md
 [View SQLite database]: coleifer-sqlite-web.md
