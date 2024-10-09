@@ -12,6 +12,7 @@ This web app allows browsing of SQLite database contents.
 
     ```console
     export SENZING_MY_DEMO_1="/tmp/my-demo-1"
+
     ```
 
 1. To run the docker container,
@@ -26,6 +27,7 @@ This web app allows browsing of SQLite database contents.
     --tty \
     --volume ${SENZING_MY_DEMO_1}:/data \
     coleifer/sqlite-web
+
     ```
 
 1. To see "sqlite-web", visit
@@ -38,6 +40,7 @@ This web app allows browsing of SQLite database contents.
 
     ```console
     set SENZING_MY_DEMO_1="C:\\Users\\username\\my-demo-1"
+
     ```
 
 1. To run the docker container,
@@ -52,6 +55,7 @@ This web app allows browsing of SQLite database contents.
     --tty ^
     --volume  %SENZING_MY_DEMO_1%:/data ^
     coleifer/sqlite-web
+
     ```
 
 1. To see "sqlite-web", visit

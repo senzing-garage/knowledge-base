@@ -11,6 +11,7 @@ The Senzing QuickStart using Python over gRPC requires the following prerequisit
 
     ```console
     python3 -m pip install --upgrade senzing-grpc
+
     ```
 
 ## View Senzing version
@@ -24,6 +25,7 @@ and access it with Python.
 
     ```console
     python3
+
     ```
 
 1. For a quick test of calling Senzing's `sz_product.get_version()`,
@@ -37,6 +39,7 @@ and access it with Python.
     sz_abstract_factory = SzAbstractFactory(grpc_channel=grpc.insecure_channel("localhost:8261"))
     sz_product = sz_abstract_factory.create_sz_product()
     print(sz_product.get_version())
+
     ```
 
     or download and run [senzing_hello_world.py].
@@ -47,6 +50,7 @@ and access it with Python.
 
     ```python
     quit()
+
     ```
 
 1. To stop the Docker container,

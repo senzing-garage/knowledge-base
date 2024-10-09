@@ -12,6 +12,7 @@ Senzing database inside the running Docker container.
 
     ```console
     python3 -m pip install --upgrade senzing-grpc
+
     ```
 
 ## Start interactive Python session
@@ -21,6 +22,7 @@ Senzing database inside the running Docker container.
 
     ```console
     python3
+
     ```
 
 ## Identify data sources
@@ -62,6 +64,7 @@ Senzing database inside the running Docker container.
         sz_diagnostic.reinitialize(new_config_id)
     except SzError as err:
         print(f"\nError:\n{err}\n")
+
     ```
 
     or download and run [senzing_truthset_add_datasources.py].
@@ -149,10 +152,12 @@ Senzing database inside the running Docker container.
 
     ```python
     print(sz_engine.help())
+
     ```
 
     ```python
     print(sz_engine.help("get_entity_by_record_id"))
+
     ```
 
 1. To end the interactive Python session,
@@ -161,6 +166,7 @@ Senzing database inside the running Docker container.
 
     ```python
     quit()
+
     ```
 
 ## Next steps

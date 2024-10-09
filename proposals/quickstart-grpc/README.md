@@ -15,6 +15,7 @@ The Senzing QuickStart using Python over gRPC requires the following prerequisit
 
     ```console
     docker run -it --name senzing-demo-quickstart -p 8260:8260 -p 8261:8261 --pull always --rm senzing/demo-quickstart
+
     ```
 
 ## Next steps
@@ -26,7 +27,6 @@ Now that an environment is setup, feel free to explore Senzing.
     1. [Try Senzing's Hello World]
     1. [Use Senzing's Truth Set data]
     1. [Map and load your own data]
-
 
 [Docker]: https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/docker.md
 [http://localhost:8260]: http://localhost:8260

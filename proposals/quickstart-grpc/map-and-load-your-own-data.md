@@ -13,6 +13,7 @@ and custom ports will be used.
 
     ```console
     python3 -m pip install --upgrade senzing-grpc
+
     ```
 
 ## Create your input file
@@ -28,6 +29,7 @@ and custom ports will be used.
 
     ```console
     python3
+
     ```
 
 ## Identify data sources
@@ -42,6 +44,7 @@ and custom ports will be used.
 
         ```python
         DATASOURCES = ["MY_DATASOURCE"]
+
         ```
 
     1. Copy/paste the following into the interactive Python session
@@ -76,6 +79,7 @@ and custom ports will be used.
             sz_diagnostic.reinitialize(new_config_id)
         except SzError as err:
             print(f"\nError:\n{err}\n")
+
         ```
 
 ## Add records
@@ -87,8 +91,18 @@ and custom ports will be used.
        To identify the file containing your data,
        copy/modify/paste the following into the interactive Python session:
 
+       1. Linux/macOS example:
+
         ```python
         INPUT_FILENAME = "/tmp/example-data-for-senzing.json"
+
+        ```
+
+       1. Windows example:
+
+        ```python
+        INPUT_FILENAME = "C:\\Users\\username\\Downloads\\example-data-for-senzing.json"
+
         ```
 
     1. Copy/paste the following into the interactive Python session
@@ -107,6 +121,7 @@ and custom ports will be used.
                     print(info)
         except SzError as err:
             print(f"\nError:\n{err}\n")
+
         ```
 
    Note that this is a simple example of adding records to Senzing and is not optimized for performance.
@@ -119,6 +134,7 @@ and custom ports will be used.
 
     ```python
     quit()
+
     ```
 
 ## Shutdown
