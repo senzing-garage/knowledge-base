@@ -6,37 +6,17 @@ and custom ports will be used.
 
 ## Prerequisites
 
-The Senzing QuickStart using Python over gRPC requires the following prerequisites:
+1. See [Prerequisites].
 
-1. [Run senzing/demo-quickstart Docker container]
-1. [Python 3]
-1. [senzing-grpc] Python package.
-
-    1. If using Python virtual enviroment, activate virtual environment.
-       Example:
-
-        ```console
-        python3 -m venv .venv
-        source .venv/bin/activate
-
-        ```
-
-    1. To install, run:
-
-        ```console
-        python3 -m pip install --upgrade senzing-grpc
-
-        ```
-        
 ## Create your input file
 
-4. On your local workstation, create a file of JSON-lines with your data to be loaded into Senzing.
+2. On your local workstation, create a file of JSON-lines with your data to be loaded into Senzing.
 
    As an example, download [example-data-for-senzing.json] into your `Downloads` directory.
 
 ## Start interactive Python session
 
-5. Start an interactive Python session.
+3. Start an interactive Python session.
    Example:
 
     ```console
@@ -46,7 +26,7 @@ The Senzing QuickStart using Python over gRPC requires the following prerequisit
 
 ## Identify data sources
 
-6. To add your data sources to the Senzing configuration,
+4. To add your data sources to the Senzing configuration,
    determine the list of data sources used in your data.
    Then in the following example, modify the value of `DATASOURCES` to match your data.
 
@@ -96,7 +76,7 @@ The Senzing QuickStart using Python over gRPC requires the following prerequisit
 
 ## Add records
 
-7. To add your data to the Senzing database,
+5. To add your data to the Senzing database,
    in the following example modify the value of `INPUT_FILENAME` to match the path to your file of JSON lines.
 
     1. :pencil2:
@@ -152,12 +132,12 @@ The Senzing QuickStart using Python over gRPC requires the following prerequisit
 
 ## Shutdown
 
-9. To end the Senzing gRPC service using Docker,
+6. To end the Senzing gRPC service using Docker,
    use `ctrl-c` to stop the `docker run ...` program.
 
 ## Next steps
 
-10. [Overview]
+7. [Overview]
 1. [Try Senzing's Hello World]
 1. [Use Senzing's Truth Set data]
 1. Map and load your own data
@@ -165,8 +145,6 @@ The Senzing QuickStart using Python over gRPC requires the following prerequisit
 [example-data-for-senzing.json]: https://raw.githubusercontent.com/senzing-garage/knowledge-base/main/proposals/streamline/example-data-for-senzing.json
 [High performance loading with Python]: #
 [Overview]: README.md
-[Python 3]: https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/python3.md
-[Run senzing/demo-quickstart Docker container]: README.md#run-docker-container
-[senzing-grpc]: https://github.com/senzing-garage/sz-sdk-python-grpc
+[Prerequisites]: hello-world.md#prerequisites
 [Try Senzing's Hello World]: hello-world.md
 [Use Senzing's Truth Set data]: use-senzings-truth-set-data.md

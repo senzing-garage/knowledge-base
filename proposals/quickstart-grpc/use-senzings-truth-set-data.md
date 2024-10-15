@@ -6,31 +6,11 @@ Senzing database inside the running Docker container.
 
 ## Prerequisites
 
-The Senzing QuickStart using Python over gRPC requires the following prerequisites:
-
-1. [Run senzing/demo-quickstart Docker container]
-1. [Python 3]
-1. [senzing-grpc] Python package.
-
-    1. If using Python virtual enviroment, activate virtual environment.
-       Example:
-
-        ```console
-        python3 -m venv .venv
-        source .venv/bin/activate
-
-        ```
-
-    1. To install, run:
-
-        ```console
-        python3 -m pip install --upgrade senzing-grpc
-
-        ```
+1. See [Prerequisites].
 
 ## Start interactive Python session
 
-4. Start an interactive Python session.
+2. Start an interactive Python session.
    Example:
 
     ```console
@@ -40,7 +20,7 @@ The Senzing QuickStart using Python over gRPC requires the following prerequisit
 
 ## Identify data sources
 
-5. To add Truth Set data sources to the Senzing configuration,
+3. To add Truth Set data sources to the Senzing configuration,
    copy/paste the following block of code into the interactive Python session
    and press the **Enter** key.
    Example:
@@ -84,7 +64,7 @@ The Senzing QuickStart using Python over gRPC requires the following prerequisit
 
 ## Add records
 
-6. To add Truth Set data to the Senzing database,
+4. To add Truth Set data to the Senzing database,
    copy/paste the following block of code into the interactive Python session
    and press the **Enter** key.
 
@@ -127,7 +107,7 @@ The Senzing QuickStart using Python over gRPC requires the following prerequisit
 
 ## View results
 
-7. Entity details can be viewed.
+5. Entity details can be viewed.
    Copy/paste the following block of code into the interactive Python session
    and press the **Enter** key.
 
@@ -188,7 +168,7 @@ The Senzing QuickStart using Python over gRPC requires the following prerequisit
 
 ## Next steps
 
-11. [Overview]
+9. [Overview]
 1. [Try Senzing's Hello World]
 1. Use Senzing's Truth Set data
 1. [Map and load your own data]
@@ -197,14 +177,12 @@ The Senzing QuickStart using Python over gRPC requires the following prerequisit
 
 1. [View SQLite database](coleifer-sqlite-web.md)
 
+[Prerequisites]: hello-world.md#prerequisites
 [High performance loading with Python]: #
 [Map and load your own data]: map-and-load-your-own-data.md
 [Overview]: README.md
-[Python 3]: https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/python3.md
-[Run senzing/demo-quickstart Docker container]: README.md#run-docker-container
 [senzing_truthset_add_datasources.py]: https://raw.githubusercontent.com/senzing-garage/knowledge-base/main/proposals/streamline/senzing_truthset_add_datasources.py
 [senzing_truthset_add_records.py]: https://raw.githubusercontent.com/senzing-garage/knowledge-base/main/proposals/streamline/senzing_truthset_add_records.py
 [senzing_truthset_get_entity.py]: https://raw.githubusercontent.com/senzing-garage/knowledge-base/main/proposals/streamline/senzing_truthset_get_entity.py
 [senzing_truthset_search.py]: https://raw.githubusercontent.com/senzing-garage/knowledge-base/main/proposals/streamline/senzing_truthset_search.py
-[senzing-grpc]: https://github.com/senzing-garage/sz-sdk-python-grpc
 [Try Senzing's Hello World]: hello-world.md
