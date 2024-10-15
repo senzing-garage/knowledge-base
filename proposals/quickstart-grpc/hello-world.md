@@ -11,18 +11,19 @@ The Senzing QuickStart using Python over gRPC requires the following prerequisit
 1. [Run senzing/demo-quickstart Docker container]
 1. [Python 3]
 1. [senzing-grpc] Python package.
-   To install, run:
 
-    ```console
-    python3 -m pip install --upgrade senzing-grpc
-
-    ```
-
-    1. If using Python virtual enviroment, example:
+    1. If using Python virtual enviroment, activate virtual environment.
+       Example:
 
         ```console
         python3 -m venv .venv
         source .venv/bin/activate
+
+        ```
+
+    1. To install, run:
+
+        ```console
         python3 -m pip install --upgrade senzing-grpc
 
         ```
@@ -42,7 +43,6 @@ The Senzing QuickStart using Python over gRPC requires the following prerequisit
 5. For a quick test of calling Senzing's `sz_product.get_version()`,
    copy/paste the following block of code into the interactive Python session
    and press the **Enter** key.
-   Example:
 
     ```python
     import grpc
