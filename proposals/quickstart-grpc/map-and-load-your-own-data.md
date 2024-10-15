@@ -6,6 +6,8 @@ and custom ports will be used.
 
 ## Prerequisites
 
+The Senzing QuickStart using Python over gRPC requires the following prerequisites:
+
 1. [Run senzing/demo-quickstart Docker container]
 1. [Python 3]
 1. [senzing-grpc] Python package.
@@ -15,6 +17,15 @@ and custom ports will be used.
     python3 -m pip install --upgrade senzing-grpc
 
     ```
+
+    1. If using Python virtual enviroment, example:
+
+        ```console
+        python3 -m venv .venv
+        source .venv/bin/activate
+        python3 -m pip install --upgrade senzing-grpc
+
+        ```
 
 ## Create your input file
 

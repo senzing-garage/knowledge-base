@@ -1,9 +1,12 @@
 # Use Senzing's Truth Set data
 
-In this demonstration, the Senzing Truth Set data will be added to the ephemeral
+In this demonstration,
+the Senzing Truth Set data will be added to the ephemeral
 Senzing database inside the running Docker container.
 
 ## Prerequisites
+
+The Senzing QuickStart using Python over gRPC requires the following prerequisites:
 
 1. [Run senzing/demo-quickstart Docker container]
 1. [Python 3]
@@ -14,6 +17,15 @@ Senzing database inside the running Docker container.
     python3 -m pip install --upgrade senzing-grpc
 
     ```
+
+    1. If using Python virtual enviroment, example:
+
+        ```console
+        python3 -m venv .venv
+        source .venv/bin/activate
+        python3 -m pip install --upgrade senzing-grpc
+
+        ```
 
 ## Start interactive Python session
 

@@ -1,6 +1,10 @@
 # Try Senzing's Hello World
 
-## Prerequisistes
+This demonstration shows how to start
+the Senzing QuickStart using Python over gRPC
+and access it with Python.
+
+## Prerequisites
 
 The Senzing QuickStart using Python over gRPC requires the following prerequisites:
 
@@ -23,13 +27,9 @@ The Senzing QuickStart using Python over gRPC requires the following prerequisit
 
         ```
 
-## View Senzing version
+## Start interactive Python session
 
-The following example shows how to start
-the Senzing QuickStart using Python over gRPC
-and access it with Python.
-
-4. In a separate window, start an interactive Python session.
+4. Start an interactive Python session.
    Example:
 
     ```console
@@ -37,7 +37,9 @@ and access it with Python.
 
     ```
 
-1. For a quick test of calling Senzing's `sz_product.get_version()`,
+## View Senzing version
+
+5. For a quick test of calling Senzing's `sz_product.get_version()`,
    copy/paste the following block of code into the interactive Python session
    and press the **Enter** key.
    Example:
