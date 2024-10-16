@@ -1,7 +1,7 @@
 # Use Senzing's Truth Set data
 
 In this demonstration,
-the Senzing Truth Set data will be added to the ephemeral
+the Senzing Truth Set data will be added to an ephemeral
 Senzing database inside the running Docker container.
 
 ## Prerequisites

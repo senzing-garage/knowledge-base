@@ -1,8 +1,6 @@
 # Map and load your own data
 
 In this demonstration, your data will be added to the Senzing database.
-This time the data will be persisted into SQLite database files residing on your local workstation
-and custom ports will be used.
 
 ## Prerequisites
 
@@ -31,7 +29,7 @@ and custom ports will be used.
    Then in the following example, modify the value of `DATASOURCES` to match your data.
 
     1. :pencil2:
-       Copy/modify/paste the following into the interactive Python session
+       Copy/**modify**/paste the following into the interactive Python session
        and press the **Enter** key.
 
         ```python
@@ -81,7 +79,7 @@ and custom ports will be used.
 
     1. :pencil2:
        To identify the file containing your data,
-       copy/modify/paste the following into the interactive Python session:
+       copy/**modify**/paste the following into the interactive Python session:
 
        1. Linux/macOS example:
 
@@ -142,7 +140,7 @@ and custom ports will be used.
 1. [Use Senzing's Truth Set data]
 1. Map and load your own data
 
-[example-data-for-senzing.json]: https://raw.githubusercontent.com/senzing-garage/knowledge-base/main/proposals/streamline/example-data-for-senzing.json
+[example-data-for-senzing.json]: https://raw.githubusercontent.com/senzing-garage/knowledge-base/main/proposals/quickstart-grpc/example-data-for-senzing.json
 [High performance loading with Python]: #
 [Overview]: README.md
 [Prerequisites]: hello-world.md#prerequisites
