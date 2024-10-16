@@ -64,7 +64,7 @@ Senzing database inside the running Docker container.
 
 ## Add records
 
-4. To add Truth Set data to the Senzing database,
+4. To add Truth Set data to an ephemeral Senzing database,
    copy/paste the following block of code into the interactive Python session
    and press the **Enter** key.
 

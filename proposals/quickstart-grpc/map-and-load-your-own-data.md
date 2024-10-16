@@ -1,6 +1,6 @@
 # Map and load your own data
 
-In this demonstration, your data will be added to the Senzing database.
+In this demonstration, your data will be added to an ephemeral Senzing database.
 
 ## Prerequisites
 
@@ -74,7 +74,7 @@ In this demonstration, your data will be added to the Senzing database.
 
 ## Add records
 
-5. To add your data to the Senzing database,
+5. To add your data to an ephemeral Senzing database,
    in the following example modify the value of `INPUT_FILENAME` to match the path to your file of JSON lines.
 
     1. :pencil2:
