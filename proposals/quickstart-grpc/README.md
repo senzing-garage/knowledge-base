@@ -20,7 +20,7 @@ The Senzing QuickStart using Python over gRPC requires the following prerequisit
 
 ## Next steps
 
-Now that an environment is setup, feel free to explore Senzing.
+Now that an environment is set up, feel free to explore Senzing.
 
 3. Visit [http://localhost:8260] for Jupyter Lab demonstration.
 1. Native Python Software Development Kit (SDK) demonstrations:
