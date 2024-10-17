@@ -17,7 +17,7 @@ helper functions are shown.
 
     ```
 
-## xxx
+## Show help
 
 3. To create an abstract factory and Senzing object,
    copy/paste the following block of code into the interactive Python session
@@ -38,14 +38,18 @@ helper functions are shown.
 
     ```
 
-1. Help is available for the Senzing object.
-   Copy/paste each block of code into the interactive Python session
+1. To display methods of the Senzing object,
+   copy/paste the following block code into the interactive Python session
    and press the **Enter** key.
 
     ```python
     print(sz_engine.help())
 
     ```
+
+1. To display the details of a specific method,
+   copy/paste the following block code into the interactive Python session
+   and press the **Enter** key.
 
     ```python
     print(sz_engine.help("get_entity_by_record_id"))
@@ -63,15 +67,11 @@ helper functions are shown.
 
 ## Next steps
 
-6. [Senzing Python Software Development Kit]
+7. [Senzing Python Software Development Kit]
     1. [Senzing Hello World]
     1. [Load Senzing truth-sets]
     1. [Load user data]
     1. Show method help
-
-## References
-
-1. [View SQLite database](coleifer-sqlite-web.md)
 
 [Load Senzing truth-sets]: load-truthsets.md
 [Load user data]: load-user-data.md
