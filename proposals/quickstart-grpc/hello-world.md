@@ -12,30 +12,15 @@ The Senzing QuickStart using Python over gRPC requires the following prerequisit
 1. [Python 3]
 1. [senzing-grpc] Python package.
 
-    1. If using Python virtual enviroment, activate virtual environment.
-
-       1. Linux/macOS example:
-
-        ```python
-        python3 -m venv .venv
-        source .venv/bin/activate
-
-        ```
-
-       1. Windows example:
-
-        ```python
-        python3 -m venv .venv
-        .venv/Scripts/activate
-
-        ```
-
     1. To install, run:
 
         ```console
         python3 -m pip install --upgrade senzing-grpc
 
         ```
+
+       If a Python virtual environment is needed,
+       see [Installing senzing-grpc in a python virtual environment].
 
 ## Start interactive Python session
 
@@ -83,6 +68,7 @@ The Senzing QuickStart using Python over gRPC requires the following prerequisit
 1. [Use Senzing's Truth Set data]
 1. [Map and load your own data]
 
+[Installing senzing-grpc in a python virtual environment]: virtual-environment.md
 [Map and load your own data]: map-and-load-your-own-datas.md
 [Overview]: README.md
 [Python 3]: https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/python3.md
