@@ -1,4 +1,4 @@
-# Python Software Development Kit
+# Senzing Python Software Development Kit
 
 Try native Python Software Development Kit (SDK) demonstrations:
 

@@ -135,7 +135,7 @@ In this demonstration, your data will be added to an ephemeral Senzing database.
 
 ## Next steps
 
-8. [Python Software Development Kit]
+8. [Senzing Python Software Development Kit]
     1. [Senzing Hello World]
     1. [Load Senzing truth-sets]
     1. Load user data
@@ -145,6 +145,6 @@ In this demonstration, your data will be added to an ephemeral Senzing database.
 [High performance loading with Python]: #
 [Load Senzing truth-sets]: load-truthsets.md
 [Prerequisites]: hello-world.md#prerequisites
-[Python Software Development Kit]: python-sdk.md
+[Senzing Python Software Development Kit]: python-sdk.md
 [Senzing Hello World]: hello-world.md
 [Show method help]: method-help.md

@@ -63,7 +63,7 @@ helper functions are shown.
 
 ## Next steps
 
-6. [Python Software Development Kit]
+6. [Senzing Python Software Development Kit]
     1. [Senzing Hello World]
     1. [Load Senzing truth-sets]
     1. [Load user data]
@@ -76,5 +76,5 @@ helper functions are shown.
 [Load Senzing truth-sets]: load-truthsets.md
 [Load user data]: load-user-data.md
 [Prerequisites]: hello-world.md#prerequisites
-[Python Software Development Kit]: python-sdk.md
+[Senzing Python Software Development Kit]: python-sdk.md
 [Senzing Hello World]: hello-world.md
