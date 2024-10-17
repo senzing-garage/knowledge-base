@@ -12,7 +12,7 @@ The Senzing QuickStart using Python over gRPC requires the following prerequisit
 1. [Python 3]
 1. [senzing-grpc] Python package.
 
-    1. To install, run:
+    1. To install, run the following on the local workstation:
 
         ```console
         python3 -m pip install --upgrade senzing-grpc
@@ -58,8 +58,7 @@ The Senzing QuickStart using Python over gRPC requires the following prerequisit
 
     ```
 
-1. To stop the Docker container,
-   use `ctrl-c` to stop the `docker run ...` program.
+1. *Optional:* Use `ctrl-c` to stop the Docker container created by `docker run ...`,
 
 ## Next steps
 
