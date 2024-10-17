@@ -26,7 +26,7 @@ The Senzing QuickStart using Python over gRPC requires the following prerequisit
 
         ```python
         python3 -m venv .venv
-        source .venv/Scripts/activate
+        .venv/Scripts/activate
 
         ```
 
