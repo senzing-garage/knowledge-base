@@ -1,8 +1,6 @@
 # Installing senzing-grpc in a python virtual environment
 
-This demonstration shows how to start
-the Senzing QuickStart using Python over gRPC
-and access it with Python.
+A python virtual environment may be needed to install the `senzing-grpc` package.
 
 ### Linux/macOS
 
