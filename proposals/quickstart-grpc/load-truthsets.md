@@ -1,4 +1,4 @@
-# Use Senzing's Truth Set data
+# Load Senzing truth-sets
 
 In this demonstration,
 the Senzing Truth Set data will be added to an ephemeral
@@ -168,21 +168,23 @@ Senzing database inside the running Docker container.
 
 ## Next steps
 
-9. [Overview]
-1. [Try Senzing's Hello World]
-1. Use Senzing's Truth Set data
-1. [Map and load your own data]
+9. [Python Software Development Kit]
+    1. [Senzing Hello World]
+    1. Load Senzing truth-sets
+    1. [Load user data]
+    1. [Show method help]
 
 ## References
 
 1. [View SQLite database](coleifer-sqlite-web.md)
 
-[Prerequisites]: hello-world.md#prerequisites
 [High performance loading with Python]: #
-[Map and load your own data]: map-and-load-your-own-data.md
-[Overview]: README.md
+[Load user data]: load-user-data.md
+[Prerequisites]: hello-world.md#prerequisites
+[Python Software Development Kit]: python-sdk.md
+[Senzing Hello World]: hello-world.md
 [senzing_truthset_add_datasources.py]: https://raw.githubusercontent.com/senzing-garage/knowledge-base/main/proposals/quickstart-grpc/senzing_truthset_add_datasources.py
 [senzing_truthset_add_records.py]: https://raw.githubusercontent.com/senzing-garage/knowledge-base/main/proposals/quickstart-grpc/senzing_truthset_add_records.py
 [senzing_truthset_get_entity.py]: https://raw.githubusercontent.com/senzing-garage/knowledge-base/main/proposals/quickstart-grpc/senzing_truthset_get_entity.py
 [senzing_truthset_search.py]: https://raw.githubusercontent.com/senzing-garage/knowledge-base/main/proposals/quickstart-grpc/senzing_truthset_search.py
-[Try Senzing's Hello World]: hello-world.md
+[Show method help]: method-help.md

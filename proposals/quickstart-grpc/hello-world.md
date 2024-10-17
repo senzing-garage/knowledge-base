@@ -1,4 +1,4 @@
-# Try Senzing's Hello World
+# Senzing Hello World
 
 This demonstration shows how to start
 the Senzing QuickStart using Python over gRPC
@@ -63,16 +63,18 @@ The Senzing QuickStart using Python over gRPC requires the following prerequisit
 
 ## Next steps
 
-8. [Overview]
-1. Try Senzing's Hello World
-1. [Use Senzing's Truth Set data]
-1. [Map and load your own data]
+8. [Python Software Development Kit]
+    1. Senzing Hello World
+    1. [Load Senzing truth-sets]
+    1. [Load user data]
+    1. [Show method help]
 
 [Installing senzing-grpc in a python virtual environment]: virtual-environment.md
-[Map and load your own data]: map-and-load-your-own-datas.md
-[Overview]: README.md
+[Load Senzing truth-sets]: load-truthsets.md
+[Load user data]: load-user-data.md
 [Python 3]: https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/python3.md
+[Python Software Development Kit]: python-sdk.md
 [Run senzing/demo-quickstart Docker container]: README.md#run-docker-container
 [senzing_hello_world.py]: https://raw.githubusercontent.com/senzing-garage/knowledge-base/main/proposals/quickstart-grpc/senzing_hello_world.py
 [senzing-grpc]: https://github.com/senzing-garage/sz-sdk-python-grpc
-[Use Senzing's Truth Set data]: use-senzings-truth-set-data.md
+[Show method help]: method-help.md

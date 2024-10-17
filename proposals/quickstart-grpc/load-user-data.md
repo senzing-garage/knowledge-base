@@ -1,4 +1,4 @@
-# Map and load your own data
+# Load user data
 
 In this demonstration, your data will be added to an ephemeral Senzing database.
 
@@ -135,14 +135,16 @@ In this demonstration, your data will be added to an ephemeral Senzing database.
 
 ## Next steps
 
-7. [Overview]
-1. [Try Senzing's Hello World]
-1. [Use Senzing's Truth Set data]
-1. Map and load your own data
+8. [Python Software Development Kit]
+    1. [Senzing Hello World]
+    1. [Load Senzing truth-sets]
+    1. Load user data
+    1. [Show method help]
 
 [example-data-for-senzing.json]: https://raw.githubusercontent.com/senzing-garage/knowledge-base/main/proposals/quickstart-grpc/example-data-for-senzing.json
 [High performance loading with Python]: #
-[Overview]: README.md
+[Load Senzing truth-sets]: load-truthsets.md
 [Prerequisites]: hello-world.md#prerequisites
-[Try Senzing's Hello World]: hello-world.md
-[Use Senzing's Truth Set data]: use-senzings-truth-set-data.md
+[Python Software Development Kit]: python-sdk.md
+[Senzing Hello World]: hello-world.md
+[Show method help]: method-help.md
