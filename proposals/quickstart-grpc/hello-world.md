@@ -13,11 +13,20 @@ The Senzing QuickStart using Python over gRPC requires the following prerequisit
 1. [senzing-grpc] Python package.
 
     1. If using Python virtual enviroment, activate virtual environment.
-       Example:
 
-        ```console
+       1. Linux/macOS example:
+
+        ```python
         python3 -m venv .venv
         source .venv/bin/activate
+
+        ```
+
+       1. Windows example:
+
+        ```python
+        python3 -m venv .venv
+        source .venv/Scripts/activate
 
         ```
 
