@@ -3,7 +3,7 @@
 > **Hint:**  If the `senzing-demo-quickstart` docker container has been use in a prior demonstration,
   restart the docker container for best results.
 
-Try native Python Software Development Kit (SDK) demonstrations:
+Try Senzing's Python Software Development Kit (SDK) demonstrations natively on a Linux, macOS, or Windows system:
 
 1. [Senzing Hello World] - A simple test of connectivity to Senzing engine.
 1. [Load Senzing truth-sets] - Load and query the Senzing truth-set-data.
