@@ -173,16 +173,18 @@ Senzing database inside the running Docker container.
     1. Load Senzing truth-sets
     1. [Load user data]
     1. [Show method help]
+    1. [Clean up]
 
 ## References
 
 1. [View SQLite database](coleifer-sqlite-web.md)
 
+[Clean up]: cleanup.md
 [High performance loading with Python]: #
 [Load user data]: load-user-data.md
 [Prerequisites]: hello-world.md#prerequisites
-[Senzing Python Software Development Kit]: python-sdk.md
 [Senzing Hello World]: hello-world.md
+[Senzing Python Software Development Kit]: python-sdk.md
 [senzing_truthset_add_datasources.py]: https://raw.githubusercontent.com/senzing-garage/knowledge-base/main/proposals/quickstart-grpc/senzing_truthset_add_datasources.py
 [senzing_truthset_add_records.py]: https://raw.githubusercontent.com/senzing-garage/knowledge-base/main/proposals/quickstart-grpc/senzing_truthset_add_records.py
 [senzing_truthset_get_entity.py]: https://raw.githubusercontent.com/senzing-garage/knowledge-base/main/proposals/quickstart-grpc/senzing_truthset_get_entity.py

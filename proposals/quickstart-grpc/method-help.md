@@ -72,9 +72,11 @@ helper functions are shown.
     1. [Load Senzing truth-sets]
     1. [Load user data]
     1. Show method help
+    1. [Clean up]
 
+[Clean up]: cleanup.md
 [Load Senzing truth-sets]: load-truthsets.md
 [Load user data]: load-user-data.md
 [Prerequisites]: hello-world.md#prerequisites
-[Senzing Python Software Development Kit]: python-sdk.md
 [Senzing Hello World]: hello-world.md
+[Senzing Python Software Development Kit]: python-sdk.md

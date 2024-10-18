@@ -140,11 +140,13 @@ In this demonstration, your data will be added to an ephemeral Senzing database.
     1. [Load Senzing truth-sets]
     1. Load user data
     1. [Show method help]
+    1. [Clean up]
 
+[Clean up]: cleanup.md
 [example-data-for-senzing.json]: https://raw.githubusercontent.com/senzing-garage/knowledge-base/main/proposals/quickstart-grpc/example-data-for-senzing.json
 [High performance loading with Python]: #
 [Load Senzing truth-sets]: load-truthsets.md
 [Prerequisites]: hello-world.md#prerequisites
-[Senzing Python Software Development Kit]: python-sdk.md
 [Senzing Hello World]: hello-world.md
+[Senzing Python Software Development Kit]: python-sdk.md
 [Show method help]: method-help.md
