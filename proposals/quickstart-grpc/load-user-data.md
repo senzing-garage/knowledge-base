@@ -1,16 +1,16 @@
 # Load user data
 
-In this demonstration, your data will be added to an ephemeral Senzing database.
+In this demonstration, user data will be added to an ephemeral Senzing database.
 
 ## Prerequisites
 
 1. See [Prerequisites].
 
-## Create your input file
+## Create an input file
 
-2. On your local workstation, create a file of JSON-lines with your data to be loaded into Senzing.
+2. On a local workstation, create a file of JSON-lines with custom data to be loaded into Senzing.
 
-   As an example, download [example-data-for-senzing.json] into your `Downloads` directory.
+   As an example, download [example-data-for-senzing.json] into the `Downloads` directory.
 
 ## Start interactive Python session
 
@@ -24,9 +24,9 @@ In this demonstration, your data will be added to an ephemeral Senzing database.
 
 ## Identify data sources
 
-4. To add your data sources to the Senzing configuration,
-   determine the list of data sources used in your data.
-   Then in the following example, modify the value of `DATASOURCES` to match your data.
+4. To add data sources to the Senzing configuration,
+   determine the list of data sources used in the data.
+   Then in the following example, modify the value of `DATASOURCES` to match the data.
 
     1. :pencil2:
        Copy/**modify**/paste the following into the interactive Python session
@@ -74,11 +74,11 @@ In this demonstration, your data will be added to an ephemeral Senzing database.
 
 ## Add records
 
-5. To add your data to an ephemeral Senzing database,
-   in the following example modify the value of `INPUT_FILENAME` to match the path to your file of JSON lines.
+5. To add data to an ephemeral Senzing database,
+   in the following example modify the value of `INPUT_FILENAME` to match the path of the file of JSON lines.
 
     1. :pencil2:
-       To identify the file containing your data,
+       To identify the file containing the data,
        copy/**modify**/paste the following into the interactive Python session:
 
        1. Linux/macOS example:
