@@ -1,6 +1,8 @@
 # Load user data
 
-In this demonstration, user data will be added to an ephemeral Senzing database.
+In this demonstration,
+the user data will be added to an ephemeral
+Senzing database inside the running Docker container.
 
 ## Prerequisites
 
