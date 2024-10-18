@@ -58,11 +58,9 @@ The Senzing QuickStart using Python over gRPC requires the following prerequisit
 
     ```
 
-1. *Optional:* Use `ctrl-c` to stop the Docker container created by `docker run ...`,
-
 ## Next steps
 
-8. [Senzing Python Software Development Kit]
+7. [Senzing Python Software Development Kit]
     1. Senzing Hello World
     1. [Load Senzing truth-sets]
     1. [Load user data]

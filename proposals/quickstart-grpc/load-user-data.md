@@ -128,14 +128,9 @@ In this demonstration, your data will be added to an ephemeral Senzing database.
 
     ```
 
-## Shutdown
-
-6. To end the Senzing gRPC service using Docker,
-   use `ctrl-c` to stop the `docker run ...` program.
-
 ## Next steps
 
-8. [Senzing Python Software Development Kit]
+6. [Senzing Python Software Development Kit]
     1. [Senzing Hello World]
     1. [Load Senzing truth-sets]
     1. Load user data
