@@ -28,8 +28,8 @@ docker rmi senzing/demo-quickstart
     1. [Show method help]
     1. Clean up
 
-[Load Senzing truth-sets]: load-truthsets.md
+[Load Senzing truth-sets]: load-senzing-truthsets.md
 [Load user data]: load-user-data.md
-[Senzing Hello World]: hello-world.md
+[Senzing Hello World]: senzing-hello-world.md
 [Senzing Python Software Development Kit]: python-sdk.md
-[Show method help]: method-help.md
+[Show method help]: show-method-help.md

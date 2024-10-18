@@ -168,11 +168,11 @@ Senzing database inside the running Docker container.
 [Clean up]: cleanup.md
 [High performance loading with Python]: #
 [Load user data]: load-user-data.md
-[Prerequisites]: hello-world.md#prerequisites
-[Senzing Hello World]: hello-world.md
+[Prerequisites]: senzing-hello-world.md#prerequisites
+[Senzing Hello World]: senzing-hello-world.md
 [Senzing Python Software Development Kit]: python-sdk.md
 [senzing_truthset_add_datasources.py]: https://raw.githubusercontent.com/senzing-garage/knowledge-base/main/proposals/quickstart-grpc/senzing_truthset_add_datasources.py
 [senzing_truthset_add_records.py]: https://raw.githubusercontent.com/senzing-garage/knowledge-base/main/proposals/quickstart-grpc/senzing_truthset_add_records.py
 [senzing_truthset_get_entity.py]: https://raw.githubusercontent.com/senzing-garage/knowledge-base/main/proposals/quickstart-grpc/senzing_truthset_get_entity.py
 [senzing_truthset_search.py]: https://raw.githubusercontent.com/senzing-garage/knowledge-base/main/proposals/quickstart-grpc/senzing_truthset_search.py
-[Show method help]: method-help.md
+[Show method help]: show-method-help.md

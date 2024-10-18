@@ -14,8 +14,8 @@ For best results,
 
 Return to [quickstart-grpc].
 
-[Load Senzing truth-sets]: load-truthsets.md
+[Load Senzing truth-sets]: load-senzing-truthsets.md
 [Load user data]: load-user-data.md
 [quickstart-grpc]: README.md
-[Senzing Hello World]: hello-world.md
-[Show method help]: method-help.md
+[Senzing Hello World]: senzing-hello-world.md
+[Show method help]: show-method-help.md
