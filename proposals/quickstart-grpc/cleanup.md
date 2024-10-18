@@ -21,7 +21,7 @@ docker rmi senzing/demo-quickstart
 
 ## Next steps
 
-8. [Senzing Python Software Development Kit]
+8. [Senzing Python SDK demonstration]
     1. [Senzing Hello World]
     1. [Load Senzing truth-sets]
     1. [Load user data]
@@ -31,5 +31,5 @@ docker rmi senzing/demo-quickstart
 [Load Senzing truth-sets]: load-senzing-truthsets.md
 [Load user data]: load-user-data.md
 [Senzing Hello World]: senzing-hello-world.md
-[Senzing Python Software Development Kit]: python-sdk.md
+[Senzing Python SDK demonstration]: senzing-python-sdk-demonstration.md
 [Show method help]: show-method-help.md

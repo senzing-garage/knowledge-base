@@ -1,4 +1,4 @@
-# Senzing Python Software Development Kit
+# Senzing Python SDK demonstration
 
 > **Hint:**  If the `senzing-demo-quickstart` docker container has been use in a prior demonstration,
   restart the docker container for best results.
