@@ -161,10 +161,6 @@ Senzing database inside the running Docker container.
     1. [Show method help]
     1. [Clean up]
 
-## References
-
-1. [View SQLite database](coleifer-sqlite-web.md)
-
 [Clean up]: cleanup.md
 [High performance loading with Python]: #
 [Load user data]: load-user-data.md
