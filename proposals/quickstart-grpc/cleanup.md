@@ -6,21 +6,21 @@ The following information will clean the demonstration off the local workstation
 
 1. Use `ctrl-c` to stop the running `senzing-demo-quickstart` Docker container created by the`docker run ...` command.
 
+## Remove the Docker image
+
+2. Remove the `senzing/demo-quickstart` Docker image from Docker's cache.
+
+    ```console
+    docker rmi senzing/demo-quickstart
+    ```
+
 ## Remove senzing-grpc python package
 
-2. Uninstall the Senzing `senzing-grpc` python package
+3. If installed, uninstall the Senzing `senzing-grpc` python package.
 
     ```console
     python3 -m pip uninstall senzing-grpc
 
-    ```
-
-## Remove the Docker image
-
-3. Remove the `senzing/demo-quickstart` Docker image from Docker's cache.
-
-    ```console
-    docker rmi senzing/demo-quickstart
     ```
 
 ## Next steps
