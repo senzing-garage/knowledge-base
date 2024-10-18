@@ -10,8 +10,6 @@ Try native Python Software Development Kit (SDK) demonstrations:
 1. [Load user data] - Load custom data.
 1. [Show method help] - Show how to display help.
 
-For best results,
-
 Return to [quickstart-grpc].
 
 [Load Senzing truth-sets]: load-senzing-truthsets.md
