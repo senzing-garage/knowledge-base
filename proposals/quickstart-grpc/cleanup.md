@@ -4,24 +4,28 @@ The following information will clean the demonstration off the local workstation
 
 ## Stop the Docker container
 
-1. Use `ctrl-c` to stop the Docker container created by `docker run ...`,
+1. Use `ctrl-c` to stop the running `senzing-demo-quickstart` Docker container created by the`docker run ...` command.
 
 ## Remove senzing-grpc python package
 
-```console
-python3 -m pip uninstall senzing-grpc
+2. Uninstall the Senzing `senzing-grpc` python package
 
-```
+    ```console
+    python3 -m pip uninstall senzing-grpc
+
+    ```
 
 ## Remove the Docker image
 
-```console
-docker rmi senzing/demo-quickstart
-```
+3. Remove the `senzing/demo-quickstart` Docker image from Docker's cache.
+
+    ```console
+    docker rmi senzing/demo-quickstart
+    ```
 
 ## Next steps
 
-8. [Senzing Python SDK demonstration]
+4. [Senzing Python SDK demonstration]
     1. [Senzing Hello World]
     1. [Load Senzing truth-sets]
     1. [Load user data]
