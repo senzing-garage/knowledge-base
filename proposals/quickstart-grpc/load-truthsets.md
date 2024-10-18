@@ -143,20 +143,6 @@ Senzing database inside the running Docker container.
 
     or download and run [senzing_truthset_search.py].
 
-1. Help is available.
-   Copy/paste each block of code into the interactive Python session
-   and press the **Enter** key.
-
-    ```python
-    print(sz_engine.help())
-
-    ```
-
-    ```python
-    print(sz_engine.help("get_entity_by_record_id"))
-
-    ```
-
 1. To end the interactive Python session,
    copy/paste the following block of code into the interactive Python session
    and press the **Enter** key.
@@ -168,7 +154,7 @@ Senzing database inside the running Docker container.
 
 ## Next steps
 
-9. [Senzing Python Software Development Kit]
+8. [Senzing Python Software Development Kit]
     1. [Senzing Hello World]
     1. Load Senzing truth-sets
     1. [Load user data]
