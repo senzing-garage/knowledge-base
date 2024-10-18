@@ -20,7 +20,7 @@ The Senzing QuickStart using Python over gRPC requires the following prerequisit
 
 ## Next steps
 
-Now that an environment is set up,
+3. Now that an environment is set up,
 it's time to explore Senzing at
  [http://localhost:8260].
 
