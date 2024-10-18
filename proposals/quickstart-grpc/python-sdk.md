@@ -5,7 +5,7 @@ Try native Python Software Development Kit (SDK) demonstrations:
 1. [Senzing Hello World] - A simple test of connectivity to Senzing engine.
 1. [Load Senzing truth-sets] - Load and query the Senzing truth-set-data.
 1. [Load user data] - Load custom data.
-1. [Show method help] - help functions.
+1. [Show method help] - Show how to display help.
 
 Return to [quickstart-grpc].
 
