@@ -1,11 +1,16 @@
 # Senzing Python Software Development Kit
 
+> **Hint:**  If the docker container has been use in a prior demonstration,
+  for best results restart the docker container.
+
 Try native Python Software Development Kit (SDK) demonstrations:
 
 1. [Senzing Hello World] - A simple test of connectivity to Senzing engine.
 1. [Load Senzing truth-sets] - Load and query the Senzing truth-set-data.
 1. [Load user data] - Load custom data.
 1. [Show method help] - Show how to display help.
+
+For best results,
 
 Return to [quickstart-grpc].
 
