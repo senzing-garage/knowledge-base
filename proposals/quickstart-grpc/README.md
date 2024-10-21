@@ -18,7 +18,7 @@ The Senzing QuickStart using Python over gRPC requires the following prerequisit
 
     ```
 
-## Next steps
+## Next step
 
 3. Once the docker container is running,
 it's time to explore Senzing at
