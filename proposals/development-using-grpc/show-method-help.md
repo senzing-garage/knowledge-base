@@ -67,7 +67,7 @@ helper functions are shown.
 
 ## Next steps
 
-7. [Senzing Python SDK demonstration]
+7. [Development with Senzing Python SDK]
     1. [Senzing Hello World]
     1. [Load Senzing truth-sets]
     1. [Load user data]
@@ -79,4 +79,3 @@ helper functions are shown.
 [Load user data]: load-user-data.md
 [Prerequisites]: development-with-senzing-python-sdk.md#prerequisites
 [Senzing Hello World]: senzing-hello-world.md
-[Senzing Python SDK demonstration]: senzing-python-sdk-demonstration.md

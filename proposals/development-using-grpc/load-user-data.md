@@ -132,7 +132,7 @@ Senzing database inside the running Docker container.
 
 ## Next steps
 
-6. [Senzing Python SDK demonstration]
+6. [Development with Senzing Python SDK]
     1. [Senzing Hello World]
     1. [Load Senzing truth-sets]
     1. Load user data
@@ -140,10 +140,10 @@ Senzing database inside the running Docker container.
     1. [Clean up]
 
 [Clean up]: cleanup.md
+[Development with Senzing Python SDK]: development-with-senzing-python-sdk.md
 [example-data-for-senzing.json]: https://raw.githubusercontent.com/senzing-garage/knowledge-base/main/proposals/quickstart-grpc/example-data-for-senzing.json
 [High performance loading with Python]: #
 [Load Senzing truth-sets]: load-senzing-truthsets.md
 [Prerequisites]: development-with-senzing-python-sdk.md#prerequisites
 [Senzing Hello World]: senzing-hello-world.md
-[Senzing Python SDK demonstration]: senzing-python-sdk-demonstration.md
 [Show method help]: show-method-help.md

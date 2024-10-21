@@ -30,11 +30,11 @@ Here are a few examples of Python programs to help you get started:
 1. [Load user data] - Load custom data.
 1. [Show method help] - Show how to display help.
 
+[Installing senzing-grpc in a python virtual environment]: virtual-environment.md
 [Load Senzing truth-sets]: load-senzing-truthsets.md
 [Load user data]: load-user-data.md
-[Senzing Hello World]: senzing-hello-world.md
-[Show method help]: show-method-help.md
-[Installing senzing-grpc in a python virtual environment]: virtual-environment.md
 [Python 3]: https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/python3.md
 [Run senzing/demo-quickstart Docker container]: README.md#run-docker-container
+[Senzing Hello World]: senzing-hello-world.md
 [senzing-grpc]: https://github.com/senzing-garage/sz-sdk-python-grpc
+[Show method help]: show-method-help.md

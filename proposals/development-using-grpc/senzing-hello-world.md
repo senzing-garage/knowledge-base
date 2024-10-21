@@ -46,7 +46,7 @@ and access it with Python.
 
 ## Next steps
 
-7. [Senzing Python SDK demonstration]
+7. [Development with Senzing Python SDK]
     1. Senzing Hello World
     1. [Load Senzing truth-sets]
     1. [Load user data]
@@ -54,9 +54,9 @@ and access it with Python.
     1. [Clean up]
 
 [Clean up]: cleanup.md
+[Development with Senzing Python SDK]: development-with-senzing-python-sdk.md
 [Load Senzing truth-sets]: load-senzing-truthsets.md
 [Load user data]: load-user-data.md
 [Prerequisites]: development-with-senzing-python-sdk.md#prerequisites
-[Senzing Python SDK demonstration]: senzing-python-sdk-demonstration.md
 [senzing_hello_world.py]: https://raw.githubusercontent.com/senzing-garage/knowledge-base/main/proposals/quickstart-grpc/senzing_hello_world.py
 [Show method help]: show-method-help.md
