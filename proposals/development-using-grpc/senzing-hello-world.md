@@ -10,7 +10,7 @@ and access it with Python.
 
 ## Start interactive Python session
 
-4. Start an interactive Python session.
+2. Start an interactive Python session.
    Example:
 
     ```console
@@ -20,7 +20,7 @@ and access it with Python.
 
 ## View Senzing version
 
-5. For a quick test of calling Senzing's `sz_product.get_version()`,
+3. For a quick test of calling Senzing's `sz_product.get_version()`,
    copy/paste the following block of code into the interactive Python session
    and press the **Enter** key.
 
@@ -46,7 +46,7 @@ and access it with Python.
 
 ## Next steps
 
-7. [Development with Senzing Python SDK]
+5. [Development with Senzing Python SDK]
     1. Senzing Hello World
     1. [Load Senzing truth-sets]
     1. [Load user data]

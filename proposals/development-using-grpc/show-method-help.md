@@ -75,6 +75,7 @@ helper functions are shown.
     1. [Clean up]
 
 [Clean up]: cleanup.md
+[Development with Senzing Python SDK]: development-with-senzing-python-sdk.md
 [Load Senzing truth-sets]: load-senzing-truthsets.md
 [Load user data]: load-user-data.md
 [Prerequisites]: development-with-senzing-python-sdk.md#prerequisites

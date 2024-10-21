@@ -132,7 +132,7 @@ Senzing database inside the running Docker container.
 
 ## Next steps
 
-6. [Development with Senzing Python SDK]
+7. [Development with Senzing Python SDK]
     1. [Senzing Hello World]
     1. [Load Senzing truth-sets]
     1. Load user data

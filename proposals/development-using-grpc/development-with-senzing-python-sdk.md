@@ -25,7 +25,7 @@ to develop Python applications using Senzing.
 
 Here are a few examples of Python programs to help you get started:
 
-1. [Senzing Hello World] - A simple test of connectivity to Senzing engine.
+4. [Senzing Hello World] - A simple test of connectivity to Senzing engine.
 1. [Load Senzing truth-sets] - Load and query the Senzing truth-set-data.
 1. [Load user data] - Load custom data.
 1. [Show method help] - Show how to display help.
