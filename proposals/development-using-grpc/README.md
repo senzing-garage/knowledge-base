@@ -21,9 +21,9 @@ The Senzing QuickStart using Python over gRPC requires the following prerequisit
 
 ## Next steps
 
-3. [Python development]
-1. Java development
-1. Go development
+3. [Development with Senzing Python SDK]
+1. Development with Senzing Java SDK
+1. Development with Senzing Go SDK
 
 [Docker]: https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/docker.md
-[Python development]: development-with-senzing-python-sdk.md
+[Development with Senzing Python SDK]: development-with-senzing-python-sdk.md
