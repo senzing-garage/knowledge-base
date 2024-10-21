@@ -164,7 +164,7 @@ Senzing database inside the running Docker container.
 [Clean up]: cleanup.md
 [High performance loading with Python]: #
 [Load user data]: load-user-data.md
-[Prerequisites]: senzing-hello-world.md#prerequisites
+[Prerequisites]: development-with-senzing-python-sdk.md#prerequisites
 [Senzing Hello World]: senzing-hello-world.md
 [Senzing Python SDK demonstration]: senzing-python-sdk-demonstration.md
 [senzing_truthset_add_datasources.py]: https://raw.githubusercontent.com/senzing-garage/knowledge-base/main/proposals/quickstart-grpc/senzing_truthset_add_datasources.py

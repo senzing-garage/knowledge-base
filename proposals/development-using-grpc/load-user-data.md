@@ -143,7 +143,7 @@ Senzing database inside the running Docker container.
 [example-data-for-senzing.json]: https://raw.githubusercontent.com/senzing-garage/knowledge-base/main/proposals/quickstart-grpc/example-data-for-senzing.json
 [High performance loading with Python]: #
 [Load Senzing truth-sets]: load-senzing-truthsets.md
-[Prerequisites]: senzing-hello-world.md#prerequisites
+[Prerequisites]: development-with-senzing-python-sdk.md#prerequisites
 [Senzing Hello World]: senzing-hello-world.md
 [Senzing Python SDK demonstration]: senzing-python-sdk-demonstration.md
 [Show method help]: show-method-help.md
