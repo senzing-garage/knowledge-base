@@ -21,7 +21,7 @@ Senzing development with Senzing Python SDK requires the following prerequisites
 ## Start developing
 
 When the prerequisites listed above are satisified,
-you can start using Python tools to develop Python applications using Senzing.
+you can start using your tools to develop Python applications using Senzing.
 
 Here are a few examples of Python programs to help you get started:
 
