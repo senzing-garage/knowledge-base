@@ -5,6 +5,8 @@ See more details: [What is Prettier?]
 
 ## Install
 
+### Via NPM
+
 ```console
 npm install --save-dev --save-exact prettier
 ```
@@ -20,6 +22,12 @@ node --eval "fs.writeFileSync('.prettierignore','# Ignore artifacts:\nbuild\ncov
 ```
 
 Find more details in the [Prettier installation documentation].
+
+### Via VSCode
+
+[Install via VSCode Marketplace]
+
+For more details on installation and default config see the [Prettier VSCode documentation].
 
 ## Formatting files
 
@@ -44,6 +52,8 @@ Ex.
  npx prettier --write .github/workflows/lint*
  ```
 
+[Install via VSCode Marketplace]: https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
 [Prettier installation documentation]: https://prettier.io/docs/en/install
+[Prettier VSCode documentation]: https://github.com/prettier/prettier-vscode?tab=readme-ov-file#installation
 [What is Prettier?]: https://prettier.io/docs/en/
 
