@@ -67,8 +67,7 @@ Senzing database inside the running Docker container.
             new_config_id = sz_configmanager.add_config(NEW_JSON_CONFIG, "Add My datasources")
             sz_configmanager.replace_default_config_id(old_config_id, new_config_id)
         # Update other Senzing objects.
-            sz_engine.reinitialize(new_config_id)
-            sz_diagnostic.reinitialize(new_config_id)
+            sz_abstract_factory.reinitialize(new_config_id)
         except SzError as err:
             print(f"\nError:\n{err}\n")
 

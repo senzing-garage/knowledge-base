@@ -37,8 +37,7 @@ try:
 
     # Update other Senzing objects.
 
-    sz_engine.reinitialize(new_config_id)
-    sz_diagnostic.reinitialize(new_config_id)
+    sz_abstract_factory.reinitialize(new_config_id)
 
 except SzError as err:
     print(f"\nError:\n{err}\n")
