@@ -19,11 +19,11 @@ The Senzing Playground requires the following prerequisites:
 
     ```
 
-## Next step
+## Explore
 
 3. Once the docker container is running, explore Senzing at [http://localhost:8260].
 
-## Advanced
+## Advanced setup
 
 4. If only the gRPC server is required, run
 
