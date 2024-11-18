@@ -1,6 +1,6 @@
 # Playground
 
-The Senzing Playground starts the Senzing gRPC server and HTTP server for use in Senzing exploration.
+The Senzing Playground runs a Senzing gRPC server and HTTP server for use in Senzing exploration.
 The Senzing Playground works on Linux, macOS, and Windows.
 
 ## Prerequisistes
