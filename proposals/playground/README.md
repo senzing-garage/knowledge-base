@@ -28,7 +28,7 @@ The Senzing Playground requires the following prerequisites:
 4. If only the gRPC server is required, run
 
 ```console
-    docker run -it --name senzing-serve-grpc -p 8261:8261 --rm senzing/serve-grpc
+    docker run -it --name senzing-serve-grpc -p 8261:8261 --pull always --rm senzing/serve-grpc
 
 ```
 
