@@ -6,9 +6,9 @@
 1. senzing/senzingsdk-tools
 1. senzing/serve-grpc
 
-## Used in AWS formations (potentially V4)
+## Used in AWS formations (potentially active in V4)
 
-This can probably (hopefully) reduced.
+This can probably (hopefully) be reduced.
 
 1. senzing/senzing-poc-server
 1. senzing/data-encryption-aes256cbc-sample
@@ -21,7 +21,7 @@ This can probably (hopefully) reduced.
 1. senzing/entity-search-web-app
 1. senzing/xterm
 
-### Remaining for V3
+### Remaining for V3 (no maintenance required)
 
 1. senzing/accountant-aws-marketplace
 1. senzing/adminer
