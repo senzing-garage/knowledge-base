@@ -2,25 +2,22 @@
 
 ## Active in V4
 
+1. senzing/data-encryption-aes256cbc-sample
+1. senzing/senzingsdk-poc
 1. senzing/senzingsdk-runtime
 1. senzing/senzingsdk-tools
 1. senzing/serve-grpc
+1. senzing/web-app-demo Requires:
+    1. senzing/senzing-poc-server
+    1. senzing/entity-search-web-app
 
 ## Used in AWS formations (potentially active in V4)
 
 This can probably (hopefully) be reduced.
 
-1. senzing/senzing-poc-server
-1. senzing/data-encryption-aes256cbc-sample
 1. senzing/init-database
 1. senzing/init-postgresql
-1. senzing/redoer
-1. senzing/sshd
-1. senzing/stream-loader
-1. senzing/stream-producer
-1. senzing/entity-search-web-app
-1. senzing/web-app-demo
-1. senzing/xterm
+1. senzing/entity-search-web-app-console
 
 ### Remaining for V3 (no maintenance required)
 
@@ -82,3 +79,11 @@ This can probably (hopefully) be reduced.
 1. senzing/yum-staging
 1. senzing/yumdownloader
 1. senzing/yumdownloader-staging
+
+## Deprecate
+
+1. senzing/redoer
+1. senzing/sshd
+1. senzing/stream-loader
+1. senzing/stream-producer
+1. senzing/xterm
