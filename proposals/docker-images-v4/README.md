@@ -19,6 +19,7 @@ This can probably (hopefully) be reduced.
 1. senzing/stream-loader
 1. senzing/stream-producer
 1. senzing/entity-search-web-app
+1. senzing/web-app-demo
 1. senzing/xterm
 
 ### Remaining for V3 (no maintenance required)
@@ -77,7 +78,6 @@ This can probably (hopefully) be reduced.
 1. senzing/test
 1. senzing/test-ground
 1. senzing/test-layers
-1. senzing/web-app-demo
 1. senzing/yum
 1. senzing/yum-staging
 1. senzing/yumdownloader
