@@ -102,11 +102,11 @@ The following list should reflect modifications documented in
 
 | Existing name | Canonical Name | Return value | Smells |
 |---------------|----------------|--------------|--------|
-|| createSzConfig()         | [object conforming to SzConfig interface]         ||
-|| createSzConfigManager()  | [object conforming to SzConfigManager interface]  ||
-|| createSzDiagnostic()     | [object conforming to SzDiagnostic interface]     ||
-|| createSzEngine()         | [object conforming to SzEngine interface]         ||
-|| createSzProduct()        | [object conforming to SzProduct interface]        ||
+|| createConfig()         | [object conforming to SzConfig interface]         ||
+|| createConfigManager()  | [object conforming to SzConfigManager interface]  ||
+|| createDiagnostic()     | [object conforming to SzDiagnostic interface]     ||
+|| createEngine()         | [object conforming to SzEngine interface]         ||
+|| createProduct()        | [object conforming to SzProduct interface]        ||
 
 ## Method signature proposals
 
