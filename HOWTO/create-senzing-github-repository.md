@@ -4,12 +4,12 @@ This is a checklist of what to set when creating a new GitHub Repository.
 
 ## Owner actions
 
-1. Identify the GitHub Organization the repository will belong to.     
+1. Identify the GitHub Organization the repository will belong to.
    - One of < `Senzing` | `senzing-factory`| `senzing-garage` >.
    - Will be henceforth referred to as `<ORG>` and should be substituted with a value from above.
-   - ***NOTE***: There are slight differences between organization selections in this document.       
-     Where applicable options will be listed for each organization. Please be sure to select the 
-     options for the respective organization. 
+   - ***NOTE***: There are slight differences between organization selections in this document.
+     Where applicable options will be listed for each organization. Please be sure to select the
+     options for the respective organization.
 1. Visit `github.com/<ORG>`
 1. Log in as an administrator.
 1. On `github.com/<ORG>`, click the `New` button under the `Repositories` header.
@@ -79,7 +79,7 @@ This is a checklist of what to set when creating a new GitHub Repository.
                 1. Click `Add senzing-project-managers`
         1. For Organization `Senzing`:
             1. Click `Add teams` button.
-                1. Using the appropriate development team based on the list: https://github.com/orgs/Senzing/teams
+                1. Using the appropriate development team based on the list: <https://github.com/orgs/Senzing/teams>
                 1. Choose the team that will be used in `.github/CODEOWNERS`
                 1. Choose a role: `Write`
                 1. Click `Add ... to this repository`
@@ -93,7 +93,7 @@ This is a checklist of what to set when creating a new GitHub Repository.
 ### Code and security analysis
 
 1. On repository home page, click `Settings` tab.
-    1. Click `Code security and analysis` tab.
+    1. Click `Code security` tab.
         1. In `Access to alerts`:
             1. Search for the team that will be used in `.github/CODEOWNERS` and select.
             1. Click `Save changes` button
@@ -163,8 +163,8 @@ This is a checklist of what to set when creating a new GitHub Repository.
     1. Modify `.project`
     1. Modify `./docs/README.md`
     1. Delete `.github/workflows` files that do not apply.
-    1. Rename `add-to-project-garage-dependabot.yaml` and `add-to-project-garage.yaml` 
-       with the appropriate project name. 
+    1. Rename `add-to-project-garage-dependabot.yaml` and `add-to-project-garage.yaml`
+       with the appropriate project name.
     1. Update the project variable and name of the workflow for the following:
         1. `add-to-project-<project>-dependabot.yaml`
         1. `add-to-project-<project>.yaml`
