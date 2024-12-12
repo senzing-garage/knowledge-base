@@ -54,6 +54,7 @@
 1. Requires: serve-grpc
 1. Requires: serve-http
 1. Requires: demo-quickstart
+    1. [ ] [playground](https://github.com/senzing-garage/playground)
     1. [ ] [senzing-tools](https://github.com/senzing-garage/senzing-tools)
 
 ## Not included
