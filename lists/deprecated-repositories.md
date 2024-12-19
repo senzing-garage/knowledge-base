@@ -2,6 +2,7 @@
 
 | Deprecated | Hidden     | Repository                                   |
 |------------|------------|----------------------------------------------|
+| 2024-12-18 |            | entity-search-web-app-console                |
 | 2024-09-18 |            | connector-neo4j                              |
 | 2024-07-02 |            | aws-cloudformation-ecs                       |
 | 2024-07-02 |            | azure-template-aks-poc-simple                |
