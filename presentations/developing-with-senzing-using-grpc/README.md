@@ -1,4 +1,4 @@
-# Developing with gRPC
+# Developing with Senzing using gRPC
 
 ## Overview
 
@@ -11,24 +11,41 @@
 
 ## Quick look at gRPC
 
-1. What area is it in?
-    1. [Simple Object Access Protocol] (SOAP)
-    1. [Representatational State Transfer] (REST)
 1. [gRPC] - Google Remote Procedure Call
+    1. Could have been called "[Stubby]", "[ProtoCall]", or "[ArcWire]".
+    1. The [internal code name "gRPC"] stuck.
+    1. It is [open source on GitHub], Apache 2 licensed.
+    1. So although Google originated the project, the "g" in "gRPC" is less affiliated with Google.
+1. What problem does gRPC solve?
+    1. Network messaging
+        1. Specifically: calling a function or procedure on a remote machine.
+        1. Two aspects:
+            1. Network transportation.
+               Usually in Application Layer of the [Open Systems Interconnection (OSI)] and [TCP/IP] models.
+            1. Message format.
+    1. Other technologies in this space:
+        1. [Hypertext Transfer Protocol] (HTTP)
+        1. [Short Message Service] (SMS)
+        1. [Simple Object Access Protocol] (SOAP)
+        1. [Hypertext Markup Language] (HTML)
+1. Advantages
+    1. Performance
+        1. Anecdotal evidence on internet suggests gRPC is 7 times faster than HTML.
+        1. Tight packing of data
+    1. Language agnostic
+    1. Network transportation: HTTP/2
 1. 10 years since inception; first release 2015.
-1. Two aspects:
-    1. Transportation - HTTP/2
-    1. Message - Protobuf
-1. Performance: Anecdotal evidence on internet suggests 7 times faster than HTML/REST.
 
 ## Service definition
 
-1. [sz-sdk-proto]
+1. For gRPC, the Interface Definition Language (IDL) is [Protocol Buffers] (Protobuf).
+   This defines the messages passed across the network.
+1. The `.proto` files for Senzing are in [sz-sdk-proto].
     1. Example: [szengine.proto]
        1. `option:` metadata for transpiling into target languages.
        1. `service:` lists all of the procedure calls.
        1. `message:` list all of the request and response messages.
-1. Using transpiler, these `.proto` specifications are used to generate code
+1. Using [protoc], a transpiler, `.proto` specification files are used to generate code.
     1. Example generation: [generate Python gRPC code]
     1. Example output:
         1. [szengine_pb2_grpc.py] - transportation (gRPC)
@@ -37,20 +54,23 @@
 
 ## Writing to native gRPC code
 
-```console
-stub = szengine_pb2_grpc.SzEngineStub(grpc_channel)
+1. It is possible to write code that uses the transpiled code directly.
+   Here is an example in Python:
 
-try:
-    request = szengine_pb2.AddRecordRequest(
-        dataSourceCode=as_str(data_source_code),
-        recordId=as_str(record_id),
-        recordDefinition=as_str(record_definition),
-        flags=flags,
-    )
-    response = stub.AddRecord(request)
-except Exception as err:
-    raise new_exception(err) from err
-```
+    ```python
+    stub = szengine_pb2_grpc.SzEngineStub(grpc_channel)
+
+    try:
+        request = szengine_pb2.AddRecordRequest(
+            dataSourceCode=as_str(data_source_code),
+            recordId=as_str(record_id),
+            recordDefinition=as_str(record_definition),
+            flags=flags,
+        )
+        response = stub.AddRecord(request)
+    except Exception as err:
+        raise new_exception(err) from err
+    ```
 
 1. *Problem:*  Code to access Senzing via transpiled gRPC differs from native Senzing SDK.
    So you would have to write it one way to access via gRPC and a different way to access natively.
@@ -66,14 +86,14 @@ except Exception as err:
 ## Senzing SDK support
 
 1. Senzing has "core" SDKs to talk directly to the underlying Senzing binary libraries.
-    1. Languages:  Python, Java, Go
+    1. Supported languages:  Python, Java, Go
 1. Senzing also has "gRPC" SDKs that implement the same interface as the "core" SDKs.
     1. The gRPC SDKs are an [adapter pattern] translating from the Senzing interface to the gRPC interface.
-    1. Languages:  Python, Java, Go
+    1. Supported languages:  Python, Java, Go
 1. With Senzing "core" and "gRPC" SDKs, you can access Senzing in the same manner.
-   Example:
+   Python example:
 
-    ```console
+    ```python
     try:
         info = sz_engine.add_record(data_source_code, record_id, record_definition, flags)
     except SzError as err:
@@ -88,15 +108,36 @@ except Exception as err:
 
 ## Run python/go from commandline
 
+## References
+
+1. [gRPC on GitHub]
+1. [gRPC on Wikipedia]
+1. [gRPC on Google]
+1. [gRPC FAQs]
+
 [adapter pattern]: https://en.wikipedia.org/wiki/Adapter_pattern
+[generate Python gRPC code]: https://grpc.io/docs/languages/python/quickstart/#generate-grpc-code
+[gRPC add_record method]: https://github.com/senzing-garage/sz-sdk-python-grpc/blob/4731a2ec428f3c3265e10aacb8b3e813067292c6/src/senzing_grpc/szengine.py#L77-L94
+[gRPC FAQs]: https://grpc.io/docs/what-is-grpc/faq/
+[gRPC on GitHub]: https://github.com/grpc/
+[gRPC on Google]: https://opensource.google/projects/grpc
+[gRPC on Wikipedia]: https://en.wikipedia.org/wiki/GRPC
 [gRPC supported language]: https://grpc.io/docs/languages/
 [gRPC]: https://grpc.io
-[sz-sdk-proto]: https://github.com/senzing-garage/sz-sdk-proto
-[szengine.proto]: https://github.com/senzing-garage/sz-sdk-proto/blob/main/szengine.proto
-[generate Python gRPC code]: https://grpc.io/docs/languages/python/quickstart/#generate-grpc-code
-[szengine_pb2.py]: https://github.com/senzing-garage/sz-sdk-proto/blob/main/example_generated_source_code/python/szengine/szengine_pb2.py
-[szengine_pb2_grpc.py]: https://github.com/senzing-garage/sz-sdk-proto/blob/main/example_generated_source_code/python/szengine/szengine_pb2_grpc.py
-[sz-sdk-proto Makefile]: https://github.com/senzing-garage/sz-sdk-proto/blob/main/Makefile
-[gRPC add_record method]: https://github.com/senzing-garage/sz-sdk-python-grpc/blob/4731a2ec428f3c3265e10aacb8b3e813067292c6/src/senzing_grpc/szengine.py#L77-L94
+[Hypertext Markup Language]: https://en.wikipedia.org/wiki/HTML
+[open source on GitHub]: https://github.com/grpc/grpc
+[Short Message Service]: https://en.wikipedia.org/wiki/SMS
 [Simple Object Access Protocol]: https://en.wikipedia.org/wiki/SOAP
-[Representatational State Transfer]: https://en.wikipedia.org/wiki/REST
+[sz-sdk-proto Makefile]: https://github.com/senzing-garage/sz-sdk-proto/blob/main/Makefile
+[sz-sdk-proto]: https://github.com/senzing-garage/sz-sdk-proto
+[szengine_pb2_grpc.py]: https://github.com/senzing-garage/sz-sdk-proto/blob/main/example_generated_source_code/python/szengine/szengine_pb2_grpc.py
+[szengine_pb2.py]: https://github.com/senzing-garage/sz-sdk-proto/blob/main/example_generated_source_code/python/szengine/szengine_pb2.py
+[szengine.proto]: https://github.com/senzing-garage/sz-sdk-proto/blob/main/szengine.proto
+[Open Systems Interconnection (OSI)]: https://en.wikipedia.org/wiki/OSI_model
+[TCP/IP]: https://en.wikipedia.org/wiki/Internet_protocol_suite
+[Stubby]: https://youtu.be/5dMK5OW6WSw?t=98
+[ProtoCall]: https://youtu.be/5dMK5OW6WSw?t=318
+[ArcWire]: https://youtu.be/5dMK5OW6WSw?t=333
+[internal code name "gRPC"]: https://youtu.be/5dMK5OW6WSw?t=276
+[protoc]: https://grpc.io/docs/protoc-installation/
+[Protocol Buffers]: https://protobuf.dev/
