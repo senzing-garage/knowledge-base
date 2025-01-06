@@ -6,8 +6,9 @@
 1. Service definition
 1. Writing to native gRPC code
 1. Senzing SDK support
-1. Create gRPC server docker image
+1. Run Senzing gRPC server docker container
 1. Run python/go from commandline
+1. Run python/go in Jupyter Notebooks
 
 ## Quick look at gRPC
 
@@ -106,7 +107,93 @@
 
 ## Create gRPC server docker image
 
+1. **Note:** These instructions will only be required during the Senzing V4 beta.
+   After Senzing V4 is public, the Docker image will be available on [DockerHub].
+1. Set environment variables:
+    1. Linux/macOS
+
+        ```console
+        export SENZING_APT_REPOSITORY_NAME=<get-from-Senzing>
+        export SENZING_APT_REPOSITORY_URL=<get-from-Senzing>
+        ```
+
+    1. Windows cmd
+
+        ```console
+        set SENZING_APT_REPOSITORY_NAME=<get-from-Senzing>
+        set SENZING_APT_REPOSITORY_URL=<get-from-Senzing>
+        ```
+
+    1. Windows PowerShell
+
+        ```console
+        $env:SENZING_APT_REPOSITORY_NAME="<get-from-Senzing>"
+        $env:SENZING_APT_REPOSITORY_URL="<get-from-Senzing>"
+        ```
+
+1. Build `senzing/senzingsdk-runtime-beta:latest`.
+
+    ```console
+    docker build --no-cache --pull --build-arg SENZING_APT_REPOSITORY_NAME --build-arg SENZING_APT_REPOSITORY_URL --tag senzing/senzingsdk-runtime-beta:latest https://github.com/senzing/senzingsdk-runtime.git#main
+    ```
+
+1. Build `senzing/serve-grpc:latest`.
+
+    ```console
+    docker build --no-cache --pull --tag senzing/serve-grpc:latest https://github.com/senzing-garage/serve-grpc.git#main
+    ```
+
+## Run Senzing gRPC server docker container
+
+1. Run `senzing/serve-grpc:latest`
+
+    ```console
+    docker run -it --name senzing-serve-grpc -p 8261:8261 --read-only --rm senzing/serve-grpc:latest
+    ```
+
 ## Run python/go from commandline
+
+1. Get examples from GitHub.
+
+    ```console
+    git clone git@github.com:senzing-garage/playground.git ~/my-senzing-playground
+    ```
+
+1. Activate python virtual environment.
+   Example:
+
+    ```console
+    source ~/.venv/bin/activate
+    ```
+
+    ```console
+    python3 -m pip install --upgrade senzing-grpc
+    ```
+
+1. Run example programs.
+
+    ```console
+    cd ~/my-senzing-playground/rootfs/examples/python/
+    ```
+
+    ```console
+    ./senzing_hello_world.py
+    ```
+
+    ```console
+    ./senzing_load_truthsets.py
+    ```
+
+    ```console
+    ./senzing_load_user_data.py
+    ```
+
+1. Compare file differences:
+    1. Visit [DiffNow] and enter the following URLs:
+        1. `https://raw.githubusercontent.com/senzing-garage/playground/refs/heads/main/rootfs/examples/python/senzing_hello_world.py`
+        1. `https://raw.githubusercontent.com/senzing-garage/playground/refs/heads/main/rootfs/examples/python/senzing_method_help.py`
+
+## Run python/go in Jupyter Notebooks
 
 ## References
 
@@ -141,3 +228,5 @@
 [internal code name "gRPC"]: https://youtu.be/5dMK5OW6WSw?t=276
 [protoc]: https://grpc.io/docs/protoc-installation/
 [Protocol Buffers]: https://protobuf.dev/
+[DockerHub]: https://hub.docker.com/
+[DiffNow]: https://www.diffnow.com/compare-urls
