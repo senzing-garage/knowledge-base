@@ -184,11 +184,7 @@
     ./senzing_load_truthsets.py
     ```
 
-    ```console
-    ./senzing_load_user_data.py
-    ```
-
-1. Compare file differences:
+1. Compare file differences between using a Senzing "gRPC" SDK and a "core" SDK:
     1. Visit [DiffNow] and enter the following URLs:
 
         ```console
@@ -199,7 +195,7 @@
         https://raw.githubusercontent.com/senzing-garage/knowledge-base/refs/heads/main/presentations/developing-with-senzing-using-grpc/senzing_hello_world.py
         ```
 
-    1. Visit [DiffNow] and enter the following URLs:
+    1. Another example. Visit [DiffNow] again and enter the following URLs:
 
         ```console
         https://raw.githubusercontent.com/senzing-garage/playground/refs/heads/main/rootfs/examples/python/senzing_load_truthsets.py
@@ -208,6 +204,9 @@
         ```console
         https://raw.githubusercontent.com/senzing-garage/knowledge-base/refs/heads/main/presentations/developing-with-senzing-using-grpc/senzing_load_truthsets.py
         ```
+
+    1. **Net:** In Python, only the imported package and the `FACTORY_PARAMETERS` change.
+       Similar for other languages.
 
 ## Run python/go in Jupyter Notebooks
 
