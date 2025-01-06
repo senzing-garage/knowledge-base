@@ -11,6 +11,9 @@
 
 ## Quick look at gRPC
 
+1. What area is it in?
+    1. [Simple Object Access Protocol] (SOAP)
+    1. [Representatational State Transfer] (REST)
 1. [gRPC] - Google Remote Procedure Call
 1. 10 years since inception; first release 2015.
 1. Two aspects:
@@ -49,9 +52,9 @@ except Exception as err:
     raise new_exception(err) from err
 ```
 
-1. *Problem:*  Code to access Senzing differs from "native" SDK.
+1. *Problem:*  Code to access Senzing via transpiled gRPC differs from native Senzing SDK.
    So you would have to write it one way to access via gRPC and a different way to access natively.
-   Native access look like this:
+   Native Senzing SDK access look like this:
 
     ```console
     try:
@@ -95,3 +98,5 @@ except Exception as err:
 [szengine_pb2_grpc.py]: https://github.com/senzing-garage/sz-sdk-proto/blob/main/example_generated_source_code/python/szengine/szengine_pb2_grpc.py
 [sz-sdk-proto Makefile]: https://github.com/senzing-garage/sz-sdk-proto/blob/main/Makefile
 [gRPC add_record method]: https://github.com/senzing-garage/sz-sdk-python-grpc/blob/4731a2ec428f3c3265e10aacb8b3e813067292c6/src/senzing_grpc/szengine.py#L77-L94
+[Simple Object Access Protocol]: https://en.wikipedia.org/wiki/SOAP
+[Representatational State Transfer]: https://en.wikipedia.org/wiki/REST
