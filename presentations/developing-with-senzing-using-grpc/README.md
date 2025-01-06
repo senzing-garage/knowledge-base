@@ -10,6 +10,7 @@
 1. Run python/go from commandline
 1. Run python/go in Jupyter Notebooks
 
+~[image](divider.png)
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 ## Quick look at gRPC
