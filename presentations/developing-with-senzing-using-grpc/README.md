@@ -203,6 +203,9 @@
 1. [gRPC FAQs]
 
 [adapter pattern]: https://en.wikipedia.org/wiki/Adapter_pattern
+[ArcWire]: https://youtu.be/5dMK5OW6WSw?t=333
+[DiffNow]: https://www.diffnow.com/compare-urls
+[DockerHub]: https://hub.docker.com/
 [generate Python gRPC code]: https://grpc.io/docs/languages/python/quickstart/#generate-grpc-code
 [gRPC add_record method]: https://github.com/senzing-garage/sz-sdk-python-grpc/blob/4731a2ec428f3c3265e10aacb8b3e813067292c6/src/senzing_grpc/szengine.py#L77-L94
 [gRPC FAQs]: https://grpc.io/docs/what-is-grpc/faq/
@@ -212,21 +215,19 @@
 [gRPC supported language]: https://grpc.io/docs/languages/
 [gRPC]: https://grpc.io
 [Hypertext Markup Language]: https://en.wikipedia.org/wiki/HTML
+[Hypertext Transfer Protocol]: https://en.wikipedia.org/wiki/HTTP
+[internal code name "gRPC"]: https://youtu.be/5dMK5OW6WSw?t=276
 [open source on GitHub]: https://github.com/grpc/grpc
+[Open Systems Interconnection (OSI)]: https://en.wikipedia.org/wiki/OSI_model
+[protoc]: https://grpc.io/docs/protoc-installation/
+[ProtoCall]: https://youtu.be/5dMK5OW6WSw?t=318
+[Protocol Buffers]: https://protobuf.dev/
 [Short Message Service]: https://en.wikipedia.org/wiki/SMS
 [Simple Object Access Protocol]: https://en.wikipedia.org/wiki/SOAP
+[Stubby]: https://youtu.be/5dMK5OW6WSw?t=98
 [sz-sdk-proto Makefile]: https://github.com/senzing-garage/sz-sdk-proto/blob/main/Makefile
 [sz-sdk-proto]: https://github.com/senzing-garage/sz-sdk-proto
 [szengine_pb2_grpc.py]: https://github.com/senzing-garage/sz-sdk-proto/blob/main/example_generated_source_code/python/szengine/szengine_pb2_grpc.py
 [szengine_pb2.py]: https://github.com/senzing-garage/sz-sdk-proto/blob/main/example_generated_source_code/python/szengine/szengine_pb2.py
 [szengine.proto]: https://github.com/senzing-garage/sz-sdk-proto/blob/main/szengine.proto
-[Open Systems Interconnection (OSI)]: https://en.wikipedia.org/wiki/OSI_model
 [TCP/IP]: https://en.wikipedia.org/wiki/Internet_protocol_suite
-[Stubby]: https://youtu.be/5dMK5OW6WSw?t=98
-[ProtoCall]: https://youtu.be/5dMK5OW6WSw?t=318
-[ArcWire]: https://youtu.be/5dMK5OW6WSw?t=333
-[internal code name "gRPC"]: https://youtu.be/5dMK5OW6WSw?t=276
-[protoc]: https://grpc.io/docs/protoc-installation/
-[Protocol Buffers]: https://protobuf.dev/
-[DockerHub]: https://hub.docker.com/
-[DiffNow]: https://www.diffnow.com/compare-urls
