@@ -39,6 +39,8 @@
     1. Network transportation: HTTP/2
 1. 10 years since inception; first release 2015.
 
+![image](divider.png)
+
 ## Service definition
 
 1. For gRPC, the Interface Definition Language (IDL) is [Protocol Buffers] (Protobuf).
@@ -54,6 +56,8 @@
         1. [szengine_pb2_grpc.py] - transportation (gRPC)
         1. [szengine_pb2.py] - message (Protobuf)
 1. For hints on how to transpile, view the [sz-sdk-proto Makefile].
+
+![image](divider.png)
 
 ## Writing to native gRPC code
 
@@ -86,6 +90,8 @@
         print(err)
     ```
 
+![image](divider.png)
+
 ## Senzing SDK support
 
 1. Senzing has "core" SDKs to talk directly to the underlying Senzing binary libraries.
@@ -106,6 +112,8 @@
 1. Under the covers the [gRPC add_record method] is adapting from the Senzing SDK interfact to the gRPC interface.
 
 1. **NOTE:** If you are writing in a [gRPC supported language] other than Python, Java, or Go, you can still use gRPC natively.
+
+![image](divider.png)
 
 ## Create gRPC server docker image
 
@@ -145,6 +153,8 @@
     docker build --no-cache --pull --tag senzing/serve-grpc:latest https://github.com/senzing-garage/serve-grpc.git#main
     ```
 
+![image](divider.png)
+
 ## Run Senzing gRPC server docker container
 
 1. Run `senzing/serve-grpc:latest`
@@ -152,6 +162,8 @@
     ```console
     docker run -it --name senzing-serve-grpc -p 8261:8261 --read-only --rm senzing/serve-grpc:latest
     ```
+
+![image](divider.png)
 
 ## Run python/go from commandline
 
@@ -210,7 +222,11 @@
     1. **Net:** In Python, only the imported package and the `FACTORY_PARAMETERS` change.
        Similar for other languages.
 
+![image](divider.png)
+
 ## Run python/go in Jupyter Notebooks
+
+![image](divider.png)
 
 ## References
 
