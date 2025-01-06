@@ -191,7 +191,7 @@
 1. Compare file differences:
     1. Visit [DiffNow] and enter the following URLs:
         1. `https://raw.githubusercontent.com/senzing-garage/playground/refs/heads/main/rootfs/examples/python/senzing_hello_world.py`
-        1. `https://raw.githubusercontent.com/senzing-garage/playground/refs/heads/main/rootfs/examples/python/senzing_method_help.py`
+        1. `https://raw.githubusercontent.com/senzing-garage/knowledge-base/refs/heads/main/presentations/developing-with-senzing-using-grpc/senzing_hello_world.py`
 
 ## Run python/go in Jupyter Notebooks
 
