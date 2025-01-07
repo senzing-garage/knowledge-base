@@ -306,6 +306,20 @@ A recap of the steps to start working with Senzing on Jupyter Lab:
 
 ![image](divider.png)
 
+## Sneak peak
+
+1. A Playground
+
+    ```console
+    docker build --no-cache --pull --tag senzing/playground:latest https://github.com/senzing-garage/playground.git#main
+    ```
+
+    ```console
+    docker run -it --name senzing-playground -p 8260:8260 -p 8261:8261 --rm senzing/playground
+    ```
+
+1. Visit [localhost:8260].
+
 ## References
 
 1. [gRPC on GitHub]
@@ -330,9 +344,11 @@ A recap of the steps to start working with Senzing on Jupyter Lab:
 [gRPC]: https://grpc.io
 [Hypertext Markup Language]: https://en.wikipedia.org/wiki/HTML
 [Hypertext Transfer Protocol]: https://en.wikipedia.org/wiki/HTTP
+[IANA's Service Name and Transport Protocol Port Number Registry]: http://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.txt
 [internal code name "gRPC"]: https://youtu.be/5dMK5OW6WSw?t=276
 [Jupyter Lab recap]: #jupyter-lab-recap
 [Jupyter Lab]: https://jupyter.org/
+[localhost:8260]: https://localhost:8260
 [open source on GitHub]: https://github.com/grpc/grpc
 [Open Systems Interconnection (OSI)]: https://en.wikipedia.org/wiki/OSI_model
 [protoc]: https://grpc.io/docs/protoc-installation/
@@ -353,4 +369,3 @@ A recap of the steps to start working with Senzing on Jupyter Lab:
 [The Senzing service definition]: #the-senzing-service-definition
 [Writing to native gRPC code]: #writing-to-native-grpc-code
 [Writing to Senzing SDK]: #writing-to-senzing-sdk
-[IANA's Service Name and Transport Protocol Port Number Registry]: http://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.txt
