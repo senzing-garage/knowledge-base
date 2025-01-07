@@ -309,6 +309,7 @@ A recap of the steps to start working with Senzing on Jupyter Lab:
 1. [gRPC on Google]
 1. [gRPC FAQs]
 
+[A quick look at gRPC]: #a-quick-look-at-grpc
 [adapter pattern]: https://en.wikipedia.org/wiki/Adapter_pattern
 [ArcWire]: https://youtu.be/5dMK5OW6WSw?t=333
 [Become a Senzing Beta Tester]: https://senzing.com/beta-test-interest/
@@ -326,12 +327,16 @@ A recap of the steps to start working with Senzing on Jupyter Lab:
 [Hypertext Markup Language]: https://en.wikipedia.org/wiki/HTML
 [Hypertext Transfer Protocol]: https://en.wikipedia.org/wiki/HTTP
 [internal code name "gRPC"]: https://youtu.be/5dMK5OW6WSw?t=276
+[Jupyter Lab recap]: #jupyter-lab-recap
 [Jupyter Lab]: https://jupyter.org/
 [open source on GitHub]: https://github.com/grpc/grpc
 [Open Systems Interconnection (OSI)]: https://en.wikipedia.org/wiki/OSI_model
 [protoc]: https://grpc.io/docs/protoc-installation/
 [ProtoCall]: https://youtu.be/5dMK5OW6WSw?t=318
 [Protocol Buffers]: https://protobuf.dev/
+[Run from command line]:#run-from-command-line
+[Run in Jupyter Lab]: #run-in-jupyter-lab
+[Run Senzing gRPC server Docker container]: #run-senzing-grpc-server-docker-container
 [Short Message Service]: https://en.wikipedia.org/wiki/SMS
 [Simple Object Access Protocol]: https://en.wikipedia.org/wiki/SOAP
 [Stubby]: https://youtu.be/5dMK5OW6WSw?t=98
@@ -341,11 +346,6 @@ A recap of the steps to start working with Senzing on Jupyter Lab:
 [szengine_pb2.py]: https://github.com/senzing-garage/sz-sdk-proto/blob/main/example_generated_source_code/python/szengine/szengine_pb2.py
 [szengine.proto]: https://github.com/senzing-garage/sz-sdk-proto/blob/main/szengine.proto
 [TCP/IP]: https://en.wikipedia.org/wiki/Internet_protocol_suite
-[A quick look at gRPC]: #a-quick-look-at-grpc
 [The Senzing service definition]: #the-senzing-service-definition
 [Writing to native gRPC code]: #writing-to-native-grpc-code
-[Writing to Senzing SDK]: https://
-[Run Senzing gRPC server Docker container]: https://
-[Run from command line]: https://
-[Run in Jupyter Lab]: https://
-[Jupyter Lab recap]: https://
+[Writing to Senzing SDK]: #writing-to-senzing-sdk
