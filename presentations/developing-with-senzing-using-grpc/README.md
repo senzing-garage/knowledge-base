@@ -6,9 +6,9 @@
 1. Service definition
 1. Writing to native gRPC code
 1. Senzing SDK support
-1. Run Senzing gRPC server docker container
-1. Run python/go from commandline
-1. Run python/go in Jupyter Notebooks
+1. Run Senzing gRPC server Docker container
+1. Run Python from command line
+1. Run Python in Jupyter Notebooks
 
 ![image](divider.png)
 
@@ -77,6 +77,7 @@
         response = stub.AddRecord(request)
     except Exception as err:
         raise new_exception(err) from err
+    info = response.result
     ```
 
 1. **Problem:**  Code to access Senzing via transpiled gRPC interface differs from native Senzing SDK interface.
@@ -182,7 +183,7 @@
 
 ![image](divider.png)
 
-## Run Senzing gRPC server docker container
+## Run Senzing gRPC server Docker container
 
 1. Run `senzing/serve-grpc:latest`
 
@@ -192,7 +193,7 @@
 
 ![image](divider.png)
 
-## Run python/go from commandline
+## Run python from command line
 
 1. Get examples from GitHub.
 
@@ -200,7 +201,7 @@
     git clone git@github.com:senzing-garage/playground.git ~/my-senzing-playground
     ```
 
-1. Activate python virtual environment.
+1. Activate python virtual environment and install python `senzing-grpc` package.
    Example:
 
     ```console
@@ -227,7 +228,7 @@
 
 ![image](divider.png)
 
-## Run python/go in Jupyter Notebooks
+## Run python in Jupyter Notebooks
 
 ![image](divider.png)
 
@@ -240,6 +241,7 @@
 
 [adapter pattern]: https://en.wikipedia.org/wiki/Adapter_pattern
 [ArcWire]: https://youtu.be/5dMK5OW6WSw?t=333
+[Become a Senzing Beta Tester]: https://senzing.com/beta-test-interest/
 [DiffNow]: https://www.diffnow.com/compare-urls
 [DockerHub]: https://hub.docker.com/
 [generate Python gRPC code]: https://grpc.io/docs/languages/python/quickstart/#generate-grpc-code
@@ -267,4 +269,3 @@
 [szengine_pb2.py]: https://github.com/senzing-garage/sz-sdk-proto/blob/main/example_generated_source_code/python/szengine/szengine_pb2.py
 [szengine.proto]: https://github.com/senzing-garage/sz-sdk-proto/blob/main/szengine.proto
 [TCP/IP]: https://en.wikipedia.org/wiki/Internet_protocol_suite
-[Become a Senzing Beta Tester]: https://senzing.com/beta-test-interest/
