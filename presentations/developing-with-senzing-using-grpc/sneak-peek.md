@@ -1,6 +1,6 @@
 # Sneak Peek of Senzing Playground
 
-The Senzing Playground is a Docker container that demonstrates
+The Senzing Playground is a Docker container that is used to play with Senzing.
 
 ## Build
 
