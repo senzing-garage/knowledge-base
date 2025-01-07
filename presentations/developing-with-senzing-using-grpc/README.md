@@ -239,7 +239,7 @@
     1. Testers like pytest, go test, unittest
     1. Type checking like mypy.
     1. Security testing like Bandit, gosec
-1. Let's look at a special kind of development environment,
+1. Next, let's look at a special kind of development environment,
    [Jupyter Lab].
 
 ![image](divider.png)
@@ -288,13 +288,19 @@ A recap of the steps to start working with Senzing on Jupyter Lab:
     docker run -it --name senzing-serve-grpc -p 8261:8261 --read-only --rm senzing/serve-grpc:latest
     ```
 
-1. If writing in Python, activate virtual environment and install python `senzing-grpc` package.
-   Example:
+1. If writing in Python,
+    1. Optionally, activate virtual environment.
+       Example:
 
-    ```console
-    source ~/.venv/bin/activate
-    python3 -m pip install --upgrade senzing-grpc
-    ```
+        ```console
+        source ~/.venv/bin/activate
+        ```
+
+    1. Install `senzing-grpc` python package.
+
+        ```console
+        python3 -m pip install --upgrade senzing-grpc
+        ```
 
 1. Run `jupyter lab`.
 
