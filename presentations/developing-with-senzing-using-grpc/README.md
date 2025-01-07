@@ -196,6 +196,7 @@
    Naturally this means when the container is stopped, the database contents are gone.
 1. Port 8261 was chosen because it doesn't conflict with anything on
    [IANA's Service Name and Transport Protocol Port Number Registry].
+
 ![image](divider.png)
 
 ## Run from command line
