@@ -231,12 +231,15 @@
 ## Run python in Jupyter Notebooks
 
 1. **Caveat:** This exercise requires that you already have [Jupyter Lab] installed on your computer.
-
-1. Activate python virtual environment where `senzing-grpc` package was installed before.
+1. Activate python virtual environment and install python `senzing-grpc` package.
    Example:
 
     ```console
     source ~/.venv/bin/activate
+    ```
+
+    ```console
+    python3 -m pip install --upgrade senzing-grpc
     ```
 
 1. Run `jupyter lab` from examples directory.
@@ -249,7 +252,41 @@
     jupyter lab
     ```
 
-1. In Jupyter Lab, navigate to the `python` directory and run `senzing_hello_world.ipynb`
+1. In Jupyter Lab, navigate to the `python` directory and run the following:
+    1. `senzing_hello_world.ipynb`
+    1. `senzing_load_truthsets.ipynb`
+
+1. In Jupyter Lab, if a Go Kernel (e.g. [gonb]) is installed, navigate to the `go` directory and run the following:
+    1. `senzing_hello_world.ipynb`
+    1. `senzing_load_truthsets.ipynb`
+
+![image](divider.png)
+
+## Jupyter Lab recap
+
+A recap of the steps to start working with Senzing on Jupyter Lab:
+
+1. Start Docker container running Senzing gRPC service.
+
+    ```console
+    docker run -it --name senzing-serve-grpc -p 8261:8261 --read-only --rm senzing/serve-grpc:latest
+    ```
+
+1. Activate python virtual environment and install python `senzing-grpc` package.
+   Example:
+
+    ```console
+    source ~/.venv/bin/activate
+    python3 -m pip install --upgrade senzing-grpc
+    ```
+
+1. Run `jupyter lab`.
+
+    ```console
+    jupyter lab
+    ```
+
+1. Start coding!
 
 ![image](divider.png)
 
@@ -291,3 +328,4 @@
 [szengine.proto]: https://github.com/senzing-garage/sz-sdk-proto/blob/main/szengine.proto
 [TCP/IP]: https://en.wikipedia.org/wiki/Internet_protocol_suite
 [Jupyter Lab]: https://jupyter.org/
+[gonb]: https://github.com/janpfeifer/gonb
