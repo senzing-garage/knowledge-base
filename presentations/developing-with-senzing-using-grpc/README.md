@@ -2,17 +2,18 @@
 
 ## Overview
 
-1. Quick look at gRPC
-1. Service definition
+1. A quick look at gRPC
+1. The Senzing service definition
 1. Writing to native gRPC code
 1. Senzing SDK support
 1. Run Senzing gRPC server Docker container
 1. Run Python from command line
-1. Run Python in Jupyter Notebooks
+1. Run Python/Go in Jupyter Notebooks
+1. Jupyter Lab recap
 
 ![image](divider.png)
 
-## Quick look at gRPC
+## A quick look at gRPC
 
 1. [gRPC] - Google Remote Procedure Call
     1. Could have been called "[Stubby]", "[ProtoCall]", or "[ArcWire]".
@@ -41,7 +42,7 @@
 
 ![image](divider.png)
 
-## Service definition
+## The Senzing service definition
 
 1. For gRPC, the Interface Definition Language (IDL) is [Protocol Buffers] (Protobuf).
    This defines the messages passed across the network.
@@ -191,6 +192,9 @@
     docker run -it --name senzing-serve-grpc -p 8261:8261 --read-only --rm senzing/serve-grpc:latest
     ```
 
+1. In the Docker container, Senzing uses an internal, in-memory SQLite database.
+   Naturally this means when the container is stopped, the database contents are gone.
+
 ![image](divider.png)
 
 ## Run python from command line
@@ -225,6 +229,14 @@
     ```console
     ./senzing_load_truthsets.py
     ```
+
+1. This means that you can work with Senzing locally with your custom toolset.
+   Examples:
+    1. Integrated Developement environments (IDEs) like VSCode, Eclipse, PyCharm.
+    1. Linting/Formatting like pylint, gofmt, flake8, black
+    1. Testers like pytest, go test, unittest
+    1. Type checking like mypy.
+    1. Security testing like Bandit, gosec
 
 ![image](divider.png)
 
@@ -303,6 +315,7 @@ A recap of the steps to start working with Senzing on Jupyter Lab:
 [DiffNow]: https://www.diffnow.com/compare-urls
 [DockerHub]: https://hub.docker.com/
 [generate Python gRPC code]: https://grpc.io/docs/languages/python/quickstart/#generate-grpc-code
+[gonb]: https://github.com/janpfeifer/gonb
 [gRPC add_record method]: https://github.com/senzing-garage/sz-sdk-python-grpc/blob/4731a2ec428f3c3265e10aacb8b3e813067292c6/src/senzing_grpc/szengine.py#L77-L94
 [gRPC FAQs]: https://grpc.io/docs/what-is-grpc/faq/
 [gRPC on GitHub]: https://github.com/grpc/
@@ -313,6 +326,7 @@ A recap of the steps to start working with Senzing on Jupyter Lab:
 [Hypertext Markup Language]: https://en.wikipedia.org/wiki/HTML
 [Hypertext Transfer Protocol]: https://en.wikipedia.org/wiki/HTTP
 [internal code name "gRPC"]: https://youtu.be/5dMK5OW6WSw?t=276
+[Jupyter Lab]: https://jupyter.org/
 [open source on GitHub]: https://github.com/grpc/grpc
 [Open Systems Interconnection (OSI)]: https://en.wikipedia.org/wiki/OSI_model
 [protoc]: https://grpc.io/docs/protoc-installation/
@@ -327,5 +341,3 @@ A recap of the steps to start working with Senzing on Jupyter Lab:
 [szengine_pb2.py]: https://github.com/senzing-garage/sz-sdk-proto/blob/main/example_generated_source_code/python/szengine/szengine_pb2.py
 [szengine.proto]: https://github.com/senzing-garage/sz-sdk-proto/blob/main/szengine.proto
 [TCP/IP]: https://en.wikipedia.org/wiki/Internet_protocol_suite
-[Jupyter Lab]: https://jupyter.org/
-[gonb]: https://github.com/janpfeifer/gonb
