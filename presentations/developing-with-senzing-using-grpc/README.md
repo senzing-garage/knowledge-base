@@ -247,12 +247,15 @@
 ## Run in Jupyter Lab
 
 1. **Caveat:** This exercise requires that you already have [Jupyter Lab] installed on your computer.
-1. Activate python virtual environment and install python `senzing-grpc` package.
+1. Optionally, activate python virtual environment.
+   *Note:* If running macOS, this step is not needed.
    Example:
 
     ```console
     source ~/.venv/bin/activate
     ```
+
+1. Install python `senzing-grpc` package.
 
     ```console
     python3 -m pip install --upgrade senzing-grpc
