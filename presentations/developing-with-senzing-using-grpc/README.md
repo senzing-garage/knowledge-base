@@ -230,6 +230,27 @@
 
 ## Run python in Jupyter Notebooks
 
+1. **Caveat:** This exercise requires that you already have [Jupyter Lab] installed on your computer.
+
+1. Activate python virtual environment where `senzing-grpc` package was installed before.
+   Example:
+
+    ```console
+    source ~/.venv/bin/activate
+    ```
+
+1. Run `jupyter lab` from examples directory.
+
+    ```console
+    cd ~/my-senzing-playground/rootfs/examples/notebooks/
+    ```
+
+    ```console
+    jupyter lab
+    ```
+
+1. In Jupyter Lab, navigate to the `python` directory and run `senzing_hello_world.ipynb`
+
 ![image](divider.png)
 
 ## References
@@ -269,3 +290,4 @@
 [szengine_pb2.py]: https://github.com/senzing-garage/sz-sdk-proto/blob/main/example_generated_source_code/python/szengine/szengine_pb2.py
 [szengine.proto]: https://github.com/senzing-garage/sz-sdk-proto/blob/main/szengine.proto
 [TCP/IP]: https://en.wikipedia.org/wiki/Internet_protocol_suite
+[Jupyter Lab]: https://jupyter.org/
