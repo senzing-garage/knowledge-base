@@ -288,7 +288,7 @@ A recap of the steps to start working with Senzing on Jupyter Lab:
     docker run -it --name senzing-serve-grpc -p 8261:8261 --read-only --rm senzing/serve-grpc:latest
     ```
 
-1. Activate python virtual environment and install python `senzing-grpc` package.
+1. If writing in Python, activate virtual environment and install python `senzing-grpc` package.
    Example:
 
     ```console
