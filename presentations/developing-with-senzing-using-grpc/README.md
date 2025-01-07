@@ -306,26 +306,13 @@ A recap of the steps to start working with Senzing on Jupyter Lab:
 
 ![image](divider.png)
 
-## Sneak peak
-
-1. A Playground
-
-    ```console
-    docker build --no-cache --pull --tag senzing/playground:latest https://github.com/senzing-garage/playground.git#main
-    ```
-
-    ```console
-    docker run -it --name senzing-playground -p 8260:8260 -p 8261:8261 --rm senzing/playground
-    ```
-
-1. Visit [localhost:8260].
-
 ## References
 
 1. [gRPC on GitHub]
 1. [gRPC on Wikipedia]
 1. [gRPC on Google]
 1. [gRPC FAQs]
+1. [Sneak Peek]
 
 [A quick look at gRPC]: #a-quick-look-at-grpc
 [adapter pattern]: https://en.wikipedia.org/wiki/Adapter_pattern
@@ -348,7 +335,6 @@ A recap of the steps to start working with Senzing on Jupyter Lab:
 [internal code name "gRPC"]: https://youtu.be/5dMK5OW6WSw?t=276
 [Jupyter Lab recap]: #jupyter-lab-recap
 [Jupyter Lab]: https://jupyter.org/
-[localhost:8260]: https://localhost:8260
 [open source on GitHub]: https://github.com/grpc/grpc
 [Open Systems Interconnection (OSI)]: https://en.wikipedia.org/wiki/OSI_model
 [protoc]: https://grpc.io/docs/protoc-installation/
@@ -369,3 +355,4 @@ A recap of the steps to start working with Senzing on Jupyter Lab:
 [The Senzing service definition]: #the-senzing-service-definition
 [Writing to native gRPC code]: #writing-to-native-grpc-code
 [Writing to Senzing SDK]: #writing-to-senzing-sdk
+[Sneak Peek]: ./sneak-peek.md
