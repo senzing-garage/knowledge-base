@@ -23,15 +23,15 @@
     1. Network messaging
         1. Specifically: calling a function or procedure on a remote machine.
         1. Two aspects:
+            1. Message format.
             1. Network transportation.
                Usually in Application Layer of the [Open Systems Interconnection (OSI)] and [TCP/IP] models.
-            1. Message format.
     1. Other technologies in this space:
-        1. [Hypertext Transfer Protocol] (HTTP)
-        1. [Short Message Service] (SMS)
         1. [Simple Object Access Protocol] (SOAP)
         1. [Hypertext Markup Language] (HTML)
-1. Advantages
+        1. [Hypertext Transfer Protocol] (HTTP)
+        1. [Short Message Service] (SMS)
+1. Advantages of gRPC
     1. Performance
         1. Anecdotal evidence on internet suggests gRPC is 7 times faster than HTML.
         1. Tight packing of data
@@ -79,7 +79,7 @@
         raise new_exception(err) from err
     ```
 
-1. *Problem:*  Code to access Senzing via transpiled gRPC differs from native Senzing SDK.
+1. **Problem:**  Code to access Senzing via transpiled gRPC interface differs from native Senzing SDK interface.
    So you would have to write it one way to access via gRPC and a different way to access natively.
    Native Senzing SDK access look like this:
 
@@ -97,7 +97,7 @@
 1. Senzing has "core" SDKs to talk directly to the underlying Senzing binary libraries.
     1. Supported languages:  Python, Java, Go
 1. Senzing also has "gRPC" SDKs that implement the same interface as the "core" SDKs.
-    1. The gRPC SDKs are an [adapter pattern] translating from the Senzing interface to the gRPC interface.
+    1. The gRPC SDKs use an [adapter pattern] to translate from the Senzing interface to the gRPC interface.
     1. Supported languages:  Python, Java, Go
 1. With Senzing "core" and "gRPC" SDKs, you can access Senzing in the same manner.
    Python example:
@@ -109,16 +109,43 @@
         print(err)
     ```
 
+1. Compare file differences between using a Senzing "gRPC" SDK and a "core" SDK:
+    1. Visit [DiffNow] and enter the following URLs:
+
+        ```console
+        https://raw.githubusercontent.com/senzing-garage/playground/refs/heads/main/rootfs/examples/python/senzing_hello_world.py
+        ```
+
+        ```console
+        https://raw.githubusercontent.com/senzing-garage/knowledge-base/refs/heads/main/presentations/developing-with-senzing-using-grpc/senzing_hello_world.py
+        ```
+
+    1. Another example. Visit [DiffNow] again and enter the following URLs:
+
+        ```console
+        https://raw.githubusercontent.com/senzing-garage/playground/refs/heads/main/rootfs/examples/python/senzing_load_truthsets.py
+        ```
+
+        ```console
+        https://raw.githubusercontent.com/senzing-garage/knowledge-base/refs/heads/main/presentations/developing-with-senzing-using-grpc/senzing_load_truthsets.py
+        ```
+
+    1. **Net:** In Python, only the imported package and the `FACTORY_PARAMETERS` change.
+       Similar for other languages.
+
 1. Under the covers the [gRPC add_record method] is adapting from the Senzing SDK interfact to the gRPC interface.
 
-1. **NOTE:** If you are writing in a [gRPC supported language] other than Python, Java, or Go, you can still use gRPC natively.
+1. **NOTE:** If you are writing in a [gRPC supported language] other than Python, Java, or Go,
+   you can still use gRPC natively to access a Senzing gRPC server.
+   However, there will be no "core" Senzing SDK for accessing Senzing natively.
 
 ![image](divider.png)
 
-## Create gRPC server docker image
+## Create gRPC server Docker image
 
 1. **Note:** These instructions will only be required during the Senzing V4 beta.
    After Senzing V4 is public, the Docker image will be available on [DockerHub].
+1. To get values for `<get-from-Senzing>`, visit [Become a Senzing Beta Tester].
 1. Set environment variables:
     1. Linux/macOS
 
@@ -198,30 +225,6 @@
     ./senzing_load_truthsets.py
     ```
 
-1. Compare file differences between using a Senzing "gRPC" SDK and a "core" SDK:
-    1. Visit [DiffNow] and enter the following URLs:
-
-        ```console
-        https://raw.githubusercontent.com/senzing-garage/playground/refs/heads/main/rootfs/examples/python/senzing_hello_world.py
-        ```
-
-        ```console
-        https://raw.githubusercontent.com/senzing-garage/knowledge-base/refs/heads/main/presentations/developing-with-senzing-using-grpc/senzing_hello_world.py
-        ```
-
-    1. Another example. Visit [DiffNow] again and enter the following URLs:
-
-        ```console
-        https://raw.githubusercontent.com/senzing-garage/playground/refs/heads/main/rootfs/examples/python/senzing_load_truthsets.py
-        ```
-
-        ```console
-        https://raw.githubusercontent.com/senzing-garage/knowledge-base/refs/heads/main/presentations/developing-with-senzing-using-grpc/senzing_load_truthsets.py
-        ```
-
-    1. **Net:** In Python, only the imported package and the `FACTORY_PARAMETERS` change.
-       Similar for other languages.
-
 ![image](divider.png)
 
 ## Run python/go in Jupyter Notebooks
@@ -264,3 +267,4 @@
 [szengine_pb2.py]: https://github.com/senzing-garage/sz-sdk-proto/blob/main/example_generated_source_code/python/szengine/szengine_pb2.py
 [szengine.proto]: https://github.com/senzing-garage/sz-sdk-proto/blob/main/szengine.proto
 [TCP/IP]: https://en.wikipedia.org/wiki/Internet_protocol_suite
+[Become a Senzing Beta Tester]: https://senzing.com/beta-test-interest/
