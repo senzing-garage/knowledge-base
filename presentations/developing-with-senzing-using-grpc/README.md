@@ -194,7 +194,8 @@
 
 1. In the Docker container, Senzing uses an internal, in-memory SQLite database.
    Naturally this means when the container is stopped, the database contents are gone.
-
+1. Port 8261 was chosen because it doesn't conflict with anything on
+   [IANA's Service Name and Transport Protocol Port Number Registry].
 ![image](divider.png)
 
 ## Run from command line
@@ -349,3 +350,4 @@ A recap of the steps to start working with Senzing on Jupyter Lab:
 [The Senzing service definition]: #the-senzing-service-definition
 [Writing to native gRPC code]: #writing-to-native-grpc-code
 [Writing to Senzing SDK]: #writing-to-senzing-sdk
+[IANA's Service Name and Transport Protocol Port Number Registry]: http://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.txt
