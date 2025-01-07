@@ -239,6 +239,8 @@
     1. Testers like pytest, go test, unittest
     1. Type checking like mypy.
     1. Security testing like Bandit, gosec
+1. Let's look at a special kind of development environment,
+   [Jupyter Lab].
 
 ![image](divider.png)
 
