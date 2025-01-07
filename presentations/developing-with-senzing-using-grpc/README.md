@@ -2,14 +2,14 @@
 
 ## Overview
 
-1. A quick look at gRPC
-1. The Senzing service definition
-1. Writing to native gRPC code
-1. Senzing SDK support
-1. Run Senzing gRPC server Docker container
-1. Run Python from command line
-1. Run Python/Go in Jupyter Notebooks
-1. Jupyter Lab recap
+1. [A quick look at gRPC]
+1. [The Senzing service definition]
+1. [Writing to native gRPC code]
+1. [Writing to Senzing SDK]
+1. [Run Senzing gRPC server Docker container]
+1. [Run from command line]
+1. [Run in Jupyter Lab]
+1. [Jupyter Lab recap]
 
 ![image](divider.png)
 
@@ -94,7 +94,7 @@
 
 ![image](divider.png)
 
-## Senzing SDK support
+## Writing to Senzing SDK
 
 1. Senzing has "core" SDKs to talk directly to the underlying Senzing binary libraries.
     1. Supported languages:  Python, Java, Go
@@ -197,7 +197,7 @@
 
 ![image](divider.png)
 
-## Run python from command line
+## Run from command line
 
 1. Get examples from GitHub.
 
@@ -240,7 +240,7 @@
 
 ![image](divider.png)
 
-## Run python in Jupyter Notebooks
+## Run in Jupyter Lab
 
 1. **Caveat:** This exercise requires that you already have [Jupyter Lab] installed on your computer.
 1. Activate python virtual environment and install python `senzing-grpc` package.
@@ -341,3 +341,11 @@ A recap of the steps to start working with Senzing on Jupyter Lab:
 [szengine_pb2.py]: https://github.com/senzing-garage/sz-sdk-proto/blob/main/example_generated_source_code/python/szengine/szengine_pb2.py
 [szengine.proto]: https://github.com/senzing-garage/sz-sdk-proto/blob/main/szengine.proto
 [TCP/IP]: https://en.wikipedia.org/wiki/Internet_protocol_suite
+[A quick look at gRPC]: #a-quick-look-at-grpc
+[The Senzing service definition]: #the-senzing-service-definition
+[Writing to native gRPC code]: #writing-to-native-grpc-code
+[Writing to Senzing SDK]: https://
+[Run Senzing gRPC server Docker container]: https://
+[Run from command line]: https://
+[Run in Jupyter Lab]: https://
+[Jupyter Lab recap]: https://
