@@ -173,13 +173,13 @@
 1. Build `senzing/senzingsdk-runtime-beta:latest`.
 
     ```console
-    docker build --no-cache --pull --build-arg SENZING_APT_REPOSITORY_NAME --build-arg SENZING_APT_REPOSITORY_URL --tag senzing/senzingsdk-runtime-beta:latest https://github.com/senzing/senzingsdk-runtime.git#main
+    docker build --build-arg SENZING_APT_REPOSITORY_NAME --build-arg SENZING_APT_REPOSITORY_URL --tag senzing/senzingsdk-runtime-beta:latest https://github.com/senzing/senzingsdk-runtime.git#main
     ```
 
 1. Build `senzing/serve-grpc:latest`.
 
     ```console
-    docker build --no-cache --pull --tag senzing/serve-grpc:latest https://github.com/senzing-garage/serve-grpc.git#main
+    docker build --tag senzing/serve-grpc:latest https://github.com/senzing-garage/serve-grpc.git#main
     ```
 
 ![image](divider.png)
