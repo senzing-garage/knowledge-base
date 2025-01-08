@@ -293,6 +293,7 @@ A recap of the steps to start working with Senzing on Jupyter Lab:
 
 1. If writing in Python,
     1. Optionally, activate Python virtual environment.
+       *Note:* If running macOS, this step is not needed.
        Example:
 
         ```console
