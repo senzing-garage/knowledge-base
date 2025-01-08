@@ -2,6 +2,7 @@
 
 | Deprecated | Hidden     | Repository                                   |
 |------------|------------|----------------------------------------------|
+| 2025-01-08 |            | senzing-listener-example                     |
 | 2025-01-08 |            | senzing-listener                             |
 | 2024-12-18 |            | entity-search-web-app-console                |
 | 2024-09-18 |            | connector-neo4j                              |
