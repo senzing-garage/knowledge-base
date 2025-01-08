@@ -207,12 +207,14 @@
     git clone git@github.com:senzing-garage/playground.git ~/my-senzing-playground
     ```
 
-1. Activate python virtual environment and install python `senzing-grpc` package.
+1. Optionally, activate python virtual environment.
    Example:
 
     ```console
     source ~/.venv/bin/activate
     ```
+
+1. Install python `senzing-grpc` package.
 
     ```console
     python3 -m pip install --upgrade senzing-grpc
