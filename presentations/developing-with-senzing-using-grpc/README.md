@@ -150,10 +150,10 @@
 1. To get values for `<get-from-Senzing>`, visit [Become a Senzing Beta Tester].
     1. In the response email, in the "Installing Senzing v4 Beta (Debian-based)" section, you'll see a `wget`command in step #2.
     1. The URL in the `wget` command contains the information needed in the environment variables.
-        1. The `SENZING_APT_REPOSITORY_URL` is the `https://hostname` portion of the URL
+        1. The `SENZING_APT_REPOSITORY_URL` value is the `https://hostname` portion of the URL
            (i.e. Everything *before* the last forward-slash).
            Example: `https://senzing-xxxxxxxx.com`
-        1. The `SENZING_APT_REPOSITORY_NAME` the path portion of the URL
+        1. The `SENZING_APT_REPOSITORY_NAME` value is the path portion of the URL
            (i.e. Everything *after* the last forward-slash).
            Example: `senzingxxxx_xxxxxxxx.deb`
 
