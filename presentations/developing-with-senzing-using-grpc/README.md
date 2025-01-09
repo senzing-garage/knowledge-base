@@ -147,8 +147,8 @@
 
 1. **Note:** These instructions will only be required during the Senzing V4 beta.
    After Senzing V4 is public, the Docker image will be available on [DockerHub].
-1. To get values for `<get-from-Senzing>`, visit [Become a Senzing Beta Tester].
-    1. In the response email, in the "Installing Senzing v4 Beta (Debian-based)" section, you'll see a `wget`command in step #2.
+1. To get values for `<get-from-Senzing>`, email <sales@senzing.com> to request access to Senzing V4 Beta.
+    1. After signing up, a response email will have a "Installing Senzing v4 Beta (Debian-based)" section where you'll see a `wget`command in step #2.
     1. The URL in the `wget` command contains the information needed in the environment variables.
         1. The `SENZING_APT_REPOSITORY_URL` value is the `https://hostname` portion of the URL
            (i.e. Everything *before* the last forward-slash).
@@ -338,7 +338,6 @@ A recap of the steps to start working with Senzing on Jupyter Lab:
 [A quick look at gRPC]: #a-quick-look-at-grpc
 [adapter pattern]: https://en.wikipedia.org/wiki/Adapter_pattern
 [ArcWire]: https://youtu.be/5dMK5OW6WSw?t=333
-[Become a Senzing Beta Tester]: https://senzing.com/beta-test-interest/
 [DiffNow]: https://www.diffnow.com/compare-urls
 [DockerHub]: https://hub.docker.com/
 [generate Python gRPC code]: https://grpc.io/docs/languages/python/quickstart/#generate-grpc-code
