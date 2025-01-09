@@ -23,3 +23,9 @@ The Senzing Playground is a Docker container that is used to play with Senzing.
 1. Visit [localhost:8260].
 
 [localhost:8260]: http://localhost:8260
+
+## Video
+
+1. [Using Jupyter notebooks in the Senzing Sandbox]
+
+[Using Jupyter notebooks in the Senzing Sandbox]: <https://senzing.dockter.com/files/presentations/jupyter-sandbox.mp4>
