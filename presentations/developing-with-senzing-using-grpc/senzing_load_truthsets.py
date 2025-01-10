@@ -6,23 +6,16 @@ import json
 import shutil
 
 import requests
-from senzing_core import (
-    SzAbstractFactory,
-    SzAbstractFactoryParameters,
-    SzEngineFlags,
-    SzError,
-)
+from senzing import SzEngineFlags, SzError
+from senzing_core import SzAbstractFactoryCore
 
-FACTORY_PARAMETERS: SzAbstractFactoryParameters = {
-    "instance_name": "Example",
-    "settings": {
-        "PIPELINE": {
-            "CONFIGPATH": "/etc/opt/senzing",
-            "RESOURCEPATH": "/opt/senzing/er/resources",
-            "SUPPORTPATH": "/opt/senzing/data",
-        },
-        "SQL": {"CONNECTION": "sqlite3://na:na@/tmp/sqlite/G2C.db"},
+SETTINGS = {
+    "PIPELINE": {
+        "CONFIGPATH": "/etc/opt/senzing",
+        "RESOURCEPATH": "/opt/senzing/er/resources",
+        "SUPPORTPATH": "/opt/senzing/data",
     },
+    "SQL": {"CONNECTION": "sqlite3://na:na@/tmp/sqlite/G2C.db"},
 }
 
 # Set environment specific variables.
@@ -60,7 +53,7 @@ print(f"Found the following DATA_SOURCE values in the data: {datasources}")
 
 # Create an abstract factory for accessing Senzing via gRPC.
 
-sz_abstract_factory = SzAbstractFactory(**FACTORY_PARAMETERS)
+sz_abstract_factory = SzAbstractFactoryCore("Example instance", SETTINGS)
 
 # Create Senzing objects.
 
