@@ -9,15 +9,6 @@ import requests
 from senzing import SzEngineFlags, SzError
 from senzing_core import SzAbstractFactoryCore
 
-SETTINGS = {
-    "PIPELINE": {
-        "CONFIGPATH": "/etc/opt/senzing",
-        "RESOURCEPATH": "/opt/senzing/er/resources",
-        "SUPPORTPATH": "/opt/senzing/data",
-    },
-    "SQL": {"CONNECTION": "sqlite3://na:na@/tmp/sqlite/G2C.db"},
-}
-
 # Set environment specific variables.
 
 home_path = "./"
@@ -52,6 +43,15 @@ for filename in truth_set_filenames:
 print(f"Found the following DATA_SOURCE values in the data: {datasources}")
 
 # Create an abstract factory for accessing Senzing via gRPC.
+
+SETTINGS = {
+    "PIPELINE": {
+        "CONFIGPATH": "/etc/opt/senzing",
+        "RESOURCEPATH": "/opt/senzing/er/resources",
+        "SUPPORTPATH": "/opt/senzing/data",
+    },
+    "SQL": {"CONNECTION": "sqlite3://na:na@/tmp/sqlite/G2C.db"},
+}
 
 sz_abstract_factory = SzAbstractFactoryCore("Example instance", SETTINGS)
 

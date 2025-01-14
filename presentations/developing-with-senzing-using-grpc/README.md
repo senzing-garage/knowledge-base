@@ -98,7 +98,7 @@
 
 1. Senzing has "core" SDKs to talk directly to the underlying Senzing binary libraries.
     1. Supported languages:  Python, Java, Go
-1. Senzing also has "gRPC" SDKs that implement the same interface as the "core" SDKs.
+1. Senzing also has opensource "gRPC" SDKs that implement the same interface as the "core" SDKs.
     1. The gRPC SDKs use an [adapter pattern] to translate from the Senzing interface to the gRPC interface.
     1. Supported languages:  Python, Java, Go
 1. With Senzing "core" and "gRPC" SDKs, you can access Senzing in the same manner.
