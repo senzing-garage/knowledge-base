@@ -148,7 +148,7 @@
 1. **Note:** These instructions will only be required during the Senzing V4 beta.
    After Senzing V4 is public, the Docker image will be available on [DockerHub].
 1. To get values for `<get-from-Senzing>`, email <sales@senzing.com> to request access to Senzing V4 Beta.
-    1. After signing up, a response email will have a "NOTE: When building Docker images, you'll need to set the following environment variables:" section.
+    1. After signing up, a [response email] will have a "NOTE: When building Docker images, you'll need to set the following environment variables:" section.
 
 1. Set environment variables:
     1. Linux/macOS
@@ -371,3 +371,4 @@ A recap of the steps to start working with Senzing on Jupyter Lab:
 [Writing directly to gRPC code]: #writing-directly-to-grpc-code
 [Writing to Senzing SDK]: #writing-to-senzing-sdk
 [serve-grpc]: https://github.com/senzing-garage/serve-grpc
+[response email]: response-email.png
