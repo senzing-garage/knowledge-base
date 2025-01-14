@@ -4,7 +4,7 @@
 
 1. [A quick look at gRPC]
 1. [The Senzing service definition]
-1. [Writing to native gRPC code]
+1. [Writing directly to gRPC code]
 1. [Writing to Senzing SDK]
 1. [Run Senzing gRPC server Docker container]
 1. [Run from command line]
@@ -60,7 +60,7 @@
 
 ![image](divider.png)
 
-## Writing to native gRPC code
+## Writing directly to gRPC code
 
 1. It is possible to write code that uses the transpiled code directly.
    Here is an example in Python:
@@ -81,9 +81,9 @@
     info = response.result
     ```
 
-1. **Problem:**  Code to access Senzing via transpiled gRPC interface differs from native Senzing SDK interface.
-   So you would have to write it one way to access via gRPC and a different way to access natively.
-   Native Senzing SDK access look like this:
+1. **Problem:**  Code to access Senzing via transpiled gRPC interface differs from Senzing SDK interface.
+   So you would have to write it one way to access via gRPC and a different way to access via Senzing SDK.
+   Senzing SDK access look like this:
 
     ```console
     try:
@@ -138,8 +138,8 @@
 1. Under the covers the [gRPC add_record method] is adapting from the Senzing SDK interfact to the gRPC interface.
 
 1. **NOTE:** If you are writing in a [gRPC supported language] other than Python, Java, or Go,
-   you can still use gRPC natively to access a Senzing gRPC server.
-   However, there will be no "core" Senzing SDK for accessing Senzing natively.
+   you can still use gRPC directly to access a Senzing gRPC server.
+   However, there will be no Senzing SDK for accessing Senzing.
 
 ![image](divider.png)
 
@@ -374,5 +374,5 @@ A recap of the steps to start working with Senzing on Jupyter Lab:
 [szengine.proto]: https://github.com/senzing-garage/sz-sdk-proto/blob/main/szengine.proto
 [TCP/IP]: https://en.wikipedia.org/wiki/Internet_protocol_suite
 [The Senzing service definition]: #the-senzing-service-definition
-[Writing to native gRPC code]: #writing-to-native-grpc-code
+[Writing directly to gRPC code]: #writing-directly-to-grpc-code
 [Writing to Senzing SDK]: #writing-to-senzing-sdk
