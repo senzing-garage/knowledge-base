@@ -354,9 +354,11 @@ A recap of the steps to start working with Senzing on Jupyter Lab:
 [protoc]: https://grpc.io/docs/protoc-installation/
 [ProtoCall]: https://youtu.be/5dMK5OW6WSw?t=318
 [Protocol Buffers]: https://protobuf.dev/
+[response email]: response-email.png
 [Run from command line]:#run-from-command-line
 [Run in Jupyter Lab]: #run-in-jupyter-lab
 [Run Senzing gRPC server Docker container]: #run-senzing-grpc-server-docker-container
+[serve-grpc]: https://github.com/senzing-garage/serve-grpc
 [Short Message Service]: https://en.wikipedia.org/wiki/SMS
 [Simple Object Access Protocol]: https://en.wikipedia.org/wiki/SOAP
 [Sneak Peek]: ./sneak-peek.md
@@ -370,5 +372,3 @@ A recap of the steps to start working with Senzing on Jupyter Lab:
 [The Senzing service definition]: #the-senzing-service-definition
 [Writing directly to gRPC code]: #writing-directly-to-grpc-code
 [Writing to Senzing SDK]: #writing-to-senzing-sdk
-[serve-grpc]: https://github.com/senzing-garage/serve-grpc
-[response email]: response-email.png
