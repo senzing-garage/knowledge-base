@@ -148,14 +148,7 @@
 1. **Note:** These instructions will only be required during the Senzing V4 beta.
    After Senzing V4 is public, the Docker image will be available on [DockerHub].
 1. To get values for `<get-from-Senzing>`, email <sales@senzing.com> to request access to Senzing V4 Beta.
-    1. After signing up, a response email will have a "Installing Senzing v4 Beta (Debian-based)" section where you'll see a `wget`command in step #2.
-    1. The URL in the `wget` command contains the information needed in the environment variables.
-        1. The `SENZING_APT_REPOSITORY_URL` value is the `https://hostname` portion of the URL
-           (i.e. Everything *before* the last forward-slash).
-           Example: `https://senzing-xxxxxxxx.com`
-        1. The `SENZING_APT_REPOSITORY_NAME` value is the path portion of the URL
-           (i.e. Everything *after* the last forward-slash).
-           Example: `senzingxxxx_xxxxxxxx.deb`
+    1. After signing up, a response email will have a "NOTE: When building Docker images, you'll need to set the following environment variables:" section.
 
 1. Set environment variables:
     1. Linux/macOS
