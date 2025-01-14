@@ -201,6 +201,7 @@
     docker run -it --name senzing-serve-grpc -p 8261:8261 --read-only --rm senzing/serve-grpc:latest
     ```
 
+1. Docker container runs a gRPC service ([serve-grpc])
 1. In the Docker container, Senzing uses an internal, in-memory SQLite database.
    Naturally this means when the container is stopped, the database contents are gone.
 1. Port 8261 was chosen because it doesn't conflict with anything on
@@ -376,3 +377,4 @@ A recap of the steps to start working with Senzing on Jupyter Lab:
 [The Senzing service definition]: #the-senzing-service-definition
 [Writing directly to gRPC code]: #writing-directly-to-grpc-code
 [Writing to Senzing SDK]: #writing-to-senzing-sdk
+[serve-grpc]: https://github.com/senzing-garage/serve-grpc
