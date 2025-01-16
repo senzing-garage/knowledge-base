@@ -2,6 +2,12 @@
 
 ## Setup environment
 
+1. Run Senzing gRPC Server Docker container.
+
+    ```console
+    docker run -it --name senzing-serve-grpc -p 8261:8261 --read-only --rm senzing/serve-grpc:latest
+    ```
+
 1. If a Python virtual environment is used, activate it.
 
    Example:
@@ -14,12 +20,6 @@
 
     ```console
     python3 -m pip install --upgrade senzing-grpc
-    ```
-
-1. Run Senzing gRPC Server Docker container.
-
-    ```console
-    docker run -it --name senzing-serve-grpc -p 8261:8261 --read-only --rm senzing/serve-grpc:latest
     ```
 
 ## Example notebooks
