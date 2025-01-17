@@ -184,6 +184,8 @@
     docker build --tag senzing/serve-grpc:latest https://github.com/senzing-garage/serve-grpc.git#main
     ```
 
+1. These instructions can be seen at [How to build Docker image].
+
 ![image](divider.png)
 
 ## Run Senzing gRPC server Docker container
@@ -204,12 +206,6 @@
 
 ## Run from command line
 
-1. Get examples from GitHub.
-
-    ```console
-    git clone git@github.com:senzing-garage/playground.git ~/my-senzing-playground
-    ```
-
 1. Optionally, activate python virtual environment.
    Example:
 
@@ -221,6 +217,12 @@
 
     ```console
     python3 -m pip install --upgrade senzing-grpc
+    ```
+
+1. Get examples from GitHub.
+
+    ```console
+    git clone git@github.com:senzing-garage/playground.git ~/my-senzing-playground
     ```
 
 1. Run example programs.
@@ -284,6 +286,8 @@
     1. `senzing_hello_world.ipynb`
     1. `senzing_load_truthsets.ipynb`
 
+1. A recap of the preceeding steps is at [How to bring up Jupyter lab].
+
 ![image](divider.png)
 
 ## Jupyter Lab recap
@@ -319,7 +323,7 @@ A recap of the steps to start working with Senzing on Jupyter Lab:
 
 1. Start coding!
 
-1. A Recap video is at [https://senzing.dockter.com/files/presentations/grpc-jupyter.mp4]
+1. A 4-minute recap video is at [https://senzing.dockter.com/files/presentations/grpc-jupyter.mp4]
 
 ![image](divider.png)
 
@@ -345,6 +349,8 @@ A recap of the steps to start working with Senzing on Jupyter Lab:
 [gRPC on Wikipedia]: https://en.wikipedia.org/wiki/GRPC
 [gRPC supported language]: https://grpc.io/docs/languages/
 [gRPC]: https://grpc.io
+[How to bring up Jupyter lab]: https://github.com/senzing-garage/knowledge-base/blob/main/HOWTO/bring-up-jupyter-lab.md
+[How to build Docker image]: https://garage.senzing.com/serve-grpc/how-to-build-docker-image
 [https://senzing.dockter.com/files/presentations/grpc-jupyter.mp4]: https://senzing.dockter.com/files/presentations/grpc-jupyter.mp4
 [Hypertext Markup Language]: https://en.wikipedia.org/wiki/HTML
 [Hypertext Transfer Protocol]: https://en.wikipedia.org/wiki/HTTP
