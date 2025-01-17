@@ -319,6 +319,8 @@ A recap of the steps to start working with Senzing on Jupyter Lab:
 
 1. Start coding!
 
+1. A Recap video is at [https://senzing.dockter.com/files/presentations/grpc-jupyter.mp4]
+
 ![image](divider.png)
 
 ## References
@@ -343,6 +345,7 @@ A recap of the steps to start working with Senzing on Jupyter Lab:
 [gRPC on Wikipedia]: https://en.wikipedia.org/wiki/GRPC
 [gRPC supported language]: https://grpc.io/docs/languages/
 [gRPC]: https://grpc.io
+[https://senzing.dockter.com/files/presentations/grpc-jupyter.mp4]: https://senzing.dockter.com/files/presentations/grpc-jupyter.mp4
 [Hypertext Markup Language]: https://en.wikipedia.org/wiki/HTML
 [Hypertext Transfer Protocol]: https://en.wikipedia.org/wiki/HTTP
 [IANA's Service Name and Transport Protocol Port Number Registry]: http://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.txt
