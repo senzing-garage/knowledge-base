@@ -64,6 +64,7 @@
             1. Calls `SzConfigMgr_addConfig(ConfigDefinition, comment)` returning a **ConfigID**
             1. Method returns **ConfigID**
     1. Add `getDataSources(ConfigID)` returns **DataSourceList**
+        1. Essentially this method is moved from SzConfig to SzConfigManager
         1. This method:
             1. If `ConfigID` == 0:
                 1. Calls `SzConfigManager.getDefaultConfigId()` to get ConfigId
@@ -88,14 +89,27 @@
         1. `getDefaultConfigId()` returns **ConfigID**
         1. `replaceDefaultConfigId(currentDefaultConfigID, newDefaultConfigID)`
         1. `setDefaultConfigId(ConfigID)`
-    1. Moved to new **python-only** API
+    1. Moved from SzConfigManager to new **python-only** API
         1. `addConfig(ConfigDefinition, configComment)`
-        1. `getConfig(configId)`
+        1. `getConfig(ConfigID)`
 1. Add new **python-only** API for sz_config_tool (perhaps `SzInternalConfigManager`)
     1. `addConfig(ConfigDefinition, String configComment)` returns **ConfigID**
+        1. This method:
+            1. Calls `SzConfigMgr_addConfig(ConfigDefinition, configComment)` returning a **ConfigID**
+            1. Method returns **ConfigID**
     1. `getConfig(ConfigID)` returns **ConfigDefinition**
         1. `getConfig(0)` returns Default **ConfigDefinition**
+        1. This method:
+            1. If `ConfigID` == 0:
+                1. Calls `SzConfigManager.getDefaultConfigId()` returning a **ConfigID**
+            1. Calls `SzConfigMgr_getConfig(ConfigID)` returning a **ConfigDefinition**
+            1. Method returns **ConfigDefinition**
     1. `getTemplateConfig()` returns  **ConfigDefinition**
+        1. This method:
+            1. Calls `SzConfig_create()` returning a **ConfigHandle**
+            1. Calls `SzConfig_save(ConfigHandle)` returning a **ConfigDefinition**
+            1. Calls `SzConfig_close(ConfigHandle)`
+            1. Method returns **ConfigDefinition**
 1. Pros:
     1. The user never has a copy of **ConfigDefinition**.  So they can't corrupt it.
     1. Each "grpc" SDK only has to call the gRPC server to do the "heavy lifting".
