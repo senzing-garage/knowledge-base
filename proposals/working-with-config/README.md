@@ -5,38 +5,47 @@
 1. User's only usecase is to add (delete?) data sources from config.
 1. `sz_config_tools` requires the entire JSON for configuration manipulation.
 
+## Vocabulary
+
+1. **ConfigHandle** - *int64* memory location of configuration JSON
+1. **ConfigID** - *int64* the hash value of the configuration JSON
+1. **ConfigDefinition** - *string* the entire Senzing configuration JSON string
+1. **DataSourceList** - *string* a list of data source names (format currently undetermined)
+
 ## Proposal 1
 
 1. Remove SzConfig API
 1. Add the following to SzConfigManager:
-    1. `String getTemplateConfig()`
-    1. `String addDataSources(String configDefinition, String... dataSources)`
-    1. `String deleteDataSources(String configDefinition, String... dataSources)`
-    1. `String getDataSources(String configDefinition)`
+    1. `getTemplateConfig()` returns **ConfigDefinition**
+    1. `addDataSources(String configDefinition, String... dataSources)` returns  **ConfigDefinition**
+    1. `deleteDataSources(String configDefinition, String... dataSources)` returns  **ConfigDefinition**
+    1. `getDataSources(String configDefinition)` returns **DataSourceList**
 
 ## Proposal 2
 
 1. Remove SzConfig API
 1. Add the following to SzConfigManager:
-    1. `String getTemplateConfig()`
-    1. `String addDataSources(String configDefinition, String... dataSources)`
-    1. `String deleteDataSources(String configDefinition, String... dataSources)`
-    1. `String getDataSources(String configDefinition)`
-    1. `String getDataSources(long configId)`
+    1. `getTemplateConfig()` returns **ConfigDefinition**
+    1. `addDataSources(String configDefinition, String... dataSources)` returns  **ConfigDefinition**
+    1. `deleteDataSources(String configDefinition, String... dataSources)` returns  **ConfigDefinition**
+    1. `getDataSources(String configDefinition)` returns **DataSourceList**
+    1. `getDataSources(long configId)` returns **DataSourceList**
 
 ## Proposal 3
 
 1. Remove SzConfig API
 1. Add the following to SzConfigManager:
-    1. `long getTemplateConfigId()`
-    1. `long createNewConfigAddDatasources(long fromConfigId, String... dataSource)`
-    1. Alternative: `long createNewConfigDeleteDatasources(long fromConfigId, String... dataSource)`
-    1. Alternative: `long createNewConfig(long fromConfigId, String[] addDataSources, String[] deleteDataSources)`
-1.Add new **python-only** API for sz_config_tool (perhaps `SzInternalConfigManager)
-    1. `long addConfig(String configDefinition, String configComment)`
-    1. `String getTemplateConfig()`
+    1. `getTemplateConfigId()` returns **ConfigID**
+    1. `createNewConfigAddDatasources(long fromConfigId, String... dataSource)` returns **ConfigID**
+    1. Alternative: `createNewConfigDeleteDatasources(long fromConfigId, String... dataSource)` returns **ConfigID**
+    1. Alternative: `createNewConfig(long fromConfigId, String[] addDataSources, String[] deleteDataSources)` returns **ConfigID**
+1. Add new **python-only** API for sz_config_tool (perhaps `SzInternalConfigManager`)
+    1. `addConfig(String configDefinition, String configComment)`  returns **ConfigID**
+    1. `getTemplateConfig()` returns  **ConfigDefinition**
 
-1. Before
+### Proposal 3 example
+
+1. Python before
 
 ```python
 sz_abstract_factory = SzAbstractFactoryCore("Example instance", SETTINGS)
@@ -71,7 +80,7 @@ sz_configmanager.replace_default_config_id(old_config_id, new_config_id)
 sz_abstract_factory.reinitialize(new_config_id)
 ```
 
-1. After
+1. Python after
 
 ```python
 sz_abstract_factory = SzAbstractFactoryCore("Example instance", SETTINGS)
