@@ -47,6 +47,23 @@ Synopsis:
 Details:
 
 1. Remove SzConfig API
+1. SzConfigManager would have the following method signatures:
+    1. New:
+        1. `createNewConfigAddDatasources(fromConfigID, String... dataSource)` returns **ConfigID**
+        1. `getDataSources(ConfigID)` returns **DataSourceList**
+        1. `getTemplateConfigId()` returns **ConfigID**
+    1. Existing:
+        1. `getConfigs()` returns JSON
+        1. `getDefaultConfigId()` returns **ConfigID**
+        1. `replaceDefaultConfigId(currentDefaultConfigID, newDefaultConfigID)`
+        1. `setDefaultConfigId(ConfigID)`
+    1. Removed (moved to new Python API):
+        1. `addConfig(ConfigDefinition, configComment)`
+        1. `getConfig(ConfigID)`
+1. The new **python-only** API for sz_config_tool (perhaps `SzInternalConfigManager`) would have the following method signatures
+    1. `addConfig(ConfigDefinition, String configComment)` returns **ConfigID**
+    1. `getConfig(ConfigID)` returns **ConfigDefinition**
+    1. `getTemplateConfig()` returns  **ConfigDefinition**
 1. Modify the following methods in SzConfigManager:
     1. Add `getTemplateConfigId()` returns **ConfigID**
         1. A replacement for `SzConfig.createConfig()`, but returns **ConfigID**, not **ConfigHandle**
@@ -88,19 +105,6 @@ Details:
             1. Method returns **ConfigID**
     1. Move `addConfig(ConfigDefinition, configComment)` to new **python-only** API
     1. Move `getConfig(configId)` to new **python-only** API
-1. SzConfigManager would then have the following method signatures:
-    1. New:
-        1. `createNewConfigAddDatasources(fromConfigID, String... dataSource)` returns **ConfigID**
-        1. `getDataSources(ConfigID)` returns **DataSourceList**
-        1. `getTemplateConfigId()` returns **ConfigID**
-    1. Existing:
-        1. `getConfigs()` returns JSON
-        1. `getDefaultConfigId()` returns **ConfigID**
-        1. `replaceDefaultConfigId(currentDefaultConfigID, newDefaultConfigID)`
-        1. `setDefaultConfigId(ConfigID)`
-    1. Moved from SzConfigManager to new **python-only** API
-        1. `addConfig(ConfigDefinition, configComment)`
-        1. `getConfig(ConfigID)`
 1. Add new **python-only** API for sz_config_tool (perhaps `SzInternalConfigManager`)
     1. `addConfig(ConfigDefinition, String configComment)` returns **ConfigID**
         1. This method:
