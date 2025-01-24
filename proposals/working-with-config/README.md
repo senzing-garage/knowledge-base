@@ -71,7 +71,7 @@ Details:
     1. One less Senzing "object".  `SzConfig` is removed.
     1. "speciality methods" are not seen by User; moved to internal-only package and only in Python.
 1. Cons:
-    1. Each "core" SDK has to implement a sophisticated `createNewConfigAddDatasources` method.
+    1. Each "core" SDK has to implement a 3 new methods that make multiple calls to Senzing C binaries.
     1. The returned message may have to return the result of each data source added.
 
 ### Proposal 3 Implementation
