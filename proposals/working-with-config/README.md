@@ -44,7 +44,8 @@
         1. This method:
             1. Calls `SzConfig.createConfig()` returning a **ConfigHandle**
             1. Calls `SzConfig.exportConfig(ConfigHandle)` returning a **ConfigDefinition**
-            1. Calls `SzConfigManager.addConfig(ConfigDefinition, configComment)` returning a **ConfigID**
+            1. Calls `SzConfigManager.addConfig(ConfigDefinition, "Template as of YYYY-MM-DDThh:mm:ss")` returning a **ConfigID**
+                1. Timestamp in ISO 8601 format
             1. Calls `SzConfig.closeConfig(ConfigHandle)`
             1. Method returns **ConfigID**
     1. `createNewConfigAddDatasources(fromConfigID, String... dataSource)` returns **ConfigID**
