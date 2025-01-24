@@ -88,6 +88,9 @@
         1. `getDefaultConfigId()` returns **ConfigID**
         1. `replaceDefaultConfigId(currentDefaultConfigID, newDefaultConfigID)`
         1. `setDefaultConfigId(ConfigID)`
+    1. Moved to new **python-only** API
+        1. `addConfig(ConfigDefinition, configComment)`
+        1. `getConfig(configId)`
 1. Add new **python-only** API for sz_config_tool (perhaps `SzInternalConfigManager`)
     1. `addConfig(ConfigDefinition, String configComment)` returns **ConfigID**
     1. `getConfig(ConfigID)` returns **ConfigDefinition**
