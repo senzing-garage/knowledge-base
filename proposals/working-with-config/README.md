@@ -7,10 +7,10 @@
 
 ## Vocabulary
 
-1. **ConfigHandle** - *int64* memory location of configuration JSON
-1. **ConfigID** - *int64* the hash value of the configuration JSON
-1. **ConfigDefinition** - *string* the entire Senzing configuration JSON string
-1. **DataSourceList** - *string* a list of data source names (format currently undetermined)
+1. **ConfigHandle** - (*int64*) memory location of configuration JSON
+1. **ConfigID** - (*int64*) the hash value of the configuration JSON
+1. **ConfigDefinition** - (*string*) the entire Senzing configuration JSON string
+1. **DataSourceList** - (*string*) a list of data source names (format currently undetermined)
 
 ## Proposal 1
 
