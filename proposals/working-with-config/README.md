@@ -40,19 +40,38 @@
 1. Remove SzConfig API
 1. Add the following to SzConfigManager:
     1. `getTemplateConfigId()` returns **ConfigID**
-        1. If there is no default ConfigID, the method inserts the template configuration and returns it's ConfigID.
-    1. `createNewConfigAddDatasources(long fromConfigId, String... dataSource)` returns **ConfigID**
+        1. A replacement for `SzConfig.createConfig()`, but returns **ConfigID**, not **ConfigHandle**
+        1. This method:
+            1. Calls `SzConfig.createConfig()` returning a **ConfigHandle**
+            1. Calls `SzConfig.exportConfig(ConfigHandle)` returning a **ConfigDefinition**
+            1. Calls `SzConfigManager.addConfig(ConfigDefinition, configComment)` returning a **ConfigID**
+            1. Calls `SzConfig.closeConfig(ConfigHandle)`
+            1. Method returns **ConfigID**
+    1. `createNewConfigAddDatasources(fromConfigID, String... dataSource)` returns **ConfigID**
         1. if `fromConfigId` is 0, then the default ConfigID is used.
         1. If there is no default ConfigID, the method inserts the template configuration, adds the data sources, and returns the new ConfigID.
-    1. Alternative: `createNewConfigDeleteDatasources(long fromConfigId, String... dataSource)` returns **ConfigID**
-    1. Alternative: `createNewConfig(long fromConfigId, String[] addDataSources, String[] deleteDataSources)` returns **ConfigID**
+        1. Alternative: `createNewConfigDeleteDatasources(fromConfigId, String... dataSource)` returns **ConfigID**
+        1. Alternative: `createNewConfig(fromConfigId, String[] addDataSources, String[] deleteDataSources)` returns **ConfigID**
+    1. `getDataSources(ConfigID)` returns **DataSourceList**
+        1. if `ConfigID` is 0, then the default ConfigID is used.
+1. SzConfigManager would then have the following method signatures:
+    1. `createNewConfigAddDatasources(fromConfigID, String... dataSource)` returns **ConfigID**
+    1. `getConfigs()` returns JSON
+    1. `getDataSources(ConfigID)` returns **DataSourceList**
+    1. `getDefaultConfigId()` returns **ConfigID**
+    1. `getTemplateConfigId()` returns **ConfigID**
+    1. `replaceDefaultConfigId(currentDefaultConfigID, newDefaultConfigID)`
+    1. `setDefaultConfigId(ConfigID)`
 1. Add new **python-only** API for sz_config_tool (perhaps `SzInternalConfigManager`)
-    1. `addConfig(String configDefinition, String configComment)`  returns **ConfigID**
+    1. `addConfig(ConfigDefinition, String configComment)` returns **ConfigID**
+    1. `getConfig(ConfigID)` returns **ConfigDefinition**
+        1. `getConfig(0)` returns Default **ConfigDefinition**
     1. `getTemplateConfig()` returns  **ConfigDefinition**
 1. Pros:
     1. The user never has a copy of **ConfigDefinition**.  So they can't corrupt it.
     1. Each "grpc" SDK only has to call the gRPC server to do the "heavy lifting".
     1. Updating the Senzing Configuration over gRPC is not sensitive to non-sticky routing.
+    1. One less Senzing "object".  `SzConfig` is removed.
 1. Cons:
     1. Each "core" SDK has to implement a sophisticated `createNewConfigAddDatasources` method.
     1. The returned message may have to return the result of each data source added.
