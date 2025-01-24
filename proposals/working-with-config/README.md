@@ -2,13 +2,13 @@
 
 ## Assumptions
 
-1. User's only usecase is to add (delete?) data sources from config.
+1. A user's only usecase is to add (delete?) data sources from a Senzing configuration.
 1. `sz_config_tools` requires the entire JSON for configuration manipulation.
 
 ## Vocabulary
 
-1. **ConfigHandle** - (*int64*) memory location of configuration JSON
-1. **ConfigID** - (*int64*) the hash value of the configuration JSON
+1. **ConfigHandle** - (*int64*) Senzing binary memory location of configuration JSON
+1. **ConfigID** - (*int64*) the hash value of the configuration JSON in the Senzing database
 1. **ConfigDefinition** - (*string*) the entire Senzing configuration JSON string
 1. **DataSourceList** - (*string*) a list of data source names (format currently undetermined)
 
@@ -20,6 +20,8 @@
     1. `addDataSources(String configDefinition, String... dataSources)` returns  **ConfigDefinition**
     1. `deleteDataSources(String configDefinition, String... dataSources)` returns  **ConfigDefinition**
     1. `getDataSources(String configDefinition)` returns **DataSourceList**
+1. Pros:
+1. Cons:
 
 ## Proposal 2
 
@@ -30,6 +32,8 @@
     1. `deleteDataSources(String configDefinition, String... dataSources)` returns  **ConfigDefinition**
     1. `getDataSources(String configDefinition)` returns **DataSourceList**
     1. `getDataSources(long configId)` returns **DataSourceList**
+1. Pros:
+1. Cons:
 
 ## Proposal 3
 
@@ -42,6 +46,13 @@
 1. Add new **python-only** API for sz_config_tool (perhaps `SzInternalConfigManager`)
     1. `addConfig(String configDefinition, String configComment)`  returns **ConfigID**
     1. `getTemplateConfig()` returns  **ConfigDefinition**
+1. Pros:
+    1. The user never has a copy of **ConfigDefinition**.  So they can't corrupt it.
+    1. Each "grpc" SDK only has to call the gRPC server to do the "heavy lifting".
+    1. Updating the Senzing Configuration over gRPC is not sensitive to non-sticky routing.
+1. Cons:
+    1. Each "core" SDK has to implement a sophisticated `createNewConfigAddDatasources` method.
+    1. The returned message may have to return the result of each data source added.
 
 ### Proposal 3 example
 
