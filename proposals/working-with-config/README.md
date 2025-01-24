@@ -38,31 +38,56 @@
 ## Proposal 3
 
 1. Remove SzConfig API
-1. Add the following to SzConfigManager:
-    1. `getTemplateConfigId()` returns **ConfigID**
+1. Modify the following methods in SzConfigManager:
+    1. Add `getTemplateConfigId()` returns **ConfigID**
         1. A replacement for `SzConfig.createConfig()`, but returns **ConfigID**, not **ConfigHandle**
         1. This method:
-            1. Calls `SzConfig.createConfig()` returning a **ConfigHandle**
-            1. Calls `SzConfig.exportConfig(ConfigHandle)` returning a **ConfigDefinition**
-            1. Calls `SzConfigManager.addConfig(ConfigDefinition, "Template as of YYYY-MM-DDThh:mm:ss")` returning a **ConfigID**
+            1. Calls `SzConfig_create()` returning a **ConfigHandle**
+            1. Calls `SzConfig_save(ConfigHandle)` returning a **ConfigDefinition**
+            1. Calls `SzConfig_close(ConfigHandle)`
+            1. Calls `SzConfigMgr_addConfig(ConfigDefinition, "Template as of YYYY-MM-DDThh:mm:ss")` returning a **ConfigID**
                 1. Timestamp in ISO 8601 format
-            1. Calls `SzConfig.closeConfig(ConfigHandle)`
             1. Method returns **ConfigID**
-    1. `createNewConfigAddDatasources(fromConfigID, String... dataSource)` returns **ConfigID**
+    1. Add `createNewConfigAddDatasources(fromConfigID, String... dataSource)` returns **ConfigID**
         1. if `fromConfigId` is 0, then the default ConfigID is used.
         1. If there is no default ConfigID, the method inserts the template configuration, adds the data sources, and returns the new ConfigID.
         1. Alternative: `createNewConfigDeleteDatasources(fromConfigId, String... dataSource)` returns **ConfigID**
         1. Alternative: `createNewConfig(fromConfigId, String[] addDataSources, String[] deleteDataSources)` returns **ConfigID**
-    1. `getDataSources(ConfigID)` returns **DataSourceList**
-        1. if `ConfigID` is 0, then the default ConfigID is used.
+        1. This method:
+            1. If `fromConfigID` == 0:
+                1. Calls `SzConfigManager.getDefaultConfigId()` to get ConfigId
+            1. Calls `SzConfigMgr_getConfig(ConfigId)` returning a **ConfigDefinition**
+            1. Calls `SzConfig_load(ConfigDefinition)` returning a **ConfigHandle**
+            1. For each datasource, call `SzConfig_addDataSource(ConfigHandle, datasource)` returning result message
+            1. Calls `SzConfig_save(ConfigHandle)` returning a **ConfigDefinition**
+            1. Calls `SzConfig_close(ConfigHandle)`
+            1. Calls `SzConfigMgr_addConfig(ConfigDefinition, comment)` returning a **ConfigID**
+            1. Method returns **ConfigID**
+    1. Add `getDataSources(ConfigID)` returns **DataSourceList**
+        1. This method:
+            1. If `ConfigID` == 0:
+                1. Calls `SzConfigManager.getDefaultConfigId()` to get ConfigId
+            1. Calls `SzConfigMgr_getConfig(ConfigId)` returning a **ConfigDefinition**
+            1. Calls `SzConfig_load(ConfigDefinition)` returning a **ConfigHandle**
+            1. Calls `SzConfig_listDataSources(ConfigHandle)` returning a **DataSourceList**
+            1. Calls `SzConfig_close(ConfigHandle)`
+            1. Method returns **DataSourceList**
+    1. Modify `getDefaultConfigId()`
+        1. If no default exists:
+            1. Calls `SzConfigManager.getTemplateConfigId()` returning a **ConfigID**
+            1. Method returns **ConfigID**
+    1. Move `addConfig(ConfigDefinition, configComment)` to new **python-only** API
+    1. Move `getConfig(configId)` to new **python-only** API
 1. SzConfigManager would then have the following method signatures:
-    1. `createNewConfigAddDatasources(fromConfigID, String... dataSource)` returns **ConfigID**
-    1. `getConfigs()` returns JSON
-    1. `getDataSources(ConfigID)` returns **DataSourceList**
-    1. `getDefaultConfigId()` returns **ConfigID**
-    1. `getTemplateConfigId()` returns **ConfigID**
-    1. `replaceDefaultConfigId(currentDefaultConfigID, newDefaultConfigID)`
-    1. `setDefaultConfigId(ConfigID)`
+    1. New:
+        1. `createNewConfigAddDatasources(fromConfigID, String... dataSource)` returns **ConfigID**
+        1. `getDataSources(ConfigID)` returns **DataSourceList**
+        1. `getTemplateConfigId()` returns **ConfigID**
+    1. Existing:
+        1. `getConfigs()` returns JSON
+        1. `getDefaultConfigId()` returns **ConfigID**
+        1. `replaceDefaultConfigId(currentDefaultConfigID, newDefaultConfigID)`
+        1. `setDefaultConfigId(ConfigID)`
 1. Add new **python-only** API for sz_config_tool (perhaps `SzInternalConfigManager`)
     1. `addConfig(ConfigDefinition, String configComment)` returns **ConfigID**
     1. `getConfig(ConfigID)` returns **ConfigDefinition**
