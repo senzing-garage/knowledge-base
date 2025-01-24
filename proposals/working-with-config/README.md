@@ -60,10 +60,21 @@ Details:
     1. Removed (moved to new Python API):
         1. `addConfig(ConfigDefinition, configComment)`
         1. `getConfig(ConfigID)`
-1. The new **python-only** API for sz_config_tool (perhaps `SzInternalConfigManager`) would have the following method signatures
+1. The new **python-only** API for sz_config_tool (perhaps `SzInternalConfigManager`) would have the following method signatures:
     1. `addConfig(ConfigDefinition, String configComment)` returns **ConfigID**
     1. `getConfig(ConfigID)` returns **ConfigDefinition**
     1. `getTemplateConfig()` returns  **ConfigDefinition**
+1. Pros:
+    1. The user never has a copy of **ConfigDefinition**.  So they can't corrupt it.
+    1. Each "grpc" SDK only has to call the gRPC server to do the "heavy lifting".
+    1. Updating the Senzing Configuration over gRPC is not sensitive to non-sticky routing.
+    1. One less Senzing "object".  `SzConfig` is removed.
+1. Cons:
+    1. Each "core" SDK has to implement a sophisticated `createNewConfigAddDatasources` method.
+    1. The returned message may have to return the result of each data source added.
+
+## Proposal 3 Implementation
+
 1. Modify the following methods in SzConfigManager:
     1. Add `getTemplateConfigId()` returns **ConfigID**
         1. A replacement for `SzConfig.createConfig()`, but returns **ConfigID**, not **ConfigHandle**
@@ -123,14 +134,6 @@ Details:
             1. Calls `SzConfig_save(ConfigHandle)` returning a **ConfigDefinition**
             1. Calls `SzConfig_close(ConfigHandle)`
             1. Method returns **ConfigDefinition**
-1. Pros:
-    1. The user never has a copy of **ConfigDefinition**.  So they can't corrupt it.
-    1. Each "grpc" SDK only has to call the gRPC server to do the "heavy lifting".
-    1. Updating the Senzing Configuration over gRPC is not sensitive to non-sticky routing.
-    1. One less Senzing "object".  `SzConfig` is removed.
-1. Cons:
-    1. Each "core" SDK has to implement a sophisticated `createNewConfigAddDatasources` method.
-    1. The returned message may have to return the result of each data source added.
 
 ### Proposal 3 example
 
