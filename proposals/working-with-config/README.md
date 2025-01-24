@@ -17,8 +17,8 @@
 1. Remove SzConfig API
 1. Add the following to SzConfigManager:
     1. `getTemplateConfig()` returns **ConfigDefinition**
-    1. `addDataSources(String configDefinition, String... dataSources)` returns  **ConfigDefinition**
-    1. `deleteDataSources(String configDefinition, String... dataSources)` returns  **ConfigDefinition**
+    1. `addDataSources(String configDefinition, String... dataSourceCodes)` returns  **ConfigDefinition**
+    1. `deleteDataSources(String configDefinition, String... dataSourceCodes)` returns  **ConfigDefinition**
     1. `getDataSources(String configDefinition)` returns **DataSourceList**
 1. Pros:
     1. No change to Senzing C binaries.
@@ -29,8 +29,8 @@
 1. Remove SzConfig API
 1. Add the following to SzConfigManager:
     1. `getTemplateConfig()` returns **ConfigDefinition**
-    1. `addDataSources(String configDefinition, String... dataSources)` returns  **ConfigDefinition**
-    1. `deleteDataSources(String configDefinition, String... dataSources)` returns  **ConfigDefinition**
+    1. `addDataSources(String configDefinition, String... dataSourceCodes)` returns  **ConfigDefinition**
+    1. `deleteDataSources(String configDefinition, String... dataSourceCodes)` returns  **ConfigDefinition**
     1. `getDataSources(String configDefinition)` returns **DataSourceList**
     1. `getDataSources(long configId)` returns **DataSourceList**
 1. Pros:
@@ -51,7 +51,7 @@ Details:
 1. Remove SzConfig API
 1. SzConfigManager would have the following method signatures:
     1. New:
-        1. `createNewConfigAddDatasources(fromConfigID, newConfigComment, dataSources)` returns **ConfigID**
+        1. `createNewConfigAddDatasources(fromConfigID, newConfigComment, dataSourceCodes)` returns **ConfigID**
         1. `getDataSources(ConfigID)` returns **DataSourceList**
         1. `getTemplateConfigId()` returns **ConfigID**
     1. Existing:
@@ -89,11 +89,11 @@ Details:
             1. Calls `SzConfigMgr_addConfig(ConfigDefinition, "Template as of YYYY-MM-DDThh:mm:ss")` returning a **ConfigID**
                 1. Timestamp in ISO 8601 format
             1. Method returns **ConfigID**
-    1. Add `createNewConfigAddDatasources(fromConfigID, newConfigComment, dataSources)` returns **ConfigID**
+    1. Add `createNewConfigAddDatasources(fromConfigID, newConfigComment, dataSourceCodes)` returns **ConfigID**
         1. if `fromConfigId` is 0, then the default ConfigID is used.
         1. If there is no default ConfigID, the method inserts the template configuration, adds the data sources, and returns the new ConfigID.
-        1. Alternative: `createNewConfigDeleteDatasources(fromConfigId, dataSources)` returns **ConfigID**
-        1. Alternative: `createNewConfig(fromConfigId, addDataSources, deleteDataSources)` returns **ConfigID**
+        1. Alternative: `createNewConfigDeleteDatasources(fromConfigId, dataSourceCodes)` returns **ConfigID**
+        1. Alternative: `createNewConfig(fromConfigId, adddataSourceCodes, deletedataSourceCodes)` returns **ConfigID**
         1. This method:
             1. If `fromConfigID` == 0:
                 1. Calls `SzConfigManager.getDefaultConfigId()` to get ConfigId
