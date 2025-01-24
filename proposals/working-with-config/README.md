@@ -21,6 +21,7 @@
     1. `deleteDataSources(String configDefinition, String... dataSources)` returns  **ConfigDefinition**
     1. `getDataSources(String configDefinition)` returns **DataSourceList**
 1. Pros:
+    1. No change to Senzing C binaries.
 1. Cons:
 
 ## Proposal 2
@@ -33,6 +34,7 @@
     1. `getDataSources(String configDefinition)` returns **DataSourceList**
     1. `getDataSources(long configId)` returns **DataSourceList**
 1. Pros:
+    1. No change to Senzing C binaries.
 1. Cons:
 
 ## Proposal 3
@@ -49,7 +51,7 @@ Details:
 1. Remove SzConfig API
 1. SzConfigManager would have the following method signatures:
     1. New:
-        1. `createNewConfigAddDatasources(fromConfigID, dataSources)` returns **ConfigID**
+        1. `createNewConfigAddDatasources(fromConfigID, newConfigComment, dataSources)` returns **ConfigID**
         1. `getDataSources(ConfigID)` returns **DataSourceList**
         1. `getTemplateConfigId()` returns **ConfigID**
     1. Existing:
@@ -65,6 +67,7 @@ Details:
     1. `getConfig(ConfigID)` returns **ConfigDefinition**
     1. `getTemplateConfig()` returns  **ConfigDefinition**
 1. Pros:
+    1. No change to Senzing C binaries.
     1. The user never has a copy of **ConfigDefinition**.  So they can't corrupt it.
     1. Each "grpc" SDK only has to call the gRPC server to do the "heavy lifting".
     1. Updating the Senzing Configuration over gRPC is not sensitive to non-sticky routing.
@@ -86,7 +89,7 @@ Details:
             1. Calls `SzConfigMgr_addConfig(ConfigDefinition, "Template as of YYYY-MM-DDThh:mm:ss")` returning a **ConfigID**
                 1. Timestamp in ISO 8601 format
             1. Method returns **ConfigID**
-    1. Add `createNewConfigAddDatasources(fromConfigID, dataSources)` returns **ConfigID**
+    1. Add `createNewConfigAddDatasources(fromConfigID, newConfigComment, dataSources)` returns **ConfigID**
         1. if `fromConfigId` is 0, then the default ConfigID is used.
         1. If there is no default ConfigID, the method inserts the template configuration, adds the data sources, and returns the new ConfigID.
         1. Alternative: `createNewConfigDeleteDatasources(fromConfigId, dataSources)` returns **ConfigID**
@@ -100,7 +103,7 @@ Details:
                 1. If delete supported, use `SzConfig_deleteDataSource(ConfigHandle, datasource)`
             1. Calls `SzConfig_save(ConfigHandle)` returning a **ConfigDefinition**
             1. Calls `SzConfig_close(ConfigHandle)`
-            1. Calls `SzConfigMgr_addConfig(ConfigDefinition, comment)` returning a **ConfigID**
+            1. Calls `SzConfigMgr_addConfig(ConfigDefinition, newConfigComment)` returning a **ConfigID**
             1. Method returns **ConfigID**
     1. Add `getDataSources(ConfigID)` returns **DataSourceList**
         1. Essentially this method is moved from SzConfig to SzConfigManager
