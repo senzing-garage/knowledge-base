@@ -40,7 +40,10 @@
 1. Remove SzConfig API
 1. Add the following to SzConfigManager:
     1. `getTemplateConfigId()` returns **ConfigID**
+        1. If there is no default ConfigID, the method inserts the template configuration and returns it's ConfigID.
     1. `createNewConfigAddDatasources(long fromConfigId, String... dataSource)` returns **ConfigID**
+        1. if `fromConfigId` is 0, then the default ConfigID is used.
+        1. If there is no default ConfigID, the method inserts the template configuration, adds the data sources, and returns the new ConfigID.
     1. Alternative: `createNewConfigDeleteDatasources(long fromConfigId, String... dataSource)` returns **ConfigID**
     1. Alternative: `createNewConfig(long fromConfigId, String[] addDataSources, String[] deleteDataSources)` returns **ConfigID**
 1. Add new **python-only** API for sz_config_tool (perhaps `SzInternalConfigManager`)
