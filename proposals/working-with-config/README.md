@@ -69,11 +69,12 @@ Details:
     1. Each "grpc" SDK only has to call the gRPC server to do the "heavy lifting".
     1. Updating the Senzing Configuration over gRPC is not sensitive to non-sticky routing.
     1. One less Senzing "object".  `SzConfig` is removed.
+    1. "speciality methods" are not seen by User; moved to internal-only package and only in Python.
 1. Cons:
     1. Each "core" SDK has to implement a sophisticated `createNewConfigAddDatasources` method.
     1. The returned message may have to return the result of each data source added.
 
-## Proposal 3 Implementation
+### Proposal 3 Implementation
 
 1. Modify the following methods in SzConfigManager:
     1. Add `getTemplateConfigId()` returns **ConfigID**
