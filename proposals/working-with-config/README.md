@@ -37,6 +37,15 @@
 
 ## Proposal 3
 
+Synopsis:
+
+1. Remove SzConfig package
+1. Add 3 methods to SzConfigManager
+1. Create a Python, internal-only, package for `sz_config_tool`
+1. None of the SDKs expose the Senzing configuration JSON
+
+Details:
+
 1. Remove SzConfig API
 1. Modify the following methods in SzConfigManager:
     1. Add `getTemplateConfigId()` returns **ConfigID**
