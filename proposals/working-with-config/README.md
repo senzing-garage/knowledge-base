@@ -80,15 +80,6 @@ Details:
 ### Proposal 3 Implementation
 
 1. Modify the following methods in SzConfigManager:
-    1. Add `getTemplateConfigId()` returns **ConfigID**
-        1. A replacement for `SzConfig.createConfig()`, but returns **ConfigID**, not **ConfigHandle**
-        1. This method:
-            1. Calls `SzConfig_create()` returning a **ConfigHandle**
-            1. Calls `SzConfig_save(ConfigHandle)` returning a **ConfigDefinition**
-            1. Calls `SzConfig_close(ConfigHandle)`
-            1. Calls `SzConfigMgr_addConfig(ConfigDefinition, "Template date: YYYY-MM-DDThh:mm:ss")` returning a **ConfigID**
-                1. Timestamp in RFC 3339 format
-            1. Method returns **ConfigID**
     1. Add `createNewConfigAddDatasources(fromConfigID, newConfigComment, dataSourceCodes)` returns **ConfigID**
         1. if `fromConfigId` is 0, then the default ConfigID is used.
         1. If there is no default ConfigID, the method inserts the template configuration, adds the data sources, and returns the new ConfigID.
@@ -115,6 +106,15 @@ Details:
             1. Calls `SzConfig_listDataSources(ConfigHandle)` returning a **DataSourceList**
             1. Calls `SzConfig_close(ConfigHandle)`
             1. Method returns **DataSourceList**
+    1. Add `getTemplateConfigId()` returns **ConfigID**
+        1. A replacement for `SzConfig.createConfig()`, but returns **ConfigID**, not **ConfigHandle**
+        1. This method:
+            1. Calls `SzConfig_create()` returning a **ConfigHandle**
+            1. Calls `SzConfig_save(ConfigHandle)` returning a **ConfigDefinition**
+            1. Calls `SzConfig_close(ConfigHandle)`
+            1. Calls `SzConfigMgr_addConfig(ConfigDefinition, "Template date: YYYY-MM-DDThh:mm:ss")` returning a **ConfigID**
+                1. Timestamp in RFC 3339 format
+            1. Method returns **ConfigID**
     1. Modify `getDefaultConfigId()`
         1. If no default exists:
             1. Calls `SzConfigManager.getTemplateConfigId()` returning a **ConfigID**
