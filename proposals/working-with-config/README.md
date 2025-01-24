@@ -86,7 +86,7 @@ Details:
             1. Calls `SzConfig_create()` returning a **ConfigHandle**
             1. Calls `SzConfig_save(ConfigHandle)` returning a **ConfigDefinition**
             1. Calls `SzConfig_close(ConfigHandle)`
-            1. Calls `SzConfigMgr_addConfig(ConfigDefinition, "Template as of YYYY-MM-DDThh:mm:ss")` returning a **ConfigID**
+            1. Calls `SzConfigMgr_addConfig(ConfigDefinition, "Template date: YYYY-MM-DDThh:mm:ss")` returning a **ConfigID**
                 1. Timestamp in RFC 3339 format
             1. Method returns **ConfigID**
     1. Add `createNewConfigAddDatasources(fromConfigID, newConfigComment, dataSourceCodes)` returns **ConfigID**
