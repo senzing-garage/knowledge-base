@@ -177,13 +177,97 @@ sz_configmanager.replace_default_config_id(old_config_id, new_config_id)
 sz_abstract_factory.reinitialize(new_config_id)
 ```
 
-1. Python after
+2. Python after
 
 ```python
 sz_abstract_factory = SzAbstractFactoryCore("Example instance", SETTINGS)
 sz_configmanager = sz_abstract_factory.create_configmanager()
 old_config_id = sz_configmanager.get_default_config_id()
-new_config_id = sz_configmanger.create_new_config_add_datasources(old_config_id, datasources**)
+new_config_id = sz_configmanger.create_new_config_add_datasources(old_config_id, "my comment", datasources**)
+sz_configmanager.replace_default_config_id(old_config_id, new_config_id)
+sz_abstract_factory.reinitialize(new_config_id)
+```
+
+## Proposal 4
+
+Synopsis:
+
+1. Remove the `SzConfig` functional interface
+2. Add a new `SzConfig` interface with object-oriented semantics:
+   - `addDataSource(String dataSourceCode)`
+   - `deleteDataSource(String dataSourceCode)`
+   - `toString()` / `export()`
+3. Change `SzConfigManager` as follows:
+   - `ConfigID addConfig(SzConfig, String comment)` (NOTE: `registerConfig(SzConfig config, String comment)` -- preferred by Barry)
+   - `SzConfig getConfig(ConfigID)`
+   - `String getConfigRegistry()`
+   - `ConfigID getDefaultConfigId()`
+   - `void replaceDefaultConfigId(ConfigID currentDefaultConfigId, ConfigID newDefaultConfigId)`
+   - `void setDefaultConfigId(ConfigID configId)`
+   - `SzConfig createTemplateConfig()`
+4. Have proto file define:
+   - `String SzConfigManager.addDataSource(String configDefinition, String dataSourceCode)`
+   - `String SzConfigManager.deleteDataSource(String configDefinition, String dataSourceCode)`
+5. Implement `SzCoreConfig` (implements `SzConfig`) and works with `native SzConfig_*`
+   - has data member `configDefinition` (type string)
+7. Implement `SzGrpcConfig` (implements `SzConfig`) and works with private GRPC functions `addDataSource()` and `deleteDataSource()`)
+   - has data member `configDefinition` (type string)
+   - has a data member to know where to communicate for GRPC
+
+### Proposal 4 example
+
+1. Python before
+
+```python
+sz_abstract_factory = SzAbstractFactoryCore("Example instance", SETTINGS)
+
+# Create Senzing objects.
+
+sz_config = sz_abstract_factory.create_config()
+sz_configmanager = sz_abstract_factory.create_configmanager()
+
+# Get current Senzing configuration.
+
+old_config_id = sz_configmanager.get_default_config_id()
+old_json_config = sz_configmanager.get_config(old_config_id)
+config_handle = sz_config.import_config(old_json_config)
+
+# Add DataSources to Senzing configuration.
+
+for datasource in datasources:
+    try:
+        sz_config.add_data_source(config_handle, datasource)
+    except SzError as err:
+        print(err)
+
+# Persist new Senzing configuration.
+
+new_json_config = sz_config.export_config(config_handle)
+new_config_id = sz_configmanager.add_config(new_json_config, "Add TruthSet datasources")
+sz_configmanager.replace_default_config_id(old_config_id, new_config_id)
+
+# With the change in Senzing configuration, Senzing objects need to be updated.
+
+sz_abstract_factory.reinitialize(new_config_id)
+```
+
+2. Python after
+
+```python
+sz_abstract_factory = SzAbstractFactoryCore("Example instance", SETTINGS)
+sz_configmanager = sz_abstract_factory.create_configmanager()
+old_config_id = sz_configmanager.get_default_config_id()
+
+config = sz_configmanager.get_config(old_config_id)
+
+for datasource in datasources:
+    try:
+        config.add_data_source(datasource)
+    except SzError as err:
+        print(err)
+
+new_config_id = sz_configmanger.register_config(config, "my comment");
+
 sz_configmanager.replace_default_config_id(old_config_id, new_config_id)
 sz_abstract_factory.reinitialize(new_config_id)
 ```
