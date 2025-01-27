@@ -196,6 +196,7 @@ Synopsis:
 2. Add a new `SzConfig` interface with object-oriented semantics:
    - `addDataSource(String dataSourceCode)`
    - `deleteDataSource(String dataSourceCode)`
+   - `String getDataSources()`
    - `toString()` / `export()`
 3. Change `SzConfigManager` as follows:
    - `ConfigID addConfig(SzConfig, String comment)` (NOTE: `registerConfig(SzConfig config, String comment)` -- preferred by Barry)
