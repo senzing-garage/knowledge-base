@@ -323,6 +323,7 @@ This approach introduces a temporal dependency.
 The "easy button" is meant for developent only.
 It is only for adding data source codes.
 All "real" Senzing configuration is done via `sz_config_tool`.
+(By the way, "easy button" is just a working title.)
 
 1. Remove SzConfig API
 1. SzConfigManager would have the following method signatures:
