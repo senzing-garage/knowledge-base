@@ -339,6 +339,7 @@ All "real" Senzing configuration is done via `sz_config_tool`.
 1. Pros:
     1. Works over gRPC.
 1. Cons:
+    1. Very focused application.
 
 Details:
 
