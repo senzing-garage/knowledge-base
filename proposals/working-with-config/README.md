@@ -325,13 +325,17 @@ It is only for adding data source codes.
 All "real" Senzing configuration is done via `sz_config_tool`.
 (By the way, "easy button" is just a working title.)
 
+Rationale: When processing records, the only configuration change would be to add datasources.
+Any other Senzing configuration change would be independent of record processing.
+Therefore, `sz_config_tool` would be used for non-record-processing Senzing configuration changes.
+
 1. Remove SzConfig API
 1. SzConfigManager would have the following method signatures:
     1. New:
         1. `easyButton(dataSourceCodes)` returns **ConfigID**
         1. `getDataSources(ConfigID)` returns **DataSourceList**
     1. Existing:
-        1. `addConfig(ConfigDefinition, configComment)`  returns **ConfigID**
+        1. `addConfig(ConfigDefinition, configComment)` returns **ConfigID**
         1. `getConfig(ConfigID)` returns **ConfigDefinition**
         1. `getConfigs()` returns JSON
         1. `getDefaultConfigId()` returns **ConfigID**
@@ -353,6 +357,8 @@ Details:
     1. Calls `SzConfig_close(ConfigHandle)`
     1. Calls `SzConfigMgr_addConfig(ConfigDefinition, "EasyButton: YYYY-MM-DDThh:mm:ss")` returning a **ConfigID**
     1. Calls `SzConfigMgr_replaceDefaultConfigID(OldConfigId, ConfigID)`
+    1. Calls `Sz_reinit(ConfigID)`
+    1. Calls `SzDiagnostic_reinit(ConfigID)`
     1. Method returns **ConfigID**
 
 ### Proposal 5 example
@@ -365,5 +371,5 @@ sz_configmanager = sz_abstract_factory.create_configmanager()
 
 new_config_id = sz_configmanger.easy_button(datasources**)
 
-sz_abstract_factory.reinitialize(new_config_id)
+# sz_abstract_factory.reinitialize(new_config_id)
 ```
