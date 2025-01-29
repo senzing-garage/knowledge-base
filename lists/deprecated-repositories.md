@@ -2,6 +2,7 @@
 
 | Deprecated | Hidden     | Repository                                   |
 |------------|------------|----------------------------------------------|
+| 2025-01-29 |            | rest-api-client-java                         |
 | 2025-01-08 |            | senzing-listener-example                     |
 | 2025-01-08 |            | senzing-listener                             |
 | 2024-12-18 |            | entity-search-web-app-console                |
@@ -12,12 +13,12 @@
 | 2024-04-02 |            | packer-debian-postgres                       |
 | 2024-03-20 |            | mapper-leie                                  |
 | 2024-02-28 |            | risk-score-calculator                        |
-| 2024-01-25 |            | aws-cloudformation-dev-rest                  |
-| 2024-01-19 |            | packer-senzing-demo-ubuntu-18.04             |
-| 2023-12-14 |            | kubernetes-demo                              |
-| 2023-12-14 |            | charts                                       |
-| 2023-11-15 |            | docker-jupyter                               |
-| 2023-10-30 |            | senzing-sdk-api-specification                |
+| 2024-01-25 | 2025-01-29 | aws-cloudformation-dev-rest                  |
+| 2024-01-19 | 2025-01-29 | packer-senzing-demo-ubuntu-18.04             |
+| 2023-12-14 | 2025-01-29 | kubernetes-demo                              |
+| 2023-12-14 | 2025-01-29 | charts                                       |
+| 2023-11-15 | 2025-01-29 | docker-jupyter                               |
+| 2023-10-30 | 2025-01-29 | senzing-sdk-api-specification                |
 | 2023-08-09 | 2024-09-18 | mapper-openc                                 |
 | 2023-06-19 | 2024-06-21 | ready-for-senzing                            |
 | 2023-06-19 | 2024-06-21 | packer-senzing-demo-ubuntu-18.04             |
