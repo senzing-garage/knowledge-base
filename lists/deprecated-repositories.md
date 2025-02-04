@@ -2,6 +2,7 @@
 
 | Deprecated | Hidden     | Repository                                   |
 |------------|------------|----------------------------------------------|
+| 2025-02-04 |            | ibm-openshift-guide                          |
 | 2025-01-29 |            | rest-api-client-java                         |
 | 2025-01-08 |            | senzing-listener-example                     |
 | 2025-01-08 |            | senzing-listener                             |
