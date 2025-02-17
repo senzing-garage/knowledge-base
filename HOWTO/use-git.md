@@ -285,6 +285,27 @@ fatal: failed to write commit object
 Ensure `GPG_TTY` is configured in the environment.
 See [Configure TTY](https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/gnupg.md#configure-tty) for more details. 
 
+Error:
+
+After migrating from one Mac to another, using the Apple migration tool. You may encounter a signing issue.
+
+```console
+error: gpg failed to sign the data:
+gpg: Note: database_open 134217901 waiting for lock (held by 41497) ...
+...
+gpg: signing failed: Operation timed out
+
+fatal: failed to write commit object
+```
+
+To fix this find the lock file and the remove it.
+
+```console
+ls -l ~/.gnupg/**/*.lock
+rm <path to file>/<filename>.lock
+```
+
+
 ### Additional Resources
 
 * [Generate a new GPG key]
