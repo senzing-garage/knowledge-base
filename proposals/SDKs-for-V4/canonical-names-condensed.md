@@ -85,6 +85,7 @@ The following list should reflect modifications documented in
 | Sz_whyEntities(entityID1, entityID2, responseBuf, bufSize, resizeFunc) | whyEntities(entityId1, entityId2, flags) | string | SM-1, SM-3.3 |
 | Sz_whyRecordInEntity(dataSourceCode, recordID, responseBuf, bufSize, resizeFunc) | whyRecordInEntity(dataSourceCode, recordId, flags) | string | SM-1, SM-3.3 |
 | Sz_whyRecords(dataSourceCode1, recordID1, dataSourceCode2, recordID2, responseBuf, bufSize, resizeFunc) | whyRecords(dataSourceCode1, recordId1, dataSourceCode2, recordId2, flags) | string | SM-1, SM-3.3 |
+| Sz_whySearch(jsonData, entityID, searchProfile, responseBuf, bufSize, resizeFunc) | whySearch(attributes, entityID, searchProfile, flags) | string | SM-1, SM-3.3 |
 
 ### SzProduct
 

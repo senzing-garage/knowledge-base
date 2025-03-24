@@ -132,6 +132,8 @@ The following list should reflect modifications documented in
 | Sz_whyRecordInEntity_V2(dataSourceCode, recordID, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
 | Sz_whyRecords(dataSourceCode1, recordID1, dataSourceCode2, recordID2, responseBuf, bufSize, resizeFunc) | whyRecords(dataSourceCode1, recordId1, dataSourceCode2, recordId2, flags) | string | SM-1, SM-3.3 |
 | Sz_whyRecords_V2(dataSourceCode1, recordID1, dataSourceCode2, recordID2, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
+| Sz_whySearch(jsonData, entityID, searchProfile, responseBuf, bufSize, resizeFunc) | whySearch(attributes, entityID, searchProfile, flags) | string | SM-1, SM-3.3 |
+| Sz_whySearch_V2(jsonData, entityID, searchProfile, flags, responseBuf, bufSize, resizeFunc) | [collapsed] | | |
 
 ### SzProduct
 
