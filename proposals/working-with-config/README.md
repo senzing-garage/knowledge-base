@@ -320,21 +320,19 @@ This approach introduces a temporal dependency.
 
 ## Proposal 5
 
-The "easy button" is meant for developent only.
-It is only for adding data source codes.
-All "real" Senzing configuration is done via `sz_config_tool`.
-(By the way, "easy button" is just a working title.)
+This is the simplest option (the "easy button") and is only for adding data source
+codes.  All "real" Senzing configuration is done via `sz_config_tool`.
 
 Rationale: When processing records, the only configuration change would be to add datasources.
-Any other Senzing configuration change would be independent of record processing.
-Therefore, `sz_config_tool` would be used for non-record-processing Senzing configuration changes.
+Any other Senzing configuration change would be independent of programmatic functionality.
+Therefore, `sz_config_tool` would be used for non-programatic Senzing configuration changes.
 
 1. Remove SzConfig API
 1. SzConfigManager would have the following method signatures:
     1. New:
-        1. `easyButton(dataSourceCodes)` returns **ConfigID**
+        1. `addDataSourcesToConfig(ConfigID, dataSourceCodes)` returns **ConfigID**
         1. `getDataSources(ConfigID)` returns **DataSourceList**
-        1. `getTemplateConfig()` returns **ConfigDefinition**
+        1. `getTemplateConfigId()` returns **ConfigID** (registers the template if not registered)
     1. Existing:
         1. `addConfig(ConfigDefinition, configComment)` returns **ConfigID**
         1. `getConfig(ConfigID)` returns **ConfigDefinition**
@@ -344,22 +342,20 @@ Therefore, `sz_config_tool` would be used for non-record-processing Senzing conf
         1. `setDefaultConfigId(ConfigID)`
 1. Pros:
     1. Works over gRPC.
+    1. Very straight-forward usage
+    1. Can be augmented in future releases without breaking backwards compatibility 
 1. Cons:
-    1. Very focused application.
+    1. Very focused application (e.g.: new functions would be required for adding features)
 
 Details:
 
-1. The "easy button" does the following:
-    1. Calls `SzConfigManager.getDefaultConfigId()` to get OldConfigId
+1. The `addDataSourcesToConfig()` function does the following:
     1. Calls `SzConfigMgr_getConfig(OldConfigId)` returning a **ConfigDefinition**
     1. Calls `SzConfig_load(ConfigDefinition)` returning a **ConfigHandle**
     1. For each datasource, call `SzConfig_addDataSource(ConfigHandle, datasource)`
     1. Calls `SzConfig_save(ConfigHandle)` returning a **ConfigDefinition**
     1. Calls `SzConfig_close(ConfigHandle)`
     1. Calls `SzConfigMgr_addConfig(ConfigDefinition, "EasyButton: YYYY-MM-DDThh:mm:ss")` returning a **ConfigID**
-    1. Calls `SzConfigMgr_replaceDefaultConfigID(OldConfigId, ConfigID)`
-    1. Calls `Sz_reinit(ConfigID)`
-    1. Calls `SzDiagnostic_reinit(ConfigID)`
     1. Method returns **ConfigID**
 
 ### Proposal 5 example
@@ -370,7 +366,8 @@ Details:
 sz_abstract_factory = SzAbstractFactoryCore("Example instance", SETTINGS)
 sz_configmanager = sz_abstract_factory.create_configmanager()
 
-new_config_id = sz_configmanger.easy_button(datasources**)
+base_config_id = sz_configmanager.get_template_config_id()
+new_config_id = sz_configmanger.add_data_sources_to_config(base_config_id, datasources**)
 
 # sz_abstract_factory.reinitialize(new_config_id)
 ```
