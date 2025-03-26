@@ -334,6 +334,7 @@ Therefore, `sz_config_tool` would be used for non-record-processing Senzing conf
     1. New:
         1. `easyButton(dataSourceCodes)` returns **ConfigID**
         1. `getDataSources(ConfigID)` returns **DataSourceList**
+        1. `getTemplateConfig()` returns **ConfigDefinition**
     1. Existing:
         1. `addConfig(ConfigDefinition, configComment)` returns **ConfigID**
         1. `getConfig(ConfigID)` returns **ConfigDefinition**
