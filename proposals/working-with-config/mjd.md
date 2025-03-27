@@ -13,6 +13,16 @@
 1. Someday, it would be nice to no longer need a tool like `sz_config_tool` to manage Senzing configuration.
 1. The Senzing C binaries can be modified to except **ConfigDefinition** (a JSON string), rather than an `exportHandle`.
 
+### Synopsis
+
+To avoid having the Senzing C binaries keep state for a **ConfigDefinition** under modification,
+they receive a **ConfigDefinition** and instructions on the desired modification.
+The Senzing C binaries return a new version of the **ConfigDefinition** with the modification.
+In this manner, the Senzing C binaries are not keeping state.
+This technique is akin to functional programming where new states are created through pure functions.
+
+Each SDK `SzConfig` manages the state of the **ConfigDefinition** under modification.
+
 ### SzConfig public interface
 
 #### New methods for SzConfig
