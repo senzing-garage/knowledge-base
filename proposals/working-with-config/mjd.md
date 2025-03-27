@@ -16,7 +16,7 @@
 
 ### SzConfig public interface
 
-**New methods**
+### New methods
 
 - None
 
@@ -42,7 +42,6 @@
 | closeConfig(configHandle)      ||
 | createConfig()                 | configHandle |
 | destroy()                      ||
-| load()                         ||
 | importConfig(configDefinition) ||
 
 ### SzConfigManager
@@ -117,14 +116,19 @@ sz_abstract_factory.reinitialize(new_config_id)
 
 ### Analysis
 
-1. The only way to get an SzConfig is via SzConfigManager
-   The "SzConfig" public interface doesn't have a way to load the object.
+1. The Senzing C binary `SzConfig_*` requires the new functions like the following, that accept a **ConfigDefinition** parameter:
+    1. `addDataSource`
+    1. `deleteDataSource`
+    1. `getDataSources`
+1. The Senzing C binary `SzConfigMgr_* requires no changes.
+1. The only way to get an SzConfig is via SzConfigManager.
+   The "SzConfig" public interface intentionally does not have a way to load the JSON.
 1. Pros:
     1. Works over gRPC.
     1. Similar to existing Object model.
-    1. SzConfig can be augmented in future releases without breaking backwards compatibility
-    1. SzConfigManager is essentially "closed", since new features would be in the SzConfig object
+    1. SzConfig can be augmented in future releases without breaking backwards compatibility.
+    1. SzConfigManager is essentially "closed", since new features would be in the SzConfig object.
 1. Cons:
-    1. User Very focused application (e.g.: new functions would be required for adding features)
+    1. ????
 
 Details:
