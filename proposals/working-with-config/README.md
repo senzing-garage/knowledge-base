@@ -400,7 +400,7 @@ Each SDK `SzConfig` manages the state of the **ConfigDefinition** under modifica
 | Old                                            | New                              | Return value |
 |------------------------------------------------|----------------------------------|--------------|
 | addDataSource(configHandle, dataSourceCode)    | addDataSource(dataSourceCode)    | string       |
-| deleteDataSource(configHandle, dataSourceCode) | deleteDataSource(dataSourceCode) | string       |
+| deleteDataSource(configHandle, dataSourceCode) | deleteDataSource(dataSourceCode) |              |
 | getDataSources(configHandle)                   | getDataSources()                 | string       |
 | exportConfig(configHandle)                     | export()                         | string       |
 
