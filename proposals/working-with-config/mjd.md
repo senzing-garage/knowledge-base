@@ -16,11 +16,11 @@
 
 ### SzConfig public interface
 
-#### New methods
+#### New methods for SzConfig
 
 - None
 
-#### Modified methods
+#### Modified methods for SzConfig
 
 | Old                                            | New                              | Return value |
 |------------------------------------------------|----------------------------------|--------------|
@@ -29,13 +29,13 @@
 | getDataSources(configHandle)                   | getDataSources()                 | string       |
 | exportConfig(configHandle)                     | asJSON()                         | string       |
 
-#### Unmodified methods
+#### Unmodified methods for SzConfig
 
 | Signature | Return value |
 |-----------|--------------|
 | initialize(instanceName, settings, verboseLogging) | |
 
-#### Deleted methods
+#### Deleted methods for SzConfig
 
 | Signature                      | Return value |
 |--------------------------------|--------------|
@@ -46,20 +46,20 @@
 
 ### SzConfigManager
 
-#### New methods
+#### New methods for SzConfigManager
 
 | Signature                                | Return value |
 |------------------------------------------|--------------|
 | createConfigFromString(configDefinition) | SzConfig     |
 | createConfigFromTemplate()               | SzConfig     |
 
-#### Modified methods
+#### Modified methods for SzConfigManager
 
 | Old                 | New                                | Return value |
 |---------------------|------------------------------------|--------------|
 | getConfig(configId) | createConfigFromConfigID(configID) | SzConfig     |
 
-#### Unmodified methods
+#### Unmodified methods for SzConfigManager
 
 | Signature                                                          | Return value |
 |--------------------------------------------------------------------|--------------|
@@ -71,7 +71,7 @@
 | replaceDefaultConfigId(currentDefaultConfigId, newDefaultConfigId) |              |
 | setDefaultConfigId(configId)                                       |              |
 
-#### Deleted methods
+#### Deleted methods for SzConfigManager
 
 - None
 
