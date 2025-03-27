@@ -67,6 +67,7 @@ Each SDK `SzConfig` manages the state of the **ConfigDefinition** under modifica
 | Old                 | New                                | Return value |
 |---------------------|------------------------------------|--------------|
 | getConfig(configId) | createConfigFromConfigID(configID) | SzConfig     |
+| addConfig(configDefinition, configComment) | registerConfig(configDefinition, configComment) | int64        |
 
 #### Unmodified methods for SzConfigManager
 
