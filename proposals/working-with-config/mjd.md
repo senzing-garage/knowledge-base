@@ -22,12 +22,12 @@
 
 **Modified methods**
 
-| Old                                            | New                                  | Return value | Comments |
-|------------------------------------------------|--------------------------------------|--------------|----------|
-| addDataSource(configHandle, dataSourceCode)    | addDataSources(dataSourceCode...)    | string       | Uses varargs |
-| deleteDataSource(configHandle, dataSourceCode) | deleteDataSources(dataSourceCode...) | string       | Uses varargs |
-| getDataSources(configHandle)                   | getDataSources()                     | string       ||
-| exportConfig(configHandle)                     | asJSON()                             | string       ||
+| Old                                            | New                              | Return value |
+|------------------------------------------------|----------------------------------|--------------|
+| addDataSource(configHandle, dataSourceCode)    | addDataSource(dataSourceCode)    | string       |
+| deleteDataSource(configHandle, dataSourceCode) | deleteDataSource(dataSourceCode) | string       |
+| getDataSources(configHandle)                   | getDataSources()                 | string       |
+| exportConfig(configHandle)                     | asJSON()                         | string       |
 
 **Deleted methods**
 
