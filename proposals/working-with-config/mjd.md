@@ -36,7 +36,7 @@ Each SDK `SzConfig` manages the state of the **ConfigDefinition** under modifica
 | addDataSource(configHandle, dataSourceCode)    | addDataSource(dataSourceCode)    | string       |
 | deleteDataSource(configHandle, dataSourceCode) | deleteDataSource(dataSourceCode) | string       |
 | getDataSources(configHandle)                   | getDataSources()                 | string       |
-| exportConfig(configHandle)                     | exportConfig()                   | string       |
+| exportConfig(configHandle)                     | export()                         | string       |
 
 #### Unmodified methods for SzConfig
 
