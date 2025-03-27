@@ -372,14 +372,6 @@ new_config_id = sz_configmanger.add_data_sources_to_config(base_config_id, datas
 # sz_abstract_factory.reinitialize(new_config_id)
 ```
 
-# Working with Config
-
-## Vocabulary
-
-1. **ConfigHandle** - (*int64*) Senzing binary memory location of configuration JSON
-1. **ConfigID** - (*int64*) the hash value of the configuration JSON in the Senzing database
-1. **ConfigDefinition** - (*string*) the entire Senzing configuration JSON string
-
 ## Proposal 6
 
 ### Proposal 6 assumptions
