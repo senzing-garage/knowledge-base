@@ -29,6 +29,12 @@
 | getDataSources(configHandle)                   | getDataSources()                 | string       |
 | exportConfig(configHandle)                     | asJSON()                         | string       |
 
+**Unmodified methods**
+
+| Signature | Return value |
+|-----------|--------------|
+| initialize(instanceName, settings, verboseLogging) | |
+
 **Deleted methods**
 
 | Signature                      | Return value |
@@ -38,12 +44,6 @@
 | destroy()                      ||
 | load()                         ||
 | importConfig(configDefinition) ||
-
-**Unmodified methods**
-
-| Signature | Return value |
-|-----------|--------------|
-| initialize(instanceName, settings, verboseLogging) | |
 
 ### SzConfigManager
 
@@ -71,6 +71,10 @@
 | initialize(instanceName, settings, verboseLogging)                 |              |
 | replaceDefaultConfigId(currentDefaultConfigId, newDefaultConfigId) |              |
 | setDefaultConfigId(configId)                                       |              |
+
+**Deleted methods**
+
+- None
 
 1. The only way to get an SzConfig is via SzConfigManager
    The "SzConfig" public interface doesn't have a way to load the object.
