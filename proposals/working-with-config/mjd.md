@@ -73,7 +73,6 @@ Each SDK `SzConfig` manages the state of the **ConfigDefinition** under modifica
 
 | Signature                                                          | Return value |
 |--------------------------------------------------------------------|--------------|
-| addConfig(configDefinition, configComment)                         | int64        |
 | destroy()                                                          |              |
 | getConfigs()                                                       | string       |
 | getDefaultConfigId()                                               | int64        |
