@@ -16,7 +16,7 @@
 
 ### SzConfig public interface
 
-### New methods
+#### New methods
 
 - None
 
