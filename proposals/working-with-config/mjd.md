@@ -16,11 +16,11 @@
 
 ### SzConfig public interface
 
-New methods
+**New methods**
 
 - None
 
-Modified methods
+**Modified methods**
 
 | Old                                            | New                                  | Return value | Comments |
 |------------------------------------------------|--------------------------------------|--------------|----------|
@@ -29,7 +29,7 @@ Modified methods
 | getDataSources(configHandle)                   | getDataSources()                     | string       ||
 | exportConfig(configHandle)                     | asJSON()                             | string       ||
 
-Deleted methods
+**Deleted methods**
 
 | Signature                      | Return value |
 |--------------------------------|--------------|
@@ -39,7 +39,7 @@ Deleted methods
 | load()                         ||
 | importConfig(configDefinition) ||
 
-Unmodified methods
+**Unmodified methods**
 
 | Signature | Return value |
 |-----------|--------------|
@@ -47,20 +47,20 @@ Unmodified methods
 
 ### SzConfigManager
 
-New methods
+**New methods**
 
 | Signature                                | Return value |
 |------------------------------------------|--------------|
 | createConfigFromString(configDefinition) | SzConfig     |
 | createConfigFromTemplate()               | SzConfig     |
 
-Modified methods
+**Modified methods**
 
 | Old                 | New                                | Return value |
 |---------------------|------------------------------------|--------------|
 | getConfig(configId) | createConfigFromConfigID(configID) | SzConfig     |
 
-Unmodified methods
+**Unmodified methods**
 
 | Signature                                                          | Return value |
 |--------------------------------------------------------------------|--------------|
