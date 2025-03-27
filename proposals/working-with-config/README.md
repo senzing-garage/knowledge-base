@@ -421,6 +421,9 @@ Each SDK `SzConfig` manages the state of the **ConfigDefinition** under modifica
 
 ### SzConfigManager
 
+- **Note:** The creation patterns `createConfig...` may vary from SDK to SDK.
+  Java can use method overloading, Python can take different input datatype,  Go is pretty rigid.
+
 #### New methods for SzConfigManager
 
 | Signature                                | Return value |
