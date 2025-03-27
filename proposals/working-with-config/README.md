@@ -469,7 +469,7 @@ sz_configmanager = sz_abstract_factory.create_configmanager()
 config_id = sz_configmanager.get_default_config_id()
 sz_config = sz_configmanager.create_config_from_config_id(config_id)
 sz_config.add_data_source(datasource)
-new_config_id = sz_configmanager.register_config(sz_config.to_JSON(), configComment)
+new_config_id = sz_configmanager.register_config(sz_config.export(), configComment)
 
 sz_abstract_factory.reinitialize(new_config_id)
 ```
@@ -482,7 +482,7 @@ sz_configmanager = sz_abstract_factory.create_configmanager()
 
 config_id = sz_configmanager.get_default_config_id()
 sz_config = sz_configmanager.create_config_from_config_id(config_id)
-store_config_definition_in_source_control(sz_config.to_JSON())
+store_config_definition_in_source_control(sz_config.export())
 ```
 
 1. Updating configuration from source control:
