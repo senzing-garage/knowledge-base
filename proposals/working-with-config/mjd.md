@@ -86,7 +86,7 @@ sz_configmanager = sz_abstract_factory.create_configmanager()
 
 config_id = sz_configmanager.get_default_config_id()
 sz_config = sz_configmanager.create_config_from_config_id(config_id)
-sz_config.add_data_sources(datasources**)
+sz_config.add_data_source(datasource)
 new_config_id = sz_configmanager.add_config(sz_config.to_JSON(), configComment)
 
 sz_abstract_factory.reinitialize(new_config_id)
