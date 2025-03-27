@@ -20,7 +20,7 @@
 
 - None
 
-**Modified methods**
+#### Modified methods
 
 | Old                                            | New                              | Return value |
 |------------------------------------------------|----------------------------------|--------------|
@@ -29,13 +29,13 @@
 | getDataSources(configHandle)                   | getDataSources()                 | string       |
 | exportConfig(configHandle)                     | asJSON()                         | string       |
 
-**Unmodified methods**
+#### Unmodified methods
 
 | Signature | Return value |
 |-----------|--------------|
 | initialize(instanceName, settings, verboseLogging) | |
 
-**Deleted methods**
+#### Deleted methods
 
 | Signature                      | Return value |
 |--------------------------------|--------------|
@@ -46,20 +46,20 @@
 
 ### SzConfigManager
 
-**New methods**
+#### New methods
 
 | Signature                                | Return value |
 |------------------------------------------|--------------|
 | createConfigFromString(configDefinition) | SzConfig     |
 | createConfigFromTemplate()               | SzConfig     |
 
-**Modified methods**
+#### Modified methods
 
 | Old                 | New                                | Return value |
 |---------------------|------------------------------------|--------------|
 | getConfig(configId) | createConfigFromConfigID(configID) | SzConfig     |
 
-**Unmodified methods**
+#### Unmodified methods
 
 | Signature                                                          | Return value |
 |--------------------------------------------------------------------|--------------|
@@ -71,7 +71,7 @@
 | replaceDefaultConfigId(currentDefaultConfigId, newDefaultConfigId) |              |
 | setDefaultConfigId(configId)                                       |              |
 
-**Deleted methods**
+#### Deleted methods
 
 - None
 
