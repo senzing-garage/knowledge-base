@@ -5,7 +5,6 @@
 1. **ConfigHandle** - (*int64*) Senzing binary memory location of configuration JSON
 1. **ConfigID** - (*int64*) the hash value of the configuration JSON in the Senzing database
 1. **ConfigDefinition** - (*string*) the entire Senzing configuration JSON string
-1. **DataSourceList** - (*string*) a list of data source names (format currently undetermined)
 
 ## Proposal mjd-N
 
