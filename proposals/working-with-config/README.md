@@ -374,11 +374,6 @@ new_config_id = sz_configmanger.add_data_sources_to_config(base_config_id, datas
 
 ## Proposal 6
 
-### Proposal 6 assumptions
-
-1. Someday, it would be nice to no longer need a tool like `sz_config_tool` to manage Senzing configuration.
-1. (Perhaps, to be discussed) The Senzing C binaries can be modified to except **ConfigDefinition** (a JSON string), rather than an `exportHandle`.
-
 ### Synopsis
 
 To avoid having the Senzing C binaries keep state for a **ConfigDefinition** under modification,
