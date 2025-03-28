@@ -20,7 +20,7 @@ The following list should reflect modifications documented in
 
 ### SzConfigManager
 
-| Existing name | Canonical Name | Return value | Smells |
+| Existing name | Canonical Name | Return value | Note |
 |---------------|----------------|--------------|--------|
 | SzConfigMgr_addConfig(configStr, configComment, configID) | registerConfig(configDefinition, configComment) | int64 | |
 | SzConfigMgr_destroy() | | - | |
