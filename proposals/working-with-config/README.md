@@ -374,16 +374,6 @@ new_config_id = sz_configmanger.add_data_sources_to_config(base_config_id, datas
 
 ## Proposal 6
 
-### Synopsis
-
-To avoid having the Senzing C binaries keep state for a **ConfigDefinition** under modification,
-they receive a **ConfigDefinition** and instructions on the desired modification.
-The Senzing C binaries return a new version of the **ConfigDefinition** with the modification.
-In this manner, the Senzing C binaries are not keeping state.
-This technique is akin to functional programming where new states are created through pure functions.
-
-Each SDK `SzConfig` manages the state of the **ConfigDefinition** under modification.
-
 ### SzConfig public interface
 
 #### New methods for SzConfig
