@@ -22,7 +22,7 @@ The following list should reflect modifications documented in
 | SzConfig_destroy() | [not-public] | | |
 | SzConfig_getLastException(buffer, bufSize) | [not-public] | | |
 | SzConfig_getLastExceptionCode() | [not-public] | | |
-| SzConfig_init(moduleName, iniParams, verboseLogging) | initialize(instanceName, settings, verboseLogging) | - | Consider single object |
+| SzConfig_init(moduleName, iniParams, verboseLogging) | initialize(instanceName, settings, verboseLogging) | - | |
 | SzConfig_listDataSources(configHandle, responseBuf, bufSize, resizeFunc) | getDataSources() | string | |
 | SzConfig_load(jsonConfig, configHandle) | [not-public] | | |
 | SzConfig_save(configHandle, responseBuf, bufSize, resizeFunc) | export()  | string | |
@@ -41,7 +41,7 @@ The following list should reflect modifications documented in
 | SzConfigMgr_getDefaultConfigID(configID) | getDefaultConfigId() | int64 | |
 | SzConfigMgr_getLastException(buffer, bufSize) | [not-public] | | |
 | SzConfigMgr_getLastExceptionCode() | [not-public] | | |
-| SzConfigMgr_init(moduleName, iniParams, verboseLogging) | initialize(instanceName, settings, verboseLogging) | - | Consider single object |
+| SzConfigMgr_init(moduleName, iniParams, verboseLogging) | initialize(instanceName, settings, verboseLogging) | - | |
 | SzConfigMgr_replaceDefaultConfigID(oldConfigID, newConfigID) | replaceDefaultConfigId(currentDefaultConfigId, newDefaultConfigId) | - | |
 | SzConfigMgr_setDefaultConfigID(configID) | setDefaultConfigId(configId) | - | |
 | | setDefaultConfig(configDefinition) | - | |
