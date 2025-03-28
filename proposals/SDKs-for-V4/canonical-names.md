@@ -44,7 +44,7 @@ The following list should reflect modifications documented in
 | SzConfigMgr_init(moduleName, iniParams, verboseLogging) | initialize(instanceName, settings, verboseLogging) | - | |
 | SzConfigMgr_replaceDefaultConfigID(oldConfigID, newConfigID) | replaceDefaultConfigId(currentDefaultConfigId, newDefaultConfigId) | - | |
 | SzConfigMgr_setDefaultConfigID(configID) | setDefaultConfigId(configId) | - | |
-| | setDefaultConfig(configDefinition) | - | |
+| | setDefaultConfig(configDefinition, configComment) | - | |
 
 ### SzDiagnostic
 
