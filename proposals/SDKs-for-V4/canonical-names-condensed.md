@@ -24,9 +24,9 @@ The following list should reflect modifications documented in
 |---------------|----------------|--------------|--------|
 | SzConfigMgr_addConfig(configStr, configComment, configID) | registerConfig(configDefinition, configComment) | int64 | |
 | SzConfigMgr_destroy() | | - | |
-| SzConfigMgr_getConfig(configID, responseBuf, bufSize, resizeFunc) | createConfigFromConfigID(configId) | SzConfig | SDK independent |
-| | createConfigFromString(configDefinition) | SzConfig | SDK independent|
-| | createConfigFromTemplate() | SzConfig | SDK independent|
+| SzConfigMgr_getConfig(configID, responseBuf, bufSize, resizeFunc) | createConfigFromConfigID(configId) | SzConfig | May vary by SDK |
+| | createConfigFromString(configDefinition) | SzConfig | May vary by SDK|
+| | createConfigFromTemplate() | SzConfig | May vary by SDK|
 | SzConfigMgr_getConfigList(responseBuf, bufSize, resizeFunc) | getConfigs() | string | |
 | SzConfigMgr_getDefaultConfigID(configID) | getDefaultConfigId() | int64 | |
 | SzConfigMgr_init(moduleName, iniParams, verboseLogging) | initialize(instanceName, settings, verboseLogging) | - | |
