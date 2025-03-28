@@ -12,29 +12,27 @@ The following list should reflect modifications documented in
 
 | Existing name | Canonical Name | Return value | Smells |
 |---------------|----------------|--------------|--------|
-| SzConfig_addDataSource(configHandle, inputJson, responseBuf, bufSize, resizeFunc) | addDataSource(configHandle, dataSourceCode) | string | |
-| SzConfig_clearLastException() | [not-public] | | |
-| SzConfig_close(configHandle) | closeConfig(configHandle) | - | |
-| SzConfig_create(configHandle) | createConfig() | configHandle | |
-| SzConfig_deleteDataSource(configHandle, inputJson) | deleteDataSource(configHandle, dataSourceCode) | - | |
-| SzConfig_destroy() | | - | |
-| SzConfig_init(moduleName, iniParams, verboseLogging) | initialize(instanceName, settings, verboseLogging) | - | Consider single object |
-| SzConfig_listDataSources(configHandle, responseBuf, bufSize, resizeFunc) | getDataSources(configHandle) | string | |
-| SzConfig_load(jsonConfig, configHandle) | importConfig(configDefinition) | configHandle | |
-| SzConfig_save(configHandle, responseBuf, bufSize, resizeFunc) | exportConfig(configHandle)  | string | |
+| SzConfig_addDataSource(configHandle, inputJson, responseBuf, bufSize, resizeFunc) | addDataSource(dataSourceCode) | string | |
+| SzConfig_deleteDataSource(configHandle, inputJson) | deleteDataSource(dataSourceCode) | - | |
+| SzConfig_init(moduleName, iniParams, verboseLogging) | initialize(instanceName, settings, verboseLogging) | - | |
+| SzConfig_listDataSources(configHandle, responseBuf, bufSize, resizeFunc) | getDataSources() | string | |
+| SzConfig_save(configHandle, responseBuf, bufSize, resizeFunc) | export()  | string | |
 
 ### SzConfigManager
 
 | Existing name | Canonical Name | Return value | Smells |
 |---------------|----------------|--------------|--------|
-| SzConfigMgr_addConfig(configStr, configComment, configID) | addConfig(configDefinition, configComment) | int64 | |
+| SzConfigMgr_addConfig(configStr, configComment, configID) | registerConfig(configDefinition, configComment) | int64 | |
 | SzConfigMgr_destroy() | | - | |
-| SzConfigMgr_getConfig(configID, responseBuf, bufSize, resizeFunc) | getConfig(configId) | string | |
+| SzConfigMgr_getConfig(configID, responseBuf, bufSize, resizeFunc) | createConfigFromConfigID(configId) | SzConfig | SDK independent |
+| | createConfigFromString(configDefinition) | SzConfig | SDK independent|
+| | createConfigFromTemplate() | SzConfig | SDK independent|
 | SzConfigMgr_getConfigList(responseBuf, bufSize, resizeFunc) | getConfigs() | string | |
 | SzConfigMgr_getDefaultConfigID(configID) | getDefaultConfigId() | int64 | |
-| SzConfigMgr_init(moduleName, iniParams, verboseLogging) | initialize(instanceName, settings, verboseLogging) | - | Consider single object |
+| SzConfigMgr_init(moduleName, iniParams, verboseLogging) | initialize(instanceName, settings, verboseLogging) | - | |
 | SzConfigMgr_replaceDefaultConfigID(oldConfigID, newConfigID) | replaceDefaultConfigId(currentDefaultConfigId, newDefaultConfigId) | - | |
 | SzConfigMgr_setDefaultConfigID(configID) | setDefaultConfigId(configId) | - | |
+| | setDefaultConfig(configDefinition) | - | |
 
 ### SzDiagnostic
 
