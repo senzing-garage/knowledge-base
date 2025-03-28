@@ -413,17 +413,18 @@ new_config_id = sz_configmanger.add_data_sources_to_config(base_config_id, datas
 
 #### New methods for SzConfigManager
 
-| Signature                                | Return value |
-|------------------------------------------|--------------|
-| createConfigFromString(configDefinition) | SzConfig     |
-| createConfigFromTemplate()               | SzConfig     |
+| Signature                                | Return value | Notes |
+|------------------------------------------|--------------|-------|
+| createConfig(...)                        | SzConfig     | General principle |
+| createConfigFromString(configDefinition) | SzConfig     | Potential variant |
+| createConfigFromTemplate()               | SzConfig     | Potential variant |
 
 #### Modified methods for SzConfigManager
 
-| Old                 | New                                | Return value |
-|---------------------|------------------------------------|--------------|
-| getConfig(configId) | createConfigFromConfigID(configID) | SzConfig     |
-| addConfig(configDefinition, configComment) | registerConfig(configDefinition, configComment) | int64        |
+| Old                 | New                                | Return value | Notes |
+|---------------------|------------------------------------|--------------|-------|
+| getConfig(configId) | createConfigFromConfigId(configId) | SzConfig     | Potential variant |
+| addConfig(configDefinition, configComment) | registerConfig(configDefinition, configComment) | int64        ||
 
 #### Unmodified methods for SzConfigManager
 
