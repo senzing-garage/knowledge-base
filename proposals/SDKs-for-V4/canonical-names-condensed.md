@@ -24,7 +24,7 @@ The following list should reflect modifications documented in
 |---------------|----------------|--------------|--------|
 | SzConfigMgr_addConfig(configStr, configComment, configID) | registerConfig(configDefinition, configComment) | int64 | |
 | SzConfigMgr_destroy() | | - | |
-| SzConfigMgr_getConfig(configID, responseBuf, bufSize, resizeFunc) | createConfigFromConfigID(configId) | SzConfig | May vary by SDK |
+| SzConfigMgr_getConfig(configID, responseBuf, bufSize, resizeFunc) | createConfigFromConfigID(configId) | SzConfig | May vary by SDK. ConfigID=0 throws exception |
 | | createConfigFromString(configDefinition) | SzConfig | May vary by SDK|
 | | createConfigFromTemplate() | SzConfig | May vary by SDK|
 | SzConfigMgr_getConfigList(responseBuf, bufSize, resizeFunc) | getConfigs() | string | |
