@@ -29,7 +29,7 @@ The following list should reflect modifications documented in
 
 ### SzConfigManager
 
-| Existing name | Canonical Name | Return value | Smells |
+| Existing name | Canonical Name | Return value | Note |
 |---------------|----------------|--------------|--------|
 | SzConfigMgr_addConfig(configStr, configComment, configID) | registerConfig(configDefinition, configComment) | int64 | |
 | SzConfigMgr_clearLastException() | [not-public] | | |
@@ -44,7 +44,7 @@ The following list should reflect modifications documented in
 | SzConfigMgr_init(moduleName, iniParams, verboseLogging) | initialize(instanceName, settings, verboseLogging) | - | |
 | SzConfigMgr_replaceDefaultConfigID(oldConfigID, newConfigID) | replaceDefaultConfigId(currentDefaultConfigId, newDefaultConfigId) | - | |
 | SzConfigMgr_setDefaultConfigID(configID) | setDefaultConfigId(configId) | - | |
-| | setDefaultConfig(configDefinition, configComment) | - | |
+| | setDefaultConfig(configDefinition, configComment) | int64 | |
 
 ### SzDiagnostic
 
