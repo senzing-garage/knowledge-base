@@ -13,28 +13,26 @@
 ## Senzing application image considerations
 
 1. Version of repository artifact (e.g. `stream-loader.py`)
-1. Version of dependencies.  (e.g. Senzing, pip installs, apt installs)
+1. Version of dependencies. (e.g. Senzing, pip installs, apt installs)
 1. Version of `FROM` base.
-    1. The underlying base will change to remove vulnerabilities
+   1. The underlying base will change to remove vulnerabilities
 
 ## Customer
-
 
 1. Given this style of `Dockerfile`.
    Example:
 
-    ```console
-    ARG BASE_IMAGE=senzing/base-debian:3.1.0
-    FROM ${BASE_IMAGE} AS builder
-    :
-    ```
+   ```console
+   ARG BASE_IMAGE=senzing/base-debian:3.1.0
+   FROM ${BASE_IMAGE} AS builder
+   :
+   ```
 
 1. Customers can build their own Docker images using any Senzing version they wish.
    Example:
 
-    ```console
-    sudo docker build \
-      --build-arg BASE_IMAGE=senzing/base-debian:3.0.0 \
-      :
-    ```
-
+   ```console
+   sudo docker build \
+     --build-arg BASE_IMAGE=senzing/base-debian:3.0.0 \
+     :
+   ```

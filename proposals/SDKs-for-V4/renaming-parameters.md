@@ -24,27 +24,27 @@ The "Before" column is the current name of the variable.
 The "After" column is a suggested replacement.
 The "Comments" column has rationale.
 
-| Before                | After              | Comments                             |
-|-----------------------|--------------------|--------------------------------------|
-| buffSize              | bufferSize         | Use full names. |
-| configStr             | config             | Remove datatype. Similar to `features` and `record`. |
-| errorBuf              | errorBuffer        | Use full names. |
-| errorBufSize          | errorBufferSize    | Use full names. |
-| infoBuff              | infoBuffer         | Use full names. |
-| infoBuffSize          | infoBufferSize     | Use full names. |
-| iniParams             | initParameters     | Use full names. |
-| inputJson             | dataSourceSpec     | Remove datatype. Used in `G2Config_addDataSource` and `G2Config_deleteDataSource`. |
-| jsonConfig            | config             | Remove datatype. Used in `G2Config_load`. See `configStr` above. |
+| Before                | After              | Comments                                                                                   |
+| --------------------- | ------------------ | ------------------------------------------------------------------------------------------ |
+| buffSize              | bufferSize         | Use full names.                                                                            |
+| configStr             | config             | Remove datatype. Similar to `features` and `record`.                                       |
+| errorBuf              | errorBuffer        | Use full names.                                                                            |
+| errorBufSize          | errorBufferSize    | Use full names.                                                                            |
+| infoBuff              | infoBuffer         | Use full names.                                                                            |
+| infoBuffSize          | infoBufferSize     | Use full names.                                                                            |
+| iniParams             | initParameters     | Use full names.                                                                            |
+| inputJson             | dataSourceSpec     | Remove datatype. Used in `G2Config_addDataSource` and `G2Config_deleteDataSource`.         |
+| jsonConfig            | config             | Remove datatype. Used in `G2Config_load`. See `configStr` above.                           |
 | jsonData              | record             | Remove datatype. When used in `G2_addRecord*` functions. Note: `record` is used elsewhere. |
-| jsonData              | searchQuery        | Remove datatype. When used in `G2_searchByAttributes*` functions. |
-| licenseString         | license            | Remove datatype. |
-| maximumEstimatedCount | maxEstimatedCount  | Consistent with `maxDegree`, `maxEntities`|
-| minimumEntitySize     | minEntitySize      | Consistent with `maxDegree`, `maxEntities` |
-| ptr                   | ???                | Probably not externalized. Languages like Python don't deal in pointers.|
-| recordIDBuf           | recordIDBuffer     | Use full names. |
-| recordIDBufSize       | recordIDBuferSize  | Use full names. |
-| responseBuf           | responseBuffer     | Use full names. |
-| responseBufSize       | responseBufferSize | Use full names. |
+| jsonData              | searchQuery        | Remove datatype. When used in `G2_searchByAttributes*` functions.                          |
+| licenseString         | license            | Remove datatype.                                                                           |
+| maximumEstimatedCount | maxEstimatedCount  | Consistent with `maxDegree`, `maxEntities`                                                 |
+| minimumEntitySize     | minEntitySize      | Consistent with `maxDegree`, `maxEntities`                                                 |
+| ptr                   | ???                | Probably not externalized. Languages like Python don't deal in pointers.                   |
+| recordIDBuf           | recordIDBuffer     | Use full names.                                                                            |
+| recordIDBufSize       | recordIDBuferSize  | Use full names.                                                                            |
+| responseBuf           | responseBuffer     | Use full names.                                                                            |
+| responseBufSize       | responseBufferSize | Use full names.                                                                            |
 
 ## Research
 
@@ -68,7 +68,7 @@ The following table lists the variables used in the
 in alphabetical order with the number of occurrances of each variable.
 
 | Parameter               | Count |
-|-------------------------|------:|
+| ----------------------- | ----: |
 | buffer                  |     5 |
 | bufSize                 |    81 |
 | buildOutDegree          |     4 |
@@ -141,54 +141,54 @@ This is an analysis of the components of variable name composition.
 
 These are the "things" recognized by the Senzing API.
 
-| Noun         | Comment |
-|--------------|---------|
-| Buffer       | An internal memory space. |
-| Config       | The Senzing engine configuration. |
-| DataSource   | An identifier of the provenance of a set of records. |
-| Dsrc         | A Senzing "Entity".|
+| Noun         | Comment                                                   |
+| ------------ | --------------------------------------------------------- |
+| Buffer       | An internal memory space.                                 |
+| Config       | The Senzing engine configuration.                         |
+| DataSource   | An identifier of the provenance of a set of records.      |
+| Dsrc         | A Senzing "Entity".                                       |
 | Entity       | A Senzing-constructed representation of a set of records. |
-| Error        ||
-| Feature      ||
-| Flags        | Specification of output contents. |
-| Info         ||
-| LibFeat      ||
-| License      ||
-| Load         ||
-| Logging      | Refers to Senzing log information to STDERR. |
-| Module       ||
-| Parameters   ||
-| Record       | A customer "record". |
-| Relationship | A discovered relationship between entities. |
-| Response     ||
-| Search       ||
+| Error        |                                                           |
+| Feature      |                                                           |
+| Flags        | Specification of output contents.                         |
+| Info         |                                                           |
+| LibFeat      |                                                           |
+| License      |                                                           |
+| Load         |                                                           |
+| Logging      | Refers to Senzing log information to STDERR.              |
+| Module       |                                                           |
+| Parameters   |                                                           |
+| Record       | A customer "record".                                      |
+| Relationship | A discovered relationship between entities.               |
+| Response     |                                                           |
+| Search       |                                                           |
 
 #### Adjectives used
 
 These are attributes of the "things" listed above.
 
 | Adjective | Comment |
-|-----------|---------|
-| Code      ||
-| Comments  ||
-| Degree    ||
-| Excluded  ||
-| FilePath  ||
-| Handle    ||
-| ID        ||
-| Init      ||
-| List      ||
-| Max       ||
-| Min       ||
-| Name      ||
-| New       ||
-| Old       ||
-| Profile   ||
-| QueryList ||
-| Required  ||
-| Size      ||
-| Type      ||
-| Verbose   ||
+| --------- | ------- |
+| Code      |         |
+| Comments  |         |
+| Degree    |         |
+| Excluded  |         |
+| FilePath  |         |
+| Handle    |         |
+| ID        |         |
+| Init      |         |
+| List      |         |
+| Max       |         |
+| Min       |         |
+| Name      |         |
+| New       |         |
+| Old       |         |
+| Profile   |         |
+| QueryList |         |
+| Required  |         |
+| Size      |         |
+| Type      |         |
+| Verbose   |         |
 
 #### Misc
 
@@ -196,14 +196,14 @@ These variables are outliers.
 Many do contain a known noun or adjective,
 but are unique in their construction.
 
-| Variable                | Comment |
-|-------------------------|---------|
-| buildOutDegree          ||
-| csvColumnList           ||
-| entityListBySizeHandle  | Oddly, only "by" is not listed above.|
-| includeInternalFeatures ||
-| lastModifiedTime        ||
-| maximumEstimatedCount   ||
-| ptr                     ||
-| resizeFunc              ||
-| secondsToRun            ||
+| Variable                | Comment                               |
+| ----------------------- | ------------------------------------- |
+| buildOutDegree          |                                       |
+| csvColumnList           |                                       |
+| entityListBySizeHandle  | Oddly, only "by" is not listed above. |
+| includeInternalFeatures |                                       |
+| lastModifiedTime        |                                       |
+| maximumEstimatedCount   |                                       |
+| ptr                     |                                       |
+| resizeFunc              |                                       |
+| secondsToRun            |                                       |

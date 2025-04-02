@@ -15,7 +15,7 @@ and push them to a private Docker registry.
 ## Prerequisites
 
 1. If you need to create a private docker registry, see
-       [WHATIS - docker registry server].
+   [WHATIS - docker registry server].
 
 ## Build docker images
 
@@ -25,11 +25,11 @@ Build any Docker images that aren't on a public Docker registry.
 1. Build Senzing "helper" Docker images.
    Example:
 
-    ```console
-    docker build --tag senzing/mysql        https://github.com/senzing-garage/docker-mysql.git#main
-    docker build --tag senzing/mysql-init   https://github.com/senzing-garage/docker-mysql-init.git#main
+   ```console
+   docker build --tag senzing/mysql        https://github.com/senzing-garage/docker-mysql.git#main
+   docker build --tag senzing/mysql-init   https://github.com/senzing-garage/docker-mysql-init.git#main
 
-    ```
+   ```
 
 ## Identify docker images
 
@@ -37,13 +37,13 @@ Build any Docker images that aren't on a public Docker registry.
    Specify versions of Docker images.
    Example:
 
-    ```console
-    curl -X GET \
-        --output /tmp/docker-versions-stable.sh \
-        https://raw.githubusercontent.com/Senzing/knowledge-base/main/lists/docker-versions-stable.sh
-    source /tmp/docker-versions-stable.sh
+   ```console
+   curl -X GET \
+       --output /tmp/docker-versions-stable.sh \
+       https://raw.githubusercontent.com/Senzing/knowledge-base/main/lists/docker-versions-stable.sh
+   source /tmp/docker-versions-stable.sh
 
-    ```
+   ```
 
 1. :pencil2: List docker images in DockerHub in an environment variable.
    Add or delete Docker images from the list.
@@ -51,46 +51,46 @@ Build any Docker images that aren't on a public Docker registry.
    [docker-image-names.sh](../lists/docker-image-names.sh)
    Example:
 
-    ```console
-    export DOCKER_IMAGE_NAMES=(
-        "senzing/senzingapi-runtime:${SENZING_DOCKER_IMAGE_VERSION_SENZINGAPI_RUNTIME:-latest}"
-    )
+   ```console
+   export DOCKER_IMAGE_NAMES=(
+       "senzing/senzingapi-runtime:${SENZING_DOCKER_IMAGE_VERSION_SENZINGAPI_RUNTIME:-latest}"
+   )
 
-    ```
+   ```
 
 ## Pull images from public Docker registries
 
 1. Add docker images to local docker repository.
    Example:
 
-    ```console
-    for DOCKER_IMAGE_NAME in ${DOCKER_IMAGE_NAMES[@]};\
-    do \
-      docker pull ${DOCKER_IMAGE_NAME}; \
-    done
+   ```console
+   for DOCKER_IMAGE_NAME in ${DOCKER_IMAGE_NAMES[@]};\
+   do \
+     docker pull ${DOCKER_IMAGE_NAME}; \
+   done
 
-    ```
+   ```
 
 ## Push images to private Docker registry
 
 1. :pencil2: Identify the URL of the private Docker registry.
    Example:
 
-    ```console
-    export DOCKER_REGISTRY_URL=my.docker-registry.com:5000
-    ```
+   ```console
+   export DOCKER_REGISTRY_URL=my.docker-registry.com:5000
+   ```
 
 1. Push Docker images to private docker registry.
    Example:
 
-    ```console
-    for DOCKER_IMAGE_NAME in ${DOCKER_IMAGE_NAMES[@]};\
-    do
-      docker tag  ${DOCKER_IMAGE_NAME} ${DOCKER_REGISTRY_URL}/${DOCKER_IMAGE_NAME};
-      docker push ${DOCKER_REGISTRY_URL}/${DOCKER_IMAGE_NAME};
-      docker rmi  ${DOCKER_REGISTRY_URL}/${DOCKER_IMAGE_NAME};
-    done
+   ```console
+   for DOCKER_IMAGE_NAME in ${DOCKER_IMAGE_NAMES[@]};\
+   do
+     docker tag  ${DOCKER_IMAGE_NAME} ${DOCKER_REGISTRY_URL}/${DOCKER_IMAGE_NAME};
+     docker push ${DOCKER_REGISTRY_URL}/${DOCKER_IMAGE_NAME};
+     docker rmi  ${DOCKER_REGISTRY_URL}/${DOCKER_IMAGE_NAME};
+   done
 
-    ```
+   ```
 
 [WHATIS - docker registry server]: https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/docker-registry-server.md

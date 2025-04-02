@@ -4,11 +4,11 @@
 
 1. Design for customer infrastructures.
    Examples:
-    1. Demonstration systems - for customer evaluation
-    1. "Bare-metal" systems  (e.g. Linux/Debian/RedHat, Windows, MacOS, etc.)
-    1. Cloud systems (e.g. Docker, Kubernetes, OpenShift, etc.)
-    1. Air-gapped systems
-    1. Log analysis - (e.g. ELK stacks, Datadog, Splunk, etc)
+   1. Demonstration systems - for customer evaluation
+   1. "Bare-metal" systems (e.g. Linux/Debian/RedHat, Windows, MacOS, etc.)
+   1. Cloud systems (e.g. Docker, Kubernetes, OpenShift, etc.)
+   1. Air-gapped systems
+   1. Log analysis - (e.g. ELK stacks, Datadog, Splunk, etc)
 
 ## Architecture
 
@@ -21,9 +21,9 @@
 
 1. Use standards.
    Examples:
-    1. [Semantic versioning](../../WHATIS/semantic-versioning.md)
-    1. [Linux Hierarchical File standard](../../WHATIS/linux-filesystem-hierarchy-standard.md)
-    1. [RFC3339](../../WHATIS/rfc3339.md) - timestamps
+   1. [Semantic versioning](../../WHATIS/semantic-versioning.md)
+   1. [Linux Hierarchical File standard](../../WHATIS/linux-filesystem-hierarchy-standard.md)
+   1. [RFC3339](../../WHATIS/rfc3339.md) - timestamps
 
 ## Development
 

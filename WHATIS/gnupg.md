@@ -1,6 +1,6 @@
 # What is GnuPG
 
-* <https://gnupg.org/index.html>
+- <https://gnupg.org/index.html>
 
 ## Install
 
@@ -27,7 +27,7 @@
    sudo apt-get install gnupg
    ```
    - [Configure TTY]
-   
+
 ### Windows
 
 1. Download and install the windows binary from [gnupg.org]
@@ -40,7 +40,7 @@
    ```
    GPG_TTY=$(tty)
    export GPG_TTY
-   ``` 
+   ```
 
 ## Test
 
@@ -49,7 +49,7 @@
    gpg --version
    ```
 
- ## Troubleshooting
+## Troubleshooting
 
 ## References
 

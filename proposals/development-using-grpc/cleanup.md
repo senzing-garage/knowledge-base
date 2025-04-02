@@ -10,27 +10,27 @@ The following information will clean the demonstration off the local workstation
 
 2. Remove the `senzing/serve-grpc` Docker image from Docker's cache.
 
-    ```console
-    docker rmi senzing/serve-grpc
-    ```
+   ```console
+   docker rmi senzing/serve-grpc
+   ```
 
 ## Remove senzing-grpc python package
 
 3. If installed, uninstall the Senzing `senzing-grpc` python package.
 
-    ```console
-    python3 -m pip uninstall senzing-grpc
+   ```console
+   python3 -m pip uninstall senzing-grpc
 
-    ```
+   ```
 
 ## Next steps
 
 4. [Development with Senzing Python SDK]
-    1. [Senzing Hello World]
-    1. [Load Senzing truth-sets]
-    1. [Load user data]
-    1. [Show method help]
-    1. Clean up
+   1. [Senzing Hello World]
+   1. [Load Senzing truth-sets]
+   1. [Load user data]
+   1. [Show method help]
+   1. Clean up
 
 [Development with Senzing Python SDK]: development-with-senzing-python-sdk.md
 [Load Senzing truth-sets]: load-senzing-truthsets.md

@@ -10,27 +10,27 @@ Load the `debian:11-slim` docker image into a private Docker registry.
 1. :pencil2: Identify the source.
    Example:
 
-    ```console
-    export DOCKER_REPOSITORY=debian
-    export DOCKER_TAG=11-slim
-    ```
+   ```console
+   export DOCKER_REPOSITORY=debian
+   export DOCKER_TAG=11-slim
+   ```
 
 1. :pencil2: Identify the target.
    Example:
 
-    ```console
-    export DOCKER_REGISTRY_URL=my.docker-registry.com:5000
-    ```
+   ```console
+   export DOCKER_REGISTRY_URL=my.docker-registry.com:5000
+   ```
 
 1. Pull from source registry, push to target registry.
    Example:
 
-    ```console
-    docker pull ${DOCKER_REPOSITORY}:${DOCKER_TAG}
-    docker tag  ${DOCKER_REPOSITORY}:${DOCKER_TAG} ${DOCKER_REGISTRY_URL}/${DOCKER_REPOSITORY}:${DOCKER_TAG}
-    docker push                               ${DOCKER_REGISTRY_URL}/${DOCKER_REPOSITORY}:${DOCKER_TAG}
-    docker rmi                                ${DOCKER_REGISTRY_URL}/${DOCKER_REPOSITORY}:${DOCKER_TAG}
-    ```
+   ```console
+   docker pull ${DOCKER_REPOSITORY}:${DOCKER_TAG}
+   docker tag  ${DOCKER_REPOSITORY}:${DOCKER_TAG} ${DOCKER_REGISTRY_URL}/${DOCKER_REPOSITORY}:${DOCKER_TAG}
+   docker push                               ${DOCKER_REGISTRY_URL}/${DOCKER_REPOSITORY}:${DOCKER_TAG}
+   docker rmi                                ${DOCKER_REGISTRY_URL}/${DOCKER_REPOSITORY}:${DOCKER_TAG}
+   ```
 
 ## senzing-debian.yaml
 
@@ -38,23 +38,22 @@ Load the `debian:11-slim` docker image into a private Docker registry.
    Replace the `${...}` variables with actual values.
    Example:
 
-    ```yaml
-    main:
+   ```yaml
+   main:
+     containerSecurityContext:
+       enabled: true
+       privileged: true
+       runAsGroup: 0
+       runAsUser: 0
 
-      containerSecurityContext:
-        enabled: true
-        privileged: true
-        runAsGroup: 0
-        runAsUser: 0
+     image:
+       registry: ${DOCKER_REGISTRY_URL}
+       repository: ${DOCKER_REPOSITORY}
+       tag: ${DOCKER_TAG}
 
-      image:
-        registry: ${DOCKER_REGISTRY_URL}
-        repository: ${DOCKER_REPOSITORY}
-        tag: ${DOCKER_TAG}
-
-      senzing:
-        persistentVolumeClaim: senzing-persistent-volume-claim
-    ```
+     senzing:
+       persistentVolumeClaim: senzing-persistent-volume-claim
+   ```
 
 ## Helm install
 
@@ -62,13 +61,13 @@ Load the `debian:11-slim` docker image into a private Docker registry.
    [helm install](https://helm.sh/docs/helm/helm_install/).
    Example:
 
-    ```console
-    helm install \
-      ${DEMO_PREFIX}-senzing-debian \
-      senzing/senzing-console \
-      --namespace ${DEMO_NAMESPACE} \
-      --values ${HELM_VALUES_DIR}/senzing-debian.yaml
-    ```
+   ```console
+   helm install \
+     ${DEMO_PREFIX}-senzing-debian \
+     senzing/senzing-console \
+     --namespace ${DEMO_NAMESPACE} \
+     --values ${HELM_VALUES_DIR}/senzing-debian.yaml
+   ```
 
 ## init-container update database only
 
@@ -78,27 +77,26 @@ Add `SENZING_SUBCOMMAND` so `senzing/init-container` docker container just updat
    Replace the `${...}` variables with actual values.
    Example:
 
-    ```yaml
-    main:
+   ```yaml
+   main:
+     containerSecurityContext:
+       enabled: true
+       privileged: true
+       runAsGroup: 0
+       runAsUser: 0
 
-      containerSecurityContext:
-        enabled: true
-        privileged: true
-        runAsGroup: 0
-        runAsUser: 0
+     extraEnvVars:
+       - name: SENZING_SUBCOMMAND
+         value: initialize-database
 
-      extraEnvVars:
-        - name: SENZING_SUBCOMMAND
-          value: initialize-database
+     image:
+       registry: ${DOCKER_REGISTRY_URL}
+       tag: ${SENZING_DOCKER_IMAGE_VERSION_INIT_CONTAINER}
 
-      image:
-        registry: ${DOCKER_REGISTRY_URL}
-        tag: ${SENZING_DOCKER_IMAGE_VERSION_INIT_CONTAINER}
-
-      senzing:
-        databaseUrl: "postgresql://postgres:postgres@${DEMO_PREFIX}-bitnami-postgresql:5432/G2"
-        persistentVolumeClaim: senzing-persistent-volume-claim
-    ```
+     senzing:
+       databaseUrl: "postgresql://postgres:postgres@${DEMO_PREFIX}-bitnami-postgresql:5432/G2"
+       persistentVolumeClaim: senzing-persistent-volume-claim
+   ```
 
 ## senzing-api-server with ingress
 
@@ -110,35 +108,34 @@ For more options, see `senzing/senzing-api-server`'s
    Replace the `${...}` variables with actual values.
    Example:
 
-    ```yaml
-    ingress:
-        enabled: true
+   ```yaml
+   ingress:
+     enabled: true
 
-    main:
+   main:
+     autoscaling:
+       enabled: true
 
-      autoscaling:
-        enabled: true
+     image:
+       registry: ${DOCKER_REGISTRY_URL}
+       tag: ${SENZING_DOCKER_IMAGE_VERSION_SENZING_API_SERVER}
 
-      image:
-        registry: ${DOCKER_REGISTRY_URL}
-        tag: ${SENZING_DOCKER_IMAGE_VERSION_SENZING_API_SERVER}
-
-      senzing:
-        concurrency: 8
-        engineConfigurationJson: >-
-          {
-            "PIPELINE": {
-              "CONFIGPATH": "/etc/opt/senzing",
-              "RESOURCEPATH": "/opt/senzing/g2/resources",
-              "SUPPORTPATH": "/opt/senzing/data"
-            },
-            "SQL": {
-              "BACKEND": "HYBRID",
-              "CONNECTION": "postgresql://postgres:postgres@${DEMO_PREFIX}-bitnami-postgresql:5432:G2"
-            }
-          }
-        persistentVolumeClaim: senzing-persistent-volume-claim
-    ```
+     senzing:
+       concurrency: 8
+       engineConfigurationJson: >-
+         {
+           "PIPELINE": {
+             "CONFIGPATH": "/etc/opt/senzing",
+             "RESOURCEPATH": "/opt/senzing/g2/resources",
+             "SUPPORTPATH": "/opt/senzing/data"
+           },
+           "SQL": {
+             "BACKEND": "HYBRID",
+             "CONNECTION": "postgresql://postgres:postgres@${DEMO_PREFIX}-bitnami-postgresql:5432:G2"
+           }
+         }
+       persistentVolumeClaim: senzing-persistent-volume-claim
+   ```
 
 ## entity-search-web-app with ingress
 
@@ -150,112 +147,108 @@ For more options, see `senzing/entity-search-web-app`'s
    Replace the `${...}` variables with actual values.
    Example:
 
-    ```yaml
-    ingress:
-        annotations: {}
-        enabled: true
-        hostname: senzing-webapp.apps.k8s.uscis.dhs.gov
+   ```yaml
+   ingress:
+     annotations: {}
+     enabled: true
+     hostname: senzing-webapp.apps.k8s.uscis.dhs.gov
 
-    main:
+   main:
+     autoscaling:
+       enabled: true
 
-      autoscaling:
-        enabled: true
+     image:
+       registry: ${DOCKER_REGISTRY_URL}
+       tag: ${SENZING_DOCKER_IMAGE_VERSION_ENTITY_SEARCH_WEB_APP}
 
-      image:
-        registry: ${DOCKER_REGISTRY_URL}
-        tag: ${SENZING_DOCKER_IMAGE_VERSION_ENTITY_SEARCH_WEB_APP}
-
-      senzing:
-        apiServerUrl: "http://${DEMO_PREFIX}-senzing-api-server"
-    ```
+     senzing:
+       apiServerUrl: "http://${DEMO_PREFIX}-senzing-api-server"
+   ```
 
 ## Secrets in stream-loader
 
 1. `helm-values/senzing-stream-loader-kafka-postgresql.yaml`.
    Example:
 
-    ```yaml
-    main:
+   ```yaml
+   main:
+     args:
+       - infinity
 
-      args:
-        - infinity
+     autoscaling:
+       enabled: false
+       maxReplicas: 10
+       minReplicas: 3
+       targetCPU: 10
+       targetMemory: 10
 
-      autoscaling:
-        enabled: false
-        maxReplicas: 10
-        minReplicas: 3
-        targetCPU: 10
-        targetMemory: 10
+     command:
+       - sleep
 
-      command:
-        - sleep
+     extraVolumeMounts:
+       - name: name-of-volume
+         mountPath: "/etc/kafka-tls"
+         readOnly: true
 
-      extraVolumeMounts:
-        - name: name-of-volume
-          mountPath: "/etc/kafka-tls"
-          readOnly: true
+     extraVolumes:
+       - name: name-of-volume
+         secret:
+           secretName: name-of-secret
 
-      extraVolumes:
-        - name: name-of-volume
-          secret:
-            secretName: name-of-secret
+     image:
+       registry: ${DOCKER_REGISTRY_URL}
+       tag: ${SENZING_DOCKER_IMAGE_VERSION_STREAM_LOADER}
 
-      image:
-        registry: ${DOCKER_REGISTRY_URL}
-        tag: ${SENZING_DOCKER_IMAGE_VERSION_STREAM_LOADER}
-
-      senzing:
-        dataSource: TEST
-        databaseUrl: "postgresql://postgres:postgres@${DEMO_PREFIX}-bitnami-postgresql:5432/G2"
-        entityType: GENERIC
-        kafkaBootstrapServerHost: "${DEMO_PREFIX}-bitnami-kafka"
-        kafkaBootstrapServerPort: 9092
-        kafkaTopic: senzing-kafka-topic
-        logLevel: info
-        monitoringPeriod: 60
-        persistentVolumeClaim: senzing-persistent-volume-claim
-        subcommand: kafka
-        threadsPerProcess: 4
-    ```
-
+     senzing:
+       dataSource: TEST
+       databaseUrl: "postgresql://postgres:postgres@${DEMO_PREFIX}-bitnami-postgresql:5432/G2"
+       entityType: GENERIC
+       kafkaBootstrapServerHost: "${DEMO_PREFIX}-bitnami-kafka"
+       kafkaBootstrapServerPort: 9092
+       kafkaTopic: senzing-kafka-topic
+       logLevel: info
+       monitoringPeriod: 60
+       persistentVolumeClaim: senzing-persistent-volume-claim
+       subcommand: kafka
+       threadsPerProcess: 4
+   ```
 
 ## Test
 
 1. x
 
-    ```yaml
-    main:
+   ```yaml
+   main:
+     autoscaling:
+       enabled: true
+       maxReplicas: 10
+       minReplicas: 3
+       targetCPU: 10
+       targetMemory: 10
 
-      autoscaling:
-        enabled: true
-        maxReplicas: 10
-        minReplicas: 3
-        targetCPU: 10
-        targetMemory: 10
+     image:
+       registry: docker.io
+       tag: 1.9.7
 
-      image:
-        registry: docker.io
-        tag: 1.9.7
-
-      senzing:
-        dataSource: TEST
-        databaseUrl: "postgresql://postgres:postgres@my-bitnami-postgresql:5432/G2"
-        entityType: GENERIC
-        kafkaBootstrapServerHost: "my-bitnami-kafka"
-        kafkaBootstrapServerPort: 9092
-        kafkaTopic: senzing-kafka-topic
-        logLevel: info
-        monitoringPeriod: 60
-        persistentVolumeClaim: senzing-persistent-volume-claim
-        subcommand: kafka
-        threadsPerProcess: 4
-        kafkaConfiguration: >-
-          {
-            "security.protocol": "SSL",
-            "ssl.truststore.location": "/kafka-all_truststore.jks",
-            "ssl.truststore.password": "test",
-            "ssl.keystore.location": "/k-staging-wild-keystore.jks",
-            "ssl.keystore.password": "test",
-            "ssl.key.password": "text"
-          }
-    ```
+     senzing:
+       dataSource: TEST
+       databaseUrl: "postgresql://postgres:postgres@my-bitnami-postgresql:5432/G2"
+       entityType: GENERIC
+       kafkaBootstrapServerHost: "my-bitnami-kafka"
+       kafkaBootstrapServerPort: 9092
+       kafkaTopic: senzing-kafka-topic
+       logLevel: info
+       monitoringPeriod: 60
+       persistentVolumeClaim: senzing-persistent-volume-claim
+       subcommand: kafka
+       threadsPerProcess: 4
+       kafkaConfiguration: >-
+         {
+           "security.protocol": "SSL",
+           "ssl.truststore.location": "/kafka-all_truststore.jks",
+           "ssl.truststore.password": "test",
+           "ssl.keystore.location": "/k-staging-wild-keystore.jks",
+           "ssl.keystore.password": "test",
+           "ssl.key.password": "text"
+         }
+   ```

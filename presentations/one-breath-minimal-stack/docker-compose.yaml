@@ -1,8 +1,7 @@
-version: '3.8'
+version: "3.8"
 services:
-
   rabbitmq:
-#   For more information, visit https://github.com/bitnami/containers/tree/main/bitnami/rabbitmq
+    #   For more information, visit https://github.com/bitnami/containers/tree/main/bitnami/rabbitmq
     container_name: senzing-rabbitmq
     environment:
       RABBITMQ_PASSWORD: bitnami
@@ -16,7 +15,7 @@ services:
     restart: always
 
   postgres:
-#   For more information, visit https://github.com/bitnami/containers/tree/main/bitnami/postgresql
+    #   For more information, visit https://github.com/bitnami/containers/tree/main/bitnami/postgresql
     container_name: senzing-postgres
     environment:
       POSTGRESQL_DATABASE: G2
@@ -36,7 +35,7 @@ services:
     restart: always
 
   init-postgresql:
-#   For more information, visit https://github.com/senzing-garage/init-postgresql
+    #   For more information, visit https://github.com/senzing-garage/init-postgresql
     container_name: senzing-init-postgresql
     depends_on:
       - postgres
@@ -66,7 +65,7 @@ services:
     restart: on-failure
 
   producer:
-#   For more information, visit https://github.com/senzing-garage/stream-producer
+    #   For more information, visit https://github.com/senzing-garage/stream-producer
     container_name: senzing-stream-producer
     depends_on:
       - rabbitmq
@@ -93,17 +92,17 @@ services:
       - .:/var/opt/senzing
 
   pocserver:
-#   For more information, visit https://github.com/senzing-garage/senzing-poc-server
+    #   For more information, visit https://github.com/senzing-garage/senzing-poc-server
     container_name: senzing-poc-server
     depends_on:
       - postgres
     environment:
-      SENZING_API_SERVER_ALLOWED_ORIGINS: '*'
-      SENZING_API_SERVER_BIND_ADDR: 'all'
-      SENZING_API_SERVER_ENABLE_ADMIN: 'true'
-      SENZING_API_SERVER_PORT: '8250'
-      SENZING_API_SERVER_SKIP_ENGINE_PRIMING: 'true'
-      SENZING_API_SERVER_SKIP_STARTUP_PERF: 'true'
+      SENZING_API_SERVER_ALLOWED_ORIGINS: "*"
+      SENZING_API_SERVER_BIND_ADDR: "all"
+      SENZING_API_SERVER_ENABLE_ADMIN: "true"
+      SENZING_API_SERVER_PORT: "8250"
+      SENZING_API_SERVER_SKIP_ENGINE_PRIMING: "true"
+      SENZING_API_SERVER_SKIP_STARTUP_PERF: "true"
       SENZING_ENGINE_CONFIGURATION_JSON: >-
         {
           "PIPELINE": {
@@ -134,7 +133,7 @@ services:
       - /tmp
 
   webapp:
-#   For more information, visit https://github.com/senzing-garage/entity-search-web-app
+    #   For more information, visit https://github.com/senzing-garage/entity-search-web-app
     container_name: senzing-webapp
     depends_on:
       - pocserver
@@ -155,7 +154,7 @@ services:
     restart: always
 
   loader:
-#   For more information, visit https://github.com/senzing-garage/stream-loader
+    #   For more information, visit https://github.com/senzing-garage/stream-loader
     container_name: senzing-stream-loader
     depends_on:
       - rabbitmq
@@ -188,7 +187,7 @@ services:
     restart: always
 
   redoer:
-#   For more information, visit https://github.com/senzing-garage/redoer
+    #   For more information, visit https://github.com/senzing-garage/redoer
     container_name: senzing-redoer
     depends_on:
       - loader

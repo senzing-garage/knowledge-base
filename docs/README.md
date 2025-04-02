@@ -1,3 +1,3 @@
 # Senzing knowledge-base
 
-1. 
+1.

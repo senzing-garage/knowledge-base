@@ -20,15 +20,15 @@ Git [downloads].
 ### Windows
 
 1. [Download Windows](https://git-scm.com/download/win)
-    1. Run `Git-M.m.P-64-bit.exe`
+   1. Run `Git-M.m.P-64-bit.exe`
 
 ## Test
 
 1. Test
 
-    ```console
-    git --version
-    ```
+   ```console
+   git --version
+   ```
 
 ## Troubleshooting
 

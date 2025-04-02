@@ -4,7 +4,7 @@
 > It embraces modern configuration management by encouraging you to use automated scripts
 > to install and configure the software within your Packer-made images.
 > Packer brings machine images into the modern age, unlocking untapped potential and opening new opportunities.
-> -- *[Packer site]*
+> -- _[Packer site]_
 
 ## Sites
 
@@ -35,9 +35,9 @@ Instructions for installing: [Packer site].
 
 1. Test
 
-    ```console
-    packer version
-    ```
+   ```console
+   packer version
+   ```
 
 ## Troubleshooting
 

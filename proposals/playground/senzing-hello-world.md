@@ -12,25 +12,25 @@ The Senzing QuickStart using Python over gRPC requires the following prerequisit
 1. [Python 3]
 1. [senzing-grpc] Python package.
 
-    1. To install, run the following on the local workstation:
+   1. To install, run the following on the local workstation:
 
-        ```console
-        python3 -m pip install --upgrade senzing-grpc
+      ```console
+      python3 -m pip install --upgrade senzing-grpc
 
-        ```
+      ```
 
-       If a Python virtual environment is needed,
-       see [Installing senzing-grpc in a python virtual environment].
+      If a Python virtual environment is needed,
+      see [Installing senzing-grpc in a python virtual environment].
 
 ## Start interactive Python session
 
 4. Start an interactive Python session.
    Example:
 
-    ```console
-    python3
+   ```console
+   python3
 
-    ```
+   ```
 
 ## View Senzing version
 
@@ -38,34 +38,34 @@ The Senzing QuickStart using Python over gRPC requires the following prerequisit
    copy/paste the following block of code into the interactive Python session
    and press the **Enter** key.
 
-    ```python
-    import grpc
-    from senzing_grpc import SzAbstractFactory
-    sz_abstract_factory = SzAbstractFactory(grpc_channel=grpc.insecure_channel("localhost:8261"))
-    sz_product = sz_abstract_factory.create_sz_product()
-    print(sz_product.get_version())
+   ```python
+   import grpc
+   from senzing_grpc import SzAbstractFactory
+   sz_abstract_factory = SzAbstractFactory(grpc_channel=grpc.insecure_channel("localhost:8261"))
+   sz_product = sz_abstract_factory.create_sz_product()
+   print(sz_product.get_version())
 
-    ```
+   ```
 
-    or download and run [senzing_hello_world.py].
+   or download and run [senzing_hello_world.py].
 
 1. To end the interactive Python session,
    copy/paste the following block of code into the interactive Python session
    and press the **Enter** key.
 
-    ```python
-    quit()
+   ```python
+   quit()
 
-    ```
+   ```
 
 ## Next steps
 
 7. [Senzing Python SDK demonstration]
-    1. Senzing Hello World
-    1. [Load Senzing truth-sets]
-    1. [Load user data]
-    1. [Show method help]
-    1. [Clean up]
+   1. Senzing Hello World
+   1. [Load Senzing truth-sets]
+   1. [Load user data]
+   1. [Show method help]
+   1. [Clean up]
 
 [Clean up]: cleanup.md
 [Installing senzing-grpc in a python virtual environment]: virtual-environment.md

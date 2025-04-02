@@ -5,12 +5,12 @@
 > live code, equations, visualizations and narrative text.
 > Uses include: data cleaning and transformation, numerical simulation,
 > statistical modeling, data visualization, machine learning, and much more.
-> -- *[Jupyter site]*
+> -- _[Jupyter site]_
 
 ## Sites
 
 1. [Jupyter site]
-    1. [Documentation]
+   1. [Documentation]
 1. [github.com/jupyter]
 
 ## Install

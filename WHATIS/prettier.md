@@ -1,6 +1,6 @@
 # What is Prettier
 
-Prettier is a code formatter that outputs code in a consistent style.      
+Prettier is a code formatter that outputs code in a consistent style.  
 See more details: [What is Prettier?]
 
 ## Install
@@ -12,11 +12,13 @@ npm install --save-dev --save-exact prettier
 ```
 
 Optional: Create an empty config file:
+
 ```console
 node --eval "fs.writeFileSync('.prettierrc','{}\n')"
 ```
 
-Optional: Create a .prettierignore file to define what ***not*** to format
+Optional: Create a .prettierignore file to define what **_not_** to format
+
 ```console
 node --eval "fs.writeFileSync('.prettierignore','# Ignore artifacts:\nbuild\ncoverage\n')"
 ```
@@ -48,12 +50,12 @@ npx prettier --write .
 ### Format specific files
 
 Ex.
+
 ```console
  npx prettier --write .github/workflows/lint*
- ```
+```
 
 [Install via VSCode Marketplace]: https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
 [Prettier installation documentation]: https://prettier.io/docs/en/install
 [Prettier VSCode documentation]: https://github.com/prettier/prettier-vscode?tab=readme-ov-file#installation
 [What is Prettier?]: https://prettier.io/docs/en/
-

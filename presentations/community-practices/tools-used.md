@@ -5,26 +5,26 @@ This exercise introduces some of the major tooling used by the Senzing Community
 ## Contents
 
 1. [Introductory tools](#introductory-tools)
-    1. [GitHub](#github)
-    1. [Docker](#docker)
-    1. [Integrated Development Environments](#integrated-development-environments-ide)
-    1. [Markdown](#markdown)
-    1. [Tools for Thinking](#tools-for-thinking)
+   1. [GitHub](#github)
+   1. [Docker](#docker)
+   1. [Integrated Development Environments](#integrated-development-environments-ide)
+   1. [Markdown](#markdown)
+   1. [Tools for Thinking](#tools-for-thinking)
 1. [Language tools]()
-    1. [Python](#python)
-    1. [Go](#go)
-    1. [Java](#java)
-    1. [Node](#node)
+   1. [Python](#python)
+   1. [Go](#go)
+   1. [Java](#java)
+   1. [Node](#node)
 1. [Intermediate tools](#intermediate-tools)
-    1. [docker-compose](#docker-compose)
-    1. [Portainer](#portainer)
+   1. [docker-compose](#docker-compose)
+   1. [Portainer](#portainer)
 1. [Advanced tools](#advanced-tools)
-    1. [AWS Cloudformation](#aws-cloudformation)
-    1. [Jupyter notebooks](#jupyter-notebooks)
-    1. [Kubernetes](#kubernetes)
+   1. [AWS Cloudformation](#aws-cloudformation)
+   1. [Jupyter notebooks](#jupyter-notebooks)
+   1. [Kubernetes](#kubernetes)
 1. [Potential future tools](#potential-future-tools)
-    1. [Packer](#packer)
-    1. [Terraform](#terraform)
+   1. [Packer](#packer)
+   1. [Terraform](#terraform)
 
 ## Introductory tools
 
@@ -42,33 +42,33 @@ as well as deploy Senzing.
 
 1. If you want to try something on Debian, run:
 
-    ```console
-    docker run \
-      --interactive \
-      --rm \
-      --tty \
-      debian /bin/bash
-    ```
+   ```console
+   docker run \
+     --interactive \
+     --rm \
+     --tty \
+     debian /bin/bash
+   ```
 
 1. If you want to try something on Ubuntu, run:
 
-    ```console
-    docker run \
-      --interactive \
-      --rm \
-      --tty \
-      ubuntu /bin/bash
-    ```
+   ```console
+   docker run \
+     --interactive \
+     --rm \
+     --tty \
+     ubuntu /bin/bash
+   ```
 
 1. If you want to somethin on Centos, run:
 
-    ```console
-    docker run \
-      --interactive \
-      --rm \
-      --tty \
-      centos /bin/bash
-    ```
+   ```console
+   docker run \
+     --interactive \
+     --rm \
+     --tty \
+     centos /bin/bash
+   ```
 
 ### Integrated Development Environments (IDE)
 
@@ -76,7 +76,7 @@ as well as deploy Senzing.
 
 1. [Visual Studio Code](../../WHATIS/visual-studio-code.md) is the preferred IDE.
    But it is not a mandatory IDE.
-1. Others seen in Senzing:  Eclipse, Pycharm
+1. Others seen in Senzing: Eclipse, Pycharm
 
 ### Markdown
 
@@ -113,16 +113,16 @@ is essential.
 #### Python standards
 
 1. [Python Enhancement Proposals (PEP)](https://www.python.org/dev/peps/)
-    1. [PEP-8 checker](http://pep8online.com/)
+   1. [PEP-8 checker](http://pep8online.com/)
 
 ### Go
 
 1. Standard tool set
-    1. [go](https://go.dev/)
-    1. [gofmt](https://pkg.go.dev/cmd/gofmt) - Formatting
-    1. [godoc](https://pkg.go.dev/golang.org/x/tools/cmd/godoc) - Documentation generator
+   1. [go](https://go.dev/)
+   1. [gofmt](https://pkg.go.dev/cmd/gofmt) - Formatting
+   1. [godoc](https://pkg.go.dev/golang.org/x/tools/cmd/godoc) - Documentation generator
 1. Additional tools
-    1. [gosec](https://github.com/securego/gosec) - Inspects code for security issues
+   1. [gosec](https://github.com/securego/gosec) - Inspects code for security issues
 
 ### Java
 

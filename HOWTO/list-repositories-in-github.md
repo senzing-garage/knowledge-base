@@ -8,12 +8,12 @@ Get a list of repositories for a GitHub account.
 
 1. :pencil2: Set environment variables. Example:
 
-    ```console
-    export GIT_ACCOUNT=senzing
-    ```
+   ```console
+   export GIT_ACCOUNT=senzing
+   ```
 
-1. Fetch repositories.  Example:
+1. Fetch repositories. Example:
 
-    ```console
-    curl -s https://api.github.com/orgs/${GIT_ACCOUNT}/repos?per_page=9999 | jq --raw-output '.[]|.full_name'
-    ```
+   ```console
+   curl -s https://api.github.com/orgs/${GIT_ACCOUNT}/repos?per_page=9999 | jq --raw-output '.[]|.full_name'
+   ```

@@ -3,7 +3,7 @@
 > Kanban is a lean method to manage and improve work across human systems.
 > This approach aims to manage work by balancing demands with available capacity,
 > and by improving the handling of system-level bottlenecks.
-> -- *[Wikipedia]*
+> -- _[Wikipedia]_
 
 The Senzing Community uses a
 [Kanban-style GitHub project board].

@@ -1,7 +1,7 @@
 # What is MSYS2
 
 > MSYS2 is a collection of tools and libraries providing you with an easy-to-use environment for building, installing and running native Windows software.
-> -- *[MSYS2 site]*
+> -- _[MSYS2 site]_
 
 ## Install
 

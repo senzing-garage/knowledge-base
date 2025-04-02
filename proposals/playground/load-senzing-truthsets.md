@@ -13,10 +13,10 @@ Senzing database inside the running Docker container.
 2. Start an interactive Python session.
    Example:
 
-    ```console
-    python3
+   ```console
+   python3
 
-    ```
+   ```
 
 ## Identify data sources
 
@@ -25,41 +25,41 @@ Senzing database inside the running Docker container.
    and press the **Enter** key.
    Example:
 
-    ```python
-    import grpc
-    from senzing_grpc import SzAbstractFactory, SzEngineFlags, SzError
-    from senzing_truthset import TRUTHSET_DATASOURCES
+   ```python
+   import grpc
+   from senzing_grpc import SzAbstractFactory, SzEngineFlags, SzError
+   from senzing_truthset import TRUTHSET_DATASOURCES
 
-    try:
-    # Create Senzing objects.
-        sz_abstract_factory = SzAbstractFactory(
-            grpc_channel=grpc.insecure_channel("localhost:8261")
-        )
-        sz_config = sz_abstract_factory.create_sz_config()
-        sz_configmanager = sz_abstract_factory.create_sz_configmanager()
-        sz_diagnostic = sz_abstract_factory.create_sz_diagnostic()
-        sz_engine = sz_abstract_factory.create_sz_engine()
-    # Get existing Senzing configuration.
-        old_config_id = sz_configmanager.get_default_config_id()
-        OLD_JSON_CONFIG = sz_configmanager.get_config(old_config_id)
-        config_handle = sz_config.import_config(OLD_JSON_CONFIG)
-    # Add DataSources to existing Senzing configuration.
-        for datasource in TRUTHSET_DATASOURCES.keys():
-            sz_config.add_data_source(config_handle, datasource)
-    # Persist new Senzing configuration.
-        NEW_JSON_CONFIG = sz_config.export_config(config_handle)
-        new_config_id = sz_configmanager.add_config(
-            NEW_JSON_CONFIG, "Add TruthSet datasources"
-        )
-        sz_configmanager.replace_default_config_id(old_config_id, new_config_id)
-    # Update other Senzing objects.
-        sz_abstract_factory.reinitialize(new_config_id)
-    except SzError as err:
-        print(f"\nError:\n{err}\n")
+   try:
+   # Create Senzing objects.
+       sz_abstract_factory = SzAbstractFactory(
+           grpc_channel=grpc.insecure_channel("localhost:8261")
+       )
+       sz_config = sz_abstract_factory.create_sz_config()
+       sz_configmanager = sz_abstract_factory.create_sz_configmanager()
+       sz_diagnostic = sz_abstract_factory.create_sz_diagnostic()
+       sz_engine = sz_abstract_factory.create_sz_engine()
+   # Get existing Senzing configuration.
+       old_config_id = sz_configmanager.get_default_config_id()
+       OLD_JSON_CONFIG = sz_configmanager.get_config(old_config_id)
+       config_handle = sz_config.import_config(OLD_JSON_CONFIG)
+   # Add DataSources to existing Senzing configuration.
+       for datasource in TRUTHSET_DATASOURCES.keys():
+           sz_config.add_data_source(config_handle, datasource)
+   # Persist new Senzing configuration.
+       NEW_JSON_CONFIG = sz_config.export_config(config_handle)
+       new_config_id = sz_configmanager.add_config(
+           NEW_JSON_CONFIG, "Add TruthSet datasources"
+       )
+       sz_configmanager.replace_default_config_id(old_config_id, new_config_id)
+   # Update other Senzing objects.
+       sz_abstract_factory.reinitialize(new_config_id)
+   except SzError as err:
+       print(f"\nError:\n{err}\n")
 
-    ```
+   ```
 
-    or download and run [senzing_truthset_add_datasources.py].
+   or download and run [senzing_truthset_add_datasources.py].
 
 ## Add records
 
@@ -67,38 +67,38 @@ Senzing database inside the running Docker container.
    copy/paste the following block of code into the interactive Python session
    and press the **Enter** key.
 
-    ```python
-    from senzing_truthset import (
-        TRUTHSET_CUSTOMER_RECORDS,
-        TRUTHSET_REFERENCE_RECORDS,
-        TRUTHSET_WATCHLIST_RECORDS,
-    )
+   ```python
+   from senzing_truthset import (
+       TRUTHSET_CUSTOMER_RECORDS,
+       TRUTHSET_REFERENCE_RECORDS,
+       TRUTHSET_WATCHLIST_RECORDS,
+   )
 
-    try:
-    # Identify records.
-        record_sets = [
-            TRUTHSET_CUSTOMER_RECORDS,
-            TRUTHSET_REFERENCE_RECORDS,
-            TRUTHSET_WATCHLIST_RECORDS,
-        ]
-    # Call Senzing to add record.
-        for record_set in record_sets:
-            for record in record_set.values():
-                info = sz_engine.add_record(
-                    record.get("DataSource"),
-                    record.get("Id"),
-                    record.get("Json"),
-                    SzEngineFlags.SZ_WITH_INFO,
-                )
-                print(info)
-    except SzError as err:
-        print(f"\nError:\n{err}\n")
+   try:
+   # Identify records.
+       record_sets = [
+           TRUTHSET_CUSTOMER_RECORDS,
+           TRUTHSET_REFERENCE_RECORDS,
+           TRUTHSET_WATCHLIST_RECORDS,
+       ]
+   # Call Senzing to add record.
+       for record_set in record_sets:
+           for record in record_set.values():
+               info = sz_engine.add_record(
+                   record.get("DataSource"),
+                   record.get("Id"),
+                   record.get("Json"),
+                   SzEngineFlags.SZ_WITH_INFO,
+               )
+               print(info)
+   except SzError as err:
+       print(f"\nError:\n{err}\n")
 
-    ```
+   ```
 
-    or download and run [senzing_truthset_add_records.py].
+   or download and run [senzing_truthset_add_records.py].
 
-    If running in the interactive Python session, wait until the `>>>` prompt appears before proceeding.
+   If running in the interactive Python session, wait until the `>>>` prompt appears before proceeding.
 
    Note that this is a simple example of adding records to Senzing and is not optimized for performance.
    For higher performance techniques, additional Python programming is needed.
@@ -110,55 +110,55 @@ Senzing database inside the running Docker container.
    Copy/paste the following block of code into the interactive Python session
    and press the **Enter** key.
 
-    ```python
-    import json
+   ```python
+   import json
 
-    try:
-        customer_1070_entity = sz_engine.get_entity_by_record_id("CUSTOMERS", "1070")
-        print(json.dumps(json.loads(customer_1070_entity), indent=2))
-    except SzError as err:
-        print(f"\nError:\n{err}\n")
+   try:
+       customer_1070_entity = sz_engine.get_entity_by_record_id("CUSTOMERS", "1070")
+       print(json.dumps(json.loads(customer_1070_entity), indent=2))
+   except SzError as err:
+       print(f"\nError:\n{err}\n")
 
-    ```
+   ```
 
-    or download and run [senzing_truthset_get_entity.py].
+   or download and run [senzing_truthset_get_entity.py].
 
 1. Entities can be searched.
    Copy/paste the following block of code into the interactive Python session
    and press the **Enter** key.
 
-    ```python
-    try:
-        search_query = {
-            "name_full": "robert smith",
-            "date_of_birth": "11/12/1978",
-        }
-        search_result = sz_engine.search_by_attributes(json.dumps(search_query))
-        print(json.dumps(json.loads(search_result), indent=2))
-    except SzError as err:
-        print(f"\nError:\n{err}\n")
+   ```python
+   try:
+       search_query = {
+           "name_full": "robert smith",
+           "date_of_birth": "11/12/1978",
+       }
+       search_result = sz_engine.search_by_attributes(json.dumps(search_query))
+       print(json.dumps(json.loads(search_result), indent=2))
+   except SzError as err:
+       print(f"\nError:\n{err}\n")
 
-    ```
+   ```
 
-    or download and run [senzing_truthset_search.py].
+   or download and run [senzing_truthset_search.py].
 
 1. To end the interactive Python session,
    copy/paste the following block of code into the interactive Python session
    and press the **Enter** key.
 
-    ```python
-    quit()
+   ```python
+   quit()
 
-    ```
+   ```
 
 ## Next steps
 
 8. [Senzing Python SDK demonstration]
-    1. [Senzing Hello World]
-    1. Load Senzing truth-sets
-    1. [Load user data]
-    1. [Show method help]
-    1. [Clean up]
+   1. [Senzing Hello World]
+   1. Load Senzing truth-sets
+   1. [Load user data]
+   1. [Show method help]
+   1. [Clean up]
 
 [Clean up]: cleanup.md
 [High performance loading with Python]: #

@@ -6,30 +6,30 @@
 
 These labels will be assigned and removed predominantly in the "**In progress**" Kanban column ("swimlane").
 
-| Category   | Labels                                                                                      |
-|------------|---------------------------------------------------------------------------------------------|
-| Problems   | ![blocked](blocked.png)                                                                     |
-| Pending    | ![waiting to merge](waiting-to-merge.png) ![waiting for customer](waiting-for-customer.png) |
-| Done       | ![fixed](fixed.png)                                                                         |
-| Inactive   | ![duplicate](duplicate.png) ![invalid](invalid.png) ![wontfix](wontfix.png)                 |
+| Category | Labels                                                                                      |
+| -------- | ------------------------------------------------------------------------------------------- |
+| Problems | ![blocked](blocked.png)                                                                     |
+| Pending  | ![waiting to merge](waiting-to-merge.png) ![waiting for customer](waiting-for-customer.png) |
+| Done     | ![fixed](fixed.png)                                                                         |
+| Inactive | ![duplicate](duplicate.png) ![invalid](invalid.png) ![wontfix](wontfix.png)                 |
 
 ### Non-process attributes
 
 These labels will be assigned predominantly in the "**Backlog**", "**On deck**", and "**In progress**" Kanban columns ("swimlanes").
 
-| Category   | Labels |
-|------------|--------|
-| Submitter  | ![customer-submission](customer-submission.png)             |
+| Category   | Labels                                                                                                                                              |
+| ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Submitter  | ![customer-submission](customer-submission.png)                                                                                                     |
 | Issue type | ![bug](bug.png) ![documentation](documentation.png) ![enhancement](enhancement.png) ![performance](performance.png) ![refactoring](refactoring.png) |
-| Info       | ![conversation](conversation.png) ![triage](triage.png) ![question](question.png) |
-| Group      | ![G2Tool](G2Tool.png) ![V3](V3.png) ![V4](V4.png)|
+| Info       | ![conversation](conversation.png) ![triage](triage.png) ![question](question.png)                                                                   |
+| Group      | ![G2Tool](G2Tool.png) ![V3](V3.png) ![V4](V4.png)                                                                                                   |
 
 ## Details
 
 Labels listed in alphabetical order.
 
 | Label text           |                                                                   | Color   | Description                                  |
-|----------------------|-------------------------------------------------------------------|---------|----------------------------------------------|
+| -------------------- | ----------------------------------------------------------------- | ------- | -------------------------------------------- |
 | blocked              | ![FF0000](https://via.placeholder.com/30x30/FF0000/FF0000?text=.) | #FF0000 | Cannot make progress                         |
 | bug                  | ![66FFFF](https://via.placeholder.com/30x30/66FFFF/66FFFF?text=.) | #66FFFF | Something isn't working                      |
 | conversation         | ![CCCCFF](https://via.placeholder.com/30x30/CCCCFF/CCCCFF?text=.) | #CCCCFF | In conversation on design or usage           |

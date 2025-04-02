@@ -5,22 +5,22 @@ This exercise introduces some of the major tooling used by the Senzing Community
 ## Contents
 
 1. [Introductory tools](#introductory-tools)
-    1. [GitHub](#github)
-    1. [Docker](#docker)
-    1. [Integrated Development Environments](#integrated-development-environments-ide)
-    1. [Python](#python)
-    1. [Go](#go)
-    1. [Markdown](#markdown)
-    1. [Tools for Thinking](#tools-for-thinking)
+   1. [GitHub](#github)
+   1. [Docker](#docker)
+   1. [Integrated Development Environments](#integrated-development-environments-ide)
+   1. [Python](#python)
+   1. [Go](#go)
+   1. [Markdown](#markdown)
+   1. [Tools for Thinking](#tools-for-thinking)
 1. [Intermediate tools](#intermediate-tools)
-    1. [docker-compose](#docker-compose)
-    1. [Portainer](#portainer)
+   1. [docker-compose](#docker-compose)
+   1. [Portainer](#portainer)
 1. [Advanced tools](#advanced-tools)
-    1. [AWS Cloudformation](#aws-cloudformation)
-    1. [Jupyter notebooks](#jupyter-notebooks)
-    1. [Kubernetes](#kubernetes)
-    1. [Packer](#packer)
-    1. [Terraform](#terraform)
+   1. [AWS Cloudformation](#aws-cloudformation)
+   1. [Jupyter notebooks](#jupyter-notebooks)
+   1. [Kubernetes](#kubernetes)
+   1. [Packer](#packer)
+   1. [Terraform](#terraform)
 
 ## Introductory tools
 
@@ -38,33 +38,33 @@ as well as deploy Senzing.
 
 1. If you want to try something on Debian, run:
 
-    ```console
-    docker run \
-      --interactive \
-      --rm \
-      --tty \
-      debian /bin/bash
-    ```
+   ```console
+   docker run \
+     --interactive \
+     --rm \
+     --tty \
+     debian /bin/bash
+   ```
 
 1. If you want to try something on Ubuntu, run:
 
-    ```console
-    docker run \
-      --interactive \
-      --rm \
-      --tty \
-      ubuntu /bin/bash
-    ```
+   ```console
+   docker run \
+     --interactive \
+     --rm \
+     --tty \
+     ubuntu /bin/bash
+   ```
 
 1. If you want to somethin on Centos, run:
 
-    ```console
-    docker run \
-      --interactive \
-      --rm \
-      --tty \
-      centos /bin/bash
-    ```
+   ```console
+   docker run \
+     --interactive \
+     --rm \
+     --tty \
+     centos /bin/bash
+   ```
 
 ### Integrated Development Environments (IDE)
 
@@ -93,7 +93,7 @@ is essential.
 #### Python standards
 
 1. [Python Enhancement Proposals (PEP)](https://www.python.org/dev/peps/)
-    1. [PEP-8 checker](http://pep8online.com/)
+   1. [PEP-8 checker](http://pep8online.com/)
 
 ### Go
 

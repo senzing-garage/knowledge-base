@@ -2,23 +2,23 @@
 
 > `grpcurl` is a command-line tool that lets you interact with gRPC servers.
 > It's basically curl for gRPC servers.
-> -- *[grpcurl on Github]*
+> -- _[grpcurl on Github]_
 
 ## Install
 
 1. Linux
 
-    ```console
-    wget https://github.com/fullstorydev/grpcurl/releases/download/v1.9.3/grpcurl_1.9.3_linux_amd64.deb
-    sudo apt-get install -y ./grpcurl_1.9.3_linux_amd64.deb
-    ```
+   ```console
+   wget https://github.com/fullstorydev/grpcurl/releases/download/v1.9.3/grpcurl_1.9.3_linux_amd64.deb
+   sudo apt-get install -y ./grpcurl_1.9.3_linux_amd64.deb
+   ```
 
-    Installation tests:
+   Installation tests:
 
-    ```console
-    grpcurl -version
-    which grpcurl
-    ```
+   ```console
+   grpcurl -version
+   which grpcurl
+   ```
 
 ## Usage
 

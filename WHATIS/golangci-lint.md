@@ -13,12 +13,12 @@ See [local installation instructions] for your specific use case.
 
 1. Test
 
-    ```console
-    golangci-lint --version
-    ```
+   ```console
+   golangci-lint --version
+   ```
 
 ## Running
 
-  ```console
-  golangci-lint run --config=.github/linters/.golangci.yml
-  ```
+```console
+golangci-lint run --config=.github/linters/.golangci.yml
+```

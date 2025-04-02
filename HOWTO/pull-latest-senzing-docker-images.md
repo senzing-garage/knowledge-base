@@ -5,11 +5,11 @@
 1. Build Senzing "helper" Docker images.
    Example:
 
-    ```console
-    docker build --tag senzing/mysql        https://github.com/senzing-garage/docker-mysql.git#main
-    docker build --tag senzing/mysql-init   https://github.com/senzing-garage/docker-mysql-init.git#main
+   ```console
+   docker build --tag senzing/mysql        https://github.com/senzing-garage/docker-mysql.git#main
+   docker build --tag senzing/mysql-init   https://github.com/senzing-garage/docker-mysql-init.git#main
 
-    ```
+   ```
 
 ## Identify docker images
 
@@ -19,22 +19,22 @@
    [docker-image-names.sh](../lists/docker-image-names.sh)
    Example:
 
-    ```console
-    export DOCKER_IMAGE_NAMES=(
-        "senzing/senzingapi-runtime:${SENZING_DOCKER_IMAGE_VERSION_SENZINGAPI_RUNTIME:-latest}"
-    )
+   ```console
+   export DOCKER_IMAGE_NAMES=(
+       "senzing/senzingapi-runtime:${SENZING_DOCKER_IMAGE_VERSION_SENZINGAPI_RUNTIME:-latest}"
+   )
 
-    ```
+   ```
 
 ## Pull images from DockerHub
 
 1. Add docker images to local docker repository.
    Example:
 
-    ```console
-    for DOCKER_IMAGE_NAME in ${DOCKER_IMAGE_NAMES[@]};\
-    do \
-        docker pull ${DOCKER_IMAGE_NAME}; \
-    done
+   ```console
+   for DOCKER_IMAGE_NAME in ${DOCKER_IMAGE_NAMES[@]};\
+   do \
+       docker pull ${DOCKER_IMAGE_NAME}; \
+   done
 
-    ```
+   ```

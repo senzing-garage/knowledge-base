@@ -313,34 +313,34 @@ packages.
 
 1. Download packages.
 
-    ```console
-    export SENZING_DEB_FILES=~/senzing-deb-files
-    mkdir ${SENZING_DEB_FILES}
-    sudo docker run \
-    --rm \
-    --volume ${SENZING_DEB_FILES}:/download \
-    senzing/aptdownloader-staging senzingapi-poc senzingapi-runtime senzingapi-setup senzingapi-tools
+   ```console
+   export SENZING_DEB_FILES=~/senzing-deb-files
+   mkdir ${SENZING_DEB_FILES}
+   sudo docker run \
+   --rm \
+   --volume ${SENZING_DEB_FILES}:/download \
+   senzing/aptdownloader-staging senzingapi-poc senzingapi-runtime senzingapi-setup senzingapi-tools
 
-    ```
+   ```
 
 1. Extract packages.
 
-    ```console
-    export SENZING_DEB_FILES_EXTRACTED=${SENZING_DEB_FILES}/extracted
-    mkdir ${SENZING_DEB_FILES_EXTRACTED}
-    dpkg-deb -R ${SENZING_DEB_FILES}/senzingapi-poc_*.deb ${SENZING_DEB_FILES_EXTRACTED}/poc
-    dpkg-deb -R ${SENZING_DEB_FILES}/senzingapi-runtime_*.deb ${SENZING_DEB_FILES_EXTRACTED}/runtime
-    dpkg-deb -R ${SENZING_DEB_FILES}/senzingapi-setup_*.deb ${SENZING_DEB_FILES_EXTRACTED}/setup
-    dpkg-deb -R ${SENZING_DEB_FILES}/senzingapi-tools_*.deb ${SENZING_DEB_FILES_EXTRACTED}/tools
+   ```console
+   export SENZING_DEB_FILES_EXTRACTED=${SENZING_DEB_FILES}/extracted
+   mkdir ${SENZING_DEB_FILES_EXTRACTED}
+   dpkg-deb -R ${SENZING_DEB_FILES}/senzingapi-poc_*.deb ${SENZING_DEB_FILES_EXTRACTED}/poc
+   dpkg-deb -R ${SENZING_DEB_FILES}/senzingapi-runtime_*.deb ${SENZING_DEB_FILES_EXTRACTED}/runtime
+   dpkg-deb -R ${SENZING_DEB_FILES}/senzingapi-setup_*.deb ${SENZING_DEB_FILES_EXTRACTED}/setup
+   dpkg-deb -R ${SENZING_DEB_FILES}/senzingapi-tools_*.deb ${SENZING_DEB_FILES_EXTRACTED}/tools
 
-    ```
+   ```
 
 1. Print contents of packages.
 
-    ```console
-    tree ${SENZING_DEB_FILES_EXTRACTED}/poc
-    tree ${SENZING_DEB_FILES_EXTRACTED}/runtime
-    tree ${SENZING_DEB_FILES_EXTRACTED}/setup
-    tree ${SENZING_DEB_FILES_EXTRACTED}/tools
+   ```console
+   tree ${SENZING_DEB_FILES_EXTRACTED}/poc
+   tree ${SENZING_DEB_FILES_EXTRACTED}/runtime
+   tree ${SENZING_DEB_FILES_EXTRACTED}/setup
+   tree ${SENZING_DEB_FILES_EXTRACTED}/tools
 
-    ```
+   ```

@@ -1,7 +1,7 @@
 # What is GitHub Flow
 
 > GitHub flow is a lightweight, branch-based workflow that supports teams and projects where deployments are made regularly.
-> -- *[GitHub Guides]*
+> -- _[GitHub Guides]_
 
 This is a light-weight flow versus the heavier [GitFlow](gitflow.md).
 

@@ -9,13 +9,13 @@
 > Containers are created from images that specify their precise contents.
 > Images are often created by combining and modifying standard
 > images downloaded from public repositories.
-> -- *[Wikipedia]*
+> -- _[Wikipedia]_
 
 ## Sites
 
 1. [Official Docker site]
-    1. [Documentation]
-    1. [What is a Container?]
+   1. [Documentation]
+   1. [What is a Container?]
 1. [github.com/docker]
 
 ## Install
@@ -35,23 +35,23 @@ There are a few methods to install `docker` on Ubuntu.
 1. Yum install Docker.
    Example:
 
-    ```console
-    sudo yum install docker
-    ```
+   ```console
+   sudo yum install docker
+   ```
 
 1. Start Docker.
    Example:
 
-    ```console
-    sudo systemctl start docker
-    ```
+   ```console
+   sudo systemctl start docker
+   ```
 
 1. **Optional:** Start Docker on reboot.
    Example:
 
-    ```console
-    sudo systemctl enable docker
-    ```
+   ```console
+   sudo systemctl enable docker
+   ```
 
 #### CentOS - Docker Community Edition
 
@@ -60,46 +60,46 @@ There are a few methods to install `docker` on Ubuntu.
 1. Uninstall old docker.
    Example:
 
-    ```console
-    sudo yum remove docker docker-common docker-selinux docker-engine
-    ```
+   ```console
+   sudo yum remove docker docker-common docker-selinux docker-engine
+   ```
 
 1. [CentOS]
 
-    ```console
-    sudo yum -y install yum-utils device-mapper-persistent-data lvm2
-    sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
-    sudo yum -y install docker-ce
-    ```
+   ```console
+   sudo yum -y install yum-utils device-mapper-persistent-data lvm2
+   sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+   sudo yum -y install docker-ce
+   ```
 
 1. Start Docker.
    Example:
 
-    ```console
-    sudo systemctl start docker
-    ```
+   ```console
+   sudo systemctl start docker
+   ```
 
 1. **Optional:** Start Docker on reboot.
    Example:
 
-    ```console
-    sudo systemctl enable docker
-    ```
+   ```console
+   sudo systemctl enable docker
+   ```
 
 1. Fix for unable to prepare context.
 
-    Error seen:
+   Error seen:
 
-    ```console
-    unable to prepare context: unable to 'git clone' to temporary context directory: error initializing submodules: usage: git submodule
-    ```
+   ```console
+   unable to prepare context: unable to 'git clone' to temporary context directory: error initializing submodules: usage: git submodule
+   ```
 
-    Fix:
+   Fix:
 
-    ```console
-    sudo yum install https://centos7.iuscommunity.org/ius-release.rpm
-    sudo yum swap git git2u
-    ```
+   ```console
+   sudo yum install https://centos7.iuscommunity.org/ius-release.rpm
+   sudo yum swap git git2u
+   ```
 
 ### Ubuntu
 
@@ -113,9 +113,9 @@ There a a few methods to install `docker` on Ubuntu.
 1. Apt install Docker.
    Example:
 
-    ```console
-    sudo apt install docker.io
-    ```
+   ```console
+   sudo apt install docker.io
+   ```
 
 1. Proceed to [Test](#test)
 
@@ -125,26 +125,26 @@ There a a few methods to install `docker` on Ubuntu.
 
 1. [Ubuntu]
 
-    ```console
-    sudo apt-get update
+   ```console
+   sudo apt-get update
 
-    sudo apt-get install \
-        apt-transport-https \
-        ca-certificates \
-        curl \
-        software-properties-common
+   sudo apt-get install \
+       apt-transport-https \
+       ca-certificates \
+       curl \
+       software-properties-common
 
-    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+   curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 
-    sudo add-apt-repository \
-       "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
-       $(lsb_release -cs) \
-       stable"
+   sudo add-apt-repository \
+      "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+      $(lsb_release -cs) \
+      stable"
 
-    sudo apt-get update
+   sudo apt-get update
 
-    sudo apt-get install docker-ce
-    ```
+   sudo apt-get install docker-ce
+   ```
 
 1. Proceed to [Test](#test)
 
@@ -153,34 +153,37 @@ There a a few methods to install `docker` on Ubuntu.
 1. Past version
    Example:
 
-    ```console
-    sudo apt-get update
-    sudo apt -y install apt-transport-https ca-certificates curl software-properties-common
-    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-    sudo apt-get update
-    sudo apt -y install docker.io
-    ```
+   ```console
+   sudo apt-get update
+   sudo apt -y install apt-transport-https ca-certificates curl software-properties-common
+   curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+   sudo apt-get update
+   sudo apt -y install docker.io
+   ```
 
 1. Proceed to [Test](#test)
 
 ### macOS
 
 1. [Install Docker Desktop for Mac]
-    1. Open Docker.dmg
-    1. Drag Docker to Applications
+
+   1. Open Docker.dmg
+   1. Drag Docker to Applications
 
 1. Go to "Applications" and double-click on "Docker"
-    1. Check the menu bar for the Docker icon
+
+   1. Check the menu bar for the Docker icon
 
 1. Test
-    1. Open Terminal
 
-    ```console
-    docker --version
-    docker-compose --version
-    docker-machine --version
-    docker run hello-world
-    ```
+   1. Open Terminal
+
+   ```console
+   docker --version
+   docker-compose --version
+   docker-machine --version
+   docker run hello-world
+   ```
 
 1. Proceed to [Test](#test)
 
@@ -188,17 +191,17 @@ There a a few methods to install `docker` on Ubuntu.
 
 1. **Caveat:** Requires Windows Pro.
 1. [Install Docker Desktop for Windows]
-    1. Run `Docker%20for%20%Windows%20Installer.exe`
+   1. Run `Docker%20for%20%Windows%20Installer.exe`
 1. Proceed to [Test](#test)
 
 ## Test
 
 1. Test
 
-    ```console
-    sudo docker --version
-    sudo docker run hello-world
-    ```
+   ```console
+   sudo docker --version
+   sudo docker run hello-world
+   ```
 
 ## Troubleshooting
 

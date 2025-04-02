@@ -14,10 +14,10 @@ The Senzing QuickStart using Python over gRPC requires the following prerequisit
 2. Run the Senzing QuickStart Docker container.
    Example:
 
-    ```console
-    docker run -it --name senzing-serve-grpc -p 8261:8261 --pull always --rm senzing/serve-grpc
+   ```console
+   docker run -it --name senzing-serve-grpc -p 8261:8261 --pull always --rm senzing/serve-grpc
 
-    ```
+   ```
 
 ## Next steps
 

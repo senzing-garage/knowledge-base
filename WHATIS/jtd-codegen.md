@@ -2,7 +2,7 @@
 
 > jtd-codegen is a CLI tool that generates code bindings
 > in many different programming languages from JSON Typedef schemas.
-> -- *[GitHub]*
+> -- _[GitHub]_
 
 ## Install
 

@@ -9,8 +9,8 @@ Refer to the [Documentation] for more details.
 ### Install via pip
 
 1. ```console
-    pip install black
-    ```
+   pip install black
+   ```
 
 - See additional details in the [Installation Documentation].
 

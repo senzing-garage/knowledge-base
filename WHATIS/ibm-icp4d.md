@@ -2,13 +2,13 @@
 
 > Simplify and automate how your organization turns data into insights within a unified — all in one — design.
 >
-> * Collect – virtualize to make data simple and accessible
-> * Organize – create a trusted, governed analytics foundation
-> * Analyze – scale insights on-demand with AI everywhere
-> * Infuse – operationalize AI with trust & transparency
+> - Collect – virtualize to make data simple and accessible
+> - Organize – create a trusted, governed analytics foundation
+> - Analyze – scale insights on-demand with AI everywhere
+> - Infuse – operationalize AI with trust & transparency
 >
 > Customize to your unique data landscape with an open and endlessly extensible architecture, on any cloud.
-> -- *[IBM site]*
+> -- _[IBM site]_
 
 ## Sites
 

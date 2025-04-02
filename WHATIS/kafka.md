@@ -3,12 +3,12 @@
 > Kafka® is used for building real-time data pipelines and streaming apps.
 > It is horizontally scalable, fault-tolerant, wicked fast,
 > and runs in production in thousands of companies.
-> -- *[Kafka site]*
+> -- _[Kafka site]_
 
 ## Sites
 
 1. [Kafka site]
-    1. [Documentation]
+   1. [Documentation]
 1. [github.com/apache/kafka]
 1. [Glossary and Best practices]
 

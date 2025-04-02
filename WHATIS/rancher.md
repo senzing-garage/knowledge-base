@@ -1,13 +1,13 @@
 # What is Rancher
 
 > Rancher is open-source software for delivering [Kubernetes](kubernetes.md)-as-a-Service.
-> -- *[Rancher site]*
+> -- _[Rancher site]_
 
 ## Sites
 
 1. [Rancher site]
-    1. [Overview]
-    1. [Documentation]
+   1. [Overview]
+   1. [Documentation]
 1. [github.com/rancher]
 
 ## Install
@@ -18,13 +18,13 @@ Instructions for installing: [Rancher site].
 1. Option #2 [Manual Quick Start]
 1. Simple example for Quick Start:
 
-    ```console
-    sudo docker run \
-      --volume /opt/rancher:/var/lib/rancher \
-      --publish 80:80 \
-      --publish 443:443 \
-      rancher/rancher:latest
-    ```
+   ```console
+   sudo docker run \
+     --volume /opt/rancher:/var/lib/rancher \
+     --publish 80:80 \
+     --publish 443:443 \
+     rancher/rancher:latest
+   ```
 
 ### CentOS
 

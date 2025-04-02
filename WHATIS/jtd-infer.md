@@ -1,7 +1,7 @@
 # What is jtd-infer
 
 > jtd-infer is a tool that generates ("infers") a JSON Typedef schema from example data.
-> -- *[GitHub](https://github.com/jsontypedef/json-typedef-infer)*
+> -- _[GitHub](https://github.com/jsontypedef/json-typedef-infer)_
 
 ## Install
 

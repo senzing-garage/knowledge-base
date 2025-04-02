@@ -9,8 +9,8 @@ Refer to the [Documentation] for more details.
 ### Install via pip
 
 1. ```console
-    pip install coverage
-    ```
+   pip install coverage
+   ```
 
 - See additional details in the [Installation Documentation].
 

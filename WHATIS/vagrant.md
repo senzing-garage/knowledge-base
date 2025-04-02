@@ -16,9 +16,9 @@
 
 1. Test
 
-    ```console
-    vagrant -v
-    ```
+   ```console
+   vagrant -v
+   ```
 
 ## Troubleshooting
 

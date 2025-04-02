@@ -18,42 +18,42 @@ that is on the internet to a machine that is not on the internet, (i.e. "air-gap
 
 1. Using [senzing/hello-world-on-hub-docker-com:latest](https://hub.docker.com/r/senzing/hello-world-on-hub-docker-com) as an example:
 
-    ```console
-    export DOCKER_ACCOUNT=senzing
-    export DOCKER_IMAGE=hello-world-on-hub-docker-com
-    export DOCKER_TAG=latest
-    ```
+   ```console
+   export DOCKER_ACCOUNT=senzing
+   export DOCKER_IMAGE=hello-world-on-hub-docker-com
+   export DOCKER_TAG=latest
+   ```
 
 ## Pull docker image to local repository
 
 1. On networked system:
 
-    ```console
-    docker pull ${DOCKER_ACCOUNT}/${DOCKER_IMAGE}:${DOCKER_TAG}
-    ```
+   ```console
+   docker pull ${DOCKER_ACCOUNT}/${DOCKER_IMAGE}:${DOCKER_TAG}
+   ```
 
-    Reference: [docker pull](https://docs.docker.com/engine/reference/commandline/pull/)
+   Reference: [docker pull](https://docs.docker.com/engine/reference/commandline/pull/)
 
 ## Package docker image
 
 1. Use `docker save` to package docker image. Example:
 
-    ```console
-    docker save ${DOCKER_ACCOUNT}/${DOCKER_IMAGE}:${DOCKER_TAG} \
-      --output ~/${DOCKER_ACCOUNT}-${DOCKER_IMAGE}-${DOCKER_TAG}.tar
-    ```
+   ```console
+   docker save ${DOCKER_ACCOUNT}/${DOCKER_IMAGE}:${DOCKER_TAG} \
+     --output ~/${DOCKER_ACCOUNT}-${DOCKER_IMAGE}-${DOCKER_TAG}.tar
+   ```
 
-    Reference: [docker save](https://docs.docker.com/engine/reference/commandline/save/)
+   Reference: [docker save](https://docs.docker.com/engine/reference/commandline/save/)
 
 ## Transfer tar file to air-gapped machine
 
 1. If `scp` or `sftp` connectivity is available, a network file transfer is possible. Example:
 
-    ```console
-    export TARGET_HOST=my.example.com
+   ```console
+   export TARGET_HOST=my.example.com
 
-    scp ~/${DOCKER_ACCOUNT}-${DOCKER_IMAGE}-${DOCKER_TAG}.tar ${TARGET_HOST}:
-    ```
+   scp ~/${DOCKER_ACCOUNT}-${DOCKER_IMAGE}-${DOCKER_TAG}.tar ${TARGET_HOST}:
+   ```
 
 1. If truly air-gapped, copy `tar` file to a portable storage medium to transfer to air-gapped machine.
 
@@ -62,51 +62,51 @@ that is on the internet to a machine that is not on the internet, (i.e. "air-gap
 1. On air-gapped machine, set environment variables.
    Using [senzing/hello-world-on-hub-docker-com:latest](https://hub.docker.com/r/senzing/hello-world-on-hub-docker-com) as an example:
 
-    ```console
-    export DOCKER_ACCOUNT=senzing
-    export DOCKER_IMAGE=hello-world-on-hub-docker-com
-    export DOCKER_TAG=latest
-    ```
+   ```console
+   export DOCKER_ACCOUNT=senzing
+   export DOCKER_IMAGE=hello-world-on-hub-docker-com
+   export DOCKER_TAG=latest
+   ```
 
 1. Unpackage `tar` file. Assuming `tar` file is in the ${HOME} directory, example:
 
-    ```console
-    docker load \
-      --input ~/${DOCKER_ACCOUNT}-${DOCKER_IMAGE}-${DOCKER_TAG}.tar
-    ```
+   ```console
+   docker load \
+     --input ~/${DOCKER_ACCOUNT}-${DOCKER_IMAGE}-${DOCKER_TAG}.tar
+   ```
 
-    Reference: [docker load](https://docs.docker.com/engine/reference/commandline/load/)
+   Reference: [docker load](https://docs.docker.com/engine/reference/commandline/load/)
 
 ## Push image to private registry
 
 1. Set environment variable. Example:
 
-    ```console
-    export DOCKER_REGISTRY_URL=my.docker-registry.com:5000
-    ```
+   ```console
+   export DOCKER_REGISTRY_URL=my.docker-registry.com:5000
+   ```
 
 1. Tag docker image for private docker registry.
 
-    ```console
-    sudo docker tag \
-      ${DOCKER_ACCOUNT}/${DOCKER_IMAGE}:${DOCKER_TAG} \
-      ${DOCKER_REGISTRY_URL}/${DOCKER_ACCOUNT}/${DOCKER_IMAGE}:${DOCKER_TAG}
-    ```
+   ```console
+   sudo docker tag \
+     ${DOCKER_ACCOUNT}/${DOCKER_IMAGE}:${DOCKER_TAG} \
+     ${DOCKER_REGISTRY_URL}/${DOCKER_ACCOUNT}/${DOCKER_IMAGE}:${DOCKER_TAG}
+   ```
 
-    Reference: [docker tag](https://docs.docker.com/engine/reference/commandline/tag/)
+   Reference: [docker tag](https://docs.docker.com/engine/reference/commandline/tag/)
 
 1. Push tagged image to private docker registry.
 
-    ```console
-    sudo docker push ${DOCKER_REGISTRY_URL}/${DOCKER_ACCOUNT}/${DOCKER_IMAGE}:${DOCKER_TAG}
-    ```
+   ```console
+   sudo docker push ${DOCKER_REGISTRY_URL}/${DOCKER_ACCOUNT}/${DOCKER_IMAGE}:${DOCKER_TAG}
+   ```
 
-    Reference: [docker push](https://docs.docker.com/engine/reference/commandline/push/)
+   Reference: [docker push](https://docs.docker.com/engine/reference/commandline/push/)
 
 1. Remove tag from local repository docker image.
 
-    ```console
-    sudo docker rmi ${DOCKER_REGISTRY_URL}/${DOCKER_ACCOUNT}/${DOCKER_IMAGE}:${DOCKER_TAG}
-    ```
+   ```console
+   sudo docker rmi ${DOCKER_REGISTRY_URL}/${DOCKER_ACCOUNT}/${DOCKER_IMAGE}:${DOCKER_TAG}
+   ```
 
-    Reference: [docker rmi](https://docs.docker.com/engine/reference/commandline/rmi/)
+   Reference: [docker rmi](https://docs.docker.com/engine/reference/commandline/rmi/)

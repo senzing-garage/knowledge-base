@@ -5,11 +5,11 @@
 1. Download `docker-compose.yaml` file and bring up docker compose stack.
    Example:
 
-    ```console
-    wget "https://raw.githubusercontent.com/Senzing/knowledge-base/main/presentations/one-breath-minimal-stack/docker-compose.yaml"
-    docker-compose up
+   ```console
+   wget "https://raw.githubusercontent.com/Senzing/knowledge-base/main/presentations/one-breath-minimal-stack/docker-compose.yaml"
+   docker-compose up
 
-    ```
+   ```
 
 ### Use
 

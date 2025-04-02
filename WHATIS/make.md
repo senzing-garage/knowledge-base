@@ -8,40 +8,41 @@ Instructions for installing [make].
 
 1. Install using **yum**
 
-    ```console
-    sudo yum install make
-    ```
+   ```console
+   sudo yum install make
+   ```
 
 ### Ubuntu
 
 1. Install using **apt**
 
-    ```console
-    sudo apt-get install build-essential
-    ```
+   ```console
+   sudo apt-get install build-essential
+   ```
 
 ### macOS
 
 ### Windows
 
 1. On Windows 10 or 11
-    1. Install binaries.
-       Example:
 
-        ```console
-        winget install GnuWin32.Make
-        ```
+   1. Install binaries.
+      Example:
 
-    1. Add `C:\Program Files (x86)\GnuWin32\bin` to `Path` system variable.
-       See [Add to the PATH on Windows 10 and Windows 11]
+      ```console
+      winget install GnuWin32.Make
+      ```
+
+   1. Add `C:\Program Files (x86)\GnuWin32\bin` to `Path` system variable.
+      See [Add to the PATH on Windows 10 and Windows 11]
 
 ## Test
 
 1. Test
 
-    ```console
-    make --version
-    ```
+   ```console
+   make --version
+   ```
 
 ## Troubleshooting
 
