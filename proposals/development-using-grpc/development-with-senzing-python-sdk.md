@@ -8,15 +8,15 @@ Senzing development with Senzing Python SDK requires the following prerequisites
 1. [Python 3]
 1. [senzing-grpc] Python package.
 
-    1. To install, run the following on the local workstation:
+   1. To install, run the following on the local workstation:
 
-        ```console
-        python3 -m pip install --upgrade senzing-grpc
+      ```console
+      python3 -m pip install --upgrade senzing-grpc
 
-        ```
+      ```
 
-       If a Python virtual environment is needed,
-       see [Installing senzing-grpc in a python virtual environment].
+      If a Python virtual environment is needed,
+      see [Installing senzing-grpc in a python virtual environment].
 
 ## Start developing
 

@@ -4,12 +4,12 @@
 > Helm helps you manage Kubernetes applications —
 > Helm Charts help you define, install, and upgrade
 > even the most complex Kubernetes application.
-> -- *[Helm]*
+> -- _[Helm]_
 
 ## Sites
 
 1. [Helm]
-    1. [Documentation]
+   1. [Documentation]
 1. [github.com/helm]
 
 ## Install
@@ -22,21 +22,21 @@ Instructions for installing [Helm].
 
 1. Example:
 
-    ```console
-    curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
-    chmod 700 get_helm.sh
-    ./get_helm.sh
-    ```
+   ```console
+   curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
+   chmod 700 get_helm.sh
+   ./get_helm.sh
+   ```
 
 ### Ubuntu
 
 1. Example:
 
-    ```console
-    curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
-    chmod 700 get_helm.sh
-    ./get_helm.sh
-    ```
+   ```console
+   curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
+   chmod 700 get_helm.sh
+   ./get_helm.sh
+   ```
 
 ### macOS
 

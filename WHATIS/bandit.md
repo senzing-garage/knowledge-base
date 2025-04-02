@@ -9,34 +9,34 @@ Refer to the [Bandit Documentation] for more details.
 ### Install via pip
 
 1. ```console
-    pip install bandit
-    ```
+   pip install bandit
+   ```
 
 - See additional details in the [Bandit Installation Documentation].
 
 ### Install via brew
 
 1. ```console
-    brew install bandit
-    ```
+   brew install bandit
+   ```
 
 - See additional details in the [Brew Documentation].
 
 ### Install via snap
 
 1. ```console
-    sudo apt update
-    sudo apt install snapd
-    sudo snap install bandit
-    ```
+   sudo apt update
+   sudo apt install snapd
+   sudo snap install bandit
+   ```
 
 - See additional details in the [Snap Documentation].
 
 ## Running Bandit against a source folder
 
 1. ```console
-    bandit -r ~/your_repos/project
-    ```
+   bandit -r ~/your_repos/project
+   ```
 
 - See [Bandit Usage Documentation] for more details.
 

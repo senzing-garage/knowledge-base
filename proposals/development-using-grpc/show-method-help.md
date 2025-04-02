@@ -12,10 +12,10 @@ helper functions are shown.
 2. Start an interactive Python session.
    Example:
 
-    ```console
-    python3
+   ```console
+   python3
 
-    ```
+   ```
 
 ## Show help
 
@@ -24,55 +24,55 @@ helper functions are shown.
    and press the **Enter** key.
    Example:
 
-    ```python
-    import grpc
-    from senzing_grpc import SzAbstractFactory, SzError
+   ```python
+   import grpc
+   from senzing_grpc import SzAbstractFactory, SzError
 
-    try:
-        sz_abstract_factory = SzAbstractFactory(
-            grpc_channel=grpc.insecure_channel("localhost:8261")
-        )
-        sz_engine = sz_abstract_factory.create_sz_engine()
-    except SzError as err:
-        print(f"\nError:\n{err}\n")
+   try:
+       sz_abstract_factory = SzAbstractFactory(
+           grpc_channel=grpc.insecure_channel("localhost:8261")
+       )
+       sz_engine = sz_abstract_factory.create_sz_engine()
+   except SzError as err:
+       print(f"\nError:\n{err}\n")
 
-    ```
+   ```
 
 1. To display methods of the Senzing object,
    copy/paste the following block code into the interactive Python session
    and press the **Enter** key.
 
-    ```python
-    print(sz_engine.help())
+   ```python
+   print(sz_engine.help())
 
-    ```
+   ```
 
 1. To display the details of a specific method,
    copy/paste the following block code into the interactive Python session
    and press the **Enter** key.
 
-    ```python
-    print(sz_engine.help("get_entity_by_record_id"))
+   ```python
+   print(sz_engine.help("get_entity_by_record_id"))
 
-    ```
+   ```
 
 1. To end the interactive Python session,
    copy/paste the following block of code into the interactive Python session
    and press the **Enter** key.
 
-    ```python
-    quit()
+   ```python
+   quit()
 
-    ```
+   ```
 
 ## Next steps
 
 7. [Development with Senzing Python SDK]
-    1. [Senzing Hello World]
-    1. [Load Senzing truth-sets]
-    1. [Load user data]
-    1. Show method help
-    1. [Clean up]
+   1. [Senzing Hello World]
+   1. [Load Senzing truth-sets]
+   1. [Load user data]
+   1. Show method help
+   1. [Clean up]
 
 [Clean up]: cleanup.md
 [Development with Senzing Python SDK]: development-with-senzing-python-sdk.md

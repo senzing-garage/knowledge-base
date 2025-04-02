@@ -9,18 +9,18 @@ Instructions for installing [Python3](https://www.python.org/) dependencies.
 1. :pencil2: Install single package.
    Example:
 
-    ```console
-    pip3 install <package-name>
-    ```
+   ```console
+   pip3 install <package-name>
+   ```
 
 ## Install packages from requirements file
 
 1. :pencil2: Install single package.
    Example:
 
-    ```console
-    pip3 install -r requirements.txt
-    ```
+   ```console
+   pip3 install -r requirements.txt
+   ```
 
 ## References
 

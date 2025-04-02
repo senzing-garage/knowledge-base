@@ -8,23 +8,23 @@ and
 [sshd](https://github.com/senzing-garage/docker-sshd).
 
 | Feature             | XTerm      | SSHD       | Notes                                  |
-|---------------------|------------|------------| ---------------------------------------|
+| ------------------- | ---------- | ---------- | -------------------------------------- |
 | Inbound CIDR        | Yes        | Yes        | Configured by cloudformation template. |
-| Authentication      | Yes        | Yes        | |
-| - Unique users      | Yes        | Yes        | |
-| - Unique passwords  | Yes        | Yes        | |
-| - Revoke users      | Yes        | Yes        | |
-| - MFA support       | Yes        | No         | Optional Cognito feature. |
-| - Auditing          | Yes        | No         | Optional Cognito feature. |
-| Network transport   | TLSv1.2    | SSH        | |
+| Authentication      | Yes        | Yes        |                                        |
+| - Unique users      | Yes        | Yes        |                                        |
+| - Unique passwords  | Yes        | Yes        |                                        |
+| - Revoke users      | Yes        | Yes        |                                        |
+| - MFA support       | Yes        | No         | Optional Cognito feature.              |
+| - Auditing          | Yes        | No         | Optional Cognito feature.              |
+| Network transport   | TLSv1.2    | SSH        |                                        |
 | Runs as             | 1001       | 0 - root   | Configured by cloudformation template. |
-| sudo command        | No         | Yes        | |
+| sudo command        | No         | Yes        |                                        |
 | /opt/senzing        | read-only  | read-write | Configured by cloudformation template. |
 | /etc/opt/senzing    | read-only  | read-write | Configured by cloudformation template. |
 | /var/opt/senzing    | read-write | read-write | Configured by cloudformation template. |
-| Individual sessions | No         | Yes        | |
-| scp                 | No         | Yes        | |
-| su                  | No         | Yes        | |
+| Individual sessions | No         | Yes        |                                        |
+| scp                 | No         | Yes        |                                        |
+| su                  | No         | Yes        |                                        |
 | adduser / useradd   | No         | Yes        | Root authority is needed to add users. |
 
 1. **Inbound CIDR:**

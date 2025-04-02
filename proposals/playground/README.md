@@ -14,10 +14,10 @@ The Senzing Playground requires the following prerequisites:
 2. Run the Senzing Playground Docker container.
    Example:
 
-    ```console
-    docker run -it --name senzing-playground -p 8260:8260 -p 8261:8261 --pull always --rm senzing/playground
+   ```console
+   docker run -it --name senzing-playground -p 8260:8260 -p 8261:8261 --pull always --rm senzing/playground
 
-    ```
+   ```
 
 ## Explore
 

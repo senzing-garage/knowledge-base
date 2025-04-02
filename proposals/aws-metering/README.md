@@ -17,23 +17,23 @@ Proposals:
 
 1. Every "period" (say 24 hours), an AWS lambda function
    performs the following:
-    1. The lambda function reports to AWS the number
-       of records in DSRC_RECORD.
-    1. The lambda requests a new unlimited license
-       with a lifespan of 2 periods
-       (e.g. 48 hours) and inserted into the database.
-       If the customer is current on payment,
-       the new license is created for the request.
-       If the customer is not current on payment,
-       no new license is returned to the request.
+   1. The lambda function reports to AWS the number
+      of records in DSRC_RECORD.
+   1. The lambda requests a new unlimited license
+      with a lifespan of 2 periods
+      (e.g. 48 hours) and inserted into the database.
+      If the customer is current on payment,
+      the new license is created for the request.
+      If the customer is not current on payment,
+      no new license is returned to the request.
 1. If the customer "kills" the lambda function,
    the license will expire in 2 periods.
    So it's in the customer's interest to keep the lambda function running.
 1. The trick will be the secure request from the lambda function
    to the "license generator".
 1. The license generator needs to receive the identity of the
-   customer.  It then checks with AWS to see if the customer is
-   "in good standing".   If the customer is in good standing,
+   customer. It then checks with AWS to see if the customer is
+   "in good standing". If the customer is in good standing,
    a new "2-period" unlimited license is returned to the request.
 
 ### Billing

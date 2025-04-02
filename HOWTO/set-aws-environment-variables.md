@@ -19,10 +19,10 @@ If using `AWS_SESSION_TOKEN`, a session will need to be created and environment 
 1. Get session information from AWS and place into `~/aws-sts-get-session-token.json` file.
    Example:
 
-    ```console
-    aws sts get-session-token \
-      > ~/aws-sts-get-session-token.json
-    ```
+   ```console
+   aws sts get-session-token \
+     > ~/aws-sts-get-session-token.json
+   ```
 
 ### Create AWS MFA session credentials
 
@@ -31,15 +31,15 @@ If using `AWS_SESSION_TOKEN`, a session will need to be created and environment 
    [AWS My security credentials](https://console.aws.amazon.com/iam/home?#/security_credentials)
    Example:
 
-    ```console
-    export AWS_MFA_SERIAL_NUMBER="arn:aws:iam::nnnnnnnnnnnn:mfa/xxxxxxxx"
-    ```
+   ```console
+   export AWS_MFA_SERIAL_NUMBER="arn:aws:iam::nnnnnnnnnnnn:mfa/xxxxxxxx"
+   ```
 
    If defined in `~/.aws/config`, run:
 
-    ```console
-    export AWS_MFA_SERIAL_NUMBER=$(aws configure get default.mfa_serial)
-    ```
+   ```console
+   export AWS_MFA_SERIAL_NUMBER=$(aws configure get default.mfa_serial)
+   ```
 
 1. :pencil2: Get MFA token from the device supplying the MFA token.
    It is usually a 6-digit number.
@@ -48,19 +48,19 @@ If using `AWS_SESSION_TOKEN`, a session will need to be created and environment 
    So the step performed after this step must be performed immediately afterwards to use a valid token value.
    Example:
 
-    ```console
-    export AWS_MFA_TOKEN_CODE=nnnnnn
-    ```
+   ```console
+   export AWS_MFA_TOKEN_CODE=nnnnnn
+   ```
 
 1. Get session information from AWS and place into `~/aws-sts-get-session-token.json` file.
    Example:
 
-    ```console
-    aws sts get-session-token \
-      --serial-number ${AWS_MFA_SERIAL_NUMBER} \
-      --token-code ${AWS_MFA_TOKEN_CODE} \
-      > ~/aws-sts-get-session-token.json
-    ```
+   ```console
+   aws sts get-session-token \
+     --serial-number ${AWS_MFA_SERIAL_NUMBER} \
+     --token-code ${AWS_MFA_TOKEN_CODE} \
+     > ~/aws-sts-get-session-token.json
+   ```
 
 ## AWS environment variables
 
@@ -69,54 +69,54 @@ If using `AWS_SESSION_TOKEN`, a session will need to be created and environment 
 1. Pull information from `~/.aws/credentials`
    Example:
 
-    ```console
-    export AWS_ACCESS_KEY_ID=$(aws configure get default.aws_access_key_id)
-    ```
+   ```console
+   export AWS_ACCESS_KEY_ID=$(aws configure get default.aws_access_key_id)
+   ```
 
 1. For a [session](#aws-session),
    pull information from `~/aws-sts-get-session-token.json`,
    a file created in the [AWS Session](#aws-session) section.
    Example:
 
-    ```console
-    export AWS_ACCESS_KEY_ID=$(jq --raw-output ".Credentials.AccessKeyId" ~/aws-sts-get-session-token.json)
-    ```
+   ```console
+   export AWS_ACCESS_KEY_ID=$(jq --raw-output ".Credentials.AccessKeyId" ~/aws-sts-get-session-token.json)
+   ```
 
 1. References:
-    1. [Usage](https://github.com/senzing-garage/knowledge-base/blob/main/lists/environment-variables.md#aws_access_key_id)
+   1. [Usage](https://github.com/senzing-garage/knowledge-base/blob/main/lists/environment-variables.md#aws_access_key_id)
 
 ### AWS_DEFAULT_REGION
 
 1. Pull information from `~/.aws/config`
    Example:
 
-    ```console
-    export AWS_DEFAULT_REGION=$(aws configure get default.region)
-    ```
+   ```console
+   export AWS_DEFAULT_REGION=$(aws configure get default.region)
+   ```
 
 1. References:
-    1. [Usage](https://github.com/senzing-garage/knowledge-base/blob/main/lists/environment-variables.md#aws_default_region)
+   1. [Usage](https://github.com/senzing-garage/knowledge-base/blob/main/lists/environment-variables.md#aws_default_region)
 
 ### AWS_SECRET_ACCESS_KEY
 
 1. Pull information from `~/.aws/credentials`
    Example:
 
-    ```console
-    export AWS_SECRET_ACCESS_KEY=$(aws configure get default.aws_secret_access_key)
-    ```
+   ```console
+   export AWS_SECRET_ACCESS_KEY=$(aws configure get default.aws_secret_access_key)
+   ```
 
 1. For a [session](#aws-session),
    pull information from `~/aws-sts-get-session-token.json`,
    a file created in the [AWS Session](#aws-session) section.
    Example:
 
-    ```console
-    export AWS_SECRET_ACCESS_KEY=$(jq --raw-output ".Credentials.SecretAccessKey" ~/aws-sts-get-session-token.json)
-    ```
+   ```console
+   export AWS_SECRET_ACCESS_KEY=$(jq --raw-output ".Credentials.SecretAccessKey" ~/aws-sts-get-session-token.json)
+   ```
 
 1. References:
-    1. [Usage](https://github.com/senzing-garage/knowledge-base/blob/main/lists/environment-variables.md#aws_secret_access_key)
+   1. [Usage](https://github.com/senzing-garage/knowledge-base/blob/main/lists/environment-variables.md#aws_secret_access_key)
 
 ### AWS_SESSION_TOKEN
 
@@ -125,12 +125,12 @@ If using `AWS_SESSION_TOKEN`, a session will need to be created and environment 
    a file created in the [AWS Session](#aws-session) section.
    Example:
 
-    ```console
-    export AWS_SESSION_TOKEN=$(jq --raw-output ".Credentials.SessionToken" ~/aws-sts-get-session-token.json)
-    ```
+   ```console
+   export AWS_SESSION_TOKEN=$(jq --raw-output ".Credentials.SessionToken" ~/aws-sts-get-session-token.json)
+   ```
 
 1. References:
-    1. [Usage](https://github.com/senzing-garage/knowledge-base/blob/main/lists/environment-variables.md#aws_session_token)
+   1. [Usage](https://github.com/senzing-garage/knowledge-base/blob/main/lists/environment-variables.md#aws_session_token)
 
 ## Non-AWS environment variables
 
@@ -139,17 +139,17 @@ If using `AWS_SESSION_TOKEN`, a session will need to be created and environment 
 1. Pull information from `~/.aws/config`
    Example:
 
-    ```console
-    export AWS_MFA_SERIAL_NUMBER=$(aws configure get default.mfa_serial)
-    ```
+   ```console
+   export AWS_MFA_SERIAL_NUMBER=$(aws configure get default.mfa_serial)
+   ```
 
 ### AWS_MFA_TOKEN_CODE
 
 1. :pencil2: Get MFA token from the device supplying the MFA token.
-   **Note:** This token is short lived;  perhaps only one minute duration.
+   **Note:** This token is short lived; perhaps only one minute duration.
    So the step performed after this step must be performed immediately afterwards to use a valid token value.
    Example:
 
-    ```console
-    export AWS_MFA_TOKEN_CODE=nnnnnn
-    ```
+   ```console
+   export AWS_MFA_TOKEN_CODE=nnnnnn
+   ```

@@ -8,8 +8,8 @@
 1. senzing/senzingsdk-tools
 1. senzing/serve-grpc
 1. senzing/web-app-demo Requires:
-    1. senzing/senzing-poc-server
-    1. senzing/entity-search-web-app
+   1. senzing/senzing-poc-server
+   1. senzing/entity-search-web-app
 
 ## Used in AWS formations (potentially active in V4)
 

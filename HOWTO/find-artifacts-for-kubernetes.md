@@ -19,9 +19,9 @@
 ## Lists of versions
 
 1. Stable:
-    1. [GitHub repositories and corresponding Docker images](https://github.com/senzing-garage/knowledge-base/blob/main/lists/docker-versions-stable.sh)
-    1. [Helm charts](https://github.com/senzing-garage/knowledge-base/blob/main/lists/helm-versions-stable.sh)
+   1. [GitHub repositories and corresponding Docker images](https://github.com/senzing-garage/knowledge-base/blob/main/lists/docker-versions-stable.sh)
+   1. [Helm charts](https://github.com/senzing-garage/knowledge-base/blob/main/lists/helm-versions-stable.sh)
 1. Latest:
-    1. [SenzingAPI](https://github.com/senzing-garage/knowledge-base/blob/main/lists/senzing-versions-latest.sh)
-    1. [GitHub repositories and corresponding Docker images](https://github.com/senzing-garage/knowledge-base/blob/main/lists/docker-versions-latest.sh)
-    1. [Helm charts](https://github.com/senzing-garage/knowledge-base/blob/main/lists/helm-versions-latest.sh)
+   1. [SenzingAPI](https://github.com/senzing-garage/knowledge-base/blob/main/lists/senzing-versions-latest.sh)
+   1. [GitHub repositories and corresponding Docker images](https://github.com/senzing-garage/knowledge-base/blob/main/lists/docker-versions-latest.sh)
+   1. [Helm charts](https://github.com/senzing-garage/knowledge-base/blob/main/lists/helm-versions-latest.sh)

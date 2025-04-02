@@ -2,12 +2,12 @@
 
 > Compose is a tool for defining and running multi-container
 > [Docker](docker.md) applications.
-> -- *[Docker Compose]*
+> -- _[Docker Compose]_
 
 ## Sites
 
 1. [Docker Compose]
-    1. [Overview]
+   1. [Overview]
 1. [github.com/docker/compose]
 
 ## Install
@@ -19,11 +19,11 @@
 ### Ubuntu
 
 1. [Install Docker Compose]
-1. Using `pip`.  Example:
+1. Using `pip`. Example:
 
-    ```console
-    sudo pip install docker-compose
-    ```
+   ```console
+   sudo pip install docker-compose
+   ```
 
 ### macOS
 
@@ -37,9 +37,9 @@
 
 1. Test
 
-    ```console
-    sudo docker-compose --version
-    ```
+   ```console
+   sudo docker-compose --version
+   ```
 
 ## Troubleshooting
 

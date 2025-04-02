@@ -1,7 +1,7 @@
 # HOWTO - Install Senzing Packages via Yum
 
 These instructions are only intended as a cheatsheet for developers.
-There are alternate ways to do many of these actions that may or may not be documented 
+There are alternate ways to do many of these actions that may or may not be documented
 
 ## Installing the repo package
 
@@ -20,6 +20,7 @@ sudo yum install https://senzing-staging-yum.s3.amazonaws.com/senzingstagingrepo
 ### Validating the repo package install
 
 1. Use yum to verify the repo package is installed
+
 ```console
 sudo yum list installed | grep senzing
 ```
@@ -56,12 +57,13 @@ sudo yum list installed | grep senzing
 sudo yum install <SENZING_PACKAGE>
 ```
 
-Example: 
+Example:
+
 ```console
 sudo yum install senzingapi-runtime
 ```
 
-### Installing a specific Senzing package version 
+### Installing a specific Senzing package version
 
 #### Installing a specific MAJOR.MINOR.PATCH version
 
@@ -71,7 +73,7 @@ sudo yum install <SENZING_PACKAGE>-<MAJOR>.<MINOR>.<PATCH>*
 
 NOTE: This will install the latest version of a particular `MAJOR`.`MINOR`.`PATCH` version.
 Yum will use the latest build version
-Example: 
+Example:
 If there are two senzingapi-runtime versions available:
 
 ```console
@@ -92,6 +94,7 @@ sudo yum install <SENZING_PACKAGE>-<MAJOR>.<MINOR>.<PATCH>-<BUILD_NUMBER>
 ```
 
 Example:
+
 ```console
 sudo yum install senzingapi-runtime-3.9.0-24068
 ```
@@ -102,7 +105,8 @@ sudo yum install senzingapi-runtime-3.9.0-24068
 sudo yum deplist <SENZING_PACKAGE>
 ```
 
-Example: 
+Example:
+
 ```console
 sudo yum deplist senzingapi-runtime
 ```
@@ -114,6 +118,7 @@ sudo yum remove <SENZING_PACKAGE>
 ```
 
 Example:
+
 ```console
 sudo yum remove senzingapi-runtime
 ```

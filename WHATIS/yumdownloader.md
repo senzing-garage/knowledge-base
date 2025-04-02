@@ -1,7 +1,7 @@
 # What is YumDownloader
 
 > **yumdownloader** is a program for downloading RPMs from Yum repositories.
-> -- *[Linux man page]*
+> -- _[Linux man page]_
 
 ## Sites
 

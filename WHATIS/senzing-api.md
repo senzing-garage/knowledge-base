@@ -4,7 +4,7 @@
 > who want to integrate Smarter Entity Resolution:tm: capabilities
 > into existing systems,
 > or build their own customized applications using Senzing’s proven Entity Resolution technology.
-> -- *[Senzing site]*
+> -- _[Senzing site]_
 
 ## Sites
 

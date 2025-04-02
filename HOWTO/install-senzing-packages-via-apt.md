@@ -43,6 +43,7 @@ sudo apt list -a <SENZING_PACKAGE>
 ```
 
 Example:
+
 ```console
 sudo apt list -a senzingapi-runtime
 ```
@@ -62,11 +63,12 @@ sudo apt install <SENZING_PACKAGE>
 ```
 
 Example:
+
 ```console
 sudo apt install senzingapi-runtime
 ```
 
-### Installing a specific Senzing package version 
+### Installing a specific Senzing package version
 
 #### Installing a specific MAJOR.MINOR.PATCH version
 
@@ -76,7 +78,7 @@ sudo apt install <SENZING_PACKAGE>=<MAJOR>.<MINOR>.<PATCH>*
 
 NOTE: This will install the latest version of a particular `MAJOR`.`MINOR`.`PATCH` version.
 Apt will use the latest build version
-Example: 
+Example:
 If there are two senzingapi-runtime versions available:
 
 ```console
@@ -97,6 +99,7 @@ sudo apt install <SENZING_PACKAGE>=<MAJOR>.<MINOR>.<PATCH>-<BUILD_NUMBER>
 ```
 
 Example:
+
 ```console
 sudo apt install senzingapi-runtime=3.9.0-24068
 ```
@@ -104,11 +107,11 @@ sudo apt install senzingapi-runtime=3.9.0-24068
 ### Restricting Install versions via Apt preferences
 
 1. Create a preferences file for the respective package.
-   ``` console
+   ```console
    touch /etc/apt/preferences.d/<SENZING_PACKAGE>
    ```
    Example:
-   ``` console
+   ```console
    touch /etc/apt/preferences.d/senzingapi-runtime
    ```
 1. Update the file to indicate which versions should be pinned.
@@ -131,6 +134,7 @@ sudo apt install senzingapi-runtime=3.9.0-24068
 
    Example: restrict `senzingapi-runtime` to major version 3.
    This will prevent apt from installing any major version greater than 3.
+
    ```console
    Package: senzingapi-runtime
    Pin: version 3.*
@@ -145,7 +149,8 @@ See [Ubuntu documentation] or [Stack Exchange] for more details.
 sudo apt show <SENZING_PACKAGE>
 ```
 
-Example: 
+Example:
+
 ```console
 sudo apt show senzingapi-runtime
 ```
@@ -157,6 +162,7 @@ sudo apt remove <SENZING_PACKAGE>
 ```
 
 Example:
+
 ```console
 sudo apt remove senzingapi-runtime
 ```

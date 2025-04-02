@@ -12,39 +12,39 @@ See the official [Installing Sphinx] page.
 
 1. A tip from [StackOverflow]:
 
-    ```console
-    brew install sphinx-doc
-    brew link sphinx-doc --force
-    ```
+   ```console
+   brew install sphinx-doc
+   brew link sphinx-doc --force
+   ```
 
 ### Install via pip
 
 1. ```console
-    pip install sphinx
-    ```
+   pip install sphinx
+   ```
 
 - See additional details in the [Installation Documentation].
 
 1. Additional tools
 
-    ```console
-    python3 -m pip install \
-        sphinx \
-        sphinx-autodoc-typehints \
-        sphinx-gallery \
-        sphinx-jinja2-compat \
-        sphinx-prompt \
-        sphinx-rtd-theme \
-        sphinx-tabs \
-        sphinx-toolbox \
-        sphinxcontrib-applehelp \
-        sphinxcontrib-devhelp \
-        sphinxcontrib-htmlhelp \
-        sphinxcontrib-jquery \
-        sphinxcontrib-jsmath \
-        sphinxcontrib-qthelp \
-        sphinxcontrib-serializinghtml
-    ```
+   ```console
+   python3 -m pip install \
+       sphinx \
+       sphinx-autodoc-typehints \
+       sphinx-gallery \
+       sphinx-jinja2-compat \
+       sphinx-prompt \
+       sphinx-rtd-theme \
+       sphinx-tabs \
+       sphinx-toolbox \
+       sphinxcontrib-applehelp \
+       sphinxcontrib-devhelp \
+       sphinxcontrib-htmlhelp \
+       sphinxcontrib-jquery \
+       sphinxcontrib-jsmath \
+       sphinxcontrib-qthelp \
+       sphinxcontrib-serializinghtml
+   ```
 
 [Documentation]: https://www.sphinx-doc.org
 [Installation Documentation]: https://www.sphinx-doc.org/en/master/usage/installation.html

@@ -1,6 +1,5 @@
 # What is cattle versus pets
 
-
 ## Sites
 
 1. [The History of Pets vs Cattle and How to Use the Analogy Properly]

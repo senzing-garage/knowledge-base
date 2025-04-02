@@ -1,7 +1,7 @@
 # What is bicep
 
 > Bicep is a declarative language for describing and deploying Azure resources.
-> -- *[Microsoft Bicep site]*
+> -- _[Microsoft Bicep site]_
 
 ## Install
 

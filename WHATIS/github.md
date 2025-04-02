@@ -1,7 +1,7 @@
 # What is GitHub
 
 > GitHub, Inc. is a provider of Internet hosting for software development and version control using Git.
-> -- *[Wikipedia]*
+> -- _[Wikipedia]_
 
 Note that `git` is a program for managing local repositories and interacting with remote repositories.
 "GitHub" is a remote repository with additional features.

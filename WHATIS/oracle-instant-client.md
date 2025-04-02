@@ -1,7 +1,7 @@
 # What is Oracle Instant client
 
 > Free, light-weight, and easily installed Oracle Database tools, libraries and SDKs.
-> -- *[Oracle Instant Client site]*
+> -- _[Oracle Instant Client site]_
 
 ## Downloads
 
@@ -16,44 +16,44 @@ The following is based on [Installing ODPI-C].
 1. Download file.
    Example:
 
-    ```console
-    curl -X GET \
-        --output /tmp/instantclient-basic-linux.zip \
-        https://download.oracle.com/otn_software/linux/instantclient/2350000/instantclient-basic-linux.x64-23.5.0.24.07.zip
+   ```console
+   curl -X GET \
+       --output /tmp/instantclient-basic-linux.zip \
+       https://download.oracle.com/otn_software/linux/instantclient/2350000/instantclient-basic-linux.x64-23.5.0.24.07.zip
 
-    ```
+   ```
 
 1. Make directories.
    Example:
 
-    ```console
-    sudo mkdir -p /opt/oracle
+   ```console
+   sudo mkdir -p /opt/oracle
 
-    ```
+   ```
 
 1. Extract Zip file.
    Example:
 
-    ```console
-    sudo unzip -d /opt/oracle /tmp/instantclient-basic-linux.zip
+   ```console
+   sudo unzip -d /opt/oracle /tmp/instantclient-basic-linux.zip
 
-    ```
+   ```
 
 1. Make sure `libaio1` is installed.
    Example:
 
-    ```console
-    sudo apt-get install libaio1
+   ```console
+   sudo apt-get install libaio1
 
-    ```
+   ```
 
 1. :thinking: Update `LD_LIBRARY_PATH` to include the Oracle shared objects.
    Example:
 
-    ```console
-    export LD_LIBRARY_PATH=/opt/oracle/instantclient_21_5:$LD_LIBRARY_PATH
+   ```console
+   export LD_LIBRARY_PATH=/opt/oracle/instantclient_21_5:$LD_LIBRARY_PATH
 
-    ```
+   ```
 
 ## References
 

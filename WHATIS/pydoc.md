@@ -7,7 +7,7 @@ Refer to the [Documentation] for more details.
 ## Running
 
 1. ```console
-    python3 -m pydoc <python-package>
-    ```
+   python3 -m pydoc <python-package>
+   ```
 
 [Documentation]: https://docs.python.org/3/library/pydoc.html

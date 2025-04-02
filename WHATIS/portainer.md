@@ -2,30 +2,30 @@
 
 > Making Docker Management Easy.
 > Build and manage your Docker environments with ease today.
-> -- *[Portainer site]*
+> -- _[Portainer site]_
 
 ## Examples
 
 1. Launch Portainer locally.
    Example:
 
-    ```console
-    sudo docker run \
-       --detach \
-       --name portainer \
-       --publish 9170:9000 \
-       --restart always \
-       --volume /var/run/docker.sock:/var/run/docker.sock \
-       --volume /opt/portainer:/data \
-       portainer/portainer
-    ```
+   ```console
+   sudo docker run \
+      --detach \
+      --name portainer \
+      --publish 9170:9000 \
+      --restart always \
+      --volume /var/run/docker.sock:/var/run/docker.sock \
+      --volume /opt/portainer:/data \
+      portainer/portainer
+   ```
 
 1. Windows.
    Example:
 
-    ```console
-    docker run --name portainer --publish 9170:9000 --volume //var/run/docker.sock:/var/run/docker.sock --volume C:\tmp\portainer-data:/data  portainer/portainer
-    ```
+   ```console
+   docker run --name portainer --publish 9170:9000 --volume //var/run/docker.sock:/var/run/docker.sock --volume C:\tmp\portainer-data:/data  portainer/portainer
+   ```
 
    Reference: [StackOverflow]
 
@@ -34,7 +34,7 @@
 ## Sites
 
 1. [Portainer site]
-    1. [Overview]
+   1. [Overview]
 1. [Demo] (username: admin and password: tryportainer)
 1. [Documentation]
 1. [Ports used in Demonstrations](../lists/ports-used-in-demonstrations.md)

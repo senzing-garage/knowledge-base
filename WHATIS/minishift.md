@@ -5,7 +5,7 @@
 Instructions for installing [minishift].
 
 1. [github.com/minishift/minishift]
-    1. [Releases]
+   1. [Releases]
 
 ### CentOS
 
@@ -13,22 +13,23 @@ Instructions for installing [minishift].
 
 1. [Preparing to Install Minishift]
 1. [Ubuntu]
-    1. Visit [minishift releases]
-    1. Download `minishift-MM.mm.pp-linux-amd64.tgz`
-    1. Uncompress `minishift-MM.mm.pp-linux-amd64.tgz`
-    1. Make file executable.
-       Example:
 
-        ```console
-        chmod +x minishift
-        ```
+   1. Visit [minishift releases]
+   1. Download `minishift-MM.mm.pp-linux-amd64.tgz`
+   1. Uncompress `minishift-MM.mm.pp-linux-amd64.tgz`
+   1. Make file executable.
+      Example:
 
-    1. Move file to `/usr/local/bin`.
-       Example:
+      ```console
+      chmod +x minishift
+      ```
 
-        ```console
-        sudo mv minishift /usr/local/bin/
-       ```
+   1. Move file to `/usr/local/bin`.
+      Example:
+
+      ```console
+      sudo mv minishift /usr/local/bin/
+      ```
 
 ### macOS
 
@@ -42,9 +43,9 @@ Instructions for installing [minishift].
 
 1. Start the cluster
 
-    ```console
-    minishift start
-    ```
+   ```console
+   minishift start
+   ```
 
 ## References
 

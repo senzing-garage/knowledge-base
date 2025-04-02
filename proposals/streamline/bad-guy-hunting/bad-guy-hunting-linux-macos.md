@@ -17,9 +17,9 @@
    [G2C.db](https://raw.githubusercontent.com/senzing-garage/knowledge-base/main/proposals/streamline/bad-guy-hunting/G2C.db) file,
    copy/modify/paste the following into the terminal window:
 
-    ```console
-    export SENZING_MY_DEMO_10="/tmp/my-demo-10"
-    ```
+   ```console
+   export SENZING_MY_DEMO_10="/tmp/my-demo-10"
+   ```
 
 1. Run a Senzing gRPC service using Docker.
    Notice that the `--volume` must point to the directory of the database files you wish to use.
@@ -28,17 +28,17 @@
 
    Copy/paste the following into the terminal window:
 
-    ```console
-    docker run \
-        --name senzing-my-demo-10 \
-        --publish 8260:8260 \
-        --publish 8261:8261 \
-        --pull always \
-        --rm \
-        --volume ${SENZING_MY_DEMO_10}:/tmp/sqlite \
-        senzing/demo-quickstart
+   ```console
+   docker run \
+       --name senzing-my-demo-10 \
+       --publish 8260:8260 \
+       --publish 8261:8261 \
+       --pull always \
+       --rm \
+       --volume ${SENZING_MY_DEMO_10}:/tmp/sqlite \
+       senzing/demo-quickstart
 
-    ```
+   ```
 
 ## Start bad-guy hunting
 

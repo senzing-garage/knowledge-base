@@ -35,4 +35,3 @@ On the tasks tab click the task id link, left hand column.
 On the task page, the public IP can be found in the network section
 
 ![Find task id](find-aws-sshd-public-ip/publicIP.png "Find task id")
-

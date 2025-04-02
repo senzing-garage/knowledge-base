@@ -7,10 +7,10 @@ This Python demonstration of Senzing works on Linux, macOS, and Windows.
 1. Python 3
 1. `senzing-grpc` - To install, run
 
-    ```console
-    python3 -m pip install --upgrade senzing-abstract senzing-grpc
+   ```console
+   python3 -m pip install --upgrade senzing-abstract senzing-grpc
 
-    ```
+   ```
 
 1. Docker - To install, see
    [Linux](https://docs.docker.com/desktop/install/linux-install/),
@@ -19,11 +19,11 @@ This Python demonstration of Senzing works on Linux, macOS, and Windows.
 1. Make sure Docker is running.
 1. **Optional:** To pre-load docker images, run
 
-    ```console
-    docker pull senzing/senzing-tools
-    docker pull senzing/demo-quickstart
+   ```console
+   docker pull senzing/senzing-tools
+   docker pull senzing/demo-quickstart
 
-    ```
+   ```
 
 ## Try Senzing's Hello World
 
@@ -33,43 +33,43 @@ and access it with Python.
 5. Run a Senzing gRPC service using Docker.
    Example:
 
-    ```console
-    docker run --name senzing-streamline -p 8260:8260 -p 8261:8261 --pull always --rm senzing/demo-quickstart
+   ```console
+   docker run --name senzing-streamline -p 8260:8260 -p 8261:8261 --pull always --rm senzing/demo-quickstart
 
-    ```
+   ```
 
 1. In a separate window, start an interactive Python session.
    Example:
 
-    ```console
-    python3
+   ```console
+   python3
 
-    ```
+   ```
 
 1. For a quick test of calling Senzing's `g2_product.version()`,
    copy/paste the following block of code into the interactive Python session
    and press the **Enter** key.
    Example:
 
-    ```python
-    import grpc
-    from senzing_grpc import G2ProductGrpc
-    g2_product = G2ProductGrpc(grpc_channel=grpc.insecure_channel("localhost:8261"))
-    print(g2_product.version())
+   ```python
+   import grpc
+   from senzing_grpc import G2ProductGrpc
+   g2_product = G2ProductGrpc(grpc_channel=grpc.insecure_channel("localhost:8261"))
+   print(g2_product.version())
 
-    ```
+   ```
 
-    or download and run
-    [senzing_hello_world.py](https://raw.githubusercontent.com/senzing-garage/knowledge-base/main/proposals/streamline/senzing_hello_world.py).
+   or download and run
+   [senzing_hello_world.py](https://raw.githubusercontent.com/senzing-garage/knowledge-base/main/proposals/streamline/senzing_hello_world.py).
 
 1. To end the interactive Python session,
    copy/paste the following block of code into the interactive Python session
    and press the **Enter** key.
 
-    ```python
-    quit()
+   ```python
+   quit()
 
-    ```
+   ```
 
 1. To end the Senzing gRPC service,
    use `ctrl-c` to stop the `docker run ...` program.
@@ -77,14 +77,14 @@ and access it with Python.
 ## Next steps
 
 - Linux / macOs
-    1. Try Senzing's Hello World
-    1. [Use Senzing's Truth Set data - Linux/macOS](use-senzings-truth-set-data-linux-macos.md)
-    1. [Map and load your own data - Linux/macOS](map-and-load-your-own-data-linux-macos.md)
-    1. [Experience Entity Resolution Record-by-Record - Linux/macOS](experience-entity-resolution-record-by-record-linux-macos.md)
-    1. [Bad-Guy Hunting](bad-guy-hunting/bad-guy-hunting-linux-macos.md)
+  1. Try Senzing's Hello World
+  1. [Use Senzing's Truth Set data - Linux/macOS](use-senzings-truth-set-data-linux-macos.md)
+  1. [Map and load your own data - Linux/macOS](map-and-load-your-own-data-linux-macos.md)
+  1. [Experience Entity Resolution Record-by-Record - Linux/macOS](experience-entity-resolution-record-by-record-linux-macos.md)
+  1. [Bad-Guy Hunting](bad-guy-hunting/bad-guy-hunting-linux-macos.md)
 - Windows
-    1. Try Senzing's Hello World
-    1. [Use Senzing's Truth Set data - Windows](use-senzings-truth-set-data-windows.md)
-    1. [Map and load your own data - Windows](map-and-load-your-own-data-windows.md)
-    1. [Experience Entity Resolution Record-by-Record - Windows](experience-entity-resolution-record-by-record-windows.md)
-    1. [Bad-Guy Hunting](bad-guy-hunting/bad-guy-hunting-windows.md)
+  1. Try Senzing's Hello World
+  1. [Use Senzing's Truth Set data - Windows](use-senzings-truth-set-data-windows.md)
+  1. [Map and load your own data - Windows](map-and-load-your-own-data-windows.md)
+  1. [Experience Entity Resolution Record-by-Record - Windows](experience-entity-resolution-record-by-record-windows.md)
+  1. [Bad-Guy Hunting](bad-guy-hunting/bad-guy-hunting-windows.md)

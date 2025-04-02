@@ -1,10 +1,8 @@
-
 # Comparison of Community / Forum technology
 
+### The question: are we looking for public support or community engagement?
 
-### The question:  are we looking for public support or community engagement?
 I think we're looking for something like the [Apple support community](https://discussions.apple.com)
-
 
 |                                                | Zendesk Gather           | Github discussions       | Stackoverflow                      | Discourse          |
 | ---------------------------------------------- | ------------------------ | ------------------------ | ---------------------------------- | ------------------ |
@@ -15,7 +13,6 @@ I think we're looking for something like the [Apple support community](https://d
 | Email privacy                                  | same as zendesk          | same as github           | :heavy_check_mark:                 | :heavy_check_mark: |
 | Tools to manage content/ posts                 | :heavy_check_mark:       | :heavy_check_mark:       | :x:                                | :heavy_check_mark: |
 | Managed by Senzing staff                       | :heavy_check_mark:       | :heavy_check_mark:       | :x:                                | :heavy_check_mark: |
-
 
 ## Zendesk Gather, community forums
 
@@ -40,16 +37,16 @@ We already use [Zendesk Guide](https://support.zendesk.com/hc/en-us/articles/204
 
 Private stackoverflow? with [Stackoverflow teams](https://meta.stackexchange.com/questions/16054/is-stack-exchange-stack-overflow-available-for-private-or-internal-use)
 
-- Stackoverflow teams.  It is private, but itegrates with regular stack overflow
-- New [Stackexchange](https://area51.stackexchange.com)?   probably not.
+- Stackoverflow teams. It is private, but itegrates with regular stack overflow
+- New [Stackexchange](https://area51.stackexchange.com)? probably not.
 
 ## Discourse
 
-- Admin quickstart:  https://github.com/discourse/discourse/blob/master/docs/ADMIN-QUICK-START-GUIDE.md
+- Admin quickstart: https://github.com/discourse/discourse/blob/master/docs/ADMIN-QUICK-START-GUIDE.md
 - Admin guide: https://meta.discourse.org/c/howto/admins/53
 - Moderator guide: https://meta.discourse.org/t/discourse-moderation-guide/63116
 - discourse --> zendesk: https://meta.discourse.org/t/how-to-enable-zendesk-two-way-sync/177412
-- 3rd party admin guide:  https://edgeryders.eu/t/discourse-admin-manual/6647
+- 3rd party admin guide: https://edgeryders.eu/t/discourse-admin-manual/6647
 
 - open source, hosted or on prem
 - email privacy is a user setting
@@ -58,7 +55,6 @@ Private stackoverflow? with [Stackoverflow teams](https://meta.stackexchange.com
 ## Sub-Reddit?
 
 Back to the question are we looking for public support or community engagement?
-
 
 # If we're looking to build a community, Learn from those who do it all the time:
 

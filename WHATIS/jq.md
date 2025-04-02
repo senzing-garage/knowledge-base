@@ -8,10 +8,10 @@ Instructions for installing [jq].
 
 1. Install using **yum**
 
-    ```console
-    sudo yum install epel-release
-    sudo yum install jq
-    ```
+   ```console
+   sudo yum install epel-release
+   sudo yum install jq
+   ```
 
 ### Ubuntu
 
@@ -23,9 +23,9 @@ Instructions for installing [jq].
 
 1. Test
 
-    ```console
-    jq --version
-    ```
+   ```console
+   jq --version
+   ```
 
 ## Troubleshooting
 

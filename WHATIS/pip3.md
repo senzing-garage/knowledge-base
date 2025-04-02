@@ -11,16 +11,16 @@ Instructions for installing [Packer].
 1. Update list of packages.
    Example:
 
-    ```console
-    sudo apt update
-    ```
+   ```console
+   sudo apt update
+   ```
 
 1. Install system package.
    Example:
 
-    ```console
-    sudo apt install python3-pip
-    ```
+   ```console
+   sudo apt install python3-pip
+   ```
 
 ### macOS
 
@@ -30,9 +30,9 @@ Instructions for installing [Packer].
 
 1. Test
 
-    ```console
-    pip3 --version
-    ```
+   ```console
+   pip3 --version
+   ```
 
 ## Troubleshooting
 

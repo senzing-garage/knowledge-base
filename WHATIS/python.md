@@ -1,7 +1,7 @@
 # What is Python
 
 > Python is a programming language that lets you work quickly and integrate systems more effectively.
-> -- *[Python homepage]*
+> -- _[Python homepage]_
 
 Or a little more in the
 [What is Python? Executive Summary]
@@ -10,7 +10,7 @@ Or a little more in the
 
 1. [Python homepage]
 1. [Python Enhancement Proposals (PEP)]
-    1. Coding standards: [PEP-8]
+   1. Coding standards: [PEP-8]
 1. [PEP-8 checker]
 
 ## Install
@@ -26,16 +26,16 @@ Instructions for installing [Python3].
 1. Install `HomeBrew`.
    Example:
 
-    ```console
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-    ```
+   ```console
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+   ```
 
 1. Install `python3` using `brew`.
    Example:
 
-    ```console
-    brew install python3
-    ```
+   ```console
+   brew install python3
+   ```
 
 ### Windows
 
@@ -43,9 +43,9 @@ Instructions for installing [Python3].
 
 1. Test
 
-    ```console
-    python3 --version
-    ```
+   ```console
+   python3 --version
+   ```
 
 ## Troubleshooting
 

@@ -25,9 +25,9 @@ For detailed installation, see [Kubernetes documentation].
    [az aks install-cli]
    Example:
 
-    ```console
-    az aks install-cli
-    ```
+   ```console
+   az aks install-cli
+   ```
 
 ## Test
 

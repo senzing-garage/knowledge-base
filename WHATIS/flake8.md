@@ -5,7 +5,7 @@
 > - PyFlakes
 > - pycodestyle
 > - Ned Batchelder's McCabe script
-> Flake8 runs all the tools by launching the single flake8 command. It displays the warnings in a per-file, merged output.
+>   Flake8 runs all the tools by launching the single flake8 command. It displays the warnings in a per-file, merged output.
 
 Refer to the [Documentation] for more details.
 
@@ -14,8 +14,8 @@ Refer to the [Documentation] for more details.
 ### Install via pip
 
 1. ```console
-    pip install flake8
-    ```
+   pip install flake8
+   ```
 
 - See additional details in the [Installation Documentation].
 

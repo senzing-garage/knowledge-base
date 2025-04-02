@@ -5,12 +5,12 @@
 > Custom components and widgets build on the Web Component standards
 > will work across modern browsers and can be used with any
 > JavaScript library or framework that works with HTML.
-> -- *[Webcomponents site]*
+> -- _[Webcomponents site]_
 
 ## Sites
 
 1. [Official site]
-    1. [Webcomponents site]
+   1. [Webcomponents site]
 1. [github.com/webcomponents]
 1. [Web Components | MDN]
 1. [Building Components | Web Fundamentals | Google Developers]

@@ -13,27 +13,27 @@
 
 1. **Why?**
    The issue is the basis of all provenance.
-   It identifies *why* code is being changed and
+   It identifies _why_ code is being changed and
    ties together branches, pull requests, and merges.
 1. Input:
-    1. **Title:** Concise description of the issue.
-    1. **Write:** Detailed description of the issue.
-    1. **Assignees:** Individual(s) responsible for completing the issue.
-       Can remain unassigned in the "Backlog" and "On deck".
-       Needs to be assigned when "In Progress".
-    1. **Labels:** Used to identify issue as a member of 0 or more groups
-       "Triage" will be added automatically and can be removed if no triage is needed.
-    1. **Projects:** Used to track progress of issue in a team Kanban project board.
+   1. **Title:** Concise description of the issue.
+   1. **Write:** Detailed description of the issue.
+   1. **Assignees:** Individual(s) responsible for completing the issue.
+      Can remain unassigned in the "Backlog" and "On deck".
+      Needs to be assigned when "In Progress".
+   1. **Labels:** Used to identify issue as a member of 0 or more groups
+      "Triage" will be added automatically and can be removed if no triage is needed.
+   1. **Projects:** Used to track progress of issue in a team Kanban project board.
 1. Examples:
-    1. In <https://github.com/senzing-garage/stream-loader/issues/231>
-        1. "mentions" - See other related issues and whether they are open or closed
-        1. "commits" - by clicking on an abbreviated "commit SHA", the change is shown.
-        1. "build status" - by clicking on the "x" or "check", you can see the checks that were performed
-        1. , "labels", "github-actions", "merges", "comments"
+   1. In <https://github.com/senzing-garage/stream-loader/issues/231>
+      1. "mentions" - See other related issues and whether they are open or closed
+      1. "commits" - by clicking on an abbreviated "commit SHA", the change is shown.
+      1. "build status" - by clicking on the "x" or "check", you can see the checks that were performed
+      1. , "labels", "github-actions", "merges", "comments"
 
 ### Create a branch
 
-1. Branch name format:  `issue-000`.`[your-name]`.`[anything-you-want]`
+1. Branch name format: `issue-000`.`[your-name]`.`[anything-you-want]`
 1. **Why a branch?**
    The main branch is protected.
    The assumption is that the main branch always deployable
@@ -42,18 +42,19 @@
    is to have an approved Pull Request merged in.
 1. **Why a branch name format?**
    This is about "provenance":
-    1. What is the work for? ("issue-000")
-    1. Who owns the branch?  ("dockter")
-   *Example branch name:*  `issue-50.dockter.1`
+   1. What is the work for? ("issue-000")
+   1. Who owns the branch? ("dockter")
+      _Example branch name:_ `issue-50.dockter.1`
 
 ### Commit to branch
 
 1. Commit frequently.
    Unless a better commit message is appropriate, commit messages like these can be used:
-    1. "#00 Savepoint"
-    1. "#00 WIP"  - for Work-in-Progress
-   Later these commits will be "squashed" together.
-   **Why?**  It prevents disaster, allows better undoing, and let's others know of your progress.
+
+   1. "#00 Savepoint"
+   1. "#00 WIP" - for Work-in-Progress
+      Later these commits will be "squashed" together.
+      **Why?** It prevents disaster, allows better undoing, and let's others know of your progress.
 
 1. Comments start with `<issue-number>`
 
@@ -79,13 +80,13 @@
 
 1. As a closing comment, add
 
-    ```text
-    Pull requests:
+   ```text
+   Pull requests:
 
-    1. https://github.com/senzing-garage/xxx/pull/50
-    1. https://github.com/senzing-garage/xxx/pull/51
-    1. https://github.com/senzing-garage/xxx/pull/52
-    ```
+   1. https://github.com/senzing-garage/xxx/pull/50
+   1. https://github.com/senzing-garage/xxx/pull/51
+   1. https://github.com/senzing-garage/xxx/pull/52
+   ```
 
    **Why?**
    This adds a "mention" into the pull request.
@@ -115,4 +116,4 @@
 - git submodules
 - GitHub Flow (then GitFlow)
 - Branch naming conventions (issue-nn.owner.anything)
-- Common stack, many representations:  docker-compose, AWS Cloudformation, Helm
+- Common stack, many representations: docker-compose, AWS Cloudformation, Helm

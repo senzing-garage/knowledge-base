@@ -1,7 +1,7 @@
 # Senzing Python SDK demonstration
 
-> **Hint:**  If the `senzing-demo-quickstart` docker container has been use in a prior demonstration,
-  restart the docker container for best results.
+> **Hint:** If the `senzing-demo-quickstart` docker container has been use in a prior demonstration,
+> restart the docker container for best results.
 
 Try Senzing's Python Software Development Kit (SDK) demonstrations natively on a Linux, macOS, or Windows system:
 

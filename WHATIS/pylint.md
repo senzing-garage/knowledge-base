@@ -2,8 +2,8 @@
 
 > Pylint is a static code analyser for Python 2 or 3.
 > Pylint analyses your code without actually running it.
->It checks for errors, enforces a coding standard, looks for code smells, and can make suggestions about how the code could be refactored.
-> -- *[pylint on pypi.org]*
+> It checks for errors, enforces a coding standard, looks for code smells, and can make suggestions about how the code could be refactored.
+> -- _[pylint on pypi.org]_
 
 ## Install
 
@@ -14,16 +14,16 @@
 1. :pencil2: Identify the file to be inspected.
    Example:
 
-    ```console
-    export SENZING_PYTHON=redoer.py
-    ```
+   ```console
+   export SENZING_PYTHON=redoer.py
+   ```
 
 1. List all type of errors seen in the file.
    Example:
 
-    ```console
-    pylint --msg-template="{symbol}" ${SENZING_PYTHON} | sort | uniq
-    ```
+   ```console
+   pylint --msg-template="{symbol}" ${SENZING_PYTHON} | sort | uniq
+   ```
 
 ## Uses
 

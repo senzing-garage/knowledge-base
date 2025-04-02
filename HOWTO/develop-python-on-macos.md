@@ -16,9 +16,9 @@ but test the running of the scripts in a Linux Docker container.
 1. Identify SENZING_DIR.
    Example:
 
-    ```console
-    export SENZING_DIR=/opt/senzing
-    ```
+   ```console
+   export SENZING_DIR=/opt/senzing
+   ```
 
 ### Identify the python scripts directory
 
@@ -26,55 +26,55 @@ but test the running of the scripts in a Linux Docker container.
    This can be a new or existing directory.
    Example:
 
-    ```console
-    export MY_DATA_DIR=~/example-senzing-python-project
-    ```
+   ```console
+   export MY_DATA_DIR=~/example-senzing-python-project
+   ```
 
 1. If the directory doesn't exist, create the directory.
    Example:
 
-    ```console
-    mkdir -p ${MY_DATA_DIR}
-    ```
+   ```console
+   mkdir -p ${MY_DATA_DIR}
+   ```
 
 ### Example python script
 
 1. Optional. For testing purposes, a test python script can be created.
    Example:
 
-    ```console
-    cat <<EOT > ${MY_DATA_DIR}/example-python.py
-    #!/usr/bin/env python
+   ```console
+   cat <<EOT > ${MY_DATA_DIR}/example-python.py
+   #!/usr/bin/env python
 
-    import os
-    import json
-    import sys
+   import os
+   import json
+   import sys
 
-    debug = False
+   debug = False
 
-    # Establish directories and paths
+   # Establish directories and paths
 
-    senzing_directory = os.environ.get("SENZING_DIR", "/opt/senzing")
-    senzing_python_directory = "{0}/g2/python".format(senzing_directory)
-    g2module_ini_pathname = "{0}/G2Module.ini".format(senzing_python_directory)
+   senzing_directory = os.environ.get("SENZING_DIR", "/opt/senzing")
+   senzing_python_directory = "{0}/g2/python".format(senzing_directory)
+   g2module_ini_pathname = "{0}/G2Module.ini".format(senzing_python_directory)
 
-    # Add python directory to System Path
+   # Add python directory to System Path
 
-    sys.path.append(senzing_python_directory)
+   sys.path.append(senzing_python_directory)
 
-    # Initialize Senzing G2 modules.
+   # Initialize Senzing G2 modules.
 
-    from G2Product import G2Product
-    g2_product = G2Product()
-    g2_product.init('pyG2Product', g2module_ini_pathname, debug)
+   from G2Product import G2Product
+   g2_product = G2Product()
+   g2_product.init('pyG2Product', g2module_ini_pathname, debug)
 
-    # Print Senzing version.
+   # Print Senzing version.
 
-    version_string = g2_product.version()
-    version_dictionary = json.loads(version_string)
-    print(json.dumps(version_dictionary, sort_keys=True, indent=4))
-    EOT
-    ```
+   version_string = g2_product.version()
+   version_dictionary = json.loads(version_string)
+   print(json.dumps(version_dictionary, sort_keys=True, indent=4))
+   EOT
+   ```
 
 ### Run Docker container
 
@@ -101,18 +101,18 @@ but test the running of the scripts in a Linux Docker container.
    It can be run inside the container.
    Example:
 
-    ```console
-    # cd /data
+   ```console
+   # cd /data
 
-    # python example-python.py
-    {
-        "BUILD_DATE": "2019-06-04",
-        "BUILD_NUMBER": "2019_06_04__02_00",
-        "COMPATIBILITY_VERSION": {
-            "CONFIG_VERSION": "2"
-        },
-        "VERSION": "1.9.19155"
-    ```
+   # python example-python.py
+   {
+       "BUILD_DATE": "2019-06-04",
+       "BUILD_NUMBER": "2019_06_04__02_00",
+       "COMPATIBILITY_VERSION": {
+           "CONFIG_VERSION": "2"
+       },
+       "VERSION": "1.9.19155"
+   ```
 
 ### Modify python code
 
@@ -126,15 +126,15 @@ but test the running of the scripts in a Linux Docker container.
 1. If additional `apt-get` or `pip` installs are needed,
    create a new Dockerfile using the following `FROM` statement.
 
-    ```Dockerfile
-    FROM senzing/senzing-base
-    ```
+   ```Dockerfile
+   FROM senzing/senzing-base
+   ```
 
-    or a more recent style:
+   or a more recent style:
 
-    ```Dockerfile
-    ARG BASE_IMAGE=senzing/senzing-base
-    FROM ${BASE_IMAGE}
-    ```
+   ```Dockerfile
+   ARG BASE_IMAGE=senzing/senzing-base
+   FROM ${BASE_IMAGE}
+   ```
 
-1. An example of this can be found in [senzing/docker-senzing-poc-utility](https://github.com/senzing-garage/docker-senzing-poc-utility).  View the `Dockerfile`.
+1. An example of this can be found in [senzing/docker-senzing-poc-utility](https://github.com/senzing-garage/docker-senzing-poc-utility). View the `Dockerfile`.

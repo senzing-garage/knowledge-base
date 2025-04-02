@@ -1,7 +1,7 @@
 # What is Visual Studio Code
 
 > Code editing. Redefined.
-> -- *[VS Code site]*
+> -- _[VS Code site]_
 
 ## Hints and tips
 
@@ -15,8 +15,8 @@
 
 1. [VSCode-go GitHub repository]
 1. [VSCode-Go Wiki]
-    1. [Features]
-    1. [Commands]
+   1. [Features]
+   1. [Commands]
 
 ## Python
 
@@ -28,7 +28,7 @@
 
 1. [Product page]
 1. Videos
-    1. [NetworkChuck - you NEED to use VS Code RIGHT NOW!!]
+   1. [NetworkChuck - you NEED to use VS Code RIGHT NOW!!]
 
 [Commands]: https://github.com/golang/vscode-go/wiki/commands
 [Features]: https://github.com/golang/vscode-go/wiki/features

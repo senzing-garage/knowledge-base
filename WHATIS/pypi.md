@@ -2,7 +2,7 @@
 
 > Find, install and publish Python packages with the Python Package Index.
 > The Python Package Index (PyPI) is a repository of software for the Python programming language.
-> -- *[PyPI official site]*
+> -- _[PyPI official site]_
 
 ## Test PyPI
 

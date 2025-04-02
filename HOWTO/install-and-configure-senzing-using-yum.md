@@ -12,14 +12,14 @@ This process requires the following files:
 
 1. Run:
 
-    ```console
-    sudo xargs yum -y install < ${GIT_REPOSITORY_DIR}/src/yum-packages.txt
-    ```
+   ```console
+   sudo xargs yum -y install < ${GIT_REPOSITORY_DIR}/src/yum-packages.txt
+   ```
 
 ## PIP installs
 
 1. Run:
 
-    ```console
-    sudo pip3 install -r ${GIT_REPOSITORY_DIR}/requirements.txt
-    ```
+   ```console
+   sudo pip3 install -r ${GIT_REPOSITORY_DIR}/requirements.txt
+   ```

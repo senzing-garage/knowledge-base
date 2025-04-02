@@ -9,8 +9,8 @@ Refer to the [Documentation] for more details.
 ### Install via pip
 
 1. ```console
-    pip install mypy
-    ```
+   pip install mypy
+   ```
 
 - See additional details in the [Installation Documentation].
 

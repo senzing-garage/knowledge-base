@@ -13,13 +13,13 @@ Instructions for installing [Java].
 ### Windows
 
 1. Visit [Java Downloads for All Operating Systems]
-    1. Choose "Windows Offline (64-bit)"
-    1. Download `jre-XXXXX-windows-x64.exe`
+   1. Choose "Windows Offline (64-bit)"
+   1. Download `jre-XXXXX-windows-x64.exe`
 1. Run
 
-    ```console
-    jre-XXXXX-windows-x64.exe
-    ```
+   ```console
+   jre-XXXXX-windows-x64.exe
+   ```
 
 #### Windows alternatives
 

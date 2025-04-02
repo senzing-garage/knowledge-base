@@ -2,7 +2,7 @@
 
 > It’s a plain text format for writing structured documents,
 > based on formatting conventions from email and usenet.
-> -- *[commonmark.org]*
+> -- _[commonmark.org]_
 
 ## Sites
 

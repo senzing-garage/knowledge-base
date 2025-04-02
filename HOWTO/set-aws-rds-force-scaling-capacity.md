@@ -38,10 +38,10 @@ Example:
    ![Before](set-aws-rds-force-scaling-capacity/before.png)
 1. In the upper-right, click the "Modify" button.
 1. In "Modify DB cluster: [cluster-name]", "Capacity settings", expand "Additional scaling configuration".
-    1. Check ":ballot_box_with_check: Force scaling the capacity to the specified values when the timeout is reached"
-    1. At bottom-right, click "Continue" button.
+   1. Check ":ballot_box_with_check: Force scaling the capacity to the specified values when the timeout is reached"
+   1. At bottom-right, click "Continue" button.
 1. Review "Summary of modifications" and "Scheduling of modifications".
-    1. Make any changes necessary.
-    1. In bottom-right, click "Modify cluster" button.
+   1. Make any changes necessary.
+   1. In bottom-right, click "Modify cluster" button.
 1. When successful, the configuration will look like this:
    ![After](set-aws-rds-force-scaling-capacity/after.png)
