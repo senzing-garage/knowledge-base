@@ -1,19 +1,34 @@
-# How to verify container
+# How to verify a container signature
 
-## Container Signature Verification
+Senzing container image signatures are automatically verified after signing.
+See the [sign image composite action] for more details.
 
-Container image integrity has become increasingly important as images are being deployed into zero-trust environments. The image integrity is achieved by container signatures. They provide developers with cryptographic assurance that the images they are pulling in are from a trusted source.
+## Verifying images outside of github actions
 
-To verify Senzing's dockerhub images, first copy the hash of the docker image pulled.
-![dockerhub hash](verify-container/dockerhub_hash.png)
+See the [cosign verification documentation] for more details.
+You will not need a key as we are using the GitHub OIDC token to sign images.
+See [Keyless verification using OpenID Connect] for more details.
 
-Then verify the hash using cosign.
+1. [Install cosign]
+1. Update values encased in `<>` in the following
+   ```console
+   cosign verify --certificate-oidc-issuer=https://token.actions.githubusercontent.com \
+        --certificate-identity=https://github.com/<REPOSITORY_WORKFLOW_PATH>:@refs/tags/<image TAG> \
+        <image URI>:<image TAG>
+   ```
+   Ex.
+   ```console
+   cosign verify --certificate-oidc-issuer=https://token.actions.githubusercontent.com \
+        --certificate-identity=https://github.com/senzing-garage/test-ground/.github/workflows/docker-push-containers-to-dockerhub-and-ecr.yaml@refs/tags/0.0.19 \
+        docker.io/senzing/test-ground:0.0.19
+   ```
+   HINT: For all community repositories the workflow file should be one of the values listed below.
+   You can find the workflow in `.github/workflows` in the respective github repository for the image.
+   - docker-push-containers-to-dockerhub.yaml
+   - docker-push-containers-to-dockerhub-and-ecr.yaml
+1. Signature payloads created by cosign included the digest of the container image they are attached to.
+   By default, cosign validates that this digest matches the container during cosign verify
 
-```console
-COSIGN_EXPERIMENTAL=1 cosign verify senzing/web-app-demo@sha256:<insert sha256 hash>
-```
-
-This is what a successful verification looks like.
-![cosign verify](verify-container/cosign_verify.png)
-
-To learn more about cosign and how to install, go [here](https://github.com/sigstore/cosign).
+[Keyless verification using OpenID Connect]: https://docs.sigstore.dev/cosign/verifying/verify/#keyless-verification-using-openid-connect
+[Install cosign]: /WHATIS/cosign.md#Install
+[sign image composite action]: https://github.com/senzing-factory/github-action-docker-buildx-build/blob/main/signing/action.yaml

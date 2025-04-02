@@ -2,7 +2,7 @@
 
 ## Clone a Repository
 
-To check-out a repository that you will be committing code to, it is best to clone it.  A repository can be cloned into the current directory with the following command.
+To check-out a repository that you will be committing code to, it is best to clone it. A repository can be cloned into the current directory with the following command.
 
 ```console
 git clone git@github.com:Senzing/knowledge-base.git
@@ -36,7 +36,7 @@ git diff
 
 ## Commit the Pending Changelist
 
-Note:  You want to make sure your repository is synced to github before commiting your changelist to avoid a merge
+Note: You want to make sure your repository is synced to github before commiting your changelist to avoid a merge
 
 ```console
 git commit
@@ -136,7 +136,7 @@ then delete it on github
 git push origin --delete <branch_name>
 ```
 
-# Help!  I tried to commit to main, now what?
+# Help! I tried to commit to main, now what?
 
 No problem, we got you.
 Make sure you are on the branch to which you have been committing.
@@ -177,16 +177,16 @@ git config --global fetch.prune true
 
 ## Sign commits locally
 
-Prerequisite: [Install GnuPG](https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/gnupg.md)
+Prerequisite: [Install GnuPG]
 
 NOTE: The following steps have been tested on OSX and Linux.<br />
 If you encounter issues please refer to the respective GitHub documentation linked in the Additional Resources section below.
 
 1. Generate a new GPG key.
 
-   * NOTES
-     * [Your GPG key must be associated with a GitHub verified email that matches your committer identity]
-     * [Supported GPG Key Algorithms]
+   - NOTES
+     - [Your GPG key must be associated with a GitHub verified email that matches your committer identity]
+     - [Supported GPG Key Algorithms]
 
    1. Open Terminal / Git Bash.
    1. Generate a GPG key pair.
@@ -196,41 +196,43 @@ If you encounter issues please refer to the respective GitHub documentation link
       ```
 
       1. When prompted input the number corresponding to the kind of key and press `Enter`.
-         * Recommended input: `ECC (sign and encrypt)`.
-           * If using ECC, input the number corresponding to the elliptic curve and press `Enter`.
-           * Recommended input: `Curve 25519`.
-         * If ECC is unavailable you can use `RSA and RSA`.
-           * Recommended key size: `4096`
+         - Recommended input: `ECC (sign and encrypt)`.
+           - If using ECC, input the number corresponding to the elliptic curve and press `Enter`.
+           - Recommended input: `Curve 25519`.
+         - If ECC is unavailable you can use `RSA and RSA`.
+           - Recommended key size: `4096`
       1. Input the length of time the key should be valid and press `Enter`.
-         * Recommended input: `1y`.
+         - Recommended input: `1y`.
       1. Verify your selections are correct.
       1. Input your name and press `Enter`.
       1. Input your email address and press `Enter`.
       1. Optionally input a comment and press `Enter`.
       1. Verify your selections, input `O` and press `Enter`.
       1. Type a secure passphrase.
-         * NOTE: You will be prompted for this passphrase when running `git commit`<br />
+         - NOTE: You will be prompted for this passphrase when running `git commit`<br />
            The default cache for this passphrase is typically 2 hours.<br />
            See links in additional details for changing default caching values.
+
    1. List the long form of the GPG keys.
 
-       ```console
-       gpg --list-secret-keys --keyid-format=long
-       ```
+      ```console
+      gpg --list-secret-keys --keyid-format=long
+      ```
 
    1. From the list of GPG keys, copy the long form of the GPG key ID you'd like to use.<br />
-       In this example, the GPG key ID is `3AA5C34371567BD2`:
+      In this example, the GPG key ID is `3AA5C34371567BD2`:
 
-       ```console
-       $ gpg --list-secret-keys --keyid-format=long
-       /Users/hubot/.gnupg/secring.gpg
-       ------------------------------------
-       sec   4096R/3AA5C34371567BD2 2016-03-10 [expires: 2017-03-10]
-       uid                          Hubot <hubot@example.com>
-       ssb   4096R/4BB6D45482678BE3 2016-03-10
-       ```
+      ```console
+      $ gpg --list-secret-keys --keyid-format=long
+      /Users/hubot/.gnupg/secring.gpg
+      ------------------------------------
+      sec   4096R/3AA5C34371567BD2 2016-03-10 [expires: 2017-03-10]
+      uid                          Hubot <hubot@example.com>
+      ssb   4096R/4BB6D45482678BE3 2016-03-10
+      ```
 
 1. Configure Git to use the key generated in the previous step.
+
    1. Open Terminal / Git Bash.
    1. Unset any existing git signing key format.
 
@@ -252,9 +254,11 @@ If you encounter issues please refer to the respective GitHub documentation link
       ```
 
 1. Add the GPG key to GitHub.
+
    1. Open Terminal / Git Bash.
    1. Use the long form of the GPG key ID from Step 1.iv above to export your public GPG key.
-      * Paste the text below, substituting in the GPG key ID you'd like to use.<br />
+
+      - Paste the text below, substituting in the GPG key ID you'd like to use.<br />
         In this example, the GPG key ID is `3AA5C34371567BD2`:
 
         ```console
@@ -270,20 +274,23 @@ If you encounter issues please refer to the respective GitHub documentation link
    1. In the `Title` field, type a name for your GPG key.
    1. In the `Key` field, paste the GPG key you copied in Step 3.iii above.
    1. Click `Add GPG key`.
+
 1. [Checking your commit and tag signature verification status].
 1. Optional: Use gpg-agent flags for configuring default caching for authentication or preset passphrase.
-   * See links in Additional Resources below.
+   - See links in Additional Resources below.
 
 ### Troubleshooting
 
 Error:
+
 ```console
 gpg: signing failed: No such file or directory
 
 fatal: failed to write commit object
 ```
+
 Ensure `GPG_TTY` is configured in the environment.
-See [Configure TTY](https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/gnupg.md#configure-tty) for more details. 
+See [Configure TTY] for more details.
 
 Error:
 
@@ -305,21 +312,22 @@ ls -l ~/.gnupg/**/*.lock
 rm <path to file>/<filename>.lock
 ```
 
-
 ### Additional Resources
 
-* [Generate a new GPG key]
-* [Configure git to use a gpg key]
-* [Adding a GPG key to GitHub]
-* [Checking your commit and tag signature verification status]
-* [GPG Agent passphrase caching]
+- [Generate a new GPG key]
+- [Configure git to use a gpg key]
+- [Adding a GPG key to GitHub]
+- [Checking your commit and tag signature verification status]
+- [GPG Agent passphrase caching]
 
-[Change the GitHub settings to keep your email address private]: https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-email-preferences/blocking-command-line-pushes-that-expose-your-personal-email-address
-[Set your email address in Git to the noreply email address generated by GitHub]: https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-email-preferences/setting-your-commit-email-address#setting-your-commit-email-address-in-git
-[Generate a new GPG key]: https://docs.github.com/en/authentication/managing-commit-signature-verification/generating-a-new-gpg-key
-[Your GPG key must be associated with a GitHub verified email that matches your committer identity]: https://docs.github.com/en/authentication/troubleshooting-commit-signature-verification/using-a-verified-email-address-in-your-gpg-key
-[Supported GPG Key Algorithms]: https://docs.github.com/en/authentication/managing-commit-signature-verification/generating-a-new-gpg-key#supported-gpg-key-algorithms
-[Configure git to use a gpg key]: https://docs.github.com/en/authentication/managing-commit-signature-verification/telling-git-about-your-signing-key
 [Adding a GPG key to GitHub]: https://docs.github.com/en/authentication/managing-commit-signature-verification/adding-a-gpg-key-to-your-github-account
+[Change the GitHub settings to keep your email address private]: https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-email-preferences/blocking-command-line-pushes-that-expose-your-personal-email-address
 [Checking your commit and tag signature verification status]: https://docs.github.com/en/authentication/troubleshooting-commit-signature-verification/checking-your-commit-and-tag-signature-verification-status#checking-your-commit-signature-verification-status
+[Configure git to use a gpg key]: https://docs.github.com/en/authentication/managing-commit-signature-verification/telling-git-about-your-signing-key
+[Configure TTY]: https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/gnupg.md#configure-tty
+[Generate a new GPG key]: https://docs.github.com/en/authentication/managing-commit-signature-verification/generating-a-new-gpg-key
+[Install GnuPG]: https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/gnupg.md
+[Set your email address in Git to the noreply email address generated by GitHub]: https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-email-preferences/setting-your-commit-email-address#setting-your-commit-email-address-in-git
 [GPG Agent passphrase caching]: https://www.gnu.org/software/emacs/manual/html_node/pgg/Caching-passphrase.html
+[Supported GPG Key Algorithms]: https://docs.github.com/en/authentication/managing-commit-signature-verification/generating-a-new-gpg-key#supported-gpg-key-algorithms
+[Your GPG key must be associated with a GitHub verified email that matches your committer identity]: https://docs.github.com/en/authentication/troubleshooting-commit-signature-verification/using-a-verified-email-address-in-your-gpg-key
