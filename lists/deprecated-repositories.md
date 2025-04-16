@@ -2,6 +2,7 @@
 
 | Deprecated | Hidden     | Repository                                   |
 | ---------- | ---------- | -------------------------------------------- |
+| 2025-03-31 | 2025-03-31 | senzing-entity-specification                 |
 | 2025-02-24 |            | sz-sdk-nodejs-grpc                           |
 | 2025-02-04 |            | ibm-openshift-guide                          |
 | 2025-01-29 |            | rest-api-client-java                         |
