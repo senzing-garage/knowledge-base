@@ -2,7 +2,7 @@
 
 ## Assumptions
 
-1. A user's only usecase is to add (delete?) data sources from a Senzing configuration.
+1. A user's only use case is to add (delete?) data sources from a Senzing configuration.
 1. `sz_config_tools` requires the entire JSON for configuration manipulation.
 1. The "easy button":
    1. Is it the case that developers would only add datasources to the default config during development
@@ -187,7 +187,7 @@ Details:
 
 
    old_config_id = sz_configmanager.get_default_config_id()
-   new_config_id = sz_configmanger.create_new_config(old_config_id, "my comment", datasources**)
+   new_config_id = sz_configmanager.create_new_config(old_config_id, "my comment", datasources**)
    sz_configmanager.replace_default_config_id(old_config_id, new_config_id)
 
 
@@ -291,7 +291,7 @@ Synopsis:
        except SzError as err:
            print(err)
 
-   new_config_id = sz_configmanger.register_config(config, "my comment")
+   new_config_id = sz_configmanager.register_config(config, "my comment")
 
    sz_configmanager.replace_default_config_id(old_config_id, new_config_id)
    sz_abstract_factory.reinitialize(new_config_id)
@@ -311,7 +311,7 @@ Synopsis:
            config1.add_data_source(datasource)
        except SzError as err:
            print(err)
-   new_config_id = sz_configmanger.register_config(config, "my comment")
+   new_config_id = sz_configmanager.register_config(config, "my comment")
    sz_configmanager.replace_default_config_id(old_config_id, new_config_id)
    ```
 
@@ -325,7 +325,7 @@ codes. All "real" Senzing configuration is done via `sz_config_tool`.
 
 Rationale: When processing records, the only configuration change would be to add datasources.
 Any other Senzing configuration change would be independent of programmatic functionality.
-Therefore, `sz_config_tool` would be used for non-programatic Senzing configuration changes.
+Therefore, `sz_config_tool` would be used for non-programmatic Senzing configuration changes.
 
 1. Remove SzConfig API
 1. SzConfigManager would have the following method signatures:
@@ -367,7 +367,7 @@ sz_abstract_factory = SzAbstractFactoryCore("Example instance", SETTINGS)
 sz_configmanager = sz_abstract_factory.create_configmanager()
 
 base_config_id = sz_configmanager.get_template_config_id()
-new_config_id = sz_configmanger.add_data_sources_to_config(base_config_id, datasources**)
+new_config_id = sz_configmanager.add_data_sources_to_config(base_config_id, datasources**)
 
 # sz_abstract_factory.reinitialize(new_config_id)
 ```

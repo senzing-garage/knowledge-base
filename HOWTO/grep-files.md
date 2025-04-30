@@ -40,7 +40,7 @@
    HOWTO/install-aws-ecs-cli.md
    HOWTO/install-docker-app.md
    HOWTO/install-senzing-data.md
-   HOWTO/install-senzingapi-in-air-gapped-enviroment.md
+   HOWTO/install-senzingapi-in-air-gapped-environment.md
    HOWTO/install-tiller.md
    HOWTO/install-vmware-workstation.md
    HOWTO/migrate-senzing-in-cloudformation.md

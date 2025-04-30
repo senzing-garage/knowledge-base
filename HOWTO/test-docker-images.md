@@ -32,7 +32,7 @@ References:
        --pid host \
        --rm \
        --tty \
-       --userns host \
+       --users host \
        --volume /etc:/etc \
        --volume /usr/bin/docker-containerd:/usr/bin/docker-containerd \
        --volume /usr/bin/docker-runc:/usr/bin/docker-runc \

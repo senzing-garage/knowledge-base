@@ -18,7 +18,7 @@ Instructions for installing [NodeJS].
 
 ## References
 
-1. [Install via the cmdline video]
+1. [Install via the command line video]
 
-[Install via the cmdline video]: https://www.youtube.com/watch?v=C9gehlXhS6U
+[Install via the command line video]: https://www.youtube.com/watch?v=C9gehlXhS6U
 [NodeJS]: https://nodejs.org

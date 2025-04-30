@@ -17,7 +17,7 @@ So do expect it to work, yet.
    1. Click "Create app client" button
 1. "App client id" is used in `AWS_COGNITO_CLIENT_ID` environment variable below.
 
-## Set enviroment
+## Set environment
 
 1. :pencil2: Set environment variables.
    Example:

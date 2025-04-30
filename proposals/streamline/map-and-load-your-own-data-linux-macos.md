@@ -7,7 +7,7 @@ and custom ports will be used.
 ## Prerequisites
 
 1. Make sure the
-   [prerequisites](README.md#Prerequisistes)
+   [prerequisites](README.md#prerequisites)
    are installed.
 1. Make sure Docker is running.
 

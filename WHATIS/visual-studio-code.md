@@ -7,7 +7,7 @@
 
 ### Sort lines
 
-1. Hilight lines to be sorted
+1. Highlight lines to be sorted
 1. Ctrl-Shift-P
 1. In the drop-down, search for "Sort"
 

@@ -35,7 +35,7 @@
 
 1. [Portainer site]
    1. [Overview]
-1. [Demo] (username: admin and password: tryportainer)
+1. [Demo] (username: `admin` and password: `tryportainer`)
 1. [Documentation]
 1. [Ports used in Demonstrations](../lists/ports-used-in-demonstrations.md)
 

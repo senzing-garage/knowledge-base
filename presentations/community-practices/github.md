@@ -71,7 +71,7 @@ They are tailored to the type of project.
       This tag is to signal need for a discussion a the team scrum.
       If no discussion is needed, the "triage" label may be removed at any time.
 1. On **push**:
-   1. [pylint.yaml](https://github.com/senzing-garage/template-python/blob/main/.github/workflows/pylint.yaml) scans python files for adherance to
+   1. [pylint.yaml](https://github.com/senzing-garage/template-python/blob/main/.github/workflows/pylint.yaml) scans python files for adherence to
       [PEP 8](https://peps.python.org/pep-0008/) standards as well as good Python programming practices.
    1. [go-test.yaml](https://github.com/senzing-garage/template-go/blob/main/.github/workflows/go-test.yaml)
       runs `go test -v -p 1 ./...` which exectues all Go language Unit Tests.
