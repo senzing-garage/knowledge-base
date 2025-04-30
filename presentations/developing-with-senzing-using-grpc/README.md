@@ -244,7 +244,7 @@
 
 1. This means that you can work with Senzing locally with your custom toolset.
    Examples:
-   1. Integrated Developement environments (IDEs) like VSCode, Eclipse, PyCharm.
+   1. Integrated Development environments (IDEs) like VSCode, Eclipse, PyCharm.
    1. Linting/Formatting like pylint, gofmt, flake8, black
    1. Testers like pytest, go test, unittest
    1. Type checking like mypy.
@@ -291,7 +291,7 @@
    1. `senzing_hello_world.ipynb`
    1. `senzing_load_truthsets.ipynb`
 
-1. A recap of the preceeding steps is at [How to bring up Jupyter lab].
+1. A recap of the preceding steps is at [How to bring up Jupyter lab].
 
 ![image](divider.png)
 

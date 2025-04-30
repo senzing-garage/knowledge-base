@@ -2,7 +2,7 @@
 
 This Python demonstration of Senzing works on Linux, macOS, and Windows.
 
-## Prerequisistes
+## Prerequisites
 
 1. Python 3
 1. `senzing-grpc` - To install, run

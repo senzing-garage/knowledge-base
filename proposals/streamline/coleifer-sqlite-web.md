@@ -1,6 +1,6 @@
 # View SQLite database
 
-The following instructions bring up a docker containiner running the
+The following instructions bring up a docker container running the
 [sqlite-web](https://github.com/coleifer/sqlite-web)
 web app.
 This web app allows browsing of SQLite database contents.

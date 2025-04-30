@@ -802,7 +802,7 @@
    5. See [SENZING_ENGINE_CONFIGURATION_JSON](#senzing_engine_configuration_json)
 1. Values:
    1. Default: **N/A**
-   2. Should be the name of an environment variable that has been set and contians the JSON configuration.
+   2. Should be the name of an environment variable that has been set and contains the JSON configuration.
 1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_INIT_ENV_VAR&type=code)
 
 ### SENZING_API_SERVER_INIT_FILE

@@ -13,7 +13,7 @@ GNU Compiler Collection (GCC)
 ### Windows
 
 1. Reference: [Installing the MinGW-w64 toolchain]
-1. Prerequite software:
+1. Prerequisite software:
    1. [MSYS2](../WHATIS/msys2.md#windows)
 1. Start `MSYS2`
    1. In "Type here to search", type "MSYS2". Choose "MSYS2 MSYS"

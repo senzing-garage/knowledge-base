@@ -14,9 +14,9 @@ github repository. This page assumes a working knowledge of docker and docker-co
 
 This example simply shows the containers for the ELK stack in a docker-compose form to be able to connect
 with other containers. This example is easily expandable and if the containers to log are brought up with
-docker-compose they can be added to the example `yaml` given below or brought up in a seperate `yaml`.
+docker-compose they can be added to the example `yaml` given below or brought up in a separate `yaml`.
 
-If the 'containers to log' are brought up seperately from the ELK stack `yaml` then these are the most
+If the 'containers to log' are brought up separately from the ELK stack `yaml` then these are the most
 important requirements
 
 - The 'containers to log' use the same `NETWORK` as the ELK stack

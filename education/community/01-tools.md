@@ -56,7 +56,7 @@ as well as deploy Senzing.
      ubuntu /bin/bash
    ```
 
-1. If you want to somethin on Centos, run:
+1. If you want to something on Centos, run:
 
    ```console
    docker run \

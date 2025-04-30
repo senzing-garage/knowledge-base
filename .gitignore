@@ -1,6 +1,10 @@
 .DS_Store
-.history
-.vscode
 .coverage
 
 /.pytest_cache/
+
+# Visual Studio code
+.vscode/*
+!.vscode/cspell.json
+*.code-workspace
+.history
