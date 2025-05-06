@@ -70,13 +70,13 @@ Used in log message identifiers in the format `senzing-ppppnnnnt`, where:
 1. **6007** - github.com/senzing-garage/sz-sdk-go-core/szssadm
 1. **6008** - github.com/senzing-garage/sz-sdk-go-core/test
 1. **6009** - github.com/senzing-garage/sz-sdk-go-core/testhelpers
-1. **6011** - github.com/senzing-garage/servegrpc/szconfigserver
-1. **6012** - github.com/senzing-garage/servegrpc/szconfigmanagerserver
-1. **6013** - github.com/senzing-garage/servegrpc/szdiagnosticserver
-1. **6014** - github.com/senzing-garage/servegrpc/szengineserver
-1. **6015** - github.com/senzing-garage/servegrpc/szhasherserver
-1. **6016** - github.com/senzing-garage/servegrpc/szproductserver
-1. **6017** - github.com/senzing-garage/servegrpc/szssadmserver
+1. **6011** - github.com/senzing-garage/serve-grpc/szconfigserver
+1. **6012** - github.com/senzing-garage/serve-grpc/szconfigmanagerserver
+1. **6013** - github.com/senzing-garage/serve-grpc/szdiagnosticserver
+1. **6014** - github.com/senzing-garage/serve-grpc/szengineserver
+1. **6015** - github.com/senzing-garage/serve-grpc/szhasherserver
+1. **6016** - github.com/senzing-garage/serve-grpc/szproductserver
+1. **6017** - github.com/senzing-garage/serve-grpc/szssadmserver
 1. **6020** - github.com/senzing-garage/sz-sdk-go-grpc/szsabstractfactory
 1. **6021** - github.com/senzing-garage/sz-sdk-go-grpc/szconfigclient
 1. **6022** - github.com/senzing-garage/sz-sdk-go-grpc/szconfigmgrclient
@@ -96,6 +96,7 @@ Used in log message identifiers in the format `senzing-ppppnnnnt`, where:
 1. **6038** - github.com/senzing-garage/sz-sdk-go-mock/test
 1. **6039** - github.com/senzing-garage/sz-sdk-go-mock/testhelpers
 1. **6041** - github.com/senzing-garage/go-sdk-abstract-factory/szfactorycreator
+1. **6042** - github.com/senzing-garage/serve-grpc/httpserver
 
 ### senzing-tools
 
