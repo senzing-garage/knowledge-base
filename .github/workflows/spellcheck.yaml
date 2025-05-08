@@ -14,7 +14,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: streetsidesoftware/cspell-action@v6
+      - uses: streetsidesoftware/cspell-action@v7
         with:
           config: .vscode/cspell.json
           incremental_files_only: true
