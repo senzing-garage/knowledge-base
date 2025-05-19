@@ -10,7 +10,6 @@
    1. [ ] [sz-sdk-proto/go](https://github.com/senzing-garage/sz-sdk-proto/go)
    1. [ ] [go-grpcing](https://github.com/senzing-garage/go-grpcing)
    1. [ ] [go-messaging](https://github.com/senzing-garage/go-messaging)
-   1. [ ] [go-observing](https://github.com/senzing-garage/go-observing)
 1. Requires: go-messaging
    1. [ ] [go-logging](https://github.com/senzing-garage/go-logging)
 1. Requires: go-observing
@@ -20,6 +19,7 @@
    1. [ ] [go-databasing](https://github.com/senzing-garage/go-databasing)
 1. Requires: go-helpers
    1. [ ] [go-cmdhelping](https://github.com/senzing-garage/go-cmdhelping)
+   1. [ ] [go-observing](https://github.com/senzing-garage/go-observing)
 1. Requires: go-cmdhelping
    1. [ ] [explain](https://github.com/senzing-garage/explain)
    1. [ ] [observe](https://github.com/senzing-garage/observe)
