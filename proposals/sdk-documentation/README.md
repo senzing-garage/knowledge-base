@@ -85,4 +85,36 @@ Methods defined at [Candidate method names - condensed].
     - [python](https://garage.senzing.com/sz-sdk-python/senzing.html#senzing.szconfigmanager.SzConfigManager.set_default_config_id)
     - [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szconfigmanager#Szconfigmanager.SetDefaultConfigID)
 
+## SzDiagnostic
+
+1. checkDatastorePerformance
+    - [c-sharp]()
+    - [java]()
+    - [python](https://garage.senzing.com/sz-sdk-python/senzing.html#senzing.szdiagnostic.SzDiagnostic.check_datastore_performance)
+    - [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szdiagnostic#Szdiagnostic.CheckDatastorePerformance)
+
+1. getDatastoreInfo
+    - [c-sharp]()
+    - [java]()
+    - [python]()
+    - [go]()
+
+1. getFeature
+    - [c-sharp]()
+    - [java]()
+    - [python]()
+    - [go]()
+
+1. purgeRepository
+    - [c-sharp]()
+    - [java]()
+    - [python]()
+    - [go]()
+
+1. reinitialize
+    - [c-sharp]()
+    - [java]()
+    - [python]()
+    - [go]()
+
 [Candidate method names - condensed]: https://github.com/senzing-garage/knowledge-base/blob/main/proposals/SDKs-for-V4/canonical-names-condensed.md
