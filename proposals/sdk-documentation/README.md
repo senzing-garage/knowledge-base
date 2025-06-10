@@ -17,37 +17,37 @@ Methods defined at [Candidate method names - condensed].
     [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szconfig#Szconfig.DeleteDataSource)
 
 1. export
-    - [c-sharp]()
-    - [java]()
-    - [python](https://garage.senzing.com/sz-sdk-python/senzing.html#senzing.szconfig.SzConfig.export)
-    - [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szconfig#Szconfig.Export)
+    [c-sharp]()
+    [java]()
+    [python](https://garage.senzing.com/sz-sdk-python/senzing.html#senzing.szconfig.SzConfig.export)
+    [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szconfig#Szconfig.Export)
 
 1. getDataSouces
-    - [c-sharp]()
-    - [java]()
-    - [python](https://garage.senzing.com/sz-sdk-python/senzing.html#senzing.szconfig.SzConfig.get_data_sources)
-    - [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szconfig#Szconfig.GetDataSources)
+    [c-sharp]()
+    [java]()
+    [python](https://garage.senzing.com/sz-sdk-python/senzing.html#senzing.szconfig.SzConfig.get_data_sources)
+    [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szconfig#Szconfig.GetDataSources)
 
 ## SzConfigManager
 
 1. createConfigFromConfigID
-    - **Note:** Incorrectly specified in [Candidate method names - condensed]
-    - [c-sharp]()
-    - [java]()
-    - [python](https://garage.senzing.com/sz-sdk-python/senzing.html#senzing.szconfigmanager.SzConfigManager.create_config_from_config_id)
-    - [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szconfigmanager#Szconfigmanager.CreateConfigFromConfigID)
+    [c-sharp]()
+    [java]()
+    [python](https://garage.senzing.com/sz-sdk-python/senzing.html#senzing.szconfigmanager.SzConfigManager.create_config_from_config_id)
+    [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szconfigmanager#Szconfigmanager.CreateConfigFromConfigID)
+    **Note:** Incorrectly specified in [Candidate method names - condensed]
 
 1. createConfigFromString
-    - [c-sharp]()
-    - [java]()
-    - [python](https://garage.senzing.com/sz-sdk-python/senzing.html#senzing.szconfigmanager.SzConfigManager.create_config_from_string)
-    - [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szconfigmanager#Szconfigmanager.CreateConfigFromString)
+    [c-sharp]()
+    [java]()
+    [python](https://garage.senzing.com/sz-sdk-python/senzing.html#senzing.szconfigmanager.SzConfigManager.create_config_from_string)
+    [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szconfigmanager#Szconfigmanager.CreateConfigFromString)
 
 1. createConfigFromTemplate
-    - [c-sharp]()
-    - [java]()
-    - [python](https://garage.senzing.com/sz-sdk-python/senzing.html#senzing.szconfigmanager.SzConfigManager.create_config_from_template)
-    - [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szconfigmanager#Szconfigmanager.CreateConfigFromTemplate)
+    [c-sharp]()
+    [java]()
+    [python](https://garage.senzing.com/sz-sdk-python/senzing.html#senzing.szconfigmanager.SzConfigManager.create_config_from_template)
+    [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szconfigmanager#Szconfigmanager.CreateConfigFromTemplate)
 
 1. getConfigs
     - [c-sharp]()
