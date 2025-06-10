@@ -164,12 +164,14 @@ Methods defined at [Candidate method names - condensed].
     - [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szengine#Szengine.FetchNext)
 
 1. findInterestingEntitiesByEntityId
+    - **Hidden**
     - [c-sharp]()
     - [java]()
     - [python](https://garage.senzing.com/sz-sdk-python/senzing.html#senzing.szengine.SzEngine.find_interesting_entities_by_entity_id)
     - [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szengine#Szengine.FindInterestingEntitiesByEntityID)
 
 1. findInterestingEntitiesByRecordId
+    - **Hidden**
     - [c-sharp]()
     - [java]()
     - [python](https://garage.senzing.com/sz-sdk-python/senzing.html#senzing.szengine.SzEngine.find_interesting_entities_by_record_id)
