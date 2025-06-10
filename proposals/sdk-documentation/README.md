@@ -4,29 +4,29 @@ Methods defined at [Candidate method names - condensed].
 
 ## SzConfig
 
-1. addDataSource
-    [c-sharp]()
-    [java]()
-    [python](https://garage.senzing.com/sz-sdk-python/senzing.html#senzing.szconfig.SzConfig.add_data_source)
-    [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szconfig#Szconfig.AddDataSource)
+1. [c-sharp]()
+   [java]()
+   [python](https://garage.senzing.com/sz-sdk-python/senzing.html#senzing.szconfig.SzConfig.add_data_source)
+   [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szconfig#Szconfig.AddDataSource)
+   addDataSource
 
-1. deleteDataSource
-    [c-sharp]()
-    [java]()
-    [python](https://garage.senzing.com/sz-sdk-python/senzing.html#senzing.szconfig.SzConfig.delete_data_source)
-    [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szconfig#Szconfig.DeleteDataSource)
+1. [c-sharp]()
+   [java]()
+   [python](https://garage.senzing.com/sz-sdk-python/senzing.html#senzing.szconfig.SzConfig.delete_data_source)
+   [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szconfig#Szconfig.DeleteDataSource)
+   deleteDataSource
 
-1. export
-    [c-sharp]()
-    [java]()
-    [python](https://garage.senzing.com/sz-sdk-python/senzing.html#senzing.szconfig.SzConfig.export)
-    [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szconfig#Szconfig.Export)
+1. [c-sharp]()
+   [java]()
+   [python](https://garage.senzing.com/sz-sdk-python/senzing.html#senzing.szconfig.SzConfig.export)
+   [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szconfig#Szconfig.Export)
+   export
 
-1. getDataSouces
-    [c-sharp]()
-    [java]()
-    [python](https://garage.senzing.com/sz-sdk-python/senzing.html#senzing.szconfig.SzConfig.get_data_sources)
-    [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szconfig#Szconfig.GetDataSources)
+1. [c-sharp]()
+   [java]()
+   [python](https://garage.senzing.com/sz-sdk-python/senzing.html#senzing.szconfig.SzConfig.get_data_sources)
+   [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szconfig#Szconfig.GetDataSources)
+   getDataSources
 
 ## SzConfigManager
 
