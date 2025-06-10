@@ -58,7 +58,7 @@ Methods defined at [Candidate method names - condensed].
 1. getDefaultConfigId
     - [c-sharp]()
     - [java]()
-    - [python](https://garage.senzing.com/sz-sdk-python/senzing.html#senzing.szconfigmanager.SzConfigManager.get_dafault_config_id)
+    - [python](https://garage.senzing.com/sz-sdk-python/senzing.html#senzing.szconfigmanager.SzConfigManager.get_default_config_id)
     - [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szconfigmanager#Szconfigmanager.GetDefaultConfigID)
 
 1. registerConfig
