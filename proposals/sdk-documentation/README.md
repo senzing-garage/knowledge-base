@@ -96,25 +96,25 @@ Methods defined at [Candidate method names - condensed].
 1. getDatastoreInfo
     - [c-sharp]()
     - [java]()
-    - [python]()
-    - [go]()
+    - [python](https://garage.senzing.com/sz-sdk-python/senzing.html#senzing.szdiagnostic.SzDiagnostic.get_datastore_info)
+    - [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szdiagnostic#Szdiagnostic.GetDatastoreInfo)
 
 1. getFeature
     - [c-sharp]()
     - [java]()
-    - [python]()
-    - [go]()
+    - [python](https://garage.senzing.com/sz-sdk-python/senzing.html#senzing.szdiagnostic.SzDiagnostic.get_feature)
+    - [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szdiagnostic#Szdiagnostic.GetFeature)
 
 1. purgeRepository
     - [c-sharp]()
     - [java]()
-    - [python]()
-    - [go]()
+    - [python](https://garage.senzing.com/sz-sdk-python/senzing.html#senzing.szdiagnostic.SzDiagnostic.purge_repository)
+    - [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szdiagnostic#Szdiagnostic.PurgeRepository)
 
 1. reinitialize
     - [c-sharp]()
     - [java]()
-    - [python]()
-    - [go]()
+    - [python](https://garage.senzing.com/sz-sdk-python/senzing.html#senzing.szdiagnostic.SzDiagnostic.reinitialize)
+    - [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szdiagnostic#Szdiagnostic.Reinitialize)
 
 [Candidate method names - condensed]: https://github.com/senzing-garage/knowledge-base/blob/main/proposals/SDKs-for-V4/canonical-names-condensed.md
