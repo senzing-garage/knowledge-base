@@ -67,11 +67,11 @@ Methods defined at [Candidate method names - condensed].
    [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szconfigmanager#Szconfigmanager.RegisterConfig)
    registerConfig
 
-1. replaceDefaultConfigId
 1. [c-sharp]()
-    - [java]()
-    - [python](https://garage.senzing.com/sz-sdk-python/senzing.html#senzing.szconfigmanager.SzConfigManager.replace_default_config_id)
-    - [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szconfigmanager#Szconfigmanager.ReplaceDefaultConfigID)
+   [java]()
+   [python](https://garage.senzing.com/sz-sdk-python/senzing.html#senzing.szconfigmanager.SzConfigManager.replace_default_config_id)
+   [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szconfigmanager#Szconfigmanager.ReplaceDefaultConfigID)
+   replaceDefaultConfigId
 
 1. [c-sharp]()
    [java]()
