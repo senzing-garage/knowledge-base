@@ -87,37 +87,37 @@ Methods defined at [Candidate method names - condensed].
 
 ## SzDiagnostic
 
-1. checkDatastorePerformance
 1. [c-sharp]()
-    - [java]()
-    - [python](https://garage.senzing.com/sz-sdk-python/senzing.html#senzing.szdiagnostic.SzDiagnostic.check_datastore_performance)
-    - [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szdiagnostic#Szdiagnostic.CheckDatastorePerformance)
+   [java]()
+   [python](https://garage.senzing.com/sz-sdk-python/senzing.html#senzing.szdiagnostic.SzDiagnostic.check_datastore_performance)
+   [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szdiagnostic#Szdiagnostic.CheckDatastorePerformance)
+   checkDatastorePerformance
 
-1. getDatastoreInfo
 1. [c-sharp]()
-    - [java]()
-    - [python](https://garage.senzing.com/sz-sdk-python/senzing.html#senzing.szdiagnostic.SzDiagnostic.get_datastore_info)
-    - [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szdiagnostic#Szdiagnostic.GetDatastoreInfo)
+   [java]()
+   [python](https://garage.senzing.com/sz-sdk-python/senzing.html#senzing.szdiagnostic.SzDiagnostic.get_datastore_info)
+   [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szdiagnostic#Szdiagnostic.GetDatastoreInfo)
+   getDatastoreInfo
 
-1. getFeature
-    - **Hidden**
 1. [c-sharp]()
-    - [java]()
-    - [python](https://garage.senzing.com/sz-sdk-python/senzing.html#senzing.szdiagnostic.SzDiagnostic.get_feature)
-    - [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szdiagnostic#Szdiagnostic.GetFeature)
+   [java]()
+   [python](https://garage.senzing.com/sz-sdk-python/senzing.html#senzing.szdiagnostic.SzDiagnostic.get_feature)
+   [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szdiagnostic#Szdiagnostic.GetFeature)
+   getFeature
+   **Hidden**
 
-1. purgeRepository
 1. [c-sharp]()
-    - [java]()
-    - [python](https://garage.senzing.com/sz-sdk-python/senzing.html#senzing.szdiagnostic.SzDiagnostic.purge_repository)
-    - [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szdiagnostic#Szdiagnostic.PurgeRepository)
+   [java]()
+   [python](https://garage.senzing.com/sz-sdk-python/senzing.html#senzing.szdiagnostic.SzDiagnostic.purge_repository)
+   [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szdiagnostic#Szdiagnostic.PurgeRepository)
+   purgeRepository
 
-1. reinitialize
-    - **Hidden**
 1. [c-sharp]()
-    - [java]()
-    - [python](https://garage.senzing.com/sz-sdk-python/senzing.html#senzing.szdiagnostic.SzDiagnostic.reinitialize)
-    - [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szdiagnostic#Szdiagnostic.Reinitialize)
+   [java]()
+   [python](https://garage.senzing.com/sz-sdk-python/senzing.html#senzing.szdiagnostic.SzDiagnostic.reinitialize)
+   [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szdiagnostic#Szdiagnostic.Reinitialize)
+   reinitialize
+   **Hidden**
 
 ## SzEngine
 
