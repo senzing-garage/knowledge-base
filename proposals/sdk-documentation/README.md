@@ -5,16 +5,16 @@ Methods defined at [Candidate method names - condensed].
 ## SzConfig
 
 1. addDataSource
-    - [c-sharp]()
-    - [java]()
-    - [python](https://garage.senzing.com/sz-sdk-python/senzing.html#senzing.szconfig.SzConfig.add_data_source)
-    - [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szconfig#Szconfig.AddDataSource)
+    [c-sharp]()
+    [java]()
+    [python](https://garage.senzing.com/sz-sdk-python/senzing.html#senzing.szconfig.SzConfig.add_data_source)
+    [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szconfig#Szconfig.AddDataSource)
 
 1. deleteDataSource
-    - [c-sharp]()
-    - [java]()
-    - [python](https://garage.senzing.com/sz-sdk-python/senzing.html#senzing.szconfig.SzConfig.delete_data_source)
-    - [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szconfig#Szconfig.DeleteDataSource)
+    [c-sharp]()
+    [java]()
+    [python](https://garage.senzing.com/sz-sdk-python/senzing.html#senzing.szconfig.SzConfig.delete_data_source)
+    [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szconfig#Szconfig.DeleteDataSource)
 
 1. export
     - [c-sharp]()
@@ -280,6 +280,7 @@ Methods defined at [Candidate method names - condensed].
     - [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szengine#Szengine.ReevaluateRecord)
 
 1. reinitialize
+    - **Hidden**
     - [c-sharp]()
     - [java]()
     - [python](https://garage.senzing.com/sz-sdk-python/senzing.html#senzing.szengine.SzEngine.reinitialize)
@@ -327,6 +328,6 @@ Methods defined at [Candidate method names - condensed].
     - [c-sharp]()
     - [java]()
     - [python](https://garage.senzing.com/sz-sdk-python/senzing.html#senzing.szproduct.SzProduct.get_version)
-    - [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szproduct#Szproduct.GetVersion))
+    - [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szproduct#Szproduct.GetVersion)
 
 [Candidate method names - condensed]: https://github.com/senzing-garage/knowledge-base/blob/main/proposals/SDKs-for-V4/canonical-names-condensed.md
