@@ -35,7 +35,7 @@ Methods defined at [Candidate method names - condensed].
    [python](https://garage.senzing.com/sz-sdk-python/senzing.html#senzing.szconfigmanager.SzConfigManager.create_config_from_config_id)
    [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szconfigmanager#Szconfigmanager.CreateConfigFromConfigID)
    createConfigFromConfigID
-   **Note:** Incorrectly specified in [Candidate method names - condensed]
+   (**Note:** Incorrectly specified in [Candidate method names - condensed])
 
 1. [c-sharp]()
    [java]()
