@@ -149,7 +149,7 @@ Methods defined at [Candidate method names - condensed].
     - [c-sharp]()
     - [java]()
     - [python](https://garage.senzing.com/sz-sdk-python/senzing.html#senzing.szengine.SzEngine.export_csv_entity_report)
-    - [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szengine#Szengine.ExportCSVEntityReport)
+    - [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szengine#Szengine.ExportCsvEntityReport)
 
 1. exportJsonEntityReport
     - [c-sharp]()
