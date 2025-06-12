@@ -10,6 +10,8 @@
    [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szconfig#Szconfig.AddDataSource)
    addDataSource
 
+       - The addDataSource method adds a new data source to the Senzing configuration.
+
 1. [c-sharp](https://garage.senzing.com/sz-sdk-csharp/target/api/Senzing.Sdk.SzConfig.html#Senzing_Sdk_SzConfig_DeleteDataSource_System_String_)
    [java](https://garage.senzing.com/sz-sdk-java/com/senzing/sdk/SzConfig.html#deleteDataSource(java.lang.String))
    [python](https://garage.senzing.com/sz-sdk-python/senzing.html#senzing.szconfig.SzConfig.delete_data_source)
