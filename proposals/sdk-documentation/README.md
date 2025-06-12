@@ -335,4 +335,4 @@ Methods defined at [Candidate method names - condensed].
 
 [Candidate method names - condensed]: ../SDKs-for-V4/canonical-names-condensed.md
 [Combined list]: combined-list.md
-[Canonical descriptions] canonical-descriptions.md
+[Canonical descriptions]: canonical-descriptions.md
