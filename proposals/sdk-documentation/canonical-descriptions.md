@@ -1,12 +1,12 @@
 # SDK Documentation - canonical description
 
- Proposal for[sdk-documentation].
+ Proposal for [sdk-documentation].
 
 ## SzConfig
 
 1. **addDataSource**
 
-    - Method AddDataSource adds a new data source to the Senzing configuration.
+    - The addDataSource method adds a new data source to the Senzing configuration.
 
 1. **deleteDataSource**
 1. **export**

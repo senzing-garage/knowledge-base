@@ -1,6 +1,6 @@
-# SDK Documentation
+# SDK Documentation - aggregated descriptions
 
-Methods defined at [Candidate method names - condensed].
+ Proposal for [sdk-documentation].
 
 ## SzConfig
 
@@ -331,3 +331,4 @@ Methods defined at [Candidate method names - condensed].
    getVersion
 
 [Candidate method names - condensed]: https://github.com/senzing-garage/knowledge-base/blob/main/proposals/SDKs-for-V4/canonical-names-condensed.md
+[sdk-documentation]: README.md
