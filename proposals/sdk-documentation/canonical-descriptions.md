@@ -6,7 +6,7 @@
 
 1. **addDataSource**
 
-    - The addDataSource method adds a new data source to the Senzing configuration.
+    - Method addDataSource adds a new data source to the Senzing configuration.
 
 1. **deleteDataSource**
 1. **export**
