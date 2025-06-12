@@ -15,11 +15,20 @@
 
 1. **addDataSource**
 
-    - Method addDataSource adds a new data source to the Senzing configuration.
+    - Adds a new data source to this instance.
 
 1. **deleteDataSource**
+
+    - Deletes a data source from this instance.
+        - Is idempotent
+
 1. **export**
+
+    - Retrieves the configuration definition for this instance.
+
 1. **getDataSources**
+
+    - Gets the data sources for this instance.
 
 ## SzConfigManager
 
