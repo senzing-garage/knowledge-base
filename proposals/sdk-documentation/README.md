@@ -2,6 +2,9 @@
 
 Methods defined at [Candidate method names - condensed].
 
+1. [Combined list]
+1. [Canonical descriptions]
+
 ## SzConfig
 
 1. [c-sharp](https://garage.senzing.com/sz-sdk-csharp/target/api/Senzing.Sdk.SzConfig.html#Senzing_Sdk_SzConfig_AddDataSource_System_String_)
@@ -330,4 +333,6 @@ Methods defined at [Candidate method names - condensed].
    [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szproduct#Szproduct.GetVersion)
    getVersion
 
-[Candidate method names - condensed]: https://github.com/senzing-garage/knowledge-base/blob/main/proposals/SDKs-for-V4/canonical-names-condensed.md
+[Candidate method names - condensed]: ../SDKs-for-V4/canonical-names-condensed.md
+[Combined list]: combined-list.md
+[Canonical descriptions] canonical-descriptions.md
