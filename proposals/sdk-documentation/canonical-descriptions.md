@@ -2,6 +2,15 @@
 
  Proposal for [sdk-documentation].
 
+ 1. Guiding principles
+    1. Approach from the customer point of view.
+    1. First sentence is a "topic" sentence as it may show up in synopsis and code hints.
+    1. Less is better.
+    1. Avoid redundancy.
+        1. Overview shouldn't talk about parameter specifics.
+        1. Specifics about parameters should be described in the parameters
+    1. Tailoring to SDK language specific style is OK.
+
 ## SzConfig
 
 1. **addDataSource**
