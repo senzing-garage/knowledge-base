@@ -13,7 +13,7 @@ This is a checklist of what to set when creating a new GitHub Repository.
 1. Visit `github.com/<ORG>`
 1. Log in as an administrator.
 1. On `github.com/<ORG>`, click the `New` button under the `Repositories` header.
-   1. Enter `Respository Name`
+   1. Enter `Repository Name`
       1. Use only lower-case letters, numbers, and hyphens.
       1. Avoid use of underscore.
       1. When appropriate, use prefixes to help in searching for repositories.
@@ -93,7 +93,7 @@ This is a checklist of what to set when creating a new GitHub Repository.
 ### Code and security analysis
 
 1. On repository home page, click `Settings` tab.
-   1. Click `Code security` tab.
+   1. Click `Advanced security` tab.
       1. In `Access to alerts`:
          1. Search for the team that will be used in `.github/CODEOWNERS` and select.
          1. Click `Save changes` button
@@ -185,7 +185,7 @@ This is a checklist of what to set when creating a new GitHub Repository.
    1. :ballot_box_with_check: `Require status checks to pass before merging`.
       1. :ballot_box_with_check: `Require branches to be up to date before merging`.
          1. Search and add _ALL_ required status checks for the respective repository.
-            - Ex. type `lint` in the search bar and select `lint-workflows / Lint Workflows` and `lint-workflows / changes`. Both of these should be selected on ALL of our repositories. It is in the format `<workfow-name>/<job-name>`. Ignore any checks prefixed with `-->`.
+            - Ex. type `lint` in the search bar and select `lint-workflows / Lint Workflows` and `lint-workflows / changes`. Both of these should be selected on ALL of our repositories. It is in the format `<workflow-name>/<job-name>`. Ignore any checks prefixed with `-->`.
             - TIPS:
               - Search for the job name of the respective workflow.
               - Jobs to be added must have been run within the past 7 days against the respective repository.
@@ -212,7 +212,7 @@ This is a checklist of what to set when creating a new GitHub Repository.
 Additional settings changes required for auto merging dependabot pull requests.
 Requires Admin access.
 
-#### Prerequsites
+#### Prerequisites
 
 [One time CODEOWNER token configuration].
 
