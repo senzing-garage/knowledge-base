@@ -1455,7 +1455,7 @@
       export SENZING_DOCKER_SOCKET=/var/run/docker.sock
       ```
 
-1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_DOCKER_LAUNCHED&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_DOCKER_SOCKET&type=code)
 
 ### SENZING_DOCKERHUB_API_ENDPOINT_V1
 
@@ -2747,7 +2747,7 @@
 1. Values:
    1. true
    1. false
-1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_IJSON_OUTPUT&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_JSON_OUTPUT&type=code)
 
 ### SENZING_TOOLS_LICENSE_STRING_BASE64
 
