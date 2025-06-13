@@ -1017,6 +1017,8 @@
       export SENZING_API_SERVER_URL="http://example.com:8250"
       ```
 
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_API_SERVER_URL&type=code)
+
 ### SENZING_API_SERVER_VERBOSE
 
 1. Synopsis:
@@ -1030,8 +1032,6 @@
    1. Default: `false`
    2. Specify `true` or set the environment variable with no value (empty-string) to intialize in verbose mode.
 1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_API_SERVER_VERBOSE&type=code)
-
-1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_API_SERVER_URL&type=code)
 
 ### SENZING_AZURE_CONNECTION_STRING
 
