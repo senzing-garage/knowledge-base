@@ -7,7 +7,7 @@
 1. Synopsis:
    1. The default hostname/ip-address of the database server.
    1. See [Adminer on DockerHub](https://hub.docker.com/_/adminer)
-1. [Where used](https://github.com/search?q=org%3ASenzing+ADMINER_DEFAULT_SERVER&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+ADMINER_DEFAULT_SERVER&type=code)
 
 ### AWS_ACCESS_KEY_ID
 
@@ -16,28 +16,28 @@
    1. When used in python programs, see [Boto3 Configuration, Using environment variables](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/configuration.html#using-environment-variables).
 1. Examples:
    1. See [How to set AWS environment variables](https://github.com/senzing-garage/knowledge-base/blob/main/HOWTO/set-aws-environment-variables.md#aws_access_key_id)
-1. [Where used](https://github.com/search?q=org%3ASenzing+AWS_ACCESS_KEY_ID&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+AWS_ACCESS_KEY_ID&type=code)
 
 ### AWS_CA_BUNDLE
 
 1. Synopsis:
    1. The path to a custom certificate bundle to use when establishing SSL/TLS connections.
    1. When used in python programs, see [Boto3 Configuration, Using environment variables](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/configuration.html#using-environment-variables).
-1. [Where used](https://github.com/search?q=org%3ASenzing+AWS_CA_BUNDLE&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+AWS_CA_BUNDLE&type=code)
 
 ### AWS_CONFIG_FILE
 
 1. Synopsis:
    1. The location of the config file.
    1. When used in python programs, see [Boto3 Configuration, Using environment variables](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/configuration.html#using-environment-variables).
-1. [Where used](https://github.com/search?q=org%3ASenzing+AWS_CONFIG_FILE&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+AWS_CONFIG_FILE&type=code)
 
 ### AWS_DATA_PATH
 
 1. Synopsis:
    1. A list of additional directories to check when loading botocore data.
    1. When used in python programs, see [Boto3 Configuration, Using environment variables](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/configuration.html#using-environment-variables).
-1. [Where used](https://github.com/search?q=org%3ASenzing+AWS_DATA_PATH&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+AWS_DATA_PATH&type=code)
 
 ### AWS_DEFAULT_REGION
 
@@ -48,14 +48,14 @@
    1. `us-east-1`
    1. `us-west-2`
    1. See [How to set AWS environment variables](https://github.com/senzing-garage/knowledge-base/blob/main/HOWTO/set-aws-environment-variables.md#aws_default_region)
-1. [Where used](https://github.com/search?q=org%3ASenzing+AWS_DEFAULT_REGION&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+AWS_DEFAULT_REGION&type=code)
 
 ### AWS_MAX_ATTEMPTS
 
 1. Synopsis:
    1. The total number of attempts made for a single request.
    1. When used in python programs, see [Boto3 Configuration, Using environment variables](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/configuration.html#using-environment-variables).
-1. [Where used](https://github.com/search?q=org%3ASenzing+AWS_MAX_ATTEMPTS&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+AWS_MAX_ATTEMPTS&type=code)
 
 ### AWS_METADATA_SERVICE_NUM_ATTEMPTS
 
@@ -64,28 +64,28 @@
    1. When used in python programs, see [Boto3 Configuration, Using environment variables](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/configuration.html#using-environment-variables).
 1. Values:
    - Default: 1
-1. [Where used](https://github.com/search?q=org%3ASenzing+AWS_METADATA_SERVICE_NUM_ATTEMPTS&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+AWS_METADATA_SERVICE_NUM_ATTEMPTS&type=code)
 
 ### AWS_METADATA_SERVICE_TIMEOUT
 
 1. Synopsis:
    1. The number of seconds before a connection to the instance metadata service should time out.
    1. When used in python programs, see [Boto3 Configuration, Using environment variables](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/configuration.html#using-environment-variables).
-1. [Where used](https://github.com/search?q=org%3ASenzing+AWS_METADATA_SERVICE_TIMEOUT&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+AWS_METADATA_SERVICE_TIMEOUT&type=code)
 
 ### AWS_PROFILE
 
 1. Synopsis:
    1. The default profile to use, if any.
    1. When used in python programs, see [Boto3 Configuration, Using environment variables](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/configuration.html#using-environment-variables).
-1. [Where used](https://github.com/search?q=org%3ASenzing+AWS_PROFILE&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+AWS_PROFILE&type=code)
 
 ### AWS_RETRY_MODE
 
 1. Synopsis:
    1. Specifies the types of retries the SDK will use.
    1. When used in python programs, see [Boto3 Configuration, Using environment variables](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/configuration.html#using-environment-variables).
-1. [Where used](https://github.com/search?q=org%3ASenzing+AWS_RETRY_MODE&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+AWS_RETRY_MODE&type=code)
 
 ### AWS_SECRET_ACCESS_KEY
 
@@ -94,7 +94,7 @@
    1. When used in python programs, see [Boto3 Configuration, Using environment variables](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/configuration.html#using-environment-variables).
 1. Examples:
    1. See [How to set AWS environment variables](https://github.com/senzing-garage/knowledge-base/blob/main/HOWTO/set-aws-environment-variables.md#aws_secret_access_key)
-1. [Where used](https://github.com/search?q=org%3ASenzing+AWS_SECRET_ACCESS_KEY&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+AWS_SECRET_ACCESS_KEY&type=code)
 
 ### AWS_SESSION_TOKEN
 
@@ -103,7 +103,7 @@
    1. When used in python programs, see [Boto3 Configuration, Using environment variables](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/configuration.html#using-environment-variables).
 1. Examples:
    1. See [How to set AWS environment variables](https://github.com/senzing-garage/knowledge-base/blob/main/HOWTO/set-aws-environment-variables.md#aws_session_token)
-1. [Where used](https://github.com/search?q=org%3ASenzing+AWS_SESSION_TOKEN&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+AWS_SESSION_TOKEN&type=code)
 
 ### AWS_SHARED_CREDENTIALS_FILE
 
@@ -112,14 +112,14 @@
    1. When used in python programs, see [Boto3 Configuration, Using environment variables](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/configuration.html#using-environment-variables).
 1. Values:
    - Default: `~/.aws/credentials`
-1. [Where used](https://github.com/search?q=org%3ASenzing+AWS_SHARED_CREDENTIALS_FILE&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+AWS_SHARED_CREDENTIALS_FILE&type=code)
 
 ### AWS_STS_REGIONAL_ENDPOINTS
 
 1. Synopsis:
    1. Sets AWS STS endpoint resolution logic.
    1. When used in python programs, see [Boto3 Configuration, Using environment variables](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/configuration.html#using-environment-variables).
-1. [Where used](https://github.com/search?q=org%3ASenzing+AWS_STS_REGIONAL_ENDPOINTS&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+AWS_STS_REGIONAL_ENDPOINTS&type=code)
 
 ### DATABASE_DATABASE
 
@@ -137,7 +137,7 @@
       export DATABASE_DATABASE=G2
       ```
 
-1. [Where used](https://github.com/search?q=org%3ASenzing+DATABASE_DATABASE&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+DATABASE_DATABASE&type=code)
 
 ### DATABASE_HOST
 
@@ -158,7 +158,7 @@
       export DATABASE_HOST=host.example.com
       ```
 
-1. [Where used](https://github.com/search?q=org%3ASenzing+DATABASE_HOST&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+DATABASE_HOST&type=code)
 
 ### DATABASE_PASSWORD
 
@@ -173,7 +173,7 @@
       export DATABASE_PASSWORD="my;password!"
       ```
 
-1. [Where used](https://github.com/search?q=org%3ASenzing+DATABASE_PASSWORD&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+DATABASE_PASSWORD&type=code)
 
 ### DATABASE_PORT
 
@@ -195,7 +195,7 @@
       export DATABASE_PORT=5432
       ```
 
-1. [Where used](https://github.com/search?q=org%3ASenzing+DATABASE_PORT&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+DATABASE_PORT&type=code)
 
 ### DATABASE_PROTOCOL
 
@@ -219,7 +219,7 @@
       export DATABASE_PROTOCOL=postgresql
       ```
 
-1. [Where used](https://github.com/search?q=org%3ASenzing+DATABASE_PROTOCOL&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+DATABASE_PROTOCOL&type=code)
 
 ### DATABASE_QUERY_PARAMETERS
 
@@ -232,7 +232,7 @@
    1. See [postgresql](https://pkg.go.dev/github.com/lib/pq#hdr-Connection_String_Parameters)
 1. Examples:
    1. **sslmode:** "postgresql://username:<password@host.example.com>:5432/G2/?sslmode=disable"
-1. [Where used](https://github.com/search?q=org%3ASenzing+DATABASE_QUERY_PARAMETERS&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+DATABASE_QUERY_PARAMETERS&type=code)
 
 ### DATABASE_USERNAME
 
@@ -247,7 +247,7 @@
       export DATABASE_USERNAME="my-user"
       ```
 
-1. [Where used](https://github.com/search?q=org%3ASenzing+DATABASE_USERNAME&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+DATABASE_USERNAME&type=code)
 
 ### DB2_CUSTOM_DIR
 
@@ -257,7 +257,7 @@
       docker container. Is mounted to `/var/custom`.
 1. Values:
    1. Default: None
-1. [Where used](https://github.com/search?q=org%3ASenzing+DB2_CUSTOM_DIR&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+DB2_CUSTOM_DIR&type=code)
 
 ### DB2_DB
 
@@ -265,7 +265,7 @@
    1. The database schema name.
 1. Values:
    1. Default: "G2"
-1. [Where used](https://github.com/search?q=org%3ASenzing+DB2_DB&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+DB2_DB&type=code)
 
 ### DB2_DIR
 
@@ -273,7 +273,7 @@
    1. Path on local system where the database files are stored.
 1. Values:
    1. Default: None. Application dependent.
-1. [Where used](https://github.com/search?q=org%3ASenzing+DB2_DIR&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+DB2_DIR&type=code)
 
 ### DB2_PASSWORD
 
@@ -281,7 +281,7 @@
    1. Password for the database "root" username.
 1. Values:
    1. Default: "db2inst1"
-1. [Where used](https://github.com/search?q=org%3ASenzing+DB2_PASSWORD&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+DB2_PASSWORD&type=code)
 
 ### DB2_USERNAME
 
@@ -289,7 +289,7 @@
    1. The username for the the database "root" user.
 1. Values:
    1. Default: "db2inst1"
-1. [Where used](https://github.com/search?q=org%3ASenzing+DB2_USERNAME&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+DB2_USERNAME&type=code)
 
 ### DB2INST1_PASSWORD
 
@@ -297,7 +297,7 @@
    1. The password for the "db2inst1" user name.
 1. Values:
    1. Default: "db2inst1"
-1. [Where used](https://github.com/search?q=org%3ASenzing+DB2INST1_PASSWORD&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+DB2INST1_PASSWORD&type=code)
 
 ### DEMO_NAMESPACE
 
@@ -305,7 +305,7 @@
    1. In a Kubernetes environment, a value used for the namespace.
 1. Values:
    1. Example: "my-namespace"
-1. [Where used](https://github.com/search?q=org%3ASenzing+DEMO_NAMESPACE&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+DEMO_NAMESPACE&type=code)
 
 ### DEMO_PREFIX
 
@@ -313,7 +313,7 @@
    1. In a Kubernetes environment, a value prefixed used to object names.
 1. Values:
    1. Example: "my"
-1. [Where used](https://github.com/search?q=org%3ASenzing+DEMO_PREFIX&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+DEMO_PREFIX&type=code)
 
 ### DOCKER_APP
 
@@ -324,7 +324,7 @@
    1. "docker-app"
    1. "docker app"
    1. Default: None
-1. [Where used](https://github.com/search?q=org%3ASenzing+DOCKER_APP&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+DOCKER_APP&type=code)
 
 ### DOCKER_APP_PARAMETERS_FILE
 
@@ -332,13 +332,13 @@
    1. Location of file used in Docker App `--parameters-file` command-line option.
 1. Values:
    1. Default: None
-1. [Where used](https://github.com/search?q=org%3ASenzing+DOCKER_APP_PARAMETERS_FILE&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+DOCKER_APP_PARAMETERS_FILE&type=code)
 
 ### DOCKER_REGISTRY_SECRET
 
 1. Synopsis:
    1. In a Kubernetes environment, the name of the Kubernetes Secret for accessing the public or local Docker registry.
-1. [Where used](https://github.com/search?q=org%3ASenzing+DOCKER_REGISTRY_SECRET&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+DOCKER_REGISTRY_SECRET&type=code)
 
 ### DOCKER_REGISTRY_URL
 
@@ -346,7 +346,7 @@
    1. URL of a public or local Docker registry.
 1. Values:
    1. Example: "docker.io"
-1. [Where used](https://github.com/search?q=org%3ASenzing+DOCKER_REGISTRY_URL&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+DOCKER_REGISTRY_URL&type=code)
 
 ### G2_LICENSE_PATH
 
@@ -360,83 +360,83 @@
       export G2_LICENSE_PATH="~/Downloads/g2.lic"
       ```
 
-1. [Where used](https://github.com/search?q=org%3ASenzing+G2_LICENSE_PATH&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+G2_LICENSE_PATH&type=code)
 
 ### GIT_ACCOUNT
 
-1. [Where used](https://github.com/search?q=org%3ASenzing+GIT_ACCOUNT&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+GIT_ACCOUNT&type=code)
 
 ### GIT_ACCOUNT_DIR
 
-1. [Where used](https://github.com/search?q=org%3ASenzing+GIT_ACCOUNT_DIR&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+GIT_ACCOUNT_DIR&type=code)
 
 ### GIT_REPOSITORY
 
-1. [Where used](https://github.com/search?q=org%3ASenzing+GIT_REPOSITORY&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+GIT_REPOSITORY&type=code)
 
 ### GIT_REPOSITORY_DIR
 
-1. [Where used](https://github.com/search?q=org%3ASenzing+GIT_REPOSITORY_DIR&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+GIT_REPOSITORY_DIR&type=code)
 
 ### GITHUB_ACTION
 
 1. See [GitHub Actions environment variables](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/using-environment-variables#default-environment-variables).
-1. [Where used](https://github.com/search?q=org%3ASenzing+GITHUB_ACTION&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+GITHUB_ACTION&type=code)
 
 ### GITHUB_ACTIONS
 
 1. See [GitHub Actions environment variables](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/using-environment-variables#default-environment-variables).
-1. [Where used](https://github.com/search?q=org%3ASenzing+GITHUB_ACTIONS&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+GITHUB_ACTIONS&type=code)
 
 ### GITHUB_ACTOR
 
 1. See [GitHub Actions environment variables](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/using-environment-variables#default-environment-variables).
-1. [Where used](https://github.com/search?q=org%3ASenzing+GITHUB_ACTOR&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+GITHUB_ACTOR&type=code)
 
 ### GITHUB_BASE_REF
 
 1. See [GitHub Actions environment variables](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/using-environment-variables#default-environment-variables).
-1. [Where used](https://github.com/search?q=org%3ASenzing+GITHUB_BASE_REF&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+GITHUB_BASE_REF&type=code)
 
 ### GITHUB_EVENT_NAME
 
 1. See [GitHub Actions environment variables](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/using-environment-variables#default-environment-variables).
-1. [Where used](https://github.com/search?q=org%3ASenzing+GITHUB_EVENT_NAME&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+GITHUB_EVENT_NAME&type=code)
 
 ### GITHUB_EVENT_PATH
 
 1. See [GitHub Actions environment variables](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/using-environment-variables#default-environment-variables).
-1. [Where used](https://github.com/search?q=org%3ASenzing+GITHUB_EVENT_PATH&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+GITHUB_EVENT_PATH&type=code)
 
 ### GITHUB_HEAD_REF
 
 1. See [GitHub Actions environment variables](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/using-environment-variables#default-environment-variables).
-1. [Where used](https://github.com/search?q=org%3ASenzing+GITHUB_HEAD_REF&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+GITHUB_HEAD_REF&type=code)
 
 ### GITHUB_REF
 
 1. See [GitHub Actions environment variables](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/using-environment-variables#default-environment-variables).
-1. [Where used](https://github.com/search?q=org%3ASenzing+GITHUB_REF&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+GITHUB_REF&type=code)
 
 ### GITHUB_REPOSITORY
 
 1. See [GitHub Actions environment variables](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/using-environment-variables#default-environment-variables).
-1. [Where used](https://github.com/search?q=org%3ASenzing+GITHUB_REPOSITORY&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+GITHUB_REPOSITORY&type=code)
 
 ### GITHUB_SHA
 
 1. See [GitHub Actions environment variables](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/using-environment-variables#default-environment-variables).
-1. [Where used](https://github.com/search?q=org%3ASenzing+GITHUB_SHA&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+GITHUB_SHA&type=code)
 
 ### GITHUB_WORKFLOW
 
 1. See [GitHub Actions environment variables](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/using-environment-variables#default-environment-variables).
-1. [Where used](https://github.com/search?q=org%3ASenzing+GITHUB_WORKFLOW&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+GITHUB_WORKFLOW&type=code)
 
 ### GITHUB_WORKSPACE
 
 1. See [GitHub Actions environment variables](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/using-environment-variables#default-environment-variables).
-1. [Where used](https://github.com/search?q=org%3ASenzing+GITHUB_WORKSPACE&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+GITHUB_WORKSPACE&type=code)
 
 ### HELM_TLS
 
@@ -450,13 +450,13 @@
       export HELM_TLS="--tls"
       ```
 
-1. [Where used](https://github.com/search?q=org%3ASenzing+HELM_TLS&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+HELM_TLS&type=code)
 
 ### HELM_VALUES_DIR
 
 1. Synopsis:
    1. In a Kubernetes environment, a directory holding files for use in the `helm --values` parameter.
-1. [Where used](https://github.com/search?q=org%3ASenzing+HELM_VALUES_DIR&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+HELM_VALUES_DIR&type=code)
 
 ### JUPYTER_NOTEBOOKS_PORT
 
@@ -465,7 +465,7 @@
    1. See [Port 9178](https://github.com/senzing-garage/knowledge-base/blob/main/lists/ports-used-in-demonstrations.md#9178)
 1. Values:
    1. Default: 9178
-1. [Where used](https://github.com/search?q=org%3ASenzing+JUPYTER_NOTEBOOKS_PORT&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+JUPYTER_NOTEBOOKS_PORT&type=code)
 
 ### JUPYTER_NOTEBOOKS_SHARED_DIR
 
@@ -473,17 +473,17 @@
    1. A directory on the localhost that is shared with the docker container as Jupyter's `shared` folder.
 1. Values:
    1. Default: None
-1. [Where used](https://github.com/search?q=org%3ASenzing+JUPYTER_NOTEBOOKS_SHARED_DIR&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+JUPYTER_NOTEBOOKS_SHARED_DIR&type=code)
 
 ### KUBERNETES_DIR
 
 1. Synopsis:
    1. In a Kubernetes environment, a directory holding files for use in the helm `kubectl --filename` parameter.
-1. [Where used](https://github.com/search?q=org%3ASenzing+KUBERNETES_DIR&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+KUBERNETES_DIR&type=code)
 
 ### LD_LIBRARY_PATH
 
-1. [Where used](https://github.com/search?q=org%3ASenzing+LD_LIBRARY_PATH&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+LD_LIBRARY_PATH&type=code)
 
 ### MSSQL_ACCEPT_EULA
 
@@ -499,7 +499,7 @@
       the value is "Y"
 1. Examples:
    1. See [Install the Microsoft ODBC driver for SQL Server (Linux)](https://docs.microsoft.com/en-us/sql/connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server)
-1. [Where used](https://github.com/search?q=org%3ASenzing+MSSQL_ACCEPT_EULA&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+MSSQL_ACCEPT_EULA&type=code)
 
 ### MYSQL_DATABASE
 
@@ -507,7 +507,7 @@
    1. The database schema name.
 1. Values:
    1. Default: "G2"
-1. [Where used](https://github.com/search?q=org%3ASenzing+MYSQL_DATABASE&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+MYSQL_DATABASE&type=code)
 
 ### MYSQL_DIR
 
@@ -515,7 +515,7 @@
    1. Path on local system where the database files are stored.
 1. Values:
    1. Default: None. Application dependent.
-1. [Where used](https://github.com/search?q=org%3ASenzing+MYSQL_DIR&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+MYSQL_DIR&type=code)
 
 ### MYSQL_PASSWORD
 
@@ -523,7 +523,7 @@
    1. Password for [MYSQL_USERNAME](#mysql_username).
 1. Values:
    1. Default: "g2"
-1. [Where used](https://github.com/search?q=org%3ASenzing+MYSQL_PASSWORD&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+MYSQL_PASSWORD&type=code)
 
 ### MYSQL_ROOT_PASSWORD
 
@@ -531,7 +531,7 @@
    1. The password for the the database "root" user name.
 1. Values:
    1. Default: "root"
-1. [Where used](https://github.com/search?q=org%3ASenzing+MYSQL_ROOT_PASSWORD&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+MYSQL_ROOT_PASSWORD&type=code)
 
 ### MYSQL_USERNAME
 
@@ -539,7 +539,7 @@
    1. Non-root MySQL user.
 1. Values:
    1. Default: "g2"
-1. [Where used](https://github.com/search?q=org%3ASenzing+MYSQL_USERNAME&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+MYSQL_USERNAME&type=code)
 
 ### POSTGRES_DB
 
@@ -547,7 +547,7 @@
    1. The database schema name.
 1. Values:
    1. Default: "G2"
-1. [Where used](https://github.com/search?q=org%3ASenzing+POSTGRES_DB&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+POSTGRES_DB&type=code)
 
 ### POSTGRES_DIR
 
@@ -555,7 +555,7 @@
    1. Path on local system where the database files are stored.
 1. Values:
    1. Default: None. Application dependent.
-1. [Where used](https://github.com/search?q=org%3ASenzing+POSTGRES_DIR&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+POSTGRES_DIR&type=code)
 
 ### POSTGRES_PASSWORD
 
@@ -563,7 +563,7 @@
    1. The password for the the database "root" user name.
 1. Values:
    1. Default: "postgres"
-1. [Where used](https://github.com/search?q=org%3ASenzing+POSTGRES_PASSWORD&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+POSTGRES_PASSWORD&type=code)
 
 ### POSTGRES_USERNAME
 
@@ -571,11 +571,11 @@
    1. The username for the the database "root" user name.
 1. Values:
    1. Default: "postgres"
-1. [Where used](https://github.com/search?q=org%3ASenzing+POSTGRES_USERNAME&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+POSTGRES_USERNAME&type=code)
 
 ### PYTHONPATH
 
-1. [Where used](https://github.com/search?q=org%3ASenzing+PYTHONPATH&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+PYTHONPATH&type=code)
 
 ### RABBITMQ_DIR
 
@@ -583,7 +583,7 @@
    1. Path on local system where RabbitMQ files are stored.
 1. Values:
    1. Default: None. Application dependent.
-1. [Where used](https://github.com/search?q=org%3ASenzing+RABBITMQ_DIR&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+RABBITMQ_DIR&type=code)
 
 ### RABBITMQ_PASSWORD
 
@@ -591,7 +591,7 @@
    1. the password for the RabbitMQ user.
 1. Values:
    1. Default: None. Application dependent.
-1. [Where used](https://github.com/search?q=org%3ASenzing+RABBITMQ_PASSWORD&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+RABBITMQ_PASSWORD&type=code)
 
 ### RABBITMQ_USE_EXISTING_ENTITIES
 
@@ -601,7 +601,7 @@
    1. Default: Varies
    2. True: Connect to an existing exchange or queue using the given name. Fails if the entity does not exist.
    3. False: Create the entities if they do not exist, or connect to a prexisting entity if it has the right settings. Fails if the settings passed when conncting differ from the settings on the existing entity.
-1. [Where used](https://github.com/search?q=org%3ASenzing+RABBITMQ_USE_EXISTING_ENTITIES&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+RABBITMQ_USE_EXISTING_ENTITIES&type=code)
 
 ### RABBITMQ_USERNAME
 
@@ -609,7 +609,7 @@
    1. the username for the RabbitMQ user.
 1. Values:
    1. Default: None. Application dependent.
-1. [Where used](https://github.com/search?q=org%3ASenzing+RABBITMQ_USERNAME&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+RABBITMQ_USERNAME&type=code)
 
 ### SENZING_ACCEPT_EULA
 
@@ -620,7 +620,7 @@
 1. Values:
    1. If you accept the Senzing End User License Agreement (EULA),
       the value is "I_ACCEPT_THE_SENZING_EULA"
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_ACCEPT_EULA&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_ACCEPT_EULA&type=code)
 
 ### SENZING_API_RPM_DIR
 
@@ -631,7 +631,7 @@
 1. Values:
    1. Format: `senzingapi-M.m.P.x86_64.rpm`
    1. Default: none
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_RPM_DIR&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_API_RPM_DIR&type=code)
 
 ### SENZING_API_SERVER_ALLOWED_ORIGINS
 
@@ -642,7 +642,7 @@
 1. Values:
    1. Default: **N/A**
    2. The asterisk `*` can be used to allow all origins as per `Access-Control-Allow-Origin` header specification.
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_ALLOWED_ORIGINS&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_API_SERVER_ALLOWED_ORIGINS&type=code)
 
 ### SENZING_API_SERVER_AUTO_REFRESH_PERIOD
 
@@ -656,7 +656,7 @@
 1. Values:
    1. Default: `10000` (milliseconds)
    2. `0`: only check and auto-refresh if a configuration element is not found.
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_AUTO_REFRESH_PERIOD&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_API_SERVER_AUTO_REFRESH_PERIOD&type=code)
 
 ### SENZING_API_SERVER_BASE_PATH
 
@@ -665,7 +665,7 @@
 1. Values:
    1. Default: `/`
    2. Typically specified as a path beginning with `/` such as `/api`
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_BASE_PATH&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_API_SERVER_BASE_PATH&type=code)
 
 ### SENZING_API_SERVER_BIND_ADDR
 
@@ -677,7 +677,7 @@
    1. Default: `loopback` (for the local loopback address)
    2. An IP-Address for a specific network interface on the host
    3. The keyword `all` to indicate all network interfaces on the host.
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_BIND_ADDR&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_API_SERVER_BIND_ADDR&type=code)
 
 ### SENZING_API_SERVER_CLIENT_KEY_STORE
 
@@ -694,7 +694,7 @@
    1. Default: **N/A**
    2. Specify a file path to the PKCS12 key store file that contains the public client keys for those
       clients that authotrized to connect.
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_CLIENT_KEY_STORE&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_API_SERVER_CLIENT_KEY_STORE&type=code)
 
 ### SENZING_API_SERVER_CLIENT_KEY_STORE_PASSWORD
 
@@ -711,7 +711,7 @@
    1. Default: **N/A**
    2. Specify a password to decrypt the PKCS12 [client key store file](#senzing_api_server_client_key_store) that
       holds the public keys of those clients that are authorized to connect.
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_CLIENT_KEY_STORE_PASSWORD&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_API_SERVER_CLIENT_KEY_STORE_PASSWORD&type=code)
 
 ### SENZING_API_SERVER_CONFIG_ID
 
@@ -724,7 +724,7 @@
 1. Values:
    1. Default: **N/A**
    2. If specified, then a valud Senzing configuration ID for the entity repository must be specified.
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_CONFIG_ID&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_API_SERVER_CONFIG_ID&type=code)
 
 ### SENZING_API_SERVER_CONCURRENCY
 
@@ -734,7 +734,7 @@
 1. Values:
    1. Default: `8`
    2. If specified, then a non-zero integer should be provided. Take care not to make this too large.
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_CONCURRENCY&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_API_SERVER_CONCURRENCY&type=code)
 
 ### SENZING_API_SERVER_DEBUG
 
@@ -748,7 +748,7 @@
 1. Values:
    1. Default: `false`
    2. Specify `true` or set the environment variable with no value (empty-string) to suppress output.
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_DEBUG&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_API_SERVER_DEBUG&type=code)
 
 ### SENZING_API_SERVER_ENABLE_ADMIN
 
@@ -763,7 +763,7 @@
 1. Values:
    1. Default: `false`
    2. Specify `true` to enable administrative functions.
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_ENABLE_ADMIN&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_API_SERVER_ENABLE_ADMIN&type=code)
 
 ### SENZING_API_SERVER_HTTP_CONCURRENCY
 
@@ -774,7 +774,7 @@
 1. Values:
    1. Default: `200`
    2. If specified, then an integer greater-than 10 should be provided. Take care not to make this too large.
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_HTTP_CONCURRENCY&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_API_SERVER_HTTP_CONCURRENCY&type=code)
 
 ### SENZING_API_SERVER_INI_FILE
 
@@ -788,7 +788,7 @@
    5. See [SENZING_ENGINE_CONFIGURATION_JSON](#senzing_engine_configuration_json)
 1. Values:
    1. Default: **N/A**
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_INI_FILE&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_API_SERVER_INI_FILE&type=code)
 
 ### SENZING_API_SERVER_INIT_ENV_VAR
 
@@ -803,7 +803,7 @@
 1. Values:
    1. Default: **N/A**
    2. Should be the name of an environment variable that has been set and contains the JSON configuration.
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_INIT_ENV_VAR&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_API_SERVER_INIT_ENV_VAR&type=code)
 
 ### SENZING_API_SERVER_INIT_FILE
 
@@ -817,7 +817,7 @@
    5. See [SENZING_ENGINE_CONFIGURATION_JSON](#senzing_engine_configuration_json)
 1. Values:
    1. Default: **N/A**
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_INIT_FILE&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_API_SERVER_INIT_FILE&type=code)
 
 ### SENZING_API_SERVER_INIT_JSON
 
@@ -832,7 +832,7 @@
    5. See [SENZING_ENGINE_CONFIGURATION_JSON](#senzing_engine_configuration_json)
 1. Values:
    1. Default: **N/A**
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_INIT_JSON&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_API_SERVER_INIT_JSON&type=code)
 
 ### SENZING_API_SERVER_KEY_ALIAS
 
@@ -848,7 +848,7 @@
    1. Default: **N/A**
    2. Specify the key alias to choose the key from the PKCS12 [key store file](#senzing_api_server_key_store)
       that the server is using.
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_KEY_ALIAS&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_API_SERVER_KEY_ALIAS&type=code)
 
 ### SENZING_API_SERVER_KEY_STORE
 
@@ -863,7 +863,7 @@
 1. Values:
    1. Default: **N/A**
    2. Specify a file path to the PKCS12 key store file for the server to use.
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_KEY_STORE&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_API_SERVER_KEY_STORE&type=code)
 
 ### SENZING_API_SERVER_KEY_STORE_PASSWORD
 
@@ -878,7 +878,7 @@
 1. Values:
    1. Default: **N/A**
    2. Specify a password to decrypt the PKCS12 [key store file](#senzing_api_server_key_store) that the server is using.
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_KEY_STORE_PASSWORD&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_API_SERVER_KEY_STORE_PASSWORD&type=code)
 
 ### SENZING_API_SERVER_MODULE_NAME
 
@@ -887,7 +887,7 @@
       the module name defaults to `senzing-api-server`
 1. Values:
    1. Default: `senzing-api-server`
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_MODULE_NAME&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_API_SERVER_MODULE_NAME&type=code)
 
 ### SENZING_API_SERVER_MONITOR_FILE
 
@@ -897,7 +897,7 @@
 1. Values:
    1. Default: **N/A**
    2. Value should be a file path that is visible to the Senzing API Server process.
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_MONITOR_FILE&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_API_SERVER_MONITOR_FILE&type=code)
 
 ### SENZING_API_SERVER_PORT
 
@@ -911,7 +911,7 @@
    1. Default: 8250
    2. A valid non-zero integer for an available port may be specified.
    3. Specify `0` to have the Senzing API Server select an arbitrary port number from the available ports.
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_PORT&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_API_SERVER_PORT&type=code)
 
 ### SENZING_API_SERVER_QUIET
 
@@ -927,7 +927,7 @@
 1. Values:
    1. Default: `false`
    2. Specify `true` or set the environment variable with no value (empty-string) to suppress output.
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_QUIET&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_API_SERVER_QUIET&type=code)
 
 ### SENZING_API_SERVER_READ_ONLY
 
@@ -942,7 +942,7 @@
 1. Values:
    1. Default: `false`
    2. Set to `true` to put the Senzing API Server in read-only mode.
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_READ_ONLY&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_API_SERVER_READ_ONLY&type=code)
 
 ### SENZING_API_SERVER_SECURE_PORT
 
@@ -960,7 +960,7 @@
    1. Default: 8263
    2. A valid non-zero integer for an available port may be specified.
    3. Specify `0` to have the Senzing API Server select an arbitrary port number from the available ports.
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_SECURE_PORT&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_API_SERVER_SECURE_PORT&type=code)
 
 ### SENZING_API_SERVER_SKIP_ENGINE_PRIMING
 
@@ -972,7 +972,7 @@
 1. Values:
    1. Default: `false`
    2. Specify `true` or set the environment variable with no value (empty-string) to skip the priming the engine.
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_SKIP_ENGINE_PRIMING&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_API_SERVER_SKIP_ENGINE_PRIMING&type=code)
 
 ### SENZING_API_SERVER_SKIP_STARTUP_PERF
 
@@ -985,7 +985,7 @@
 1. Values:
    1. Default: `false`
    2. Specify `true` or set the environment variable with no value (empty-string) to skip the performance check.
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_SKIP_STARTUP_PERF&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_API_SERVER_SKIP_STARTUP_PERF&type=code)
 
 ### SENZING_API_SERVER_STATS_INTERVAL
 
@@ -999,7 +999,7 @@
    1. Default: `900000` (milliseconds -- the equivalent of 15 minutes)
    2. `0`: suppress logging of statistics
    3. Any positive integer will be interpretted as a number of milliseconds. Negative numbers are not allowed.
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_STATS_INTERVAL&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_API_SERVER_STATS_INTERVAL&type=code)
 
 ### SENZING_API_SERVER_URL
 
@@ -1029,45 +1029,45 @@
 1. Values:
    1. Default: `false`
    2. Specify `true` or set the environment variable with no value (empty-string) to intialize in verbose mode.
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_VERBOSE&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_API_SERVER_VERBOSE&type=code)
 
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_API_SERVER_URL&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_API_SERVER_URL&type=code)
 
 ### SENZING_AZURE_CONNECTION_STRING
 
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_AZURE_CONNECTION_STRING&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_AZURE_CONNECTION_STRING&type=code)
 
 ### SENZING_AZURE_FAILURE_CONNECTION_STRING
 
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_AZURE_FAILURE_CONNECTION_STRING&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_AZURE_FAILURE_CONNECTION_STRING&type=code)
 
 ### SENZING_AZURE_FAILURE_QUEUE_NAME
 
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_AZURE_FAILURE_QUEUE_NAME&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_AZURE_FAILURE_QUEUE_NAME&type=code)
 
 ### SENZING_AZURE_INFO_CONNECTION_STRING
 
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_AZURE_INFO_CONNECTION_STRING&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_AZURE_INFO_CONNECTION_STRING&type=code)
 
 ### SENZING_AZURE_INFO_QUEUE_NAME
 
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_AZURE_INFO_QUEUE_NAME&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_AZURE_INFO_QUEUE_NAME&type=code)
 
 ### SENZING_AZURE_QUEUE_NAME
 
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_AZURE_QUEUE_NAME&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_AZURE_QUEUE_NAME&type=code)
 
 ### SENZING_CONFIGURATION_CHECK_FREQUENCY
 
 1. Synopsis:
    1. Determine how often to check for a change in the Senzing configuration.
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_CONFIGURATION_CHECK_FREQUENCY&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_CONFIGURATION_CHECK_FREQUENCY&type=code)
 
 ### SENZING_CONFIGURATION_MODIFICATIONS
 
 1. Synopsis:
    1. A list of data sources to add to a Senzing configuration.
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_CONFIGURATION_MODIFICATIONS&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_CONFIGURATION_MODIFICATIONS&type=code)
 
 ### SENZING_CONFIG_PATH
 
@@ -1075,11 +1075,11 @@
    1. Used for `PIPELINE.CONFIGPATH` value in G2 Engine configuration.
 1. Values:
    1. Default: `/etc/opt/senzing`
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_CONFIG_PATH&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_CONFIG_PATH&type=code)
 
 ### SENZING_DATA_DIR
 
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DATA_DIR&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_DATA_DIR&type=code)
 
 ### SENZING_DATA_SOURCE
 
@@ -1090,7 +1090,7 @@
    1. Default: none
 1. Forms:
    1. Helm: senzing.dataSource
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DATA_SOURCE&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_DATA_SOURCE&type=code)
 
 ### SENZING_DATA_VERSION_DIR
 
@@ -1105,7 +1105,7 @@
 1. Values:
    1. Default: none
    1. Usually set to `/opt/senzing/data/1.0.0`
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DATA_VERSION_DIR&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_DATA_VERSION_DIR&type=code)
 
 ### SENZING_DATABASE_URL
 
@@ -1145,7 +1145,7 @@
 
 1. Forms:
    1. Helm: senzing.databaseUrl
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DATABASE_URL&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_DATABASE_URL&type=code)
 
 ### SENZING_DEBUG
 
@@ -1165,18 +1165,18 @@
 
 1. Forms:
    1. Helm: senzing.debug
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DEBUG&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_DEBUG&type=code)
 
 ### SENZING_DELAY_IN_SECONDS
 
 1. Synopsis:
    1. Time to delay before actually starting process
    1. Used for simple choreography.
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DELAY_IN_SECONDS&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_DELAY_IN_SECONDS&type=code)
 
 ### SENZING_DELAY_RANDOMIZED
 
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DELAY_RANDOMIZED&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_DELAY_RANDOMIZED&type=code)
 
 ### SENZING_DOCKER_HOST_IP_ADDR
 
@@ -1212,7 +1212,7 @@
 
       Copy and paste the printed export statement into the host terminal.
 
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_HOST_IP_ADDR&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_DOCKER_HOST_IP_ADDR&type=code)
 
 ### SENZING_DOCKER_IMAGE_VERSION_ADMINER
 
@@ -1221,7 +1221,7 @@
       [senzing/adminer](https://hub.docker.com/r/senzing/adminer).
 1. To see latest version, visit
    [docker-versions-latest.sh](https://github.com/senzing-garage/knowledge-base/blob/main/lists/docker-versions-latest.sh)
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_ADMINER&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_DOCKER_IMAGE_VERSION_ADMINER&type=code)
 
 ### SENZING_DOCKER_IMAGE_VERSION_APT
 
@@ -1230,7 +1230,7 @@
       [senzing/apt](https://hub.docker.com/r/senzing/apt).
 1. To see latest version, visit
    [docker-versions-latest.sh](https://github.com/senzing-garage/knowledge-base/blob/main/lists/docker-versions-latest.sh)
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_APT&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_DOCKER_IMAGE_VERSION_APT&type=code)
 
 ### SENZING_DOCKER_IMAGE_VERSION_DB2_DRIVER_INSTALLER
 
@@ -1239,7 +1239,7 @@
       [senzing/db2-driver-installer](https://hub.docker.com/r/senzing/db2-driver-installer).
 1. To see latest version, visit
    [docker-versions-latest.sh](https://github.com/senzing-garage/knowledge-base/blob/main/lists/docker-versions-latest.sh)
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_DB2_DRIVER_INSTALLER&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_DOCKER_IMAGE_VERSION_DB2_DRIVER_INSTALLER&type=code)
 
 ### SENZING_DOCKER_IMAGE_VERSION_ENTITY_SEARCH_WEB_APP
 
@@ -1248,7 +1248,7 @@
       [senzing/entity-search-web-app](https://hub.docker.com/r/senzing/entity-search-web-app).
 1. To see latest version, visit
    [docker-versions-latest.sh](https://github.com/senzing-garage/knowledge-base/blob/main/lists/docker-versions-latest.sh)
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_ENTITY_SEARCH_WEB_APP&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_DOCKER_IMAGE_VERSION_ENTITY_SEARCH_WEB_APP&type=code)
 
 ### SENZING_DOCKER_IMAGE_VERSION_ENTITY_SEARCH_WEB_APP_CONSOLE
 
@@ -1257,7 +1257,7 @@
       [senzing/entity-search-web-app-console](https://hub.docker.com/r/senzing/entity-search-web-app).
 1. To see latest version, visit
    [docker-versions-latest.sh](https://github.com/senzing-garage/knowledge-base/blob/main/lists/docker-versions-latest.sh)
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_ENTITY_SEARCH_WEB_APP_CONSOLE&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_DOCKER_IMAGE_VERSION_ENTITY_SEARCH_WEB_APP_CONSOLE&type=code)
 
 ### SENZING_DOCKER_IMAGE_VERSION_INIT_CONTAINER
 
@@ -1266,7 +1266,7 @@
       [senzing/init-container](https://hub.docker.com/r/senzing/init-container).
 1. To see latest version, visit
    [docker-versions-latest.sh](https://github.com/senzing-garage/knowledge-base/blob/main/lists/docker-versions-latest.sh)
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_INIT_CONTAINER&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_DOCKER_IMAGE_VERSION_INIT_CONTAINER&type=code)
 
 ### SENZING_DOCKER_IMAGE_VERSION_JUPYTER
 
@@ -1275,7 +1275,7 @@
       [senzing/jupyter](https://hub.docker.com/r/senzing/jupyter).
 1. To see latest version, visit
    [docker-versions-latest.sh](https://github.com/senzing-garage/knowledge-base/blob/main/lists/docker-versions-latest.sh)
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_JUPYTER&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_DOCKER_IMAGE_VERSION_JUPYTER&type=code)
 
 ### SENZING_DOCKER_IMAGE_VERSION_PHPPGADMIN
 
@@ -1284,7 +1284,7 @@
       [senzing/phppgadmin](https://hub.docker.com/r/senzing/phppgadmin).
 1. To see latest version, visit
    [docker-versions-latest.sh](https://github.com/senzing-garage/knowledge-base/blob/main/lists/docker-versions-latest.sh)
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_PHPPGADMIN&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_DOCKER_IMAGE_VERSION_PHPPGADMIN&type=code)
 
 ### SENZING_DOCKER_IMAGE_VERSION_PORTAINER
 
@@ -1293,7 +1293,7 @@
       [portainer/portainer](https://hub.docker.com/r/portainer/portainer).
 1. To see latest version, visit
    [docker-versions-latest.sh](https://github.com/senzing-garage/knowledge-base/blob/main/lists/docker-versions-latest.sh)
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_PORTAINER&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_DOCKER_IMAGE_VERSION_PORTAINER&type=code)
 
 ### SENZING_DOCKER_IMAGE_VERSION_POSTGRES
 
@@ -1302,7 +1302,7 @@
       [postgres](https://hub.docker.com/_/postgres).
 1. To see latest version, visit
    [docker-versions-latest.sh](https://github.com/senzing-garage/knowledge-base/blob/main/lists/docker-versions-latest.sh)
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_POSTGRES&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_DOCKER_IMAGE_VERSION_POSTGRES&type=code)
 
 ### SENZING_DOCKER_IMAGE_VERSION_POSTGRESQL_CLIENT
 
@@ -1311,7 +1311,7 @@
       [senzing/postgresql-client](https://hub.docker.com/r/senzing/postgresql-client).
 1. To see latest version, visit
    [docker-versions-latest.sh](https://github.com/senzing-garage/knowledge-base/blob/main/lists/docker-versions-latest.sh)
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_POSTGRESQL_CLIENT&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_DOCKER_IMAGE_VERSION_POSTGRESQL_CLIENT&type=code)
 
 ### SENZING_DOCKER_IMAGE_VERSION_RABBITMQ
 
@@ -1320,7 +1320,7 @@
       [bitnami/rabbitmq](https://hub.docker.com/r/bitnami/rabbitmq).
 1. To see latest version, visit
    [docker-versions-latest.sh](https://github.com/senzing-garage/knowledge-base/blob/main/lists/docker-versions-latest.sh)
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_RABBITMQ&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_DOCKER_IMAGE_VERSION_RABBITMQ&type=code)
 
 ### SENZING_DOCKER_IMAGE_VERSION_REDOER
 
@@ -1329,7 +1329,7 @@
       [senzing/redoer](https://hub.docker.com/r/senzing/redoer).
 1. To see latest version, visit
    [docker-versions-latest.sh](https://github.com/senzing-garage/knowledge-base/blob/main/lists/docker-versions-latest.sh)
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_REDOER&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_DOCKER_IMAGE_VERSION_REDOER&type=code)
 
 ### SENZING_DOCKER_IMAGE_VERSION_RESOLVER
 
@@ -1338,7 +1338,7 @@
       [senzing/resolver](https://hub.docker.com/r/senzing/resolver).
 1. To see latest version, visit
    [docker-versions-latest.sh](https://github.com/senzing-garage/knowledge-base/blob/main/lists/docker-versions-latest.sh)
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_RESOLVER&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_DOCKER_IMAGE_VERSION_RESOLVER&type=code)
 
 ### SENZING_DOCKER_IMAGE_VERSION_SENZING_API_SERVER
 
@@ -1347,7 +1347,7 @@
       [senzing/senzing-api-server](https://hub.docker.com/r/senzing/senzing-api-server).
 1. To see latest version, visit
    [docker-versions-latest.sh](https://github.com/senzing-garage/knowledge-base/blob/main/lists/docker-versions-latest.sh)
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_SENZING_API_SERVER&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_DOCKER_IMAGE_VERSION_SENZING_API_SERVER&type=code)
 
 ### SENZING_DOCKER_IMAGE_VERSION_SENZING_CONSOLE
 
@@ -1356,7 +1356,7 @@
       [senzing/console](https://hub.docker.com/r/senzing/console).
 1. To see latest version, visit
    [docker-versions-latest.sh](https://github.com/senzing-garage/knowledge-base/blob/main/lists/docker-versions-latest.sh)
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_SENZING_CONSOLE&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_DOCKER_IMAGE_VERSION_SENZING_CONSOLE&type=code)
 
 ### SENZING_DOCKER_IMAGE_VERSION_SENZING_DEBUG
 
@@ -1365,7 +1365,7 @@
       [senzing/senzing-debug](https://hub.docker.com/r/senzing/senzing-debug).
 1. To see latest version, visit
    [docker-versions-latest.sh](https://github.com/senzing-garage/knowledge-base/blob/main/lists/docker-versions-latest.sh)
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_SENZING_DEBUG&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_DOCKER_IMAGE_VERSION_SENZING_DEBUG&type=code)
 
 ### SENZING_DOCKER_IMAGE_VERSION_SQLITE_WEB
 
@@ -1374,7 +1374,7 @@
       [coleifer/sqlite-web](https://hub.docker.com/r/coleifer/sqlite-web).
 1. To see latest version, visit
    [docker-versions-latest.sh](https://github.com/senzing-garage/knowledge-base/blob/main/lists/docker-versions-latest.sh)
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_SQLITE_WEB&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_DOCKER_IMAGE_VERSION_SQLITE_WEB&type=code)
 
 ### SENZING_DOCKER_IMAGE_VERSION_SSHD
 
@@ -1383,7 +1383,7 @@
       [senzing/sshd](https://hub.docker.com/r/senzing/sshd).
 1. To see latest version, visit
    [docker-versions-latest.sh](https://github.com/senzing-garage/knowledge-base/blob/main/lists/docker-versions-latest.sh)
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_SSHD&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_DOCKER_IMAGE_VERSION_SSHD&type=code)
 
 ### SENZING_DOCKER_IMAGE_VERSION_STREAM_LOADER
 
@@ -1392,7 +1392,7 @@
       [senzing/stream-loader](https://hub.docker.com/r/senzing/stream-loader).
 1. To see latest version, visit
    [docker-versions-latest.sh](https://github.com/senzing-garage/knowledge-base/blob/main/lists/docker-versions-latest.sh)
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_STREAM_LOADER&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_DOCKER_IMAGE_VERSION_STREAM_LOADER&type=code)
 
 ### SENZING_DOCKER_IMAGE_VERSION_STREAM_LOGGER
 
@@ -1401,7 +1401,7 @@
       [senzing/stream-logger](https://hub.docker.com/r/senzing/stream-logger).
 1. To see latest version, visit
    [docker-versions-latest.sh](https://github.com/senzing-garage/knowledge-base/blob/main/lists/docker-versions-latest.sh)
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_STREAM_LOGGER&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_DOCKER_IMAGE_VERSION_STREAM_LOGGER&type=code)
 
 ### SENZING_DOCKER_IMAGE_VERSION_STREAM_PRODUCER
 
@@ -1410,7 +1410,7 @@
       [senzing/stream-producer](https://hub.docker.com/r/senzing/stream-producer).
 1. To see latest version, visit
    [docker-versions-latest.sh](https://github.com/senzing-garage/knowledge-base/blob/main/lists/docker-versions-latest.sh)
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_STREAM_PRODUCER&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_DOCKER_IMAGE_VERSION_STREAM_PRODUCER&type=code)
 
 ### SENZING_DOCKER_IMAGE_VERSION_WEB_APP_DEMO
 
@@ -1419,7 +1419,7 @@
       [senzing/web-app-demo](https://hub.docker.com/r/senzing/web-app-demo).
 1. To see latest version, visit
    [docker-versions-latest.sh](https://github.com/senzing-garage/knowledge-base/blob/main/lists/docker-versions-latest.sh)
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_WEB_APP_DEMO&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_DOCKER_IMAGE_VERSION_WEB_APP_DEMO&type=code)
 
 ### SENZING_DOCKER_IMAGE_VERSION_XTERM
 
@@ -1428,7 +1428,7 @@
       [senzing/xterm](https://hub.docker.com/r/senzing/xterm).
 1. To see latest version, visit
    [docker-versions-latest.sh](https://github.com/senzing-garage/knowledge-base/blob/main/lists/docker-versions-latest.sh)
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_XTERM&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_DOCKER_IMAGE_VERSION_XTERM&type=code)
 
 ### SENZING_DOCKER_IMAGE_VERSION_YUM
 
@@ -1437,11 +1437,11 @@
       [senzing/yum](https://hub.docker.com/r/senzing/yum).
 1. To see latest version, visit
    [docker-versions-latest.sh](https://github.com/senzing-garage/knowledge-base/blob/main/lists/docker-versions-latest.sh)
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_IMAGE_VERSION_YUM&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_DOCKER_IMAGE_VERSION_YUM&type=code)
 
 ### SENZING_DOCKER_LAUNCHED
 
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_LAUNCHED&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_DOCKER_LAUNCHED&type=code)
 
 ### SENZING_DOCKER_SOCKET
 
@@ -1455,7 +1455,7 @@
       export SENZING_DOCKER_SOCKET=/var/run/docker.sock
       ```
 
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKER_LAUNCHED&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_DOCKER_LAUNCHED&type=code)
 
 ### SENZING_DOCKERHUB_API_ENDPOINT_V1
 
@@ -1470,7 +1470,7 @@
       export SENZING_DOCKERHUB_API_ENDPOINT_V1=https://registry.hub.docker.com/v1
       ```
 
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKERHUB_API_ENDPOINT_V1&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_DOCKERHUB_API_ENDPOINT_V1&type=code)
 
 ### SENZING_DOCKERHUB_API_ENDPOINT_V2
 
@@ -1485,7 +1485,7 @@
       export SENZING_DOCKERHUB_API_ENDPOINT_V2=https://hub.docker.com/v2
       ```
 
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKERHUB_API_ENDPOINT_V2&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_DOCKERHUB_API_ENDPOINT_V2&type=code)
 
 ### SENZING_DOCKERHUB_ORGANIZATION
 
@@ -1499,19 +1499,19 @@
       export SENZING_DOCKERHUB_ORGANIZATION=senzing
       ```
 
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKERHUB_ORGANIZATION&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_DOCKERHUB_ORGANIZATION&type=code)
 
 ### SENZING_DOCKERHUB_PASSWORD
 
 1. Synopsis:
    1. [SENZING_DOCKERHUB_USERNAME](#senzing_dockerhub_username)'s password for logging into [hub.docker.com](https://hub.docker.com)
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKERHUB_PASSWORD&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_DOCKERHUB_PASSWORD&type=code)
 
 ### SENZING_DOCKERHUB_USERNAME
 
 1. Synopsis:
    1. Login username for for [hub.docker.com](https://hub.docker.com)
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOCKERHUB_USERNAME&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_DOCKERHUB_USERNAME&type=code)
 
 ### SENZING_DOWNLOAD_DIR
 
@@ -1525,7 +1525,7 @@
       export SENZING_DOWNLOAD_DIR=/tmp/my-downloads
       ```
 
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOWNLOAD_DIR&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_DOWNLOAD_DIR&type=code)
 
 ### SENZING_DOWNLOAD_FILE
 
@@ -1539,7 +1539,7 @@
       export SENZING_DOWNLOAD_FILE=/tmp/my-downloads/x-file.tmp
       ```
 
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_DOWNLOAD_FILE&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_DOWNLOAD_FILE&type=code)
 
 ### SENZING_ENGINE_CONFIGURATION_JSON
 
@@ -1562,7 +1562,7 @@
       }'
       ```
 
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_ENGINE_CONFIGURATION_JSON&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_ENGINE_CONFIGURATION_JSON&type=code)
 
 ### SENZING_ENTITY_TYPE
 
@@ -1573,7 +1573,7 @@
    1. Default: none
 1. Forms:
    1. Helm: senzing.entityType
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_ENTITY_TYPE&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_ENTITY_TYPE&type=code)
 
 ### SENZING_ETC_DIR
 
@@ -1583,7 +1583,7 @@
 1. Values:
    1. Default: none
    1. Usually set to `/etc/opt/senzing`
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_ETC_DIR&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_ETC_DIR&type=code)
 
 ### SENZING_EXIT_ON_EMPTY_QUEUE
 
@@ -1592,7 +1592,7 @@
 1. Values:
    1. Datatype: boolean
    1. Default: False
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_EXIT_ON_EMPTY_QUEUE&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_EXIT_ON_EMPTY_QUEUE&type=code)
 
 ### SENZING_EXIT_ON_THREAD_TERMINATION
 
@@ -1603,7 +1603,7 @@
 1. Values:
    1. Datatype: boolean
    1. Default: False
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_EXIT_ON_THREAD_TERMINATION&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_EXIT_ON_THREAD_TERMINATION&type=code)
 
 ### SENZING_EXIT_SLEEP_TIME_IN_SECONDS
 
@@ -1612,7 +1612,7 @@
    1. Used in autoscaling to slow down "cool down".
 1. Values:
    1. Default: 0
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_EXIT_SLEEP_TIME_IN_SECONDS&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_EXIT_SLEEP_TIME_IN_SECONDS&type=code)
 
 ### SENZING_EXPIRATION_WARNING_IN_DAYS
 
@@ -1620,7 +1620,7 @@
    1. Number of days before logging Senzing license expiration notices.
 1. Values:
    1. Default: 30
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_EXPIRATION_WARNING_IN_DAYS&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_EXPIRATION_WARNING_IN_DAYS&type=code)
 
 ### SENZING_G2_DIR
 
@@ -1630,11 +1630,11 @@
 1. Values:
    1. Default: none
    1. Usually set to `/opt/senzing/g2`
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_G2_DIR&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_G2_DIR&type=code)
 
 ### SENZING_GID
 
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_GID&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_GID&type=code)
 
 ### SENZING_GOVERNOR_DATABASE_URLS
 
@@ -1657,7 +1657,7 @@
       export SENZING_GOVERNOR_DATABASE_URLS=postgresql://username:password@host.example.com:5432/G2,postgresql://username:password@host.example.com:5432/G2_RES
       ```
 
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_GOVERNOR_DATABASE_URLS&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_GOVERNOR_DATABASE_URLS&type=code)
 
 ### SENZING_GOVERNOR_INTERVAL
 
@@ -1672,7 +1672,7 @@
       export SENZING_GOVERNOR_INTERVAL=10000000
       ```
 
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_GOVERNOR_INTERVAL&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_GOVERNOR_INTERVAL&type=code)
 
 ### SENZING_GOVERNOR_LIST_SEPARATOR
 
@@ -1689,7 +1689,7 @@
       export SENZING_GOVERNOR_LIST_SEPARATOR="+"
       ```
 
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_GOVERNOR_LIST_SEPARATOR&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_GOVERNOR_LIST_SEPARATOR&type=code)
 
 ### SENZING_GOVERNOR_POSTGRESQL_HIGH_WATERMARK
 
@@ -1706,7 +1706,7 @@
       export SENZING_GOVERNOR_POSTGRESQL_HIGH_WATERMARK=9000000000
       ```
 
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_GOVERNOR_POSTGRESQL_HIGH_WATERMARK&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_GOVERNOR_POSTGRESQL_HIGH_WATERMARK&type=code)
 
 ### SENZING_GOVERNOR_POSTGRESQL_LOW_WATERMARK
 
@@ -1723,7 +1723,7 @@
       export SENZING_GOVERNOR_POSTGRESQL_LOW_WATERMARK=7000000000
       ```
 
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_GOVERNOR_POSTGRESQL_LOW_WATERMARK&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_GOVERNOR_POSTGRESQL_LOW_WATERMARK&type=code)
 
 ### SENZING_GOVERNOR_PROJECT_DIR
 
@@ -1738,7 +1738,7 @@
       export SENZING_GOVERNOR_PROJECT_DIR=~/test-governor
       ```
 
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_GOVERNOR_PROJECT_DIR&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_GOVERNOR_PROJECT_DIR&type=code)
 
 ### SENZING_GOVERNOR_WAIT
 
@@ -1755,11 +1755,11 @@
       export SENZING_GOVERNOR_WAIT=600
       ```
 
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_GOVERNOR_WAIT&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_GOVERNOR_WAIT&type=code)
 
 ### SENZING_HOST
 
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_HOST&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_HOST&type=code)
 
 ### SENZING_INIT_CONTAINER_SLEEP
 
@@ -1767,15 +1767,15 @@
    1. Time to sleep, in seconds, before doing initialization
 1. Values:
    1. Default: 0
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_INIT_CONTAINER_SLEEP&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_INIT_CONTAINER_SLEEP&type=code)
 
 ### SENZING_INPUT_FILE
 
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_INPUT_FILE&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_INPUT_FILE&type=code)
 
 ### SENZING_INPUT_SQL_URL
 
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_INPUT_SQL_URL&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_INPUT_SQL_URL&type=code)
 
 ### SENZING_INPUT_URL
 
@@ -1783,11 +1783,11 @@
    1. URL of source file.
 1. Values:
    1. Default: none
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_INPUT_URL&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_INPUT_URL&type=code)
 
 ### SENZING_INTERNAL_DATABASE
 
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_INTERNAL_DATABASE&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_INTERNAL_DATABASE&type=code)
 
 ### SENZING_KAFKA_BOOTSTRAP_SERVER
 
@@ -1795,23 +1795,23 @@
    1. Hostname and port of Kafka server.
 1. Values:
    1. Default: localhost:9092
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_KAFKA_BOOTSTRAP_SERVER&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_KAFKA_BOOTSTRAP_SERVER&type=code)
 
 ### SENZING_KAFKA_CONFIGURATION
 
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_KAFKA_CONFIGURATION&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_KAFKA_CONFIGURATION&type=code)
 
 ### SENZING_KAFKA_FAILURE_BOOTSTRAP_SERVER
 
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_KAFKA_FAILURE_BOOTSTRAP_SERVER&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_KAFKA_FAILURE_BOOTSTRAP_SERVER&type=code)
 
 ### SENZING_KAFKA_FAILURE_CONFIGURATION
 
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_KAFKA_FAILURE_CONFIGURATION&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_KAFKA_FAILURE_CONFIGURATION&type=code)
 
 ### SENZING_KAFKA_FAILURE_TOPIC
 
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_KAFKA_FAILURE_TOPIC&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_KAFKA_FAILURE_TOPIC&type=code)
 
 ### SENZING_KAFKA_GROUP
 
@@ -1819,15 +1819,15 @@
    1. Kafka group.
 1. Values:
    1. Default: "senzing-kafka-group"
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_KAFKA_GROUP&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_KAFKA_GROUP&type=code)
 
 ### SENZING_KAFKA_INFO_BOOTSTRAP_SERVER
 
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_KAFKA_INFO_BOOTSTRAP_SERVER&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_KAFKA_INFO_BOOTSTRAP_SERVER&type=code)
 
 ### SENZING_KAFKA_INFO_CONFIGURATION
 
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_KAFKA_INFO_CONFIGURATION&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_KAFKA_INFO_CONFIGURATION&type=code)
 
 ### SENZING_KAFKA_INFO_GROUP
 
@@ -1835,11 +1835,11 @@
    1. Kafka group for the info messages.
 1. Values:
    1. Default: The value from [SENZING_KAFKA_GROUP](#senzing_kafka_group)
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_KAFKA_INFO_GROUP&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_KAFKA_INFO_GROUP&type=code)
 
 ### SENZING_KAFKA_INFO_TOPIC
 
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_KAFKA_INFO_TOPIC&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_KAFKA_INFO_TOPIC&type=code)
 
 ### SENZING_KAFKA_TOPIC
 
@@ -1847,7 +1847,7 @@
    1. Kafka topic.
 1. Values:
    1. Default: "senzing-kafka-topic"
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_KAFKA_TOPIC&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_KAFKA_TOPIC&type=code)
 
 ### SENZING_LOG_LEVEL
 
@@ -1863,7 +1863,7 @@
    1. Default: info
 1. Forms:
    1. Helm: senzing.logLevel
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_LOG_LEVEL&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_LOG_LEVEL&type=code)
 
 ### SENZING_LOG_LICENSE_PERIOD_IN_SECONDS
 
@@ -1871,7 +1871,7 @@
    1. Interval between logging Senzing license information.
 1. Values:
    1. Default: 1 day
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_LOG_LICENSE_PERIOD_IN_SECONDS&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_LOG_LICENSE_PERIOD_IN_SECONDS&type=code)
 
 ### SENZING_MONITORING_PERIOD
 
@@ -1879,7 +1879,7 @@
    1. Time, in seconds, between monitoring log records.
 1. Values:
    1. Default: 300
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_MONITORING_PERIOD&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_MONITORING_PERIOD&type=code)
 
 ### SENZING_MONITORING_PERIOD_IN_SECONDS
 
@@ -1887,7 +1887,7 @@
    1. Time, in seconds, between monitoring log records.
 1. Values:
    1. Default: 600
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_MONITORING_PERIOD_IN_SECONDS&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_MONITORING_PERIOD_IN_SECONDS&type=code)
 
 ### SENZING_NETWORK
 
@@ -1904,7 +1904,7 @@
       export SENZING_NETWORK=nameofthe_network
       ```
 
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_NETWORK&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_NETWORK&type=code)
 
 ### SENZING_OPT_IBM_DIR
 
@@ -1915,7 +1915,7 @@
 1. Values:
    1. Default: none
    1. Usually set to `/opt/IBM`
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_OPT_IBM_DIR&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_OPT_IBM_DIR&type=code)
 
 ### SENZING_OPT_MICROSOFT_DIR
 
@@ -1924,11 +1924,11 @@
 1. Values:
    1. Default: none
    1. Usually set to `/opt/microsoft`
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_OPT_MICROSOFT_DIR&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_OPT_MICROSOFT_DIR&type=code)
 
 ### SENZING_OUTPUT_FILE
 
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_OUTPUT_FILE&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_OUTPUT_FILE&type=code)
 
 ### SENZING_PLUGINS_DIR
 
@@ -1944,25 +1944,25 @@
       export SENZING_PLUGINS_DIR=${GIT_REPOSITORY_DIR}/resources/plugins
       ```
 
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_PLUGINS_DIR&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_PLUGINS_DIR&type=code)
 
 ### SENZING_PORT
 
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_PORT&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_PORT&type=code)
 
 ### SENZING_PORTAINER_DIR
 
 1. Synopsis:
    1. A directory where [Portainer](https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/portainer.md) can keep variable data.
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_PORTAINER_DIR&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_PORTAINER_DIR&type=code)
 
 ### SENZING_PRIME_ENGINE
 
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_PRIME_ENGINE&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_PRIME_ENGINE&type=code)
 
 ### SENZING_PSTACK_PID
 
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_PSTACK_PID&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_PSTACK_PID&type=code)
 
 ### SENZING_PROJECT_DIR
 
@@ -1977,7 +1977,7 @@
       export SENZING_PROJECT_DIR=~/my-senzing-project
       ```
 
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_PROJECT_DIR&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_PROJECT_DIR&type=code)
 
 ### SENZING_PROJECT_NAME
 
@@ -1993,7 +1993,7 @@
       export SENZING_PROJECT_NAME=~/test01
       ```
 
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_PROJECT_NAME&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_PROJECT_NAME&type=code)
 
 ### SENZING_SQL_CONNECTION
 
@@ -2009,7 +2009,7 @@
       export SENZING_SQL_CONNECTION=mysql://username:password@host.example.com:3306/?schema=schemaname
       ```
 
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_SQL_CONNECTION&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_SQL_CONNECTION&type=code)
 
 ### SENZING_QUEUE_MAX
 
@@ -2017,7 +2017,7 @@
    1. Maximum items for internal queue.
 1. Values:
    1. Default: 10
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_QUEUE_MAX&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_QUEUE_MAX&type=code)
 
 ### SENZING_RABBITMQ_EXCHANGE
 
@@ -2025,13 +2025,13 @@
    1. Name of the RabbitMQ exchange used for routing messages.
 1. Values
    1. Default: "senzing-rabbitmq-exchange"
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RABBITMQ_EXCHANGE&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_RABBITMQ_EXCHANGE&type=code)
 
 ### SENZING_RABBITMQ_FAILURE_EXCHANGE
 
 1. Synopsis:
    1. Name of the RabbitMQ exchange used for routing info messages about loaded records
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RABBITMQ_FAILURE_EXCHANGE&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_RABBITMQ_FAILURE_EXCHANGE&type=code)
 
 ### SENZING_RABBITMQ_FAILURE_HOST
 
@@ -2039,7 +2039,7 @@
    1. Host name of the RabbitMQ server used to post records that failed to load
 1. Values:
    1. Default: The value of SENZING_RABBITMQ_HOST
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RABBITMQ_FAILURE_HOST&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_RABBITMQ_FAILURE_HOST&type=code)
 
 ### SENZING_RABBITMQ_FAILURE_PASSWORD
 
@@ -2047,7 +2047,7 @@
    1. The password for the RabbitMQ failure server.
 1. Values:
    1. Default: The value of SENZING_RABBITMQ_PASSWORD
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RABBITMQ_FAILURE_PASSWORD&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_RABBITMQ_FAILURE_PASSWORD&type=code)
 
 ### SENZING_RABBITMQ_FAILURE_PORT
 
@@ -2055,7 +2055,7 @@
    1. The port to use to connect to the RabbitMQ server specified by SENZING_RABBITMQ_FAILURE_HOST
 1. Values:
    1. Default: The value of SENZING_RABBITMQ_PORT
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RABBITMQ_FAILURE_PORT&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_RABBITMQ_FAILURE_PORT&type=code)
 
 ### SENZING_RABBITMQ_FAILURE_QUEUE
 
@@ -2063,7 +2063,7 @@
    1. Name of the RabbitMQ queue used for records that failed to load.
 1. Values:
    1. Default: "senzing-rabbitmq-queue"
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RABBITMQ_FAILURE_QUEUE&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_RABBITMQ_FAILURE_QUEUE&type=code)
 
 ### SENZING_RABBITMQ_FAILURE_ROUTING_KEY
 
@@ -2071,7 +2071,7 @@
    1. The RabbitMQ routing key to use when creating a binding or publishing a record.
 1. Values:
    1. Default: "senzing.failure"
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RABBITMQ_FAILURE_ROUTING_KEY&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_RABBITMQ_FAILURE_ROUTING_KEY&type=code)
 
 ### SENZING_RABBITMQ_FAILURE_USERNAME
 
@@ -2079,7 +2079,7 @@
    1. The username for the RabbitMQ server.
 1. Values:
    1. Default: The value of SENZING_RABBITMQ_USERNAME
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RABBITMQ_FAILURE_USERNAME&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_RABBITMQ_FAILURE_USERNAME&type=code)
 
 ### SENZING_RABBITMQ_FAILURE_VIRTUAL_HOST
 
@@ -2087,7 +2087,7 @@
    1. The name of the virtual host where the failure queue exists.
 1. Values:
    1. Default: SENZING_RABBITMQ_VIRTUAL_HOST
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RABBITMQ_FAILURE_VIRTUAL_HOST&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_RABBITMQ_FAILURE_VIRTUAL_HOST&type=code)
 
 ### SENZING_RABBITMQ_HEARTBEAT_IN_SECONDS
 
@@ -2095,7 +2095,7 @@
    1. Heartbeat time in seconds on connections to the RabbitMQ server.
 1. Values:
    1. Default: "60"
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RABBITMQ_HEARTBEAT_IN_SECONDS&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_RABBITMQ_HEARTBEAT_IN_SECONDS&type=code)
    1. [stream-loader](https://github.com/senzing-garage/stream-loader)
 
 ### SENZING_RABBITMQ_HOST
@@ -2104,13 +2104,13 @@
    1. Host name of the RabbitMQ server.
 1. Values:
    1. Default: "localhost:5672"
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RABBITMQ_HOST&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_RABBITMQ_HOST&type=code)
 
 ### SENZING_RABBITMQ_INFO_EXCHANGE
 
 1. Synopsis:
    1. Name of the RabbitMQ exchange used for routing info messages about loaded records
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RABBITMQ_INFO_EXCHANGE&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_RABBITMQ_INFO_EXCHANGE&type=code)
 
 ### SENZING_RABBITMQ_INFO_HOST
 
@@ -2118,7 +2118,7 @@
    1. Host name of the RabbitMQ server used to post the info about a loaded record
 1. Values:
    1. Default: The value of SENZING_RABBITMQ_HOST
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RABBITMQ_INFO_HOST&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_RABBITMQ_INFO_HOST&type=code)
 
 ### SENZING_RABBITMQ_INFO_PASSWORD
 
@@ -2126,7 +2126,7 @@
    1. The password for the RabbitMQ info server.
 1. Values:
    1. Default: The value of SENZING_RABBITMQ_PASSWORD
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RABBITMQ_INFO_PASSWORD&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_RABBITMQ_INFO_PASSWORD&type=code)
 
 ### SENZING_RABBITMQ_INFO_PORT
 
@@ -2134,7 +2134,7 @@
    1. The port to use to connect to the RabbitMQ server specified by SENZING_RABBITMQ_INFO_HOST
 1. Values:
    1. Default: The value of SENZING_RABBITMQ_PORT
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RABBITMQ_INFO_PORT&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_RABBITMQ_INFO_PORT&type=code)
 
 ### SENZING_RABBITMQ_INFO_QUEUE
 
@@ -2142,7 +2142,7 @@
    1. Name of the RabbitMQ queue used for communication.
 1. Values:
    1. Default: "senzing-rabbitmq-queue"
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RABBITMQ_INFO_QUEUE&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_RABBITMQ_INFO_QUEUE&type=code)
 
 ### SENZING_RABBITMQ_INFO_ROUTING_KEY
 
@@ -2150,7 +2150,7 @@
    1. The RabbitMQ routing key to use when creating a binding or publishing a record.
 1. Values:
    1. Default: "senzing.info"
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RABBITMQ_INFO_ROUTING_KEY&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_RABBITMQ_INFO_ROUTING_KEY&type=code)
 
 ### SENZING_RABBITMQ_INFO_USERNAME
 
@@ -2158,7 +2158,7 @@
    1. The username for the RabbitMQ server.
 1. Values:
    1. Default: The value of SENZING_RABBITMQ_USERNAME
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RABBITMQ_INFO_USERNAME&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_RABBITMQ_INFO_USERNAME&type=code)
 
 ### SENZING_RABBITMQ_INFO_VIRTUAL_HOST
 
@@ -2166,7 +2166,7 @@
    1. The name of the virtual host where the info queue exists.
 1. Values:
    1. Default: SENZING_RABBITMQ_VIRTUAL_HOST
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RABBITMQ_INFO_VIRTUAL_HOST&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_RABBITMQ_INFO_VIRTUAL_HOST&type=code)
 
 ### SENZING_RABBITMQ_PASSWORD
 
@@ -2174,7 +2174,7 @@
    1. The password for the RabbitMQ queue.
 1. Values:
    1. Default: "bitnami"
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RABBITMQ_PASSWORD&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_RABBITMQ_PASSWORD&type=code)
 
 ### SENZING_RABBITMQ_PORT
 
@@ -2182,7 +2182,7 @@
    1. The port to use to connect to the RabbitMQ server specified by SENZING_RABBITMQ_HOST
 1. Values:
    1. Default: "5672"
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RABBITMQ_PORT&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_RABBITMQ_PORT&type=code)
 
 ### SENZING_RABBITMQ_PREFETCH_COUNT
 
@@ -2190,7 +2190,7 @@
    1. The number of records to get from the RabbitMQ queue in one request. Reduces the number of overall requests to the RabbitMQ server and improves performance.
 1. Values:
    1. Default: 50
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RABBITMQ_PREFETCH_COUNT&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_RABBITMQ_PREFETCH_COUNT&type=code)
 
 ### SENZING_RABBITMQ_PUBLISH_BATCH_SIZE
 
@@ -2198,7 +2198,7 @@
    1. The number of records to publish to RabbitMQ in a batch
 1. Values:
    1. Default: "1000"
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RABBITMQ_PUBLISH_BATCH_SIZE&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_RABBITMQ_PUBLISH_BATCH_SIZE&type=code)
 
 ### SENZING_RABBITMQ_PUBLISH_INTERVAL
 
@@ -2206,7 +2206,7 @@
    1. How often (in seconds) to publish a batch of records to the RabbitMQ Queue
 1. Values:
    1. Default: "0.0"
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RABBITMQ_PUBLISH_INTERVAL&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_RABBITMQ_PUBLISH_INTERVAL&type=code)
 
 ### SENZING_RABBITMQ_QUEUE
 
@@ -2214,7 +2214,7 @@
    1. Name of the RabbitMQ queue used for communication.
 1. Values:
    1. Default: "senzing-rabbitmq-queue"
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RABBITMQ_QUEUE&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_RABBITMQ_QUEUE&type=code)
 
 ### SENZING_RABBITMQ_RECONNECT_DELAY_IN_SECONDS
 
@@ -2222,7 +2222,7 @@
    1. The time (in seconds) to wait between attempts to reconnect to the RabbitMQ broker.
 1. Values:
    1. Default: 60
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RABBITMQ_RECONNECT_DELAY_IN_SECONDS&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_RABBITMQ_RECONNECT_DELAY_IN_SECONDS&type=code)
 
 ### SENZING_RABBITMQ_RECONNECT_NUMBER_OF_RETRIES
 
@@ -2230,7 +2230,7 @@
    1. The number of times to try reconnecting a dropped connection to the RabbitMQ broker.
 1. Values:
    1. Default: 10
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RABBITMQ_RECONNECT_NUMBER_OF_RETRIES&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_RABBITMQ_RECONNECT_NUMBER_OF_RETRIES&type=code)
 
 ### SENZING_RABBITMQ_ROUTING_FAILURE_KEY
 
@@ -2238,7 +2238,7 @@
    1. The RabbitMQ routing key to use when creating a binding to the failure queue or publishing to the failure exchange.
 1. Values:
    1. Default: "senzing.failure"
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RABBITMQ_ROUTING_FAILURE_KEY&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_RABBITMQ_ROUTING_FAILURE_KEY&type=code)
 
 ### SENZING_RABBITMQ_ROUTING_INFO_KEY
 
@@ -2246,7 +2246,7 @@
    1. The RabbitMQ routing key to use when creating a binding to the info queue or publishing to the info exchange.
 1. Values:
    1. Default: "senzing.info"
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RABBITMQ_ROUTING_INFO_KEY&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_RABBITMQ_ROUTING_INFO_KEY&type=code)
 
 ### SENZING_RABBITMQ_ROUTING_KEY
 
@@ -2254,7 +2254,7 @@
    1. The RabbitMQ routing key to use when creating a binding or publishing a record.
 1. Values:
    1. Default: "senzing.records"
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RABBITMQ_ROUTING_KEY&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_RABBITMQ_ROUTING_KEY&type=code)
 
 ### SENZING_RABBITMQ_USERNAME
 
@@ -2262,13 +2262,13 @@
    1. The username for the RabbitMQ queue.
 1. Values:
    1. Default: "user"
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RABBITMQ_USERNAME&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_RABBITMQ_USERNAME&type=code)
 
 ### SENZING_RABBITMQ_USE_EXISTING_ENTITIES
 
 1. Synopsis:
    1. Use existing RabbitMQ entities (exchanges, queues). That is, don't create the entities.
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RABBITMQ_USE_EXISTING_ENTITIES&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_RABBITMQ_USE_EXISTING_ENTITIES&type=code)
 
 ### SENZING_RABBITMQ_VIRTUAL_HOST
 
@@ -2276,7 +2276,7 @@
    1. The name of the virtual host where the queues exists.
 1. Values:
    1. Default: The RabbitMQ defined default virtual host, which is currently '\'
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RABBITMQ_VIRTUAL_HOST&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_RABBITMQ_VIRTUAL_HOST&type=code)
 
 ### SENZING_RANDOM_SEED
 
@@ -2286,7 +2286,7 @@
       Values greater than 0 give repeatable results.
 1. Values:
    1. Default: "0"
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RANDOM_SEED&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_RANDOM_SEED&type=code)
 
 ### SENZING_RECORD_IDENTIFIER
 
@@ -2295,7 +2295,7 @@
    1. Used to identify specific records when logging errors.
 1. Values:
    1. Default: "RECORD_ID"
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RECORD_IDENTIFIER&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_RECORD_IDENTIFIER&type=code)
 
 ### SENZING_RECORD_MAX
 
@@ -2304,7 +2304,7 @@
 1. Values:
    1. Value of 0 means no maximum.
    1. Default: "0"
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RECORD_MAX&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_RECORD_MAX&type=code)
 
 ### SENZING_RECORD_MIN
 
@@ -2312,7 +2312,7 @@
    1. Identify lowest record number to generate.
 1. Values:
    1. Default: "1"
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RECORD_MIN&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_RECORD_MIN&type=code)
 
 ### SENZING_RECORD_MONITOR
 
@@ -2320,7 +2320,7 @@
    1. Write a log record every N mock records.
 1. Values:
    1. Default: "10000"
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RECORD_MONITOR&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_RECORD_MONITOR&type=code)
 
 ### SENZING_RECORDS_PER_SECOND
 
@@ -2329,7 +2329,7 @@
 1. Values:
    1. Value of 0 means no throttling.
    1. Default: "0"
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RECORDS_PER_SECOND&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_RECORDS_PER_SECOND&type=code)
 
 ### SENZING_RECORD_SIZE_MAX
 
@@ -2340,7 +2340,7 @@
 1. Values:
    1. Value of 0 means no maximum.
    1. Default: "0"
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RECORD_SIZE_MAX&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_RECORD_SIZE_MAX&type=code)
 
 ### SENZING_RESOURCE_PATH
 
@@ -2348,7 +2348,7 @@
    1. Used in `PIPELINE_RESOURCEPATH` for G2 Engine configuration.
 1. Values:
    1. Default: `/opt/senzing/g2/resources`
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RESOURCE_PATH&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_RESOURCE_PATH&type=code)
 
 ### SENZING_RPM_FILENAME
 
@@ -2359,7 +2359,7 @@
 1. Values:
    1. Format: `senzingapi-MM.mm.PP.x86_64.rpm`
    1. Default: none
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RPM_FILENAME&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_RPM_FILENAME&type=code)
 
 ### SENZING_RUNAS_USER
 
@@ -2375,21 +2375,21 @@
       export SENZING_RUNAS_USER="0"
       ```
 
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_RUNAS_USER&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_RUNAS_USER&type=code)
 
 ### SENZING_SKIP_DATABASE_PERFORMANCE_TEST
 
 1. Synopsis:
    1. When true, do not perform initial performance evaluation.
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_SKIP_DATABASE_PERFORMANCE_TEST&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_SKIP_DATABASE_PERFORMANCE_TEST&type=code)
 
 ### SENZING_SKIP_GOVERNOR
 
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_SKIP_GOVERNOR&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_SKIP_GOVERNOR&type=code)
 
 ### SENZING_SKIP_INFO_FILTER
 
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_SKIP_INFO_FILTER&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_SKIP_INFO_FILTER&type=code)
 
 ### SENZING_SLEEP_TIME
 
@@ -2397,18 +2397,18 @@
    1. Amount of time to sleep, in seconds, before running command.
 1. Forms:
    1. Helm: senzing.sleepTime
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_SLEEP_TIME&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_SLEEP_TIME&type=code)
 
 ### SENZING_SLEEP_TIME_IN_SECONDS
 
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_SLEEP_TIME_IN_SECONDS&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_SLEEP_TIME_IN_SECONDS&type=code)
 
 ### SENZING_SQS_DEAD_LETTER_QUEUE_ENABLED
 
 1. Synopsis:
    1. Indicate that an AWS SQS "dead-letter" queue has been enables.
    1. This changes the logging behavior.
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_SQS_DEAD_LETTER_QUEUE_ENABLED&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_SQS_DEAD_LETTER_QUEUE_ENABLED&type=code)
 
 ### SENZING_SQS_FAILURE_QUEUE_URL
 
@@ -2416,7 +2416,7 @@
    1. The Amazon SQS Queue URL used convey messages that cannot be processed by the Senzing Engine.
 1. Examples:
    1. `https://sqs.us-east-1.amazonaws.com/000000000000/senzing-failure-queue`
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_SQS_FAILURE_QUEUE_URL&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_SQS_FAILURE_QUEUE_URL&type=code)
 
 ### SENZING_SQS_INFO_QUEUE_DELAY_SECONDS
 
@@ -2426,7 +2426,7 @@
    1. Default: 10
 1. References:
    1. [Boto3 send_message](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/sqs.html#SQS.Client.send_message) See `DelaySeconds` parameter.
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_SQS_INFO_QUEUE_DELAY_SECONDS&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_SQS_INFO_QUEUE_DELAY_SECONDS&type=code)
 
 ### SENZING_SQS_INFO_QUEUE_URL
 
@@ -2434,7 +2434,7 @@
    1. The Amazon SQS Queue URL used convey "withInfo" messages from the Senzing Engine.
 1. Examples:
    1. `https://sqs.us-east-1.amazonaws.com/000000000000/senzing-info-queue`
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_SQS_INFO_QUEUE_URL&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_SQS_INFO_QUEUE_URL&type=code)
 
 ### SENZING_SQS_QUEUE_URL
 
@@ -2442,13 +2442,13 @@
    1. The Amazon SQS Queue URL used convey messages for ingestion into the Senzing Engine.
 1. Examples:
    1. `https://sqs.us-east-1.amazonaws.com/000000000000/senzing-queue`
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_SQS_QUEUE_URL&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_SQS_QUEUE_URL&type=code)
 
 ### SENZING_SQS_WAIT_TIME_SECONDS
 
 1. Synopsis:
    1. For use with SQS "long-polling"
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_SQS_WAIT_TIME_SECONDS&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_SQS_WAIT_TIME_SECONDS&type=code)
 
 ### SENZING_STREAM_LOADER_DIRECTIVE_NAME
 
@@ -2460,7 +2460,7 @@
       [stream-loader](https://github.com/senzing-garage/stream-loader#directive).
 1. Values:
    1. Default: `senzingStreamLoader`
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_STREAM_LOADER_DIRECTIVE_NAME&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_STREAM_LOADER_DIRECTIVE_NAME&type=code)
 
 ### SENZING_SUBCOMMAND
 
@@ -2470,11 +2470,11 @@
    1. Run `program-name --help` for complete list.
 1. Forms:
    1. Helm: senzing.subcommand
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_SUBCOMMAND&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_SUBCOMMAND&type=code)
 
 ### SENZING_SUPPORT_PATH
 
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_SUPPORT_PATH&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_SUPPORT_PATH&type=code)
 
 ### SENZING_THREADS_PER_PROCESS
 
@@ -2482,35 +2482,35 @@
    1. Number of threads per process to allocate for processing.
 1. Values:
    1. Default: 4
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_THREADS_PER_PROCESS&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_THREADS_PER_PROCESS&type=code)
 
 ### SENZING_TOOLS_AVOID_SERVING
 
 1. Synopsis:
 1. Values:
 1. Examples:
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_AVOID_SERVING&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_AVOID_SERVING&type=code)
 
 ### SENZING_TOOLS_CLIENT_CA_CERTIFICATE_FILE
 
 1. Synopsis:
 1. Values:
 1. Examples:
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_CLIENT_CA_CERTIFICATE_FILE&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_CLIENT_CA_CERTIFICATE_FILE&type=code)
 
 ### SENZING_TOOLS_CONFIG_PATH
 
 1. Synopsis:
 1. Values:
 1. Examples:
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_CONFIG_PATH&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_CONFIG_PATH&type=code)
 
 ### SENZING_TOOLS_CONFIGURATION
 
 1. Synopsis:
 1. Values:
 1. Examples:
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_CONFIGURATION&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_CONFIGURATION&type=code)
 
 ### SENZING_TOOLS_DATABASE_URL
 
@@ -2525,7 +2525,7 @@
    1. **PostgreSQL:** "postgresql://username:<password@host.example.com>:5432/G2/?sslmode=disable"
    1. **PostgreSQL:** "postgresql://username:<password@host.example.com>:5432/G2"
    1. **Sqlite3:** "sqlite3://na:na@/tmp/sqlite/G2C.db"
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_DATABASE_URL&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_DATABASE_URL&type=code)
 
 ### SENZING_TOOLS_DATASOURCES
 
@@ -2541,98 +2541,98 @@
       export SENZING_TOOLS_DATASOURCES="CUSTOMER REFERENCE WATCHLIST"
       ```
 
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_DATASOURCES&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_DATASOURCES&type=code)
 
 ### SENZING_TOOLS_DELAY_IN_SECONDS
 
 1. Synopsis:
 1. Values:
 1. Examples:
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_DELAY_IN_SECONDS&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_DELAY_IN_SECONDS&type=code)
 
 ### SENZING_TOOLS_ENABLE_ALL
 
 1. Synopsis:
 1. Values:
 1. Examples:
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_ENABLE_ALL&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_ENABLE_ALL&type=code)
 
 ### SENZING_TOOLS_ENABLE_HTTP
 
 1. Synopsis:
 1. Values:
 1. Examples:
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_ENABLE_HTTP&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_ENABLE_HTTP&type=code)
 
 ### SENZING_TOOLS_ENABLE_SENZING_CHAT_API
 
 1. Synopsis:
 1. Values:
 1. Examples:
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_ENABLE_SENZING_CHAT_API&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_ENABLE_SENZING_CHAT_API&type=code)
 
 ### SENZING_TOOLS_ENABLE_SENZING_REST_API
 
 1. Synopsis:
 1. Values:
 1. Examples:
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_ENABLE_SENZING_REST_API&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_ENABLE_SENZING_REST_API&type=code)
 
 ### SENZING_TOOLS_ENABLE_SWAGGER_UI
 
 1. Synopsis:
 1. Values:
 1. Examples:
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_ENABLE_SWAGGER_UI&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_ENABLE_SWAGGER_UI&type=code)
 
 ### SENZING_TOOLS_ENABLE_SZCONFIG
 
 1. Synopsis:
 1. Values:
 1. Examples:
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_ENABLE_SZCONFIG&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_ENABLE_SZCONFIG&type=code)
 
-### SENZING_TOOLS_ENABLE_SZCONFIGMGR
+### SENZING_TOOLS_ENABLE_SZCONFIGMANAGER
 
 1. Synopsis:
 1. Values:
 1. Examples:
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_ENABLE_SZCONFIGMGR&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_ENABLE_SZCONFIGMANAGER&type=code)
 
 ### SENZING_TOOLS_ENABLE_SZDIAGNOSTIC
 
 1. Synopsis:
 1. Values:
 1. Examples:
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_ENABLE_SZDIAGNOSTIC&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_ENABLE_SZDIAGNOSTIC&type=code)
 
 ### SENZING_TOOLS_ENABLE_SZENGINE
 
 1. Synopsis:
 1. Values:
 1. Examples:
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_ENABLE_SZENGINE&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_ENABLE_SZENGINE&type=code)
 
 ### SENZING_TOOLS_ENABLE_SZPRODUCT
 
 1. Synopsis:
 1. Values:
 1. Examples:
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_ENABLE_SZPRODUCT&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_ENABLE_SZPRODUCT&type=code)
 
 ### SENZING_TOOLS_ENABLE_XTERM
 
 1. Synopsis:
 1. Values:
 1. Examples:
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_ENABLE_XTERM&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_ENABLE_XTERM&type=code)
 
 ### SENZING_TOOLS_ENGINE_CONFIGURATION_FILE
 
 1. Synopsis:
 1. Values:
 1. Examples:
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_ENGINE_CONFIGURATION_FILE&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_ENGINE_CONFIGURATION_FILE&type=code)
 
 ### SENZING_TOOLS_ENGINE_CONFIGURATION_JSON
 
@@ -2675,14 +2675,14 @@
 1. References:
    1. [G2Engine Configuration and the Senzing API](https://senzing.zendesk.com/hc/en-us/articles/360038774134-G2Engine-Configuration-and-the-Senzing-API)
    1. [Scaling Out Your Database With Clustering](https://senzing.zendesk.com/hc/en-us/articles/360010599254-Scaling-Out-Your-Database-With-Clustering)
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_ENGINE_CONFIGURATION_JSON&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_ENGINE_CONFIGURATION_JSON&type=code)
 
 ### SENZING_TOOLS_ENGINE_INSTANCE_NAME
 
 1. Synopsis:
 1. Values:
 1. Examples:
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_ENGINE_INSTANCE_NAME&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_ENGINE_INSTANCE_NAME&type=code)
 
 ### SENZING_TOOLS_ENGINE_LOG_LEVEL
 
@@ -2693,7 +2693,7 @@
 1. Values:
    1. 0 - no logging
    1. 1 - logging
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_ENGINE_LOG_LEVEL&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_ENGINE_LOG_LEVEL&type=code)
 
 ### SENZING_TOOLS_ENGINE_MODULE_NAME
 
@@ -2703,34 +2703,34 @@
       [G2engine.Init()](https://pkg.go.dev/github.com/senzing/g2-sdk-go-base/g2engine#G2engine.Init).
 1. Values:
    1. Default: none
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_ENGINE_MODULE_NAME&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_ENGINE_MODULE_NAME&type=code)
 
 ### SENZING_TOOLS_GRPC_PORT
 
 1. Synopsis:
 1. Values:
 1. Examples:
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_GRPC_PORT&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_GRPC_PORT&type=code)
 
 ### SENZING_TOOLS_GRPC_URL
 
 1. Synopsis:
 1. Values:
 1. Examples:
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_GRPC_URL&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_GRPC_URL&type=code)
 
 ### SENZING_TOOLS_HTTP_PORT
 
 1. Synopsis:
 1. Values:
 1. Examples:
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_HTTP_PORT&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_HTTP_PORT&type=code)
 
 ### SENZING_TOOLS_INPUT_FILE_TYPE
 
 1. Synopsis: File type to treat the specificed input file (given by SENZING_TOOLS_INPUT_URL) as.
 1. Example: JSONL
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_INPUT_FILE_TYPE&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_INPUT_FILE_TYPE&type=code)
 
 ### SENZING_TOOLS_INPUT_URL
 
@@ -2739,7 +2739,7 @@
 1. Examples:
    1. file:///path/to/json/lines/file.jsonl
    1. <https://public-read-access.s3.amazonaws.com/TestDataSets/SenzingTruthSet/truth-set-3.0.0.jsonl>
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_INPUT_URL&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_INPUT_URL&type=code)
 
 ### SENZING_TOOLS_JSON_OUTPUT
 
@@ -2747,14 +2747,14 @@
 1. Values:
    1. true
    1. false
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_IJSON_OUTPUT&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_IJSON_OUTPUT&type=code)
 
 ### SENZING_TOOLS_LICENSE_STRING_BASE64
 
 1. Synopsis:
 1. Values:
 1. Examples:
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_LICENSE_STRING_BASE64&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_LICENSE_STRING_BASE64&type=code)
 
 ### SENZING_TOOLS_LOG_LEVEL
 
@@ -2770,263 +2770,263 @@
    1. "PANIC" - The underlying system is at issue.
 1. References:
    1. [Log Levels](https://github.com/senzing-garage/knowledge-base/blob/main/lists/log-levels.md)
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_LOG_LEVEL&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_LOG_LEVEL&type=code)
 
 ### SENZING_TOOLS_MONITORING_PERIOD_IN_SECONDS
 
 1. Synopsis:
 1. Values:
 1. Examples:
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_MONITORING_PERIOD_IN_SECONDS&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_MONITORING_PERIOD_IN_SECONDS&type=code)
 
 ### SENZING_TOOLS_NUMBER_OF_WORKERS
 
 1. Synopsis:
 1. Values:
 1. Examples:
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_NUMBER_OF_WORKERS&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_NUMBER_OF_WORKERS&type=code)
 
 ### SENZING_TOOLS_OBSERVER_ORIGIN
 
 1. Synopsis:
 1. Values:
 1. Examples:
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_OBSERVER_ORIGIN&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_OBSERVER_ORIGIN&type=code)
 
 ### SENZING_TOOLS_OBSERVER_URL
 
 1. Synopsis:
 1. Values:
 1. Examples:
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_OBSERVER_URL&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_OBSERVER_URL&type=code)
 
 ### SENZING_TOOLS_OUTPUT_URL
 
 1. Synopsis:
 1. Values:
 1. Examples:
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_OUTPUT_URL&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_OUTPUT_URL&type=code)
 
 ### SENZING_TOOLS_RECORD_MAX
 
 1. Synopsis:
 1. Values:
 1. Examples:
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_RECORD_MAX&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_RECORD_MAX&type=code)
 
 ### SENZING_TOOLS_RECORD_MIN
 
 1. Synopsis:
 1. Values:
 1. Examples:
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_RECORD_MIN&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_RECORD_MIN&type=code)
 
 ### SENZING_TOOLS_RECORD_MONITOR
 
 1. Synopsis:
 1. Values:
 1. Examples:
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_RECORD_MONITOR&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_RECORD_MONITOR&type=code)
 
 ### SENZING_TOOLS_RESOURCE_PATH
 
 1. Synopsis:
 1. Values:
 1. Examples:
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_RESOURCE_PATH&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_RESOURCE_PATH&type=code)
 
 ### SENZING_TOOLS_SENZING_DIRECTORY
 
 1. Synopsis:
 1. Values:
 1. Examples:
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_SENZING_DIRECTORY&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_SENZING_DIRECTORY&type=code)
 
 ### SENZING_TOOLS_SERVER_ADDRESS
 
 1. Synopsis:
 1. Values:
 1. Examples:
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_SERVER_ADDRESS&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_SERVER_ADDRESS&type=code)
 
 ### SENZING_TOOLS_SERVER_CERTIFICATE_FILE
 
 1. Synopsis:
 1. Values:
 1. Examples:
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_SERVER_CERTIFICATE_FILE&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_SERVER_CERTIFICATE_FILE&type=code)
 
 ### SENZING_TOOLS_SERVER_KEEPALIVE_ENFORCEMENT_POLICY_MIN_TIME_IN_SECONDS
 
 1. Synopsis:
 1. Values:
 1. Examples:
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_SERVER_KEEPALIVE_ENFORCEMENT_POLICY_MIN_TIME_IN_SECONDS&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_SERVER_KEEPALIVE_ENFORCEMENT_POLICY_MIN_TIME_IN_SECONDS&type=code)
 
 ### SENZING_TOOLS_SERVER_KEEPALIVE_ENFORCEMENT_POLICY_PERMIT_WITHOUT_STREAM
 
 1. Synopsis:
 1. Values:
 1. Examples:
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_SERVER_KEEPALIVE_ENFORCEMENT_POLICY_PERMIT_WITHOUT_STREAM&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_SERVER_KEEPALIVE_ENFORCEMENT_POLICY_PERMIT_WITHOUT_STREAM&type=code)
 
 ### SENZING_TOOLS_SERVER_KEEPALIVE_SERVER_PARAMETER_MAX_CONNECTION_AGE_GRACE_IN_SECONDS
 
 1. Synopsis:
 1. Values:
 1. Examples:
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_SERVER_KEEPALIVE_SERVER_PARAMETER_MAX_CONNECTION_AGE_GRACE_IN_SECONDS&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_SERVER_KEEPALIVE_SERVER_PARAMETER_MAX_CONNECTION_AGE_GRACE_IN_SECONDS&type=code)
 
 ### SENZING_TOOLS_SERVER_KEEPALIVE_SERVER_PARAMETER_MAX_CONNECTION_AGE_IN_SECONDS
 
 1. Synopsis:
 1. Values:
 1. Examples:
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_SERVER_KEEPALIVE_SERVER_PARAMETER_MAX_CONNECTION_AGE_IN_SECONDS&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_SERVER_KEEPALIVE_SERVER_PARAMETER_MAX_CONNECTION_AGE_IN_SECONDS&type=code)
 
 ### SENZING_TOOLS_SERVER_KEEPALIVE_SERVER_PARAMETER_MAX_CONNECTION_IDLE_IN_SECONDS
 
 1. Synopsis:
 1. Values:
 1. Examples:
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_SERVER_KEEPALIVE_SERVER_PARAMETER_MAX_CONNECTION_IDLE_IN_SECONDS&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_SERVER_KEEPALIVE_SERVER_PARAMETER_MAX_CONNECTION_IDLE_IN_SECONDS&type=code)
 
 ### SENZING_TOOLS_SERVER_KEEPALIVE_SERVER_PARAMETER_TIME_IN_SECONDS
 
 1. Synopsis:
 1. Values:
 1. Examples:
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_SERVER_KEEPALIVE_SERVER_PARAMETER_TIME_IN_SECONDS&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_SERVER_KEEPALIVE_SERVER_PARAMETER_TIME_IN_SECONDS&type=code)
 
 ### SENZING_TOOLS_SERVER_KEEPALIVE_SERVER_PARAMETER_TIMEOUT_IN_SECONDS
 
 1. Synopsis:
 1. Values:
 1. Examples:
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_SERVER_KEEPALIVE_SERVER_PARAMETER_TIMEOUT_IN_SECONDS&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_SERVER_KEEPALIVE_SERVER_PARAMETER_TIMEOUT_IN_SECONDS&type=code)
 
 ### SENZING_TOOLS_SERVER_KEY_FILE
 
 1. Synopsis:
 1. Values:
 1. Examples:
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_SERVER_KEY_FILE&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_SERVER_KEY_FILE&type=code)
 
 ### SENZING_TOOLS_SERVER_KEY_PASSPHRASE
 
 1. Synopsis:
 1. Values:
 1. Examples:
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_SERVER_KEY_PASSPHRASE&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_SERVER_KEY_PASSPHRASE&type=code)
 
 ### SENZING_TOOLS_SERVER_MAX_CONCURRENT_STREAMS
 
 1. Synopsis:
 1. Values:
 1. Examples:
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_SERVER_MAX_CONCURRENT_STREAMS&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_SERVER_MAX_CONCURRENT_STREAMS&type=code)
 
 ### SENZING_TOOLS_SERVER_MAX_HEADER_LIST_SIZE_IN_BYTES
 
 1. Synopsis:
 1. Values:
 1. Examples:
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_SERVER_MAX_HEADER_LIST_SIZE_IN_BYTES&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_SERVER_MAX_HEADER_LIST_SIZE_IN_BYTES&type=code)
 
 ### SENZING_TOOLS_SERVER_MAX_RECEIVE_MESSAGE_SIZE_IN_BYTES
 
 1. Synopsis:
 1. Values:
 1. Examples:
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_SERVER_MAX_RECEIVE_MESSAGE_SIZE_IN_BYTES&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_SERVER_MAX_RECEIVE_MESSAGE_SIZE_IN_BYTES&type=code)
 
 ### SENZING_TOOLS_SERVER_MAX_SEND_MESSAGE_SIZE_IN_BYTES
 
 1. Synopsis:
 1. Values:
 1. Examples:
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_SERVER_MAX_SEND_MESSAGE_SIZE_IN_BYTES&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_SERVER_MAX_SEND_MESSAGE_SIZE_IN_BYTES&type=code)
 
 ### SENZING_TOOLS_SERVER_READ_BUFFER_SIZE_IN_BYTES
 
 1. Synopsis:
 1. Values:
 1. Examples:
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_SERVER_READ_BUFFER_SIZE_IN_BYTES&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_SERVER_READ_BUFFER_SIZE_IN_BYTES&type=code)
 
 ### SENZING_TOOLS_SERVER_WRITE_BUFFER_SIZE_IN_BYTES
 
 1. Synopsis:
 1. Values:
 1. Examples:
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_SERVER_WRITE_BUFFER_SIZE_IN_BYTES&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_SERVER_WRITE_BUFFER_SIZE_IN_BYTES&type=code)
 
 ### SENZING_TOOLS_SQL_FILE
 
 1. Synopsis:
 1. Values:
 1. Examples:
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_SQL_FILE&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_SQL_FILE&type=code)
 
 ### SENZING_TOOLS_SUPPORT_PATH
 
 1. Synopsis:
 1. Values:
 1. Examples:
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_SUPPORT_PATH&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_SUPPORT_PATH&type=code)
 
 ### SENZING_TOOLS_VISIBILITY_PERIOD_IN_SECONDS
 
 1. Synopsis:
 1. Values:
 1. Examples:
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_VISIBILITY_PERIOD_IN_SECONDS&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_VISIBILITY_PERIOD_IN_SECONDS&type=code)
 
 ### SENZING_TOOLS_XTERM_ALLOWED_HOSTNAMES
 
 1. Synopsis:
 1. Values:
 1. Examples:
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_XTERM_ALLOWED_HOSTNAMES&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_XTERM_ALLOWED_HOSTNAMES&type=code)
 
 ### SENZING_TOOLS_XTERM_ARGUMENTS
 
 1. Synopsis:
 1. Values:
 1. Examples:
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_XTERM_ARGUMENTS&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_XTERM_ARGUMENTS&type=code)
 
 ### SENZING_TOOLS_XTERM_COMMAND
 
 1. Synopsis:
 1. Values:
 1. Examples:
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_XTERM_COMMAND&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_XTERM_COMMAND&type=code)
 
 ### SENZING_TOOLS_XTERM_CONNECTION_ERROR_LIMIT
 
 1. Synopsis:
 1. Values:
 1. Examples:
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_XTERM_CONNECTION_ERROR_LIMIT&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_XTERM_CONNECTION_ERROR_LIMIT&type=code)
 
 ### SENZING_TOOLS_XTERM_KEEPALIVE_PING_TIMEOUT
 
 1. Synopsis:
 1. Values:
 1. Examples:
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_XTERM_KEEPALIVE_PING_TIMEOUT&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_XTERM_KEEPALIVE_PING_TIMEOUT&type=code)
 
 ### SENZING_TOOLS_XTERM_MAX_BUFFER_SIZE_BYTES
 
 1. Synopsis:
 1. Values:
 1. Examples:
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_TOOLS_XTERM_MAX_BUFFER_SIZE_BYTES&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_XTERM_MAX_BUFFER_SIZE_BYTES&type=code)
 
 ### SENZING_UID
 
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_UID&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_UID&type=code)
 
 ### SENZING_VAR_DIR
 
@@ -3036,11 +3036,11 @@
 1. Values:
    1. Default: none
    1. Usually set to `/var/opt/senzing`
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_VAR_DIR&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_VAR_DIR&type=code)
 
 ### SENZING_VOLUME
 
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_VOLUME&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_VOLUME&type=code)
 
 ### SENZING_WEB_SERVER_PORT
 
@@ -3049,7 +3049,7 @@
    1. See [Port 8251](https://github.com/senzing-garage/knowledge-base/blob/main/lists/ports-used-in-demonstrations.md#8251)
 1. Values:
    1. Default: 8251
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_WEB_SERVER_PORT&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_WEB_SERVER_PORT&type=code)
 
 ### SENZING_WEBAPP_PORT
 
@@ -3057,7 +3057,7 @@
    1. Port on localhost for Docker web application service.
 1. Values:
    1. Default: none
-1. [Where used](https://github.com/search?q=org%3ASenzing+SENZING_WEBAPP_PORT&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_WEBAPP_PORT&type=code)
 
 ### SQLITE_DATABASE
 
@@ -3066,7 +3066,7 @@
 1. Values:
    1. Usual value: `G2C.db`
    1. Default: none
-1. [Where used](https://github.com/search?q=org%3ASenzing+SQLITE_DATABASE&type=code)
+1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SQLITE_DATABASE&type=code)
 
 ## References
 
