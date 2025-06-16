@@ -1115,6 +1115,9 @@
 
       [DATABASE_PROTOCOL](#database_protocol)://[DATABASE_USERNAME]:[DATABASE_PASSWORD](#database_password)@[DATABASE_HOST](#database_host):[DATABASE_PORT](#database_port)/[DATABASE_DATABASE](#database_database).
 
+   1. It will be transformed and used in [SENZING_TOOLS_ENGINE_CONFIGURATION_JSON] as the `SQL`.`CONNECTION` value.
+      1. It is transformed because some SQL.CONNECTION values are not syntactically correct URLs.
+
 1. Values:
    - Default: Use the internal SQLite database.
 1. Examples:
@@ -2507,7 +2510,7 @@
 ### SENZING_TOOLS_CONFIG_PATH
 
 1. Synopsis:
-   1. In [SENZING_TOOLS_ENGINE_CONFIGURATION_JSON], the value to be placed in `PIPELINE`.`CONFIGPATH`
+   1. In [SENZING_TOOLS_ENGINE_CONFIGURATION_JSON], the value to be placed in `PIPELINE`.`CONFIGPATH`.
 1. Values:
    1. Path to a directory.
       The directory usually contains `cfgVariant.json`.
@@ -2518,8 +2521,12 @@
 ### SENZING_TOOLS_CONFIGURATION
 
 1. Synopsis:
+   1. A file of configuration parameters for the specific Senzing tool.
+   1. Used as input to [Viper]
 1. Values:
+   1. Path to a file of JSON, TOML, YAML, HCL which has configuration for the specific Senzing tool.
 1. Examples:
+   1. `~/senzing-tool-config.json`
 1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_CONFIGURATION&type=code)
 
 ### SENZING_TOOLS_DATABASE_URL
@@ -2556,92 +2563,155 @@
 ### SENZING_TOOLS_DELAY_IN_SECONDS
 
 1. Synopsis:
+   1. A "sleep" period before the Senzing tool's actions begin.
+      This is used to allow dependencies get started before the tool begins its work.
 1. Values:
+   1. An integer number of seconds.
 1. Examples:
+   1. `60`
 1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_DELAY_IN_SECONDS&type=code)
 
 ### SENZING_TOOLS_ENABLE_ALL
 
 1. Synopsis:
+   1. This enables all services in a Senzing tool that can selectively start services.
 1. Values:
+   1. Boolean flag.
+   1. If specified, all services are started.
+   1. If not specified, either no services are started or explicitedly selected services are started.
+      Examples of selected services:
+      1. [SENZING_TOOLS_ENABLE_SZCONFIG], [SENZING_TOOLS_ENABLE_HTTP], [SENZING_TOOLS_ENABLE_XTERM]
 1. Examples:
 1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_ENABLE_ALL&type=code)
 
 ### SENZING_TOOLS_ENABLE_HTTP
 
 1. Synopsis:
+   1. Start the HTTP service.
 1. Values:
+   1. Boolean flag.
+   1. If specified, start the HTTP service
+   1. If not specified, do not start the service.
+   1. [SENZING_TOOLS_ENABLE_ALL] will also start the service.
 1. Examples:
 1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_ENABLE_HTTP&type=code)
 
 ### SENZING_TOOLS_ENABLE_SENZING_CHAT_API
 
 1. Synopsis:
+   1. Start the HTTP service.
 1. Values:
+   1. Boolean flag.
+   1. If specified, start the service.
+   1. If not specified, do not start the service.
+   1. [SENZING_TOOLS_ENABLE_ALL] will also start the service.
 1. Examples:
 1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_ENABLE_SENZING_CHAT_API&type=code)
 
 ### SENZING_TOOLS_ENABLE_SENZING_REST_API
 
 1. Synopsis:
+   1. Add the Rest API service to the HTTP service.
 1. Values:
+   1. Boolean flag.
+   1. If specified, start the service.
+   1. If not specified, do not start the service.
+   1. [SENZING_TOOLS_ENABLE_ALL] will also start the service.
 1. Examples:
 1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_ENABLE_SENZING_REST_API&type=code)
 
 ### SENZING_TOOLS_ENABLE_SWAGGER_UI
 
 1. Synopsis:
+   1. Add the Swagger UI to the HTTP service.
 1. Values:
+   1. Boolean flag.
+   1. If specified, start the service.
+   1. If not specified, do not start the service.
+   1. [SENZING_TOOLS_ENABLE_ALL] will also start the service.
 1. Examples:
 1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_ENABLE_SWAGGER_UI&type=code)
 
 ### SENZING_TOOLS_ENABLE_SZCONFIG
 
 1. Synopsis:
+   1. Add the SzConfig service to gRPC server.
 1. Values:
+   1. Boolean flag.
+   1. If specified, start the service.
+   1. If not specified, do not start the service.
+   1. [SENZING_TOOLS_ENABLE_ALL] will also start the service.
 1. Examples:
 1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_ENABLE_SZCONFIG&type=code)
 
 ### SENZING_TOOLS_ENABLE_SZCONFIGMANAGER
 
 1. Synopsis:
+   1. Add the SzConfigManager service to gRPC server.
 1. Values:
+   1. Boolean flag.
+   1. If specified, start the service.
+   1. If not specified, do not start the service.
+   1. [SENZING_TOOLS_ENABLE_ALL] will also start the service.
 1. Examples:
 1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_ENABLE_SZCONFIGMANAGER&type=code)
 
 ### SENZING_TOOLS_ENABLE_SZDIAGNOSTIC
 
 1. Synopsis:
+   1. Add the SzDiagnostic service to gRPC server.
 1. Values:
+   1. Boolean flag.
+   1. If specified, start the service.
+   1. If not specified, do not start the service.
+   1. [SENZING_TOOLS_ENABLE_ALL] will also start the service.
 1. Examples:
 1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_ENABLE_SZDIAGNOSTIC&type=code)
 
 ### SENZING_TOOLS_ENABLE_SZENGINE
 
 1. Synopsis:
+   1. Add the SzEngine service to gRPC server.
 1. Values:
+   1. Boolean flag.
+   1. If specified, start the service.
+   1. If not specified, do not start the service.
+   1. [SENZING_TOOLS_ENABLE_ALL] will also start the service.
 1. Examples:
 1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_ENABLE_SZENGINE&type=code)
 
 ### SENZING_TOOLS_ENABLE_SZPRODUCT
 
 1. Synopsis:
+   1. Add the SzProduct service to gRPC server.
 1. Values:
+   1. Boolean flag.
+   1. If specified, start the service.
+   1. If not specified, do not start the service.
+   1. [SENZING_TOOLS_ENABLE_ALL] will also start the service.
 1. Examples:
 1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_ENABLE_SZPRODUCT&type=code)
 
 ### SENZING_TOOLS_ENABLE_XTERM
 
 1. Synopsis:
+   1. Add the XTerm UI to the HTTP service.
 1. Values:
+   1. Boolean flag.
+   1. If specified, start the service.
+   1. If not specified, do not start the service.
+   1. [SENZING_TOOLS_ENABLE_ALL] will also start the service.
 1. Examples:
 1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_ENABLE_XTERM&type=code)
 
 ### SENZING_TOOLS_ENGINE_CONFIGURATION_FILE
 
 1. Synopsis:
+   1. A file whose contents is the [SENZING_TOOLS_ENGINE_CONFIGURATION_JSON]
 1. Values:
+   1. A path to a file.
 1. Examples:
+   1. `~/my-senzing-engine-configuration.json`
 1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_ENGINE_CONFIGURATION_FILE&type=code)
 
 ### SENZING_TOOLS_ENGINE_CONFIGURATION_JSON
@@ -3086,3 +3156,7 @@
 [SENZING_TOOLS_DATABASE_URL]: #senzing_tools_database_url
 [DATABASE_USERNAME]: #database_username
 [SENZING_TOOLS_ENGINE_CONFIGURATION_JSON]: #senzing_tools_engine_configuration_json
+[Viper]: https://github.com/spf13/viper
+[SENZING_TOOLS_ENABLE_SZCONFIG]: #senzing_tools_enable_szconfig
+[SENZING_TOOLS_ENABLE_HTTP]: #senzing_tools_enable_http
+[SENZING_TOOLS_ENABLE_XTERM]: #senzing_tools_enable_xterm
