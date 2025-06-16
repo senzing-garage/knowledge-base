@@ -124,7 +124,7 @@
 ### DATABASE_DATABASE
 
 1. Synopsis:
-   1. A component of [SENZING_DATABASE_URL](#senzing_database_url) and [SENZING_TOOLS_DATABASE_URL](#senzing_tools_database_url).
+   1. A component of [SENZING_DATABASE_URL] and [SENZING_TOOLS_DATABASE_URL].
    1. The name of the database holding the Senzing G2 model.
 1. Values:
    - Default: none
@@ -142,7 +142,7 @@
 ### DATABASE_HOST
 
 1. Synopsis:
-   1. A component of [SENZING_DATABASE_URL](#senzing_database_url) and [SENZING_TOOLS_DATABASE_URL](#senzing_tools_database_url).
+   1. A component of [SENZING_DATABASE_URL] and [SENZING_TOOLS_DATABASE_URL].
    1. A hostname, IP address, or symbolic name of the database service.
 1. Examples:
 
@@ -163,8 +163,8 @@
 ### DATABASE_PASSWORD
 
 1. Synopsis:
-   1. A component of [SENZING_DATABASE_URL](#senzing_database_url) and [SENZING_TOOLS_DATABASE_URL](#senzing_tools_database_url).
-   1. The password for the database user, [DATABASE_USERNAME](#database_username).
+   1. A component of [SENZING_DATABASE_URL] and [SENZING_TOOLS_DATABASE_URL].
+   1. The password for the database user, [DATABASE_USERNAME].
 1. Examples:
 
    1. Using password of "my;password!":
@@ -178,7 +178,7 @@
 ### DATABASE_PORT
 
 1. Synopsis:
-   1. A component of [SENZING_DATABASE_URL](#senzing_database_url) and [SENZING_TOOLS_DATABASE_URL](#senzing_tools_database_url).
+   1. A component of [SENZING_DATABASE_URL] and [SENZING_TOOLS_DATABASE_URL].
    1. The port on the machine offering the database service.
 1. Values:
    - 1433 - mssql default
@@ -200,7 +200,7 @@
 ### DATABASE_PROTOCOL
 
 1. Synopsis:
-   1. A component of [SENZING_DATABASE_URL](#senzing_database_url) and [SENZING_TOOLS_DATABASE_URL](#senzing_tools_database_url).
+   1. A component of [SENZING_DATABASE_URL] and [SENZING_TOOLS_DATABASE_URL].
    1. Identifies which type of database will be connected.
 1. Values:
 
@@ -224,7 +224,7 @@
 ### DATABASE_QUERY_PARAMETERS
 
 1. Synopsis:
-   1. A component of [SENZING_DATABASE_URL](#senzing_database_url) and [SENZING_TOOLS_DATABASE_URL](#senzing_tools_database_url).
+   1. A component of [SENZING_DATABASE_URL] and [SENZING_TOOLS_DATABASE_URL].
    1. Parameters passed into specific database engines.
 1. Values:
    1. See [mssql](https://github.com/microsoft/go-mssqldb)
@@ -237,7 +237,7 @@
 ### DATABASE_USERNAME
 
 1. Synopsis:
-   1. A component of [SENZING_DATABASE_URL](#senzing_database_url) and [SENZING_TOOLS_DATABASE_URL](#senzing_tools_database_url).
+   1. A component of [SENZING_DATABASE_URL] and [SENZING_TOOLS_DATABASE_URL].
    1. The name of a user authorized to work with the [DATABASE_DATABASE](#database_database) database.
 1. Examples:
 
@@ -1113,7 +1113,7 @@
 
    1. Database URI in the form:
 
-      [DATABASE_PROTOCOL](#database_protocol)://[DATABASE_USERNAME](#database_username):[DATABASE_PASSWORD](#database_password)@[DATABASE_HOST](#database_host):[DATABASE_PORT](#database_port)/[DATABASE_DATABASE](#database_database).
+      [DATABASE_PROTOCOL](#database_protocol)://[DATABASE_USERNAME]:[DATABASE_PASSWORD](#database_password)@[DATABASE_HOST](#database_host):[DATABASE_PORT](#database_port)/[DATABASE_DATABASE](#database_database).
 
 1. Values:
    - Default: Use the internal SQLite database.
@@ -1640,7 +1640,7 @@
 
 1. Synopsis:
    1. A list of one or more comma-separated
-      [SENZING_DATABASE_URL](#senzing_database_url)s.
+      [SENZING_DATABASE_URL]s.
 1. Examples:
 
    1. Single SENZING_DATABASE_URL.
@@ -1999,7 +1999,7 @@
 
 1. Synopsis:
    1. A database URI in the form native to the database client driver.
-   1. This differs from [SENZING_DATABASE_URL](#senzing_database_url), which has been "normalized"
+   1. This differs from [SENZING_DATABASE_URL], which has been "normalized"
       and is not in the native format.
 1. Examples:
 
@@ -2487,6 +2487,7 @@
 ### SENZING_TOOLS_AVOID_SERVING
 
 1. Synopsis:
+   1. For testing purposes, avoid serving HTTP or gRPC.
 1. Values:
 1. Examples:
 1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_AVOID_SERVING&type=code)
@@ -2494,15 +2495,24 @@
 ### SENZING_TOOLS_CLIENT_CA_CERTIFICATE_FILE
 
 1. Synopsis:
+   1. When using Transport Layer Security (TLS), this is the path to the file containing the clients
+      root public certificate issued by the Certificate Authority (CA).
+   1. It is used in mutual TLS by the server to verify the identity of the client.
 1. Values:
+   1. A path to a file
 1. Examples:
+   1. ~/.ssh/my_ca_cert.pem
 1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_CLIENT_CA_CERTIFICATE_FILE&type=code)
 
 ### SENZING_TOOLS_CONFIG_PATH
 
 1. Synopsis:
+   1. In [SENZING_TOOLS_ENGINE_CONFIGURATION_JSON], the value to be placed in `PIPELINE`.`CONFIGPATH`
 1. Values:
+   1. Path to a directory.
+      The directory usually contains `cfgVariant.json`.
 1. Examples:
+   1. `/etc/opt/senzing`
 1. [Where used](https://github.com/search?q=org%3ASenzing-garage+SENZING_TOOLS_CONFIG_PATH&type=code)
 
 ### SENZING_TOOLS_CONFIGURATION
@@ -2518,7 +2528,7 @@
    1. A string in URL format specifying a database connection point.
 1. Values:
    1. Format:
-      [DATABASE_PROTOCOL](#database_protocol)://[DATABASE_USERNAME](#database_username):[DATABASE_PASSWORD](#database_password)@[DATABASE_HOST](#database_host):[DATABASE_PORT](#database_port)/[DATABASE_DATABASE](#database_database)/?[DATABASE_QUERY_PARAMETERS](#database_query_parameters).
+      [DATABASE_PROTOCOL](#database_protocol)://[DATABASE_USERNAME]:[DATABASE_PASSWORD](#database_password)@[DATABASE_HOST](#database_host):[DATABASE_PORT](#database_port)/[DATABASE_DATABASE](#database_database)/?[DATABASE_QUERY_PARAMETERS](#database_query_parameters).
 1. Examples:
    1. **MsSQL:** "mssql://username:<password@host.example.com>:1433/G2"
    1. **MySQL:** "mysql://username:<password@host.example.com>:3306/G2"
@@ -3071,3 +3081,8 @@
 ## References
 
 1. [GitHub environment variables](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/using-environment-variables#default-environment-variables)
+
+[SENZING_DATABASE_URL]: #senzing_database_url
+[SENZING_TOOLS_DATABASE_URL]: #senzing_tools_database_url
+[DATABASE_USERNAME]: #database_username
+[SENZING_TOOLS_ENGINE_CONFIGURATION_JSON]: #senzing_tools_engine_configuration_json
