@@ -99,9 +99,6 @@
 ## SzEngine
 
 1. **addRecord**
-
--
-
 1. **closeExport**
 1. **countRedoRecords**
 1. **deleteRecord**
