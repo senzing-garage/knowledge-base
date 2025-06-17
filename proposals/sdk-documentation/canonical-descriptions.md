@@ -5,6 +5,8 @@
  1. Guiding principles
     1. Approach from the customer point of view.
     1. First sentence is a "topic" sentence as it may show up in synopsis and code hints.
+        1. Although the topic sentence starts with a verb in this list, each SDK may choose the appropriate introduction
+            1. e.g.  *Go:* Method AddDataSource adds a new data source to this instance
     1. Less is better.
     1. Avoid redundancy.
         1. Overview shouldn't talk about parameter specifics.
