@@ -24,10 +24,10 @@ The following list should reflect modifications documented in
 | ----------------------------------------------------------------- | ------------------------------------------------------------------ | ------------ | -------------------------------------------- |
 | SzConfigMgr_addConfig(configStr, configComment, configID)         | registerConfig(configDefinition, configComment)                    | int64        |                                              |
 | SzConfigMgr_destroy()                                             |                                                                    | -            |                                              |
-| SzConfigMgr_getConfig(configID, responseBuf, bufSize, resizeFunc) | createConfigFromConfigID(configId)                                 | SzConfig     | May vary by SDK. ConfigID=0 throws exception |
+| SzConfigMgr_getConfig(configID, responseBuf, bufSize, resizeFunc) | createConfigFromConfigId(configId)                                 | SzConfig     | May vary by SDK. ConfigID=0 throws exception |
 |                                                                   | createConfigFromString(configDefinition)                           | SzConfig     | May vary by SDK                              |
 |                                                                   | createConfigFromTemplate()                                         | SzConfig     | May vary by SDK                              |
-| SzConfigMgr_getConfigList(responseBuf, bufSize, resizeFunc)       | getConfigs()                                                       | string       |                                              |
+| SzConfigMgr_getConfigList(responseBuf, bufSize, resizeFunc)       | getConfigRegistry()                                                | string       |                                              |
 | SzConfigMgr_getDefaultConfigID(configID)                          | getDefaultConfigId()                                               | int64        |                                              |
 | SzConfigMgr_init(moduleName, iniParams, verboseLogging)           | initialize(instanceName, settings, verboseLogging)                 | -            |                                              |
 | SzConfigMgr_replaceDefaultConfigID(oldConfigID, newConfigID)      | replaceDefaultConfigId(currentDefaultConfigId, newDefaultConfigId) | -            |                                              |
