@@ -75,14 +75,33 @@
 ## SzDiagnostic
 
 1. **checkDatastorePerformance**
+
+- Conducts a rudimentary datastore test to gauge I/O performance.
+
 1. **getDatastoreInfo**
+
+- Returns overview information about the datastore.
+
 1. **getFeature**
+
+- Experimental/internal for Senzing support use only.
+
 1. **purgeRepository**
+
+- ???? determine "repository" vs. "datastore"
+- Purges all entity data in the entire repository.
+  - Very dangerous method
+
 1. **reinitialize**
+
+- Hidden
 
 ## SzEngine
 
 1. **addRecord**
+
+-
+
 1. **closeExport**
 1. **countRedoRecords**
 1. **deleteRecord**
@@ -118,6 +137,11 @@
 ## SzProduct
 
 1. **getLicense**
+
+- Gets the product license details.
+
 1. **getVersion**
+
+- Gets the product version details.
 
 [sdk-documentation]: README.md
