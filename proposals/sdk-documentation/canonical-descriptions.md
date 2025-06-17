@@ -35,14 +35,42 @@
 ## SzConfigManager
 
 1. **createConfigFromConfigID**
+
+- Creates a new SzConfig instance for a configuration ID.
+
 1. **createConfigFromString**
+
+- Creates a new SzConfig instance from a configuration definition.
+
 1. **createConfigFromTemplate**
-1. **getConfigs**
+
+- Creates a new SzConfig instance from the template configuration defintion.
+
+1. **getConfigRegistry**
+
+- Gets the configuration registry.
+
 1. **getDefaultConfigId**
+
+- Gets the default configuration for the repository.
+
 1. **registerConfig**
+
+- Registers a configuration defintion with the repository.
+
 1. **replaceDefaultConfigId**
+
+- Replaces the existing default configuration ID with a new configuration ID.
+  - Acts like "Compare and swap"
+
 1. **setDefaultConfig**
+
+- Registers a configuration with the repository and sets its ID as the default for the repository.
+  - Convenience method for `registerConfig` and `setDefaultConfigId`.
+
 1. **setDefaultConfigId**
+
+- Sets the default configuration ID.
 
 ## SzDiagnostic
 
