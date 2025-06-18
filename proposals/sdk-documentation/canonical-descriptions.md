@@ -30,179 +30,176 @@
 
 1. **getDataSources**
 
-- Gets the data sources for this instance.
+    - Gets the data sources for this instance.
 
 ## SzConfigManager
 
 1. **createConfigFromConfigID**
 
-- Creates a new SzConfig instance for a configuration ID.
+    - Creates a new SzConfig instance for a configuration ID.
 
 1. **createConfigFromString**
 
-- Creates a new SzConfig instance from a configuration definition.
+    - Creates a new SzConfig instance from a configuration definition.
 
 1. **createConfigFromTemplate**
 
-- Creates a new SzConfig instance from the template configuration defintion.
+    - Creates a new SzConfig instance from the template configuration defintion.
 
 1. **getConfigRegistry**
 
-- Gets the configuration registry.
+    - Gets the configuration registry.
 
 1. **getDefaultConfigId**
 
-- Gets the default configuration for the repository.
+    - Gets the default configuration for the repository.
 
 1. **registerConfig**
 
-- Registers a configuration defintion with the repository.
+    - Registers a configuration defintion with the repository.
 
 1. **replaceDefaultConfigId**
 
-- Replaces the existing default configuration ID with a new configuration ID.
-  - Acts like "Compare and swap"
+    - Replaces the existing default configuration ID with a new configuration ID.
+        - Acts like "Compare and swap"
 
 1. **setDefaultConfig**
 
-- Registers a configuration with the repository and sets its ID as the default for the repository.
-  - Convenience method for `registerConfig` and `setDefaultConfigId`.
+    - Registers a configuration with the repository and sets its ID as the default for the repository.
+        - Convenience method for `registerConfig` and `setDefaultConfigId`.
 
 1. **setDefaultConfigId**
 
-- Sets the default configuration ID.
+    - Sets the default configuration ID.
 
 ## SzDiagnostic
 
 1. **checkDatastorePerformance**
 
-- Conducts a rudimentary datastore test to gauge I/O performance.
+    - Conducts a rudimentary datastore test to gauge I/O performance.
 
 1. **getDatastoreInfo**
 
-- Returns overview information about the datastore.
+    - Returns overview information about the datastore.
 
 1. **getFeature**
 
-- Experimental/internal for Senzing support use only.
+    - Experimental/internal for Senzing support use only.
 
 1. **purgeRepository**
 
-- Purges all entity data in the entire repository.
-  - Very dangerous method
+    - Purges all entity data in the entire repository.
+        - Very dangerous method
 
 1. **reinitialize**
 
-- Hidden
+    - Hidden
 
 ## SzEngine
 
 1. **addRecord**
 
-- Loads a record into the repository.
-  - Entity resolution occurs during the load.
-  - Options for how much information is returns.
+    - Loads a record into the repository.
+        - Entity resolution occurs during the load.
+        - Options for how much information is returns.
 
 1. **closeExport**
 
-- Closes an export handle of a previous export operation.
-  - From any previous export operation
+    - Closes an export handle of a previous export operation.
+        - From any previous export operation
 
 1. **countRedoRecords**
 
-- Gets the number of redo records pending processing.
+    - Gets the number of redo records pending processing.
 
 1. **deleteRecord**
 
-- Deletes a record from the repository.
-  - Entity resolution occurs during the load.
-  - Is idempotent
+    - Deletes a record from the repository.
+        - Entity resolution occurs during the load.
+        - Is idempotent
 
 1. **exportCsvEntityReport**
 
-- Initiates an export of entity data in CSV format.
-  - (There's plenty more to follow)
+    - Initiates an export of entity data in CSV format.
+        - (There's plenty more to follow)
 
 1. **exportJsonEntityReport**
 
-- Initiates an export of entity data in JSON format.
-  - (There's plenty more to follow)
+    - Initiates an export of entity data in JSON format.
+        - (There's plenty more to follow)
 
 1. **fetchNext**
 
-- Fetches the next line of entity data from an open export operation.
+    - Fetches the next line of entity data from an open export operation.
 
 1. **findInterestingEntitiesByEntityId**
 
-- Experimental method.
-  - Contact Senzing support
+    - Experimental method.
+        - Contact Senzing support
 
 1. **findInterestingEntitiesByRecordId**
 
-- Experimental method.
-  - Contact Senzing support
+    - Experimental method.
+        - Contact Senzing support
 
 1. **findNetworkByEntityId**
 
-- Discovers a network of entity relationships among entities based on entity IDs.
+    - Discovers a network of entity relationships among entities based on entity IDs.
 
 1. **findNetworkByRecordId**
 
-- Discovers a network of entity relationships among entities based on record IDs.
+    - Discovers a network of entity relationships among entities based on record IDs.
 
 1. **findPathByEntityId**
 
-- Searches for an entity relationship path between two entities based on entity IDs.
+    - Searches for an entity relationship path between two entities based on entity IDs.
 
 1. **findPathByRecordId**
 
-- Searches for an entity relationship path between two entities based on record IDs.
+    - Searches for an entity relationship path between two entities based on record IDs.
 
 1. **getActiveConfigId**
 
-- Gets the currently active configuration ID.
+    - Gets the currently active configuration ID.
 
 1. **getEntityByEntityId**
 
-- Retrieves information about an entity based on entity ID.
+    - Retrieves information about an entity based on entity ID.
 
 1. **getEntityByRecordId**
 
-- Retrieves information about an entity based on record ID.
+    - Retrieves information about an entity based on record ID.
 
 1. **getRecord**
 
-- Gets the record definition for a record.
-  - This is the same information submitted in `addRecord`
+    - Gets the record definition for a record.
+        - This is the same information submitted in `addRecord`
 
 1. **getRedoRecord**
 
-- Retrieves a pending redo record from the reevaluation queue.
-  - Once retrieved, it must be processed via processRedoRecord.
-  - If reevauation queue is empty, empty is returne.
+    - Retrieves a pending redo record from the reevaluation queue.
+        - Once retrieved, it must be processed via processRedoRecord.
+        - If reevauation queue is empty, empty is returne.
 
 1. **getStats**
-
--
-
 1. **getVirtualEntityByRecordId**
 1. **howEntityByEntityId**
 1. **preprocessRecord**
 1. **primeEngine**
 1. **processRedoRecord**
 
-- Loads a record into the  repository.
-  - Entity resolution occurs during the load.
+    - Loads a record into the  repository.
+        - Entity resolution occurs during the load.
 
 1. **reevaluateEntity**
 
-- Loads a record into the  repository.
-  - Entity resolution occurs during the load.
+    - Loads a record into the  repository.
+        - Entity resolution occurs during the load.
 
 1. **reevaluateRecord**
 
-- Loads a record into the  repository.
-  - Entity resolution occurs during the load.
+    - Loads a record into the  repository.
+        - Entity resolution occurs during the load.
 
 1. **searchByAttributes**
 1. **whyEntities**
@@ -214,10 +211,10 @@
 
 1. **getLicense**
 
-- Gets the product license details.
+    - Gets the product license details.
 
 1. **getVersion**
 
-- Gets the product version details.
+    - Gets the product version details.
 
 [sdk-documentation]: README.md
