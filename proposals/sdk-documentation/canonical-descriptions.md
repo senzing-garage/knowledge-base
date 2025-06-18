@@ -88,7 +88,6 @@
 
 1. **purgeRepository**
 
-- ???? determine "repository" vs. "datastore"
 - Purges all entity data in the entire repository.
   - Very dangerous method
 
@@ -99,32 +98,112 @@
 ## SzEngine
 
 1. **addRecord**
+
+- Loads a record into the repository.
+  - Entity resolution occurs during the load.
+  - Options for how much information is returns.
+
 1. **closeExport**
+
+- Closes an export handle of a previous export operation.
+  - From any previous export operation
+
 1. **countRedoRecords**
+
+- Gets the number of redo records pending processing.
+
 1. **deleteRecord**
+
+- Deletes a record from the repository.
+  - Entity resolution occurs during the load.
+  - Is idempotent
+
 1. **exportCsvEntityReport**
+
+- Initiates an export of entity data in CSV format.
+  - (There's plenty more to follow)
+
 1. **exportJsonEntityReport**
+
+- Initiates an export of entity data in JSON format.
+  - (There's plenty more to follow)
+
 1. **fetchNext**
+
+- Fetches the next line of entity data from an open export operation.
+
 1. **findInterestingEntitiesByEntityId**
+
+- Experimental method.
+  - Contact Senzing support
+
 1. **findInterestingEntitiesByRecordId**
+
+- Experimental method.
+  - Contact Senzing support
+
 1. **findNetworkByEntityId**
+
+- Discovers a network of entity relationships among entities based on entity IDs.
+
 1. **findNetworkByRecordId**
+
+- Discovers a network of entity relationships among entities based on record IDs.
+
 1. **findPathByEntityId**
+
+- Searches for an entity relationship path between two entities based on entity IDs.
+
 1. **findPathByRecordId**
+
+- Searches for an entity relationship path between two entities based on record IDs.
+
 1. **getActiveConfigId**
+
+- Gets the currently active configuration ID.
+
 1. **getEntityByEntityId**
+
+- Retrieves information about an entity based on entity ID.
+
 1. **getEntityByRecordId**
+
+- Retrieves information about an entity based on record ID.
+
 1. **getRecord**
+
+- Gets the record definition for a record.
+  - This is the same information submitted in `addRecord`
+
 1. **getRedoRecord**
+
+- Retrieves a pending redo record from the reevaluation queue.
+  - Once retrieved, it must be processed via processRedoRecord.
+  - If reevauation queue is empty, empty is returne.
+
 1. **getStats**
+
+-
+
 1. **getVirtualEntityByRecordId**
 1. **howEntityByEntityId**
 1. **preprocessRecord**
 1. **primeEngine**
 1. **processRedoRecord**
+
+- Loads a record into the  repository.
+  - Entity resolution occurs during the load.
+
 1. **reevaluateEntity**
+
+- Loads a record into the  repository.
+  - Entity resolution occurs during the load.
+
 1. **reevaluateRecord**
-1. **reinitialize**
+
+- Loads a record into the  repository.
+  - Entity resolution occurs during the load.
+
 1. **searchByAttributes**
 1. **whyEntities**
 1. **whyRecordInEntity**
