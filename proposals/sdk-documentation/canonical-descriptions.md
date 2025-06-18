@@ -17,16 +17,16 @@
 
 1. **addDataSource**
 
-- Adds a new data source to this instance.
+    - Adds a new data source to this instance.
 
 1. **deleteDataSource**
 
-- Deletes a data source from this instance.
-  - Is idempotent
+    - Deletes a data source from this instance.
+        - Is idempotent
 
 1. **export**
 
-- Retrieves the configuration definition for this instance.
+    - Retrieves the configuration definition for this instance.
 
 1. **getDataSources**
 
