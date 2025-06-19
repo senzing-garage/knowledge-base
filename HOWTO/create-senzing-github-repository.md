@@ -94,6 +94,10 @@ This is a checklist of what to set when creating a new GitHub Repository.
 
 1. On repository home page, click `Settings` tab.
    1. Click `Advanced security` tab.
+      1. In `Secret Protection`:
+         1. Select `Enable` > `Enable Secret Protection`
+         1. Once the page refreshes, go back to the same section and under `Push Protection` select `Enable`
+         1. Click `Save changes` button
       1. In `Access to alerts`:
          1. Search for the team that will be used in `.github/CODEOWNERS` and select.
          1. Click `Save changes` button
