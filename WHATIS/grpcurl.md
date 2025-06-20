@@ -38,4 +38,4 @@
 [grpcurl on Github]: https://github.com/fullstorydev/grpcurl
 [releases]: https://github.com/fullstorydev/grpcurl/releases
 [senzing/serve-grpc]: https://github.com/senzing-garage/serve-grpc
-[Usage]: <https://github.com/fullstorydev/grpcurl?tab=readme-ov-file#usage>
+[Usage]: https://github.com/fullstorydev/grpcurl?tab=readme-ov-file#usage
