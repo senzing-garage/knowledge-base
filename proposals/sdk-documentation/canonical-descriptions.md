@@ -122,12 +122,10 @@
 1. **exportCsvEntityReport**
 
     - Initiates an export of entity data in CSV format.
-        - (There's plenty more to follow)
 
 1. **exportJsonEntityReport**
 
     - Initiates an export of entity data in JSON format.
-        - (There's plenty more to follow)
 
 1. **fetchNext**
 
@@ -228,7 +226,6 @@
 1. **whyEntities**
 
     - Describes the ways two entities relate to each other.
-        - Also
 
 1. **whyRecordInEntity**
 
