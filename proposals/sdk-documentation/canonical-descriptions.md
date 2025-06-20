@@ -232,7 +232,7 @@
 
 1. **whyRecordInEntity**
 
-    - Describe why a record is in its respective entity.
+    - Describes why a record is in its respective entity.
 
 1. **whyRecords**
 
@@ -240,7 +240,7 @@
 
 1. **whySearch**
 
-    - Describe why an entity did not match or relate to a set of search attributes.
+    - Describes why an entity did not match or relate to a set of search attributes.
 
 ## SzProduct
 
