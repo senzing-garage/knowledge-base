@@ -183,10 +183,29 @@
         - If reevauation queue is empty, empty is returne.
 
 1. **getStats**
+
+    - Gets the internal engine workload statistics for the current process.
+        - Statistics are affected by record insert, update, delete, and re-evaluate. (to be fleshed out)
+        - Used when working with Senzing support
+
 1. **getVirtualEntityByRecordId**
+
+    - Describes what an entity would look like for a given set of records.
+
 1. **howEntityByEntityId**
+
+    - Describes how an entity was constructed from its constituent records.
+
 1. **preprocessRecord**
+
+    - Describes the features resulting from the hypothetical load of a record.
+        - Does not modify data in the Senzing datastore.
+
 1. **primeEngine**
+
+    - Pre-loads engine resources to reduce latency of initial entity resolution processing.
+        - If not used, the load will occur on first access.
+
 1. **processRedoRecord**
 
     - Loads a record into the  repository.
@@ -203,10 +222,25 @@
         - Entity resolution occurs during the load.
 
 1. **searchByAttributes**
+
+    - Searches for entities that match or relate to the provided attributes.
+
 1. **whyEntities**
+
+    - Describes the ways two entities relate to each other.
+        - Also
+
 1. **whyRecordInEntity**
+
+    - Describe why a record is in its respective entity.
+
 1. **whyRecords**
+
+    - Describes the ways two records relate to each other.
+
 1. **whySearch**
+
+    - Describe why an entity did not match or relate to a set of search attributes.
 
 ## SzProduct
 
