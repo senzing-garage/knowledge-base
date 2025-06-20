@@ -6,7 +6,9 @@
 
 ## Install
 
-1. Linux
+1. Linux.
+
+   For latest version, visit [releases].
 
    ```console
    wget https://github.com/fullstorydev/grpcurl/releases/download/v1.9.3/grpcurl_1.9.3_linux_amd64.deb
@@ -23,10 +25,17 @@
 ## Usage
 
 1. See [Usage]
+1. Example using [senzing/serve-grpc]:
+
+    ```console
+    grpcurl -plaintext -format text localhost:8261 szproduct.SzProduct.GetVersion
+    ```
 
 ## Sites
 
 1. [grpcurl on Github]
 
 [grpcurl on Github]: https://github.com/fullstorydev/grpcurl
-[Usage]: https://github.com/fullstorydev/grpcurl?tab=readme-ov-file#usage
+[releases]: https://github.com/fullstorydev/grpcurl/releases
+[senzing/serve-grpc]: https://github.com/senzing-garage/serve-grpc
+[Usage]: <https://github.com/fullstorydev/grpcurl?tab=readme-ov-file#usage>
