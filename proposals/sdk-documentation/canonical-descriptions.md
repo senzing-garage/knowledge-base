@@ -45,7 +45,7 @@
 
 1. **createConfigFromTemplate**
 
-    - Creates a new SzConfig instance from the template configuration defintion.
+    - Creates a new SzConfig instance from the template configuration definition.
 
 1. **getConfigRegistry**
 
@@ -57,7 +57,7 @@
 
 1. **registerConfig**
 
-    - Registers a configuration defintion with the repository.
+    - Registers a configuration definition with the repository.
 
 1. **replaceDefaultConfigId**
 
