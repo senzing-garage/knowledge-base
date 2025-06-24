@@ -192,7 +192,7 @@
 
 1. **howEntityByEntityId**
 
-    - Describes how an entity was constructed from its constituent records.
+    - Explains how an entity was constructed from its constituent records.
 
 1. **preprocessRecord**
 
@@ -206,17 +206,16 @@
 
 1. **processRedoRecord**
 
-    - Loads a record into the  repository.
-        - Entity resolution occurs during the load.
+    - Processes a redo record.
 
 1. **reevaluateEntity**
 
-    - Loads a record into the  repository.
+    - Reevaluates an entity by Entity ID
         - Entity resolution occurs during the load.
 
 1. **reevaluateRecord**
 
-    - Loads a record into the  repository.
+    - Reevaluates an entity by Record ID
         - Entity resolution occurs during the load.
 
 1. **searchByAttributes**
