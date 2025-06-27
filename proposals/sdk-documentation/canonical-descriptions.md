@@ -82,13 +82,13 @@
 
 ## SzDiagnostic
 
-1. **checkDatastorePerformance**
+1. **checkDatastorePerformance**  (checkRepositoryPerformance)
 
-    - Conducts a rudimentary datastore test to gauge I/O performance.
+    - Conducts a rudimentary repository test to gauge I/O performance.
 
-1. **getDatastoreInfo**
+1. **getDatastoreInfo** (getRepositoryInfo)
 
-    - Returns overview information about the datastore.
+    - Returns overview information about the repository.
 
 1. **getFeature**
 
@@ -96,7 +96,7 @@
 
 1. **purgeRepository**
 
-    - Purges all entity data in the entire repository.
+    - Purges all data in the repository, except the configuration. (...ALL CAPS!)
         - Very dangerous method
 
 1. **reinitialize**
@@ -107,14 +107,13 @@
 
 1. **addRecord**
 
-    - Loads a record into the repository.
+    - Loads a record into the repository and performs entity resolution.
         - Entity resolution occurs during the load.
         - Options for how much information is returns.
 
-1. **closeExport**
+1. **closeExport** (closeExportReport)
 
-    - Closes an export handle of a previous export operation.
-        - From any previous export operation
+    - Closes an export report.
 
 1. **countRedoRecords**
 
@@ -122,21 +121,25 @@
 
 1. **deleteRecord**
 
-    - Deletes a record from the repository.
+    - Deletes a record from the repository and performs entity resolution.
         - Entity resolution occurs during the load.
         - Is idempotent
 
 1. **exportCsvEntityReport**
 
-    - Initiates an export of entity data in CSV format.
+    - Initiates an export report of entity data in CSV format.
+        - This function does not scale. (reword)
+        - Add link to article
 
 1. **exportJsonEntityReport**
 
-    - Initiates an export of entity data in JSON format.
+    - Initiates an export report of entity data in JSON Lines format.
+        - This function does not scale.
+        - Add link to article
 
 1. **fetchNext**
 
-    - Fetches the next line of entity data from an open export operation.
+    - Fetches the next line of entity data from an open export report.
 
 1. **findInterestingEntitiesByEntityId**
 
@@ -150,19 +153,21 @@
 
 1. **findNetworkByEntityId**
 
-    - Discovers a network of entity relationships among entities based on entity IDs.
+    - Retrieves a network of relationships among entities based on entity IDs.
 
 1. **findNetworkByRecordId**
 
-    - Discovers a network of entity relationships among entities based on record IDs.
+    - Retrieves a network of relationships among entities based on record IDs.
 
 1. **findPathByEntityId**
 
-    - Searches for an entity relationship path between two entities based on entity IDs.
+    - Searches for the shortest relationship path between two entities based on entity IDs.
+        - Based on parameters
 
 1. **findPathByRecordId**
 
-    - Searches for an entity relationship path between two entities based on record IDs.
+    - Searches for the shortest relationship path between two entities based on record IDs.
+        - Based on parameters
 
 1. **getActiveConfigId**
 
@@ -178,52 +183,59 @@
 
 1. **getRecord**
 
-    - Gets the record definition for a record.
-        - This is the same information submitted in `addRecord`
+    - Retrieves information about a record.
 
 1. **getRedoRecord**
 
-    - Retrieves a pending redo record from the reevaluation queue.
+    - Retrieves and removes a pending redo record.
         - Once retrieved, it must be processed via processRedoRecord.
-        - If reevauation queue is empty, empty is returne.
+        - An "empty" may be returned.
 
 1. **getStats**
 
-    - Gets the internal engine workload statistics for the current process.
-        - Statistics are affected by record insert, update, delete, and re-evaluate. (to be fleshed out)
+    - Gets and resets the internal engine workload statistics for the current operating system process.
         - Used when working with Senzing support
+        - Best practice to periodically log the results.
+        - (not per-thread, not per-function-call)
 
 1. **getVirtualEntityByRecordId**
 
-    - Describes what an entity would look like for a given set of records.
+   - Describes how an entity would look if composed of a given set of records.
+        - The entity will be without relationships.
 
 1. **howEntityByEntityId**
 
-    - Explains how an entity was constructed from its constituent records.
+    - Explains how an entity was constructed from its records.
 
-1. **preprocessRecord**
+1. **preprocessRecord** (FIXME: maybe a different method name)
 
     - Describes the features resulting from the hypothetical load of a record.
+        - Don't run preprocessRecord before addRecord or deleteRecord.
         - Does not modify data in the Senzing datastore.
+        - Does all processing except the entity relationship work.
+        - FIXME:
 
 1. **primeEngine**
 
-    - Pre-loads engine resources to reduce latency of initial entity resolution processing.
+    - Pre-loads engine resources.
+        - Otherwise "lazy instantiation" will occur.
+        - Giving unpredictable performance.
         - If not used, the load will occur on first access.
 
 1. **processRedoRecord**
 
-    - Processes a redo record.
+    - Processes the provided redo record.
 
 1. **reevaluateEntity**
 
-    - Reevaluates an entity by Entity ID
-        - Entity resolution occurs during the load.
+    - Reevaluates an entity by entity ID.
+        - Entity resolution occurs.
 
 1. **reevaluateRecord**
 
-    - Reevaluates an entity by Record ID
-        - Entity resolution occurs during the load.
+    - Reevaluates an entity by record ID.
+        - Entity resolution occurs.
+        - Causes the JSON to be reprocessed in the case of a configuration change
 
 1. **searchByAttributes**
 
@@ -235,7 +247,7 @@
 
 1. **whyRecordInEntity**
 
-    - Describes why a record is in its respective entity.
+    - Describes the ways a record relates to the rest of its respective entity.
 
 1. **whyRecords**
 
