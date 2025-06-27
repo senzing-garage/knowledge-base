@@ -34,7 +34,7 @@
    [java](https://garage.senzing.com/sz-sdk-java/com/senzing/sdk/SzConfigManager.html#createConfig(long))
    [python](https://garage.senzing.com/sz-sdk-python/senzing.html#senzing.szconfigmanager.SzConfigManager.create_config_from_config_id)
    [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szconfigmanager#Szconfigmanager.CreateConfigFromConfigID)
-   createConfigFromConfigID
+   createConfigFromConfigId
    (**Note:** Incorrectly specified in [Candidate method names - condensed])
 
 1. [c-sharp]()
