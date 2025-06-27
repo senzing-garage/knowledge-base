@@ -16,26 +16,33 @@
 
 ## SzConfig
 
-1. **addDataSource**
+1. **addDataSource** (registerDataSource)
 
-    - Adds a new data source to this instance.
+    - Adds a data source to this configuration.
+        - This does not immediately change the repository until save.
+        - This refers to the label of the datasource added to the configuration.
+        -
 
-1. **deleteDataSource**
+1. **deleteDataSource** (unregisterDataSource)
 
-    - Deletes a data source from this instance.
+    - Removes a data source from this configuration.
         - Is idempotent
+        - This does not immediately change the repository until save
+        - Cannot delete a datasource that has records referring to it.
+        - Does not delete records.
+        - For more detail see:  <http://docs.senzing.com/>.....
 
 1. **export**
 
-    - Retrieves the configuration definition for this instance.
+    - Retrieves the definition for this configuration.
 
-1. **getDataSources**
+1. **getDataSources** (getDataSourceRegistry)
 
-    - Gets the data sources for this instance.
+    - Gets the data source registry for this configuration.
 
 ## SzConfigManager
 
-1. **createConfigFromConfigID**
+1. **createConfigFromConfigId**
 
     - Creates a new SzConfig instance for a configuration ID.
 
@@ -53,11 +60,11 @@
 
 1. **getDefaultConfigId**
 
-    - Gets the default configuration for the repository.
+    - Gets the default configuration ID for the repository.
 
 1. **registerConfig**
 
-    - Registers a configuration definition with the repository.
+    - Registers a configuration definition in the repository.
 
 1. **replaceDefaultConfigId**
 
@@ -66,7 +73,7 @@
 
 1. **setDefaultConfig**
 
-    - Registers a configuration with the repository and sets its ID as the default for the repository.
+    - Registers a configuration in the repository and sets its ID as the default for the repository.
         - Convenience method for `registerConfig` and `setDefaultConfigId`.
 
 1. **setDefaultConfigId**
