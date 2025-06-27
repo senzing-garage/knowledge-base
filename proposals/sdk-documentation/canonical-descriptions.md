@@ -255,7 +255,8 @@
 
 1. **whySearch**
 
-    - Describes why an entity did not match or relate to a set of search attributes.
+    - Describes the ways a set of search attributes relate to an entity.
+        - Can be a positive or negative match
 
 ## SzProduct
 
