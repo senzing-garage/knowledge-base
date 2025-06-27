@@ -12,10 +12,10 @@ The following list should reflect modifications documented in
 
 | Existing name                                                                     | Canonical Name                                     | Return value | Smells |
 | --------------------------------------------------------------------------------- | -------------------------------------------------- | ------------ | ------ |
-| SzConfig_addDataSource(configHandle, inputJson, responseBuf, bufSize, resizeFunc) | addDataSource(dataSourceCode)                      | string       |        |
-| SzConfig_deleteDataSource(configHandle, inputJson)                                | deleteDataSource(dataSourceCode)                   | -            |        |
+| SzConfig_addDataSource(configHandle, inputJson, responseBuf, bufSize, resizeFunc) | registerDataSource(dataSourceCode)                 | string       |        |
+| SzConfig_deleteDataSource(configHandle, inputJson)                                | unregisterDataSource(dataSourceCode)               | -            |        |
 | SzConfig_init(moduleName, iniParams, verboseLogging)                              | initialize(instanceName, settings, verboseLogging) | -            |        |
-| SzConfig_listDataSources(configHandle, responseBuf, bufSize, resizeFunc)          | getDataSources()                                   | string       |        |
+| SzConfig_listDataSources(configHandle, responseBuf, bufSize, resizeFunc)          | getDataSourceRegistry()                            | string       |        |
 | SzConfig_save(configHandle, responseBuf, bufSize, resizeFunc)                     | export()                                           | string       |        |
 
 ### SzConfigManager
@@ -38,9 +38,9 @@ The following list should reflect modifications documented in
 
 | Existing name                                                            | Canonical Name                                               | Return value | Smells                                                          |
 | ------------------------------------------------------------------------ | ------------------------------------------------------------ | ------------ | --------------------------------------------------------------- |
-| SzDiagnostic_checkDBPerf(secondsToRun, responseBuf, bufSize, resizeFunc) | checkDatastorePerformance(secondsToRun)                      | string       |                                                                 |
+| SzDiagnostic_checkDBPerf(secondsToRun, responseBuf, bufSize, resizeFunc) | checkRepositoryPerformance(secondsToRun)                     | string       |                                                                 |
 | SzDiagnostic_destroy()                                                   |                                                              | -            |                                                                 |
-| SzDiagnostic_getDatastoreInfo(responseBuf, bufSize, resizeFunc)          | getDatastoreInfo()                                           | string       |                                                                 |
+| SzDiagnostic_getDatastoreInfo(responseBuf, bufSize, resizeFunc)          | getRepositoryInfo()                                          | string       |                                                                 |
 | SzDiagnostic_getFeature(libFeatID, responseBuf, bufSize, resizeFunc)     | getFeature(featureId)                                        | string       | \*\* Not approved yet                                           |
 | SzDiagnostic_init(moduleName, iniParams, verboseLogging)                 | initialize(instanceName, settings, configId, verboseLogging) |              | `configId` can be `nil`, `None`, `null`. Consider single object |
 | SzDiagnostic_purgeRepository(????)                                       | purgeRepository(????)                                        |              |                                                                 |
@@ -51,7 +51,7 @@ The following list should reflect modifications documented in
 | Existing name                                                                                                              | Canonical Name                                                                                                                                  | Return value | Smells                                                          |
 | -------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------------------------------------------------------- |
 | Sz_addRecord(dataSourceCode, recordID, jsonData)                                                                           | addRecord(dataSourceCode, recordId, recordDefinition, flags)                                                                                    | string       |                                                                 |
-| Sz_closeExport(responseHandle)                                                                                             | closeExport(exportHandle)                                                                                                                       | -            |                                                                 |
+| Sz_closeExport(responseHandle)                                                                                             | closeExportReport(exportHandle)                                                                                                                 | -            |                                                                 |
 | Sz_countRedoRecords()                                                                                                      |                                                                                                                                                 | int64        |                                                                 |
 | Sz_deleteRecord(dataSourceCode, recordID)                                                                                  | deleteRecord(dataSourceCode, recordId, flags)                                                                                                   | string       |                                                                 |
 | Sz_destroy()                                                                                                               |                                                                                                                                                 | -            |                                                                 |
