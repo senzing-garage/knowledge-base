@@ -10,16 +10,17 @@
    1. [ ] [sz-sdk-proto/go](https://github.com/senzing-garage/sz-sdk-proto/go)
    1. [ ] [go-grpcing](https://github.com/senzing-garage/go-grpcing)
    1. [ ] [go-messaging](https://github.com/senzing-garage/go-messaging)
-1. Requires: go-messaging
-   1. [ ] [go-logging](https://github.com/senzing-garage/go-logging)
-1. Requires: go-observing
+1. Requires: sz-sdk-json-type-definition
    1. [ ] [sz-sdk-go](https://github.com/senzing-garage/sz-sdk-go)
-1. Requires: go-logging
+1. Requires: go-messaging
    1. [ ] [go-helpers](https://github.com/senzing-garage/go-helpers)
-   1. [ ] [go-databasing](https://github.com/senzing-garage/go-databasing)
 1. Requires: go-helpers
-   1. [ ] [go-cmdhelping](https://github.com/senzing-garage/go-cmdhelping)
+   1. [ ] [go-logging](https://github.com/senzing-garage/go-logging)
    1. [ ] [go-observing](https://github.com/senzing-garage/go-observing)
+   1. [ ] [go-cmdhelping](https://github.com/senzing-garage/go-cmdhelping)
+1. Requires: go-observing
+1. Requires: go-logging
+   1. [ ] [go-databasing](https://github.com/senzing-garage/go-databasing)
 1. Requires: go-cmdhelping
    1. [ ] [explain](https://github.com/senzing-garage/explain)
    1. [ ] [observe](https://github.com/senzing-garage/observe)
@@ -46,7 +47,6 @@
    1. [ ] [demo-entity-search](https://github.com/senzing-garage/demo-entity-search)
    1. [ ] [serve-http](https://github.com/senzing-garage/serve-http)
 1. Requires: demo-entity-search
-   1. [ ] [demo-quickstart](https://github.com/senzing-garage/demo-quickstart)
 1. Requires: go-databasing
    1. [ ] [init-database](https://github.com/senzing-garage/init-database)
 1. Requires: init-database
