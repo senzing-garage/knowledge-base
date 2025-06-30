@@ -31,7 +31,7 @@
    1. [ ] [sz-sdk-go-mock](https://github.com/senzing-garage/sz-sdk-go-mock)
    1. [ ] [go-queueing](https://github.com/senzing-garage/go-queueing)
 1. Requires: sz-sdk-go-core
-   1. [ ] [serve-grpc](https://github.com/senzing-garage/serve-grpc)
+   1. [ ] [serve-grpc](https://github.com/senzing-garage/serve-grpc)  (needs init-database backpatch)
 1. Requires: serve-grpc (for testing)
    1. [ ] [sz-sdk-go-grpc](https://github.com/senzing-garage/sz-sdk-go-grpc)
 1. Requires: go-queueing
