@@ -10,29 +10,29 @@ The following list should reflect modifications documented in
 
 ### SzConfig
 
-| Existing name                                                                     | Canonical Name                                     | Return value | Smells | Differs in C |
-| --------------------------------------------------------------------------------- | -------------------------------------------------- | ------------ | ------ | ------------ |
-| SzConfig_addDataSource(configHandle, inputJson, responseBuf, bufSize, resizeFunc) | registerDataSource(dataSourceCode)                 | string       |        | * |
-| SzConfig_deleteDataSource(configHandle, inputJson)                                | unregisterDataSource(dataSourceCode)               | -            |        | * |
-| SzConfig_init(moduleName, iniParams, verboseLogging)                              | initialize(instanceName, settings, verboseLogging) | -            |        |  |
-| SzConfig_listDataSources(configHandle, responseBuf, bufSize, resizeFunc)          | getDataSourceRegistry()                            | string       |        | * |
-| SzConfig_save(configHandle, responseBuf, bufSize, resizeFunc)                     | export()                                           | string       |        | * |
+| Differs in C | Existing name                                                                     | Canonical Name                                     | Return value | Smells |
+| ------------ | --------------------------------------------------------------------------------- | -------------------------------------------------- | ------------ | ------ |
+| *            | SzConfig_addDataSource(configHandle, inputJson, responseBuf, bufSize, resizeFunc) | registerDataSource(dataSourceCode)                 | string       |        |
+| *            | SzConfig_deleteDataSource(configHandle, inputJson)                                | unregisterDataSource(dataSourceCode)               | -            |        |
+|              | SzConfig_init(moduleName, iniParams, verboseLogging)                              | initialize(instanceName, settings, verboseLogging) | -            |        |
+| *            | SzConfig_listDataSources(configHandle, responseBuf, bufSize, resizeFunc)          | getDataSourceRegistry()                            | string       |        |
+| *            | SzConfig_save(configHandle, responseBuf, bufSize, resizeFunc)                     | export()                                           | string       |        |
 
 ### SzConfigManager
 
-| Existing name                                                     | Canonical Name                                                     | Return value | Note                                         | Differs in C |
-| ----------------------------------------------------------------- | ------------------------------------------------------------------ | ------------ | -------------------------------------------- | ------------ |
-| SzConfigMgr_addConfig(configStr, configComment, configID)         | registerConfig(configDefinition, configComment)                    | int64        |                                              |
-| SzConfigMgr_destroy()                                             |                                                                    | -            |                                              |
-| SzConfigMgr_getConfig(configID, responseBuf, bufSize, resizeFunc) | createConfigFromConfigId(configId)                                 | SzConfig     | May vary by SDK. ConfigID=0 throws exception |
-|                                                                   | createConfigFromString(configDefinition)                           | SzConfig     | May vary by SDK                              |
-|                                                                   | createConfigFromTemplate()                                         | SzConfig     | May vary by SDK                              |
-| SzConfigMgr_getConfigList(responseBuf, bufSize, resizeFunc)       | getConfigRegistry()                                                | string       |                                              |
-| SzConfigMgr_getDefaultConfigID(configID)                          | getDefaultConfigId()                                               | int64        |                                              |
-| SzConfigMgr_init(moduleName, iniParams, verboseLogging)           | initialize(instanceName, settings, verboseLogging)                 | -            |                                              |
-| SzConfigMgr_replaceDefaultConfigID(oldConfigID, newConfigID)      | replaceDefaultConfigId(currentDefaultConfigId, newDefaultConfigId) | -            |                                              |
-| SzConfigMgr_setDefaultConfigID(configID)                          | setDefaultConfigId(configId)                                       | -            |                                              |
-|                                                                   | setDefaultConfig(configDefinition, configComment)                  | int64        |                                              |
+| Differs in C | Existing name                                                     | Canonical Name                                                     | Return value | Note                                         |
+| ------------ | ----------------------------------------------------------------- | ------------------------------------------------------------------ | ------------ | -------------------------------------------- |
+| *            | SzConfigMgr_addConfig(configStr, configComment, configID)         | registerConfig(configDefinition, configComment)                    | int64        |                                              |
+|              | SzConfigMgr_destroy()                                             |                                                                    | -            |                                              |
+| -            | SzConfigMgr_getConfig(configID, responseBuf, bufSize, resizeFunc) | createConfigFromConfigId(configId)                                 | SzConfig     | May vary by SDK. ConfigID=0 throws exception |
+| -            |                                                                   | createConfigFromString(configDefinition)                           | SzConfig     | May vary by SDK                              |
+| -            |                                                                   | createConfigFromTemplate()                                         | SzConfig     | May vary by SDK                              |
+| *            | SzConfigMgr_getConfigList(responseBuf, bufSize, resizeFunc)       | getConfigRegistry()                                                | string       |                                              |
+|              | SzConfigMgr_getDefaultConfigID(configID)                          | getDefaultConfigId()                                               | int64        |                                              |
+|              | SzConfigMgr_init(moduleName, iniParams, verboseLogging)           | initialize(instanceName, settings, verboseLogging)                 | -            |                                              |
+|              | SzConfigMgr_replaceDefaultConfigID(oldConfigID, newConfigID)      | replaceDefaultConfigId(currentDefaultConfigId, newDefaultConfigId) | -            |                                              |
+|              | SzConfigMgr_setDefaultConfigID(configID)                          | setDefaultConfigId(configId)                                       | -            |                                              |
+|              |                                                                   | setDefaultConfig(configDefinition, configComment)                  | int64        |                                              |
 
 ### SzDiagnostic
 
