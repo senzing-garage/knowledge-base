@@ -14,7 +14,7 @@ The following list should reflect modifications documented in
 | --------------------------------------------------------------------------------- | -------------------------------------------------- | ------------ | ------ | ------------ |
 | SzConfig_addDataSource(configHandle, inputJson, responseBuf, bufSize, resizeFunc) | registerDataSource(dataSourceCode)                 | string       |        | * |
 | SzConfig_deleteDataSource(configHandle, inputJson)                                | unregisterDataSource(dataSourceCode)               | -            |        | * |
-| SzConfig_init(moduleName, iniParams, verboseLogging)                              | initialize(instanceName, settings, verboseLogging) | -            |        | * |
+| SzConfig_init(moduleName, iniParams, verboseLogging)                              | initialize(instanceName, settings, verboseLogging) | -            |        |  |
 | SzConfig_listDataSources(configHandle, responseBuf, bufSize, resizeFunc)          | getDataSourceRegistry()                            | string       |        | * |
 | SzConfig_save(configHandle, responseBuf, bufSize, resizeFunc)                     | export()                                           | string       |        | * |
 
