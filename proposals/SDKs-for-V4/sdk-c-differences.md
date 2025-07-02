@@ -33,7 +33,6 @@ The following list should reflect modifications documented in
 |:------------:| ------------------------------------------------------------------------ | ------------------------------------------------------------ | ------------ | --------------------------------------------------------------- |
 | *            | SzDiagnostic_checkDBPerf(secondsToRun, responseBuf, bufSize, resizeFunc) | checkRepositoryPerformance(secondsToRun)                     | string       |                                                                 |
 | *            | SzDiagnostic_getDatastoreInfo(responseBuf, bufSize, resizeFunc)          | getRepositoryInfo()                                          | string       |                                                                 |
-| *            | SzDiagnostic_getFeature(libFeatID, responseBuf, bufSize, resizeFunc)     | getFeature(featureId)                                        | string       | \*\* Not approved yet                                           |
 
 ### SzEngine
 
