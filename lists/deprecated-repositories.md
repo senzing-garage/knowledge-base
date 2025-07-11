@@ -2,6 +2,7 @@
 
 | Deprecated | Hidden     | Repository                                   |
 | ---------- | ---------- | -------------------------------------------- |
+| 2025-07-11 |            | senzing-with-chatgpt-plugin                  |
 | 2025-06-17 |            | mapper-opensanctions                         |
 | 2025-03-31 | 2025-03-31 | senzing-entity-specification                 |
 | 2025-02-24 |            | sz-sdk-nodejs-grpc                           |
@@ -11,9 +12,9 @@
 | 2025-01-08 |            | senzing-listener                             |
 | 2024-12-18 |            | entity-search-web-app-console                |
 | 2024-09-18 |            | connector-neo4j                              |
-| 2024-07-02 |            | aws-cloudformation-ecs                       |
-| 2024-07-02 |            | azure-template-aks-poc-simple                |
-| 2024-06-21 |            | docker-terraform-aws                         |
+| 2024-07-02 | 2025-07-11 | aws-cloudformation-ecs                       |
+| 2024-07-02 | 2025-07-11 | azure-template-aks-poc-simple                |
+| 2024-06-21 | 2025-07-11 | docker-terraform-aws                         |
 | 2024-04-02 | 2025-04-14 | packer-debian-postgres                       |
 | 2024-03-20 | 2025-04-14 | mapper-leie                                  |
 | 2024-02-28 | 2025-04-14 | risk-score-calculator                        |
