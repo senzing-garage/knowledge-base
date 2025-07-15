@@ -288,6 +288,10 @@ gpg: signing failed: No such file or directory
 
 fatal: failed to write commit object
 ```
+or 
+```
+Inappropriate ioctl for device
+```
 
 Ensure `GPG_TTY` is configured in the environment.
 See [Configure TTY] for more details.
