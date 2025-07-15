@@ -154,7 +154,7 @@ Do be sure to verify that you're only committing the changes you want with `git 
 
 # Help! Git is prompting me for my password, now what?
 
-View the existing remote repository URL and verify it is using `https://`:
+View the existing remote repository URL and verify it was cloned using `https://`:
 
 ```console
 git remote -v
