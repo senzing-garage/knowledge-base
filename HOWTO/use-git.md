@@ -152,6 +152,29 @@ git reset HEAD~1
 now create your branch, switch to it, and continue on as if that didn't happen.
 Do be sure to verify that you're only committing the changes you want with `git status`
 
+# Help! Git is prompting me for my password, now what?
+
+View the existing remote repository URL and verify it is using `https://`:
+
+```console
+git remote -v
+```
+
+Example output:
+
+```
+git remote -v
+origin	https://github.com:<ORGANIZATION>/<REPOSITORY_NAME>.git (fetch)
+origin	https://github.com:<ORGANIZATION>/<REPOSITORY_NAME>.git (push)
+```
+
+Change the remote repository URL. 
+Update the values for github organization and repository name in the following:
+
+```console
+git remote set-url origin git@github.com:<ORGANIZATION>/<REPOSITORY_NAME>.git
+```
+
 # One time configuration for your git command line
 
 ## set up globals
