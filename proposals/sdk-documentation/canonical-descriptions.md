@@ -16,6 +16,14 @@
 
 ## SzConfig
 
+1. **export**
+
+    - Retrieves the definition for this configuration.
+
+1. **getDataSourceRegistry**
+
+    - Gets the data source registry for this configuration.
+
 1. **registerDataSource**
 
     - Adds a data source to this configuration.
@@ -31,14 +39,6 @@
         - Cannot delete a datasource that has records referring to it.
         - Does not delete records.
         - For more detail see:  <http://docs.senzing.com/>.....
-
-1. **export**
-
-    - Retrieves the definition for this configuration.
-
-1. **getDataSourceRegistry**
-
-    - Gets the data source registry for this configuration.
 
 ## SzConfigManager
 
@@ -86,13 +86,13 @@
 
     - Conducts a rudimentary repository test to gauge I/O performance.
 
-1. **getRepositoryInfo**
-
-    - Returns overview information about the repository.
-
 1. **getFeature**
 
     - Experimental/internal for Senzing support use only.
+
+1. **getRepositoryInfo**
+
+    - Returns overview information about the repository.
 
 1. **purgeRepository**
 
@@ -185,6 +185,14 @@
 
     - Retrieves information about a record.
 
+1. **getRecordPreview**
+
+    - Describes the features resulting from the hypothetical load of a record.
+        - Don't run preprocessRecord before addRecord or deleteRecord.
+        - Does not modify data in the Senzing datastore.
+        - Does all processing except the entity relationship work.
+        - FIXME:
+
 1. **getRedoRecord**
 
     - Retrieves and removes a pending redo record.
@@ -206,14 +214,6 @@
 1. **howEntityByEntityId**
 
     - Explains how an entity was constructed from its records.
-
-1. **getRecordPreview**
-
-    - Describes the features resulting from the hypothetical load of a record.
-        - Don't run preprocessRecord before addRecord or deleteRecord.
-        - Does not modify data in the Senzing datastore.
-        - Does all processing except the entity relationship work.
-        - FIXME:
 
 1. **primeEngine**
 
