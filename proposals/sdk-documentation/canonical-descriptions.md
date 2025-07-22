@@ -16,6 +16,8 @@
 
 ## SzConfig
 
+An in-memory representation of the Senzing configuration.
+
 1. **export**
 
     - Retrieves the definition for this configuration.
@@ -27,18 +29,19 @@
 1. **registerDataSource**
 
     - Adds a data source to this configuration.
-        - This does not immediately change the repository until save.
-        - This refers to the label of the datasource added to the configuration.
-        -
+        - Because SzConfig is an in-memory representation,
+          the repository is not changed unless the configuration
+          is exported and then registered via ConfigManager.
 
 1. **unregisterDataSource**
 
     - Removes a data source from this configuration.
-        - Is idempotent
-        - This does not immediately change the repository until save
-        - Cannot delete a datasource that has records referring to it.
-        - Does not delete records.
-        - For more detail see:  <http://docs.senzing.com/>.....
+        - Because SzConfig is an in-memory representation,
+          the repository is not changed unless the configuration
+          is exported and then registered via ConfigManager.
+        - Is idempotent.
+        - Warning: if records in the repository refer to the unregistered datasource
+          the configuration cannot be used as the active configuration.
 
 ## SzConfigManager
 
