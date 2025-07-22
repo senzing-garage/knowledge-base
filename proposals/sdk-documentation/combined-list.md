@@ -4,29 +4,29 @@
 
 ## SzConfig
 
-1. [c-sharp](https://garage.senzing.com/sz-sdk-csharp/target/api/Senzing.Sdk.SzConfig.html#Senzing_Sdk_SzConfig_AddDataSource_System_String_)
-   [java](https://garage.senzing.com/sz-sdk-java/com/senzing/sdk/SzConfig.html#addDataSource(java.lang.String))
-   [python](https://garage.senzing.com/sz-sdk-python/senzing.html#senzing.szconfig.SzConfig.add_data_source)
-   [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szconfig#Szconfig.AddDataSource)
-   addDataSource
-
-1. [c-sharp](https://garage.senzing.com/sz-sdk-csharp/target/api/Senzing.Sdk.SzConfig.html#Senzing_Sdk_SzConfig_DeleteDataSource_System_String_)
-   [java](https://garage.senzing.com/sz-sdk-java/com/senzing/sdk/SzConfig.html#deleteDataSource(java.lang.String))
-   [python](https://garage.senzing.com/sz-sdk-python/senzing.html#senzing.szconfig.SzConfig.delete_data_source)
-   [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szconfig#Szconfig.DeleteDataSource)
-   deleteDataSource
-
 1. [c-sharp](https://garage.senzing.com/sz-sdk-csharp/target/api/Senzing.Sdk.SzConfig.html#Senzing_Sdk_SzConfig_Export)
    [java](https://garage.senzing.com/sz-sdk-java/com/senzing/sdk/SzConfig.html#export())
    [python](https://garage.senzing.com/sz-sdk-python/senzing.html#senzing.szconfig.SzConfig.export)
    [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szconfig#Szconfig.Export)
    export
 
-1. [c-sharp](https://garage.senzing.com/sz-sdk-csharp/target/api/Senzing.Sdk.SzConfig.html#Senzing_Sdk_SzConfig_GetDataSources)
-   [java](https://garage.senzing.com/sz-sdk-java/com/senzing/sdk/SzConfig.html#getDataSources())
-   [python](https://garage.senzing.com/sz-sdk-python/senzing.html#senzing.szconfig.SzConfig.get_data_sources)
-   [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szconfig#Szconfig.GetDataSources)
-   getDataSources
+1. [c-sharp](https://garage.senzing.com/sz-sdk-csharp/target/api/Senzing.Sdk.SzConfig.html#Senzing_Sdk_SzConfig_GetDataSourceRegistry)
+   [java](https://garage.senzing.com/sz-sdk-java/com/senzing/sdk/SzConfig.html#getDataSourceRegistry())
+   [python](https://garage.senzing.com/sz-sdk-python/senzing.html#senzing.szconfig.SzConfig.get_data_source_registry)
+   [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szconfig#Szconfig.GetDataSourceRegistry)
+   getDataSourceRegistry
+
+1. [c-sharp](https://garage.senzing.com/sz-sdk-csharp/target/api/Senzing.Sdk.SzConfig.html#Senzing_Sdk_SzConfig_RegisterDataSource_System_String_)
+   [java](https://garage.senzing.com/sz-sdk-java/com/senzing/sdk/SzConfig.html#registerDataSource(java.lang.String))
+   [python](https://garage.senzing.com/sz-sdk-python/senzing.html#senzing.szconfig.SzConfig.register_data_source)
+   [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szconfig#Szconfig.RegisterDataSource)
+   registerDataSource
+
+1. [c-sharp](https://garage.senzing.com/sz-sdk-csharp/target/api/Senzing.Sdk.SzConfig.html#Senzing_Sdk_SzConfig_UnregisterDataSource_System_String_)
+   [java](https://garage.senzing.com/sz-sdk-java/com/senzing/sdk/SzConfig.html#unregisterDataSource(java.lang.String))
+   [python](https://garage.senzing.com/sz-sdk-python/senzing.html#senzing.szconfig.SzConfig.unregister_data_source)
+   [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szconfig#Szconfig.UnregisterDataSource)
+   unregisterDataSource
 
 ## SzConfigManager
 
@@ -35,7 +35,6 @@
    [python](https://garage.senzing.com/sz-sdk-python/senzing.html#senzing.szconfigmanager.SzConfigManager.create_config_from_config_id)
    [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szconfigmanager#Szconfigmanager.CreateConfigFromConfigID)
    createConfigFromConfigId
-   (**Note:** Incorrectly specified in [Candidate method names - condensed])
 
 1. [c-sharp]()
    [java]()
@@ -49,11 +48,11 @@
    [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szconfigmanager#Szconfigmanager.CreateConfigFromTemplate)
    createConfigFromTemplate
 
-1. [c-sharp](https://garage.senzing.com/sz-sdk-csharp/target/api/Senzing.Sdk.SzConfigManager.html#Senzing_Sdk_SzConfigManager_GetConfigs)
-   [java](https://garage.senzing.com/sz-sdk-java/com/senzing/sdk/SzConfigManager.html#getConfigs())
-   [python](https://garage.senzing.com/sz-sdk-python/senzing.html#senzing.szconfigmanager.SzConfigManager.get_configs)
-   [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szconfigmanager#Szconfigmanager.GetConfigs)
-   getConfigs
+1. [c-sharp](https://garage.senzing.com/sz-sdk-csharp/target/api/Senzing.Sdk.SzConfigManager.html#Senzing_Sdk_SzConfigManager_GetConfigRegistry)
+   [java](https://garage.senzing.com/sz-sdk-java/com/senzing/sdk/SzConfigManager.html#getConfigRegistry())
+   [python](https://garage.senzing.com/sz-sdk-python/senzing.html#senzing.szconfigmanager.SzConfigManager.get_config_registry)
+   [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szconfigmanager#Szconfigmanager.GetConfigRegistry)
+   getConfigRegistry
 
 1. [c-sharp](https://garage.senzing.com/sz-sdk-csharp/target/api/Senzing.Sdk.SzConfigManager.html#Senzing_Sdk_SzConfigManager_GetDefaultConfigID)
    [java](https://garage.senzing.com/sz-sdk-java/com/senzing/sdk/SzConfigManager.html#getDefaultConfigId())
@@ -87,17 +86,17 @@
 
 ## SzDiagnostic
 
-1. [c-sharp](https://garage.senzing.com/sz-sdk-csharp/target/api/Senzing.Sdk.SzDiagnostic.html#Senzing_Sdk_SzDiagnostic_CheckDatastorePerformance_System_Int32_)
-   [java](https://garage.senzing.com/sz-sdk-java/com/senzing/sdk/SzDiagnostic.html#checkDatastorePerformance(int))
-   [python](https://garage.senzing.com/sz-sdk-python/senzing.html#senzing.szdiagnostic.SzDiagnostic.check_datastore_performance)
-   [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szdiagnostic#Szdiagnostic.CheckDatastorePerformance)
-   checkDatastorePerformance
+1. [c-sharp](https://garage.senzing.com/sz-sdk-csharp/target/api/Senzing.Sdk.SzDiagnostic.html#Senzing_Sdk_SzDiagnostic_CheckRepositoryPerformance_System_Int32_)
+   [java](https://garage.senzing.com/sz-sdk-java/com/senzing/sdk/SzDiagnostic.html#checkRepositoryPerformance(int))
+   [python](https://garage.senzing.com/sz-sdk-python/senzing.html#senzing.szdiagnostic.SzDiagnostic.check_repository_performance)
+   [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szdiagnostic#Szdiagnostic.CheckRepositoryPerformance)
+   checkRepositoryPerformance
 
-1. [c-sharp](https://garage.senzing.com/sz-sdk-csharp/target/api/Senzing.Sdk.SzDiagnostic.html#Senzing_Sdk_SzDiagnostic_GetDatastoreInfo)
-   [java](https://garage.senzing.com/sz-sdk-java/com/senzing/sdk/SzDiagnostic.html#getDatastoreInfo())
-   [python](https://garage.senzing.com/sz-sdk-python/senzing.html#senzing.szdiagnostic.SzDiagnostic.get_datastore_info)
-   [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szdiagnostic#Szdiagnostic.GetDatastoreInfo)
-   getDatastoreInfo
+1. [c-sharp](https://garage.senzing.com/sz-sdk-csharp/target/api/Senzing.Sdk.SzDiagnostic.html#Senzing_Sdk_SzDiagnostic_GetRepositoryInfo)
+   [java](https://garage.senzing.com/sz-sdk-java/com/senzing/sdk/SzDiagnostic.html#getRepositoryInfo())
+   [python](https://garage.senzing.com/sz-sdk-python/senzing.html#senzing.szdiagnostic.SzDiagnostic.get_repository_info)
+   [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szdiagnostic#Szdiagnostic.GetRepositoryInfo)
+   getRepositoryInfo
 
 1. [c-sharp](https://garage.senzing.com/sz-sdk-csharp/target/api/Senzing.Sdk.SzDiagnostic.html#Senzing_Sdk_SzDiagnostic_GetFeature_System_Int64_)
    [java](https://garage.senzing.com/sz-sdk-java/com/senzing/sdk/SzDiagnostic.html#getFeature(long))
@@ -127,11 +126,11 @@
    [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szengine#Szengine.AddRecord)
    addRecord
 
-1. [c-sharp](https://garage.senzing.com/sz-sdk-csharp/target/api/Senzing.Sdk.SzEngine.html#Senzing_Sdk_SzEngine_CloseExport_System_IntPtr_)
-   [java](https://garage.senzing.com/sz-sdk-java/com/senzing/sdk/SzEngine.html#closeExport(long))
-   [python](https://garage.senzing.com/sz-sdk-python/senzing.html#senzing.szengine.SzEngine.close_export)
-   [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szengine#Szengine.CloseExport)
-   closeExport
+1. [c-sharp](https://garage.senzing.com/sz-sdk-csharp/target/api/Senzing.Sdk.SzEngine.html#Senzing_Sdk_SzEngine_CloseExportReport_System_IntPtr_)
+   [java](https://garage.senzing.com/sz-sdk-java/com/senzing/sdk/SzEngine.html#closeExportReport(long))
+   [python](https://garage.senzing.com/sz-sdk-python/senzing.html#senzing.szengine.SzEngine.close_export_report)
+   [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szengine#Szengine.CloseExportReport)
+   closeExportReport
 
 1. [c-sharp](https://garage.senzing.com/sz-sdk-csharp/target/api/Senzing.Sdk.SzEngine.html#Senzing_Sdk_SzEngine_CountRedoRecords)
    [java](https://garage.senzing.com/sz-sdk-java/com/senzing/sdk/SzEngine.html#countRedoRecords())
@@ -249,11 +248,11 @@
    [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szengine#Szengine.HowEntityByEntityID)
    howEntityByEntityId
 
-1. [c-sharp](https://garage.senzing.com/sz-sdk-csharp/target/api/Senzing.Sdk.SzEngine.html#Senzing_Sdk_SzEngine_PreprocessRecord_System_String_System_Nullable_Senzing_Sdk_SzFlag__)
-   [java](https://garage.senzing.com/sz-sdk-java/com/senzing/sdk/SzEngine.html#preprocessRecord(java.lang.String,java.util.Set))
-   [python](https://garage.senzing.com/sz-sdk-python/senzing.html#senzing.szengine.SzEngine.preprocess_record)
-   [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szengine#Szengine.PreprocessRecord)
-   preprocessRecord
+1. [c-sharp](https://garage.senzing.com/sz-sdk-csharp/target/api/Senzing.Sdk.SzEngine.html#Senzing_Sdk_SzEngine_GetRecordPreview_System_String_System_Nullable_Senzing_Sdk_SzFlag__)
+   [java](https://garage.senzing.com/sz-sdk-java/com/senzing/sdk/SzEngine.html#getRecordPreview(java.lang.String,java.util.Set))
+   [python](https://garage.senzing.com/sz-sdk-python/senzing.html#senzing.szengine.SzEngine.get_record_preview)
+   [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szengine#Szengine.GetRecordPreview)
+   getRecordPreview
 
 1. [c-sharp](https://garage.senzing.com/sz-sdk-csharp/target/api/Senzing.Sdk.SzEngine.html#Senzing_Sdk_SzEngine_PrimeEngine)
    [java](https://garage.senzing.com/sz-sdk-java/com/senzing/sdk/SzEngine.html#primeEngine())
@@ -330,5 +329,4 @@
    [go](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-go-core/szproduct#Szproduct.GetVersion)
    getVersion
 
-[Candidate method names - condensed]: https://github.com/senzing-garage/knowledge-base/blob/main/proposals/SDKs-for-V4/canonical-names-condensed.md
 [sdk-documentation]: README.md
