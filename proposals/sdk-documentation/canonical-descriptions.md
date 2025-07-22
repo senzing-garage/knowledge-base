@@ -48,6 +48,8 @@ An in-memory representation of the Senzing configuration.
 1. **createConfigFromConfigId**
 
     - Creates a new SzConfig instance for a configuration ID.
+      - Returns:
+        - Non-null;  exception if ID not recognized
 
 1. **createConfigFromString**
 
@@ -56,6 +58,8 @@ An in-memory representation of the Senzing configuration.
 1. **createConfigFromTemplate**
 
     - Creates a new SzConfig instance from the template configuration definition.
+      - The template configuration is located PIPELINE.RESOURCEPATH/templates/g2config.json.
+        FIXME: Need to say what `PIPELINE.RESOURCEPATH` is.
 
 1. **getConfigRegistry**
 
