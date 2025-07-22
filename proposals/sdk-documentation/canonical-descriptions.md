@@ -16,14 +16,14 @@
 
 ## SzConfig
 
-1. **addDataSource** (registerDataSource)
+1. **registerDataSource**
 
     - Adds a data source to this configuration.
         - This does not immediately change the repository until save.
         - This refers to the label of the datasource added to the configuration.
         -
 
-1. **deleteDataSource** (unregisterDataSource)
+1. **unregisterDataSource**
 
     - Removes a data source from this configuration.
         - Is idempotent
@@ -36,7 +36,7 @@
 
     - Retrieves the definition for this configuration.
 
-1. **getDataSources** (getDataSourceRegistry)
+1. **getDataSourceRegistry**
 
     - Gets the data source registry for this configuration.
 
@@ -82,11 +82,11 @@
 
 ## SzDiagnostic
 
-1. **checkDatastorePerformance**  (checkRepositoryPerformance)
+1. **checkRepositoryPerformance**
 
     - Conducts a rudimentary repository test to gauge I/O performance.
 
-1. **getDatastoreInfo** (getRepositoryInfo)
+1. **getRepositoryInfo**
 
     - Returns overview information about the repository.
 
@@ -111,7 +111,7 @@
         - Entity resolution occurs during the load.
         - Options for how much information is returns.
 
-1. **closeExport** (closeExportReport)
+1. **closeExportReport**
 
     - Closes an export report.
 
@@ -207,7 +207,7 @@
 
     - Explains how an entity was constructed from its records.
 
-1. **preprocessRecord** (FIXME: maybe a different method name)
+1. **getRecordPreview**
 
     - Describes the features resulting from the hypothetical load of a record.
         - Don't run preprocessRecord before addRecord or deleteRecord.
