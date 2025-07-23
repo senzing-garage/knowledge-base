@@ -120,7 +120,7 @@ An in-memory representation of the Senzing configuration.
     - Permanently deletes all data in the repository, except the configuration.
         - WARNING: This method is destructive, it will delete all loaded records and entity resolution decisions.
         - Senzing does not provide a means to restore the data.
-        - Backing up data is recommended before the method is used.
+        - The only means of recovery would be restoring from a database backup.
 
 1. **reinitialize**
 
@@ -286,7 +286,7 @@ An in-memory representation of the Senzing configuration.
 
 1. **getLicense**
 
-    - Gets the product license details.
+    - Gets the details and entitlements of the applied product license.
 
 1. **getVersion**
 
