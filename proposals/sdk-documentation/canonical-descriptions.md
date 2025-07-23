@@ -58,44 +58,58 @@ An in-memory representation of the Senzing configuration.
 1. **createConfigFromTemplate**
 
     - Creates a new SzConfig instance from the template configuration definition.
-      - The template configuration is located PIPELINE.RESOURCEPATH/templates/g2config.json.
-        FIXME: Need to say what `PIPELINE.RESOURCEPATH` is.
 
 1. **getConfigRegistry**
 
     - Gets the configuration registry.
+      - The registry contains the original timestamp, original comment, and configuration ID of all
+        configurations ever registered with the repository.
+      - Registered configurations cannot be unregistered.
 
 1. **getDefaultConfigId**
 
     - Gets the default configuration ID for the repository.
+      - Unless an explicit configuration ID is specified at initialization,
+        the default configuration ID is used.
+      - This may not be the same as the active configuration ID.
+      - Returns:
+        - The current default configuration ID or zero if the default configuration has not been set.
 
 1. **registerConfig**
 
     - Registers a configuration definition in the repository.
+      - Registered configurations do not become immediately active nor do they become the default.
+      - Registered configurations cannot be unregistered.
 
 1. **replaceDefaultConfigId**
 
     - Replaces the existing default configuration ID with a new configuration ID.
-        - Acts like "Compare and swap"
+      - The change is prevented if the current default configuration ID value is not as expected.
+      - Use this in place of setDefaultConfigID to handle race conditions.
 
 1. **setDefaultConfig**
 
-    - Registers a configuration in the repository and sets its ID as the default for the repository.
-        - Convenience method for `registerConfig` and `setDefaultConfigId`.
+    - Registers a configuration in the repository and then sets its ID as the default for the repository.
+        - Convenience method for `registerConfig` followed by `setDefaultConfigId`.
 
 1. **setDefaultConfigId**
 
     - Sets the default configuration ID.
+      - Usually this method is sufficient for setting the default configuration ID.
+        However in concurrent environments that could encounter race conditions,
+        consider using replaceDefaultConfigId instead.
 
 ## SzDiagnostic
 
 1. **checkRepositoryPerformance**
 
-    - Conducts a rudimentary repository test to gauge I/O performance.
+   - Conducts a rudimentary repository test to gauge I/O performance.
+      - Typically, this is only run when requested by Senzing support.
+      - This is a non-destructive test.
 
 1. **getFeature**
 
-    - Experimental/internal for Senzing support use only.
+    - Experimental/internal for Senzing support use.
 
 1. **getRepositoryInfo**
 
@@ -103,8 +117,10 @@ An in-memory representation of the Senzing configuration.
 
 1. **purgeRepository**
 
-    - Purges all data in the repository, except the configuration. (...ALL CAPS!)
-        - Very dangerous method
+    - Permanently deletes all data in the repository, except the configuration.
+        - WARNING: This method is destructive, it will delete all loaded records and entity resolution decisions.
+        - Senzing does not provide a means to restore the data.
+        - Backing up data is recommended before the method is used.
 
 1. **reinitialize**
 
@@ -212,6 +228,7 @@ An in-memory representation of the Senzing configuration.
         - Used when working with Senzing support
         - Best practice to periodically log the results.
         - (not per-thread, not per-function-call)
+        - The output can be helpful when interacting with Senzing support.
 
 1. **getVirtualEntityByRecordId**
 
