@@ -130,12 +130,16 @@ An in-memory representation of the Senzing configuration.
 
 1. **addRecord**
 
-    - Loads a record into the repository and performs entity resolution.
-        - Entity resolution occurs during the load.
-        - Options for how much information is returns.
+   - Loads a record into the repository and performs entity resolution
+      - If a record already exists with the same data source code and record ID, it will be replaced.
+      - If the record definition contains DATA_SOURCE and RECORD_ID JSON keys,
+        the values must match the dataSourceCode and recordID parameters.
+      - Flags control how the operation is performed and the content of the result.
+      - The data source code must be registered in the active configuration.
 
 1. **closeExportReport**
 
+    - FIXME: Start here.
     - Closes an export report.
 
 1. **countRedoRecords**
