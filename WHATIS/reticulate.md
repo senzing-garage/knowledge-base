@@ -9,8 +9,11 @@ Prerequisites:
 
 - [R]
 
+Install R package
+
 ```console
 sudo Rscript -e 'install.packages("reticulate", repos="https://cloud.r-project.org")'
 ```
 
+[R]: https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/r.md
 [reticulate site]: https://rstudio.github.io/reticulate/
