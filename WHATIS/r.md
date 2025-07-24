@@ -8,9 +8,9 @@
 1. Ubuntu
     - [Ubuntu Packages For R - Full Instructions]
 
-    ```console
-    sudo apt-get install r-base r-base-dev
-    ```
+        ```console
+        sudo apt-get install r-base r-base-dev
+        ```
 
 ## References
 
