@@ -1,6 +1,6 @@
 # GitHub Repository trimming
 
-Legend:
+Legend for **Status** column:
 
 - :x: Good candidate for deprecating, archiving, and non-public
 - :question:   Likely candidate. Needs investigation.
