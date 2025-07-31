@@ -1,5 +1,10 @@
 # GitHub Repository trimming
 
+Legend:
+
+- :x: Good candidate for deprecating, archiving, and non-public
+- :question:   Likely candidate. Needs investigation.
+
 | Repository                                                                                                                 | Status          | Description                                                                                                                         |
 | -------------------------------------------------------------------------------------------------------------------------- | --------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | [aws-cloudformation-database-cluster](https://github.com/senzing-garage/aws-cloudformation-database-cluster)               |                 | AWS Cloudformation with VPC and Senzing database cluster                                                                            |
