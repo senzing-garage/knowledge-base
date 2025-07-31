@@ -139,8 +139,8 @@ An in-memory representation of the Senzing configuration.
 
 1. **closeExportReport**
 
-    - FIXME: Start here.
     - Closes an export report.
+        - Used in conjunction with ExportJsonEntityReport, ExportCsvEntityReport, and FetchNext.
 
 1. **countRedoRecords**
 
@@ -149,24 +149,38 @@ An in-memory representation of the Senzing configuration.
 1. **deleteRecord**
 
     - Deletes a record from the repository and performs entity resolution.
-        - Entity resolution occurs during the load.
-        - Is idempotent
+       - Flags control how the operation is performed and the content of the result.
+       - The data source code must be registered in the active configuration.
+       - Is idempotent.
 
 1. **exportCsvEntityReport**
 
     - Initiates an export report of entity data in CSV format.
-        - This function does not scale. (reword)
-        - Add link to article
+        - Used in conjunction with fetchNext and closeEntityReport.
+        - The first fetchNext call, after calling this method, returns the CSV header.
+        - Subsequent fetchNext calls return exported entity data in CSV format.
+        - Use with large repositories is not advised.
+          For more information visit [Add link to article]
 
 1. **exportJsonEntityReport**
 
     - Initiates an export report of entity data in JSON Lines format.
-        - This function does not scale.
-        - Add link to article
+        - Used in conjunction with fetchNext and closeEntityReport.
+        - Each fetchNext call returns exported entity data as a JSON object.
+        - Use with large repositories is not advised.
+          For more information visit [Add link to article]
 
 1. **fetchNext**
 
     - Fetches the next line of entity data from an open export report.
+        - Used in conjunction with ExportJsonEntityReport, ExportCsvEntityReport, and closeEntityReport.
+        - If the export handle was obtained from ExportCsvEntityReport,
+          this returns the CSV header on the first call
+          and exported entity data in CSV format on subsequent calls.
+        - If the export handle was obtained from ExportJsonEntityReport,
+          this returns exported entity data as a JSON object.
+        - When "null" is returned, the export report is complete and the caller should
+          invoke closeExportReport to free resources.
 
 1. **findInterestingEntitiesByEntityId**
 
