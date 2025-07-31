@@ -195,20 +195,26 @@ An in-memory representation of the Senzing configuration.
 1. **findNetworkByEntityId**
 
     - Retrieves a network of relationships among entities based on entity IDs.
+        - Warning: Entity networks may be very large due to
+          the volume of inter-related data in the repository.
+          The parameters of this method can be used to limit the information returned.
 
 1. **findNetworkByRecordId**
 
     - Retrieves a network of relationships among entities based on record IDs.
+        - Warning: Entity networks may be very large due to
+          the volume of inter-related data in the repository.
+          The parameters of this method can be used to limit the information returned.
 
 1. **findPathByEntityId**
 
     - Searches for the shortest relationship path between two entities based on entity IDs.
-        - Based on parameters
+        - The returned path is the shortest path among the paths that satisify the parameters.
 
 1. **findPathByRecordId**
 
     - Searches for the shortest relationship path between two entities based on record IDs.
-        - Based on parameters
+        - The returned path is the shortest path among the paths that satisify the parameters.
 
 1. **getActiveConfigId**
 
