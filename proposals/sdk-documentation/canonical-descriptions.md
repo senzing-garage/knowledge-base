@@ -219,6 +219,7 @@ An in-memory representation of the Senzing configuration.
 1. **getActiveConfigId**
 
     - Gets the currently active configuration ID.
+        - May not be the default configuration ID.
 
 1. **getEntityByEntityId**
 
@@ -231,17 +232,17 @@ An in-memory representation of the Senzing configuration.
 1. **getRecord**
 
     - Retrieves information about a record.
+        - The information contains the original record data that was loaded
+          and may contain other information based on the flags parameter.
 
 1. **getRecordPreview**
 
     - Describes the features resulting from the hypothetical load of a record.
-        - Don't run preprocessRecord before addRecord or deleteRecord.
-        - Does not modify data in the Senzing datastore.
-        - Does all processing except the entity relationship work.
-        - FIXME:
+        - Used to obtain the features for a record that has not been loaded.
 
 1. **getRedoRecord**
 
+    - FIXME: start here.
     - Retrieves and removes a pending redo record.
         - Once retrieved, it must be processed via processRedoRecord.
         - An "empty" may be returned.
