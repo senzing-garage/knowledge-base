@@ -2,6 +2,7 @@
 
 | Deprecated | Hidden     | Repository                                   |
 | ---------- | ---------- | -------------------------------------------- |
+| 2025-08-04 |            | community-map                                |
 | 2025-08-04 |            | docker-init-container                        |
 | 2025-08-04 |            | docker-ibm-db2                               |
 | 2025-08-04 |            | docker-hello-world                           |
