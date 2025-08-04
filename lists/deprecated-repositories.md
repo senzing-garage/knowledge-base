@@ -2,6 +2,9 @@
 
 | Deprecated | Hidden     | Repository                                   |
 | ---------- | ---------- | -------------------------------------------- |
+| 2025-08-04 |            | configurator                                 |
+| 2025-08-04 |            | docker-mysql-init                            |
+| 2025-08-04 |            | docker-test-layers                           |
 | 2025-08-04 |            | community-map                                |
 | 2025-08-04 |            | docker-init-container                        |
 | 2025-08-04 |            | docker-ibm-db2                               |
