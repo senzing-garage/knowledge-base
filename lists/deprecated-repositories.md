@@ -2,6 +2,7 @@
 
 | Deprecated | Hidden     | Repository                                   |
 | ---------- | ---------- | -------------------------------------------- |
+| 2025-08-04 |            | docker-ibm-db2                               |
 | 2025-08-04 |            | docker-hello-world                           |
 | 2025-08-04 |            | docker-db2-driver-installer                  |
 | 2025-07-11 |            | senzing-with-chatgpt-plugin                  |
