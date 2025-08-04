@@ -2,6 +2,7 @@
 
 | Deprecated | Hidden     | Repository                                   |
 | ---------- | ---------- | -------------------------------------------- |
+| 2025-08-04 |            | docker-db2-driver-installer                  |
 | 2025-07-11 |            | senzing-with-chatgpt-plugin                  |
 | 2025-06-17 |            | mapper-opensanctions                         |
 | 2025-03-31 | 2025-03-31 | senzing-entity-specification                 |
