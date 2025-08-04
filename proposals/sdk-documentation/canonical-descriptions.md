@@ -134,7 +134,7 @@ An in-memory representation of the Senzing configuration.
       - If a record already exists with the same data source code and record ID, it will be replaced.
       - If the record definition contains DATA_SOURCE and RECORD_ID JSON keys,
         the values must match the dataSourceCode and recordID parameters.
-      - Flags control how the operation is performed and the content of the result.
+      - Specify the SzWithInfo flag to determine any outcomes from this operation.
       - The data source code must be registered in the active configuration.
 
 1. **closeExportReport**
@@ -149,7 +149,7 @@ An in-memory representation of the Senzing configuration.
 1. **deleteRecord**
 
     - Deletes a record from the repository and performs entity resolution.
-       - Flags control how the operation is performed and the content of the result.
+       - Specify the SzWithInfo flag to determine any outcomes from this operation.
        - The data source code must be registered in the active configuration.
        - Is idempotent.
 
@@ -242,23 +242,24 @@ An in-memory representation of the Senzing configuration.
 
 1. **getRedoRecord**
 
-    - FIXME: start here.
     - Retrieves and removes a pending redo record.
-        - Once retrieved, it must be processed via processRedoRecord.
         - An "empty" may be returned.
+        - Use processRedoRecord() to process the result of this function.
+        - Once a redo record is retrieved, it is no longer tracked by Senzing.
+        - The redo record may be stored externally for later processing.
+        - See also countRedoRecords(), processRedoRecord()
 
 1. **getStats**
 
     - Gets and resets the internal engine workload statistics for the current operating system process.
-        - Used when working with Senzing support
+        - The output is helpful when interacting with Senzing support.
         - Best practice to periodically log the results.
-        - (not per-thread, not per-function-call)
-        - The output can be helpful when interacting with Senzing support.
+        - ???? Do the statistics get reset?
 
 1. **getVirtualEntityByRecordId**
 
    - Describes how an entity would look if composed of a given set of records.
-        - The entity will be without relationships.
+        - The resultant virtual entity has no relationships to actual entities.
 
 1. **howEntityByEntityId**
 
@@ -267,24 +268,31 @@ An in-memory representation of the Senzing configuration.
 1. **primeEngine**
 
     - Pre-loads engine resources.
-        - Otherwise "lazy instantiation" will occur.
-        - Giving unpredictable performance.
-        - If not used, the load will occur on first access.
+
+        - Explicitly calling this method ensures the performance cost is incurred at a predictable time
+          rather than unexpectedly with the first call requiring the resource.
 
 1. **processRedoRecord**
 
     - Processes the provided redo record.
+        - Calling processRedoRecord() has the potential to create more redo records in certain situations.
+        - Specify the SzWithInfo flag to determine any outcomes from this operation.
+        - This operation performs entity resolution.
+        - See also getRedoRecord()
 
 1. **reevaluateEntity**
 
     - Reevaluates an entity by entity ID.
-        - Entity resolution occurs.
+        - If the entity is not found, then no changes are made.
+        - Specify the SzWithInfo flag to determine any outcomes from this operation.
+        - This operation performs entity resolution.
 
 1. **reevaluateRecord**
 
     - Reevaluates an entity by record ID.
-        - Entity resolution occurs.
-        - Causes the JSON to be reprocessed in the case of a configuration change
+        - If the record is not found, then no changes are made.
+        - Specify the SzWithInfo flag to determine any outcomes from this operation.
+        - This operation performs entity resolution.
 
 1. **searchByAttributes**
 
