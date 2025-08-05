@@ -229,7 +229,7 @@ An in-memory representation of the Senzing configuration.
 
     - Retrieves information about a record.
         - The information contains the original record data that was loaded
-          and may contain other information, specified by the flags parameter.
+          and may contain other information depending on the flags parameter.
 
 1. **getRecordPreview**
 
