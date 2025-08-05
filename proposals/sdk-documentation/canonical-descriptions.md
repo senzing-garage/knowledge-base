@@ -190,14 +190,14 @@ An in-memory representation of the Senzing configuration.
 
 1. **findNetworkByEntityId**
 
-    - Retrieves a network of relationships among entities specified by entity IDs.
+    - Retrieves a network of relationships among entities, specified by entity IDs.
         - Warning: Entity networks may be very large due to
           the volume of inter-related data in the repository.
           The parameters of this method can be used to limit the information returned.
 
 1. **findNetworkByRecordId**
 
-    - Retrieves a network of relationships among entities specified by record IDs.
+    - Retrieves a network of relationships among entities, specified by record IDs.
         - Warning: Entity networks may be very large due to
           the volume of inter-related data in the repository.
           The parameters of this method can be used to limit the information returned.
