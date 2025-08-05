@@ -158,7 +158,6 @@ An in-memory representation of the Senzing configuration.
         - The first fetchNext call, after calling this method, returns the CSV header.
         - Subsequent fetchNext calls return exported entity data in CSV format.
         - Use with large repositories is not advised.
-          For more information visit [Add link to article].
 
 1. **exportJsonEntityReport**
 
@@ -166,7 +165,6 @@ An in-memory representation of the Senzing configuration.
         - Used in conjunction with fetchNext and closeEntityReport.
         - Each fetchNext call returns exported entity data as a JSON object.
         - Use with large repositories is not advised.
-          For more information visit [Add link to article].
 
 1. **fetchNext**
 
