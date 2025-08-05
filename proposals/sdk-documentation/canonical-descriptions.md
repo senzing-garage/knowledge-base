@@ -219,17 +219,17 @@ An in-memory representation of the Senzing configuration.
 
 1. **getEntityByEntityId**
 
-    - Retrieves information about an entity based on entity ID.
+    - Retrieves information about an entity, specified by entity ID.
 
 1. **getEntityByRecordId**
 
-    - Retrieves information about an entity based on record ID.
+    - Retrieves information about an entity, specified by record ID.
 
 1. **getRecord**
 
     - Retrieves information about a record.
         - The information contains the original record data that was loaded
-          and may contain other information based on the flags parameter.
+          and may contain other information, specified by the flags parameter.
 
 1. **getRecordPreview**
 
