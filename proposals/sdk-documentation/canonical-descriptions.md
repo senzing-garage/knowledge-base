@@ -49,7 +49,7 @@ An in-memory representation of the Senzing configuration.
 
     - Creates a new SzConfig instance for a configuration ID.
         - Returns:
-            - Non-null;  exception if ID not recognized
+            - Non-null; exception if ID not recognized
 
 1. **createConfigFromString**
 
@@ -85,19 +85,19 @@ An in-memory representation of the Senzing configuration.
 
     - Replaces the existing default configuration ID with a new configuration ID.
         - The change is prevented if the current default configuration ID value is not as expected.
-        - Use this in place of setDefaultConfigID to handle race conditions.
+        - Use this in place of setDefaultConfigID() to handle race conditions.
 
 1. **setDefaultConfig**
 
     - Registers a configuration in the repository and then sets its ID as the default for the repository.
-        - Convenience method for `registerConfig` followed by `setDefaultConfigId`.
+        - Convenience method for registerConfig() followed by setDefaultConfigId().
 
 1. **setDefaultConfigId**
 
     - Sets the default configuration ID.
         - Usually this method is sufficient for setting the default configuration ID.
           However in concurrent environments that could encounter race conditions,
-          consider using replaceDefaultConfigId instead.
+          consider using replaceDefaultConfigId() instead.
 
 ## SzDiagnostic
 
@@ -139,7 +139,7 @@ An in-memory representation of the Senzing configuration.
 1. **closeExportReport**
 
     - Closes an export report.
-        - Used in conjunction with ExportJsonEntityReport, ExportCsvEntityReport, and FetchNext.
+        - Used in conjunction with ExportJsonEntityReport(), ExportCsvEntityReport(), and FetchNext().
 
 1. **countRedoRecords**
 
@@ -154,29 +154,29 @@ An in-memory representation of the Senzing configuration.
 1. **exportCsvEntityReport**
 
     - Initiates an export report of entity data in CSV format.
-        - Used in conjunction with fetchNext and closeEntityReport.
-        - The first fetchNext call, after calling this method, returns the CSV header.
-        - Subsequent fetchNext calls return exported entity data in CSV format.
+        - Used in conjunction with fetchNext() and closeEntityReport().
+        - The first fetchNext() call, after calling this method, returns the CSV header.
+        - Subsequent fetchNext() calls return exported entity data in CSV format.
         - Use with large repositories is not advised.
 
 1. **exportJsonEntityReport**
 
     - Initiates an export report of entity data in JSON Lines format.
-        - Used in conjunction with fetchNext and closeEntityReport.
-        - Each fetchNext call returns exported entity data as a JSON object.
+        - Used in conjunction with fetchNext() and closeEntityReport().
+        - Each fetchNext() call returns exported entity data as a JSON object.
         - Use with large repositories is not advised.
 
 1. **fetchNext**
 
     - Fetches the next line of entity data from an open export report.
-        - Used in conjunction with ExportJsonEntityReport, ExportCsvEntityReport, and closeEntityReport.
-        - If the export handle was obtained from ExportCsvEntityReport,
+        - Used in conjunction with ExportJsonEntityReport(), ExportCsvEntityReport(), and closeEntityReport().
+        - If the export handle was obtained from ExportCsvEntityReport(),
           this returns the CSV header on the first call
           and exported entity data in CSV format on subsequent calls.
-        - If the export handle was obtained from ExportJsonEntityReport,
+        - If the export handle was obtained from ExportJsonEntityReport(),
           this returns exported entity data as a JSON object.
         - When "null" is returned, the export report is complete and the caller should
-          invoke closeExportReport to free resources.
+          invoke closeExportReport() to free resources.
 
 1. **findInterestingEntitiesByEntityId**
 
