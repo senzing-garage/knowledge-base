@@ -104,7 +104,7 @@ An in-memory representation of the Senzing configuration.
 1. **checkRepositoryPerformance**
 
     - Conducts a rudimentary repository test to gauge I/O and network performance.
-        - Typically, this is only run when troubleshooting perforance.
+        - Typically, this is only run when troubleshooting performance.
         - This is a non-destructive test.
 
 1. **getFeature**
