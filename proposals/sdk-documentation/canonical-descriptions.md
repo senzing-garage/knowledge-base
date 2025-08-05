@@ -312,6 +312,7 @@ An in-memory representation of the Senzing configuration.
 1. **getLicense**
 
     - Gets the details and entitlements of the applied product license.
+        - The details do not include the licence key.
 
 1. **getVersion**
 
