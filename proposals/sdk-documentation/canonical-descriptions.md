@@ -134,7 +134,6 @@ An in-memory representation of the Senzing configuration.
         - If a record already exists with the same data source code and record ID, it will be replaced.
         - If the record definition contains DATA_SOURCE and RECORD_ID JSON keys,
           the values must match the dataSourceCode and recordID parameters.
-        - Specify the SzWithInfo flag to determine any outcomes from this operation.
         - The data source code must be registered in the active configuration.
 
 1. **closeExportReport**
