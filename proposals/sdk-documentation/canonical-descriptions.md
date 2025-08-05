@@ -270,7 +270,6 @@ An in-memory representation of the Senzing configuration.
 
     - Processes the provided redo record.
         - Calling processRedoRecord() has the potential to create more redo records in certain situations.
-        - Specify the SzWithInfo flag to determine any outcomes from this operation.
         - This operation performs entity resolution.
         - See also getRedoRecord().
 
