@@ -269,22 +269,20 @@ An in-memory representation of the Senzing configuration.
 1. **processRedoRecord**
 
     - Processes the provided redo record.
-        - Calling processRedoRecord() has the potential to create more redo records in certain situations.
         - This operation performs entity resolution.
-        - See also getRedoRecord().
+        - Calling processRedoRecord() has the potential to create more redo records in certain situations.
+        - See also getRedoRecord(), countRedoRecords().
 
 1. **reevaluateEntity**
 
     - Reevaluates an entity by entity ID.
         - If the entity is not found, then no changes are made.
-        - Specify the SzWithInfo flag to determine any outcomes from this operation.
         - This operation performs entity resolution.
 
 1. **reevaluateRecord**
 
     - Reevaluates an entity by record ID.
         - If the record is not found, then no changes are made.
-        - Specify the SzWithInfo flag to determine any outcomes from this operation.
         - This operation performs entity resolution.
 
 1. **searchByAttributes**
