@@ -250,12 +250,11 @@ An in-memory representation of the Senzing configuration.
     - Gets and resets the internal engine workload statistics for the current operating system process.
         - The output is helpful when interacting with Senzing support.
         - Best practice to periodically log the results.
-        - ???? Do the statistics get reset?
 
 1. **getVirtualEntityByRecordId**
 
     - Describes how an entity would look if composed of a given set of records.
-        - The resultant virtual entity has no relationships to actual entities.
+        - Virtual entities do not have relationships.
 
 1. **howEntityByEntityId**
 
@@ -265,7 +264,7 @@ An in-memory representation of the Senzing configuration.
 
     - Pre-loads engine resources.
         - Explicitly calling this method ensures the performance cost is incurred at a predictable time
-          rather than unexpectedly with the first call requiring the resource.
+          rather than unexpectedly with the first call requiring the resources.
 
 1. **processRedoRecord**
 
