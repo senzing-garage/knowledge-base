@@ -234,7 +234,7 @@ An in-memory representation of the Senzing configuration.
 1. **getRecordPreview**
 
     - Describes the features resulting from the hypothetical load of a record.
-        - Used to obtain the features for a record that has not been loaded.
+        - Used to preview the features for a record that has not been loaded.
 
 1. **getRedoRecord**
 
