@@ -40,7 +40,7 @@ An in-memory representation of the Senzing configuration.
           the repository is not changed unless the configuration
           is exported and then registered via ConfigManager.
         - Is idempotent.
-        - Warning: if records in the repository refer to the unregistered datasource
+        - Warning: if records in the repository refer to the unregistered datasource,
           the configuration cannot be used as the active configuration.
 
 ## SzConfigManager
@@ -48,8 +48,8 @@ An in-memory representation of the Senzing configuration.
 1. **createConfigFromConfigId**
 
     - Creates a new SzConfig instance for a configuration ID.
-      - Returns:
-        - Non-null;  exception if ID not recognized
+        - Returns:
+            - Non-null;  exception if ID not recognized
 
 1. **createConfigFromString**
 
@@ -62,30 +62,30 @@ An in-memory representation of the Senzing configuration.
 1. **getConfigRegistry**
 
     - Gets the configuration registry.
-      - The registry contains the original timestamp, original comment, and configuration ID of all
-        configurations ever registered with the repository.
-      - Registered configurations cannot be unregistered.
+        - The registry contains the original timestamp, original comment, and configuration ID of all
+          configurations ever registered with the repository.
+        - Registered configurations cannot be unregistered.
 
 1. **getDefaultConfigId**
 
     - Gets the default configuration ID for the repository.
-      - Unless an explicit configuration ID is specified at initialization,
-        the default configuration ID is used.
-      - This may not be the same as the active configuration ID.
-      - Returns:
-        - The current default configuration ID or zero if the default configuration has not been set.
+        - Unless an explicit configuration ID is specified at initialization,
+          the default configuration ID is used.
+        - This may not be the same as the active configuration ID.
+        - Returns:
+            - The current default configuration ID or zero if the default configuration has not been set.
 
 1. **registerConfig**
 
     - Registers a configuration definition in the repository.
-      - Registered configurations do not become immediately active nor do they become the default.
-      - Registered configurations cannot be unregistered.
+        - Registered configurations do not become immediately active nor do they become the default.
+        - Registered configurations cannot be unregistered.
 
 1. **replaceDefaultConfigId**
 
     - Replaces the existing default configuration ID with a new configuration ID.
-      - The change is prevented if the current default configuration ID value is not as expected.
-      - Use this in place of setDefaultConfigID to handle race conditions.
+        - The change is prevented if the current default configuration ID value is not as expected.
+        - Use this in place of setDefaultConfigID to handle race conditions.
 
 1. **setDefaultConfig**
 
@@ -95,17 +95,17 @@ An in-memory representation of the Senzing configuration.
 1. **setDefaultConfigId**
 
     - Sets the default configuration ID.
-      - Usually this method is sufficient for setting the default configuration ID.
-        However in concurrent environments that could encounter race conditions,
-        consider using replaceDefaultConfigId instead.
+        - Usually this method is sufficient for setting the default configuration ID.
+          However in concurrent environments that could encounter race conditions,
+          consider using replaceDefaultConfigId instead.
 
 ## SzDiagnostic
 
 1. **checkRepositoryPerformance**
 
-   - Conducts a rudimentary repository test to gauge I/O performance.
-      - Typically, this is only run when requested by Senzing support.
-      - This is a non-destructive test.
+    - Conducts a rudimentary repository test to gauge I/O performance.
+        - Typically, this is only run when requested by Senzing support.
+        - This is a non-destructive test.
 
 1. **getFeature**
 
@@ -130,12 +130,12 @@ An in-memory representation of the Senzing configuration.
 
 1. **addRecord**
 
-   - Loads a record into the repository and performs entity resolution
-      - If a record already exists with the same data source code and record ID, it will be replaced.
-      - If the record definition contains DATA_SOURCE and RECORD_ID JSON keys,
-        the values must match the dataSourceCode and recordID parameters.
-      - Specify the SzWithInfo flag to determine any outcomes from this operation.
-      - The data source code must be registered in the active configuration.
+    - Loads a record into the repository and performs entity resolution.
+        - If a record already exists with the same data source code and record ID, it will be replaced.
+        - If the record definition contains DATA_SOURCE and RECORD_ID JSON keys,
+          the values must match the dataSourceCode and recordID parameters.
+        - Specify the SzWithInfo flag to determine any outcomes from this operation.
+        - The data source code must be registered in the active configuration.
 
 1. **closeExportReport**
 
@@ -149,9 +149,9 @@ An in-memory representation of the Senzing configuration.
 1. **deleteRecord**
 
     - Deletes a record from the repository and performs entity resolution.
-       - Specify the SzWithInfo flag to determine any outcomes from this operation.
-       - The data source code must be registered in the active configuration.
-       - Is idempotent.
+        - Specify the SzWithInfo flag to determine any outcomes from this operation.
+        - The data source code must be registered in the active configuration.
+        - Is idempotent.
 
 1. **exportCsvEntityReport**
 
@@ -160,7 +160,7 @@ An in-memory representation of the Senzing configuration.
         - The first fetchNext call, after calling this method, returns the CSV header.
         - Subsequent fetchNext calls return exported entity data in CSV format.
         - Use with large repositories is not advised.
-          For more information visit [Add link to article]
+          For more information visit [Add link to article].
 
 1. **exportJsonEntityReport**
 
@@ -168,7 +168,7 @@ An in-memory representation of the Senzing configuration.
         - Used in conjunction with fetchNext and closeEntityReport.
         - Each fetchNext call returns exported entity data as a JSON object.
         - Use with large repositories is not advised.
-          For more information visit [Add link to article]
+          For more information visit [Add link to article].
 
 1. **fetchNext**
 
@@ -185,12 +185,12 @@ An in-memory representation of the Senzing configuration.
 1. **findInterestingEntitiesByEntityId**
 
     - Experimental method.
-        - Contact Senzing support
+        - Contact Senzing support.
 
 1. **findInterestingEntitiesByRecordId**
 
     - Experimental method.
-        - Contact Senzing support
+        - Contact Senzing support.
 
 1. **findNetworkByEntityId**
 
@@ -247,7 +247,7 @@ An in-memory representation of the Senzing configuration.
         - Use processRedoRecord() to process the result of this function.
         - Once a redo record is retrieved, it is no longer tracked by Senzing.
         - The redo record may be stored externally for later processing.
-        - See also countRedoRecords(), processRedoRecord()
+        - See also countRedoRecords(), processRedoRecord().
 
 1. **getStats**
 
@@ -258,7 +258,7 @@ An in-memory representation of the Senzing configuration.
 
 1. **getVirtualEntityByRecordId**
 
-   - Describes how an entity would look if composed of a given set of records.
+    - Describes how an entity would look if composed of a given set of records.
         - The resultant virtual entity has no relationships to actual entities.
 
 1. **howEntityByEntityId**
@@ -268,7 +268,6 @@ An in-memory representation of the Senzing configuration.
 1. **primeEngine**
 
     - Pre-loads engine resources.
-
         - Explicitly calling this method ensures the performance cost is incurred at a predictable time
           rather than unexpectedly with the first call requiring the resource.
 
@@ -278,7 +277,7 @@ An in-memory representation of the Senzing configuration.
         - Calling processRedoRecord() has the potential to create more redo records in certain situations.
         - Specify the SzWithInfo flag to determine any outcomes from this operation.
         - This operation performs entity resolution.
-        - See also getRedoRecord()
+        - See also getRedoRecord().
 
 1. **reevaluateEntity**
 
@@ -296,7 +295,7 @@ An in-memory representation of the Senzing configuration.
 
 1. **searchByAttributes**
 
-   - Searches for entities that match or relate to the provided attributes
+    - Searches for entities that match or relate to the provided attributes.
         - ???? Contact Senzing support about search profile.
 
 1. **whyEntities**
