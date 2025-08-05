@@ -148,7 +148,6 @@ An in-memory representation of the Senzing configuration.
 1. **deleteRecord**
 
     - Deletes a record from the repository and performs entity resolution.
-        - Specify the SzWithInfo flag to determine any outcomes from this operation.
         - The data source code must be registered in the active configuration.
         - Is idempotent.
 
