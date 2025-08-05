@@ -288,7 +288,7 @@ An in-memory representation of the Senzing configuration.
 1. **searchByAttributes**
 
     - Searches for entities that match or relate to the provided attributes.
-        - ???? Contact Senzing support about search profile.
+        - The default search profile is SEARCH.  Alternatively, INGEST may be used.
 
 1. **whyEntities**
 
@@ -305,7 +305,6 @@ An in-memory representation of the Senzing configuration.
 1. **whySearch**
 
     - Describes the ways a set of search attributes relate to an entity.
-        - ???? Contact Senzing support about search profile.
 
 ## SzProduct
 
