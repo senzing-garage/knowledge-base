@@ -305,6 +305,7 @@ An in-memory representation of the Senzing configuration.
 1. **whySearch**
 
     - Describes the ways a set of search attributes relate to an entity.
+        - The default search profile is SEARCH.  Alternatively, INGEST may be used.
 
 ## SzProduct
 
