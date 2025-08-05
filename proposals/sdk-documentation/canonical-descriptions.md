@@ -209,12 +209,12 @@ An in-memory representation of the Senzing configuration.
 1. **findPathByEntityId**
 
     - Searches for the shortest relationship path between two entities based on entity IDs.
-        - The returned path is the shortest path among the paths that satisify the parameters.
+        - The returned path is the shortest path among the paths that satisfy the parameters.
 
 1. **findPathByRecordId**
 
     - Searches for the shortest relationship path between two entities based on record IDs.
-        - The returned path is the shortest path among the paths that satisify the parameters.
+        - The returned path is the shortest path among the paths that satisfy the parameters.
 
 1. **getActiveConfigId**
 
