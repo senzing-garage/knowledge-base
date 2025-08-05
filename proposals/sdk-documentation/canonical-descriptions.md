@@ -239,7 +239,7 @@ An in-memory representation of the Senzing configuration.
 1. **getRedoRecord**
 
     - Retrieves and removes a pending redo record.
-        - An "empty" may be returned.
+        - An empty value will be returned if there are no pending redo records.
         - Use processRedoRecord() to process the result of this function.
         - Once a redo record is retrieved, it is no longer tracked by Senzing.
         - The redo record may be stored externally for later processing.
