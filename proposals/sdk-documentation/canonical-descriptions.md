@@ -283,6 +283,7 @@ An in-memory representation of the Senzing configuration.
 
     - Reevaluates an entity by record ID.
         - This operation performs entity resolution.
+        - The data source code must be registered in the active configuration.
         - If the record is not found, then no changes are made.
 
 1. **searchByAttributes**
