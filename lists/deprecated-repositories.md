@@ -2,6 +2,9 @@
 
 | Deprecated | Hidden     | Repository                                   |
 | ---------- | ---------- | -------------------------------------------- |
+| 2025-08-11 |            | docker-wrap-image-with-db2                   |
+| 2025-08-11 |            | docker-wrap-image-with-mssql                 |
+| 2025-08-11 |            | docker-wrap-image-with-mysql                 |
 | 2025-08-04 |            | configurator                                 |
 | 2025-08-04 |            | docker-mysql-init                            |
 | 2025-08-04 |            | docker-test-layers                           |
