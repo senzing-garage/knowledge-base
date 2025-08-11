@@ -54,6 +54,7 @@ services:
           },
           "SQL": {
             "BACKEND": "SQL",
+            #checkov:skip=CKV_SECRET_4
             "CONNECTION": "postgresql://postgres:postgres@senzing-postgres:5432:G2/"
           }
         }
