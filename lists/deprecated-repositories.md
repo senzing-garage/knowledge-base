@@ -2,6 +2,10 @@
 
 | Deprecated | Hidden     | Repository                                   |
 | ---------- | ---------- | -------------------------------------------- |
+| 2025-08-13 |            | docker-wrap-image-with-senzing-apt           |
+| 2025-08-13 |            | docker-wrap-image-with-senzing-data          |
+| 2025-08-13 |            | go-rest-api-service                          |
+| 2025-08-13 |            | senzing-with-chatgpt-notebook                |
 | 2025-08-11 |            | docker-wrap-image-with-db2                   |
 | 2025-08-11 |            | docker-wrap-image-with-mssql                 |
 | 2025-08-11 |            | docker-wrap-image-with-mysql                 |
