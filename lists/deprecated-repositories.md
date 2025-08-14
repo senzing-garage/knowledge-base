@@ -2,6 +2,10 @@
 
 | Deprecated | Hidden     | Repository                                   |
 | ---------- | ---------- | -------------------------------------------- |
+| 2025-08-14 |            | go-rest-api-service-legacy                   |
+| 2025-08-14 |            | init-mssql                                   |
+| 2025-08-14 |            | init-postgresql                              |
+| 2025-08-14 |            | redoer                                       |
 | 2025-08-13 |            | docker-wrap-image-with-senzing-apt           |
 | 2025-08-13 |            | docker-wrap-image-with-senzing-data          |
 | 2025-08-13 |            | go-rest-api-service                          |
