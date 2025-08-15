@@ -2,6 +2,9 @@
 
 | Deprecated | Hidden     | Repository                                   |
 | ---------- | ---------- | -------------------------------------------- |
+| 2025-08-15 |            | serve-chat                                   |
+| 2025-08-15 |            | stream-loader                                |
+| 2025-08-15 |            | stream-logger                                |
 | 2025-08-14 |            | go-rest-api-service-legacy                   |
 | 2025-08-14 |            | init-mssql                                   |
 | 2025-08-14 |            | init-postgresql                              |
