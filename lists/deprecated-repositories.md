@@ -2,6 +2,12 @@
 
 | Deprecated | Hidden     | Repository                                   |
 | ---------- | ---------- | -------------------------------------------- |
+| 2025-08-18 |            | stream-producer                              |
+| 2025-08-18 |            | subway-map                                   |
+| 2025-08-18 |            | support                                      |
+| 2025-08-18 |            | init-mysql                                   |
+| 2025-08-18 |            | community-roadmap                            |
+| 2025-08-18 |            | docker-compose-air-gapper                    |
 | 2025-08-15 |            | serve-chat                                   |
 | 2025-08-15 |            | stream-loader                                |
 | 2025-08-15 |            | stream-logger                                |
