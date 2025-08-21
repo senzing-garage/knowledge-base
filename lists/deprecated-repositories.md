@@ -2,6 +2,7 @@
 
 | Deprecated | Hidden     | Repository                                   |
 | ---------- | ---------- | -------------------------------------------- |
+| 2025-08-21 | 2025-08-21 | ansible-playbook-senzing-demo                |
 | 2025-08-18 |            | stream-producer                              |
 | 2025-08-18 |            | subway-map                                   |
 | 2025-08-18 |            | support                                      |
