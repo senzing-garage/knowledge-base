@@ -42,9 +42,7 @@
    1. [ ] [move](https://github.com/senzing-garage/move)
 1. Requires: go-sdk-abstract-factory
    1. [ ] [check-self](https://github.com/senzing-garage/check-self)
-   1. [ ] [go-rest-api-service](https://github.com/senzing-garage/go-rest-api-service)
    1. [ ] [load](https://github.com/senzing-garage/load)
-   1. [ ] [serve-chat](https://github.com/senzing-garage/serve-chat)
 1. Requires: go-rest-api-service
    1. [ ] [demo-entity-search](https://github.com/senzing-garage/demo-entity-search)
    1. [ ] [serve-http](https://github.com/senzing-garage/serve-http)
