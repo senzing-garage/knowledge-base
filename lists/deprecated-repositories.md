@@ -2,6 +2,7 @@
 
 | Deprecated | Hidden     | Repository                                   |
 | ---------- | ---------- | -------------------------------------------- |
+| 2025-09-30 |            | github-action-add-issue-to-project           |
 | 2025-08-21 | 2025-08-21 | ansible-playbook-senzing-demo                |
 | 2025-08-18 |            | stream-producer                              |
 | 2025-08-18 |            | subway-map                                   |
@@ -40,7 +41,7 @@
 | 2025-01-08 |            | senzing-listener-example                     |
 | 2025-01-08 |            | senzing-listener                             |
 | 2024-12-18 |            | entity-search-web-app-console                |
-| 2024-09-18 |            | connector-neo4j                              |
+| 2024-09-18 | 2025-09-30 | connector-neo4j                              |
 | 2024-07-02 | 2025-07-11 | aws-cloudformation-ecs                       |
 | 2024-07-02 | 2025-07-11 | azure-template-aks-poc-simple                |
 | 2024-06-21 | 2025-07-11 | docker-terraform-aws                         |
