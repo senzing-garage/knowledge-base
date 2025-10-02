@@ -2,6 +2,8 @@
 
 | Deprecated | Hidden     | Repository                                   |
 | ---------- | ---------- | -------------------------------------------- |
+| 2025-10-02 |            | docker-senzing-console                       |
+| 2025-10-02 |            | docker-senzing-base                          |
 | 2025-09-30 |            | github-action-add-issue-to-project           |
 | 2025-08-21 | 2025-08-21 | ansible-playbook-senzing-demo                |
 | 2025-08-18 |            | stream-producer                              |
