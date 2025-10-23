@@ -161,7 +161,7 @@ The following instructions install senzing into a macOS `${HOME}/senzing` direct
         hdiutil detach /Volumes/SenzingSDK
         ```
 
-    1. References:
-        1. [github-action-install-senzing-sdk]
+1. References:
+    1. [github-action-install-senzing-sdk]
 
 [github-action-install-senzing-sdk]: https://github.com/senzing-factory/github-action-install-senzing-sdk/blob/main/darwin/install-senzing.sh
