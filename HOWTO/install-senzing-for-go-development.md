@@ -92,6 +92,7 @@ This is important as the compiling of the Go code expects Senzing to be in `/opt
     sudo mkdir  /opt/senzing
     sudo cp -R  /opt/${SENZING_PACKAGE}-${SENZING_PACKAGE_VERSION}/* /opt/senzing
     diff -r     /opt/${SENZING_PACKAGE}-${SENZING_PACKAGE_VERSION}   /opt/senzing
+    cat /opt/senzing/er/szBuildVersion.json
     ```
 
 #### Configure Senzing - Linux
