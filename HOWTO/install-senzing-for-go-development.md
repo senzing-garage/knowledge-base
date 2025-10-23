@@ -50,7 +50,8 @@ This is important as the compiling of the Go code expects Senzing to be in `/opt
     docker run --rm senzing/apt-staging list -a senzingsdk-poc
     ```
 
-1. Specify package and version.
+1. :pencil2: Specify package and version.
+
    Example:
 
     ```console
@@ -131,6 +132,7 @@ The following instructions install senzing into a macOS `${HOME}/senzing` direct
 #### Install Senzing - Darwin - production
 
 1. :pencil2: Specify the production version.
+
     Example:
 
     ```console
@@ -159,6 +161,7 @@ The following instructions install senzing into a macOS `${HOME}/senzing` direct
 #### Install Senzing - Darwin - staging
 
 1. :pencil2: Specify the staging version.
+
     Example:
 
     ```console
