@@ -105,10 +105,10 @@ This is important as the compiling of the Go code expects Senzing to be in `/opt
 
 ### Install Senzing - Darwin
 
-The following instructions install senzing in to a `${HOME}/senzing` directory.
+The following instructions install senzing into a macOS `${HOME}/senzing` directory.
 
 1. How to install Senzing production version.
-    1. :pencil2": Specify the production version.
+    1. :pencil2: Specify the production version.
        Example:
 
         ```console
@@ -127,15 +127,16 @@ The following instructions install senzing in to a `${HOME}/senzing` directory.
         export SENZING_PATH=${HOME}/senzing
 
         hdiutil attach /tmp/senzingsdk-production-${SENZING_VERSION}.dmg
-        sudo rm -rf ${SENZING_PATH}
-        sudo mkdir -p ${SENZING_PATH}
+        rm -rf ${SENZING_PATH}
+        mkdir -p ${SENZING_PATH}
         sudo cp -R /Volumes/SenzingSDK/senzing/* ${SENZING_PATH}
+        sudo chown -R $(id -i):$(id -g) ${SENZING_PATH}
         cat ${SENZING_PATH}/er/szBuildVersion.json
         hdiutil detach /Volumes/SenzingSDK
         ```
 
 1. Install Senzing staging from version
-    1. :pencil2": Specify the production version.
+    1. :pencil2: Specify the production version.
        Example:
 
         ```console
