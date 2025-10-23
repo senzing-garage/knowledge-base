@@ -129,8 +129,7 @@ The following instructions install senzing into a macOS `${HOME}/senzing` direct
         hdiutil attach /tmp/senzingsdk-production-${SENZING_VERSION}.dmg
         rm -rf ${SENZING_PATH}
         mkdir -p ${SENZING_PATH}
-        sudo cp -R /Volumes/SenzingSDK/senzing/* ${SENZING_PATH}
-        sudo chown -R $(id -i):$(id -g) ${SENZING_PATH}
+        cp -R /Volumes/SenzingSDK/senzing/* ${SENZING_PATH}
         cat ${SENZING_PATH}/er/szBuildVersion.json
         hdiutil detach /Volumes/SenzingSDK
         ```
@@ -155,9 +154,14 @@ The following instructions install senzing into a macOS `${HOME}/senzing` direct
         export SENZING_PATH=${HOME}/senzing
 
         hdiutil attach /tmp/senzingsdk-staging-${SENZING_STAGING_VERSION}.dmg
-        sudo rm -rf ${SENZING_PATH}
-        sudo mkdir -p ${SENZING_PATH}
-        sudo cp -R /Volumes/SenzingSDK/senzing/* ${SENZING_PATH}
+        rm -rf ${SENZING_PATH}
+        mkdir -p ${SENZING_PATH}
+        cp -R /Volumes/SenzingSDK/senzing/* ${SENZING_PATH}
         cat ${SENZING_PATH}/er/szBuildVersion.json
         hdiutil detach /Volumes/SenzingSDK
         ```
+
+    1. References:
+        1. [github-action-install-senzing-sdk]
+
+[github-action-install-senzing-sdk]: https://github.com/senzing-factory/github-action-install-senzing-sdk/blob/main/darwin/install-senzing.sh
