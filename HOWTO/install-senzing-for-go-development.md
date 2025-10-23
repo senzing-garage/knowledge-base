@@ -4,6 +4,8 @@ The following steps show how to install and configure Senzing for Go development
 
 ## Install Senzing
 
+### Install Senzing - Linux
+
 This can be done by installing the Senzing package using `apt`, `yum`,
 or a technique using Docker containers.
 Once complete, the Senzing library will be installed in the `/opt/senzing` directory.
@@ -100,3 +102,61 @@ This is important as the compiling of the Go code expects Senzing to be in `/opt
    done
 
    ```
+
+### Install Senzing - Darwin
+
+The following instructions install senzing in to a `${HOME}/senzing` directory.
+
+1. How to install Senzing production version.
+    1. :pencil2": Specify the production version.
+       Example:
+
+        ```console
+        export SENZING_VERSION="4.1.0.25279"
+        ```
+
+    1. Download the `.dmg` file.
+
+        ```console
+        curl --output /tmp/senzingsdk-production-${SENZING_VERSION}.dmg https://public-read-access.s3.amazonaws.com/MacOS_SDK/senzingsdk_${SENZING_VERSION}.dmg
+        ```
+
+    1. Install the `.dmg` file.
+
+        ```console
+        export SENZING_PATH=${HOME}/senzing
+
+        hdiutil attach /tmp/senzingsdk-production-${SENZING_VERSION}.dmg
+        sudo rm -rf ${SENZING_PATH}
+        sudo mkdir -p ${SENZING_PATH}
+        sudo cp -R /Volumes/SenzingSDK/senzing/* ${SENZING_PATH}
+        cat ${SENZING_PATH}/er/szBuildVersion.json
+        hdiutil detach /Volumes/SenzingSDK
+        ```
+
+1. Install Senzing staging from version
+    1. :pencil2": Specify the production version.
+       Example:
+
+        ```console
+        export SENZING_STAGING_VERSION="4.1.1.25295"
+        ```
+
+    1. Download the `.dmg` file.
+
+        ```console
+        curl --output /tmp/senzingsdk-staging-${SENZING_STAGING_VERSION}.dmg https://senzing-staging-osx.s3.amazonaws.com/senzingsdk_${SENZING_STAGING_VERSION}.dmg
+        ```
+
+    1. Install the `.dmg` file.
+
+        ```console
+        export SENZING_PATH=${HOME}/senzing
+
+        hdiutil attach /tmp/senzingsdk-staging-${SENZING_STAGING_VERSION}.dmg
+        sudo rm -rf ${SENZING_PATH}
+        sudo mkdir -p ${SENZING_PATH}
+        sudo cp -R /Volumes/SenzingSDK/senzing/* ${SENZING_PATH}
+        cat ${SENZING_PATH}/er/szBuildVersion.json
+        hdiutil detach /Volumes/SenzingSDK
+        ```
