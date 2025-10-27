@@ -2,6 +2,7 @@
 
 | Deprecated | Hidden     | Repository                                   |
 | ---------- | ---------- | -------------------------------------------- |
+| 2025-10-27 |            | docker-python-demo                           |
 | 2025-10-06 |            | senzing-tutorial-in-python                   |
 | 2025-10-02 |            | docker-senzing-console                       |
 | 2025-10-02 |            | docker-senzing-base                          |
