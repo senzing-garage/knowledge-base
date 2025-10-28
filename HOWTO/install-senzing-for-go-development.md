@@ -166,7 +166,7 @@ The following instructions install senzing into a macOS `${HOME}/senzing` direct
     Example:
 
     ```console
-    export SENZING_STAGING_VERSION="4.1.1.25295"
+    export SENZING_STAGING_VERSION="4.1.1.25300"
     ```
 
 1. Download the `.dmg` file.
