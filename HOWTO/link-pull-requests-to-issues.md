@@ -1,178 +1,183 @@
-# Issue Reference Format Guide
+# Developer Guide: Linking PRs to Issues
 
-Quick reference for all supported ways to link issues in PRs and commits.
+## TL;DR
 
-## Supported Formats
+Reference issues with `#` prefix anywhere in your PR or commits, and they'll automatically link after merge!
 
-| Format | Example | Description | Links To |
-|--------|---------|-------------|----------|
-| `#N` | `#42` | Same repo issue | Current repository issue #42 |
-| `owner/repo#N` | `acme/api#99` | Cross-repo (user) | acme/api repository issue #99 |
-| `org/repo#N` | `platform/auth#123` | Cross-repo (org) | platform/auth repository issue #123 |
+## How to Reference Issues
 
-## Validation Rules
+### ✅ Correct - Will Link
 
-### ✅ Valid Patterns
+**Same Repo Issues:**
 
+*In PR Title:*
 ```
-#123                          → Links to #123 (same repo)
-acme-corp/web-app#42         → Links to acme-corp/web-app#42
-my-org/backend-api#99        → Links to my-org/backend-api#99
-user_name/my-repo#15         → Links to user_name/my-repo#15
-org-name/repo-name#1         → Links to org-name/repo-name#1
+Fix authentication bug (#42)
+Add feature requested in #99
 ```
 
-### ❌ Invalid Patterns (Won't Match)
-
+*In PR Description:*
 ```
-42                           → Missing # prefix
-#                            → No number
-repo#42                      → Missing owner/org
-/repo#42                     → Missing owner/org
-owner/#42                    → Missing repo
-owner/repo                   → Missing #number
-owner/repo#                  → Missing number
+This PR addresses #42 by refactoring the auth flow.
+Closes #99
 ```
 
-## Where to Use
-
-You can reference issues in **any** of these locations:
-
-1. **PR Title**
-   ```
-   Fix authentication bug (#42)
-   Integrate with auth-team/service#99
-   ```
-
-2. **PR Description**
-   ```markdown
-   This PR fixes #42 by refactoring the login flow.
-   
-   Also addresses issues from external-org/shared-lib#15
-   ```
-
-3. **Commit Messages**
-   ```bash
-   git commit -m "Fix #42 and platform/db#99"
-   git commit -m "Implement feature requested in other-team/api#123"
-   ```
-
-## Character Rules
-
-### Owner/Org Name (before `/`)
-- Letters: `a-z`, `A-Z`
-- Numbers: `0-9`
-- Special: `_` (underscore), `-` (hyphen)
-- Examples: `my-org`, `user_name`, `acme-corp`, `team123`
-
-### Repository Name (after `/`)
-- Same rules as owner/org
-- Examples: `web-app`, `api_service`, `backend-v2`, `tool123`
-
-### Issue Number (after `#`)
-- Only digits: `0-9`
-- Examples: `#1`, `#42`, `#9999`
-
-## Common Scenarios
-
-### Internal Team Issues
+*In Commit Messages:*
 ```bash
-# All in same org
-git commit -m "Fix #42 (this repo)"
-git commit -m "Update per platform-team/auth#99"
-git commit -m "Sync with infrastructure/deploy#123"
+git commit -m "Fix login redirect, resolves #42"
+git commit -m "Refactor auth service (#42)"
+git commit -m "Add tests for #42 and #99"
 ```
 
-### External Dependencies
+**Cross-Repo Issues:**
+
+*In PR Title:*
+```
+Fix bug reported in platform-team/auth-service#123
+Addresses issue from acme-corp/api#99
+```
+
+*In PR Description:*
+```
+This fixes the issue reported in external-org/web-app#42
+Related to infrastructure-team/deployment#15
+```
+
+*In Commit Messages:*
 ```bash
-# Issues from external organizations
-git commit -m "Fix compatibility with facebook/react#12345"
-git commit -m "Work around vuejs/core#999"
+git commit -m "Fix cross-service bug other-team/api-service#123"
+git commit -m "Implement fix for platform/auth#99 and platform/db#100"
 ```
 
-### Mixed References
+**Mixed (Same + Cross Repo):**
 ```bash
-# Combine same-repo and cross-repo
-git commit -m "Fix #42, #43, and external-org/api#99"
+git commit -m "Fix #42 and external-org/shared-lib#99"
 ```
 
-## Deduplication
+### ❌ Incorrect - Won't Link
 
-The workflow automatically deduplicates references:
+**Missing # prefix:**
+```
+Fix bug 42          # Just a number, not a GitHub issue
+Update issue 99     # Won't match
+```
 
-**Input (multiple commits):**
+**Invalid cross-repo format:**
+```
+Fix repo#42         # Missing owner/org
+Fix org/42          # Missing # prefix
+```
+
+**Version numbers (safe - won't match):**
+```
+Update to version 1.2.3    # Good! Won't link
+Bump dependencies to 4.5.6  # Good! Won't link
+```
+
+## Multiple Issues
+
+You can reference multiple issues, and they'll all be linked:
+
 ```bash
-git commit -m "Start work on #42"
-git commit -m "Continue #42"
-git commit -m "Fix other-team/api#99"
-git commit -m "Complete #42"
+git commit -m "Fix #42, #99, and #100"
 ```
 
-**Output (PR description):**
+Result after merge:
 ```
 Resolves #42
-Resolves other-team/api#99
+Resolves #99
+Resolves #100
 ```
 
-## What Won't Match (Safe)
+## Keywords (Optional)
 
-These patterns are **safe** and won't create false links:
+While not required, using keywords makes intent clearer:
 
-```
-Version 1.2.3                    → Version number
-Port 8080                        → Port number
-Bug 42                           → Missing # prefix
-Issue 123 fixed                  → Missing # prefix
-PR 42 merged                     → Missing # prefix
-Ticket ABC-123                   → Not a number after potential #
-192.168.1.1                      → IP address
-```
+- `Fixes #42`
+- `Resolves #42`
+- `Closes #42`
+- `Addresses #42`
+- `Related to #42`
 
-## Edge Cases
+All will link the same way after merge!
 
-### Multiple Issues in One Line
-```bash
-git commit -m "Fix #42, #99, and platform/auth#123"
-```
-✅ Finds all three: `#42`, `#99`, `platform/auth#123`
+## What Happens After Merge
 
-### Issue Numbers in Parentheses
-```bash
-git commit -m "Add feature (closes #42)"
-```
-✅ Finds: `#42`
-
-### Issue in URL (Not Recommended)
-```bash
-git commit -m "See https://github.com/org/repo/issues/42"
-```
-❌ Won't match (no `#` or `org/repo#` format)
-💡 Use: `See org/repo#42` instead
-
-### Hashtags (Safe)
-```bash
-git commit -m "Update docs #backend #api"
-```
-❌ Won't match (no digits after `#`)
-✅ Safe! Won't create false links
+1. 🤖 Workflow runs automatically
+2. 🔍 Scans your PR title, description, and all commit messages
+3. 📝 Finds all `#<number>` references
+4. ✏️ Adds them to PR description as `Resolves #<number>`
+5. 🔗 GitHub links them in the Development sidebar
+6. ✅ Issues stay open (you close them manually when ready)
 
 ## Best Practices
 
-1. **Be explicit**: Use full `owner/repo#N` format for cross-repo references
-2. **Avoid ambiguity**: Don't rely on URLs, use the shorthand format
-3. **Reference early**: Add issue references in early commits or PR description
-4. **Use keywords**: Make intent clear with "Fixes", "Closes", "Resolves", etc.
-5. **Check logs**: Review workflow output to confirm issues were found
+### ✅ Do:
+- Reference issues early (in commits or PR description)
+- Use meaningful commit messages with issue numbers
+- Reference multiple related issues if applicable
 
-## Testing Your References
+### ❌ Don't:
+- Worry about auto-closing issues (it won't happen after merge)
+- Use issues numbers without `#` prefix
+- Add "Resolves" manually (workflow does it for you)
 
-Before merging, you can test if your references will be detected:
+## FAQ
 
-1. Look at your PR title
-2. Look at your PR description  
-3. Look at your commit messages
-4. Apply these regex patterns:
-   - Same repo: `#\d+`
-   - Cross repo: `[a-zA-Z0-9_-]+/[a-zA-Z0-9_-]+#\d+`
+**Q: Will the issue auto-close?**  
+A: No! Since the linking happens *after* merge, the issue won't auto-close.
 
-If you find matches, the workflow will too!
+**Q: What if I forget to reference an issue?**  
+A: No problem! The workflow fails gracefully. You can manually link later.
+
+**Q: Can I reference issues from other repos?**  
+A: Yes! Use `owner/repo#42` format, but this may require custom regex pattern.
+
+**Q: What if my commit message mentions a number that's not an issue?**  
+A: As long as it doesn't have a `#` prefix, it won't match. Version numbers like `1.2.3` are safe!
+
+**Q: Do I need to reference issues in every commit?**  
+A: No! Reference it anywhere (title, description, or any commit).
+
+## Examples from Real Workflows
+
+### Example 1: Bug Fix
+```bash
+# PR title: "Fix login redirect loop"
+git commit -m "Identify root cause of #42"
+git commit -m "Implement fix for redirect loop (#42)"
+git commit -m "Add regression tests"
+
+# After merge, PR description shows: "Resolves #42"
+```
+
+### Example 2: Feature with Multiple Issues
+```bash
+# PR description: "Implements dark mode (closes #99)"
+git commit -m "Add theme toggle UI"
+git commit -m "Implement dark theme styles (#99)"
+git commit -m "Fix contrast issues from #100"
+
+# After merge, PR description shows:
+# "Resolves #99"
+# "Resolves #100"
+```
+
+### Example 3: No Issue Reference
+```bash
+# PR title: "Update dependencies"
+git commit -m "Bump packages to latest"
+git commit -m "Update lockfile"
+
+# After merge: No change (workflow skips gracefully)
+# Output: "No issue numbers found - this is expected"
+```
+
+## Checking Workflow Results
+
+After your PR merges, check the Actions tab to see:
+- ✅ What issues were found
+- ✅ Where they were found (title/description/commits)
+- ✅ Whether the PR description was updated
+
+Look for: `Actions` → `Link Issues After Merge` → View logs
