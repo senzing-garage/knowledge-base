@@ -96,7 +96,6 @@ create a new SQLite Senzing database.
    determine the list of data sources used in your data.
    Then in the following example, modify the value of `DATASOURCES` to match your data.
    Also modify the value of `GRPC_URL` to use the custom port number specified above.
-
    1. :pencil2:
       Copy/modify/paste the following into the interactive Python session
       and press the **Enter** key.
@@ -152,7 +151,6 @@ create a new SQLite Senzing database.
 
 8. To add your data to the Senzing database,
    in the following example modify the value of `INPUT_FILENAME` to match the path to your file of JSON lines.
-
    1. :pencil2:
       To identify the file containing your data,
       copy/modify/paste the following into the interactive Python session:
@@ -211,7 +209,6 @@ create a new SQLite Senzing database.
 12. To restart the service, re-run the command seen in Step #3.
     Although the port mappings using `--publish` may be changed, the value of `--volume`
     must match the original value so the database files on your workstation will be attached.
-
     1. :pencil2:
        To identify the directory storing the SQLite database files,
        copy/modify/paste the following into the terminal window:

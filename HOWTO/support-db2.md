@@ -9,7 +9,6 @@
 
 1. :pencil2: Determine where to store IBM Db2 drivers.
    Examples:
-
    1. **Example #1:** A `SENZING_VOLUME` based approach.
 
       ```console

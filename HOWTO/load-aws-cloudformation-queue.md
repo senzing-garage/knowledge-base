@@ -17,7 +17,6 @@ and loading the SQS queue from a local workstation.
 ## Launch Cloudformation template
 
 1. Launch Cloudformation template.
-
    1. Visit [AWS Cloudformation with Senzing template](https://console.aws.amazon.com/cloudformation/home#/stacks/new?stackName=senzing-poc&templateURL=https://s3.amazonaws.com/public-read-access/aws-cloudformation-ecs-poc-simple/cloudformation.yaml)
       1. In lower-right, click on "Next" button.
       1. If access error,
@@ -49,7 +48,6 @@ and loading the SQS queue from a local workstation.
       1. May have to hit the refresh button a few times to get updated information.
 
 1. Add data sources to Senzing configuration.
-
    1. In the Cloudformation "Outputs" tab, launch the **UrlXterm** URL.
    1. :pencil2: In the Xterm, run `G2ConfigTool.py` to add data sources.
       Example:
@@ -140,7 +138,6 @@ and loading the SQS queue from a local workstation.
 ### Load SQS from Linux or macOS
 
 1. Install [stream-producer](https://github.com/senzing-garage/stream-producer).
-
    1. Install prerequisites.
       Example:
 
@@ -166,7 +163,6 @@ and loading the SQS queue from a local workstation.
 
 1. Load SQS queue using
    [stream-producer](https://github.com/senzing-garage/stream-producer).
-
    1. :pencil2: Set AWS variables:
       Example:
 
@@ -221,7 +217,6 @@ and loading the SQS queue from a local workstation.
 ### Load SQS from Windows
 
 1. Install [stream-producer](https://github.com/senzing-garage/stream-producer).
-
    1. Install prerequisites.
       Example:
 
@@ -247,7 +242,6 @@ and loading the SQS queue from a local workstation.
 
 1. Load SQS queue using
    [stream-producer](https://github.com/senzing-garage/stream-producer).
-
    1. :pencil2: Set AWS variables:
       Example:
 

@@ -168,7 +168,7 @@ origin	https://github.com:<ORGANIZATION>/<REPOSITORY_NAME>.git (fetch)
 origin	https://github.com:<ORGANIZATION>/<REPOSITORY_NAME>.git (push)
 ```
 
-Change the remote repository URL. 
+Change the remote repository URL.
 Update the values for github organization and repository name in the following:
 
 ```console
@@ -206,11 +206,9 @@ NOTE: The following steps have been tested on OSX and Linux.<br />
 If you encounter issues please refer to the respective GitHub documentation linked in the Additional Resources section below.
 
 1. Generate a new GPG key.
-
    - NOTES
      - [Your GPG key must be associated with a GitHub verified email that matches your committer identity]
      - [Supported GPG Key Algorithms]
-
    1. Open Terminal / Git Bash.
    1. Generate a GPG key pair.
 
@@ -255,7 +253,6 @@ If you encounter issues please refer to the respective GitHub documentation link
       ```
 
 1. Configure Git to use the key generated in the previous step.
-
    1. Open Terminal / Git Bash.
    1. Unset any existing git signing key format.
 
@@ -277,10 +274,8 @@ If you encounter issues please refer to the respective GitHub documentation link
       ```
 
 1. Add the GPG key to GitHub.
-
    1. Open Terminal / Git Bash.
    1. Use the long form of the GPG key ID from Step 1.iv above to export your public GPG key.
-
       - Paste the text below, substituting in the GPG key ID you'd like to use.<br />
         In this example, the GPG key ID is `3AA5C34371567BD2`:
 
@@ -311,7 +306,9 @@ gpg: signing failed: No such file or directory
 
 fatal: failed to write commit object
 ```
-or 
+
+or
+
 ```
 Inappropriate ioctl for device
 ```

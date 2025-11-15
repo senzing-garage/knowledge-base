@@ -60,7 +60,6 @@ Perform one of the following commands to set `GIT_REPOSITORY_URL`.
 
 1. :thinking: Create parent directories.
    Choose one method.
-
    1. Linux.
       Example:
 

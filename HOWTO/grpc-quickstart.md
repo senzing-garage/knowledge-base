@@ -188,7 +188,6 @@ and access it using the `senzing_grpc` Python package.
    ```
 
 1. Using `G2Explorer.py`.
-
    1. Visit
       [http://localhost:8260/xterm](http://localhost:8260/xterm).
    1. Start `G2Explorer.py` by running

@@ -7,7 +7,6 @@ Senzing development with Senzing Python SDK requires the following prerequisites
 1. [Run senzing/demo-quickstart Docker container]
 1. [Python 3]
 1. [senzing-grpc] Python package.
-
    1. To install, run the following on the local workstation:
 
       ```console

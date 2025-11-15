@@ -274,7 +274,6 @@
    ```
 
    Additional benefits:
-
    - Static code checking
    - Type hinting
 

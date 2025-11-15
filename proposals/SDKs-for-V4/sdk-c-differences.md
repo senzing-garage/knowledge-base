@@ -13,37 +13,37 @@ The following list should reflect modifications documented in
 
 ### SzConfig
 
-| Differs in C | Existing name                                                                     | Canonical Name                                     | Return value | Smells |
-|:------------:| --------------------------------------------------------------------------------- | -------------------------------------------------- | ------------ | ------ |
-| *            | SzConfig_addDataSource(configHandle, inputJson, responseBuf, bufSize, resizeFunc) | registerDataSource(dataSourceCode)                 | string       |        |
-| *            | SzConfig_deleteDataSource(configHandle, inputJson)                                | unregisterDataSource(dataSourceCode)               | -            |        |
-| *            | SzConfig_listDataSources(configHandle, responseBuf, bufSize, resizeFunc)          | getDataSourceRegistry()                            | string       |        |
-| *            | SzConfig_save(configHandle, responseBuf, bufSize, resizeFunc)                     | export()                                           | string       |        |
+| Differs in C | Existing name                                                                     | Canonical Name                       | Return value | Smells |
+| :----------: | --------------------------------------------------------------------------------- | ------------------------------------ | ------------ | ------ |
+|      \*      | SzConfig_addDataSource(configHandle, inputJson, responseBuf, bufSize, resizeFunc) | registerDataSource(dataSourceCode)   | string       |        |
+|      \*      | SzConfig_deleteDataSource(configHandle, inputJson)                                | unregisterDataSource(dataSourceCode) | -            |        |
+|      \*      | SzConfig_listDataSources(configHandle, responseBuf, bufSize, resizeFunc)          | getDataSourceRegistry()              | string       |        |
+|      \*      | SzConfig_save(configHandle, responseBuf, bufSize, resizeFunc)                     | export()                             | string       |        |
 
 ### SzConfigManager
 
-| Differs in C | Existing name                                                     | Canonical Name                                                     | Return value | Note                                         |
-|:------------:| ----------------------------------------------------------------- | ------------------------------------------------------------------ | ------------ | -------------------------------------------- |
-| *            | SzConfigMgr_addConfig(configStr, configComment, configID)         | registerConfig(configDefinition, configComment)                    | int64        |                                              |
-| *            | SzConfigMgr_getConfigList(responseBuf, bufSize, resizeFunc)       | getConfigRegistry()                                                | string       |                                              |
+| Differs in C | Existing name                                               | Canonical Name                                  | Return value | Note |
+| :----------: | ----------------------------------------------------------- | ----------------------------------------------- | ------------ | ---- |
+|      \*      | SzConfigMgr_addConfig(configStr, configComment, configID)   | registerConfig(configDefinition, configComment) | int64        |      |
+|      \*      | SzConfigMgr_getConfigList(responseBuf, bufSize, resizeFunc) | getConfigRegistry()                             | string       |      |
 
 ### SzDiagnostic
 
-| Differs in C | Existing name                                                            | Canonical Name                                               | Return value | Smells                                                          |
-|:------------:| ------------------------------------------------------------------------ | ------------------------------------------------------------ | ------------ | --------------------------------------------------------------- |
-| *            | SzDiagnostic_checkDBPerf(secondsToRun, responseBuf, bufSize, resizeFunc) | checkRepositoryPerformance(secondsToRun)                     | string       |                                                                 |
-| *            | SzDiagnostic_getDatastoreInfo(responseBuf, bufSize, resizeFunc)          | getRepositoryInfo()                                          | string       |                                                                 |
+| Differs in C | Existing name                                                            | Canonical Name                           | Return value | Smells |
+| :----------: | ------------------------------------------------------------------------ | ---------------------------------------- | ------------ | ------ |
+|      \*      | SzDiagnostic_checkDBPerf(secondsToRun, responseBuf, bufSize, resizeFunc) | checkRepositoryPerformance(secondsToRun) | string       |        |
+|      \*      | SzDiagnostic_getDatastoreInfo(responseBuf, bufSize, resizeFunc)          | getRepositoryInfo()                      | string       |        |
 
 ### SzEngine
 
-| Differs in C | Existing name                                                                                                              | Canonical Name                                                                                                                                  | Return value | Smells                                                          |
-|:------------:| -------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------------------------------------------------------- |
-| *            | Sz_closeExport(responseHandle)                                                                                             | closeExportReport(exportHandle)                                                                                                                 | -            |                                                                 |
-| *            | Sz_preprocessRecord(jsonData, flags, responseBuf, bufSize, resizeFunc )                                                    | getRecordPreview(recordDefinition, flags)                                                                                                       | string       |                                                                 |
+| Differs in C | Existing name                                                           | Canonical Name                            | Return value | Smells |
+| :----------: | ----------------------------------------------------------------------- | ----------------------------------------- | ------------ | ------ |
+|      \*      | Sz_closeExport(responseHandle)                                          | closeExportReport(exportHandle)           | -            |        |
+|      \*      | Sz_preprocessRecord(jsonData, flags, responseBuf, bufSize, resizeFunc ) | getRecordPreview(recordDefinition, flags) | string       |        |
 
 ### SzProduct
 
-| Differs in C | Existing name                                                                            | Canonical Name                                     | Return value | Smells |
-|:------------:| ---------------------------------------------------------------------------------------- | -------------------------------------------------- | ------------ | ------ |
-| *            | SzProduct_license()                                                                      | getLicense()                                       | string       |        |
-| *            | SzProduct_version()                                                                      | getVersion()                                       | string       |        |
+| Differs in C | Existing name       | Canonical Name | Return value | Smells |
+| :----------: | ------------------- | -------------- | ------------ | ------ |
+|      \*      | SzProduct_license() | getLicense()   | string       |        |
+|      \*      | SzProduct_version() | getVersion()   | string       |        |

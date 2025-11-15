@@ -11,23 +11,23 @@ The following list should reflect modifications documented in
 ### SzConfig
 
 | Differs in C | Existing name                                                                     | Canonical Name                                     | Return value | Smells |
-|:------------:| --------------------------------------------------------------------------------- | -------------------------------------------------- | ------------ | ------ |
-| *            | SzConfig_addDataSource(configHandle, inputJson, responseBuf, bufSize, resizeFunc) | registerDataSource(dataSourceCode)                 | string       |        |
-| *            | SzConfig_deleteDataSource(configHandle, inputJson)                                | unregisterDataSource(dataSourceCode)               | -            |        |
+| :----------: | --------------------------------------------------------------------------------- | -------------------------------------------------- | ------------ | ------ |
+|      \*      | SzConfig_addDataSource(configHandle, inputJson, responseBuf, bufSize, resizeFunc) | registerDataSource(dataSourceCode)                 | string       |        |
+|      \*      | SzConfig_deleteDataSource(configHandle, inputJson)                                | unregisterDataSource(dataSourceCode)               | -            |        |
 |              | SzConfig_init(moduleName, iniParams, verboseLogging)                              | initialize(instanceName, settings, verboseLogging) | -            |        |
-| *            | SzConfig_listDataSources(configHandle, responseBuf, bufSize, resizeFunc)          | getDataSourceRegistry()                            | string       |        |
-| *            | SzConfig_save(configHandle, responseBuf, bufSize, resizeFunc)                     | export()                                           | string       |        |
+|      \*      | SzConfig_listDataSources(configHandle, responseBuf, bufSize, resizeFunc)          | getDataSourceRegistry()                            | string       |        |
+|      \*      | SzConfig_save(configHandle, responseBuf, bufSize, resizeFunc)                     | export()                                           | string       |        |
 
 ### SzConfigManager
 
 | Differs in C | Existing name                                                     | Canonical Name                                                     | Return value | Note                                         |
-|:------------:| ----------------------------------------------------------------- | ------------------------------------------------------------------ | ------------ | -------------------------------------------- |
-| *            | SzConfigMgr_addConfig(configStr, configComment, configID)         | registerConfig(configDefinition, configComment)                    | int64        |                                              |
+| :----------: | ----------------------------------------------------------------- | ------------------------------------------------------------------ | ------------ | -------------------------------------------- |
+|      \*      | SzConfigMgr_addConfig(configStr, configComment, configID)         | registerConfig(configDefinition, configComment)                    | int64        |                                              |
 |              | SzConfigMgr_destroy()                                             |                                                                    | -            |                                              |
-| -            | SzConfigMgr_getConfig(configID, responseBuf, bufSize, resizeFunc) | createConfigFromConfigId(configId)                                 | SzConfig     | May vary by SDK. ConfigID=0 throws exception |
-| -            |                                                                   | createConfigFromString(configDefinition)                           | SzConfig     | May vary by SDK                              |
-| -            |                                                                   | createConfigFromTemplate()                                         | SzConfig     | May vary by SDK                              |
-| *            | SzConfigMgr_getConfigList(responseBuf, bufSize, resizeFunc)       | getConfigRegistry()                                                | string       |                                              |
+|      -       | SzConfigMgr_getConfig(configID, responseBuf, bufSize, resizeFunc) | createConfigFromConfigId(configId)                                 | SzConfig     | May vary by SDK. ConfigID=0 throws exception |
+|      -       |                                                                   | createConfigFromString(configDefinition)                           | SzConfig     | May vary by SDK                              |
+|      -       |                                                                   | createConfigFromTemplate()                                         | SzConfig     | May vary by SDK                              |
+|      \*      | SzConfigMgr_getConfigList(responseBuf, bufSize, resizeFunc)       | getConfigRegistry()                                                | string       |                                              |
 |              | SzConfigMgr_getDefaultConfigID(configID)                          | getDefaultConfigId()                                               | int64        |                                              |
 |              | SzConfigMgr_init(moduleName, iniParams, verboseLogging)           | initialize(instanceName, settings, verboseLogging)                 | -            |                                              |
 |              | SzConfigMgr_replaceDefaultConfigID(oldConfigID, newConfigID)      | replaceDefaultConfigId(currentDefaultConfigId, newDefaultConfigId) | -            |                                              |
@@ -37,11 +37,11 @@ The following list should reflect modifications documented in
 ### SzDiagnostic
 
 | Differs in C | Existing name                                                            | Canonical Name                                               | Return value | Smells                                                          |
-|:------------:| ------------------------------------------------------------------------ | ------------------------------------------------------------ | ------------ | --------------------------------------------------------------- |
-| *            | SzDiagnostic_checkDBPerf(secondsToRun, responseBuf, bufSize, resizeFunc) | checkRepositoryPerformance(secondsToRun)                     | string       |                                                                 |
+| :----------: | ------------------------------------------------------------------------ | ------------------------------------------------------------ | ------------ | --------------------------------------------------------------- |
+|      \*      | SzDiagnostic_checkDBPerf(secondsToRun, responseBuf, bufSize, resizeFunc) | checkRepositoryPerformance(secondsToRun)                     | string       |                                                                 |
 |              | SzDiagnostic_destroy()                                                   |                                                              | -            |                                                                 |
-| *            | SzDiagnostic_getDatastoreInfo(responseBuf, bufSize, resizeFunc)          | getRepositoryInfo()                                          | string       |                                                                 |
-| *            | SzDiagnostic_getFeature(libFeatID, responseBuf, bufSize, resizeFunc)     | getFeature(featureId)                                        | string       | \*\* Not approved yet                                           |
+|      \*      | SzDiagnostic_getDatastoreInfo(responseBuf, bufSize, resizeFunc)          | getRepositoryInfo()                                          | string       |                                                                 |
+|      \*      | SzDiagnostic_getFeature(libFeatID, responseBuf, bufSize, resizeFunc)     | getFeature(featureId)                                        | string       | \*\* Not approved yet                                           |
 |              | SzDiagnostic_init(moduleName, iniParams, verboseLogging)                 | initialize(instanceName, settings, configId, verboseLogging) |              | `configId` can be `nil`, `None`, `null`. Consider single object |
 |              | SzDiagnostic_purgeRepository(????)                                       | purgeRepository(????)                                        |              |                                                                 |
 |              | SzDiagnostic_reinit(initConfigID)                                        | reinitialize(configId)                                       | -            |                                                                 |
@@ -49,9 +49,9 @@ The following list should reflect modifications documented in
 ### SzEngine
 
 | Differs in C | Existing name                                                                                                              | Canonical Name                                                                                                                                  | Return value | Smells                                                          |
-|:------------:| -------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------------------------------------------------------- |
+| :----------: | -------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------------------------------------------------------- |
 |              | Sz_addRecord(dataSourceCode, recordID, jsonData)                                                                           | addRecord(dataSourceCode, recordId, recordDefinition, flags)                                                                                    | string       |                                                                 |
-| *            | Sz_closeExport(responseHandle)                                                                                             | closeExportReport(exportHandle)                                                                                                                 | -            |                                                                 |
+|      \*      | Sz_closeExport(responseHandle)                                                                                             | closeExportReport(exportHandle)                                                                                                                 | -            |                                                                 |
 |              | Sz_countRedoRecords()                                                                                                      | countRedoRecords()                                                                                                                              | int64        |                                                                 |
 |              | Sz_deleteRecord(dataSourceCode, recordID)                                                                                  | deleteRecord(dataSourceCode, recordId, flags)                                                                                                   | string       |                                                                 |
 |              | Sz_destroy()                                                                                                               |                                                                                                                                                 | -            |                                                                 |
@@ -72,7 +72,7 @@ The following list should reflect modifications documented in
 |              | Sz_getVirtualEntityByRecordID(recordList, responseBuf, bufSize, resizeFunc)                                                | getVirtualEntityByRecordId(recordKeys, flags)                                                                                                   | string       |                                                                 |
 |              | Sz_howEntityByEntityID(entityID, responseBuf, bufSize, resizeFunc)                                                         | howEntityByEntityId(entityId, flags)                                                                                                            | string       | SM-1, SM-3.3                                                    |
 |              | Sz_init(moduleName, iniParams, verboseLogging)                                                                             | initialize(instanceName, settings, configId, verboseLogging)                                                                                    | -            | `configId` can be `nil`, `None`, `null`. Consider single object |
-| *            | Sz_preprocessRecord(jsonData, flags, responseBuf, bufSize, resizeFunc )                                                    | getRecordPreview(recordDefinition, flags)                                                                                                       | string       |                                                                 |
+|      \*      | Sz_preprocessRecord(jsonData, flags, responseBuf, bufSize, resizeFunc )                                                    | getRecordPreview(recordDefinition, flags)                                                                                                       | string       |                                                                 |
 |              | Sz_primeEngine()                                                                                                           | primeEngine()                                                                                                                                   | -            |                                                                 |
 |              | Sz_processRedoRecord(responseBuf, bufSize, resizeFunc )                                                                    | processRedoRecord(redoRecord, flags)                                                                                                            | string       |                                                                 |
 |              | Sz_reevaluateEntity(entityID, flags)                                                                                       | reevaluateEntity(entityId, flags)                                                                                                               | string       | `flags` has `WITH_INFO` bit                                     |
@@ -88,12 +88,12 @@ The following list should reflect modifications documented in
 ### SzProduct
 
 | Differs in C | Existing name                                                                            | Canonical Name                                     | Return value | Smells |
-|:------------:| ---------------------------------------------------------------------------------------- | -------------------------------------------------- | ------------ | ------ |
+| :----------: | ---------------------------------------------------------------------------------------- | -------------------------------------------------- | ------------ | ------ |
 |              | SzProduct_destroy()                                                                      |                                                    | -            |        |
 |              | SzProduct_init(moduleName, iniParams, verboseLogging)                                    | initialize(instanceName, settings, verboseLogging) | -            |        |
-| *            | SzProduct_license()                                                                      | getLicense()                                       | string       |        |
+|      \*      | SzProduct_license()                                                                      | getLicense()                                       | string       |        |
 |              | SzProduct_validateLicenseStringBase64(licenseString, errorBuf, errorBufSize, resizeFunc) | ???                                                |              |        |
-| *            | SzProduct_version()                                                                      | getVersion()                                       | string       |        |
+|      \*      | SzProduct_version()                                                                      | getVersion()                                       | string       |        |
 
 ## Abstract Factory
 
@@ -119,7 +119,6 @@ The following list should reflect modifications documented in
    - Sz_reevaluateRecordWithInfo
    - Sz_replaceRecordWithInfo
 1. Approach:
-
    1. Function name becomes shortened to match the non-with-info name (e.g. `Sz_addRecord()`).
    1. The `xx_withInfo()` function/method signature is not in the SDK.
    1. Function always returns JSON string.
@@ -149,7 +148,6 @@ The following list should reflect modifications documented in
       given the desires for a single method name, multiple return values, and immutable input parameters, it's a reasonable compromise.
 
    1. Python language specifics:
-
       1. The definition of the python function can be
 
          ```python
@@ -173,7 +171,6 @@ The following list should reflect modifications documented in
          ```
 
    1. Java language specifics:
-
       1. Use method overloading to factor out the `resultFlags` parameter.
       1. Examples of use:
 
@@ -186,7 +183,6 @@ The following list should reflect modifications documented in
          ```
 
    1. Go language specifics:
-
       1. Go doesn't have optional parameters nor method overloading.
       1. Examples of use:
 

@@ -8,7 +8,6 @@
 
 1. Create EC2 using
    [AWS EC2 management console](https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#Instances:).
-
    1. On left-hand navigation, select "Instances"
    1. In upper-right, click "Launch instances".
    1. In "Step 1: Choose an Amazon Machine Image (AMI)"

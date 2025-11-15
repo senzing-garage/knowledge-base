@@ -13,7 +13,6 @@ Instructions for installing [minishift].
 
 1. [Preparing to Install Minishift]
 1. [Ubuntu]
-
    1. Visit [minishift releases]
    1. Download `minishift-MM.mm.pp-linux-amd64.tgz`
    1. Uncompress `minishift-MM.mm.pp-linux-amd64.tgz`

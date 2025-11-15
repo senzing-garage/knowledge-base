@@ -27,7 +27,6 @@
 
 1. :pencil2: Determine where to store MS SQL drivers.
    Examples:
-
    1. **Example #1:** A `SENZING_VOLUME` based approach.
 
       ```console
