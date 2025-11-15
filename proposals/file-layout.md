@@ -119,7 +119,6 @@ An optional configuration file can specify one or more configurations.
 **Note:** The following example will be modified with the introduction of "Projects".
 
 1. Example:
-
    1. `data` directory
       1. `/opt/senzing/data`
    1. `etc` directory
@@ -255,7 +254,6 @@ The configuration precedence now looks like this:
    This introduces the notion of [stable paths](#stable-paths) for both `data` and `g2`.
 
 1. Creating a project.
-
    1. Find current version.
       Python example:
 
@@ -533,7 +531,6 @@ The configuration precedence now looks like this:
 ### Stable paths
 
 1. A stable path for the latest versions of `senzingdata` and `senzingapi`.
-
    1. Senzing client code may want to run with pinned and unpinned versions of Senzing.
    1. Unpinned versions want "latest" code.
    1. RPM installations.
@@ -653,7 +650,6 @@ Given all of the background from above, what needs changing?
    ```
 
 1. Senzing apps follow configuration precedence:
-
    1. Command-line options
    1. Environment variables
    1. Configuration file
@@ -722,7 +718,6 @@ Given all of the background from above, what needs changing?
 1. RPM versioning
    1. [Spike for packagename-Major.minor-Patch](https://github.com/docktermj/spike-rpm-versioning)
 1. Symbolic links
-
    1. [Symbolic links in Git](https://www.mokacoding.com/blog/symliks-in-git/)
    1. [Example symbolic link in GitHub](https://github.com/docktermj/spike-symlink-test)
    1. In Linux, checkout `/etc/alternatives` and/or run `man alternatives`

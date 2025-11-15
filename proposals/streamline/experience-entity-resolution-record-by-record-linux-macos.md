@@ -298,7 +298,6 @@ You will be oscillating between two applications:
 22. To restart the service, re-run the command seen in Step #3.
     Although the port mappings using `--publish` may be changed, the value of `--volume`
     must match the original value so the database files on your workstation will be attached.
-
     1. :pencil2:
        To identify the directory storing the SQLite database files,
        copy/modify/paste the following into the terminal window:

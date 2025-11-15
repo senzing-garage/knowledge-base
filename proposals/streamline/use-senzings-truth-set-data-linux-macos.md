@@ -186,7 +186,6 @@ Senzing database inside the running Docker container.
     [http://localhost:8260/entity-search](http://localhost:8260/entity-search).
 
 1. Using `G2Snapshot.py`.
-
    1. Visit
       [http://localhost:8260/xterm](http://localhost:8260/xterm).
 
@@ -203,7 +202,6 @@ Senzing database inside the running Docker container.
       [Exploratory Data Analysis - Taking a snapshot](https://senzing.zendesk.com/hc/en-us/articles/360051874294-Exploratory-Data-Analysis-3-Taking-a-snapshot)
 
 1. Using `G2Explorer.py`.
-
    1. Visit
       [http://localhost:8260/xterm](http://localhost:8260/xterm).
 
@@ -241,7 +239,6 @@ Senzing database inside the running Docker container.
       ```
 
 1. Using `G2Audit.py`
-
    1. For more information on auditing, visit
       [Exploratory Data Analysis - Comparing ER results](https://senzing.zendesk.com/hc/en-us/articles/360050643034-Exploratory-Data-Analysis-4-Comparing-ER-results)
 

@@ -111,7 +111,6 @@ The approach facilitates "future-proofing" applications using the Senzing Python
    as it provides additional logging information.
 
 1. Semantics for exceptions:
-
    1. **G2BadUserInputException** -
       Processing **did not** occur.
       There are no programmatic remedies.
@@ -132,7 +131,6 @@ The approach facilitates "future-proofing" applications using the Senzing Python
 
 1. Message numbers have
    [ranges](https://github.com/senzing-garage/stream-loader/blob/30c9fe591137793c063152cee04c0478523d7357/stream-loader.py#L892-L908).
-
    - 1xx Informational (i.e. logging.info())
    - 3xx Warning (i.e. logging.warning())
    - 5xx User configuration issues (either logging.warning() or logging.err() for Client errors)
@@ -140,7 +138,6 @@ The approach facilitates "future-proofing" applications using the Senzing Python
    - 9xx Debugging (i.e. logging.debug())# 1xx Informational (i.e. logging.info())
 
    Log message identifiers have the format `senzing-ppppnnnnt`, where:
-
    - "p" is the 4 digit [product identifier](https://github.com/senzing-garage/knowledge-base/blob/main/lists/senzing-product-ids.md)
    - "n" is the 4 digit message identifier within product
    - "t" is the 1 character message type: Info, Warn, Error
@@ -296,7 +293,6 @@ The approach facilitates "future-proofing" applications using the Senzing Python
    as it provides additional logging information.
 
 1. Semantics for exceptions:
-
    1. **G2ExceptionCritical** -
       Processing **did not** occur.
       There are no programmatic remedies.
@@ -326,7 +322,6 @@ The approach facilitates "future-proofing" applications using the Senzing Python
 
 1. Message numbers have
    [ranges](https://github.com/senzing-garage/stream-loader/blob/30c9fe591137793c063152cee04c0478523d7357/stream-loader.py#L892-L908).
-
    - 1xx Informational (i.e. logging.info())
    - 3xx Warning (i.e. logging.warning())
    - 5xx User configuration issues (either logging.warning() or logging.err() for Client errors)
@@ -334,7 +329,6 @@ The approach facilitates "future-proofing" applications using the Senzing Python
    - 9xx Debugging (i.e. logging.debug())# 1xx Informational (i.e. logging.info())
 
    Log message identifiers have the format `senzing-ppppnnnnt`, where:
-
    - "p" is the 4 digit [product identifier](https://github.com/senzing-garage/knowledge-base/blob/main/lists/senzing-product-ids.md)
    - "n" is the 4 digit message identifier within product
    - "t" is the 1 character message type: Info, Warn, Error

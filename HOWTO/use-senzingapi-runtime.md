@@ -56,7 +56,6 @@ The `senzing/senzingapi-runtime` image can be used as an initial layer.
 The following steps creates a new Docker image by wrapping an existing image with Senzing binaries.
 
 1. :pencil2: Set environment variables.
-
    - **DOCKER_BASE_IMAGE** - The Docker image to build upon.
      It will be used as the Dockerfile's `FROM` value.
      This may be an image that has been "blessed" by an organization.

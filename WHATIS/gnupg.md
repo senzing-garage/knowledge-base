@@ -10,6 +10,7 @@
    ```console
    sudo yum install gnupg
    ```
+
    - [Configure TTY]
 
 ### macOS
@@ -18,6 +19,7 @@
    ```console
    brew install gnupg
    ```
+
    - [Configure TTY]
 
 ### Ubuntu
@@ -26,6 +28,7 @@
    ```console
    sudo apt-get install gnupg
    ```
+
    - [Configure TTY]
 
 ### Windows

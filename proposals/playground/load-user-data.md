@@ -29,7 +29,6 @@ Senzing database inside the running Docker container.
 4. To add data sources to the Senzing configuration,
    determine the list of data sources used in the data.
    Then in the following example, modify the value of `DATASOURCES` to match the data.
-
    1. :pencil2:
       Copy/**modify**/paste the following into the interactive Python session
       and press the **Enter** key.
@@ -77,11 +76,9 @@ Senzing database inside the running Docker container.
 
 5. To add data to an ephemeral Senzing database,
    in the following example modify the value of `INPUT_FILENAME` to match the path of the file of JSON lines.
-
    1. :pencil2:
       To identify the file containing the data,
       copy/**modify**/paste the following into the interactive Python session:
-
       1. Linux/macOS example:
 
       ```python

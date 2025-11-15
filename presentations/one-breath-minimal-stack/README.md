@@ -19,7 +19,6 @@
 1. Open web browser to AWS's assigned IP address.
    Use the `http://` protocol, not the `https://` protocol.
    Example:
-
    - [http://localhost:8251](http://localhost:8251)
    - [http://1.2.3.4:8251](http://1.2.3.4:8251)
 

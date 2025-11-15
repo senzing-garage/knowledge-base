@@ -36,7 +36,7 @@
 1. Requires: go-databasing
    1. [ ] [init-database](https://github.com/senzing-garage/init-database)
 1. Requires: sz-sdk-go-core
-   1. [ ] [serve-grpc](https://github.com/senzing-garage/serve-grpc)  (needs init-database backpatch)
+   1. [ ] [serve-grpc](https://github.com/senzing-garage/serve-grpc) (needs init-database backpatch)
 1. Requires: serve-grpc (for testing)
 1. Requires: go-queueing
    1. [ ] [move](https://github.com/senzing-garage/move)

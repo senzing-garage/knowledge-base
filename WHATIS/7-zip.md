@@ -14,11 +14,9 @@
 ### Windows
 
 1. [Download] to `%USERPROFILE%\Downloads`
-
    1. Example: [7z2301-x64.exe]
 
 1. Run installer
-
    1. Option #1 - Run installer from command line
 
    ```console

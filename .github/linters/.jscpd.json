@@ -1,8 +1,3 @@
 {
-  "ignore": [
-    "**/HOWTO/**",
-    "**/lists/**",
-    "**/proposals/**",
-    "**/WHATIS/**"
-  ]
+  "ignore": ["**/HOWTO/**", "**/lists/**", "**/proposals/**", "**/WHATIS/**"]
 }

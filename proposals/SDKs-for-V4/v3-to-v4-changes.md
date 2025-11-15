@@ -58,7 +58,6 @@
 1. `G2_WHY_ENTITY_DEFAULT_FLAGS` is replaced by `G2_WHY_ENTITIES_DEFAULT_FLAGS`
    1. `whyEntities()`
 1. `G2_WHY_ENTITY_DEFAULT_FLAGS` is replaced by `G2_WHY_RECORDS_DEFAULT_FLAGS`
-
    1. `whyRecords()`
 
 1. Renamed Flags

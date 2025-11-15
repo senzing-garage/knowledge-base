@@ -27,9 +27,9 @@
 1. See [Usage]
 1. Example using [senzing/serve-grpc]:
 
-    ```console
-    grpcurl -plaintext -format text localhost:8261 szproduct.SzProduct.GetVersion
-    ```
+   ```console
+   grpcurl -plaintext -format text localhost:8261 szproduct.SzProduct.GetVersion
+   ```
 
 ## Sites
 

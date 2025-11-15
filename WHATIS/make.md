@@ -25,7 +25,6 @@ Instructions for installing [make].
 ### Windows
 
 1. On Windows 10 or 11
-
    1. Install binaries.
       Example:
 

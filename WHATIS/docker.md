@@ -166,16 +166,13 @@ There a a few methods to install `docker` on Ubuntu.
 ### macOS
 
 1. [Install Docker Desktop for Mac]
-
    1. Open Docker.dmg
    1. Drag Docker to Applications
 
 1. Go to "Applications" and double-click on "Docker"
-
    1. Check the menu bar for the Docker icon
 
 1. Test
-
    1. Open Terminal
 
    ```console

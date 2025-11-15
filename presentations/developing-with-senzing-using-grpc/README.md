@@ -112,7 +112,6 @@
    ```
 
 1. Compare file differences between using a Senzing "gRPC" SDK and a "core" SDK:
-
    1. Visit [DiffNow] and enter the following URLs:
 
       ```console
@@ -149,11 +148,9 @@
 1. **Note:** These instructions will only be required during the Senzing V4 beta.
    After Senzing V4 is public, the Docker image will be available on [DockerHub].
 1. To get values for `<get-from-Senzing>`, email <sales@senzing.com> to request access to Senzing V4 Beta.
-
    1. After signing up, a [response email] will have a "NOTE: When building Docker images, you'll need to set the following environment variables:" section.
 
 1. Set environment variables:
-
    1. Linux/macOS
 
       ```console
@@ -282,12 +279,10 @@
    ```
 
 1. In Jupyter Lab, navigate to the `python` directory and run the following:
-
    1. `senzing_hello_world.ipynb`
    1. `senzing_load_truthsets.ipynb`
 
 1. In Jupyter Lab, if a Go Kernel (e.g. [gonb]) is installed, navigate to the `go` directory and run the following:
-
    1. `senzing_hello_world.ipynb`
    1. `senzing_load_truthsets.ipynb`
 
@@ -306,7 +301,6 @@ A recap of the steps to start working with Senzing on Jupyter Lab:
    ```
 
 1. If writing in Python,
-
    1. Optionally, activate Python virtual environment.
       _Note:_ If running macOS, this step is not needed.
       Example:

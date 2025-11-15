@@ -130,7 +130,6 @@
    - Default: none
    - Usually: G2
 1. Examples:
-
    1. Using `G2` as the database:
 
       ```console
@@ -145,7 +144,6 @@
    1. A component of [SENZING_DATABASE_URL] and [SENZING_TOOLS_DATABASE_URL].
    1. A hostname, IP address, or symbolic name of the database service.
 1. Examples:
-
    1. Using an IP address:
 
       ```console
@@ -166,7 +164,6 @@
    1. A component of [SENZING_DATABASE_URL] and [SENZING_TOOLS_DATABASE_URL].
    1. The password for the database user, [DATABASE_USERNAME].
 1. Examples:
-
    1. Using password of "my;password!":
 
       ```console
@@ -188,7 +185,6 @@
    - sqlite3 has no default as it is file-based.
    - Default: none
 1. Examples:
-
    1. Using default port for postgresql:
 
       ```console
@@ -203,7 +199,6 @@
    1. A component of [SENZING_DATABASE_URL] and [SENZING_TOOLS_DATABASE_URL].
    1. Identifies which type of database will be connected.
 1. Values:
-
    - db2
    - mssql
    - mysql
@@ -212,7 +207,6 @@
    - Default: none
 
 1. Examples:
-
    1. PostgreSQL
 
       ```console
@@ -240,7 +234,6 @@
    1. A component of [SENZING_DATABASE_URL] and [SENZING_TOOLS_DATABASE_URL].
    1. The name of a user authorized to work with the [DATABASE_DATABASE](#database_database) database.
 1. Examples:
-
    1. Using user name of "my-user":
 
       ```console
@@ -353,7 +346,6 @@
 1. Synopsis:
    1. Location of the `g2.lic` file on a local workstation
 1. Examples:
-
    1. Using `Downloads` directory.
 
       ```console
@@ -443,7 +435,6 @@
 1. Synopsis:
    1. In a Kubernetes environment, a parameter for the `kubectl` command.
 1. Examples:
-
    1. Setting parameter.
 
       ```console
@@ -1010,7 +1001,6 @@
    1. Format: `http://${hostname}:${SENZING_API_SERVICE_PORT}`
    1. Default: None
 1. Examples:
-
    1. Using hostname.
 
       ```console
@@ -1110,7 +1100,6 @@
 ### SENZING_DATABASE_URL
 
 1. Synopsis:
-
    1. Database URI in the form:
 
       [DATABASE_PROTOCOL](#database_protocol)://[DATABASE_USERNAME]:[DATABASE_PASSWORD](#database_password)@[DATABASE_HOST](#database_host):[DATABASE_PORT](#database_port)/[DATABASE_DATABASE](#database_database).
@@ -1121,7 +1110,6 @@
 1. Values:
    - Default: Use the internal SQLite database.
 1. Examples:
-
    1. MySQL
 
       ```console
@@ -1159,7 +1147,6 @@
    - 1 = debug
    - Default: 0
 1. Examples:
-
    1. Turn debugging on
 
       ```console
@@ -1186,7 +1173,6 @@
 1. Synopsis:
    1. The IP address of the system hosting Docker containers.
 1. Examples:
-
    1. Manually specify.
       Example:
 
@@ -1451,7 +1437,6 @@
 1. Synopsis:
    1. Location of socket used to communicate with Docker.
 1. Examples:
-
    1. Common Linux location
 
       ```console
@@ -1466,7 +1451,6 @@
    1. URL of the docker registry's
       Version 1 API.
 1. Examples:
-
    1. registry.hub.docker.com
 
       ```console
@@ -1481,7 +1465,6 @@
    1. URL of the docker registry's
       [Version 2 API](https://docs.docker.com/registry/spec/api/).
 1. Examples:
-
    1. hub.docker.com
 
       ```console
@@ -1495,7 +1478,6 @@
 1. Synopsis:
    1. Organization name on [hub.docker.com](https://hub.docker.com)
 1. Examples:
-
    1. A "senzing" organization.
 
       ```console
@@ -1521,7 +1503,6 @@
 1. Synopsis:
    1. Directory on local system where a download will be placed.
 1. Examples:
-
    1. Download to `/tmp/my-downloads`
 
       ```console
@@ -1535,7 +1516,6 @@
 1. Synopsis:
    1. Location of where to place a downloaded file.
 1. Examples:
-
    1. Download to `/tmp/my-downloads/x-file.tmp`
 
       ```console
@@ -1549,7 +1529,6 @@
 1. Synopsis:
    1. A JSON string that is a parameter to the Senzing Engine's `*.init()` function.
 1. Examples:
-
    1. Using system installation paths and PostgreSQL database URL:
 
       ```console
@@ -1645,7 +1624,6 @@
    1. A list of one or more comma-separated
       [SENZING_DATABASE_URL]s.
 1. Examples:
-
    1. Single SENZING_DATABASE_URL.
       Example:
 
@@ -1667,7 +1645,6 @@
 1. Synopsis:
    1. The number of records "skipped" before executing the analysis for governing.
 1. Examples:
-
    1. Analyze once every 10 million records.
       Example:
 
@@ -1684,7 +1661,6 @@
 1. Values:
    1. Default: "," (a single comma)
 1. Examples:
-
    1. Use a plus sign instead of a comma.
       Example:
 
@@ -1701,7 +1677,6 @@
 1. Values:
    1. Default: 10000000000 (10 billion)
 1. Examples:
-
    1. Set to 9 billion.
       Example:
 
@@ -1718,7 +1693,6 @@
 1. Values:
    1. Default: 9000000000 (9 billion)
 1. Examples:
-
    1. Set to 7 billion.
       Example:
 
@@ -1733,7 +1707,6 @@
 1. Synopsis:
    1. A directory where governor and test code are placed.
 1. Examples:
-
    1. Set to 7 billion.
       Example:
 
@@ -1750,7 +1723,6 @@
 1. Values:
    1. Default: 15 seconds
 1. Examples:
-
    1. Set to 10 minutes.
       Example:
 
@@ -1897,7 +1869,6 @@
 1. Synopsis:
    1. Used in `docker-compose` formations to identify the docker network.
 1. Examples:
-
    1. Search for network in docker-compose:
 
       ```console
@@ -1940,7 +1911,6 @@
 1. Values:
    1. Default: none
 1. Examples:
-
    1. Using an IP address:
 
       ```console
@@ -1972,7 +1942,6 @@
 1. Synopsis:
    1. A path to a Senzing project.
 1. Examples:
-
    1. A project in the home directory.
       Example:
 
@@ -1988,7 +1957,6 @@
    1. The name of a Senzing project.
    1. Used as a prefix when creating objects for the project.
 1. Examples:
-
    1. A project in the home directory.
       Example:
 
@@ -2005,7 +1973,6 @@
    1. This differs from [SENZING_DATABASE_URL], which has been "normalized"
       and is not in the native format.
 1. Examples:
-
    1. Using an IP address:
 
       ```console
@@ -2371,7 +2338,6 @@
 1. Values:
    1. Default: 1001
 1. Examples:
-
    1. root
 
       ```console
@@ -2551,7 +2517,6 @@
 1. Values:
    1. Format: "datasource1 datasource2 datasource3"
 1. Examples:
-
    1. Using `export`:
 
       ```console
@@ -2721,7 +2686,6 @@
    1. `SENZING_TOOLS_ENGINE_CONFIGURATION_JSON` is used as the `iniParams` value of
       [G2engine.Init()](https://pkg.go.dev/github.com/senzing/g2-sdk-go-base/g2engine#G2engine.Init).
 1. Examples:
-
    1. Sample JSON:
 
       ```json

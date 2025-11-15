@@ -52,7 +52,6 @@ Everything installed by the RPM is in `/opt/senzing`.
    1. This is a versioned directory. For instance, there may be `/opt/senzing/3.0.0` and `/opt/senzing/4.0.0` directories.
    1. The directories contain static models of data used by Senzing.
 1. `/opt/senzing/g2`
-
    1. This directory is installed via the `senzingapi` package.
    1. The version of Senzing can be seen in `cat /opt/senzing/g2/g2BuildVersion.json`
 

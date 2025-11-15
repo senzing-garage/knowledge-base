@@ -151,7 +151,6 @@ list factors out `not-public`, `not-implemented`, and `collapsed` entries.
    - G2_reevaluateRecordWithInfo
    - G2_replaceRecordWithInfo
 1. Approach:
-
    1. Function name becomes shortened to match the non-with-info name (e.g. `G2_addRecord()`).
    1. The `xx_withInfo()` function/method signature is not in the SDK.
    1. Function always returns JSON string.
@@ -181,7 +180,6 @@ list factors out `not-public`, `not-implemented`, and `collapsed` entries.
       given the desires for a single method name, multiple return values, and immutable input parameters, it's a reasonable compromise.
 
    1. Python language specifics:
-
       1. The definition of the python function can be
 
          ```python
@@ -205,7 +203,6 @@ list factors out `not-public`, `not-implemented`, and `collapsed` entries.
          ```
 
    1. Java language specifics:
-
       1. Use method overloading to factor out the `resultFlags` parameter.
       1. Examples of use:
 
@@ -218,7 +215,6 @@ list factors out `not-public`, `not-implemented`, and `collapsed` entries.
          ```
 
    1. Go language specifics:
-
       1. Go doesn't have optional parameters nor method overloading.
       1. Examples of use:
 

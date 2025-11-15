@@ -101,7 +101,6 @@
    ```
 
 1. Create versioned releases (including changes to Dockerfile and CHANGELOG.md) of
-
    1. [senzing/docker-senzing-console](https://github.com/senzing-garage/docker-senzing-console)
    1. [senzing/docker-sshd](https://github.com/senzing-garage/docker-sshd)
    1. [senzing/docker-xterm](https://github.com/senzing-garage/docker-xterm)

@@ -45,7 +45,6 @@ Instructions for installing
 
 1. :thinking: **Optional:**
    To use the Senzing code, you must agree to the End User License Agreement (EULA).
-
    1. :warning: This step is intentionally tricky and not simply copy/paste.
       This ensures that you make a conscious effort to accept the EULA.
       Example:
@@ -76,7 +75,6 @@ For installation on Red Hat, CentOS, openSuse and
 
 1. :thinking: **Optional:**
    To use the Senzing code, you must agree to the End User License Agreement (EULA).
-
    1. :warning: This step is intentionally tricky and not simply copy/paste.
       This ensures that you make a conscious effort to accept the EULA.
       Example:

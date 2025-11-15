@@ -4,7 +4,6 @@
 1. Goto EC2 in management console
 1. Instances new -> launch instances
 1. Select Ubuntu 20.04 LTS (free tier)
-
    - Select appropriate VPC and subnet
    - Enable auto assign public IP
    - Select appropriate security group.
@@ -12,7 +11,6 @@
    - Review and launch with everything else as default
 
 1. If a key pair has been created
-
    - Download and chmod to 600
 
 1. Get the public ip from the amazon console

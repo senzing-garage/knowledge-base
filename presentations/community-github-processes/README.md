@@ -50,7 +50,6 @@
 
 1. Commit frequently.
    Unless a better commit message is appropriate, commit messages like these can be used:
-
    1. "#00 Savepoint"
    1. "#00 WIP" - for Work-in-Progress
       Later these commits will be "squashed" together.
