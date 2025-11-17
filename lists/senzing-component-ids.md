@@ -131,6 +131,7 @@ Used in log message identifiers in the format `senzing-ppppnnnnt`, where:
 1. **6501** - github.com/senzing-garage/initdatabase/initializer
 1. **6502** - github.com/senzing-garage/initdatabase/senzingconfig
 1. **6503** - github.com/senzing-garage/initdatabase/senzingschema
+1. **6504** - github.com/senzing-garage/initdatabase/senzingload
 1. **6601** - github.com/senzing-garage/load/loader
 1. **6602** - github.com/senzing-garage/move/mover
 1. **6620** - github.com/senzing-garage/serve-chat/senzingchatserver
