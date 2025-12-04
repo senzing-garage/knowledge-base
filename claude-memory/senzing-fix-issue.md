@@ -12,15 +12,17 @@ Follow these steps:
     3. Use `git checkout -b` to create a new local branch using the format "{issue-number}-{github-userid}-{next-available-whole-number}". Do not use existing branches.
     4. Use `git branch` to tell user the existing branches. Tell user the name of the newly created branch.
 3. Develop code.
-    1. Understand the problem described.
-    2. Search the codebase for relevant files to implement the fix.
+    1. Understand the problem described in the issue.
+    2. Search the codebase for relevant files to fix the issue.
 4. Test code.
     1. Write and run tests to verify the fix.
     2. If unit tests exist, run unit tests.
+    3. Ensure code passes linting and type checking
 5. Document fix.
-    1. Ask user if this is a new versioned release.
-    2. If not a new versioned release, in `CHANGELOG.md`, update the "[Unreleased]" section with the fix description.
-    3. If it is a new versioned release, in `CHANGELOG.md`, add a new "Patch version" section with the fix description using the following standards:
+    1. Create a descriptive commit message.
+    2. Ask user if this is a new versioned release.
+    3. If not a new versioned release, in `CHANGELOG.md`, update the "[Unreleased]" section with the fix description.
+    4. If it is a new versioned release, in `CHANGELOG.md`, add a new "Patch version" section with the fix description using the following standards:
         1. <https://keepachangelog.com/en/1.0.0/>
         2. <https://semver.org/spec/v2.0.0.html>
 6. Commit code to GitHub.
