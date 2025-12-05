@@ -1,6 +1,6 @@
 # Senzing versioned release
 
-1. If no $ARGUMENTS specified, ask user to choose a subcommand from the following list:
+1. If no $ARGUMENTS specified, ask user to choose a subcommand from the following list. Show user {new-semantic-version}.
     1. major - Made incompatible API changes. New version would be {new-semantic-version}.
     1. minor - Added functionality in a backward compatible manner.  New version would be {new-semantic-version}.
     1. patch - Made backward compatible bug fixes.  New version would be {new-semantic-version}.
