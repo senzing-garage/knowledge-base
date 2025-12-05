@@ -1,9 +1,9 @@
 # Senzing versioned release
 
 1. If no $ARGUMENTS specified, ask user to choose a subcommand from the following list:
-    1. major - Made incompatible API changes. Creates {new-semantic-version}.
-    1. minor - Added functionality in a backward compatible manner. Creates {new-semantic-version}.
-    1. patch - Made backward compatible bug fixes. Creates {new-semantic-version}.
+    1. major - Made incompatible API changes. New version would be {new-semantic-version}.
+    1. minor - Added functionality in a backward compatible manner.  New version would be {new-semantic-version}.
+    1. patch - Made backward compatible bug fixes.  New version would be {new-semantic-version}.
 
 1. If subcommand is "major", in `CHANGELOG.md`, add a new "Major version" section.
 1. If subcommand is "minor", in `CHANGELOG.md`, add a new "Minor version" section.
