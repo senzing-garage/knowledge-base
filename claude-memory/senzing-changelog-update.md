@@ -1,6 +1,5 @@
 # Senzing versioned release
 
-1. These instructions will propose changes to `CHANGELOG.md` for code changes made after the last versioned release.
 1. If no $ARGUMENTS specified, ask user to choose a subcommand from the following list:
     1. major - Made incompatible API changes. Creates {new-semantic-version}.
     1. minor - Added functionality in a backward compatible manner. Creates {new-semantic-version}.
