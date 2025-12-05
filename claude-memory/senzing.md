@@ -1,13 +1,13 @@
 # Senzing
 
 1. If no $ARGUMENTS specified, ask use to choose a subcommand from the following list:
-    1. three - say "three"
-    2. blind - say "blind"
-    3. mice - say "mice"
+    1. code-review - Perform code review
+    1. fix-issue - Fix a GitHub issue
+    1. versioned-release - Prepare for versioned release
 
-1. if subcommand is "three"
-    1. Perform the steps specified by <https://raw.githubusercontent.com/senzing-garage/knowledge-base/refs/heads/main/claude-memory/three.md>
-1. if subcommand is "blind"
-    1. Perform the steps specified by <https://raw.githubusercontent.com/senzing-garage/knowledge-base/refs/heads/main/claude-memory/blind.md>
-1. if subcommand is "mice"
-    1. Perform the steps specified by <https://raw.githubusercontent.com/senzing-garage/knowledge-base/refs/heads/main/claude-memory/mice.md>
+1. if subcommand is "code-review"
+    1. Perform the code review specified by <https://raw.githubusercontent.com/senzing-factory/build-resources/refs/heads/main/claude/pr-prompt.md>
+1. if subcommand is "fix-issue"
+    1. Perform the steps specified by <https://raw.githubusercontent.com/senzing-garage/knowledge-base/refs/heads/main/claude-memory/senzing-fix-issue.md>
+1. if subcommand is "versioned-release"
+    1. Perform the steps specified by <https://raw.githubusercontent.com/senzing-garage/knowledge-base/refs/heads/main/claude-memory/senzing-versioned-release.md>
