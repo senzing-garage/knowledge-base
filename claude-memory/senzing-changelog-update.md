@@ -10,10 +10,10 @@
 1. If subcommand is "minor", in `CHANGELOG.md`, add a new "Minor version" section.
 1. If subcommand is "patch", in `CHANGELOG.md`, add a new "Patch version" section.
 1. In new `CHANGELOG.md` section:
-    1. In "Added to {semantic-version}" section, report new functionality since last versioned release in human terms.
-    2. In "Changed in {semantic-version}" section, report modified functionality since last versioned release in human terms.
-    3. In "Removed from {semantic-version}" section, report deleted functionality since last versioned release in human terms.
-    4. In "Fixed in {semantic-version}" section, report fixes since last versioned release in human terms.
+    1. In "Added to {new-semantic-version}" section, report new functionality since last versioned release in human terms.
+    2. In "Changed in {new-semantic-version}" section, report modified functionality since last versioned release in human terms.
+    3. In "Removed from {new-semantic-version}" section, report deleted functionality since last versioned release in human terms.
+    4. In "Fixed in {new-semantic-version}" section, report fixes since last versioned release in human terms.
     5. Do not include changes to any folders or files starting with a dot (".").
     6. Adhere to the following standards:
         1. <https://keepachangelog.com/en/1.0.0/>
