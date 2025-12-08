@@ -6,11 +6,21 @@ Follow these steps:
     1. Use `gh issue list` to get issues.
     2. Ask user to choose an issue or quit.
     3. Use `gh issue view` to get the chosen issue details.
-2. Create a new working branch.
-    1. Use `git pull` to update the local repository.
-    2. Use `git checkout main` to make sure there are no uncommitted changes in the local repository. Quit if there are conflicts.
-    3. Use `git checkout -b` to create a new unique local branch from `main` using the format "{issue-number}-{github-userid}-{next-available-whole-number}". Do not use existing branches.
-    4. Use `git branch` to tell user the existing branches. Tell user the name of the newly created branch.
+2. Determine which branch to work in.
+    1. Use `git pull`
+        1. Update the local repository.
+    2. Use `git branch`
+        1. Ask user which branch to use or if a new branch should be created.
+    3. If new branch should be created,
+        1. Use `git checkout main`
+            1. Make sure there are no uncommitted changes in the local repository.
+            2. Quit if there are conflicts.
+        2. Use `git checkout -b`
+            1. Create a new unique local branch from `main`.
+            2. New branch name has the format "{issue-number}-{github-userid}-{next-available-whole-number}".
+            3. Tell user which branch was just created.
+            4. Checkout new branch.
+    4. Checkout branch chosen by user.
 3. Develop code.
     1. Understand the problem described in the issue.
     2. Search the codebase for relevant files to fix the issue.
