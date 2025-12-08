@@ -25,6 +25,5 @@ Follow these steps:
     4. If it is a new versioned release, in `CHANGELOG.md`, add a new "Patch version" section with the fix description using the following standards:
         1. <https://keepachangelog.com/en/1.0.0/>
         2. <https://semver.org/spec/v2.0.0.html>
-6. Commit code to GitHub.
-    1. Ask user if they want to commit the branch locally.
-    2. Remind user how to use `git push -u origin` to push the branch to GitHub.
+6. Do not commit code in local repository.
+7. Do not commit code to GitHub.
