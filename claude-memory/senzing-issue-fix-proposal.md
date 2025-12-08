@@ -30,10 +30,15 @@ Follow these steps:
     3. Ensure code passes linting and type checking
 5. Document fix.
     1. Create a descriptive commit message.
-    2. Ask user if this is a new versioned release.
-    3. If not a new versioned release, in `CHANGELOG.md`, update the "[Unreleased]" section with the fix description.
-    4. If it is a new versioned release, in `CHANGELOG.md`, add a new "Patch version" section with the fix description using the following standards:
-        1. <https://keepachangelog.com/en/1.0.0/>
-        2. <https://semver.org/spec/v2.0.0.html>
+    2. Update `CHANGELOG.md`.
+        1. Ask user if this is a new versioned release.
+        2. If it is a versioned release,
+            1. Ask user if it is a Major, Minor, or Patch release.
+            2. Based on the users' choice, add a new section with the fix description.
+        3. If it is not a new versioned release,
+            1. Update the "[Unreleased]" section with the fix description.
+        4. `CHANGELOG.md` follows these standards:
+            1. <https://keepachangelog.com/en/1.0.0/>
+            2. <https://semver.org/spec/v2.0.0.html>
 6. Do not commit code in local repository.
 7. Do not commit code to GitHub.
