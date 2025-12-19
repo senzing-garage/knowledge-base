@@ -32,16 +32,21 @@ Follow these steps:
 1. If `.claude/settings.json` does not exist,
     1. Create `.claude/settings.json` based on the `repository-template`.
 1. In `github/workflows/*` files,
-    1. Update GitHub Action workflows with appropriate changes from the `repository-template`.
-    1. Add `cooldown:` key/value were appropriate.
-    1. Add `timeout-minutes:` key/value were appropriate.
-    1. Add `fail-fast:` key/value were appropriate.
-    1. Capitalize the `name:` values to match what is in the `repository-template`.
+    1. Compare each workflow file against the corresponding file in the `repository-template`.
+        1. Copy `concurrency:` key/value to match `repository-template` file.
+        1. Copy `cooldown:` key/value to match `repository-template` file.
+        1. Copy `fail-fast:` key/value to match `repository-template` file.
+        1. Copy `timeout-minutes:` key/value to match `repository-template` file.
+        1. Copy capitalized `name:` values to match `repository-template` file.
+        1. Remove `push: branches-ignore:` values to match `repository-template` file.
+        1. Remove `fetch-depth` values to match `repository-template` file.
 1. In `.gitignore`,
     1. Make sure `.claude/settings.local.json` is listed.
     1. Change `.DS_STORE` to `.DS_Store`.
 1. In `.vscode/settings.json`,
     1. Copy JSON key/value pairs from template into current repository.
+1. In `makefile/osdetect.mk`,
+    1. Change "arm4" to "arm64"
 1. In `CHANGELOG.md`,
     1. Update header and footer information.
 1. In `SECURITY.md`,
