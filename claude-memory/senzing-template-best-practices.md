@@ -22,15 +22,16 @@ Follow these steps:
         - From <https://github.com/senzing-garage>
         - To <https://github.com/`github-organization`>
 1. If `.claude/CLAUDE.md` does not exist,
-    1. Use `/init` to create a new `.claude/CLAUDE.md`.
-1. If `.claude/commands/senzing.md` does not exist,
-    1. Create `.claude/commands/senzing.md`  based on the `repository-template`.
+    1. Do not copy the `.claude/CLAUDE.md` from the `repository-template`.
+    1. Use `/init` slash command to create a new `.claude/CLAUDE.md`.
+1. If `.claude/commands/senzing.md` does not exist in the current repository,
+    1. Create `.claude/commands/senzing.md` in the current repository based on the `repository-template`.
 1. If `.claude/commands/senzing-code-review.md` exists,
     1. Ask the user if it can be deleted it.
     1. If user answers in the affirmative, delete `.claude/commands/senzing-code-review.md`.
 1. If `.claude/settings.json` does not exist,
     1. Create `.claude/settings.json` based on the `repository-template`.
-1. In `github/` directory,
+1. In `github/workflows/*` files,
     1. Update GitHub Action workflows with appropriate changes from the `repository-template`.
     1. Add `cooldown:` key/value were appropriate.
     1. Add `timeout-minutes:` key/value were appropriate.
