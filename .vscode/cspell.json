@@ -11,10 +11,6 @@
     "WHATIS"
   ],
   "ignorePaths": [
-    "CHANGELOG.md",
-    "gists/**",
-    "lists/**",
-    "presentations/**",
-    "proposals/**"
+    "CHANGELOG.md"
   ]
 }
