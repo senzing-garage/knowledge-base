@@ -1,0 +1,20 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "words": [
+    "CODEOWNER",
+    "cooldown",
+    "devel",
+    "kernelsam",
+    "pytest",
+    "Senzing",
+    "WHATIS"
+  ],
+  "ignorePaths": [
+    "CHANGELOG.md",
+    "gists/**",
+    "lists/**",
+    "presentations/**",
+    "proposals/**"
+  ]
+}
