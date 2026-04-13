@@ -1,0 +1,12 @@
+.DS_Store
+.coverage
+
+/.pytest_cache/
+
+# Visual Studio code
+.vscode/*
+!.vscode/cspell.json
+*.code-workspace
+.history
+
+.claude/settings.local.json

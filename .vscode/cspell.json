@@ -1,0 +1,19 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "words": [
+    "CODEOWNER",
+    "CCLA",
+    "cooldown",
+    "devel",
+    "ICLA",
+    "kernelsam",
+    "pytest",
+    "Senzing",
+    "stackoverflow",
+    "WHATIS"
+  ],
+  "ignorePaths": [
+    "CHANGELOG.md"
+  ]
+}
